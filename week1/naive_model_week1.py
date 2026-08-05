@@ -1,10 +1,11 @@
 from langgraph.graph import StateGraph, END
 from typing import TypedDict
 from backend import editor, loader
-import reader
-import os
+import reader 
 import random
 import subprocess
+import os
+import uuid
 
 # Định nghĩa state dùng chung
 class AgentState(TypedDict):
@@ -24,6 +25,33 @@ class InputState(TypedDict):
     
 class PlanState(TypedDict):
     domain: dict
+    
+
+def extract_video_id(video_input: str) -> str:
+    """
+    Tự động trích xuất ID từ bất kỳ link YouTube hoặc file cục bộ nào.
+    Không bao giờ bị fix cứng vào một video cụ thể.
+    """
+    if not video_input or str(video_input) == "None":
+        # Nếu không có đầu vào, tạo một ID ngẫu nhiên để không bị lỗi
+        return f"video_{uuid.uuid4().hex[:8]}"
+        
+    video_str = str(video_input)
+    
+    # 1. Trường hợp link YouTube chuẩn (vd: https://www.youtube.com/watch?v=jbL9kl4KPZI)
+    if "v=" in video_str:
+        return video_str.split("v=")[-1].split("&")[0]
+        
+    # 2. Trường hợp link YouTube rút gọn (vd: https://youtu.be/jbL9kl4KPZI)
+    elif "youtu.be/" in video_str:
+        return video_str.split("youtu.be/")[-1].split("?")[0]
+        
+    # 3. Trường hợp truyền đường dẫn file trên máy (vd: input/my_lecture.mp4 -> lấy 'my_lecture')
+    elif "/" in video_str or "\\" in video_str:
+        return os.path.splitext(os.path.basename(video_str))[0]
+        
+    # 4. Trường hợp khác (đã là ID sẵn)
+    return video_str
 
 # Mỗi pha là một hàm Python — LangGraph tự gọi theo thứ tự
 def observe(state: InputState):
@@ -37,11 +65,12 @@ def observe(state: InputState):
     
     print(f'ID workspace: {workspace_dir}')
     
-    loader.prepare_media_workspace(video_input, workspace_dir)
+    media_info = loader.prepare_media_workspace(video_input, workspace_dir)
+    source_video_local = media_info.get("source_video", video_input)
     
     dectected_domain = state.get('domain')
     return {
-        "source_video": video_input,
+        "source_video": source_video_local,
         "workspace_dir": workspace_dir,   
         "transcript": transcript_path
     }
@@ -131,6 +160,18 @@ def decide(state: AgentState) -> dict:
     source_video = state.get('source_video')
     workspace_dir = state.get('workspace_dir')
     
+    if not workspace_dir:
+        video_input = state.get('video_path') 
+        video_id = extract_video_id(video_input)
+        workspace_dir = os.path.join('processing_video', video_id)
+    
+    os.makedirs(workspace_dir, exist_ok=True)
+    
+    # Nếu source_video là URL hoặc không tồn tại, kiểm tra file local trong workspace_dir
+    local_source_video = os.path.join(workspace_dir, "source_video.mp4")
+    if os.path.exists(local_source_video):
+        source_video = local_source_video
+
     #sap xep candidate theo diem so tu cao xuong thap
     sorted_candidates = sorted(candidates, key = lambda x : x['score'], reverse = True)
     
@@ -201,8 +242,7 @@ def explain(state: AgentState) -> dict:
             'explanation': cau_giai_thich
         })
         
-        
-        return {"reasoning" : reasoning_list}
+    return {"reasoning" : reasoning_list}
 # Dựng đồ thị
 graph = StateGraph(AgentState)
 graph.add_node("observe", observe)

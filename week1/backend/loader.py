@@ -168,7 +168,7 @@ def transcribe_audio_whisper(audio_path: str, workspace_dir: str, model_size="sm
         # Dùng \r và end="" để in ghi đè liên tục lên cùng 1 dòng (không bị trôi log)
         print(
             f"\r    Tiến độ dịch: [{bar}] {percent}% | Đã xử lý: {segment.end:.1f}s/{total_duration:.1f}s | Câu #{segment.id}", 
-            end="", 
+            end="\n", 
             flush=True
         )
         
