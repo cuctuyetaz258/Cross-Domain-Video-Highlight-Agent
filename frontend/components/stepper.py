@@ -1,34 +1,52 @@
 import streamlit as st
-import time
-import extra_streamlit_components.StepperBar as StepperBar
 
 def render_stepper_state(current: int):
     """
-    Renders the Stepper Bar UI to visualize the LangGraph agent's execution phase.
-    
-    @TEAM_NOTE (Frontend/UI):
-    We use the `extra-streamlit-components` StepperBar here. However, its underlying React 
-    component contains a known logical flaw where passing `default=0` evaluates as falsy in JS (`0 || 1`), 
-    causing it to unconditionally fall back to index 1. 
-    
-    To elegantly bypass this without forking the library:
-    1. We pad the phases array with a 0th "Ready" step.
-    2. When `current=0` (app load), the JS bug falls back to index 1 ("Observe").
-    3. Index 0 ("Ready") is visually marked as completed, which serves as a great idle state indicator.
-    
-    Furthermore, we bypass the python wrapper to directly invoke `_component_func` so we can inject 
-    a unique `key` (appended with time.time()), avoiding Streamlit's `DuplicateElementKey` exception 
-    during rapid loop re-renders.
+    Renders the Stepper Bar UI natively using Streamlit's st.progress to completely eliminate 
+    any DOM teardown flickering (glitching) caused by st.empty() markdown replacements.
     """
     phases = ["Ready", "Observe", "Plan", "Analyze", "Decide", "Explain", "Completed"]
     
-    StepperBar._component_func(
-        steps=phases, 
-        is_vertical=False, 
-        lock_sequence=True, 
-        default=current,
-        key=f"stepper_{current}"
-    )
+    html = "<div style='display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 10px; margin-bottom: 30px; font-family: \"Inter\", sans-serif;'>"
+    
+    for i, phase in enumerate(phases):
+        is_completed = i < current
+        is_active = i == current
+        
+        # Theming logic
+        if is_completed:
+            circle_bg = "#238636" # Green
+            text_color = "inherit"
+            content = "✓"
+        elif is_active:
+            circle_bg = "#58a6ff" # Blue
+            text_color = "#58a6ff"
+            content = str(i)
+        else:
+            circle_bg = "rgba(128,128,128,0.2)"
+            text_color = "rgba(128,128,128,0.5)"
+            content = str(i)
+            
+        font_weight = "600" if is_active else "400"
+        
+        # Step Node
+        html += f"""
+        <div style='display: flex; flex-direction: column; align-items: center; z-index: 2;'>
+            <div style='width: 32px; height: 32px; border-radius: 50%; background-color: {circle_bg}; display: flex; justify-content: center; align-items: center; color: white; font-weight: bold; font-size: 14px; margin-bottom: 8px; transition: background-color 0.3s ease;'>
+                {content}
+            </div>
+            <div style='color: {text_color}; font-weight: {font_weight}; font-size: 13px; text-align: center; white-space: nowrap;'>{phase}</div>
+        </div>
+        """
+        
+        # Connecting Line (skip for the last step)
+        if i < len(phases) - 1:
+            line_bg = "#238636" if is_completed else "rgba(128,128,128,0.2)"
+            html += f"<div style='flex: 1; height: 3px; background-color: {line_bg}; margin-top: -25px; transition: background-color 0.3s ease;'></div>"
+            
+    html += "</div>"
+    
+    st.markdown(html, unsafe_allow_html=True)
 
 def render_stepper():
     current = st.session_state.get("current_phase", 0)

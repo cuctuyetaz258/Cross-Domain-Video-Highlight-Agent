@@ -46,10 +46,10 @@ def run_live_agent(video_url: str, domain: str, stepper_placeholder):
                     from components.stepper import render_stepper_state
                     render_stepper_state(current_phase_idx)
                 
-                # Introduce a slight delay to allow the React iframe to safely unmount and remount 
-                # without disappearing due to rapid loop updates
+                # Introduce an artificial animation delay so the user can actually read the phase
+                # instead of 4 phases flashing by in 0.1s (which looks like a glitch).
                 import time
-                time.sleep(0.5)
+                time.sleep(0.75)
             
         final_state = accumulated_state
             
@@ -58,6 +58,7 @@ def run_live_agent(video_url: str, domain: str, stepper_placeholder):
             summary = {
                 "workspace": final_state.get("workspace", {}).model_dump(mode="json") if hasattr(final_state.get("workspace"), "model_dump") else final_state.get("workspace"),
                 "features": final_state.get("features"),
+                "candidates": [(item.model_dump(mode="json") if hasattr(item, "model_dump") else item) for item in final_state.get("candidates", [])] if final_state.get("candidates") else [],
                 "highlights": [item.model_dump(mode="json") for item in final_state.get("highlights", [])] if final_state.get("highlights") else [],
                 "rendered_highlights": [
                     item.model_dump(mode="json") for item in final_state.get("rendered_highlights", [])

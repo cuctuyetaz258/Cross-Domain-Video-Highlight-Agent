@@ -2,6 +2,7 @@ import streamlit as st
 import time
 from components.sidebar import render_sidebar
 from components.stepper import render_stepper
+from components.timeline import render_timeline
 from components.video_mockup import render_video_mockup
 from agent_runner import run_live_agent
 
@@ -84,6 +85,8 @@ def main():
             st.session_state["is_running"] = False
             
     if st.session_state.get("agent_result"):
+        render_timeline(st.session_state["agent_result"])
+        
         st.subheader("Generated Highlights")
         render_video_mockup(st.session_state["agent_result"])
 
