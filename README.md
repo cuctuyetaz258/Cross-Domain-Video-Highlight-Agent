@@ -12,13 +12,14 @@ Source cũ được giữ trong `week1/` để tham khảo; implementation mới
 ## Yêu cầu hệ thống
 
 - Python 3.10–3.12; khuyến nghị Python 3.11 cho môi trường chung của nhóm.
-- `ffmpeg` và `ffprobe` có trong `PATH`.
+- `ffmpeg`, `ffprobe` và Deno 2.3+ có trong `PATH`.
 - Git.
 
 Trên macOS, có thể cài ffmpeg bằng Homebrew:
 
 ```bash
 brew install ffmpeg
+brew install deno
 ```
 
 ## Khởi tạo môi trường
@@ -41,6 +42,12 @@ cp .env.example .env
 
 Điền API key cần sử dụng vào `.env`. Không commit `.env` lên GitHub.
 
+Nếu YouTube yêu cầu xác minh đăng nhập, đặt browser đang đăng nhập YouTube:
+
+```text
+YTDLP_COOKIES_BROWSER=chrome
+```
+
 ## Cấu trúc chính
 
 ```text
@@ -59,7 +66,7 @@ week1/           # Prototype cũ, không phải package chính
 output/          # Artifact sinh ra, không được commit
 ```
 
-Data contract phiên bản hiện tại: [docs/data_contract_v1.md](docs/data_contract_v1.md).
+Data contract phiên bản hiện tại: [docs/schema_for_all.md](docs/schema_for_all.md).
 
 ## Chạy kiểm tra
 
@@ -67,6 +74,47 @@ Data contract phiên bản hiện tại: [docs/data_contract_v1.md](docs/data_co
 pytest
 ruff check .
 ```
+
+## Chạy Backend Sprint 1
+
+Chỉ chuẩn bị video, audio và transcript:
+
+```bash
+python -m scripts.run_backend sample.mp4
+```
+
+Với YouTube:
+
+```bash
+python -m scripts.run_backend "https://www.youtube.com/watch?v=VIDEO_ID" --cookies-browser chrome
+```
+
+Nếu đã có candidate JSON từ LLM/scoring step, render 3–5 clip:
+
+```bash
+python -m scripts.run_backend sample.mp4 --candidates candidates.json
+```
+
+Chạy đầy đủ năm pha LangGraph với naive baseline:
+
+```bash
+python -m scripts.run_agent sample.mp4 --domain lecture --highlight-count 3
+```
+
+Ép dùng Whisper và tắt subtitle khi cần test riêng:
+
+```bash
+python -m scripts.run_agent sample.mp4 \
+  --domain lecture \
+  --transcript-source whisper \
+  --no-subtitles
+```
+
+`--transcript-source` nhận `auto`, `youtube` hoặc `whisper`. Chế độ `auto`
+ưu tiên caption YouTube và fallback sang Whisper.
+
+`Analyze` sẽ dùng candidate bên ngoài nếu truyền `--candidates`; nếu không,
+nó tạo baseline giả lập có seed ổn định để demo Sprint 1.
 
 ## Git workflow
 

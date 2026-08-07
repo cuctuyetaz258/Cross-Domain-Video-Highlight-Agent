@@ -1,1 +1,1 @@
-"""Cross-domain signal feature extractors."""
+"""Trích xuất năm tầng tín hiệu đa miền"""

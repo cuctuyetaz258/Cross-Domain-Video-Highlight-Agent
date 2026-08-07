@@ -1,28 +1,28 @@
-# Shared schemas and configuration
+# Thư viện hỗ trợ
 pydantic>=2.7,<3
 python-dotenv>=1,<2
 
-# Media ingestion, transcription, and rendering
-yt-dlp
+# Xử lý media (ingestion, transcript, rendering)
+yt-dlp[default]
 faster-whisper>=1,<2
 opencv-python>=4.9,<5
 
-# Agent orchestration and LLM integration
+# Điều phối agent, tích hợp LLM
 langgraph
 openai
 google-genai
 
-# Demo UI
+# Frontend
 streamlit
 plotly
 
-# Cross-domain feature extraction (Sprint 2)
+# Trích xuất đặc trưng
 librosa
 pyannote.audio
 scikit-learn
 sentence-transformers
 transformers
 
-# Development and testing
+# Testing
 pytest>=8,<9
 ruff>=0.6,<1
