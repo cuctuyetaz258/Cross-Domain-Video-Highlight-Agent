@@ -1,3 +1,3 @@
-"""Cross-Domain Video Highlight Agent package."""
+"""Package chính của hệ thống trích xuất video highlight"""
 
 __version__ = "0.1.0"

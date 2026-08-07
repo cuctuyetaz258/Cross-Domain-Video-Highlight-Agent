@@ -12,7 +12,7 @@ def get_workspace_id(video_input: str) -> str:
         if match: 
             return match.group(1)
         else:
-            return hashlib.md5(video_input.encode().hexdigest())[:10]
+            return hashlib.md5(video_input.encode()).hexdigest()[:10]
     
     else:
         clean_name = os.path.basename(video_input)

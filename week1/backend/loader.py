@@ -21,7 +21,8 @@ def download_video(url: str, workspace_dir: str) -> str:
         'writesubtitles': False,       # Tắt tải phụ đề YouTube
         'writeautomaticsub': False,    # Tắt tải sub tự động
         'quiet': True,
-        'no_warnings': True
+        'no_warnings': True,
+        "cookiesfrombrowser": ("chrome",),
     }
     
     print(f"[Backend - yt-dlp] Đang tải video từ: {url} ...")
