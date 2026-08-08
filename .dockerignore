@@ -1,0 +1,11 @@
+.venv/
+.git/
+output/
+__pycache__/
+*.pyc
+.env
+*.mp4
+*.wav
+*.webm
+*.mkv
+.gemini/

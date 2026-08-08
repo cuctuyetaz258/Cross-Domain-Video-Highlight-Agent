@@ -12,21 +12,48 @@ Source cũ được giữ trong `week1/` để tham khảo; implementation mới
 ## Yêu cầu hệ thống
 
 - Python 3.10–3.12; khuyến nghị Python 3.11 cho môi trường chung của nhóm.
-- `ffmpeg`, `ffprobe` và Deno 2.3+ có trong `PATH`.
+- `ffmpeg`, `ffprobe` có trong `PATH`.
 - Git.
 
-Trên macOS, có thể cài ffmpeg bằng Homebrew:
+### Cài ffmpeg
+
+**macOS:**
 
 ```bash
 brew install ffmpeg
-brew install deno
+```
+
+**Windows:**
+
+```bash
+# Tải từ https://www.gyan.dev/ffmpeg/builds/ (bản essentials)
+# Giải nén và thêm thư mục bin/ vào biến PATH hệ thống
+# Kiểm tra:
+ffmpeg -version
+```
+
+**Linux (Ubuntu/Debian):**
+
+```bash
+sudo apt-get update && sudo apt-get install -y ffmpeg
 ```
 
 ## Khởi tạo môi trường
 
+**macOS/Linux:**
+
 ```bash
 python3.11 -m venv .venv
 source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+**Windows (PowerShell):**
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
@@ -42,11 +69,13 @@ cp .env.example .env
 
 Điền API key cần sử dụng vào `.env`. Không commit `.env` lên GitHub.
 
-Nếu YouTube yêu cầu xác minh đăng nhập, đặt browser đang đăng nhập YouTube:
-
-```text
-YTDLP_COOKIES_BROWSER=chrome
-```
+| Biến | Mô tả | Bắt buộc |
+|---|---|---|
+| `GROQ_API_KEY` | API key từ [console.groq.com](https://console.groq.com) | ✅ Có |
+| `GOOGLE_API_KEY` | API key từ [aistudio.google.com](https://aistudio.google.com) | Tùy chọn |
+| `OPENROUTER_API_KEY` | API key từ [openrouter.ai](https://openrouter.ai) | Tùy chọn |
+| `HF_TOKEN` | HuggingFace token | Tùy chọn |
+| `YTDLP_COOKIES_BROWSER` | Browser đang đăng nhập YouTube (VD: `chrome`) | Tùy chọn |
 
 ## Cấu trúc chính
 
@@ -54,14 +83,14 @@ YTDLP_COOKIES_BROWSER=chrome
 highlight_agent/
 ├── agent/       # LangGraph state, nodes và graph
 ├── features/    # Năm tầng tín hiệu đa miền
-├── llm/         # LLM clients và prompts
+├── llm/         # LLM clients, prompts và extractor
 ├── media/       # Input, audio, transcript, render, thumbnail
 └── schemas/     # Pydantic data contracts dùng chung
 
 frontend/        # Streamlit UI
 scripts/         # Script hỗ trợ phát triển/demo
 tests/           # Automated tests
-docs/            # Đề cương và tài liệu kỹ thuật
+docs/            # Tài liệu kỹ thuật và danh sách video mẫu
 week1/           # Prototype cũ, không phải package chính
 output/          # Artifact sinh ra, không được commit
 ```
@@ -95,6 +124,23 @@ Nếu đã có candidate JSON từ LLM/scoring step, render 3–5 clip:
 python -m scripts.run_backend sample.mp4 --candidates candidates.json
 ```
 
+## Trích xuất Highlight bằng AI (Prompt Engineering)
+
+Sau khi đã có file `transcript.json`, dùng script sau để gọi AI chọn highlight:
+
+```bash
+python -m scripts.extract_highlights "output/VIDEO_ID/transcript.json" --output "output/VIDEO_ID/candidates.json"
+```
+
+Script sẽ:
+1. Đọc transcript từ file JSON.
+2. Gửi cho Groq AI (Llama 3.3 70B) kèm prompt đa miền.
+3. Lưu kết quả thành file `candidates.json` chuẩn Pydantic.
+
+Yêu cầu: `GROQ_API_KEY` đã được điền trong file `.env`.
+
+## Chạy Agent đầy đủ
+
 Chạy đầy đủ năm pha LangGraph với naive baseline:
 
 ```bash
@@ -116,9 +162,39 @@ python -m scripts.run_agent sample.mp4 \
 `Analyze` sẽ dùng candidate bên ngoài nếu truyền `--candidates`; nếu không,
 nó tạo baseline giả lập có seed ổn định để demo Sprint 1.
 
+## Chạy bằng Docker
+
+### Build image
+
+```bash
+docker build -t highlight-agent .
+```
+
+### Chạy backend với YouTube URL
+
+```bash
+docker run --rm --env-file .env -v ./output:/app/output highlight-agent scripts.run_backend "https://www.youtube.com/watch?v=VIDEO_ID"
+```
+
+### Chạy extract highlights
+
+```bash
+docker run --rm --env-file .env -v ./output:/app/output highlight-agent scripts.extract_highlights "output/VIDEO_ID/transcript.json" --output "output/VIDEO_ID/candidates.json"
+```
+
+### Chạy agent đầy đủ
+
+```bash
+docker run --rm --env-file .env -v ./output:/app/output highlight-agent scripts.run_agent "https://www.youtube.com/watch?v=VIDEO_ID" --domain lecture
+```
+
+> **Lưu ý:** Flag `--env-file .env` truyền API key vào container.
+> Flag `-v ./output:/app/output` mount thư mục output ra máy host để lấy kết quả.
+
 ## Git workflow
 
 - `main` luôn ở trạng thái chạy được.
 - Tạo branch ngắn theo task, ví dụ `feature/backend-ingestion`.
 - Push branch, mở Pull Request vào `main`, review và merge.
 - Không commit API key, video, audio, model weights hoặc `output/`.
+
