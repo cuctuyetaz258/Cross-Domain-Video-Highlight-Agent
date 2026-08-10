@@ -11,11 +11,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("video_input", help="YouTube URL or local video path")
     parser.add_argument("--candidates", help="Optional candidate JSON produced by an LLM/scoring step")
     parser.add_argument("--output-dir", default=None, help="Override OUTPUT_DIR")
-    parser.add_argument("--cookies-browser", default=None, help="Browser used by yt-dlp, e.g. chrome")
+    # parser.add_argument("--cookies-browser", default=None, help="Browser used by yt-dlp, e.g. chrome")
     parser.add_argument(
         "--transcript-source",
         choices=["auto", "youtube", "whisper"],
-        default="auto",
+        default="auto",     
         help="Choose caption-first, YouTube-only, or Whisper-only transcript",
     )
     parser.add_argument("--no-subtitles", action="store_true", help="Do not burn transcript subtitles")

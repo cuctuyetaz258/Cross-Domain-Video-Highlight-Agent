@@ -14,7 +14,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--highlight-count", type=int, default=3, choices=range(3, 6))
     parser.add_argument("--candidates", help="Optional external candidate JSON")
     parser.add_argument("--output-dir", default=None)
-    parser.add_argument("--cookies-browser", default=None)
+    # parser.add_argument("--cookies-browser", default=None)
     parser.add_argument(
         "--transcript-source",
         choices=["auto", "youtube", "whisper"],
