@@ -26,6 +26,7 @@ def prepare_video(
         video_input,
         output_root=output_root,
         cookies_browser=cookies_browser,
+        whisper_model_size="base.en",
         transcript_source=transcript_source,
     )
 

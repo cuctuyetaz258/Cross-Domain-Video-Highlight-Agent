@@ -47,7 +47,13 @@ def _youtube_options(workspace_dir: Path, cookies_browser: str | None) -> dict[s
         "noplaylist": True,
         "quiet": True,
         "no_warnings": False,
+        "sleep_requests": 1.5,
     }
+    try:
+        from yt_dlp.networking.impersonate import ImpersonateTarget
+        options["impersonate"] = ImpersonateTarget(client="chrome")
+    except ImportError:
+        pass # Older yt-dlp versions might not have this
     if cookies_browser:
         options["cookiesfrombrowser"] = (cookies_browser,)
     return options
@@ -94,37 +100,43 @@ def download_youtube_media(
     download_captions: bool = True,
 ) -> YoutubeMedia:
     workspace_path = Path(workspace_dir)
+    
+    # 1. EARLY EXIT CACHING
+    try:
+        cached_video = _find_downloaded_video(workspace_path)
+        if cached_video.stat().st_size > 0:
+            duration = probe_duration(cached_video)
+            cached_caption = _find_caption_file(workspace_path, "en") if download_captions else None
+            # Trả về luôn nếu đã có file cache
+            return YoutubeMedia(cached_video, duration, [], cached_caption, "en")
+    except MediaProcessingError:
+        pass # Không tìm thấy cache, tiếp tục tải
+
+    # 2. SINGLE-PASS DOWNLOAD
     options = _youtube_options(workspace_path, cookies_browser)
+    if download_captions:
+        options.update({
+            "writesubtitles": True,
+            "writeautomaticsub": True,
+            "subtitleslangs": ["en.*", "en"], # Lấy tiếng Anh
+            "subtitlesformat": "json3",
+        })
 
     try:
-        with yt_dlp.YoutubeDL({**options, "skip_download": True}) as ydl:
-            initial_info = ydl.extract_info(url, download=False)
-
-        track = _preferred_english_track(initial_info) if download_captions else None
-        download_options = dict(options)
-        if track:
-            _, language = track
-            download_options.update(
-                {
-                    "writesubtitles": True,
-                    "writeautomaticsub": True,
-                    "subtitleslangs": [language],
-                    "subtitlesformat": "json3",
-                }
-            )
-
-        with yt_dlp.YoutubeDL(download_options) as ydl:
+        with yt_dlp.YoutubeDL(options) as ydl:
             info = ydl.extract_info(url, download=True)
     except yt_dlp.utils.DownloadError as exc:
         raise MediaProcessingError(f"YouTube download failed: {exc}") from exc
 
-    duration = float(info.get("duration") or initial_info.get("duration") or 0)
+    duration = float(info.get("duration") or 0)
     video_path = _find_downloaded_video(workspace_path)
     if duration <= 0:
         duration = probe_duration(video_path)
     chapters = _chapters_from_info(info, duration)
-    language = track[1] if track else "en"
-    caption_path = _find_caption_file(workspace_path, language) if track else None
+    
+    caption_path = _find_caption_file(workspace_path, "en") if download_captions else None
+    language = "en" # Định dạng lang mặc định sau khi lưu
+    
     return YoutubeMedia(video_path, duration, chapters, caption_path, language)
 
 
@@ -133,7 +145,7 @@ def prepare_media_workspace(
     *,
     output_root: str | Path | None = None,
     cookies_browser: str | None = None,
-    whisper_model_size: str = "small.en",
+    whisper_model_size: str = "base.en",
     transcript_source: Literal["auto", "youtube", "whisper"] = "auto",
 ) -> MediaWorkspace:
     """Chuẩn bị video, audio và transcript theo caption-first"""

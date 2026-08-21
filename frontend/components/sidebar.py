@@ -12,6 +12,13 @@ def render_sidebar():
         
         if input_type == "YouTube URL":
             youtube_url = st.text_input("YouTube URL", placeholder="https://youtu.be/HMOI_lkzW08")
+            cookies_browser = st.selectbox(
+                "Browser for Cookies (To bypass YT blocks)", 
+                ["chrome", "edge", "firefox", "brave", "safari", "none"],
+                index=0
+            )
+            if cookies_browser == "none":
+                cookies_browser = None
         else:
             local_file = st.file_uploader("Upload Video", type=["mp4", "mov", "mkv", "webm"])
         
@@ -21,6 +28,7 @@ def render_sidebar():
             if input_type == "YouTube URL" and youtube_url:
                 st.session_state["target_url"] = youtube_url
                 st.session_state["target_domain"] = domain
+                st.session_state["cookies_browser"] = cookies_browser
                 
                 st.session_state["current_phase"] = 1
                 st.session_state["is_running"] = True
