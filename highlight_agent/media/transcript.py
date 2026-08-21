@@ -99,7 +99,7 @@ def transcribe_with_whisper(
     video_id: str,
     duration: float,
     chapters: list[Chapter] | None = None,
-    model_size: str = "small.en",
+    model_size: str = "base.en",
     model_factory: Callable[..., Any] | None = None,
 ) -> TranscriptDocument:
     if model_factory is None:
@@ -109,7 +109,13 @@ def transcribe_with_whisper(
             raise MediaProcessingError("faster-whisper is not installed") from exc
         model_factory = WhisperModel
 
-    model = model_factory(model_size, device="cpu", compute_type="int8")
+    try:
+        # Thử nạp mô hình bằng GPU với chuẩn nén int8_float16 để tiết kiệm VRAM
+        model = model_factory(model_size, device="cuda", compute_type="int8_float16")
+    except Exception as exc:
+        # Nếu GPU hết VRAM hoặc lỗi CUDA, tự động chuyển về CPU
+        print(f"[Whisper] GPU allocation failed ({exc}), falling back to CPU...")
+        model = model_factory(model_size, device="cpu", compute_type="int8")
     raw_segments, info = model.transcribe(
         str(audio_path),
         beam_size=5,
@@ -137,6 +143,9 @@ def transcribe_with_whisper(
                     text=word_text,
                 )
             )
+        
+        words.sort(key=lambda w: w.start)
+        
         segments.append(
             TranscriptSegment(
                 id=len(segments),
@@ -149,6 +158,13 @@ def transcribe_with_whisper(
 
     if not segments:
         raise MediaProcessingError("Whisper did not detect usable English speech")
+
+    # Fix Pydantic validation error: faster-whisper sometimes outputs slightly out-of-order segments
+    segments.sort(key=lambda s: s.start)
+    
+    # Re-assign sequential IDs after sorting
+    for i, s in enumerate(segments):
+        s.id = i
 
     detected_language = getattr(info, "language", None) or "en"
     return TranscriptDocument(

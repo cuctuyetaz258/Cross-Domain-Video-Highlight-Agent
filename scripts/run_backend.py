@@ -27,7 +27,7 @@ def main() -> None:
     workspace = prepare_video(
         args.video_input,
         output_root=args.output_dir,
-        cookies_browser=args.cookies_browser,
+        # cookies_browser=args.cookies_browser,
         transcript_source=args.transcript_source,
     )
     print(json.dumps(workspace.model_dump(mode="json"), ensure_ascii=False, indent=2))

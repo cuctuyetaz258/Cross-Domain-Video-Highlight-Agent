@@ -6,6 +6,7 @@ python-dotenv>=1,<2
 yt-dlp[default]
 faster-whisper>=1,<2
 opencv-python>=4.9,<5
+curl-cffi>=0.7.1
 
 # Điều phối agent, tích hợp LLM
 langgraph
@@ -15,6 +16,7 @@ google-genai
 # Frontend
 streamlit
 plotly
+rich>=13
 
 # Trích xuất đặc trưng
 librosa
@@ -22,6 +24,10 @@ pyannote.audio
 scikit-learn
 sentence-transformers
 transformers
+
+# Deep Learning Optical Flow (RAFT)
+torch>=2.0.0
+torchvision>=0.15.0
 
 # Testing
 pytest>=8,<9
