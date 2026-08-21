@@ -21,6 +21,10 @@ env/
 # Generated media and model artifacts
 output/
 processing_video/
+data/benchmark/
+*.h5
+*.tar
+*.zip
 *.wav
 *.mp3
 *.mp4

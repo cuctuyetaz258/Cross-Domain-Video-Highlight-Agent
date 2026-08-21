@@ -16,12 +16,14 @@ google-genai
 streamlit
 plotly
 
-# Trích xuất đặc trưng
+# Trích xuất đặc trưng & Evaluation
 librosa
 pyannote.audio
 scikit-learn
 sentence-transformers
 transformers
+h5py
+scipy
 
 # Testing
 pytest>=8,<9
