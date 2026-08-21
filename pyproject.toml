@@ -1,0 +1,19 @@
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+exclude = [
+    "week1",
+    ".venv",
+    "output",
+    "data",
+    "docs"
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = ["E501", "W291", "W293"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]
+pythonpath = ["."]

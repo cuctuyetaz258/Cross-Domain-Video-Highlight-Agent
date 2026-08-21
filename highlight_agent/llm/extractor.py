@@ -4,6 +4,7 @@ import json
 import os
 
 from openai import OpenAI
+
 from highlight_agent.schemas.highlight import HighlightCandidate
 
 # ================================================================
