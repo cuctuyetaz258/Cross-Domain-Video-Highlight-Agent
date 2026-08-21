@@ -2,11 +2,56 @@ from pathlib import Path
 
 from highlight_agent.agent import build_agent_graph, nodes
 from highlight_agent.schemas import (
+    AcousticFeatures,
+    FeatureWindow,
+    InteractionFeatures,
     MediaWorkspace,
     RenderedHighlight,
+    SpeakerTurn,
     TranscriptDocument,
     TranscriptSegment,
 )
+
+
+def _acoustic_features() -> AcousticFeatures:
+    return AcousticFeatures(
+        duration=360,
+        rms_mean=0.1,
+        rms_peak=0.2,
+        rms_p95=0.18,
+        rms_std=0.02,
+        voiced_ratio=0.8,
+        silence_duration=20,
+        silence_ratio=20 / 360,
+    )
+
+
+def _interaction_features() -> InteractionFeatures:
+    return InteractionFeatures(
+        duration=360,
+        speaker_count=2,
+        turn_count=12,
+        turn_rate_per_minute=2,
+        speech_duration=300,
+        speech_ratio=300 / 360,
+        turns=[
+            SpeakerTurn(start=0, end=150, speaker="SPEAKER_00"),
+            SpeakerTurn(start=150, end=300, speaker="SPEAKER_01"),
+        ],
+    )
+
+
+def _acoustic_windows() -> tuple[AcousticFeatures, list[FeatureWindow]]:
+    acoustic = _acoustic_features()
+    windows = [
+        FeatureWindow(
+            start=float(start),
+            end=float(start + 30),
+            acoustic=_acoustic_features().model_copy(update={"duration": 30.0}),
+        )
+        for start in range(0, 360, 30)
+    ]
+    return acoustic, windows
 
 
 def _workspace(tmp_path: Path) -> MediaWorkspace:
@@ -43,7 +88,8 @@ def test_plan_uses_domain_specific_profile() -> None:
     assert sum(lecture.values()) == 1
 
 
-def test_analyze_naive_baseline_is_reproducible(tmp_path: Path) -> None:
+def test_analyze_naive_baseline_is_reproducible(tmp_path: Path, monkeypatch) -> None:
+    monkeypatch.setattr(nodes, "extract_windowed_acoustic_features", lambda path, **kwargs: _acoustic_windows())
     state = {
         "video_path": "video.mp4",
         "domain": "lecture",
@@ -58,6 +104,40 @@ def test_analyze_naive_baseline_is_reproducible(tmp_path: Path) -> None:
     assert first["candidates"] == second["candidates"]
     assert len(first["candidates"]) == 5
     assert all(candidate.end_time <= 360 for candidate in first["candidates"])
+    assert first["features"]["acoustic"]["rms_mean"] == 0.1
+    assert Path(first["feature_path"]).is_file()
+    assert first["feature_timeline"]["window_seconds"] == 30
+    assert len(first["feature_timeline"]["windows"]) == 12
+
+
+def test_analyze_adds_interaction_features_for_podcast(tmp_path: Path, monkeypatch) -> None:
+    monkeypatch.setattr(nodes, "extract_windowed_acoustic_features", lambda path, **kwargs: _acoustic_windows())
+    captured = {}
+
+    def fake_interaction(path, *, num_speakers=None):
+        captured["num_speakers"] = num_speakers
+        return _interaction_features()
+
+    monkeypatch.setattr(nodes, "extract_interaction_features", fake_interaction)
+    monkeypatch.setattr(
+        nodes,
+        "windowed_interaction_features",
+        lambda interaction, **kwargs: [_interaction_features().model_copy(update={"duration": 30.0})] * 12,
+    )
+    state = {
+        "video_path": "podcast.mp4",
+        "domain": "podcast",
+        "workspace": _workspace(tmp_path),
+        "transcript": _transcript(),
+        "profile": nodes.PROFILE_WEIGHTS["podcast"],
+        "known_speaker_count": 2,
+    }
+
+    result = nodes.analyze(state)
+
+    assert result["features"]["interaction"]["turn_count"] == 12
+    assert captured["num_speakers"] == 2
+    assert result["feature_timeline"]["windows"][0]["interaction"]["duration"] == 30
 
 
 def test_full_graph_calls_backend_facade(tmp_path: Path, monkeypatch) -> None:
@@ -73,6 +153,7 @@ def test_full_graph_calls_backend_facade(tmp_path: Path, monkeypatch) -> None:
 
     monkeypatch.setattr(nodes, "prepare_video", fake_prepare)
     monkeypatch.setattr(nodes, "load_transcript", lambda path: transcript)
+    monkeypatch.setattr(nodes, "extract_windowed_acoustic_features", lambda path, **kwargs: _acoustic_windows())
 
     def fake_render(workspace_arg, candidates, *, burn_subtitles=True):
         calls["burn_subtitles"] = burn_subtitles

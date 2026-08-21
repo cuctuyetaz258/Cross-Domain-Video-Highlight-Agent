@@ -3,6 +3,13 @@
 import random
 
 from highlight_agent.backend import load_transcript, prepare_video, render_candidates
+from highlight_agent.features import (
+    build_feature_timeline,
+    extract_interaction_features,
+    extract_windowed_acoustic_features,
+    save_feature_timeline,
+    windowed_interaction_features,
+)
 from highlight_agent.schemas import HighlightCandidate
 
 from .state import AgentState, Domain, ReasoningEntry, SignalProfile
@@ -86,7 +93,60 @@ def _naive_candidates(state: AgentState, count: int = 5) -> list[HighlightCandid
 
 
 def analyze(state: AgentState) -> dict:
-    """Dùng candidate có sẵn hoặc tạo naive baseline ổn định"""
+    """Trích xuất feature Sprint 2 rồi dùng candidate có sẵn hoặc baseline"""
+
+    workspace = state.get("workspace")
+    if workspace is None:
+        raise ValueError("Analyze requires workspace from Observe")
+
+    window_seconds = 30.0
+    hop_seconds = 30.0
+    acoustic, acoustic_windows = extract_windowed_acoustic_features(
+        workspace.audio_path,
+        window_seconds=window_seconds,
+        hop_seconds=hop_seconds,
+    )
+    features: dict[str, object] = {
+        "acoustic": acoustic.model_dump(mode="json"),
+        "profile": state.get("profile", {}),
+    }
+    if state["domain"] == "podcast":
+        interaction = extract_interaction_features(
+            workspace.audio_path,
+            num_speakers=state.get("known_speaker_count"),
+        )
+        features["interaction"] = interaction.model_dump(mode="json")
+        interaction_windows = windowed_interaction_features(
+            interaction,
+            window_seconds=window_seconds,
+            hop_seconds=hop_seconds,
+        )
+    else:
+        interaction = None
+        interaction_windows = None
+
+    timeline = build_feature_timeline(
+        video_id=workspace.video_id,
+        domain=state["domain"],
+        duration=acoustic.duration,
+        window_seconds=window_seconds,
+        hop_seconds=hop_seconds,
+        acoustic=acoustic,
+        acoustic_windows=acoustic_windows,
+        interaction=interaction,
+        interaction_windows=interaction_windows,
+    )
+    feature_path = save_feature_timeline(
+        timeline,
+        workspace.audio_path.parent / "features" / "features.json",
+    )
+    features.update(
+        {
+            "feature_path": str(feature_path),
+            "window_count": len(timeline.windows),
+            "window_seconds": window_seconds,
+        }
+    )
 
     supplied_candidates = state.get("candidates")
     if supplied_candidates:
@@ -96,11 +156,9 @@ def analyze(state: AgentState) -> dict:
         candidates = _naive_candidates(state)
         mode = "naive_baseline"
     return {
-        "features": {
-            "mode": mode,
-            "candidate_count": len(candidates),
-            "profile": state.get("profile", {}),
-        },
+        "features": {"mode": mode, "candidate_count": len(candidates), **features},
+        "feature_path": str(feature_path),
+        "feature_timeline": timeline.model_dump(mode="json"),
         "candidates": candidates,
     }
 

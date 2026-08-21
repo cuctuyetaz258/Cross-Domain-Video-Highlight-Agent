@@ -12,9 +12,15 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("video_input", help="YouTube URL or local video path")
     parser.add_argument("--domain", required=True, choices=["lecture", "podcast", "standup"])
     parser.add_argument("--highlight-count", type=int, default=3, choices=range(3, 6))
+    parser.add_argument(
+        "--known-speaker-count",
+        type=int,
+        default=None,
+        help="Số speaker đã biết, dùng cho Pyannote diarization của podcast",
+    )
     parser.add_argument("--candidates", help="Optional external candidate JSON")
     parser.add_argument("--output-dir", default=None)
-    # parser.add_argument("--cookies-browser", default=None)
+    parser.add_argument("--cookies-browser", default=None)
     parser.add_argument(
         "--transcript-source",
         choices=["auto", "youtube", "whisper"],
@@ -30,6 +36,7 @@ def main() -> None:
         "video_path": args.video_input,
         "domain": args.domain,
         "highlight_count": args.highlight_count,
+        "known_speaker_count": args.known_speaker_count,
         "output_root": args.output_dir,
         "cookies_browser": args.cookies_browser,
         "transcript_source": args.transcript_source,
