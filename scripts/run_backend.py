@@ -15,7 +15,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--transcript-source",
         choices=["auto", "youtube", "whisper"],
-        default="auto",     
+        default="auto",
         help="Choose caption-first, YouTube-only, or Whisper-only transcript",
     )
     parser.add_argument("--no-subtitles", action="store_true", help="Do not burn transcript subtitles")
