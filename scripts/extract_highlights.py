@@ -15,7 +15,15 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Chạy AI tạo file candidates.json")
     parser.add_argument("transcript_path", help="Đường dẫn tới file transcript.json (VD: output/ABC/transcript.json)")
     parser.add_argument("--output", default="candidates.json", help="Tên file kết quả lưu ra")
+    parser.add_argument(
+        "--domain",
+        choices=["auto", "lecture", "podcast", "standup"],
+        default="auto",
+        help="Miền nội dung của video (auto, lecture, podcast, standup)",
+    )
+    parser.add_argument("--count", type=int, default=3, help="Số lượng highlight cần trích xuất (mặc định: 3)")
     return parser.parse_args()
+
 
 def main():
     load_dotenv()
@@ -29,8 +37,8 @@ def main():
     full_text = "\n".join([f"[{s.start:.1f}s - {s.end:.1f}s]: {s.text}" for s in transcript_obj.segments])
 
     # 2. Gọi hàm lõi AI của bạn
-    print("Đang gửi cho AI phân tích (chờ khoảng 10-15s)...")
-    candidates = extract_highlights_from_transcript(full_text)
+    print(f"Đang gửi cho AI phân tích ({args.count} highlights, domain: {args.domain})...")
+    candidates = extract_highlights_from_transcript(full_text, domain=args.domain, highlight_count=args.count)
 
     # 3. Lưu kết quả ra thành file .json vật lý
     out_path = Path(args.output)

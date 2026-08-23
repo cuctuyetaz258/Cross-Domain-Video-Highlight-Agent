@@ -20,7 +20,7 @@ Phân tích transcript (bản ghi lời nói có kèm mốc thời gian tính b�
 QUY TẮC BẮT BUỘC:
 1. Mỗi clip phải dài từ 30 đến 90 giây (TUYỆT ĐỐI KHÔNG được ngắn hơn 30s hoặc dài hơn 90s). Tức là toán học (end_time - start_time) BẮT BUỘC phải nằm trong khoảng [30.0, 90.0].
 2. Các clip KHÔNG ĐƯỢC chồng lấn thời gian lên nhau.
-3. Các clip phải phân bố đều trong video (không chọn 5 đoạn liên tiếp nhau).
+3. Các clip phải phân bố đều trong video (không chọn các đoạn dính liền sát nhau).
 4. start_time và end_time PHẢI nằm trong phạm vi thời gian của transcript (không bịa số).
 5. Điểm cắt (start/end) nên trùng với ranh giới câu nói tự nhiên — không cắt giữa chừng một câu.
 6. Chấm điểm (score) từ 0.0 đến 10.0 dựa trên mức độ hấp dẫn và khả năng viral.
@@ -101,7 +101,7 @@ Hãy tự phân tích nội dung transcript để xác định loại video, sau
 Signals gợi ý: tùy thuộc vào loại video bạn nhận diện được."""
 
 
-def build_prompt(domain: str = "auto", highlight_count: int = 5) -> str:
+def build_prompt(domain: str = "auto", highlight_count: int = 3) -> str:
     """Ghép prompt chính + tiêu chí riêng theo miền."""
     criteria = DOMAIN_CRITERIA.get(domain, DOMAIN_CRITERIA["auto"])
     return BASE_SYSTEM_PROMPT.format(
@@ -135,7 +135,7 @@ def _fix_duration(item: dict) -> dict:
 def extract_highlights_from_transcript(
     transcript_text: str,
     domain: str = "auto",
-    highlight_count: int = 5,
+    highlight_count: int = 3,
 ) -> list[HighlightCandidate]:
     """Gửi transcript cho Groq AI và lấy về danh sách Highlight chuẩn Pydantic."""
 
