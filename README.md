@@ -191,10 +191,54 @@ docker run --rm --env-file .env -v ./output:/app/output highlight-agent scripts.
 > **Lưu ý:** Flag `--env-file .env` truyền API key vào container.
 > Flag `-v ./output:/app/output` mount thư mục output ra máy host để lấy kết quả.
 
+## Sprint 2: Audio và interaction features
+
+Node `Analyze` luôn trích xuất RMS Energy, pitch và silence từ audio 16 kHz
+mono bằng Librosa. Với `--domain podcast`, nó chạy thêm Pyannote speaker
+diarization và tính số lần đổi speaker (`turn_count`).
+
+Chạy riêng acoustic extractor trên audio có sẵn:
+
+```bash
+conda run -n video-highlight python -c '
+from highlight_agent.features import extract_acoustic_features
+print(extract_acoustic_features("output/VIDEO_ID/audio.wav"))
+'
+```
+
+Chạy đầy đủ feature timeline 30 giây từ audio đã có, không tạo highlight:
+
+```bash
+conda run -n video-highlight python -m scripts.run_features \
+  output/pbyQhbZJhwI/audio.wav \
+  --domain podcast \
+  --known-speaker-count 2
+```
+
+Lệnh ghi output đầy đủ vào `output/{video_id}/features/features.json`.
+
+Tạo trang review trực quan từ kết quả đó:
+
+```bash
+conda run -n video-highlight python -m scripts.build_diarization_review \
+  output/pbyQhbZJhwI/features/features.json
+```
+
+Trang `output/{video_id}/features/review.html` có video player, timeline speaker
+và các ô 30 giây có thể bấm để vừa xem vừa nghe đối chiếu. Mở file bằng Chrome
+hoặc Safari; file chỉ đọc output đã có, không chạy model lại.
+
+Pyannote cần `HF_TOKEN` trong `.env` và tài khoản Hugging Face phải chấp nhận
+điều khoản của model
+[pyannote/speaker-diarization-community-1](https://huggingface.co/pyannote/speaker-diarization-community-1).
+Thiết bị được chọn theo thứ tự CUDA, Apple MPS, rồi CPU. Vì vậy Podcast vẫn
+chạy được trên CPU local; chỉ gọi là demo GPU khi `torch.cuda.is_available()`
+trả về `True`.
+
+
 ## Git workflow
 
 - `main` luôn ở trạng thái chạy được.
 - Tạo branch ngắn theo task, ví dụ `feature/backend-ingestion`.
 - Push branch, mở Pull Request vào `main`, review và merge.
 - Không commit API key, video, audio, model weights hoặc `output/`.
-
