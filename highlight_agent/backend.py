@@ -4,8 +4,12 @@ import json
 from pathlib import Path
 from typing import Literal
 
+from highlight_agent.boundary import refine_candidate_boundaries
+from highlight_agent.features import extract_acoustic_features
 from highlight_agent.media import prepare_media_workspace, render_highlights
 from highlight_agent.schemas import (
+    BoundaryAdjustment,
+    FeatureTimeline,
     HighlightCandidate,
     MediaWorkspace,
     RenderedHighlight,
@@ -42,16 +46,50 @@ def load_candidates(path: str | Path) -> list[HighlightCandidate]:
     return [HighlightCandidate.model_validate(item) for item in raw_candidates]
 
 
+def refine_candidates_for_render(
+    workspace: MediaWorkspace,
+    candidates: list[HighlightCandidate],
+    *,
+    transcript: TranscriptDocument | None = None,
+) -> tuple[list[HighlightCandidate], list[BoundaryAdjustment]]:
+    """Canh biên candidate bằng transcript và silence toàn video trước khi render"""
+
+    document = transcript or load_transcript(workspace.transcript_path)
+    feature_path = workspace.audio_path.parent / "features" / "features.json"
+    if feature_path.is_file():
+        timeline = FeatureTimeline.model_validate_json(feature_path.read_text(encoding="utf-8"))
+        if timeline.video_id != workspace.video_id:
+            raise ValueError("feature timeline video_id must match workspace video_id")
+        silence_intervals = timeline.acoustic.silence_intervals
+    else:
+        silence_intervals = extract_acoustic_features(workspace.audio_path).silence_intervals
+    return refine_candidate_boundaries(
+        candidates,
+        document,
+        silence_intervals,
+        video_duration=document.duration,
+    )
+
+
 def render_candidates(
     workspace: MediaWorkspace,
     candidates: list[HighlightCandidate],
     *,
     burn_subtitles: bool = True,
+    boundary_adjustments: list[BoundaryAdjustment] | None = None,
+    refine_boundaries: bool = True,
 ) -> list[RenderedHighlight]:
     transcript = load_transcript(workspace.transcript_path)
+    if refine_boundaries:
+        candidates, boundary_adjustments = refine_candidates_for_render(
+            workspace,
+            candidates,
+            transcript=transcript,
+        )
     return render_highlights(
         workspace,
         candidates,
         transcript=transcript,
         burn_subtitles=burn_subtitles,
+        boundary_adjustments=boundary_adjustments,
     )

@@ -3,6 +3,7 @@ from pathlib import Path
 
 from highlight_agent.media import render
 from highlight_agent.schemas import (
+    BoundaryAdjustment,
     HighlightCandidate,
     MediaWorkspace,
     TranscriptDocument,
@@ -95,9 +96,29 @@ def test_render_highlights_writes_metadata_without_running_ffmpeg(tmp_path: Path
     monkeypatch.setattr(render, "render_short_9_16", fake_render)
     monkeypatch.setattr(render, "extract_thumbnail", fake_thumbnail)
 
-    results = render.render_highlights(workspace, _candidates(), transcript=transcript)
+    adjustments = [
+        BoundaryAdjustment(
+            candidate_id=candidate.candidate_id,
+            original_start_time=candidate.start_time,
+            original_end_time=candidate.end_time,
+            start_time=candidate.start_time,
+            end_time=candidate.end_time,
+            start_source="original",
+            end_source="original",
+            start_reason="Giữ mốc đề xuất",
+            end_reason="Giữ mốc đề xuất",
+        )
+        for candidate in _candidates()
+    ]
+    results = render.render_highlights(
+        workspace,
+        _candidates(),
+        transcript=transcript,
+        boundary_adjustments=adjustments,
+    )
 
     assert len(results) == 3
     metadata = json.loads((workspace_dir / "metadata.json").read_text(encoding="utf-8"))
     assert metadata["video_id"] == "abcdefghijk"
     assert len(metadata["highlights"]) == 3
+    assert metadata["boundary_adjustments"][0]["start_source"] == "original"

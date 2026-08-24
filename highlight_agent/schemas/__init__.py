@@ -8,12 +8,13 @@ from .features import (
     SpeakerTurn,
     TimeInterval,
 )
-from .highlight import HighlightCandidate, RenderedHighlight
+from .highlight import BoundaryAdjustment, HighlightCandidate, RenderedHighlight
 from .media import MediaWorkspace
 from .transcript import Chapter, TranscriptDocument, TranscriptSegment, TranscriptWord
 
 __all__ = [
     "AcousticFeatures",
+    "BoundaryAdjustment",
     "Chapter",
     "FeatureTimeline",
     "FeatureWindow",
