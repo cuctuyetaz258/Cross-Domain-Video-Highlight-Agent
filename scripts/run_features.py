@@ -37,6 +37,7 @@ def main() -> None:
         raise FileNotFoundError(f"audio file does not exist: {args.audio_path}")
 
     load_dotenv()
+    print("[1/3] Đang trích xuất RMS, pitch và silence", flush=True)
     acoustic, acoustic_windows = extract_windowed_acoustic_features(
         args.audio_path,
         window_seconds=args.window_seconds,
@@ -45,6 +46,7 @@ def main() -> None:
     interaction = None
     interaction_windows = None
     if args.domain == "podcast":
+        print("[2/3] Đang chạy Pyannote diarization", flush=True)
         interaction = extract_interaction_features(
             args.audio_path,
             num_speakers=args.known_speaker_count,
@@ -55,6 +57,7 @@ def main() -> None:
             hop_seconds=args.hop_seconds,
         )
 
+    print("[3/3] Đang tạo feature timeline và lưu kết quả", flush=True)
     timeline = build_feature_timeline(
         video_id=args.video_id or args.audio_path.parent.name,
         domain=args.domain,

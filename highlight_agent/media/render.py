@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 
 from highlight_agent.schemas import (
+    BoundaryAdjustment,
     HighlightCandidate,
     MediaWorkspace,
     RenderedHighlight,
@@ -161,6 +162,7 @@ def render_highlights(
     *,
     transcript: TranscriptDocument | None = None,
     burn_subtitles: bool = True,
+    boundary_adjustments: list[BoundaryAdjustment] | None = None,
 ) -> list[RenderedHighlight]:
     if not 3 <= len(candidates) <= 5:
         raise ValueError("MVP rendering expects between 3 and 5 highlight candidates")
@@ -168,6 +170,10 @@ def render_highlights(
         raise ValueError("highlight candidate IDs must be unique")
     if transcript and transcript.video_id != workspace.video_id:
         raise ValueError("transcript video_id must match workspace video_id")
+    if boundary_adjustments and {item.candidate_id for item in boundary_adjustments} != {
+        candidate.candidate_id for candidate in candidates
+    }:
+        raise ValueError("boundary adjustments must match rendered candidate IDs")
 
     workspace_dir = workspace.transcript_path.parent
     shorts_dir = workspace_dir / "shorts"
@@ -212,6 +218,9 @@ def render_highlights(
         "source_video_path": str(workspace.source_video_path),
         "transcript_path": str(workspace.transcript_path),
         "highlights": [item.model_dump(mode="json") for item in rendered],
+        "boundary_adjustments": [
+            item.model_dump(mode="json") for item in boundary_adjustments or []
+        ],
     }
     (workspace_dir / "metadata.json").write_text(
         json.dumps(metadata, ensure_ascii=False, indent=2),

@@ -2,7 +2,12 @@
 
 import random
 
-from highlight_agent.backend import load_transcript, prepare_video, render_candidates
+from highlight_agent.backend import (
+    load_transcript,
+    prepare_video,
+    refine_candidates_for_render,
+    render_candidates,
+)
 from highlight_agent.features import (
     build_feature_timeline,
     extract_interaction_features,
@@ -176,14 +181,18 @@ def decide(state: AgentState) -> dict:
     if len(candidates) < highlight_count:
         raise ValueError("not enough candidates to satisfy highlight_count")
 
-    highlights = sorted(candidates, key=lambda candidate: candidate.score, reverse=True)[:highlight_count]
+    selected = sorted(candidates, key=lambda candidate: candidate.score, reverse=True)[:highlight_count]
+    highlights, boundary_adjustments = refine_candidates_for_render(workspace, selected)
     rendered = render_candidates(
         workspace,
         highlights,
         burn_subtitles=state.get("burn_subtitles", True),
+        boundary_adjustments=boundary_adjustments,
+        refine_boundaries=False,
     )
     return {
         "highlights": highlights,
+        "boundary_adjustments": boundary_adjustments,
         "rendered_highlights": rendered,
     }
 

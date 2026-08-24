@@ -154,8 +154,13 @@ def test_full_graph_calls_backend_facade(tmp_path: Path, monkeypatch) -> None:
     monkeypatch.setattr(nodes, "prepare_video", fake_prepare)
     monkeypatch.setattr(nodes, "load_transcript", lambda path: transcript)
     monkeypatch.setattr(nodes, "extract_windowed_acoustic_features", lambda path, **kwargs: _acoustic_windows())
+    monkeypatch.setattr(
+        nodes,
+        "refine_candidates_for_render",
+        lambda workspace_arg, candidates: (candidates, []),
+    )
 
-    def fake_render(workspace_arg, candidates, *, burn_subtitles=True):
+    def fake_render(workspace_arg, candidates, *, burn_subtitles=True, **kwargs):
         calls["burn_subtitles"] = burn_subtitles
         return [
             RenderedHighlight(

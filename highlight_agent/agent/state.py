@@ -3,6 +3,7 @@
 from typing import Any, Literal, NotRequired, Required, TypedDict
 
 from highlight_agent.schemas import (
+    BoundaryAdjustment,
     HighlightCandidate,
     MediaWorkspace,
     RenderedHighlight,
@@ -37,5 +38,6 @@ class AgentState(TypedDict, total=False):
     feature_timeline: NotRequired[dict[str, Any]]
     candidates: NotRequired[list[HighlightCandidate]]
     highlights: NotRequired[list[HighlightCandidate]]
+    boundary_adjustments: NotRequired[list[BoundaryAdjustment]]
     rendered_highlights: NotRequired[list[RenderedHighlight]]
     reasoning: NotRequired[list[ReasoningEntry]]
