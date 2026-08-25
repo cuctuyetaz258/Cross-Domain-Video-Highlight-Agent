@@ -1,6 +1,10 @@
-"""Logic năm node LangGraph cho baseline Sprint 1"""
+"""Logic năm node LangGraph tích hợp đa tầng tín hiệu"""
 
+from __future__ import annotations
+
+import logging
 import random
+import time
 
 from highlight_agent.backend import (
     load_transcript,
@@ -9,64 +13,168 @@ from highlight_agent.backend import (
     render_candidates,
 )
 from highlight_agent.features import (
+    PROFILE_WEIGHTS,
+    WindowVisualScore,
     build_feature_timeline,
     extract_interaction_features,
+    extract_visual_scores,
     extract_windowed_acoustic_features,
+    normalize_features,
     save_feature_timeline,
+    scores_to_array,
     windowed_interaction_features,
 )
 from highlight_agent.schemas import HighlightCandidate
 
-from .state import AgentState, Domain, ReasoningEntry, SignalProfile
+from .state import AgentState, Domain, ProgressEvent, ReasoningEntry, SignalProfile
 
-PROFILE_WEIGHTS: dict[Domain, SignalProfile] = {
-    "lecture": {
-        "acoustic": 0.30,
-        "paralinguistic": 0.00,
-        "linguistic": 0.50,
-        "structural": 0.20,
-        "interaction": 0.00,
-    },
-    "podcast": {
-        "acoustic": 0.20,
-        "paralinguistic": 0.10,
-        "linguistic": 0.30,
-        "structural": 0.10,
-        "interaction": 0.30,
-    },
-    "standup": {
-        "acoustic": 0.35,
-        "paralinguistic": 0.35,
-        "linguistic": 0.20,
-        "structural": 0.10,
-        "interaction": 0.00,
-    },
-}
+logger = logging.getLogger(__name__)
 
+
+# ──────────────────────────────────────────────
+# Helper: Emit progress events
+# ──────────────────────────────────────────────
+
+def _emit(state: AgentState, node: str, step: str, message: str, **meta) -> None:
+    """Gửi sự kiện tiến độ ra ngoài nếu có emit callback được cung cấp."""
+    emit_fn = state.get("emit")
+    if emit_fn:
+        try:
+            emit_fn(ProgressEvent(node=node, step=step, message=message, meta=meta))
+        except Exception:
+            pass
+
+
+# ──────────────────────────────────────────────
+# Node 1: Observe
+# ──────────────────────────────────────────────
 
 def observe(state: AgentState) -> dict:
     """Chuẩn hóa media và đưa transcript vào state"""
 
+    _emit(state, "observe", "start", f"Chuẩn hóa video: {state['video_path']}")
     workspace = prepare_video(
         state["video_path"],
         output_root=state.get("output_root"),
         cookies_browser=state.get("cookies_browser"),
         transcript_source=state.get("transcript_source", "auto"),
     )
+    transcript = load_transcript(workspace.transcript_path)
+    _emit(state, "observe", "done", f"Đã chuẩn hóa video (duration={transcript.duration:.1f}s)")
     return {
         "workspace": workspace,
-        "transcript": load_transcript(workspace.transcript_path),
+        "transcript": transcript,
     }
 
+
+# ──────────────────────────────────────────────
+# Node 2: Plan
+# ──────────────────────────────────────────────
 
 def plan(state: AgentState) -> dict:
     """Chọn profile tín hiệu theo domain"""
 
+    _emit(state, "plan", "start", f"Lập kế hoạch cho domain={state['domain']}")
     domain = state["domain"]
     if domain not in PROFILE_WEIGHTS:
         raise ValueError(f"unsupported domain: {domain}")
-    return {"profile": dict(PROFILE_WEIGHTS[domain])}
+    profile = dict(PROFILE_WEIGHTS[domain])
+    _emit(state, "plan", "done", f"Profile weights: {profile}")
+    return {"profile": profile}
 
+
+# ──────────────────────────────────────────────
+# Visual candidate generator
+# ──────────────────────────────────────────────
+
+def _visual_candidates(state: AgentState) -> list[HighlightCandidate]:
+    """Tạo highlight candidates dựa trên visual motion scoring."""
+    workspace = state.get("workspace")
+    transcript = state.get("transcript")
+    if workspace is None or transcript is None:
+        raise ValueError("Analyze requires workspace and transcript from Observe")
+    if transcript.duration < 30:
+        raise ValueError("video must be at least 30 seconds to create an MVP highlight")
+
+    visual_method = state.get("visual_method", "pixel_diff")
+    sample_fps = state.get("visual_sample_fps", 1.0)
+    video_path = workspace.source_video_path
+
+    _emit(
+        state,
+        "analyze",
+        "visual_start",
+        f"Trích xuất visual motion ({visual_method}, {sample_fps} fps)...",
+    )
+
+    t0 = time.perf_counter()
+
+    def on_window(score: WindowVisualScore) -> None:
+        _emit(
+            state,
+            "analyze",
+            "visual_window",
+            f"[{score.start:.0f}s–{score.end:.0f}s] motion={score.motion_score:.3f}",
+            start=score.start,
+            end=score.end,
+            score=score.motion_score,
+        )
+
+    raw_scores = extract_visual_scores(
+        video_path=video_path,
+        window_size=30.0,
+        sample_fps=sample_fps,
+        method=visual_method,
+        on_window=on_window,
+    )
+    elapsed = time.perf_counter() - t0
+
+    if not raw_scores:
+        raise ValueError("Không trích xuất được visual score nào từ video.")
+
+    _emit(state, "analyze", "visual_normalize", "Chuẩn hóa và tính điểm...")
+    motion_arr = scores_to_array(raw_scores)
+    normed = normalize_features({"visual": motion_arr})
+    norm_motion = normed["visual"]
+
+    candidates: list[HighlightCandidate] = []
+    for idx, window in enumerate(raw_scores):
+        norm_score = float(norm_motion[idx])
+        score_10 = round(norm_score * 10.0, 2)
+        candidates.append(
+            HighlightCandidate(
+                candidate_id=f"vis_{idx + 1:02d}",
+                start_time=window.start,
+                end_time=window.end,
+                score=score_10,
+                reason=(
+                    f"Visual motion score ({visual_method}): "
+                    f"raw={window.motion_score:.4f}, normalized={norm_score:.4f}. "
+                    f"Cửa sổ {window.start:.1f}s–{window.end:.1f}s."
+                ),
+                signals={
+                    "visual_motion_raw": round(window.motion_score, 4),
+                    "visual_motion_norm": round(norm_score, 4),
+                    **{k: float(v) for k, v in window.extra.items() if isinstance(v, (int, float))},
+                },
+            )
+        )
+
+    _emit(
+        state,
+        "analyze",
+        "visual_done",
+        f"Trích xuất {len(candidates)} visual windows ({elapsed:.1f}s)",
+        count=len(candidates),
+        elapsed=elapsed,
+    )
+
+    return candidates
+
+
+# ──────────────────────────────────────────────
+# Naive baseline (fallback)
+# ──────────────────────────────────────────────
 
 def _naive_candidates(state: AgentState, count: int = 5) -> list[HighlightCandidate]:
     transcript = state.get("transcript")
@@ -97,15 +205,22 @@ def _naive_candidates(state: AgentState, count: int = 5) -> list[HighlightCandid
     return candidates
 
 
-def analyze(state: AgentState) -> dict:
-    """Trích xuất feature Sprint 2 rồi dùng candidate có sẵn hoặc baseline"""
+# ──────────────────────────────────────────────
+# Node 3: Analyze
+# ──────────────────────────────────────────────
 
+def analyze(state: AgentState) -> dict:
+    """Trích xuất features đa tầng (acoustic, interaction, visual), xây dựng timeline và tạo candidates"""
+
+    _emit(state, "analyze", "start", "Bắt đầu phân tích đặc trưng...")
     workspace = state.get("workspace")
     if workspace is None:
         raise ValueError("Analyze requires workspace from Observe")
 
     window_seconds = 30.0
     hop_seconds = 30.0
+
+    # 1. Acoustic features
     acoustic, acoustic_windows = extract_windowed_acoustic_features(
         workspace.audio_path,
         window_seconds=window_seconds,
@@ -115,6 +230,8 @@ def analyze(state: AgentState) -> dict:
         "acoustic": acoustic.model_dump(mode="json"),
         "profile": state.get("profile", {}),
     }
+
+    # 2. Interaction features
     if state["domain"] == "podcast":
         interaction = extract_interaction_features(
             workspace.audio_path,
@@ -130,6 +247,7 @@ def analyze(state: AgentState) -> dict:
         interaction = None
         interaction_windows = None
 
+    # 3. Timeline
     timeline = build_feature_timeline(
         video_id=workspace.video_id,
         domain=state["domain"],
@@ -150,16 +268,29 @@ def analyze(state: AgentState) -> dict:
             "feature_path": str(feature_path),
             "window_count": len(timeline.windows),
             "window_seconds": window_seconds,
+            "visual_method": state.get("visual_method", "pixel_diff"),
         }
     )
 
+    # 4. Candidates: Supplied > Visual/Multi-modal Scoring > Naive Baseline fallback
     supplied_candidates = state.get("candidates")
     if supplied_candidates:
         candidates = [HighlightCandidate.model_validate(item) for item in supplied_candidates]
         mode = "external_candidates"
+        _emit(state, "analyze", "done", f"Dùng {len(candidates)} external candidates.")
     else:
-        candidates = _naive_candidates(state)
-        mode = "naive_baseline"
+        try:
+            candidates = _visual_candidates(state)
+            visual_method = state.get("visual_method", "pixel_diff")
+            mode = f"visual_{visual_method}"
+        except Exception as exc:
+            logger.warning("Visual scoring thất bại (%s), fallback sang naive baseline.", exc)
+            _emit(state, "analyze", "fallback", f"⚠️ Visual scoring thất bại ({exc}), dùng naive baseline.")
+            candidates = _naive_candidates(state)
+            mode = "naive_baseline"
+
+    _emit(state, "analyze", "done", f"mode={mode} | {len(candidates)} candidates", mode=mode, count=len(candidates))
+
     return {
         "features": {"mode": mode, "candidate_count": len(candidates), **features},
         "feature_path": str(feature_path),
@@ -168,9 +299,14 @@ def analyze(state: AgentState) -> dict:
     }
 
 
-def decide(state: AgentState) -> dict:
-    """Xếp hạng, lấy top K và gọi Backend render"""
+# ──────────────────────────────────────────────
+# Node 4: Decide
+# ──────────────────────────────────────────────
 
+def decide(state: AgentState) -> dict:
+    """Xếp hạng, canh biên và gọi Backend render"""
+
+    _emit(state, "decide", "start", "Xếp hạng và canh biên highlights...")
     workspace = state.get("workspace")
     if workspace is None:
         raise ValueError("Decide requires workspace from Observe")
@@ -182,7 +318,11 @@ def decide(state: AgentState) -> dict:
         raise ValueError("not enough candidates to satisfy highlight_count")
 
     selected = sorted(candidates, key=lambda candidate: candidate.score, reverse=True)[:highlight_count]
+    _emit(state, "decide", "ranking", f"Đã chọn top {highlight_count} highlights. Tiến hành canh biên...")
+
     highlights, boundary_adjustments = refine_candidates_for_render(workspace, selected)
+
+    _emit(state, "decide", "rendering", f"Bắt đầu render {len(highlights)} clips...")
     rendered = render_candidates(
         workspace,
         highlights,
@@ -190,6 +330,8 @@ def decide(state: AgentState) -> dict:
         boundary_adjustments=boundary_adjustments,
         refine_boundaries=False,
     )
+    _emit(state, "decide", "done", f"Render xong {len(rendered)} clips.", rendered_count=len(rendered))
+
     return {
         "highlights": highlights,
         "boundary_adjustments": boundary_adjustments,
@@ -197,8 +339,12 @@ def decide(state: AgentState) -> dict:
     }
 
 
+# ──────────────────────────────────────────────
+# Node 5: Explain
+# ──────────────────────────────────────────────
+
 def explain(state: AgentState) -> dict:
-    """Tạo reasoning minh bạch cho baseline hiện tại"""
+    """Tạo reasoning minh bạch cho kết quả highlight"""
 
     domain = state["domain"]
     profile = state.get("profile", {})
@@ -215,4 +361,5 @@ def explain(state: AgentState) -> dict:
                 ),
             }
         )
+    _emit(state, "explain", "done", f"Pipeline hoàn tất! {len(reasoning)} reasoning entries.", count=len(reasoning))
     return {"reasoning": reasoning}

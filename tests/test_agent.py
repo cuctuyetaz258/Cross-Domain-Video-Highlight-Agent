@@ -1,6 +1,11 @@
 from pathlib import Path
 
+import pytest
+
+pytest.importorskip("langgraph", reason="langgraph không có — skip agent graph tests")
+
 from highlight_agent.agent import build_agent_graph, nodes
+from highlight_agent.features.visual import WindowVisualScore
 from highlight_agent.schemas import (
     AcousticFeatures,
     FeatureWindow,
@@ -83,7 +88,7 @@ def test_plan_uses_domain_specific_profile() -> None:
     lecture = nodes.plan({"video_path": "video.mp4", "domain": "lecture"})["profile"]
     podcast = nodes.plan({"video_path": "video.mp4", "domain": "podcast"})["profile"]
 
-    assert lecture["linguistic"] == 0.50
+    assert lecture["semantic"] == 0.50
     assert podcast["interaction"] == 0.30
     assert sum(lecture.values()) == 1
 
@@ -108,6 +113,29 @@ def test_analyze_naive_baseline_is_reproducible(tmp_path: Path, monkeypatch) -> 
     assert Path(first["feature_path"]).is_file()
     assert first["feature_timeline"]["window_seconds"] == 30
     assert len(first["feature_timeline"]["windows"]) == 12
+
+
+def test_analyze_with_visual_candidates(tmp_path: Path, monkeypatch) -> None:
+    monkeypatch.setattr(nodes, "extract_windowed_acoustic_features", lambda path, **kwargs: _acoustic_windows())
+    fake_visual_scores = [
+        WindowVisualScore(start=float(s), end=float(s + 30), motion_score=float(s % 5), method="pixel_diff")
+        for s in range(0, 120, 30)
+    ]
+    monkeypatch.setattr(nodes, "extract_visual_scores", lambda **kwargs: fake_visual_scores)
+
+    state = {
+        "video_path": "video.mp4",
+        "domain": "lecture",
+        "workspace": _workspace(tmp_path),
+        "transcript": _transcript(),
+        "profile": nodes.PROFILE_WEIGHTS["lecture"],
+        "visual_method": "pixel_diff",
+    }
+
+    result = nodes.analyze(state)
+    assert result["features"]["mode"] == "visual_pixel_diff"
+    assert len(result["candidates"]) == 4
+    assert result["candidates"][0].signals["visual_motion_raw"] >= 0.0
 
 
 def test_analyze_adds_interaction_features_for_podcast(tmp_path: Path, monkeypatch) -> None:

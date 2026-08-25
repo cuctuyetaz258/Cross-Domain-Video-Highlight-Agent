@@ -2,6 +2,9 @@ import wave
 from pathlib import Path
 
 import numpy as np
+import pytest
+
+pytest.importorskip("librosa", reason="librosa không có — skip acoustic tests")
 
 from highlight_agent.features import (
     extract_acoustic_features,

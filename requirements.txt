@@ -1,6 +1,7 @@
 # Thư viện hỗ trợ
 pydantic>=2.7,<3
 python-dotenv>=1,<2
+curl-cffi>=0.7.1
 
 # Xử lý media (ingestion, transcript, rendering)
 yt-dlp[default]
@@ -12,9 +13,12 @@ langgraph
 openai
 google-genai
 
-# Frontend
+# Frontend & CLI
 streamlit
 plotly
+rich>=13
+extra-streamlit-components
+streamlit-agraph
 
 # Trích xuất đặc trưng & Evaluation
 librosa
@@ -25,10 +29,10 @@ transformers
 h5py
 scipy
 
+# Deep Learning Optical Flow (RAFT)
+torch>=2.0.0
+torchvision>=0.15.0
+
 # Testing
 pytest>=8,<9
 ruff>=0.6,<1
-
-# Custom UI Components
-extra-streamlit-components
-streamlit-agraph
