@@ -7,6 +7,8 @@ from highlight_agent.schemas import (
     FeatureTimeline,
     FeatureWindow,
     InteractionFeatures,
+    SemanticFeatures,
+    VisualFeatures,
 )
 
 
@@ -21,14 +23,24 @@ def build_feature_timeline(
     acoustic_windows: list[FeatureWindow],
     interaction: InteractionFeatures | None = None,
     interaction_windows: list[InteractionFeatures] | None = None,
+    semantic_windows: list[SemanticFeatures] | None = None,
+    visual_windows: list[VisualFeatures] | None = None,
 ) -> FeatureTimeline:
     """Ghép output các layer mà chưa chấm điểm hay chuẩn hóa giá trị"""
 
     if interaction_windows is not None and len(interaction_windows) != len(acoustic_windows):
         raise ValueError("acoustic and interaction window counts must match")
+    if semantic_windows is not None and len(semantic_windows) != len(acoustic_windows):
+        raise ValueError("acoustic and semantic window counts must match")
+    if visual_windows is not None and len(visual_windows) != len(acoustic_windows):
+        raise ValueError("acoustic and visual window counts must match")
     windows = [
         acoustic_window.model_copy(
-            update={"interaction": interaction_windows[index] if interaction_windows else None}
+            update={
+                "interaction": interaction_windows[index] if interaction_windows else None,
+                "semantic": semantic_windows[index] if semantic_windows else None,
+                "visual": visual_windows[index] if visual_windows else None,
+            }
         )
         for index, acoustic_window in enumerate(acoustic_windows)
     ]

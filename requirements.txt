@@ -24,14 +24,16 @@ streamlit-agraph
 librosa
 pyannote.audio
 scikit-learn
-sentence-transformers
-transformers
+sentence-transformers==3.4.1
+transformers==4.48.3
+huggingface-hub==0.27.1
 h5py
 scipy
 
 # Deep Learning Optical Flow (RAFT)
-torch>=2.0.0
-torchvision>=0.15.0
+torch==2.5.1
+torchvision==0.20.1
+torchaudio==2.5.1
 
 # Testing
 pytest>=8,<9

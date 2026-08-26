@@ -7,16 +7,17 @@ from .interaction import (
     windowed_interaction_features,
 )
 from .scoring import (
-    Domain,
-    GridSearchResult,
     PROFILE_WEIGHTS,
     SIGNAL_NAMES,
+    Domain,
+    GridSearchResult,
     WindowScore,
     calculate_total_score,
     grid_search_weights,
     normalize_features,
     score_from_domain,
 )
+from .semantic import SemanticWindowScore, extract_windowed_semantic_features
 from .timeline import build_feature_timeline, save_feature_timeline
 from .visual import (
     WindowVisualScore,
@@ -49,4 +50,7 @@ __all__ = [
     "calculate_total_score",
     "score_from_domain",
     "grid_search_weights",
+    # Semantic
+    "SemanticWindowScore",
+    "extract_windowed_semantic_features",
 ]

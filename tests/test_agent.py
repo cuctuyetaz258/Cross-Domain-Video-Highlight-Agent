@@ -5,6 +5,7 @@ import pytest
 pytest.importorskip("langgraph", reason="langgraph không có — skip agent graph tests")
 
 from highlight_agent.agent import build_agent_graph, nodes
+from highlight_agent.features.semantic import SemanticWindowScore
 from highlight_agent.features.visual import WindowVisualScore
 from highlight_agent.schemas import (
     AcousticFeatures,
@@ -12,10 +13,29 @@ from highlight_agent.schemas import (
     InteractionFeatures,
     MediaWorkspace,
     RenderedHighlight,
+    SemanticFeatures,
     SpeakerTurn,
     TranscriptDocument,
     TranscriptSegment,
 )
+
+
+def _semantic_scores() -> list[SemanticWindowScore]:
+    return [
+        SemanticWindowScore(
+            start=float(start),
+            end=float(start + 30),
+            features=SemanticFeatures(
+                topic_relevance=0.5,
+                semantic_novelty=0.1,
+                tfidf_density=0.2,
+                cue_score=0.0,
+                raw_score=float(start / 360),
+                text_coverage=0.5,
+            ),
+        )
+        for start in range(0, 360, 30)
+    ]
 
 
 def _acoustic_features() -> AcousticFeatures:
@@ -95,6 +115,7 @@ def test_plan_uses_domain_specific_profile() -> None:
 
 def test_analyze_naive_baseline_is_reproducible(tmp_path: Path, monkeypatch) -> None:
     monkeypatch.setattr(nodes, "extract_windowed_acoustic_features", lambda path, **kwargs: _acoustic_windows())
+    monkeypatch.setattr(nodes, "extract_windowed_semantic_features", lambda *args, **kwargs: _semantic_scores())
     state = {
         "video_path": "video.mp4",
         "domain": "lecture",
@@ -117,9 +138,10 @@ def test_analyze_naive_baseline_is_reproducible(tmp_path: Path, monkeypatch) -> 
 
 def test_analyze_with_visual_candidates(tmp_path: Path, monkeypatch) -> None:
     monkeypatch.setattr(nodes, "extract_windowed_acoustic_features", lambda path, **kwargs: _acoustic_windows())
+    monkeypatch.setattr(nodes, "extract_windowed_semantic_features", lambda *args, **kwargs: _semantic_scores())
     fake_visual_scores = [
         WindowVisualScore(start=float(s), end=float(s + 30), motion_score=float(s % 5), method="pixel_diff")
-        for s in range(0, 120, 30)
+        for s in range(0, 360, 30)
     ]
     monkeypatch.setattr(nodes, "extract_visual_scores", lambda **kwargs: fake_visual_scores)
 
@@ -133,9 +155,11 @@ def test_analyze_with_visual_candidates(tmp_path: Path, monkeypatch) -> None:
     }
 
     result = nodes.analyze(state)
-    assert result["features"]["mode"] == "visual_pixel_diff"
-    assert len(result["candidates"]) == 4
-    assert result["candidates"][0].signals["visual_motion_raw"] >= 0.0
+    assert result["features"]["mode"] == "multimodal_fusion"
+    assert len(result["candidates"]) == 12
+    assert result["candidates"][0].signals["visual"] >= 0.0
+    assert result["feature_timeline"]["windows"][0]["semantic"] is not None
+    assert result["feature_timeline"]["windows"][0]["visual"] is not None
 
 
 def test_analyze_adds_interaction_features_for_podcast(tmp_path: Path, monkeypatch) -> None:
@@ -151,6 +175,15 @@ def test_analyze_adds_interaction_features_for_podcast(tmp_path: Path, monkeypat
         nodes,
         "windowed_interaction_features",
         lambda interaction, **kwargs: [_interaction_features().model_copy(update={"duration": 30.0})] * 12,
+    )
+    monkeypatch.setattr(nodes, "extract_windowed_semantic_features", lambda *args, **kwargs: _semantic_scores())
+    monkeypatch.setattr(
+        nodes,
+        "extract_visual_scores",
+        lambda **kwargs: [
+            WindowVisualScore(start=float(s), end=float(s + 30), motion_score=0.1, method="pixel_diff")
+            for s in range(0, 360, 30)
+        ],
     )
     state = {
         "video_path": "podcast.mp4",
@@ -182,6 +215,7 @@ def test_full_graph_calls_backend_facade(tmp_path: Path, monkeypatch) -> None:
     monkeypatch.setattr(nodes, "prepare_video", fake_prepare)
     monkeypatch.setattr(nodes, "load_transcript", lambda path: transcript)
     monkeypatch.setattr(nodes, "extract_windowed_acoustic_features", lambda path, **kwargs: _acoustic_windows())
+    monkeypatch.setattr(nodes, "extract_windowed_semantic_features", lambda *args, **kwargs: _semantic_scores())
     monkeypatch.setattr(
         nodes,
         "refine_candidates_for_render",

@@ -273,6 +273,7 @@ def extract_visual_scores(
     sample_fps: float = 1.0,
     method: Literal["pixel_diff", "raft"] = "pixel_diff",
     on_window: Callable[[WindowVisualScore], None] | None = None,
+    duration: float | None = None,
 ) -> list[WindowVisualScore]:
     """
     Trích xuất điểm visual motion cho từng cửa sổ trượt.
@@ -287,6 +288,7 @@ def extract_visual_scores(
         method      : "pixel_diff" (nhanh) | "raft" (chính xác nhất, cần torch+GPU).
         on_window   : Callback nhận WindowVisualScore mỗi khi 1 cửa sổ xử lý xong.
                       Dùng để emit tiến độ real-time. Mặc định None (không callback).
+        duration    : Mốc kết thúc dùng để đồng bộ cửa sổ với audio.
 
     Returns:
         Danh sách WindowVisualScore, mỗi phần tử ứng với 1 cửa sổ thời gian.
@@ -304,7 +306,10 @@ def extract_visual_scores(
     try:
         fps = cap.get(cv2.CAP_PROP_FPS)
         total_frames = cap.get(cv2.CAP_PROP_FRAME_COUNT)
-        duration = total_frames / fps if fps > 0 else 0.0
+        video_duration = total_frames / fps if fps > 0 else 0.0
+        if duration is not None and duration <= 0:
+            raise ValueError("duration phải lớn hơn 0 nếu được cung cấp")
+        duration = duration if duration is not None else video_duration
 
         if duration < window_size:
             logger.warning(

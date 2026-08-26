@@ -5,8 +5,10 @@ from .features import (
     FeatureTimeline,
     FeatureWindow,
     InteractionFeatures,
+    SemanticFeatures,
     SpeakerTurn,
     TimeInterval,
+    VisualFeatures,
 )
 from .highlight import BoundaryAdjustment, HighlightCandidate, RenderedHighlight
 from .media import MediaWorkspace
@@ -22,9 +24,11 @@ __all__ = [
     "InteractionFeatures",
     "MediaWorkspace",
     "RenderedHighlight",
+    "SemanticFeatures",
     "SpeakerTurn",
     "TimeInterval",
     "TranscriptDocument",
     "TranscriptSegment",
     "TranscriptWord",
+    "VisualFeatures",
 ]
