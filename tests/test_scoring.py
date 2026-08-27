@@ -11,13 +11,11 @@ import pytest
 from highlight_agent.features.scoring import (
     PROFILE_WEIGHTS,
     GridSearchResult,
-    WindowScore,
     calculate_total_score,
     grid_search_weights,
     normalize_features,
     score_from_domain,
 )
-
 
 # ──────────────────────────────────────────────
 # Fixtures
@@ -129,7 +127,6 @@ class TestCalculateTotalScore:
     def test_signals_normalized_matches_input(self, normed):
         """signals_normalized dict phải có đúng keys từ active weights."""
         scores = calculate_total_score(normed, PROFILE_WEIGHTS["lecture"])
-        active = {k for k, v in PROFILE_WEIGHTS["lecture"].items() if v > 0}
         for s in scores:
             assert set(s.signals_normalized.keys()) == set(s.weights.keys())
 

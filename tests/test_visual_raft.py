@@ -15,7 +15,6 @@ from highlight_agent.features.visual import (
     scores_to_array,
 )
 
-
 # ──────────────────────────────────────────────
 # Fixture tạo dummy video ngắn
 # ──────────────────────────────────────────────
