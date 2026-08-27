@@ -223,3 +223,80 @@ def compute_hit_at_k(
                 break
 
     return hits / k
+
+
+def compute_temporal_precision_recall_f1(
+    predictions: list[dict],
+    ground_truths: list[dict],
+    k: int = 3,
+    iou_threshold: float = 0.3,
+) -> tuple[float, float, float]:
+    """
+    Tính Precision@K, Recall@K và F1@K dựa trên Temporal IoU matching.
+    - True Positive (TP): số lượng clip trong Top-K dự đoán match 1-1 với một ground truth (IoU >= iou_threshold).
+    - Precision = TP / len(top_k)
+    - Recall = TP / len(ground_truths)
+    - F1 = 2 * Precision * Recall / (Precision + Recall)
+    """
+    top_k = predictions[:k]
+    if not top_k or not ground_truths:
+        return 0.0, 0.0, 0.0
+
+    matched_gt = set()
+    tp = 0
+
+    for pred in top_k:
+        p_start = float(pred.get("start_time", 0))
+        p_end = float(pred.get("end_time", 0))
+
+        best_iou = 0.0
+        best_gt_idx = -1
+        for gt_idx, gt in enumerate(ground_truths):
+            if gt_idx in matched_gt:
+                continue
+            g_start = float(gt.get("start_time", 0))
+            g_end = float(gt.get("end_time", 0))
+            iou = temporal_iou(p_start, p_end, g_start, g_end)
+            if iou >= iou_threshold and iou > best_iou:
+                best_iou = iou
+                best_gt_idx = gt_idx
+
+        if best_gt_idx != -1:
+            tp += 1
+            matched_gt.add(best_gt_idx)
+
+    precision = tp / len(top_k) if top_k else 0.0
+    recall = tp / len(ground_truths) if ground_truths else 0.0
+    f1 = (2 * precision * recall) / (precision + recall) if (precision + recall) > 0 else 0.0
+
+    return precision, recall, f1
+
+
+def compute_mean_iou(
+    predictions: list[dict],
+    ground_truths: list[dict],
+    k: int = 3,
+) -> float:
+    """
+    Tính Mean IoU: trung bình của IoU cao nhất với ground truth cho mỗi clip trong Top-K dự đoán.
+    """
+    top_k = predictions[:k]
+    if not top_k or not ground_truths:
+        return 0.0
+
+    ious = []
+    for pred in top_k:
+        p_start = float(pred.get("start_time", 0))
+        p_end = float(pred.get("end_time", 0))
+
+        max_iou = 0.0
+        for gt in ground_truths:
+            g_start = float(gt.get("start_time", 0))
+            g_end = float(gt.get("end_time", 0))
+            iou = temporal_iou(p_start, p_end, g_start, g_end)
+            if iou > max_iou:
+                max_iou = iou
+        ious.append(max_iou)
+
+    return float(np.mean(ious)) if ious else 0.0
+
