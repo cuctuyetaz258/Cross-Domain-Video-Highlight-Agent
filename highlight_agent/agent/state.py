@@ -64,7 +64,8 @@ class AgentState(TypedDict, total=False):
     reasoning: NotRequired[list[ReasoningEntry]]
 
     # ── Visual scoring config ──
-    visual_method: NotRequired[Literal["pixel_diff", "raft"]]
+    ltr_model_path: NotRequired[str | None]
+    visual_method: NotRequired[Literal["pixel_diff", "raft", "scene_mediapipe"]]
     visual_sample_fps: NotRequired[float]
 
     # ── Progress callback ──

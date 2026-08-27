@@ -24,6 +24,11 @@ from .visual import (
     extract_visual_scores,
     scores_to_array,
 )
+from .visual_new import extract_scene_changes, extract_gesture_signal
+from .alignment import build_feature_matrix
+from .sliding_window import extract_windows
+from .overlap_blender import blend_scores
+from .nms_topk import extract_topk_nms
 
 __all__ = [
     # Acoustic
@@ -53,4 +58,10 @@ __all__ = [
     # Semantic
     "SemanticWindowScore",
     "extract_windowed_semantic_features",
+    "extract_scene_changes",
+    "extract_gesture_signal",
+    "build_feature_matrix",
+    "extract_windows",
+    "blend_scores",
+    "extract_topk_nms",
 ]

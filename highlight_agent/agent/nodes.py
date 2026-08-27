@@ -5,6 +5,7 @@ from __future__ import annotations
 import logging
 import random
 import time
+from pathlib import Path
 
 from highlight_agent.backend import (
     load_transcript,
@@ -374,6 +375,57 @@ def analyze(state: AgentState) -> dict:
             "visual_method": state.get("visual_method", "pixel_diff"),
         }
     )
+
+    # ── LTR Dense Overlap branch (if model path provided) ──
+    _ltr_model_path = state.get("ltr_model_path")
+    if _ltr_model_path and Path(_ltr_model_path).exists():
+        _emit(state, "analyze", "ltr_start", "Running LTR dense scoring...")
+        try:
+            import torch as _torch
+            from highlight_agent.features.visual_new import (
+                extract_scene_changes as _extract_scene_changes,
+                extract_gesture_signal as _extract_gesture_signal,
+            )
+            from highlight_agent.features.alignment import build_feature_matrix as _build_feature_matrix
+            from highlight_agent.features.sliding_window import extract_windows as _extract_windows
+            from highlight_agent.features.overlap_blender import blend_scores as _blend_scores
+            from highlight_agent.features.nms_topk import extract_topk_nms as _extract_topk_nms
+            from highlight_agent.models.ltr_scorer import AdditiveAttentionScorer as _LTRScorer
+
+            _scene_times = _extract_scene_changes(workspace.video_path, acoustic.duration)
+            _gesture_sparse = _extract_gesture_signal(workspace.video_path, acoustic.duration)
+
+            # Word scores from transcript (start, end, score)
+            _word_scores: list[tuple[float, float, float]] = []
+            _transcript = state.get("transcript")
+            if _transcript is not None:
+                _words = getattr(_transcript, "words", None) or []
+                for _w in _words:
+                    _ws = getattr(_w, "start", None)
+                    _we = getattr(_w, "end", None)
+                    if _ws is not None and _we is not None:
+                        _word_scores.append((float(_ws), float(_we), 1.0))
+
+            _feature_matrix = _build_feature_matrix(
+                acoustic, acoustic_windows, _scene_times, _gesture_sparse,
+                _word_scores, interaction, acoustic.duration
+            )
+            _window_tensor = _extract_windows(_feature_matrix)
+            _ltr_model = _LTRScorer.load(_ltr_model_path)
+            with _torch.no_grad():
+                _raw_scores = _ltr_model(_window_tensor).squeeze(-1)
+            _window_scores = _raw_scores.cpu().numpy()
+            _timeline_score = _blend_scores(_window_scores, T=_feature_matrix.shape[1])
+            _checkpoint = _torch.load(_ltr_model_path, map_location="cpu", weights_only=False)
+            _l_ref = _checkpoint.get("metadata", {}).get("L_ref", 40.0)
+            _k = max(1, min(10, state.get("highlight_count", 3)))
+            _ltr_candidates = _extract_topk_nms(_timeline_score, k=_k, reference_duration=float(_l_ref))
+            if _ltr_candidates:
+                candidates = _ltr_candidates
+                features["mode"] = "ltr_dense_overlap"
+            _emit(state, "analyze", "ltr_done", f"LTR produced {len(_ltr_candidates)} candidates")
+        except Exception as _ltr_exc:  # noqa: BLE001
+            _emit(state, "analyze", "ltr_fallback", f"LTR error, using baseline: {_ltr_exc}")
 
     _emit(state, "analyze", "done", f"mode={mode} | {len(candidates)} candidates", mode=mode, count=len(candidates))
 
