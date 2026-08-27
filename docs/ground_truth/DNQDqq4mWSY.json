@@ -1,0 +1,33 @@
+{
+  "video_id": "DNQDqq4mWSY",
+  "title": "Sam Altman on GPT-5 | Lex Fridman Podcast",
+  "domain": "podcast",
+  "annotator": "ThaoAnh",
+  "duration": 690.0,
+  "highlights": [
+    {
+      "highlight_id": "hl_01",
+      "start_time": 45.2,
+      "end_time": 98.6,
+      "importance_score": 5,
+      "summary": "Sam Altman thừa nhận GPT-4 còn nhiều điểm hạn chế và kỳ vọng vào bước nhảy vọt của GPT-5.",
+      "reason": "Câu mở đầu thẳng thắn 'GPT-4 kind of sucks' tạo hook cực mạnh; sau đó là giải thích về tầm nhìn của các mô hình kế tiếp, rất thu hút người quan tâm công nghệ."
+    },
+    {
+      "highlight_id": "hl_02",
+      "start_time": 210.0,
+      "end_time": 265.4,
+      "importance_score": 4,
+      "summary": "Bàn luận về khả năng suy luận và đột phá khoa học của AGI trong tương lai.",
+      "reason": "Đoạn đối thoại có chiều sâu triết học, thảo luận về việc liệu AI có thể tự khám phá ra các định luật vật lý mới hay không."
+    },
+    {
+      "highlight_id": "hl_03",
+      "start_time": 420.1,
+      "end_time": 472.8,
+      "importance_score": 4,
+      "summary": "Góc nhìn về chi phí tính toán và nhu cầu năng lượng khổng lồ của AI thế hệ mới.",
+      "reason": "Cung cấp insight thực tế về rào cản phần cứng và năng lượng mà ngành công nghiệp AI đang phải đối mặt."
+    }
+  ]
+}

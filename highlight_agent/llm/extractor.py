@@ -17,23 +17,49 @@ BASE_SYSTEM_PROMPT = """Bạn là một chuyên gia sản xuất video ngắn (S
 NHIỆM VỤ:
 Phân tích transcript (bản ghi lời nói có kèm mốc thời gian tính bằng giây) của một video dài, sau đó chọn ra chính xác {highlight_count} khoảnh khắc đáng xem nhất để cắt thành clip ngắn viral.
 
-QUY TẮC BẮT BUỘC:
-1. Mỗi clip phải dài từ 30 đến 90 giây (TUYỆT ĐỐI KHÔNG được ngắn hơn 30s hoặc dài hơn 90s). Tức là toán học (end_time - start_time) BẮT BUỘC phải nằm trong khoảng [30.0, 90.0].
-2. Các clip KHÔNG ĐƯỢC chồng lấn thời gian lên nhau.
-3. Các clip phải phân bố đều trong video (không chọn các đoạn dính liền sát nhau).
-4. start_time và end_time PHẢI nằm trong phạm vi thời gian của transcript (không bịa số).
-5. Điểm cắt (start/end) nên trùng với ranh giới câu nói tự nhiên — không cắt giữa chừng một câu.
-6. Chấm điểm (score) từ 0.0 đến 10.0 dựa trên mức độ hấp dẫn và khả năng viral.
-7. Sắp xếp kết quả theo score giảm dần (clip hay nhất lên đầu).
+⚠️ QUY TẮC QUAN TRỌNG NHẤT (CRITICAL — VI PHẠM SẼ BỊ TỪ CHỐI):
+Thời lượng mỗi clip BẮT BUỘC phải từ 30 đến 90 giây: 30.0 <= (end_time - start_time) <= 90.0.
+- Nếu đoạn hay chỉ dài 10–20 giây, hãy MỞ RỘNG bao gồm thêm phần setup (mở đầu, dẫn dắt) phía trước hoặc phần payoff (kết luận, phản ứng) phía sau để đạt tối thiểu 30 giây.
+- Thời lượng lý tưởng nhất là 45–60 giây (vừa đủ hấp dẫn, không quá dài).
+- TUYỆT ĐỐI KHÔNG chọn clip dưới 30 giây dù đoạn đó hay đến mấy.
+
+VÍ DỤ KIỂM TRA THỜI LƯỢNG:
+- start=120.0, end=165.0 → duration=45.0s ✓ HỢP LỆ (lý tưởng)
+- start=200.0, end=260.0 → duration=60.0s ✓ HỢP LỆ
+- start=80.0, end=95.0 → duration=15.0s ✗ QUÁ NGẮN → phải lùi start hoặc kéo dài end thêm ít nhất 15s nữa
+- start=50.0, end=180.0 → duration=130.0s ✗ QUÁ DÀI → phải thu hẹp, chỉ giữ phần hay nhất
+
+QUY TẮC BẮT BUỘC KHÁC:
+1. Các clip KHÔNG ĐƯỢC chồng lấn thời gian lên nhau.
+2. Các clip phải phân bố đều trong video (không chọn các đoạn dính liền sát nhau).
+3. start_time và end_time PHẢI nằm trong phạm vi thời gian của transcript (không bịa số).
+4. Điểm cắt (start/end) nên trùng với ranh giới câu nói tự nhiên — không cắt giữa chừng một câu.
+5. Chấm điểm (score) từ 0.0 đến 10.0 dựa trên mức độ hấp dẫn và khả năng viral.
+6. Sắp xếp kết quả theo score giảm dần (clip hay nhất lên đầu).
 
 {domain_criteria}
 
+CÁCH LÀM VIỆC — SUY NGHĨ TỪNG BƯỚC TRƯỚC KHI CHỌN:
+Bước 1: Đọc toàn bộ transcript, xác định loại video và tổng thời lượng.
+Bước 2: Đánh dấu 5–7 đoạn tiềm năng có nội dung hấp dẫn.
+Bước 3: Với mỗi đoạn, xác định start_time và end_time sao cho bao trọn ý (từ câu mở đầu setup đến câu kết thúc payoff).
+Bước 4: TÍNH duration = end_time - start_time. Nếu < 30s, MỞ RỘNG thêm ngữ cảnh xung quanh. Nếu > 90s, THU HẸP giữ phần hay nhất.
+Bước 5: Kiểm tra các clip có chồng lấn không, có phân bố đều không.
+Bước 6: Chọn đúng {highlight_count} clip tốt nhất, chấm điểm và sắp xếp.
+
 TIÊU CHÍ CHẤM ĐIỂM CHUNG:
 - Có "hook" mạnh ngay đầu clip (câu mở đầu gây tò mò, gây sốc, hoặc phản trực giác) → +2 điểm
-- Có kết thúc tròn trịa (không bỏ lửng ý) → +1 điểm  
+- Có kết thúc tròn trịa (không bỏ lửng ý) → +1 điểm
 - Có tính độc lập (người xem hiểu được mà không cần xem toàn bộ video) → +1 điểm
 - Có giá trị chia sẻ (người xem muốn gửi cho bạn bè) → +2 điểm
 - Có yếu tố cảm xúc mạnh (bất ngờ, hài hước, cảm động, tức giận) → +2 điểm
+
+✅ KIỂM TRA LẦN CUỐI trước khi xuất JSON:
+□ Mỗi clip có duration nằm trong [30, 90] giây? (Tính lại: end_time - start_time)
+□ Các clip có chồng lấn thời gian lên nhau không?
+□ Điểm cắt start/end có trùng ranh giới câu nói tự nhiên không?
+□ Có đúng {highlight_count} clip không?
+□ start_time và end_time có nằm trong phạm vi transcript không?
 
 ĐỊNH DẠNG ĐẦU RA — BẮT BUỘC JSON THUẦN, KHÔNG CÓ BẤT KỲ CHỮ NÀO KHÁC:
 {{
@@ -147,20 +173,44 @@ def extract_highlights_from_transcript(
 
     system_prompt = build_prompt(domain, highlight_count)
 
-    # Giới hạn transcript gửi đi (tránh vượt context window)
-    max_chars = 12000
-    short_transcript = transcript_text[:max_chars]
+    # Giới hạn transcript gửi đi (tối ưu hóa cho Groq Free Tier: TPM <= 8000)
+    # 17500 ký tự ~ 4500 input tokens + max_tokens 1200 = ~5700 tokens (an toàn dưới 8000 TPM)
+    max_chars = 17500
+    if len(transcript_text) <= max_chars:
+        short_transcript = transcript_text
+    else:
+        truncated = transcript_text[:max_chars]
+        # Tìm dấu chấm câu cuối cùng để cắt đúng ranh giới câu
+        last_period = max(truncated.rfind(". "), truncated.rfind("? "), truncated.rfind("! "), truncated.rfind(".\n"))
+        if last_period > max_chars * 0.8:
+            short_transcript = truncated[:last_period + 1]
+        else:
+            short_transcript = truncated
 
     response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
-        response_format={"type": "json_object"},
+        model="qwen/qwen3.8-27b",
+        max_tokens=1200,
+        temperature=0.6,
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": f"Transcript:\n{short_transcript}"},
         ],
     )
 
-    raw_json = json.loads(response.choices[0].message.content)
+    # Parse JSON từ response (robust: xử lý markdown, text thừa)
+    raw_text = (response.choices[0].message.content or "").strip()
+    # Loại bỏ markdown ```json ... ```
+    if "```" in raw_text:
+        import re
+        code_match = re.search(r"```(?:json)?\s*\n?(.*?)```", raw_text, re.DOTALL)
+        if code_match:
+            raw_text = code_match.group(1).strip()
+    # Fallback: tìm JSON object {...} đầu tiên
+    if not raw_text.startswith("{"):
+        start_idx = raw_text.find("{")
+        if start_idx != -1:
+            raw_text = raw_text[start_idx:]
+    raw_json = json.loads(raw_text)
 
     # In ra JSON thô để debug
     print("\n========== AI TRẢ VỀ (RAW JSON) ==========")

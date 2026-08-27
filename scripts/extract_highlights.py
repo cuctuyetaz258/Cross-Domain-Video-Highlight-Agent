@@ -25,6 +25,30 @@ def parse_args():
     return parser.parse_args()
 
 
+def format_compact_transcript(transcript_obj) -> str:
+    """Gom các phân đoạn câu thoại ngắn thành các khối tự nhiên để tiết kiệm ~40% tokens, giúp LLM đọc được video dài gấp đôi."""
+    lines = []
+    curr_start = None
+    curr_end = None
+    curr_texts = []
+    for s in transcript_obj.segments:
+        if curr_start is None:
+            curr_start = s.start
+        curr_end = s.end
+        txt = s.text.strip()
+        if txt:
+            curr_texts.append(txt)
+        if (curr_end - curr_start >= 20.0) or (curr_texts and curr_texts[-1].endswith((".", "?", "!")) and curr_end - curr_start >= 10.0):
+            block_text = " ".join(curr_texts)
+            lines.append(f"[{curr_start:.1f}s - {curr_end:.1f}s]: {block_text}")
+            curr_start = None
+            curr_texts = []
+    if curr_texts:
+        block_text = " ".join(curr_texts)
+        lines.append(f"[{curr_start:.1f}s - {curr_end:.1f}s]: {block_text}")
+    return "\n".join(lines)
+
+
 def main():
     load_dotenv()
     args = parse_args()
@@ -33,11 +57,11 @@ def main():
     print(f"Đang đọc file transcript: {args.transcript_path}")
     transcript_obj = load_transcript(args.transcript_path)
 
-    # Gom tất cả các câu chữ lại thành 1 đoạn văn bản dài
-    full_text = "\n".join([f"[{s.start:.1f}s - {s.end:.1f}s]: {s.text}" for s in transcript_obj.segments])
+    # Gom các câu thoại theo định dạng gọn gàng
+    full_text = format_compact_transcript(transcript_obj)
 
     # 2. Gọi hàm lõi AI của bạn
-    print(f"Đang gửi cho AI phân tích ({args.count} highlights, domain: {args.domain})...")
+    print(f"Đang gửi cho AI phân tích ({args.count} highlights, domain: {args.domain}, độ dài transcript: {len(full_text)} ký tự)...")
     candidates = extract_highlights_from_transcript(full_text, domain=args.domain, highlight_count=args.count)
 
     # 3. Lưu kết quả ra thành file .json vật lý
