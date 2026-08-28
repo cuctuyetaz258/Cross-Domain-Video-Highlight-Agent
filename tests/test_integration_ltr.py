@@ -1,8 +1,9 @@
 """Integration tests for LTR pipeline wiring."""
 from __future__ import annotations
 
+from pathlib import Path
+
 import numpy as np
-import pytest
 
 
 def test_state_accepts_ltr_model_path():
@@ -30,8 +31,8 @@ def test_state_accepts_scene_mediapipe():
 def test_features_init_exports_new_modules():
     """All new modules should be importable from highlight_agent.features."""
     from highlight_agent.features import (
-        build_feature_matrix,
         blend_scores,
+        build_feature_matrix,
         extract_gesture_signal,
         extract_scene_changes,
         extract_topk_nms,
@@ -48,9 +49,9 @@ def test_features_init_exports_new_modules():
 def test_ltr_pipeline_mock_e2e():
     """Run feature matrix through extract_windows -> blend_scores -> extract_topk_nms."""
     import torch
-    from highlight_agent.features.sliding_window import extract_windows
-    from highlight_agent.features.overlap_blender import blend_scores
     from highlight_agent.features.nms_topk import extract_topk_nms
+    from highlight_agent.features.overlap_blender import blend_scores
+    from highlight_agent.features.sliding_window import extract_windows
     from highlight_agent.models.ltr_scorer import AdditiveAttentionScorer
 
     rng = np.random.default_rng(42)
@@ -76,9 +77,8 @@ def test_ltr_pipeline_mock_e2e():
 
 
 def test_analyze_fallback_no_ltr_path():
-    """analyze() should not crash when ltr_model_path is None — LTR branch is skipped."""
+    """analyze() should not crash when ltr_model_path is None - LTR branch skipped."""
     from unittest.mock import MagicMock, patch
-
     from highlight_agent.agent.nodes import analyze
     from highlight_agent.schemas import AcousticFeatures, HighlightCandidate
 
@@ -88,14 +88,14 @@ def test_analyze_fallback_no_ltr_path():
 
     mock_workspace = MagicMock()
     mock_workspace.video_id = "test"
-    mock_workspace.audio_path = "/dev/null"
-    mock_workspace.video_path = "/dev/null"
+    mock_workspace.audio_path = Path("/tmp/audio.wav")
+    mock_workspace.video_path = Path("/tmp/video.mp4")
 
     mock_transcript = MagicMock()
     mock_transcript.words = []
 
     state = {
-        "video_path": "/dev/null",
+        "video_path": "/tmp/video.mp4",
         "domain": "lecture",
         "ltr_model_path": None,
         "workspace": mock_workspace,
@@ -103,30 +103,26 @@ def test_analyze_fallback_no_ltr_path():
         "highlight_count": 3,
     }
 
-    fake_candidate = HighlightCandidate(
-        candidate_id="ltr_01", start_time=0.0, end_time=60.0, score=0.5, reason="test"
-    )
+    fake = HighlightCandidate(candidate_id="c_01", start_time=0.0, end_time=60.0, score=0.5, reason="t")
 
     with (
         patch("highlight_agent.agent.nodes.extract_windowed_acoustic_features", return_value=(mock_acoustic, [])),
         patch("highlight_agent.agent.nodes.build_feature_timeline", return_value=MagicMock()),
         patch("highlight_agent.agent.nodes.extract_visual_scores", return_value=[]),
-        patch("highlight_agent.agent.nodes.calculate_total_score", return_value=[fake_candidate]),
+        patch("highlight_agent.agent.nodes.calculate_total_score", return_value=[fake]),
         patch("highlight_agent.agent.nodes.normalize_features", return_value={}),
         patch("highlight_agent.agent.nodes.save_feature_timeline", return_value="/tmp/f.json"),
-        patch("highlight_agent.agent.nodes._naive_candidates", return_value=[]),
+        patch("highlight_agent.agent.nodes._naive_candidates", return_value=[fake]),
     ):
         result = analyze(state)
 
     assert isinstance(result, dict)
-    # LTR branch should NOT have been triggered (no model path)
     assert result.get("features", {}).get("mode") != "ltr_dense_overlap"
 
 
 def test_analyze_fallback_missing_model_file():
-    """analyze() should use old pipeline when model file does not exist."""
+    """analyze() should use old pipeline when model file does not exist on disk."""
     from unittest.mock import MagicMock, patch
-
     from highlight_agent.agent.nodes import analyze
     from highlight_agent.schemas import AcousticFeatures, HighlightCandidate
 
@@ -136,14 +132,14 @@ def test_analyze_fallback_missing_model_file():
 
     mock_workspace = MagicMock()
     mock_workspace.video_id = "test"
-    mock_workspace.audio_path = "/dev/null"
-    mock_workspace.video_path = "/dev/null"
+    mock_workspace.audio_path = Path("/tmp/audio.wav")
+    mock_workspace.video_path = Path("/tmp/video.mp4")
 
     mock_transcript = MagicMock()
     mock_transcript.words = []
 
     state = {
-        "video_path": "/dev/null",
+        "video_path": "/tmp/video.mp4",
         "domain": "lecture",
         "ltr_model_path": "/nonexistent/path/model.pt",
         "workspace": mock_workspace,
@@ -151,21 +147,18 @@ def test_analyze_fallback_missing_model_file():
         "highlight_count": 3,
     }
 
-    fake_candidate = HighlightCandidate(
-        candidate_id="ltr_01", start_time=0.0, end_time=60.0, score=0.5, reason="test"
-    )
+    fake = HighlightCandidate(candidate_id="c_01", start_time=0.0, end_time=60.0, score=0.5, reason="t")
 
     with (
         patch("highlight_agent.agent.nodes.extract_windowed_acoustic_features", return_value=(mock_acoustic, [])),
         patch("highlight_agent.agent.nodes.build_feature_timeline", return_value=MagicMock()),
         patch("highlight_agent.agent.nodes.extract_visual_scores", return_value=[]),
-        patch("highlight_agent.agent.nodes.calculate_total_score", return_value=[fake_candidate]),
+        patch("highlight_agent.agent.nodes.calculate_total_score", return_value=[fake]),
         patch("highlight_agent.agent.nodes.normalize_features", return_value={}),
         patch("highlight_agent.agent.nodes.save_feature_timeline", return_value="/tmp/f.json"),
-        patch("highlight_agent.agent.nodes._naive_candidates", return_value=[]),
+        patch("highlight_agent.agent.nodes._naive_candidates", return_value=[fake]),
     ):
         result = analyze(state)
 
     assert isinstance(result, dict)
-    # Model file does not exist → LTR branch skipped
     assert result.get("features", {}).get("mode") != "ltr_dense_overlap"

@@ -47,6 +47,11 @@ def extract_topk_nms(
     selected_peaks: list[int] = []
     candidates: list[HighlightCandidate] = []
 
+    # Normalize to [0, 1] so HighlightCandidate score validator (>= 0) always passes
+    s_min, s_max = scores.min(), scores.max()
+    score_range = s_max - s_min
+    norm_scores = (scores - s_min) / score_range if score_range > 0 else np.zeros_like(scores)
+
     for peak in ordered_peaks:
         if any(abs(peak - selected) < minimum_distance for selected in selected_peaks):
             continue
@@ -57,7 +62,7 @@ def extract_topk_nms(
             continue
 
         rank = len(candidates) + 1
-        score = float(scores[peak])
+        score = float(norm_scores[peak])
         candidates.append(
             HighlightCandidate(
                 candidate_id=f"ltr_{rank:02d}",
