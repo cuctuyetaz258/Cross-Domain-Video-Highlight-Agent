@@ -230,6 +230,13 @@ def test_analyze_runs_ltr_with_real_workspace_and_checkpoint(tmp_path):
     timeline.windows = []
     timeline.model_dump.return_value = {}
     feature_matrix = np.random.default_rng(42).random((7, 1200)).astype(np.float32)
+    semantic_scores = [(0.0, 10.0, 0.7)]
+
+    def matrix_builder(acoustic_value, acoustic_windows, scenes, gesture, word_scores, interaction, duration):
+        assert acoustic_value is acoustic
+        assert word_scores == semantic_scores
+        return feature_matrix
+
     state = {
         "video_path": str(workspace.source_video_path),
         "domain": "lecture",
@@ -250,7 +257,11 @@ def test_analyze_runs_ltr_with_real_workspace_and_checkpoint(tmp_path):
         patch("highlight_agent.agent.nodes._naive_candidates", return_value=baseline),
         patch("highlight_agent.features.visual_new.extract_scene_changes", side_effect=scene_extractor),
         patch("highlight_agent.features.visual_new.extract_gesture_signal", side_effect=gesture_extractor),
-        patch("highlight_agent.features.alignment.build_feature_matrix", return_value=feature_matrix),
+        patch(
+            "highlight_agent.features.semantic.transcript_tfidf_density_scores",
+            return_value=semantic_scores,
+        ),
+        patch("highlight_agent.features.alignment.build_feature_matrix", side_effect=matrix_builder),
         patch("highlight_agent.features.nms_topk.extract_topk_nms", return_value=ltr_candidates),
     ):
         result = analyze(state)

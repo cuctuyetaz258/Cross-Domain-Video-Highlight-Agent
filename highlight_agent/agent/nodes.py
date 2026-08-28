@@ -386,6 +386,9 @@ def analyze(state: AgentState) -> dict:
             from highlight_agent.features.alignment import build_feature_matrix as _build_feature_matrix
             from highlight_agent.features.nms_topk import extract_topk_nms as _extract_topk_nms
             from highlight_agent.features.overlap_blender import blend_scores as _blend_scores
+            from highlight_agent.features.semantic import (
+                transcript_tfidf_density_scores as _transcript_tfidf_density_scores,
+            )
             from highlight_agent.features.sliding_window import extract_windows as _extract_windows
             from highlight_agent.features.visual_new import (
                 extract_gesture_signal as _extract_gesture_signal,
@@ -398,16 +401,10 @@ def analyze(state: AgentState) -> dict:
             _scene_times = _extract_scene_changes(workspace.source_video_path, acoustic.duration)
             _gesture_sparse = _extract_gesture_signal(workspace.source_video_path, acoustic.duration)
 
-            # Word scores from transcript (start, end, score)
-            _word_scores: list[tuple[float, float, float]] = []
             _transcript = state.get("transcript")
-            if _transcript is not None:
-                _words = getattr(_transcript, "words", None) or []
-                for _w in _words:
-                    _ws = getattr(_w, "start", None)
-                    _we = getattr(_w, "end", None)
-                    if _ws is not None and _we is not None:
-                        _word_scores.append((float(_ws), float(_we), 1.0))
+            _word_scores = (
+                _transcript_tfidf_density_scores(_transcript) if _transcript is not None else []
+            )
 
             _feature_matrix = _build_feature_matrix(
                 acoustic, acoustic_windows, _scene_times, _gesture_sparse,

@@ -14,11 +14,11 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 import numpy as np  # noqa: E402
-from sklearn.feature_extraction.text import TfidfVectorizer  # noqa: E402
 
 from highlight_agent.backend import load_transcript  # noqa: E402
 from highlight_agent.features.acoustic import extract_windowed_acoustic_features  # noqa: E402
 from highlight_agent.features.alignment import build_feature_matrix  # noqa: E402
+from highlight_agent.features.semantic import transcript_tfidf_density_scores  # noqa: E402
 from highlight_agent.features.visual_new import (  # noqa: E402
     extract_gesture_observation,
     extract_scene_changes,
@@ -33,27 +33,9 @@ from scripts.validate_training_data import probe_video, resolve_record_path  # n
 
 
 def transcript_word_scores(transcript: Any) -> list[tuple[float, float, float]]:
-    """Create deterministic TF-IDF density scores aligned to transcript words/segments."""
+    """Giữ API script cũ nhưng dùng chung semantic transform với runtime"""
 
-    segments = list(transcript.segments)
-    if not segments:
-        return []
-    texts = [segment.text for segment in segments]
-    try:
-        matrix = TfidfVectorizer(lowercase=True, ngram_range=(1, 2)).fit_transform(texts)
-        raw = np.asarray(matrix.mean(axis=1)).reshape(-1).astype(np.float32)
-    except ValueError:
-        raw = np.ones(len(segments), dtype=np.float32)
-    minimum = float(raw.min(initial=0.0))
-    maximum = float(raw.max(initial=0.0))
-    scores = (raw - minimum) / (maximum - minimum) if maximum > minimum else np.ones_like(raw)
-    aligned: list[tuple[float, float, float]] = []
-    for segment, score in zip(segments, scores):
-        if segment.words:
-            aligned.extend((word.start, word.end, float(score)) for word in segment.words)
-        else:
-            aligned.append((segment.start, segment.end, float(score)))
-    return aligned
+    return transcript_tfidf_density_scores(transcript)
 
 
 def _atomic_write_cache(cache_dir: Path, matrix: np.ndarray, metadata: dict[str, Any]) -> None:
