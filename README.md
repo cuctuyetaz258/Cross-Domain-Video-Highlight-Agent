@@ -159,6 +159,46 @@ python -m scripts.run_agent sample.mp4 \
 `--transcript-source` nhận `auto`, `youtube` hoặc `whisper`. Chế độ `auto`
 ưu tiên caption YouTube và fallback sang Whisper.
 
+Chạy nhánh dense-overlap LTR với checkpoint đã train:
+
+```bash
+python -m scripts.run_agent sample.mp4 \
+  --domain lecture \
+  --highlight-count 3 \
+  --visual-method scene_mediapipe \
+  --ltr-model-path data/models/ltr_scorer.pt
+```
+
+Nếu `--ltr-model-path` trống, không tồn tại, checkpoint không hợp lệ hoặc LTR không tạo đủ
+candidate, agent tự động quay về pipeline weighted-sum hiện tại. Kết quả `features.mode`
+cho biết lần chạy dùng `ltr_dense_overlap`, `multimodal_fusion` hay `naive_baseline`.
+
+### Train LTR offline
+
+Trainer yêu cầu mỗi cache có hai file:
+
+```text
+data/features_cache/VIDEO_ID/
+├── feature_matrix.npy   # float32, shape (7, T), sample rate 10 Hz
+└── metadata.json        # schema_version, video_id, sample_rate, channel_order, shape, dtype
+```
+
+Chạy training với QVHighlights train/validation annotations:
+
+```bash
+python -m highlight_agent.models.train_offline \
+  --qvhighlights data/raw/qvhighlights/highlight_train_release.jsonl \
+  --val-qvhighlights data/raw/qvhighlights/highlight_val_release.jsonl \
+  --cache-dir data/features_cache \
+  --output data/models/ltr_scorer.pt \
+  --training-log data/models/training_log.json \
+  --seed 42
+```
+
+Checkpoint được chọn theo Average Precision trên validation windows và chứa feature schema,
+`L_ref`, epoch, AP, dataset fingerprint và training config. `training_log.json` ghi riêng
+margin loss, temporal smoothness loss và total loss theo epoch.
+
 `Analyze` sẽ dùng candidate bên ngoài nếu truyền `--candidates`; nếu không,
 nó tạo baseline giả lập có seed ổn định để demo Sprint 1.
 

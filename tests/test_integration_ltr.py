@@ -5,6 +5,19 @@ from pathlib import Path
 
 import numpy as np
 
+from highlight_agent.schemas import MediaWorkspace
+
+
+def _workspace(tmp_path: Path) -> MediaWorkspace:
+    return MediaWorkspace(
+        video_id="test-video",
+        source_type="local",
+        original_input=str(tmp_path / "source.mp4"),
+        source_video_path=tmp_path / "source.mp4",
+        audio_path=tmp_path / "audio.wav",
+        transcript_path=tmp_path / "transcript.json",
+    )
+
 
 def test_state_accepts_ltr_model_path():
     """AgentState TypedDict should accept ltr_model_path=None."""
@@ -76,7 +89,7 @@ def test_ltr_pipeline_mock_e2e():
         assert c.end_time - c.start_time >= 30
 
 
-def test_analyze_fallback_no_ltr_path():
+def test_analyze_fallback_no_ltr_path(tmp_path):
     """analyze() should not crash when ltr_model_path is None - LTR branch skipped."""
     from unittest.mock import MagicMock, patch
     from highlight_agent.agent.nodes import analyze
@@ -86,10 +99,7 @@ def test_analyze_fallback_no_ltr_path():
     mock_acoustic.duration = 120.0
     mock_acoustic.model_dump.return_value = {}
 
-    mock_workspace = MagicMock()
-    mock_workspace.video_id = "test"
-    mock_workspace.audio_path = Path("/tmp/audio.wav")
-    mock_workspace.video_path = Path("/tmp/video.mp4")
+    workspace = _workspace(tmp_path)
 
     mock_transcript = MagicMock()
     mock_transcript.words = []
@@ -98,7 +108,7 @@ def test_analyze_fallback_no_ltr_path():
         "video_path": "/tmp/video.mp4",
         "domain": "lecture",
         "ltr_model_path": None,
-        "workspace": mock_workspace,
+        "workspace": workspace,
         "transcript": mock_transcript,
         "highlight_count": 3,
     }
@@ -120,7 +130,7 @@ def test_analyze_fallback_no_ltr_path():
     assert result.get("features", {}).get("mode") != "ltr_dense_overlap"
 
 
-def test_analyze_fallback_missing_model_file():
+def test_analyze_fallback_missing_model_file(tmp_path):
     """analyze() should use old pipeline when model file does not exist on disk."""
     from unittest.mock import MagicMock, patch
     from highlight_agent.agent.nodes import analyze
@@ -130,10 +140,7 @@ def test_analyze_fallback_missing_model_file():
     mock_acoustic.duration = 120.0
     mock_acoustic.model_dump.return_value = {}
 
-    mock_workspace = MagicMock()
-    mock_workspace.video_id = "test"
-    mock_workspace.audio_path = Path("/tmp/audio.wav")
-    mock_workspace.video_path = Path("/tmp/video.mp4")
+    workspace = _workspace(tmp_path)
 
     mock_transcript = MagicMock()
     mock_transcript.words = []
@@ -142,7 +149,7 @@ def test_analyze_fallback_missing_model_file():
         "video_path": "/tmp/video.mp4",
         "domain": "lecture",
         "ltr_model_path": "/nonexistent/path/model.pt",
-        "workspace": mock_workspace,
+        "workspace": workspace,
         "transcript": mock_transcript,
         "highlight_count": 3,
     }
@@ -162,3 +169,110 @@ def test_analyze_fallback_missing_model_file():
 
     assert isinstance(result, dict)
     assert result.get("features", {}).get("mode") != "ltr_dense_overlap"
+
+
+def test_analyze_runs_ltr_with_real_workspace_and_checkpoint(tmp_path):
+    """The real MediaWorkspace field and checkpoint device wiring must reach LTR mode."""
+    from unittest.mock import MagicMock, patch
+
+    import torch
+
+    from highlight_agent.agent.nodes import analyze
+    from highlight_agent.agent.state import ProgressEvent
+    from highlight_agent.models.ltr_scorer import AdditiveAttentionScorer
+    from highlight_agent.schemas import AcousticFeatures, HighlightCandidate
+
+    workspace = _workspace(tmp_path)
+    checkpoint_path = tmp_path / "model.pt"
+    AdditiveAttentionScorer().save(checkpoint_path, metadata={"L_ref": 40.0})
+
+    acoustic = MagicMock(spec=AcousticFeatures)
+    acoustic.duration = 120.0
+    acoustic.model_dump.return_value = {}
+    transcript = MagicMock()
+    transcript.words = []
+    baseline = [
+        HighlightCandidate(
+            candidate_id=f"base_{index}",
+            start_time=float(index * 30),
+            end_time=float(index * 30 + 30),
+            score=0.5,
+            reason="baseline",
+        )
+        for index in range(3)
+    ]
+    ltr_candidates = [
+        HighlightCandidate(
+            candidate_id=f"ltr_{index}",
+            start_time=float(index * 30),
+            end_time=float(index * 30 + 30),
+            score=0.8,
+            reason="ltr",
+        )
+        for index in range(3)
+    ]
+    events: list[ProgressEvent] = []
+
+    def scene_extractor(path, duration):
+        assert path == workspace.source_video_path
+        assert duration == 120.0
+        return []
+
+    def gesture_extractor(path, duration):
+        assert path == workspace.source_video_path
+        assert duration == 120.0
+        return np.zeros(240, dtype=np.float32)
+
+    timeline = MagicMock()
+    timeline.windows = []
+    timeline.model_dump.return_value = {}
+    feature_matrix = np.random.default_rng(42).random((7, 1200)).astype(np.float32)
+    state = {
+        "video_path": str(workspace.source_video_path),
+        "domain": "lecture",
+        "workspace": workspace,
+        "transcript": transcript,
+        "highlight_count": 3,
+        "ltr_model_path": str(checkpoint_path),
+        "emit": events.append,
+    }
+
+    with (
+        patch("highlight_agent.agent.nodes.extract_windowed_acoustic_features", return_value=(acoustic, [])),
+        patch("highlight_agent.agent.nodes.build_feature_timeline", return_value=timeline),
+        patch("highlight_agent.agent.nodes.extract_visual_scores", return_value=[]),
+        patch("highlight_agent.agent.nodes.calculate_total_score", return_value=baseline),
+        patch("highlight_agent.agent.nodes.normalize_features", return_value={}),
+        patch("highlight_agent.agent.nodes.save_feature_timeline", return_value=tmp_path / "features.json"),
+        patch("highlight_agent.agent.nodes._naive_candidates", return_value=baseline),
+        patch("highlight_agent.features.visual_new.extract_scene_changes", side_effect=scene_extractor),
+        patch("highlight_agent.features.visual_new.extract_gesture_signal", side_effect=gesture_extractor),
+        patch("highlight_agent.features.alignment.build_feature_matrix", return_value=feature_matrix),
+        patch("highlight_agent.features.nms_topk.extract_topk_nms", return_value=ltr_candidates),
+    ):
+        result = analyze(state)
+
+    assert result["features"]["mode"] == "ltr_dense_overlap"
+    assert result["candidates"] == ltr_candidates
+    assert any(event.step == "ltr_done" for event in events)
+    expected_device = "cuda" if torch.cuda.is_available() else "cpu"
+    assert any(event.meta.get("device") == expected_device for event in events)
+
+
+def test_cli_exposes_ltr_model_and_scene_mediapipe():
+    from scripts.run_agent import parse_args
+
+    args = parse_args(
+        [
+            "video.mp4",
+            "--domain",
+            "lecture",
+            "--ltr-model-path",
+            "model.pt",
+            "--visual-method",
+            "scene_mediapipe",
+        ]
+    )
+
+    assert args.ltr_model_path == "model.pt"
+    assert args.visual_method == "scene_mediapipe"

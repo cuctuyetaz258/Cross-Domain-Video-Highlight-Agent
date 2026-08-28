@@ -32,7 +32,7 @@ from highlight_agent.agent.state import ProgressEvent
 from highlight_agent.backend import load_candidates
 
 
-def parse_args() -> argparse.Namespace:
+def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("video_input", help="YouTube URL or local video path")
     parser.add_argument("--domain", required=True, choices=["lecture", "podcast", "standup"])
@@ -54,9 +54,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--no-subtitles", action="store_true")
     parser.add_argument(
         "--visual-method",
-        choices=["pixel_diff", "raft"],
+        choices=["pixel_diff", "raft", "scene_mediapipe"],
         default="pixel_diff",
-        help="Phương pháp tính visual score ('pixel_diff' hoặc 'raft').",
+        help="Phương pháp visual: pixel_diff, raft hoặc scene_mediapipe cho nhánh LTR.",
     )
     parser.add_argument(
         "--visual-sample-fps",
@@ -64,7 +64,12 @@ def parse_args() -> argparse.Namespace:
         default=1.0,
         help="Số frame lấy mẫu mỗi giây (1.0 = nhanh, 2.0 = chính xác hơn).",
     )
-    return parser.parse_args()
+    parser.add_argument(
+        "--ltr-model-path",
+        default=None,
+        help="Checkpoint LTR (.pt). Bỏ trống để dùng pipeline weighted-sum hiện tại.",
+    )
+    return parser.parse_args(argv)
 
 
 def main() -> None:
@@ -118,6 +123,7 @@ def main() -> None:
         "burn_subtitles": not args.no_subtitles,
         "visual_method": args.visual_method,
         "visual_sample_fps": args.visual_sample_fps,
+        "ltr_model_path": args.ltr_model_path,
         "emit": emit,
     }
     if args.candidates:

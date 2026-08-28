@@ -392,8 +392,8 @@ def analyze(state: AgentState) -> dict:
             from highlight_agent.features.nms_topk import extract_topk_nms as _extract_topk_nms
             from highlight_agent.models.ltr_scorer import AdditiveAttentionScorer as _LTRScorer
 
-            _scene_times = _extract_scene_changes(workspace.video_path, acoustic.duration)
-            _gesture_sparse = _extract_gesture_signal(workspace.video_path, acoustic.duration)
+            _scene_times = _extract_scene_changes(workspace.source_video_path, acoustic.duration)
+            _gesture_sparse = _extract_gesture_signal(workspace.source_video_path, acoustic.duration)
 
             # Word scores from transcript (start, end, score)
             _word_scores: list[tuple[float, float, float]] = []
@@ -410,21 +410,42 @@ def analyze(state: AgentState) -> dict:
                 acoustic, acoustic_windows, _scene_times, _gesture_sparse,
                 _word_scores, interaction, acoustic.duration
             )
-            _window_tensor = _extract_windows(_feature_matrix)
-            _ltr_model = _LTRScorer.load(_ltr_model_path)
+            _ltr_device = _torch.device("cuda" if _torch.cuda.is_available() else "cpu")
+            _window_tensor = _extract_windows(_feature_matrix, device=_ltr_device)
+            _ltr_model, _checkpoint_metadata = _LTRScorer.load_checkpoint(
+                _ltr_model_path,
+                device=_ltr_device,
+                expected_in_features=7,
+            )
             with _torch.no_grad():
                 _raw_scores = _ltr_model(_window_tensor).squeeze(-1)
             _window_scores = _raw_scores.cpu().numpy()
             _timeline_score = _blend_scores(_window_scores, T=_feature_matrix.shape[1])
-            _checkpoint = _torch.load(_ltr_model_path, map_location="cpu", weights_only=False)
-            _l_ref = _checkpoint.get("metadata", {}).get("L_ref", 40.0)
-            _k = max(1, min(10, state.get("highlight_count", 3)))
+            _l_ref = _checkpoint_metadata.get("L_ref", 40.0)
+            _k = max(3, min(5, state.get("highlight_count", 3)))
             _ltr_candidates = _extract_topk_nms(_timeline_score, k=_k, reference_duration=float(_l_ref))
-            if _ltr_candidates:
+            if len(_ltr_candidates) >= _k:
                 candidates = _ltr_candidates
-                features["mode"] = "ltr_dense_overlap"
-            _emit(state, "analyze", "ltr_done", f"LTR produced {len(_ltr_candidates)} candidates")
+                mode = "ltr_dense_overlap"
+                _emit(
+                    state,
+                    "analyze",
+                    "ltr_done",
+                    f"LTR produced {len(_ltr_candidates)} candidates on {_ltr_device.type}",
+                    device=_ltr_device.type,
+                    count=len(_ltr_candidates),
+                )
+            else:
+                _emit(
+                    state,
+                    "analyze",
+                    "ltr_fallback",
+                    f"LTR produced {len(_ltr_candidates)}/{_k} candidates; using baseline",
+                    count=len(_ltr_candidates),
+                    required=_k,
+                )
         except Exception as _ltr_exc:  # noqa: BLE001
+            logger.warning("LTR scoring failed, fallback to baseline: %s", _ltr_exc)
             _emit(state, "analyze", "ltr_fallback", f"LTR error, using baseline: {_ltr_exc}")
 
     _emit(state, "analyze", "done", f"mode={mode} | {len(candidates)} candidates", mode=mode, count=len(candidates))

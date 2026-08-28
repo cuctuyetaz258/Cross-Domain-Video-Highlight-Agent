@@ -53,8 +53,10 @@ def run_live_agent(video_url: str, domain: str, stepper_placeholder):
 
     visual_method = st.session_state.get("visual_method", "pixel_diff")
     visual_sample_fps = st.session_state.get("visual_sample_fps", 1.0)
+    ltr_model_path = st.session_state.get("ltr_model_path") or None
     known_speaker_count = st.session_state.get("known_speaker_count", None)
-    log(f"Visual method: {visual_method} | Sample FPS: {visual_sample_fps}")
+    ltr_status = ltr_model_path if ltr_model_path else "disabled"
+    log(f"Visual method: {visual_method} | Sample FPS: {visual_sample_fps} | LTR: {ltr_status}")
 
     state = {
         "video_path": video_url,
@@ -66,6 +68,7 @@ def run_live_agent(video_url: str, domain: str, stepper_placeholder):
         "burn_subtitles": False,
         "visual_method": visual_method,
         "visual_sample_fps": visual_sample_fps,
+        "ltr_model_path": ltr_model_path,
         "emit": emit,
     }
 
@@ -88,6 +91,8 @@ def run_live_agent(video_url: str, domain: str, stepper_placeholder):
         final_state = accumulated_state
 
         if final_state:
+            execution_mode = final_state.get("features", {}).get("mode", "unknown")
+            log(f"Scoring mode: {execution_mode}", "SUCCESS")
             log("Pipeline completed successfully! All highlight clips are ready.", "SUCCESS")
             status_container.update(label="✅ Video Processing Complete!", state="complete", expanded=False)
 

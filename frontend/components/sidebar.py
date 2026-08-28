@@ -19,6 +19,29 @@ def render_sidebar():
 
         domain = st.selectbox("Content Domain", ["lecture", "podcast", "standup"])
 
+        with st.expander("LTR & Visual Settings"):
+            st.selectbox(
+                "Visual method",
+                ["pixel_diff", "raft", "scene_mediapipe"],
+                key="visual_method",
+                help="scene_mediapipe is used by the dense LTR feature path.",
+            )
+            st.number_input(
+                "Visual sample FPS",
+                min_value=0.25,
+                max_value=10.0,
+                value=1.0,
+                step=0.25,
+                key="visual_sample_fps",
+            )
+            st.text_input(
+                "LTR checkpoint path",
+                value="",
+                key="ltr_model_path",
+                placeholder="data/models/ltr_scorer.pt",
+                help="Leave empty to use the current weighted-sum pipeline.",
+            )
+
         if st.button("Process Video", type="primary", use_container_width=True):
             if input_type == "YouTube URL" and youtube_url:
                 st.session_state["target_url"] = youtube_url

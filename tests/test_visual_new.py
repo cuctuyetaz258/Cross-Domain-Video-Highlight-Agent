@@ -106,3 +106,61 @@ def test_gesture_returns_zero_when_facemesh_cannot_initialize(monkeypatch) -> No
     )
 
     assert np.all(extract_gesture_signal("video.mp4", duration=1.0) == 0.0)
+
+
+def test_gesture_uses_sequential_decode_when_fps_is_available(monkeypatch) -> None:
+    class Capture:
+        def __init__(self) -> None:
+            self.grab_count = 0
+            self.set_count = 0
+
+        def isOpened(self) -> bool:
+            return True
+
+        def get(self, prop) -> float:
+            return 4.0
+
+        def grab(self) -> bool:
+            self.grab_count += 1
+            return True
+
+        def retrieve(self):
+            return True, object()
+
+        def set(self, *args) -> None:
+            self.set_count += 1
+
+        def release(self) -> None:
+            return None
+
+    capture = Capture()
+
+    class FaceMesh:
+        def __init__(self, **kwargs) -> None:
+            pass
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *args) -> None:
+            return None
+
+        def process(self, frame):
+            return SimpleNamespace(multi_face_landmarks=None)
+
+    fake_cv2 = SimpleNamespace(
+        VideoCapture=lambda path: capture,
+        CAP_PROP_FPS=5,
+        CAP_PROP_POS_MSEC=0,
+        COLOR_BGR2RGB=1,
+        cvtColor=lambda frame, code: frame,
+    )
+    fake_mp = SimpleNamespace(solutions=SimpleNamespace(face_mesh=SimpleNamespace(FaceMesh=FaceMesh)))
+    monkeypatch.setitem(sys.modules, "cv2", fake_cv2)
+    monkeypatch.setitem(sys.modules, "mediapipe", fake_mp)
+
+    signal = extract_gesture_signal("video.mp4", duration=2.0, sample_rate=2.0)
+
+    assert signal.shape == (4,)
+    assert capture.grab_count == 7
+    assert capture.set_count == 0

@@ -74,9 +74,26 @@ def extract_gesture_signal(
 
     try:
         with face_mesh:
+            fps = float(capture.get(cv2.CAP_PROP_FPS)) if hasattr(capture, "get") else 0.0
+            can_decode_sequentially = (
+                fps > 0
+                and hasattr(capture, "grab")
+                and hasattr(capture, "retrieve")
+            )
+            current_frame = 0
             for index in range(sample_count):
-                capture.set(cv2.CAP_PROP_POS_MSEC, index * 1000.0 / sample_rate)
-                success, frame = capture.read()
+                if can_decode_sequentially:
+                    target_frame = int(round(index * fps / sample_rate))
+                    grabbed = True
+                    while current_frame <= target_frame:
+                        grabbed = bool(capture.grab())
+                        current_frame += 1
+                        if not grabbed:
+                            break
+                    success, frame = capture.retrieve() if grabbed else (False, None)
+                else:
+                    capture.set(cv2.CAP_PROP_POS_MSEC, index * 1000.0 / sample_rate)
+                    success, frame = capture.read()
                 if not success or frame is None:
                     continue
                 result = face_mesh.process(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))

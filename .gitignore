@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 .pytest_cache/
+.pytest_tmp*/
 .mypy_cache/
 .ruff_cache/
 .coverage
@@ -22,6 +23,10 @@ env/
 output/
 processing_video/
 data/benchmark/
+data/raw/
+data/features_cache/
+data/models/
+data/reports/
 *.h5
 *.tar
 *.zip
