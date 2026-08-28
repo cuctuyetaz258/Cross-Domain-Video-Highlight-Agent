@@ -1,34 +1,43 @@
 # Thư viện hỗ trợ
 pydantic>=2.7,<3
 python-dotenv>=1,<2
+curl-cffi>=0.7.1
 
 # Xử lý media (ingestion, transcript, rendering)
 yt-dlp[default]
 faster-whisper>=1,<2
 opencv-python>=4.9,<5
+scenedetect>=0.6.4
+mediapipe==0.10.14
+protobuf>=4.25,<5
 
 # Điều phối agent, tích hợp LLM
 langgraph
 openai
 google-genai
 
-# Frontend
+# Frontend & CLI
 streamlit
 plotly
+rich>=13
+extra-streamlit-components
+streamlit-agraph
 
 # Trích xuất đặc trưng & Evaluation
 librosa
 pyannote.audio
 scikit-learn
-sentence-transformers
-transformers
+sentence-transformers==3.4.1
+transformers==4.48.3
+huggingface-hub==0.27.1
 h5py
 scipy
+
+# Deep Learning Optical Flow (RAFT)
+torch==2.5.1
+torchvision==0.20.1
+torchaudio==2.5.1
 
 # Testing
 pytest>=8,<9
 ruff>=0.6,<1
-
-# Custom UI Components
-extra-streamlit-components
-streamlit-agraph

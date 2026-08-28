@@ -109,6 +109,30 @@ class InteractionFeatures(BaseModel):
         return self
 
 
+class SemanticFeatures(BaseModel):
+    """Evidence ngữ nghĩa của một cửa sổ transcript"""
+
+    model_config = ConfigDict(extra="forbid")
+
+    topic_relevance: float = Field(ge=0, le=1)
+    semantic_novelty: float = Field(ge=0, le=1)
+    tfidf_density: float = Field(ge=0)
+    cue_score: float = Field(ge=0, le=1)
+    raw_score: float = Field(ge=0, le=1)
+    cue_phrases: list[str] = Field(default_factory=list)
+    text_coverage: float = Field(ge=0, le=1)
+
+
+class VisualFeatures(BaseModel):
+    """Evidence chuyển động hình ảnh của một cửa sổ video"""
+
+    model_config = ConfigDict(extra="forbid")
+
+    motion_score: float = Field(ge=0)
+    method: Literal["pixel_diff", "raft"]
+    frame_count: int = Field(ge=0)
+
+
 class FeatureWindow(BaseModel):
     """Feature thô của một cửa sổ thời gian dùng cho bộ chấm điểm sau này"""
 
@@ -118,6 +142,8 @@ class FeatureWindow(BaseModel):
     end: float = Field(gt=0)
     acoustic: AcousticFeatures
     interaction: InteractionFeatures | None = None
+    semantic: SemanticFeatures | None = None
+    visual: VisualFeatures | None = None
 
     @model_validator(mode="after")
     def validate_window(self) -> Self:

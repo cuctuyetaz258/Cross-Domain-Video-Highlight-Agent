@@ -5,8 +5,14 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Literal
 
-import yt_dlp
-from dotenv import load_dotenv
+try:
+    import yt_dlp
+except ImportError:
+    yt_dlp = None
+try:
+    from dotenv import load_dotenv
+except ImportError:
+    load_dotenv = None
 
 from highlight_agent.schemas import Chapter, MediaWorkspace, TranscriptDocument
 
@@ -93,6 +99,8 @@ def download_youtube_media(
     cookies_browser: str | None = None,
     download_captions: bool = True,
 ) -> YoutubeMedia:
+    if yt_dlp is None:
+        raise MediaProcessingError("yt-dlp is not installed")
     workspace_path = Path(workspace_dir)
     options = _youtube_options(workspace_path, cookies_browser)
 
@@ -141,7 +149,8 @@ def prepare_media_workspace(
     if transcript_source not in {"auto", "youtube", "whisper"}:
         raise ValueError("transcript_source must be 'auto', 'youtube', or 'whisper'")
 
-    load_dotenv()
+    if load_dotenv is not None:
+        load_dotenv()
     workspace = create_workspace(video_input, output_root)
     workspace_dir = workspace.transcript_path.parent
     transcript: TranscriptDocument | None = None

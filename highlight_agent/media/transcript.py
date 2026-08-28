@@ -1,6 +1,7 @@
 """Parse caption JSON3, fallback Whisper và lưu transcript"""
 
 import json
+import logging
 from collections.abc import Callable
 from pathlib import Path
 from typing import Any
@@ -13,6 +14,8 @@ from highlight_agent.schemas import (
 )
 
 from .errors import MediaProcessingError
+
+logger = logging.getLogger(__name__)
 
 
 def save_transcript(document: TranscriptDocument, output_path: str | Path) -> Path:
@@ -99,7 +102,7 @@ def transcribe_with_whisper(
     video_id: str,
     duration: float,
     chapters: list[Chapter] | None = None,
-    model_size: str = "small.en",
+    model_size: str = "base.en",
     model_factory: Callable[..., Any] | None = None,
 ) -> TranscriptDocument:
     if model_factory is None:
@@ -109,7 +112,12 @@ def transcribe_with_whisper(
             raise MediaProcessingError("faster-whisper is not installed") from exc
         model_factory = WhisperModel
 
-    model = model_factory(model_size, device="cpu", compute_type="int8")
+    try:
+        model = model_factory(model_size, device="cuda", compute_type="int8_float16")
+    except Exception as exc:
+        logger.info("[Whisper] GPU allocation failed (%s), falling back to CPU...", exc)
+        model = model_factory(model_size, device="cpu", compute_type="int8")
+
     raw_segments, info = model.transcribe(
         str(audio_path),
         beam_size=5,
@@ -137,6 +145,9 @@ def transcribe_with_whisper(
                     text=word_text,
                 )
             )
+
+        words.sort(key=lambda w: w.start)
+
         segments.append(
             TranscriptSegment(
                 id=len(segments),
@@ -149,6 +160,10 @@ def transcribe_with_whisper(
 
     if not segments:
         raise MediaProcessingError("Whisper did not detect usable English speech")
+
+    segments.sort(key=lambda s: s.start)
+    for i, s in enumerate(segments):
+        s.id = i
 
     detected_language = getattr(info, "language", None) or "en"
     return TranscriptDocument(
