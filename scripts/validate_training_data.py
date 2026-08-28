@@ -13,16 +13,16 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-import cv2
+import cv2  # noqa: E402
 
-from highlight_agent.backend import load_transcript
-from highlight_agent.models.train_offline import (
+from highlight_agent.backend import load_transcript  # noqa: E402
+from highlight_agent.models.train_offline import (  # noqa: E402
     compute_lref,
     create_window_labels,
     load_training_manifest,
 )
 
-VALID_DOMAINS = {"lecture", "podcast", "standup"}
+VALID_DOMAINS = {"benchmark", "lecture", "podcast", "standup"}
 VALID_SPLITS = {"train", "val", "test"}
 PATH_FIELDS = ("video_path", "audio_path", "transcript_path")
 
@@ -121,6 +121,10 @@ def validate_manifest(
             errors.append(f"{prefix} {video_id}: invalid domain {domain!r}")
         if not source:
             errors.append(f"{prefix} {video_id}: source is empty")
+        if source == "tvsum" and not str(record.get("category", "")).strip():
+            errors.append(f"{prefix} {video_id}: TVSum record is missing category")
+        if source == "tvsum" and domain != "benchmark":
+            errors.append(f"{prefix} {video_id}: TVSum domain must be 'benchmark'")
 
         resolved: dict[str, Path] = {}
         for field in PATH_FIELDS:

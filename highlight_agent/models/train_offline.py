@@ -47,12 +47,75 @@ class WindowExample:
     score: float
 
 
+def _tvsum_record(
+    *,
+    video_id: str,
+    category: str,
+    frame_scores: np.ndarray,
+    fps: float,
+) -> dict[str, Any]:
+    """Chuẩn hóa annotation TVSum mà không suy diễn domain của ứng dụng"""
+    if fps <= 0:
+        raise ValueError(f"TVSum FPS must be positive for {video_id}")
+    return {
+        "video_id": video_id,
+        "dataset": "tvsum",
+        "category": category,
+        "domain": "benchmark",
+        "source": "tvsum",
+        "frame_scores": np.asarray(frame_scores, dtype=np.float32).reshape(-1),
+        "fps": fps,
+    }
+
+
+def _decode_matlab_characters(value: np.ndarray) -> str:
+    """Giải mã MATLAB char array uint16 trong file HDF5 v7.3"""
+    return "".join(chr(code) for code in np.asarray(value).astype(np.uint16).reshape(-1)).strip()
+
+
+def _load_tvsum_v73(mat_path: str | Path) -> list[dict[str, Any]]:
+    """Đọc TVSum MATLAB v7.3 dựa trên HDF5 references"""
+    try:
+        import h5py
+    except ImportError as exc:
+        raise ImportError("h5py is required to read TVSum MATLAB v7.3 annotations") from exc
+
+    records: list[dict[str, Any]] = []
+    with h5py.File(mat_path, "r") as handle:
+        group = handle["tvsum50"]
+        required = {"category", "gt_score", "length", "nframes", "video"}
+        missing = sorted(required.difference(group.keys()))
+        if missing:
+            raise ValueError(f"TVSum v7.3 annotation is missing fields: {', '.join(missing)}")
+        for index in range(group["video"].shape[0]):
+            def dereference(name: str) -> np.ndarray:
+                return np.asarray(handle[group[name][index, 0]])
+
+            video_id = _decode_matlab_characters(dereference("video"))
+            category = _decode_matlab_characters(dereference("category"))
+            frame_scores = dereference("gt_score")
+            frame_count = float(dereference("nframes").reshape(-1)[0])
+            duration = float(dereference("length").reshape(-1)[0])
+            records.append(
+                _tvsum_record(
+                    video_id=video_id,
+                    category=category,
+                    frame_scores=frame_scores,
+                    fps=frame_count / duration,
+                )
+            )
+    return records
+
+
 def load_tvsum(mat_path: str | Path) -> list[dict[str, Any]]:
     """Load TVSum annotations into the common training record format."""
 
     import scipy.io
 
-    data = scipy.io.loadmat(str(mat_path))["tvsum50"][0]
+    try:
+        data = scipy.io.loadmat(str(mat_path))["tvsum50"][0]
+    except NotImplementedError:
+        return _load_tvsum_v73(mat_path)
     records: list[dict[str, Any]] = []
     for row in data:
         video_id = str(row["video"][0])
@@ -60,16 +123,7 @@ def load_tvsum(mat_path: str | Path) -> list[dict[str, Any]]:
         frame_scores = row["annotations"].mean(axis=0).astype(np.float32)
         if frame_scores.ndim == 2 and frame_scores.shape[1] == 1:
             frame_scores = frame_scores.squeeze(1)
-        domain = "lecture" if category == "LF" else "podcast" if category == "VT" else "standup"
-        records.append(
-            {
-                "video_id": video_id,
-                "domain": domain,
-                "source": "tvsum",
-                "frame_scores": frame_scores,
-                "fps": 24.0,
-            }
-        )
+        records.append(_tvsum_record(video_id=video_id, category=category, frame_scores=frame_scores, fps=24.0))
     return records
 
 

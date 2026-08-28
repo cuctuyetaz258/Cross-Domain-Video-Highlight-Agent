@@ -3,7 +3,11 @@ from types import SimpleNamespace
 
 import numpy as np
 
-from highlight_agent.features.visual_new import extract_gesture_signal, extract_scene_changes
+from highlight_agent.features.visual_new import (
+    extract_gesture_observation,
+    extract_gesture_signal,
+    extract_scene_changes,
+)
 
 
 class _Timecode:
@@ -105,7 +109,11 @@ def test_gesture_returns_zero_when_facemesh_cannot_initialize(monkeypatch) -> No
         SimpleNamespace(solutions=SimpleNamespace(face_mesh=SimpleNamespace(FaceMesh=FaceMesh))),
     )
 
-    assert np.all(extract_gesture_signal("video.mp4", duration=1.0) == 0.0)
+    result = extract_gesture_observation("video.mp4", duration=1.0)
+
+    assert np.all(result.signal == 0.0)
+    assert result.status == "facemesh_initialization_failed"
+    assert result.detected_sample_count == 0
 
 
 def test_gesture_uses_sequential_decode_when_fps_is_available(monkeypatch) -> None:

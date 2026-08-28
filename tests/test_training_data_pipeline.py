@@ -5,7 +5,8 @@ from types import SimpleNamespace
 
 import numpy as np
 
-from scripts.build_feature_cache import transcript_word_scores
+from highlight_agent.features.visual_new import GestureExtraction
+from scripts.build_feature_cache import refresh_gesture_observation_for_record, transcript_word_scores
 from scripts.validate_training_data import validate_manifest
 
 
@@ -96,3 +97,32 @@ def test_manifest_validator_detects_video_split_leakage(tmp_path, monkeypatch):
 
     assert not report["valid"]
     assert any("duplicates" in error for error in report["errors"])
+
+
+def test_refresh_gesture_observation_updates_only_metadata(tmp_path, monkeypatch):
+    cache_dir = tmp_path / "cache" / "video"
+    cache_dir.mkdir(parents=True)
+    metadata_path = cache_dir / "metadata.json"
+    metadata_path.write_text(json.dumps({"extractor": {}, "observations": {}}), encoding="utf-8")
+    monkeypatch.setattr(
+        "scripts.build_feature_cache.load_feature_matrix",
+        lambda cache_root, video_id: np.zeros((7, 20), dtype=np.float32),
+    )
+    monkeypatch.setattr("scripts.build_feature_cache.resolve_record_path", lambda value, root: tmp_path / value)
+    monkeypatch.setattr(
+        "scripts.build_feature_cache.extract_gesture_observation",
+        lambda path, duration, sample_rate: GestureExtraction(
+            np.zeros(4, dtype=np.float32), "facemesh_initialization_failed", 0, 0
+        ),
+    )
+
+    result = refresh_gesture_observation_for_record(
+        {"video_id": "video", "video_path": "video.mp4", "duration": 2.0},
+        project_root=tmp_path,
+        output_dir=tmp_path / "cache",
+    )
+
+    updated = json.loads(metadata_path.read_text(encoding="utf-8"))
+    assert result["status"] == "refreshed_gesture_observation"
+    assert updated["extractor"]["gesture_status"] == "facemesh_initialization_failed"
+    assert updated["observations"]["gesture_detected_sample_count"] == 0

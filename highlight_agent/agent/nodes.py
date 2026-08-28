@@ -382,14 +382,17 @@ def analyze(state: AgentState) -> dict:
         _emit(state, "analyze", "ltr_start", "Running LTR dense scoring...")
         try:
             import torch as _torch
+
+            from highlight_agent.features.alignment import build_feature_matrix as _build_feature_matrix
+            from highlight_agent.features.nms_topk import extract_topk_nms as _extract_topk_nms
+            from highlight_agent.features.overlap_blender import blend_scores as _blend_scores
+            from highlight_agent.features.sliding_window import extract_windows as _extract_windows
             from highlight_agent.features.visual_new import (
-                extract_scene_changes as _extract_scene_changes,
                 extract_gesture_signal as _extract_gesture_signal,
             )
-            from highlight_agent.features.alignment import build_feature_matrix as _build_feature_matrix
-            from highlight_agent.features.sliding_window import extract_windows as _extract_windows
-            from highlight_agent.features.overlap_blender import blend_scores as _blend_scores
-            from highlight_agent.features.nms_topk import extract_topk_nms as _extract_topk_nms
+            from highlight_agent.features.visual_new import (
+                extract_scene_changes as _extract_scene_changes,
+            )
             from highlight_agent.models.ltr_scorer import AdditiveAttentionScorer as _LTRScorer
 
             _scene_times = _extract_scene_changes(workspace.source_video_path, acoustic.duration)

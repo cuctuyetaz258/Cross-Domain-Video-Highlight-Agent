@@ -62,6 +62,7 @@ def test_features_init_exports_new_modules():
 def test_ltr_pipeline_mock_e2e():
     """Run feature matrix through extract_windows -> blend_scores -> extract_topk_nms."""
     import torch
+
     from highlight_agent.features.nms_topk import extract_topk_nms
     from highlight_agent.features.overlap_blender import blend_scores
     from highlight_agent.features.sliding_window import extract_windows
@@ -92,6 +93,7 @@ def test_ltr_pipeline_mock_e2e():
 def test_analyze_fallback_no_ltr_path(tmp_path):
     """analyze() should not crash when ltr_model_path is None - LTR branch skipped."""
     from unittest.mock import MagicMock, patch
+
     from highlight_agent.agent.nodes import analyze
     from highlight_agent.schemas import AcousticFeatures, HighlightCandidate
 
@@ -133,6 +135,7 @@ def test_analyze_fallback_no_ltr_path(tmp_path):
 def test_analyze_fallback_missing_model_file(tmp_path):
     """analyze() should use old pipeline when model file does not exist on disk."""
     from unittest.mock import MagicMock, patch
+
     from highlight_agent.agent.nodes import analyze
     from highlight_agent.schemas import AcousticFeatures, HighlightCandidate
 

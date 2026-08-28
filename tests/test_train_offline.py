@@ -16,6 +16,7 @@ from highlight_agent.models.train_offline import (
     load_feature_matrix,
     load_qvhighlights,
     load_training_manifest,
+    load_tvsum,
     margin_ranking_loss,
     temporal_smoothness_loss,
     train,
@@ -98,6 +99,27 @@ def test_load_qvhighlights_prefers_explicit_duration(tmp_path):
 
     assert records[0]["video_id"] == "vid1"
     assert records[0]["duration"] == 30.0
+
+
+def test_load_tvsum_preserves_dataset_category(monkeypatch) -> None:
+    import scipy.io
+
+    row = {
+        "video": np.asarray(["vehicle-video"], dtype=object),
+        "category": np.asarray(["VT"], dtype=object),
+        "annotations": np.asarray([[1.0, 2.0], [3.0, 4.0]], dtype=np.float32),
+    }
+    monkeypatch.setattr(
+        scipy.io,
+        "loadmat",
+        lambda _: {"tvsum50": np.asarray([[row]], dtype=object)},
+    )
+
+    records = load_tvsum("tvsum50.mat")
+
+    assert records[0]["dataset"] == "tvsum"
+    assert records[0]["category"] == "VT"
+    assert records[0]["domain"] == "benchmark"
 
 
 def test_load_training_manifest_filters_split(tmp_path):

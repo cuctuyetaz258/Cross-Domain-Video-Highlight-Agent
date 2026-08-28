@@ -13,20 +13,23 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-import numpy as np
-from sklearn.feature_extraction.text import TfidfVectorizer
+import numpy as np  # noqa: E402
+from sklearn.feature_extraction.text import TfidfVectorizer  # noqa: E402
 
-from highlight_agent.backend import load_transcript
-from highlight_agent.features.acoustic import extract_windowed_acoustic_features
-from highlight_agent.features.alignment import build_feature_matrix
-from highlight_agent.features.visual_new import extract_gesture_signal, extract_scene_changes
-from highlight_agent.models.train_offline import (
+from highlight_agent.backend import load_transcript  # noqa: E402
+from highlight_agent.features.acoustic import extract_windowed_acoustic_features  # noqa: E402
+from highlight_agent.features.alignment import build_feature_matrix  # noqa: E402
+from highlight_agent.features.visual_new import (  # noqa: E402
+    extract_gesture_observation,
+    extract_scene_changes,
+)
+from highlight_agent.models.train_offline import (  # noqa: E402
     FEATURE_SAMPLE_RATE,
     feature_cache_metadata,
     load_feature_matrix,
     load_training_manifest,
 )
-from scripts.validate_training_data import probe_video, resolve_record_path
+from scripts.validate_training_data import probe_video, resolve_record_path  # noqa: E402
 
 
 def transcript_word_scores(transcript: Any) -> list[tuple[float, float, float]]:
@@ -64,6 +67,51 @@ def _atomic_write_cache(cache_dir: Path, matrix: np.ndarray, metadata: dict[str,
     metadata_temporary = cache_dir / "metadata.json.tmp"
     metadata_temporary.write_text(json.dumps(metadata, indent=2, sort_keys=True), encoding="utf-8")
     metadata_temporary.replace(metadata_path)
+
+
+def refresh_gesture_observation_for_record(
+    record: dict[str, Any],
+    *,
+    project_root: str | Path,
+    output_dir: str | Path,
+) -> dict[str, Any]:
+    """Cập nhật observation gesture mà không tính lại sáu channel còn lại"""
+
+    started = time.perf_counter()
+    video_id = str(record["video_id"])
+    cache_root = Path(output_dir)
+    matrix = load_feature_matrix(cache_root, video_id)
+    cache_dir = cache_root / video_id
+    metadata_path = cache_dir / "metadata.json"
+    metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+    video_path = resolve_record_path(record["video_path"], project_root)
+    duration = float(record.get("duration") or probe_video(video_path)[0])
+    gesture_result = extract_gesture_observation(video_path, duration, sample_rate=2.0)
+
+    metadata.setdefault("extractor", {}).update(
+        {
+            "gesture_enabled": True,
+            "gesture_sample_rate": 2.0,
+            "gesture_status": gesture_result.status,
+        }
+    )
+    metadata.setdefault("observations", {}).update(
+        {
+            "gesture_sample_count": int(len(gesture_result.signal)),
+            "gesture_decoded_sample_count": gesture_result.decoded_sample_count,
+            "gesture_detected_sample_count": gesture_result.detected_sample_count,
+        }
+    )
+    temporary = metadata_path.with_suffix(metadata_path.suffix + ".tmp")
+    temporary.write_text(json.dumps(metadata, indent=2, sort_keys=True), encoding="utf-8")
+    temporary.replace(metadata_path)
+    return {
+        "video_id": video_id,
+        "status": "refreshed_gesture_observation",
+        "shape": list(matrix.shape),
+        "gesture_status": gesture_result.status,
+        "elapsed_seconds": round(time.perf_counter() - started, 3),
+    }
 
 
 def build_cache_for_record(
@@ -122,9 +170,14 @@ def build_cache_for_record(
 
     stage_started = time.perf_counter()
     print(f"  {video_id}: gesture sampling", flush=True)
-    gesture = (
-        extract_gesture_signal(video_path, duration, sample_rate=2.0)
+    gesture_result = (
+        extract_gesture_observation(video_path, duration, sample_rate=2.0)
         if include_gesture
+        else None
+    )
+    gesture = (
+        gesture_result.signal
+        if gesture_result is not None
         else np.zeros(int(duration * 2.0), dtype=np.float32)
     )
     stage_times["gesture"] = time.perf_counter() - stage_started
@@ -144,6 +197,8 @@ def build_cache_for_record(
         "duration": duration,
         "domain": record["domain"],
         "source": record["source"],
+        "dataset": record.get("dataset"),
+        "category": record.get("category"),
         "split": record["split"],
         "label_protocol": record.get("label_protocol"),
         "video_path": str(record["video_path"]),
@@ -157,6 +212,7 @@ def build_cache_for_record(
             "scene_enabled": include_scenes,
             "gesture_enabled": include_gesture,
             "gesture_sample_rate": 2.0,
+            "gesture_status": gesture_result.status if gesture_result is not None else "disabled",
             "interaction_method": "none_non_podcast",
         },
         "observations": {
@@ -164,6 +220,12 @@ def build_cache_for_record(
             "text_interval_count": len(word_scores),
             "scene_count": len(scene_times),
             "gesture_sample_count": int(len(gesture)),
+            "gesture_decoded_sample_count": (
+                gesture_result.decoded_sample_count if gesture_result is not None else 0
+            ),
+            "gesture_detected_sample_count": (
+                gesture_result.detected_sample_count if gesture_result is not None else 0
+            ),
         },
         "stage_seconds": {key: round(value, 3) for key, value in stage_times.items()},
     }
@@ -190,6 +252,7 @@ def build_manifest_caches(
     include_scenes: bool = True,
     include_gesture: bool = True,
     device: str = "cpu",
+    refresh_gesture_observation: bool = False,
 ) -> dict[str, Any]:
     records = load_training_manifest(manifest_path, split=split)
     if limit is not None:
@@ -199,15 +262,22 @@ def build_manifest_caches(
     for index, record in enumerate(records, start=1):
         print(f"[{index}/{len(records)}] extracting {record['video_id']}...", flush=True)
         try:
-            result = build_cache_for_record(
-                record,
-                project_root=project_root,
-                output_dir=output_dir,
-                force=force,
-                include_scenes=include_scenes,
-                include_gesture=include_gesture,
-                device=device,
-            )
+            if refresh_gesture_observation:
+                result = refresh_gesture_observation_for_record(
+                    record,
+                    project_root=project_root,
+                    output_dir=output_dir,
+                )
+            else:
+                result = build_cache_for_record(
+                    record,
+                    project_root=project_root,
+                    output_dir=output_dir,
+                    force=force,
+                    include_scenes=include_scenes,
+                    include_gesture=include_gesture,
+                    device=device,
+                )
         except Exception as exc:
             result = {"video_id": record.get("video_id"), "status": "failed", "error": str(exc)}
         results.append(result)
@@ -216,7 +286,7 @@ def build_manifest_caches(
         "manifest": str(Path(manifest_path).resolve()),
         "output_dir": str(Path(output_dir).resolve()),
         "requested_video_count": len(records),
-        "built_count": sum(item["status"] == "built" for item in results),
+        "built_count": sum(item["status"] in {"built", "refreshed_gesture_observation"} for item in results),
         "skipped_count": sum(item["status"] == "skipped_valid" for item in results),
         "failed_count": sum(item["status"] == "failed" for item in results),
         "elapsed_seconds": round(time.perf_counter() - started, 3),
@@ -243,6 +313,11 @@ def _parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--device", choices=["cpu", "cuda"], default="cpu")
     parser.add_argument("--no-scenes", action="store_true", help="Debug only: zero the scene channel")
     parser.add_argument("--no-gesture", action="store_true", help="Debug only: zero the gesture channel")
+    parser.add_argument(
+        "--refresh-gesture-observation",
+        action="store_true",
+        help="Update gesture status metadata without rebuilding feature matrices",
+    )
     parser.add_argument("--report", default=None)
     return parser.parse_args(argv)
 
@@ -259,6 +334,7 @@ def main(argv: list[str] | None = None) -> int:
         include_scenes=not args.no_scenes,
         include_gesture=not args.no_gesture,
         device=args.device,
+        refresh_gesture_observation=args.refresh_gesture_observation,
     )
     if args.report:
         _write_json(args.report, report)
