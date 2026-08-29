@@ -91,6 +91,32 @@ def _tfidf_density(texts: list[str]) -> np.ndarray:
     return result
 
 
+def transcript_tfidf_density_scores(
+    transcript: TranscriptDocument,
+) -> list[tuple[float, float, float]]:
+    """Tạo điểm TF-IDF theo từ hoặc segment để đồng bộ cache và runtime LTR"""
+
+    segments = list(transcript.segments)
+    if not segments:
+        return []
+    texts = [segment.text for segment in segments]
+    try:
+        matrix = TfidfVectorizer(lowercase=True, ngram_range=(1, 2)).fit_transform(texts)
+        raw = np.asarray(matrix.mean(axis=1)).reshape(-1).astype(np.float32)
+    except ValueError:
+        raw = np.ones(len(segments), dtype=np.float32)
+    minimum = float(raw.min(initial=0.0))
+    maximum = float(raw.max(initial=0.0))
+    scores = (raw - minimum) / (maximum - minimum) if maximum > minimum else np.ones_like(raw)
+    aligned: list[tuple[float, float, float]] = []
+    for segment, score in zip(segments, scores):
+        if segment.words:
+            aligned.extend((word.start, word.end, float(score)) for word in segment.words)
+        else:
+            aligned.append((segment.start, segment.end, float(score)))
+    return aligned
+
+
 def extract_windowed_semantic_features(
     transcript: TranscriptDocument,
     *,

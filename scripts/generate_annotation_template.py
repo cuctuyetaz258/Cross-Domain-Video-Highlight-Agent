@@ -72,7 +72,10 @@ def generate_single_template(
 ) -> Path:
     """Tạo 1 file CSV template 2 giây cho video."""
     output_dir.mkdir(parents=True, exist_ok=True)
-    out_file = output_dir / f"{video_id}_{annotator_id}.csv"
+    # The first annotation follows the canonical dataset name. Additional
+    # annotators keep their identifier so multiple labels never overwrite.
+    file_name = f"{video_id}.csv" if annotator_id == "annotator_1" else f"{video_id}_{annotator_id}.csv"
+    out_file = output_dir / file_name
 
     segments = _get_transcript_segments(video_id, output_root)
 
@@ -124,7 +127,11 @@ def main() -> None:
     parser.add_argument("--video-id", default=None, help="Mã ID video (nếu tạo lẻ 1 video)")
     parser.add_argument("--domain", choices=["lecture", "podcast", "standup"], default=None)
     parser.add_argument("--duration", type=float, default=None, help="Tổng thời lượng video (giây)")
-    parser.add_argument("--annotator-id", default="ThaoAnh", help="Tên hoặc mã người gán nhãn")
+    parser.add_argument(
+        "--annotator-id",
+        default="annotator_1",
+        help="Tên hoặc mã người gán nhãn; annotator_1 tạo tên chuẩn <video_id>.csv",
+    )
     parser.add_argument("--output-dir", default="data/annotations/raw", help="Thư mục xuất file CSV")
     parser.add_argument("--pilot", action="store_true", help="Tạo toàn bộ 6 video Pilot")
     parser.add_argument("--all", action="store_true", help="Tạo toàn bộ 13 video trong danh mục")

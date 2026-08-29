@@ -10,6 +10,13 @@ from .errors import MediaProcessingError
 
 def require_executable(name: str) -> str:
     executable = shutil.which(name)
+    if not executable and name == "ffmpeg":
+        try:
+            import imageio_ffmpeg
+
+            executable = imageio_ffmpeg.get_ffmpeg_exe()
+        except (ImportError, RuntimeError):
+            executable = None
     if not executable:
         raise MediaProcessingError(f"required executable '{name}' was not found in PATH")
     return executable
@@ -24,7 +31,22 @@ def run_media_command(command: list[str], operation: str) -> None:
 
 
 def probe_duration(media_path: str | Path) -> float:
-    ffprobe = require_executable("ffprobe")
+    ffprobe = shutil.which("ffprobe")
+    if not ffprobe:
+        try:
+            import av
+
+            with av.open(str(media_path)) as container:
+                if container.duration is not None:
+                    duration = float(container.duration / av.time_base)
+                else:
+                    stream = next(stream for stream in container.streams if stream.duration)
+                    duration = float(stream.duration * stream.time_base)
+        except Exception as exc:
+            raise MediaProcessingError(f"could not read duration for {media_path}") from exc
+        if duration <= 0:
+            raise MediaProcessingError(f"media duration must be positive: {media_path}")
+        return duration
     command = [
         ffprobe,
         "-v",

@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 .pytest_cache/
+.pytest_tmp*/
 .mypy_cache/
 .ruff_cache/
 .coverage
@@ -20,8 +21,13 @@ env/
 
 # Generated media and model artifacts
 output/
+uploads/
 processing_video/
 data/benchmark/
+data/raw/
+data/features_cache/
+data/models/
+data/reports/
 *.h5
 *.tar
 *.zip
@@ -47,3 +53,10 @@ data/benchmark/
 build/
 dist/
 *.egg-info/
+
+# Documentation (local only)
+docs/
+
+# Local Kaggle upload and verification bundles
+kaggle_checkpoint_upload/
+kaggle_checkpoint_verify/

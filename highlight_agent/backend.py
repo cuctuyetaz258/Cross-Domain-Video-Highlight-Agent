@@ -11,6 +11,7 @@ from highlight_agent.schemas import (
     BoundaryAdjustment,
     FeatureTimeline,
     HighlightCandidate,
+    LLMHighlightAssessment,
     MediaWorkspace,
     RenderedHighlight,
     TranscriptDocument,
@@ -24,13 +25,17 @@ def prepare_video(
     cookies_browser: str | None = None,
     transcript_source: Literal["auto", "youtube", "whisper"] = "auto",
 ) -> MediaWorkspace:
-    """Chuẩn hóa input, tách audio và tạo transcript ưu tiên caption"""
+    """Chuẩn hóa input, tách audio và luôn tạo transcript bằng Whisper."""
+
+    # Keep the public argument for CLI/state compatibility while runtime uses
+    # word-level Whisper timestamps for reliable boundary refinement.
+    _ = transcript_source
 
     return prepare_media_workspace(
         video_input,
         output_root=output_root,
         cookies_browser=cookies_browser,
-        transcript_source=transcript_source,
+        transcript_source="whisper",
     )
 
 
@@ -75,9 +80,13 @@ def render_candidates(
     workspace: MediaWorkspace,
     candidates: list[HighlightCandidate],
     *,
+    aspect_ratio: Literal["9:16", "16:9"] = "9:16",
     burn_subtitles: bool = True,
     boundary_adjustments: list[BoundaryAdjustment] | None = None,
     refine_boundaries: bool = True,
+    llm_assessments: dict[str, LLMHighlightAssessment] | None = None,
+    pipeline_metadata: dict | None = None,
+    render_namespace: str | None = None,
 ) -> list[RenderedHighlight]:
     transcript = load_transcript(workspace.transcript_path)
     if refine_boundaries:
@@ -89,7 +98,11 @@ def render_candidates(
     return render_highlights(
         workspace,
         candidates,
+        aspect_ratio=aspect_ratio,
         transcript=transcript,
         burn_subtitles=burn_subtitles,
         boundary_adjustments=boundary_adjustments,
+        llm_assessments=llm_assessments,
+        pipeline_metadata=pipeline_metadata,
+        render_namespace=render_namespace,
     )

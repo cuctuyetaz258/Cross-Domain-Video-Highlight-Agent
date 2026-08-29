@@ -1,6 +1,9 @@
 import numpy as np
 
-from highlight_agent.features.semantic import extract_windowed_semantic_features
+from highlight_agent.features.semantic import (
+    extract_windowed_semantic_features,
+    transcript_tfidf_density_scores,
+)
 from highlight_agent.schemas import TranscriptDocument, TranscriptSegment
 
 
@@ -58,3 +61,12 @@ def test_semantic_features_can_follow_audio_duration_beyond_transcript() -> None
         values = result.features.model_dump(exclude={"cue_phrases"})
         assert all(np.isfinite(value) for value in values.values())
         assert 0.0 <= result.features.raw_score <= 1.0
+
+
+def test_tfidf_scores_use_segment_timestamps_without_document_words() -> None:
+    transcript = _transcript()
+
+    scores = transcript_tfidf_density_scores(transcript)
+
+    assert [(start, end) for start, end, _ in scores] == [(0.0, 10.0), (32.0, 42.0)]
+    assert all(0.0 <= score <= 1.0 for _, _, score in scores)

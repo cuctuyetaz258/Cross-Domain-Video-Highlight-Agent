@@ -6,8 +6,10 @@ from itertools import pairwise
 from pathlib import Path
 from typing import Any
 
+import numpy as np
+
 from highlight_agent.media.audio import probe_duration
-from highlight_agent.schemas import InteractionFeatures, SpeakerTurn
+from highlight_agent.schemas import FeatureWindow, InteractionFeatures, SpeakerTurn
 
 DEFAULT_DIARIZATION_MODEL = "pyannote/speaker-diarization-community-1"
 DEFAULT_MIN_TURN_DURATION = 0.30
@@ -91,6 +93,7 @@ def interaction_features_from_turns(
 def windowed_interaction_features(
     features: InteractionFeatures,
     *,
+    acoustic_windows: list[FeatureWindow] | None = None,
     window_seconds: float = 30.0,
     hop_seconds: float = 30.0,
     min_turn_duration: float = DEFAULT_MIN_TURN_DURATION,
@@ -101,10 +104,21 @@ def windowed_interaction_features(
     if window_seconds <= 0 or hop_seconds <= 0:
         raise ValueError("window_seconds and hop_seconds must be positive")
 
+    # Reuse acoustic boundaries so the final partial window has exactly the
+    # same duration in both feature channels.
+    window_bounds = (
+        [(window.start, window.end) for window in acoustic_windows]
+        if acoustic_windows is not None
+        else []
+    )
+    if not window_bounds:
+        start = 0.0
+        while start < features.duration:
+            window_bounds.append((start, min(start + window_seconds, features.duration)))
+            start += hop_seconds
+
     windowed: list[InteractionFeatures] = []
-    start = 0.0
-    while start < features.duration:
-        end = min(start + window_seconds, features.duration)
+    for start, end in window_bounds:
         turns = [
             SpeakerTurn(
                 start=max(turn.start, start) - start,
@@ -122,7 +136,6 @@ def windowed_interaction_features(
                 max_same_speaker_gap=max_same_speaker_gap,
             )
         )
-        start += hop_seconds
     return windowed
 
 
@@ -131,6 +144,22 @@ def _turns_from_annotation(annotation: Any) -> list[SpeakerTurn]:
         SpeakerTurn(start=float(segment.start), end=float(segment.end), speaker=str(speaker))
         for segment, _, speaker in annotation.itertracks(yield_label=True)
     ]
+
+
+def _load_waveform_for_pyannote(audio_path: str | Path, torch_module: Any) -> dict[str, Any]:
+    """Đọc WAV thành waveform để Pyannote không cần TorchCodec decode file"""
+
+    import librosa
+
+    waveform, sample_rate = librosa.load(str(audio_path), sr=None, mono=False)
+    if waveform.ndim == 1:
+        waveform = waveform[np.newaxis, :]
+    if waveform.ndim != 2 or waveform.shape[1] == 0 or sample_rate <= 0:
+        raise ValueError(f"cannot decode usable audio waveform: {audio_path}")
+    return {
+        "waveform": torch_module.as_tensor(waveform, dtype=torch_module.float32),
+        "sample_rate": int(sample_rate),
+    }
 
 
 def extract_interaction_features(
@@ -146,10 +175,11 @@ def extract_interaction_features(
     duration: float | None = None,
     pipeline_factory: Callable[..., Any] | None = None,
     torch_module: Any | None = None,
+    audio_loader: Callable[[str | Path, Any], dict[str, Any]] | None = None,
 ) -> InteractionFeatures:
     """Chạy Pyannote và tính lượt đổi speaker từ diarization độc quyền
 
-    `pipeline_factory`, `torch_module` và `duration` có thể truyền vào để unit test
+    `pipeline_factory`, `torch_module`, `audio_loader` và `duration` có thể truyền vào để unit test
     Code chạy thật sử dụng các giá trị mặc định
     """
 
@@ -188,7 +218,8 @@ def extract_interaction_features(
         }.items()
         if value is not None
     }
-    diarization_output = pipeline(str(audio_path), **speaker_options)
+    waveform_input = (audio_loader or _load_waveform_for_pyannote)(audio_path, torch_module)
+    diarization_output = pipeline(waveform_input, **speaker_options)
     annotation = getattr(
         diarization_output,
         "exclusive_speaker_diarization",

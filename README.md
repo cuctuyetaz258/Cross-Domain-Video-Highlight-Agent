@@ -12,7 +12,7 @@ Source cũ được giữ trong `week1/` để tham khảo; implementation mới
 ## Yêu cầu hệ thống
 
 - Python 3.10–3.12; khuyến nghị Python 3.11 cho môi trường chung của nhóm.
-- `ffmpeg`, `ffprobe` có trong `PATH`.
+- Khuyến nghị `ffmpeg`, `ffprobe` có trong `PATH`; `imageio-ffmpeg` và PyAV là fallback.
 - Git.
 
 ### Cài ffmpeg
@@ -61,6 +61,19 @@ python -m pip install -r requirements.txt
 `requirements.txt` là nguồn dependency duy nhất của project. File này bao
 gồm cả dependency Sprint 1, feature extraction Sprint 2 và công cụ test.
 
+### Cài checkpoint production
+
+Sau khi cài dependency, chạy đúng một lệnh; không cần tài khoản hay Kaggle CLI:
+
+```bash
+python -m scripts.download_ltr_checkpoint
+```
+
+Script tải artifact `ltr-scorer-v1.1`, kiểm tra kích thước và SHA-256, chạy LTR preflight trên CPU,
+sau đó mới atomic install vào `data/models/ltr_scorer.pt`. Nếu checkpoint hợp lệ đã tồn tại, lệnh
+trả `already_installed` và không tải lại. Không dùng `--force` trừ khi chủ động muốn thay một file
+local không khớp manifest.
+
 ## Biến môi trường
 
 ```bash
@@ -71,10 +84,15 @@ cp .env.example .env
 
 | Biến | Mô tả | Bắt buộc |
 |---|---|---|
-| `GROQ_API_KEY` | API key từ [console.groq.com](https://console.groq.com) | ✅ Có |
+| `GROQ_API_KEY` | API key Groq khi dùng `--llm-provider groq` hoặc extractor cũ | Tùy chọn |
+| `OPENAI_API_KEY` | API key khi dùng `--llm-provider openai` | Tùy chọn |
+| `OPENAI_BASE_URL` | OpenAI-compatible URL thay thế cho provider OpenAI | Tùy chọn |
+| `HIGHLIGHT_LLM_API_KEY` | API key khi dùng `--llm-provider custom` | Tùy chọn |
+| `HIGHLIGHT_LLM_BASE_URL` | Base URL bắt buộc cho provider custom | Tùy chọn |
+| `HIGHLIGHT_LLM_MODEL` | Model mặc định nếu không truyền `--llm-model` | Tùy chọn |
 | `GOOGLE_API_KEY` | API key từ [aistudio.google.com](https://aistudio.google.com) | Tùy chọn |
 | `OPENROUTER_API_KEY` | API key từ [openrouter.ai](https://openrouter.ai) | Tùy chọn |
-| `HF_TOKEN` | HuggingFace token | Tùy chọn |
+| `HF_TOKEN` | HuggingFace token, bắt buộc cho Pyannote khi domain là `podcast` | Theo domain |
 | `YTDLP_COOKIES_BROWSER` | Browser đang đăng nhập YouTube (VD: `chrome`) | Tùy chọn |
 
 ## Cấu trúc chính
@@ -141,11 +159,16 @@ Yêu cầu: `GROQ_API_KEY` đã được điền trong file `.env`.
 
 ## Chạy Agent đầy đủ
 
-Chạy đầy đủ năm pha LangGraph với naive baseline:
+Pipeline production có sáu pha và bắt buộc checkpoint LTR hợp lệ:
 
 ```bash
-python -m scripts.run_agent sample.mp4 --domain lecture --highlight-count 3
+python -m scripts.run_agent sample.mp4 \
+  --domain lecture \
+  --highlight-count 3
 ```
+
+CLI mặc định đọc `data/models/ltr_scorer.pt`, nên không cần truyền `--ltr-model-path` sau khi đã
+chạy downloader ở bước cài đặt.
 
 Ép dùng Whisper và tắt subtitle khi cần test riêng:
 
@@ -159,8 +182,155 @@ python -m scripts.run_agent sample.mp4 \
 `--transcript-source` nhận `auto`, `youtube` hoặc `whisper`. Chế độ `auto`
 ưu tiên caption YouTube và fallback sang Whisper.
 
-`Analyze` sẽ dùng candidate bên ngoài nếu truyền `--candidates`; nếu không,
-nó tạo baseline giả lập có seed ổn định để demo Sprint 1.
+Luồng chấm điểm duy nhất là:
+
+```text
+SceneDetect + MediaPipe + audio + transcript + interaction
+→ matrix 7 channel ở 10 Hz
+→ checkpoint LTR
+→ dense score + deterministic NMS
+→ LLM rerank tùy chọn
+→ boundary refinement + render
+```
+
+Graph preflight checkpoint trước khi download hoặc Whisper. Path trống/không tồn tại, schema sai,
+feature lỗi, model lỗi hoặc không đủ candidate đều làm pipeline dừng với mã `LTR_*`; hệ thống không
+đổi sang PixelDiff, RAFT, weighted fusion hoặc random baseline. Thành công dùng
+`features.mode=ltr_required`.
+
+### LTR + LLM semantic reranking (Model 1.1)
+
+LLM là tầng tùy chọn chạy sau candidate generator. Agent chỉ gửi transcript cục bộ
+`BEFORE/CORE/AFTER` của Top-M candidate, nhận structured assessment, kết hợp điểm theo công thức
+bootstrap `0.60 * normalized_ltr + 0.40 * semantic_quality`, rồi mới chọn 3–5 clip để render.
+
+Ví dụ OpenAI:
+
+```bash
+python -m scripts.run_agent sample.mp4 \
+  --domain lecture \
+  --ltr-model-path data/models/ltr_scorer.pt \
+  --llm-provider openai \
+  --llm-model gpt-4.1-mini \
+  --llm-top-m 10
+```
+
+Ví dụ Groq:
+
+```bash
+python -m scripts.run_agent sample.mp4 \
+  --domain podcast \
+  --ltr-model-path data/models/ltr_scorer.pt \
+  --llm-provider groq \
+  --llm-top-m 10
+```
+
+Không truyền API key qua tham số dòng lệnh. Provider đọc key từ environment. Nếu thiếu key,
+timeout hoặc response sai schema, agent giữ nguyên thứ tự LTR và ghi lý do vào `llm_run.fallback_reason`.
+Assessment được cache trong `output/{video_id}/llm/` theo hash của context, provider, model, prompt
+version và fingerprint checkpoint. Cache không lưu các block `BEFORE/CORE/AFTER` hay toàn bộ raw
+transcript, nhưng có lưu
+`evidence` ngắn do LLM trích hoặc diễn giải. `features.mode=ltr_llm_rerank` chỉ xuất hiện khi LLM
+thực sự được áp dụng.
+
+OpenAI dùng strict JSON Schema. Groq và endpoint custom dùng JSON mode tương thích rồi được Pydantic
+validate. Mọi boundary do LLM đề xuất phải khớp timestamp transcript thật, nằm trong video, dài
+30–90 giây và không lệch candidate quá 15 giây; nếu sai, hệ thống giữ boundary LTR rồi dùng bộ canh
+biên xác định hiện tại.
+
+### Checkpoint chia sẻ trên Kaggle
+
+Checkpoint production được phát hành tại:
+
+- <https://www.kaggle.com/datasets/cuctuyetaz258/cross-validation-checkpoint>
+
+Người dùng thông thường chỉ cần:
+
+```bash
+python -m scripts.download_ltr_checkpoint
+```
+
+Không cần tải ZIP thủ công, giải nén, đổi tên hay nhập checkpoint path trên CLI. Danh tính artifact
+được khóa trong `artifacts/manifests/ltr_scorer_v1_1.json`:
+
+- artifact `ltr-scorer-v1.1`, feature schema `1.1`;
+- best epoch `3`, validation AP `0.840564`;
+- SHA-256 `059038c7dd9113a48a3fc6c2e8167f7ee40ccfeaa48952a91c84cd614beb3596`;
+- 7 channel theo đúng thứ tự `rms`, `pitch`, `silence`, `text_score`, `scene_change`, `gesture`,
+  `turn_rate`.
+
+Nếu downloader báo HTTP `401`, `403` hoặc `404`, maintainer cần kiểm tra Kaggle dataset đã được
+publish với visibility **Public**. Nếu file local sai nhưng thực sự muốn thay thế, chạy:
+
+```bash
+python -m scripts.download_ltr_checkpoint --force
+```
+
+Pipeline chuẩn bị TVSum và lệnh tạo smoke manifest/cache nằm trong `docs/tvsum_setup.md`.
+
+### Train LTR offline
+
+Trainer yêu cầu mỗi cache có hai file:
+
+```text
+data/features_cache/VIDEO_ID/
+├── feature_matrix.npy   # float32, shape (7, T), sample rate 10 Hz
+└── metadata.json        # schema_version, video_id, sample_rate, channel_order, shape, dtype
+```
+
+Chạy training với QVHighlights train/validation annotations:
+
+```bash
+python -m highlight_agent.models.train_offline \
+  --qvhighlights data/raw/qvhighlights/highlight_train_release.jsonl \
+  --val-qvhighlights data/raw/qvhighlights/highlight_val_release.jsonl \
+  --cache-dir data/features_cache \
+  --output data/models/ltr_scorer.pt \
+  --training-log data/models/training_log.json \
+  --seed 42
+```
+
+Checkpoint được chọn theo Average Precision trên validation windows và chứa feature schema,
+`L_ref`, epoch, AP, dataset fingerprint và training config. `training_log.json` ghi riêng
+margin loss, temporal smoothness loss và total loss theo epoch.
+
+### Đánh giá Full LTR, channel ablation và LLM
+
+Evaluator mới luôn tách bốn nhóm: Full LTR 7-channel, từng channel bị zero-out, LTR+LLM thành
+công và LLM failure giữ ranking LTR. Không có profile-weight hoặc random fallback ngầm. Chạy trên
+cùng manifest/cache và xuất JSON, CSV cùng bảng Markdown:
+
+```bash
+python -m evaluation.evaluate_ltr_variants \
+  --manifest data/manifests/tvsum_smoke.jsonl \
+  --cache-dir data/features_cache \
+  --checkpoint data/models/ltr_scorer.pt \
+  --split val \
+  --device auto
+```
+
+Để report thêm các lần chạy LLM, truyền mỗi artifact production bằng một flag riêng:
+
+```bash
+python -m evaluation.evaluate_ltr_variants \
+  --manifest data/manifests/tvsum_smoke.jsonl \
+  --cache-dir data/features_cache \
+  --checkpoint data/models/ltr_scorer.pt \
+  --split val \
+  --run-metadata output/VIDEO_LLM_OK/metadata.json \
+  --run-metadata output/VIDEO_LLM_FAILED/metadata.json
+```
+
+`metadata.json` mới lưu `pipeline.llm_run`. Run có `applied=true` chỉ được tính vào
+`ltr_llm_rerank`; provider lỗi với `mode=ltr_required` và `fallback_reason` được tính riêng vào
+`ltr_llm_failure`. Nếu chưa cung cấp artifact, hai nhóm có trạng thái `not_run`, không được gán AP
+hoặc sinh prediction ngẫu nhiên. Các variant `ltr_without_<channel>` là channel-sensitivity
+diagnostic dùng checkpoint full; ablation chính thức vẫn cần retrain checkpoint riêng cho từng
+channel subset.
+
+Trên validation TVSum 4 video/915 windows, checkpoint schema 1.1 đạt AP `0.840564`, Kendall tau
+`0.244332`, Spearman rho `0.393953`, window-F1 `0.716814`; NMS tạo đủ 5 candidate cho cả bốn video.
+F1 trong report là diagnostic theo window, không phải shot-level F-score chính thức TVSum/SumMe.
 
 ## Chạy bằng Docker
 
@@ -212,7 +382,8 @@ Chạy đầy đủ feature timeline 30 giây từ audio đã có, không tạo 
 conda run -n video-highlight python -m scripts.run_features \
   output/pbyQhbZJhwI/audio.wav \
   --domain podcast \
-  --known-speaker-count 2
+  --min-speaker-count 1 \
+  --max-speaker-count 3
 ```
 
 Lệnh ghi output đầy đủ vào `output/{video_id}/features/features.json`.
@@ -234,6 +405,11 @@ Pyannote cần `HF_TOKEN` trong `.env` và tài khoản Hugging Face phải ch�
 Thiết bị được chọn theo thứ tự CUDA, Apple MPS, rồi CPU. Vì vậy Podcast vẫn
 chạy được trên CPU local; chỉ gọi là demo GPU khi `torch.cuda.is_available()`
 trả về `True`.
+
+Manifest media được commit bằng path tương đối dùng `/`, nên chạy được trên
+macOS và Windows. Loader vẫn chấp nhận manifest cũ dùng `\\`. Pyannote nhận
+waveform đã được Librosa decode thay vì tự mở file bằng TorchCodec, tránh lỗi
+ABI TorchCodec/FFmpeg khác nhau giữa các máy.
 
 
 ## Git workflow
