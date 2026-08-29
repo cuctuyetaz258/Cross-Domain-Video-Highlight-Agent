@@ -52,6 +52,7 @@ class AgentState(TypedDict, total=False):
     known_speaker_count: NotRequired[int]
     burn_subtitles: NotRequired[bool]
     highlight_count: NotRequired[int]
+    aspect_ratio: NotRequired[Literal["9:16", "16:9"]]
     workspace: NotRequired[MediaWorkspace]
     transcript: NotRequired[TranscriptDocument]
     analysis_plan: NotRequired[dict[str, Any]]

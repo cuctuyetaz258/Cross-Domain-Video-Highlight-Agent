@@ -22,6 +22,14 @@ def render_sidebar():
 
         domain = st.selectbox("Content Domain", ["lecture", "podcast", "standup"])
 
+        aspect_ratio_choice = st.radio(
+            "Output Video Format",
+            ["9:16 — Portrait (Shorts / Reels)", "16:9 — Landscape (YouTube / Standard)"],
+            index=0,
+            help="Choose the orientation and aspect ratio for rendered highlight clips.",
+        )
+        aspect_ratio = "9:16" if "9:16" in aspect_ratio_choice else "16:9"
+
         with st.expander("Required LTR Model", expanded=True):
             checkpoint_path = st.text_input(
                 "LTR checkpoint path",
@@ -71,6 +79,7 @@ def render_sidebar():
             if input_type == "YouTube URL" and youtube_url:
                 st.session_state["target_url"] = youtube_url
                 st.session_state["target_domain"] = domain
+                st.session_state["target_aspect_ratio"] = aspect_ratio
 
                 st.session_state["current_phase"] = 1
                 st.session_state["is_running"] = True
@@ -88,6 +97,7 @@ def render_sidebar():
 
                 st.session_state["target_url"] = file_path
                 st.session_state["target_domain"] = domain
+                st.session_state["target_aspect_ratio"] = aspect_ratio
 
                 st.session_state["current_phase"] = 1
                 st.session_state["is_running"] = True

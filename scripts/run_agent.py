@@ -55,6 +55,12 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         choices=["auto", "youtube", "whisper"],
         default="auto",
     )
+    parser.add_argument(
+        "--aspect-ratio",
+        choices=["9:16", "16:9"],
+        default="9:16",
+        help="Tỷ lệ khung hình video xuất ra ('9:16' dọc hoặc '16:9' ngang).",
+    )
     parser.add_argument("--no-subtitles", action="store_true")
     parser.add_argument(
         "--ltr-model-path",
@@ -123,6 +129,7 @@ def main() -> None:
         "video_path": args.video_input,
         "domain": args.domain,
         "highlight_count": args.highlight_count,
+        "aspect_ratio": args.aspect_ratio,
         "known_speaker_count": args.known_speaker_count,
         "output_root": args.output_dir,
         "cookies_browser": args.cookies_browser,

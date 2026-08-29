@@ -113,3 +113,51 @@ def test_full_graph_runs_preflight_before_media_and_keeps_ltr_mode(
     assert calls == ["preflight", "observe", "plan", "analyze", "decide", "explain"]
     assert result["features"]["mode"] == "ltr_required"
     assert result["rendered_highlights"] == [rendered]
+
+
+def test_decide_forwards_aspect_ratio_to_render_candidates(tmp_path: Path, monkeypatch) -> None:
+    workspace = _workspace(tmp_path)
+    candidate = HighlightCandidate(
+        candidate_id="c1",
+        start_time=0.0,
+        end_time=30.0,
+        score=0.9,
+        reason="Test",
+    )
+    rendered = RenderedHighlight(
+        candidate_id="c1",
+        video_path=workspace.transcript_path.parent / "c1.mp4",
+        thumbnail_path=None,
+        start_time=0.0,
+        end_time=30.0,
+        reason="Test",
+        aspect_ratio="16:9",
+        width=1920,
+        height=1080,
+    )
+
+    captured = {}
+
+    def fake_refine(ws, candidates):
+        return candidates, []
+
+    def fake_render(ws, highlights, *, aspect_ratio="9:16", **kwargs):
+        captured["aspect_ratio"] = aspect_ratio
+        return [rendered]
+
+    monkeypatch.setattr(nodes, "refine_candidates_for_render", fake_refine)
+    monkeypatch.setattr(nodes, "render_candidates", fake_render)
+
+    state = {
+        "workspace": workspace,
+        "candidates": [candidate, candidate.model_copy(update={"candidate_id": "c2"}), candidate.model_copy(update={"candidate_id": "c3"})],
+        "highlight_count": 3,
+        "aspect_ratio": "16:9",
+        "burn_subtitles": False,
+    }
+    result = nodes.decide(state)  # type: ignore[arg-type]
+
+    assert captured.get("aspect_ratio") == "16:9"
+    assert result["rendered_highlights"][0].aspect_ratio == "16:9"
+    assert result["rendered_highlights"][0].width == 1920
+    assert result["rendered_highlights"][0].height == 1080

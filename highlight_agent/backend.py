@@ -76,6 +76,7 @@ def render_candidates(
     workspace: MediaWorkspace,
     candidates: list[HighlightCandidate],
     *,
+    aspect_ratio: Literal["9:16", "16:9"] = "9:16",
     burn_subtitles: bool = True,
     boundary_adjustments: list[BoundaryAdjustment] | None = None,
     refine_boundaries: bool = True,
@@ -92,6 +93,7 @@ def render_candidates(
     return render_highlights(
         workspace,
         candidates,
+        aspect_ratio=aspect_ratio,
         transcript=transcript,
         burn_subtitles=burn_subtitles,
         boundary_adjustments=boundary_adjustments,

@@ -18,6 +18,12 @@ def parse_args() -> argparse.Namespace:
         default="auto",
         help="Choose caption-first, YouTube-only, or Whisper-only transcript",
     )
+    parser.add_argument(
+        "--aspect-ratio",
+        choices=["9:16", "16:9"],
+        default="9:16",
+        help="Tỷ lệ khung hình video xuất ra ('9:16' dọc hoặc '16:9' ngang).",
+    )
     parser.add_argument("--no-subtitles", action="store_true", help="Do not burn transcript subtitles")
     return parser.parse_args()
 
@@ -36,6 +42,7 @@ def main() -> None:
         results = render_candidates(
             workspace,
             load_candidates(args.candidates),
+            aspect_ratio=args.aspect_ratio,
             burn_subtitles=not args.no_subtitles,
         )
         print(json.dumps([item.model_dump(mode="json") for item in results], ensure_ascii=False, indent=2))

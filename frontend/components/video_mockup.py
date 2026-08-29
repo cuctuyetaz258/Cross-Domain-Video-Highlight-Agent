@@ -19,7 +19,10 @@ def render_video_mockup(data: dict):
     for idx, highlight in enumerate(rendered_highlights[:3]):
         with cols[idx]:
             title = highlight.get("title") or f"Highlight {idx + 1}"
+            ar = highlight.get("aspect_ratio", "9:16")
+            ar_label = "9:16 Portrait" if ar == "9:16" else "16:9 Landscape"
             st.markdown(f"### {title}")
+            st.caption(f"🎬 {ar_label}")
 
             video_path = highlight.get("video_path")
             if video_path and os.path.exists(video_path):

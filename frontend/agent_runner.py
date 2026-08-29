@@ -56,7 +56,9 @@ def run_live_agent(video_url: str, domain: str, stepper_placeholder):
 
     ltr_model_path = st.session_state.get("ltr_model_path", "data/models/ltr_scorer.pt")
     known_speaker_count = st.session_state.get("known_speaker_count", None)
+    aspect_ratio = st.session_state.get("target_aspect_ratio", "9:16")
     log(f"Required LTR checkpoint: {ltr_model_path}")
+    log(f"Output Aspect Ratio: {aspect_ratio}")
     llm_provider = st.session_state.get("llm_provider", "disabled")
     log(f"LLM semantic reranker: {llm_provider}")
 
@@ -64,6 +66,7 @@ def run_live_agent(video_url: str, domain: str, stepper_placeholder):
         "video_path": video_url,
         "domain": domain,
         "highlight_count": 3,
+        "aspect_ratio": aspect_ratio,
         "transcript_source": "auto",
         "cookies_browser": st.session_state.get("cookies_browser"),
         "known_speaker_count": known_speaker_count,

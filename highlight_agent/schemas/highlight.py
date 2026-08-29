@@ -62,6 +62,9 @@ class RenderedHighlight(BaseModel):
     start_time: float = Field(ge=0)
     end_time: float = Field(gt=0)
     reason: str = Field(min_length=1)
+    aspect_ratio: Literal["9:16", "16:9"] = "9:16"
+    width: int = Field(default=1080, gt=0)
+    height: int = Field(default=1920, gt=0)
     title: str | None = Field(default=None, max_length=120)
     summary: str | None = Field(default=None, max_length=600)
     semantic_score: float | None = Field(default=None, ge=0, le=1)

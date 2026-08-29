@@ -367,9 +367,11 @@ def decide(state: AgentState) -> dict:
     highlights, boundary_adjustments = refine_candidates_for_render(workspace, selected)
 
     _emit(state, "decide", "rendering", f"Bắt đầu render {len(highlights)} clips...")
+    aspect_ratio = state.get("aspect_ratio", "9:16")
     rendered = render_candidates(
         workspace,
         highlights,
+        aspect_ratio=aspect_ratio,
         burn_subtitles=state.get("burn_subtitles", True),
         boundary_adjustments=boundary_adjustments,
         refine_boundaries=False,
