@@ -95,7 +95,6 @@ DOMAIN_CRITERIA = {
 - Tóm tắt cô đọng: đoạn giảng viên tóm lại toàn bộ ý chính trong 1-2 câu.
 KHÔNG nên chọn: phần giới thiệu chung chung, phần đọc slide, phần chào hỏi/kết thúc.
 Signals gợi ý: concept_clarity, surprise_factor, practical_value, information_density.""",
-
     "podcast": """TIÊU CHÍ RIÊNG CHO PODCAST/TỌA ĐÀM:
 Đây là video podcast hoặc tọa đàm có nhiều người nói. Hãy ưu tiên chọn:
 - Tranh luận nảy lửa: hai người bất đồng quan điểm mạnh mẽ, có lập luận sắc bén.
@@ -105,7 +104,6 @@ Signals gợi ý: concept_clarity, surprise_factor, practical_value, information
 - Tiết lộ bất ngờ: thông tin mới lần đầu được công bố hoặc bí mật được hé lộ.
 KHÔNG nên chọn: phần giới thiệu khách mời, small talk, phần quảng cáo/sponsor.
 Signals gợi ý: debate_intensity, quote_memorability, emotional_depth, perspective_shift.""",
-
     "standup": """TIÊU CHÍ RIÊNG CHO HÀI ĐỘC THOẠI (STAND-UP COMEDY):
 Đây là video hài độc thoại. Hãy ưu tiên chọn:
 - Punchline cực mạnh: câu đùa có setup dài và punchline bất ngờ, gây cười sảng khoái.
@@ -115,7 +113,7 @@ Signals gợi ý: debate_intensity, quote_memorability, emotional_depth, perspec
 - Đoạn leo thang (escalation): khi câu đùa được đẩy lên nhiều tầng, mỗi tầng hài hơn tầng trước.
 KHÔNG nên chọn: phần chào hỏi, phần chuyển tiếp giữa các bit, phần nói lan man không có punchline.
 LƯU Ý ĐẶC BIỆT: Transcript hài thường thiếu ngữ cảnh (tiếng cười, giọng điệu). Hãy dựa vào CẤU TRÚC câu đùa (setup → pause → punchline) để nhận diện.
-Signals gợi ý: punchline_impact, bit_completeness, escalation_level, audience_reaction."""
+Signals gợi ý: punchline_impact, bit_completeness, escalation_level, audience_reaction.""",
 }
 
 # Prompt mặc định nếu không xác định miền
@@ -183,7 +181,7 @@ def extract_highlights_from_transcript(
         # Tìm dấu chấm câu cuối cùng để cắt đúng ranh giới câu
         last_period = max(truncated.rfind(". "), truncated.rfind("? "), truncated.rfind("! "), truncated.rfind(".\n"))
         if last_period > max_chars * 0.8:
-            short_transcript = truncated[:last_period + 1]
+            short_transcript = truncated[: last_period + 1]
         else:
             short_transcript = truncated
 
@@ -202,6 +200,7 @@ def extract_highlights_from_transcript(
     # Loại bỏ markdown ```json ... ```
     if "```" in raw_text:
         import re
+
         code_match = re.search(r"```(?:json)?\s*\n?(.*?)```", raw_text, re.DOTALL)
         if code_match:
             raw_text = code_match.group(1).strip()
@@ -223,7 +222,7 @@ def extract_highlights_from_transcript(
         except (ValueError, TypeError):
             dur = "?"
             status = "✗ FAIL (không parse được)"
-        print(f"  [{i+1}] {item.get('candidate_id')}: {start}s → {end}s | duration={dur} | {status}")
+        print(f"  [{i + 1}] {item.get('candidate_id')}: {start}s → {end}s | duration={dur} | {status}")
     print("=" * 45 + "\n")
 
     candidates = []

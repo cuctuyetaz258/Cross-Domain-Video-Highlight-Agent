@@ -11,7 +11,9 @@ def render_timeline(data: dict):
         return
 
     st.markdown("### 📊 Candidate Signals Timeline")
-    st.markdown("Interact with the timeline to see how the LangGraph agent scored and segmented the video. The highlighted red borders indicate the final chosen clips.")
+    st.markdown(
+        "Interact with the timeline to see how the LangGraph agent scored and segmented the video. The highlighted red borders indicate the final chosen clips."
+    )
 
     # Sort candidates chronologically for a cleaner Gantt waterfall
     candidates = sorted(candidates, key=lambda x: x["start_time"])
@@ -39,56 +41,52 @@ def render_timeline(data: dict):
         )
 
         # Add horizontal bar for this candidate
-        fig.add_trace(go.Bar(
-            name=c["candidate_id"],
-            x=[duration],
-            y=[f"C{idx+1}"],
-            base=[c["start_time"]],
-            orientation='h',
-            marker=dict(
-                color=[c["score"]],
-                colorscale='Viridis',
-                cmin=0,
-                cmax=max_score,
-                line=dict(
-                    color='#ff4b4b' if is_highlight else 'rgba(0,0,0,0)',
-                    width=3 if is_highlight else 0
-                )
-            ),
-            hoverinfo="text",
-            hovertext=[hover_text],
-            showlegend=False
-        ))
+        fig.add_trace(
+            go.Bar(
+                name=c["candidate_id"],
+                x=[duration],
+                y=[f"C{idx + 1}"],
+                base=[c["start_time"]],
+                orientation="h",
+                marker=dict(
+                    color=[c["score"]],
+                    colorscale="Viridis",
+                    cmin=0,
+                    cmax=max_score,
+                    line=dict(color="#ff4b4b" if is_highlight else "rgba(0,0,0,0)", width=3 if is_highlight else 0),
+                ),
+                hoverinfo="text",
+                hovertext=[hover_text],
+                showlegend=False,
+            )
+        )
 
     # Dynamically scale height based on number of candidates
     chart_height = max(350, len(candidates) * 35)
 
     fig.update_layout(
-        barmode='overlay',
+        barmode="overlay",
         xaxis_title="Video Time (seconds)",
         yaxis_title="",
         height=chart_height,
         margin=dict(l=20, r=20, t=40, b=20),
-        paper_bgcolor='rgba(0,0,0,0)',
-        plot_bgcolor='rgba(0,0,0,0)',
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
         # Modern font for Plotly matching our CSS
         font=dict(family="Inter, sans-serif"),
-        yaxis=dict(autorange="reversed")
+        yaxis=dict(autorange="reversed"),
     )
 
     # Add a dummy scatter trace just to render the unified colorbar on the right
-    fig.add_trace(go.Scatter(
-        x=[None], y=[None],
-        mode='markers',
-        marker=dict(
-            colorscale='Viridis',
-            cmin=0,
-            cmax=max_score,
-            showscale=True,
-            colorbar=dict(title="Score")
-        ),
-        showlegend=False,
-        hoverinfo='none'
-    ))
+    fig.add_trace(
+        go.Scatter(
+            x=[None],
+            y=[None],
+            mode="markers",
+            marker=dict(colorscale="Viridis", cmin=0, cmax=max_score, showscale=True, colorbar=dict(title="Score")),
+            showlegend=False,
+            hoverinfo="none",
+        )
+    )
 
     st.plotly_chart(fig, use_container_width=True)

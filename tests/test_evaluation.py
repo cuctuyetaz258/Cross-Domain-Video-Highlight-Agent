@@ -110,6 +110,7 @@ def test_compute_temporal_precision_recall_f1_and_mean_iou():
 
 def test_evaluate_indomain_pipeline(tmp_path):
     import json
+
     from evaluation.evaluate_indomain import evaluate_indomain
 
     gt_dir = tmp_path / "ground_truth"
@@ -132,4 +133,3 @@ def test_evaluate_indomain_pipeline(tmp_path):
     assert results["evaluated_videos"] == 1
     assert "lecture" in results["domain_summaries"]
     assert "hit@3_iou0.3" in results["overall_summary"]
-

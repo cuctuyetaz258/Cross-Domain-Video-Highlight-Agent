@@ -27,9 +27,7 @@ def build_feature_timeline(
     if interaction_windows is not None and len(interaction_windows) != len(acoustic_windows):
         raise ValueError("acoustic and interaction window counts must match")
     windows = [
-        acoustic_window.model_copy(
-            update={"interaction": interaction_windows[index] if interaction_windows else None}
-        )
+        acoustic_window.model_copy(update={"interaction": interaction_windows[index] if interaction_windows else None})
         for index, acoustic_window in enumerate(acoustic_windows)
     ]
     return FeatureTimeline(

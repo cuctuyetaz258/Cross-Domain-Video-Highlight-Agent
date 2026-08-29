@@ -26,7 +26,6 @@ from evaluation.evaluate_indomain import (
     load_all_ground_truths,
     load_predictions,
 )
-from evaluation.metrics import compute_hit_at_k, compute_mean_iou, compute_temporal_precision_recall_f1
 
 
 def _window_scores_to_candidates(
@@ -49,13 +48,15 @@ def _window_scores_to_candidates(
                 overlap = True
                 break
         if not overlap:
-            selected.append({
-                "candidate_id": f"win_{len(selected) + 1:02d}",
-                "start_time": start,
-                "end_time": end,
-                "score": float(item.get("score", 0.0)),
-                "reason": "Signal score selection",
-            })
+            selected.append(
+                {
+                    "candidate_id": f"win_{len(selected) + 1:02d}",
+                    "start_time": start,
+                    "end_time": end,
+                    "score": float(item.get("score", 0.0)),
+                    "reason": "Signal score selection",
+                }
+            )
             if len(selected) == top_k:
                 break
 
@@ -169,16 +170,18 @@ def run_ablation_study(
         avg_f1 = float(np.mean([m["f1@3"] for m in video_metrics]))
         avg_mean_iou = float(np.mean([m["mean_iou"] for m in video_metrics]))
 
-        ablation_summary.append({
-            "variant_key": var_key,
-            "variant_name": var_name,
-            "description": description,
-            "hit@1_iou0.3": avg_hit1,
-            "hit@3_iou0.3": avg_hit3_03,
-            "hit@3_iou0.5": avg_hit3_05,
-            "f1_score": avg_f1,
-            "mean_iou": avg_mean_iou,
-        })
+        ablation_summary.append(
+            {
+                "variant_key": var_key,
+                "variant_name": var_name,
+                "description": description,
+                "hit@1_iou0.3": avg_hit1,
+                "hit@3_iou0.3": avg_hit3_03,
+                "hit@3_iou0.5": avg_hit3_05,
+                "f1_score": avg_f1,
+                "mean_iou": avg_mean_iou,
+            }
+        )
 
     return {
         "num_videos": len(all_gts),
@@ -194,7 +197,9 @@ def print_ablation_table(results: dict[str, Any]) -> None:
     print("=" * 95)
     print(f"Tổng số video đánh giá: {results['num_videos']} video Ground Truth | Ngưỡng IoU: >= 0.3 / 0.5")
     print("-" * 95)
-    print(f"{'Phương pháp / Biến thể (Variant)':<26} | {'Hit@1 (0.3)':<11} | {'Hit@3 (0.3)':<11} | {'Hit@3 (0.5)':<11} | {'F1-Score':<10} | {'Mean IoU':<8}")
+    print(
+        f"{'Phương pháp / Biến thể (Variant)':<26} | {'Hit@1 (0.3)':<11} | {'Hit@3 (0.3)':<11} | {'Hit@3 (0.5)':<11} | {'F1-Score':<10} | {'Mean IoU':<8}"
+    )
     print("-" * 95)
 
     for item in results["ablation_results"]:

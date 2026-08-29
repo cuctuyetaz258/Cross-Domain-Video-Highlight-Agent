@@ -19,7 +19,6 @@ from evaluation.metrics import (
     compute_hit_at_k,
     compute_mean_iou,
     compute_temporal_precision_recall_f1,
-    temporal_iou,
 )
 
 
@@ -31,6 +30,7 @@ def load_ground_truth(gt_path: str | Path) -> dict[str, Any]:
 
     if path.suffix.lower() == ".csv":
         import csv
+
         with open(path, encoding="utf-8-sig") as f:
             rows = list(csv.DictReader(f))
         if not rows:
@@ -55,22 +55,26 @@ def load_ground_truth(gt_path: str | Path) -> dict[str, Any]:
                     st = curr_hl[0][0]
                     en = curr_hl[-1][1]
                     max_imp = max(x[2] for x in curr_hl)
-                    highlights.append({
-                        "start_time": st,
-                        "end_time": en,
-                        "importance_score": max_imp,
-                    })
+                    highlights.append(
+                        {
+                            "start_time": st,
+                            "end_time": en,
+                            "importance_score": max_imp,
+                        }
+                    )
                     curr_hl = []
 
         if curr_hl:
             st = curr_hl[0][0]
             en = curr_hl[-1][1]
             max_imp = max(x[2] for x in curr_hl)
-            highlights.append({
-                "start_time": st,
-                "end_time": en,
-                "importance_score": max_imp,
-            })
+            highlights.append(
+                {
+                    "start_time": st,
+                    "end_time": en,
+                    "importance_score": max_imp,
+                }
+            )
 
         return {
             "video_id": video_id,
@@ -119,7 +123,6 @@ def load_all_ground_truths(gt_dir: str | Path) -> dict[str, dict[str, Any]]:
     return gt_dict
 
 
-
 def generate_baseline_predictions(
     video_id: str,
     duration: float,
@@ -140,12 +143,14 @@ def generate_baseline_predictions(
         for i in range(1, count + 1):
             start = round(float(i * step), 1)
             end = round(start + clip_duration, 1)
-            predictions.append({
-                "candidate_id": f"unif_{i:02d}",
-                "start_time": start,
-                "end_time": min(end, duration),
-                "score": 5.0,
-            })
+            predictions.append(
+                {
+                    "candidate_id": f"unif_{i:02d}",
+                    "start_time": start,
+                    "end_time": min(end, duration),
+                    "score": 5.0,
+                }
+            )
     elif method == "random":
         rng = np.random.default_rng(seed + sum(ord(c) for c in video_id))
         max_start = max(1.0, duration - clip_duration)
@@ -163,12 +168,14 @@ def generate_baseline_predictions(
 
         for i, start in enumerate(sorted(chosen_starts), start=1):
             end = round(start + clip_duration, 1)
-            predictions.append({
-                "candidate_id": f"rand_{i:02d}",
-                "start_time": round(start, 1),
-                "end_time": min(end, duration),
-                "score": 5.0,
-            })
+            predictions.append(
+                {
+                    "candidate_id": f"rand_{i:02d}",
+                    "start_time": round(start, 1),
+                    "end_time": min(end, duration),
+                    "score": 5.0,
+                }
+            )
     else:
         raise ValueError(f"Baseline method không hỗ trợ: {method}")
 
@@ -212,13 +219,15 @@ def load_predictions(
 
     parsed = []
     for item in items:
-        parsed.append({
-            "candidate_id": item.get("candidate_id", "hl"),
-            "start_time": float(item.get("start_time", 0.0)),
-            "end_time": float(item.get("end_time", 0.0)),
-            "score": float(item.get("score", 0.0)),
-            "reason": item.get("reason", ""),
-        })
+        parsed.append(
+            {
+                "candidate_id": item.get("candidate_id", "hl"),
+                "start_time": float(item.get("start_time", 0.0)),
+                "end_time": float(item.get("end_time", 0.0)),
+                "score": float(item.get("score", 0.0)),
+                "reason": item.get("reason", ""),
+            }
+        )
 
     # Sắp xếp theo score giảm dần
     parsed.sort(key=lambda x: x["score"], reverse=True)
@@ -236,9 +245,7 @@ def evaluate_single_video(
     hit3_05 = compute_hit_at_k(predictions, ground_truths, k=3, iou_threshold=0.5)
     hit5_03 = compute_hit_at_k(predictions, ground_truths, k=min(5, len(predictions)), iou_threshold=0.3)
 
-    prec3, rec3, f1_3 = compute_temporal_precision_recall_f1(
-        predictions, ground_truths, k=k, iou_threshold=0.3
-    )
+    prec3, rec3, f1_3 = compute_temporal_precision_recall_f1(predictions, ground_truths, k=k, iou_threshold=0.3)
     mean_iou = compute_mean_iou(predictions, ground_truths, k=k)
 
     return {
@@ -275,21 +282,21 @@ def evaluate_indomain(
         try:
             preds = load_predictions(video_id, pred_dir, method=method, duration=duration, count=k)
             metrics = evaluate_single_video(preds, gts, k=k)
-            per_video_results.append({
-                "video_id": video_id,
-                "title": gt_data["title"],
-                "domain": domain,
-                "num_gt": len(gts),
-                "num_pred": len(preds),
-                **metrics,
-            })
+            per_video_results.append(
+                {
+                    "video_id": video_id,
+                    "title": gt_data["title"],
+                    "domain": domain,
+                    "num_gt": len(gts),
+                    "num_pred": len(preds),
+                    **metrics,
+                }
+            )
         except FileNotFoundError:
             missing_videos.append(video_id)
 
     if not per_video_results:
-        raise RuntimeError(
-            f"Không tìm thấy dự đoán nào cho các video trong Ground Truth (thiếu: {missing_videos})"
-        )
+        raise RuntimeError(f"Không tìm thấy dự đoán nào cho các video trong Ground Truth (thiếu: {missing_videos})")
 
     # Tính trung bình theo từng Domain
     domains = sorted(list({r["domain"] for r in per_video_results}))
@@ -342,7 +349,9 @@ def print_evaluation_report(results: dict[str, Any]) -> None:
 
     # Bảng chi tiết từng video
     print("\n### 1. Chi tiết từng Video:")
-    print(f"{'Video ID':<13} | {'Domain':<8} | {'Hit@1 (0.3)':<11} | {'Hit@3 (0.3)':<11} | {'Hit@3 (0.5)':<11} | {'F1@3':<8} | {'Mean IoU':<8}")
+    print(
+        f"{'Video ID':<13} | {'Domain':<8} | {'Hit@1 (0.3)':<11} | {'Hit@3 (0.3)':<11} | {'Hit@3 (0.5)':<11} | {'F1@3':<8} | {'Mean IoU':<8}"
+    )
     print("-" * 85)
     for r in results["results_per_video"]:
         print(
@@ -358,7 +367,9 @@ def print_evaluation_report(results: dict[str, Any]) -> None:
     print("\n" + "=" * 85)
     print("### 2. BẢNG TỔNG HỢP BÁO CÁO (THEO MIỀN & TOÀN BỘ DATASET):")
     print("=" * 85)
-    print(f"{'Domain / Scope':<16} | {'Videos':<6} | {'Hit@1 (0.3)':<11} | {'Hit@3 (0.3)':<11} | {'Hit@3 (0.5)':<11} | {'F1-Score':<9} | {'Mean IoU':<8}")
+    print(
+        f"{'Domain / Scope':<16} | {'Videos':<6} | {'Hit@1 (0.3)':<11} | {'Hit@3 (0.3)':<11} | {'Hit@3 (0.5)':<11} | {'F1-Score':<9} | {'Mean IoU':<8}"
+    )
     print("-" * 85)
 
     for dom, summary in results["domain_summaries"].items():

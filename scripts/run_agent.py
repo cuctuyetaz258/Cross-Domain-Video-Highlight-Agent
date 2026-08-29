@@ -50,12 +50,8 @@ def main() -> None:
         "workspace": result["workspace"].model_dump(mode="json"),
         "features": result["features"],
         "highlights": [item.model_dump(mode="json") for item in result["highlights"]],
-        "boundary_adjustments": [
-            item.model_dump(mode="json") for item in result["boundary_adjustments"]
-        ],
-        "rendered_highlights": [
-            item.model_dump(mode="json") for item in result["rendered_highlights"]
-        ],
+        "boundary_adjustments": [item.model_dump(mode="json") for item in result["boundary_adjustments"]],
+        "rendered_highlights": [item.model_dump(mode="json") for item in result["rendered_highlights"]],
         "reasoning": result["reasoning"],
     }
     print(json.dumps(summary, ensure_ascii=False, indent=2))

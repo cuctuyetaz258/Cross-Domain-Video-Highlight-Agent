@@ -7,6 +7,7 @@ from scipy.stats import kendalltau, spearmanr
 # 1. RANKING & CORRELATION METRICS (Dùng cho TVSum Importance Scoring)
 # =====================================================================
 
+
 def compute_correlation(
     pred_scores: np.ndarray,
     gt_scores: np.ndarray,
@@ -44,6 +45,7 @@ def compute_correlation(
 # =====================================================================
 # 2. VIDEO SUMMARIZATION F-SCORE (Dùng cho SumMe & TVSum Overlap Protocol)
 # =====================================================================
+
 
 def knapsack_shot_selection(
     shot_scores: np.ndarray,
@@ -174,6 +176,7 @@ def compute_fscore(
 # 3. TEMPORAL MATCHING & HIT@K (Dùng cho In-Domain Dataset)
 # =====================================================================
 
+
 def temporal_iou(
     pred_start: float,
     pred_end: float,
@@ -299,4 +302,3 @@ def compute_mean_iou(
         ious.append(max_iou)
 
     return float(np.mean(ious)) if ious else 0.0
-

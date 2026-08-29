@@ -38,7 +38,9 @@ def format_compact_transcript(transcript_obj) -> str:
         txt = s.text.strip()
         if txt:
             curr_texts.append(txt)
-        if (curr_end - curr_start >= 20.0) or (curr_texts and curr_texts[-1].endswith((".", "?", "!")) and curr_end - curr_start >= 10.0):
+        if (curr_end - curr_start >= 20.0) or (
+            curr_texts and curr_texts[-1].endswith((".", "?", "!")) and curr_end - curr_start >= 10.0
+        ):
             block_text = " ".join(curr_texts)
             lines.append(f"[{curr_start:.1f}s - {curr_end:.1f}s]: {block_text}")
             curr_start = None
@@ -61,7 +63,9 @@ def main():
     full_text = format_compact_transcript(transcript_obj)
 
     # 2. Gọi hàm lõi AI của bạn
-    print(f"Đang gửi cho AI phân tích ({args.count} highlights, domain: {args.domain}, độ dài transcript: {len(full_text)} ký tự)...")
+    print(
+        f"Đang gửi cho AI phân tích ({args.count} highlights, domain: {args.domain}, độ dài transcript: {len(full_text)} ký tự)..."
+    )
     candidates = extract_highlights_from_transcript(full_text, domain=args.domain, highlight_count=args.count)
 
     # 3. Lưu kết quả ra thành file .json vật lý
@@ -73,6 +77,7 @@ def main():
         json.dump(json_list, f, ensure_ascii=False, indent=2)
 
     print(f"Thành công! Đã tạo ra file vật lý: {out_path.absolute()}")
+
 
 if __name__ == "__main__":
     main()
