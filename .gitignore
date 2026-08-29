@@ -21,6 +21,7 @@ env/
 
 # Generated media and model artifacts
 output/
+uploads/
 processing_video/
 data/benchmark/
 data/raw/
