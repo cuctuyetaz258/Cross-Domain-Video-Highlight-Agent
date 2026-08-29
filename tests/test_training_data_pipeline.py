@@ -7,7 +7,21 @@ import numpy as np
 
 from highlight_agent.features.visual_new import GestureExtraction
 from scripts.build_feature_cache import refresh_gesture_observation_for_record, transcript_word_scores
-from scripts.validate_training_data import validate_manifest
+from scripts.validate_training_data import resolve_record_path, validate_manifest
+
+
+def test_manifest_paths_accept_both_separators_and_reject_machine_paths(tmp_path):
+    expected = tmp_path / "data" / "raw" / "clip.mp4"
+    assert resolve_record_path("data/raw/clip.mp4", tmp_path) == expected
+    assert resolve_record_path("data\\raw\\clip.mp4", tmp_path) == expected
+
+    for value in ("/tmp/clip.mp4", "C:\\media\\clip.mp4", "../clip.mp4"):
+        try:
+            resolve_record_path(value, tmp_path)
+        except ValueError:
+            pass
+        else:
+            raise AssertionError(f"expected {value!r} to be rejected")
 
 
 def test_transcript_word_scores_are_aligned_and_normalized():

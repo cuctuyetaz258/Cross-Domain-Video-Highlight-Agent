@@ -78,8 +78,8 @@ def test_pyannote_wrapper_uses_exclusive_turns_and_selected_device() -> None:
             captured["device"] = device
             return self
 
-        def __call__(self, path: str, **kwargs):
-            captured["path"] = path
+        def __call__(self, waveform_input, **kwargs):
+            captured["waveform_input"] = waveform_input
             captured["speaker_options"] = kwargs
             return SimpleNamespace(exclusive_speaker_diarization=FakeAnnotation())
 
@@ -100,10 +100,47 @@ def test_pyannote_wrapper_uses_exclusive_turns_and_selected_device() -> None:
         num_speakers=2,
         pipeline_factory=pipeline_factory,
         torch_module=fake_torch,
+        audio_loader=lambda path, _torch: {"waveform": "fixture-waveform", "sample_rate": 16000},
     )
 
     assert captured["device"] == "cpu"
     assert captured["token"] == "test-token"
+    assert captured["waveform_input"] == {"waveform": "fixture-waveform", "sample_rate": 16000}
     assert captured["speaker_options"] == {"num_speakers": 2}
     assert features.turn_count == 1
     assert features.speaker_count == 2
+
+
+def test_pyannote_wrapper_forwards_speaker_range() -> None:
+    captured: dict[str, object] = {}
+
+    class FakeAnnotation:
+        def itertracks(self, yield_label: bool):
+            return iter(())
+
+    class FakePipeline:
+        def to(self, device: str):
+            return self
+
+        def __call__(self, waveform_input, **kwargs):
+            captured["waveform_input"] = waveform_input
+            captured["speaker_options"] = kwargs
+            return SimpleNamespace(exclusive_speaker_diarization=FakeAnnotation())
+
+    fake_torch = SimpleNamespace(
+        cuda=SimpleNamespace(is_available=lambda: False),
+        backends=SimpleNamespace(mps=SimpleNamespace(is_available=lambda: False)),
+        device=lambda device: device,
+    )
+    extract_interaction_features(
+        "podcast.wav",
+        hf_token="test-token",
+        duration=10,
+        min_speakers=1,
+        max_speakers=3,
+        pipeline_factory=lambda *_args, **_kwargs: FakePipeline(),
+        torch_module=fake_torch,
+        audio_loader=lambda _path, _torch: {"waveform": "fixture", "sample_rate": 16000},
+    )
+
+    assert captured["speaker_options"] == {"min_speakers": 1, "max_speakers": 3}

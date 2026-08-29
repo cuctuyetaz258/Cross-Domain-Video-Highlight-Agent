@@ -18,14 +18,26 @@ def _format_time(seconds: float) -> str:
     return f"{minutes}:{seconds:02d}"
 
 
-def _speaker_color(speaker: str) -> str:
-    return "speaker-a" if speaker.endswith("00") else "speaker-b"
+def _speaker_styles(speakers: list[str]) -> tuple[dict[str, str], str, str]:
+    """Tạo class màu và legend riêng cho mọi speaker trong timeline"""
+
+    classes = {speaker: f"speaker-{index}" for index, speaker in enumerate(speakers)}
+    styles: list[str] = []
+    legend: list[str] = []
+    for index, speaker in enumerate(speakers):
+        hue = round((210 + index * 137.508) % 360)
+        class_name = classes[speaker]
+        styles.append(f".{class_name} {{ background: hsl({hue} 62% 42%); }}")
+        legend.append(f'<span><i class="{class_name}"></i>{html.escape(speaker)}</span>')
+    return classes, "\n    ".join(styles), "".join(legend)
 
 
 def build_review_html(timeline: FeatureTimeline, *, video_source: str) -> str:
     """Tạo trang review tự chứa, video vẫn được tham chiếu bằng đường dẫn tương đối"""
 
     interaction = timeline.interaction
+    speakers = sorted({turn.speaker for turn in interaction.turns}) if interaction else []
+    speaker_classes, speaker_styles, speaker_legend = _speaker_styles(speakers)
     summary = {
         "duration": _format_time(timeline.duration),
         "windows": len(timeline.windows),
@@ -47,6 +59,7 @@ def build_review_html(timeline: FeatureTimeline, *, video_source: str) -> str:
             for window in timeline.windows
         ],
         "turns": [turn.model_dump(mode="json") for turn in interaction.turns] if interaction else [],
+        "speaker_classes": speaker_classes,
     }
     payload_json = json.dumps(payload, ensure_ascii=False).replace("</", "<\\/")
     title = f"Diarization review - {timeline.video_id}"
@@ -64,8 +77,6 @@ def build_review_html(timeline: FeatureTimeline, *, video_source: str) -> str:
       --surface: #fffdf8;
       --line: #d9d4c8;
       --accent: #e5573a;
-      --speaker-a: #2364aa;
-      --speaker-b: #dd8b18;
       --quiet: #b9c4bd;
       --focus: #162d22;
     }}
@@ -92,7 +103,8 @@ def build_review_html(timeline: FeatureTimeline, *, video_source: str) -> str:
     .now {{ min-height: 1.6em; margin: 12px 0 0; color: var(--focus); font: 700 .85rem/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; }}
     .overview {{ position: relative; height: 82px; margin-top: 26px; overflow: hidden; border: 1px solid var(--ink); background: repeating-linear-gradient(90deg, transparent 0, transparent calc(4.142857% - 1px), rgba(31,42,37,.12) calc(4.142857% - 1px), rgba(31,42,37,.12) 4.142857%); }}
     .turn {{ position: absolute; top: 16px; height: 48px; min-width: 2px; border-radius: 2px; opacity: .95; }}
-    .speaker-a {{ background: var(--speaker-a); }} .speaker-b {{ background: var(--speaker-b); }}
+    {speaker_styles}
+    .speaker-unknown {{ background: var(--quiet); }}
     .playhead {{ position: absolute; z-index: 2; top: 0; bottom: 0; width: 2px; background: var(--accent); transform: translateX(-1px); pointer-events: none; }}
     .legend {{ display: flex; flex-wrap: wrap; gap: 16px; margin: 12px 0 0; color: var(--muted); font: .78rem/1.4 ui-sans-serif, system-ui, sans-serif; }}
     .legend i {{ display: inline-block; width: 11px; height: 11px; margin-right: 6px; vertical-align: -1px; border-radius: 50%; }}
@@ -122,11 +134,11 @@ def build_review_html(timeline: FeatureTimeline, *, video_source: str) -> str:
       <div class="fact"><span>Đổi speaker</span><strong>{summary["turns"]}</strong></div>
     </section>
     <section class="panel" aria-labelledby="listen-heading">
-      <div class="section-head"><h2 id="listen-heading">Xem, nghe và theo dõi timeline</h2><p class="hint">Màu xanh / cam là nhãn tạm của model, không phải tên người thật.</p></div>
+      <div class="section-head"><h2 id="listen-heading">Xem, nghe và theo dõi timeline</h2><p class="hint">Mỗi màu là một nhãn tạm của model, không phải tên người thật.</p></div>
       <video id="video" controls preload="metadata"><source src="{html.escape(video_source, quote=True)}" type="video/mp4">Trình duyệt không hỗ trợ video MP4.</video>
       <p id="now" class="now" aria-live="polite">Chọn một cửa sổ để bắt đầu review.</p>
       <div id="overview" class="overview" role="img" aria-label="Timeline speaker diarization"><div id="playhead" class="playhead"></div></div>
-      <div class="legend"><span><i class="speaker-a"></i>SPEAKER_00</span><span><i class="speaker-b"></i>SPEAKER_01</span><span>Speech detected: {summary["speech_ratio"]}%</span></div>
+      <div class="legend">{speaker_legend}<span>Speech detected: {summary["speech_ratio"]}%</span></div>
     </section>
     <section class="panel" aria-labelledby="windows-heading">
       <div class="section-head"><h2 id="windows-heading">Review theo cửa sổ 30 giây</h2><p class="hint">Bấm hoặc Tab + Enter để nhảy đến window. Không có turn change không có nghĩa là không có speech.</p></div>
@@ -154,7 +166,7 @@ def build_review_html(timeline: FeatureTimeline, *, video_source: str) -> str:
     }};
     data.turns.forEach((turn) => {{
       const segment = document.createElement("span");
-      segment.className = `turn ${{turn.speaker.endsWith("00") ? "speaker-a" : "speaker-b"}}`;
+      segment.className = `turn ${{data.speaker_classes[turn.speaker] || "speaker-unknown"}}`;
       segment.style.left = `${{(turn.start / data.duration) * 100}}%`;
       segment.style.width = `${{Math.max(.2, ((turn.end - turn.start) / data.duration) * 100)}}%`;
       segment.title = `${{turn.speaker}}: ${{formatTime(turn.start)}}–${{formatTime(turn.end)}}`;

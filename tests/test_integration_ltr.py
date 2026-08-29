@@ -192,6 +192,10 @@ def test_cli_defaults_to_required_checkpoint_and_removes_visual_flags() -> None:
 
     args = parse_args(["video.mp4", "--domain", "lecture"])
     assert args.ltr_model_path == "data/models/ltr_scorer.pt"
+    ranged = parse_args(
+        ["video.mp4", "--domain", "podcast", "--min-speaker-count", "1", "--max-speaker-count", "3"]
+    )
+    assert (ranged.min_speaker_count, ranged.max_speaker_count) == (1, 3)
     with pytest.raises(SystemExit):
         parse_args(
             [
@@ -201,6 +205,10 @@ def test_cli_defaults_to_required_checkpoint_and_removes_visual_flags() -> None:
                 "--visual-method",
                 "pixel_diff",
             ]
+        )
+    with pytest.raises(SystemExit):
+        parse_args(
+            ["video.mp4", "--domain", "podcast", "--known-speaker-count", "2", "--min-speaker-count", "1"]
         )
 
 

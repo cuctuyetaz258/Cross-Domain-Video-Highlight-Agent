@@ -58,6 +58,37 @@ def test_unified_extractor_accepts_no_face_and_is_deterministic(monkeypatch) -> 
     assert runtime.metadata["extractor"]["gesture_status"] == "no_face_detected"
 
 
+def test_unified_extractor_forwards_podcast_speaker_range(monkeypatch) -> None:
+    from highlight_agent.features import ltr_pipeline
+    from highlight_agent.features.ltr_pipeline import build_ltr_features
+
+    _patch_common(
+        monkeypatch,
+        scene=SceneExtraction([], "no_scene_detected"),
+        gesture=GestureExtraction(np.zeros(120, dtype=np.float32), "no_face_detected", 120, 0),
+    )
+    captured: dict[str, object] = {}
+    monkeypatch.setattr(
+        ltr_pipeline,
+        "extract_interaction_features",
+        lambda *args, **kwargs: captured.update(kwargs) or MagicMock(turn_count=0),
+    )
+
+    build_ltr_features(
+        video_path="video.mp4",
+        audio_path="audio.wav",
+        transcript=MagicMock(),
+        domain="podcast",
+        duration=60.0,
+        min_speaker_count=1,
+        max_speaker_count=3,
+    )
+
+    assert captured["num_speakers"] is None
+    assert captured["min_speakers"] == 1
+    assert captured["max_speakers"] == 3
+
+
 @pytest.mark.parametrize(
     ("scene", "gesture", "error_code"),
     [
