@@ -113,6 +113,7 @@ def run_live_analysis(video_url: str, domain: str, stepper_placeholder):
     }
     log(f"Input: {video_url}")
     log(f"Domain: {domain} · checkpoint: {ltr_model_path}")
+    log(f"YouTube cookies: {state['cookies_browser'] or 'none'}")
     log(f"Output aspect ratio: {aspect_ratio}")
     log(f"Reusable candidate pool: {state['candidate_pool_size']}")
     try:

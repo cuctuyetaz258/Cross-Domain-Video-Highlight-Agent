@@ -53,8 +53,15 @@ def render_sidebar():
         local_file = None
         if input_type == "YouTube URL":
             youtube_url = st.text_input("YouTube URL", placeholder="https://youtu.be/HMOI_lkzW08")
+            cookie_browser = st.selectbox(
+                "YouTube browser cookies",
+                options=["Chrome", "Edge", "Firefox", "Safari", "None"],
+                help="Use a browser where you are signed in to YouTube when yt-dlp returns HTTP 403.",
+            )
+            st.session_state["cookies_browser"] = None if cookie_browser == "None" else cookie_browser.lower()
         else:
             local_file = st.file_uploader("Upload Video", type=["mp4", "mov", "mkv", "webm"])
+            st.session_state["cookies_browser"] = None
         domain = st.selectbox("Content Domain", ["lecture", "podcast", "standup"])
 
         aspect_ratio_choice = st.radio(

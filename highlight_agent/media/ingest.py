@@ -53,6 +53,9 @@ def _youtube_options(workspace_dir: Path, cookies_browser: str | None) -> dict[s
         "noplaylist": True,
         "quiet": True,
         "no_warnings": False,
+        # The web creator client increasingly requires a per-video GVS PO
+        # token. TV is usable with standard browser cookies and avoids 403s.
+        "extractor_args": {"youtube": {"player_client": ["tv"]}},
     }
     if cookies_browser:
         options["cookiesfrombrowser"] = (cookies_browser,)
