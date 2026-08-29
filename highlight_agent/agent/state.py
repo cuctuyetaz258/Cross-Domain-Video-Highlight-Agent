@@ -73,7 +73,7 @@ class AgentState(TypedDict, total=False):
     render_namespace: NotRequired[str]
 
     # ── LLM semantic reranking config/output ──
-    llm_provider: NotRequired[Literal["disabled", "openai", "groq", "custom"]]
+    llm_provider: NotRequired[Literal["auto", "disabled", "openai", "groq", "custom"]]
     llm_model: NotRequired[str | None]
     llm_base_url: NotRequired[str | None]
     llm_top_m: NotRequired[int]

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import logging
+import os
 
 import numpy as np
 import torch
@@ -35,7 +36,11 @@ from highlight_agent.llm import (
     rerank_candidates,
 )
 from highlight_agent.models.ltr_scorer import AdditiveAttentionScorer
-from highlight_agent.schemas import LLMRunInfo
+from highlight_agent.schemas import (
+    HighlightCandidate,
+    LLMHighlightAssessment,
+    LLMRunInfo,
+)
 
 from .state import AgentState, ProgressEvent, ReasoningEntry
 
@@ -289,7 +294,21 @@ def decide(state: AgentState) -> dict:
         raise ValueError("not enough candidates to satisfy highlight_count")
 
     base_mode = state.get("features", {}).get("mode", "unknown")
-    llm_provider = state.get("llm_provider", "disabled")
+    raw_provider = state.get("llm_provider", "auto")
+
+    # Automatically resolve provider if set to 'auto' based on available environment keys
+    if raw_provider == "auto":
+        if os.environ.get("GROQ_API_KEY", "").strip():
+            llm_provider = "groq"
+        elif os.environ.get("OPENAI_API_KEY", "").strip():
+            llm_provider = "openai"
+        elif os.environ.get("HIGHLIGHT_LLM_API_KEY", "").strip():
+            llm_provider = "custom"
+        else:
+            llm_provider = "disabled"
+    else:
+        llm_provider = raw_provider
+
     llm_assessments = []
     llm_run = LLMRunInfo(enabled=False, applied=False)
     features = dict(state.get("features", {}))
@@ -405,12 +424,74 @@ def decide(state: AgentState) -> dict:
     }
 
 
+def _format_time_span(start: float, end: float) -> str:
+    """Format start and end timestamps into human-readable MM:SS – MM:SS (Duration) format.
+
+    Note for the team: Formatting timestamps as minutes and seconds makes it much easier
+    for end users to locate the highlighted moment in the original video player.
+    """
+    start_m, start_s = divmod(int(start), 60)
+    end_m, end_s = divmod(int(end), 60)
+    duration = end - start
+    return f"{start_m}:{start_s:02d} – {end_m}:{end_s:02d} ({duration:.0f}s)"
+
+
+def _build_highlight_explanation(
+    candidate: HighlightCandidate,
+    rank: int,
+    domain: str,
+    mode: str,
+    assessment: LLMHighlightAssessment | None = None,
+    llm_run: LLMRunInfo | None = None,
+) -> str:
+    """Construct a clean, user-facing markdown explanation for a highlight candidate.
+
+    When LLM assessment is present (Scenario A), display the semantic summary, transcript quote
+    evidence, and quality dimensions.
+    When running offline/pure LTR without LLM (Scenario B), display the rank, exact timing,
+    multimodal score, and an informative status notice.
+    """
+    time_span = _format_time_span(candidate.start_time, candidate.end_time)
+
+    if assessment:
+        lines = [
+            f"**💡 Key Insight**: {assessment.summary}",
+            f'💬 *"{assessment.evidence}"*',
+            f"**⏱️ Clip Timing**: {time_span}",
+            (
+                f"**🎯 Quality Highlights**: Opening Hook: {assessment.hook_strength * 100:.0f}% · "
+                f"Completeness: {assessment.completeness * 100:.0f}% · "
+                f"Shareability: {assessment.shareability * 100:.0f}%"
+            ),
+        ]
+        return "\n\n".join(lines)
+
+    score_label = (
+        f"**📊 Multimodal Score**: {candidate.score:.2f}/10"
+        if candidate.score > 1.0
+        else f"**📊 Multimodal Score**: {candidate.score:.3f}"
+    )
+
+    if llm_run and llm_run.fallback_reason:
+        reason_notice = f"*ℹ️ LLM semantic assessment failed ({llm_run.fallback_reason}). Displaying multimodal baseline.*"
+    else:
+        reason_notice = "*ℹ️ Semantic explanation unavailable (LLM API key not provided or LLM disabled).*"
+
+    lines = [
+        f"**🎯 Highlight #{rank}**",
+        f"**⏱️ Clip Timing**: {time_span}",
+        score_label,
+        reason_notice,
+    ]
+    return "\n\n".join(lines)
+
+
 # ──────────────────────────────────────────────
 # Node 5: Explain
 # ──────────────────────────────────────────────
 
 def explain(state: AgentState) -> dict:
-    """Tạo reasoning minh bạch cho kết quả highlight"""
+    """Tạo reasoning minh bạch, thân thiện với người dùng cho kết quả highlight"""
 
     domain = state["domain"]
     mode = state.get("features", {}).get("mode", "unknown")
@@ -418,21 +499,21 @@ def explain(state: AgentState) -> dict:
     assessment_map = {
         item.candidate_id: item for item in state.get("llm_assessments", [])
     }
+    llm_run = state.get("llm_run")
     for rank, candidate in enumerate(state.get("highlights", []), start=1):
         assessment = assessment_map.get(candidate.candidate_id)
-        semantic_note = ""
-        if assessment:
-            semantic_note = (
-                f" LLM title: {assessment.title}. Completeness={assessment.completeness:.2f}."
-            )
+        explanation = _build_highlight_explanation(
+            candidate=candidate,
+            rank=rank,
+            domain=domain,
+            mode=mode,
+            assessment=assessment,
+            llm_run=llm_run,
+        )
         reasoning.append(
             {
                 "candidate_id": candidate.candidate_id,
-                "explanation": (
-                    f"Rank #{rank}: {candidate.start_time:.2f}s–{candidate.end_time:.2f}s, "
-                    f"score={candidate.score:.3f}, domain={domain}, mode={mode}. "
-                    f"Reason: {candidate.reason}.{semantic_note}"
-                ),
+                "explanation": explanation,
             }
         )
     _emit(state, "explain", "done", f"Pipeline hoàn tất! {len(reasoning)} reasoning entries.", count=len(reasoning))

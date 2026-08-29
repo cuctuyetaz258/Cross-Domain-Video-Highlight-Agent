@@ -206,3 +206,68 @@ def test_analysis_graph_stops_before_decide(tmp_path: Path, monkeypatch) -> None
 
     assert calls == ["preflight", "observe", "plan", "analyze"]
     assert result["candidates"] == [candidate]
+
+
+def test_explain_generates_user_friendly_offline_reasoning() -> None:
+    candidate = HighlightCandidate(
+        candidate_id="ltr_01",
+        start_time=49.32,
+        end_time=84.50,
+        score=0.95,
+        reason="LTR peak",
+    )
+    state = {
+        "domain": "lecture",
+        "highlights": [candidate],
+        "features": {"mode": "ltr_required"},
+        "llm_assessments": [],
+    }
+    result = nodes.explain(state)  # type: ignore[arg-type]
+
+    assert len(result["reasoning"]) == 1
+    explanation = result["reasoning"][0]["explanation"]
+    assert "🎯 Highlight #1" in explanation
+    assert "0:49 – 1:24" in explanation
+    assert "Semantic explanation unavailable (LLM API key not provided or LLM disabled)" in explanation
+    assert "📊 Multimodal Score" in explanation
+
+
+def test_explain_generates_user_friendly_llm_reasoning() -> None:
+    from highlight_agent.schemas import LLMHighlightAssessment
+
+    candidate = HighlightCandidate(
+        candidate_id="ltr_01",
+        start_time=30.0,
+        end_time=65.0,
+        score=8.5,
+        reason="LTR + LLM",
+    )
+    assessment = LLMHighlightAssessment(
+        candidate_id="ltr_01",
+        semantic_relevance=0.9,
+        standalone_value=0.85,
+        completeness=0.95,
+        hook_strength=0.8,
+        shareability=0.75,
+        title="Introduction to Gradient Descent",
+        summary="Clear and structured explanation of gradient descent fundamentals.",
+        evidence="The steepest slope points to the local minimum.",
+        suggested_start_time=None,
+        suggested_end_time=None,
+        risk_flags=[],
+    )
+    state = {
+        "domain": "lecture",
+        "highlights": [candidate],
+        "features": {"mode": "ltr_llm_rerank"},
+        "llm_assessments": [assessment],
+    }
+    result = nodes.explain(state)  # type: ignore[arg-type]
+
+    assert len(result["reasoning"]) == 1
+    explanation = result["reasoning"][0]["explanation"]
+    assert "💡 Key Insight" in explanation
+    assert "Clear and structured explanation" in explanation
+    assert '💬 *"The steepest slope points to the local minimum."' in explanation
+    assert "0:30 – 1:05" in explanation
+    assert "Completeness: 95%" in explanation

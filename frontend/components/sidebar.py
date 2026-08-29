@@ -151,7 +151,7 @@ def render_sidebar():
             else:
                 st.error("Missing OPENAI_API_KEY in .env/environment")
             if not st.session_state.get("llm_model"):
-                st.session_state["llm_model"] = "gpt-4.1-mini"
+                st.session_state["llm_model"] = "gpt-4o-mini"
             st.text_input(
                 "OpenAI model",
                 key="llm_model",

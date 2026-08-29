@@ -82,7 +82,7 @@ class LLMClientConfig:
             raise ValueError(f"unsupported LLM provider: {provider}")
         if provider == "openai":
             key_name = "OPENAI_API_KEY"
-            default_model = "gpt-4.1-mini"
+            default_model = "gpt-4o-mini"
             resolved_base_url = (
                 (base_url or "").strip()
                 or os.environ.get("OPENAI_BASE_URL", "").strip()
@@ -98,7 +98,16 @@ class LLMClientConfig:
             resolved_base_url = base_url or os.environ.get("HIGHLIGHT_LLM_BASE_URL")
 
         api_key = os.environ.get(key_name, "").strip()
-        resolved_model = (model or os.environ.get("HIGHLIGHT_LLM_MODEL") or default_model).strip()
+        requested_model = (model or os.environ.get("HIGHLIGHT_LLM_MODEL") or "").strip()
+
+        # Safeguard against accidental cross-provider model names (e.g. passing a Llama model to OpenAI)
+        if provider == "openai" and requested_model and ("llama" in requested_model.lower() or "mixtral" in requested_model.lower()):
+            resolved_model = default_model
+        elif provider == "groq" and requested_model and ("gpt" in requested_model.lower() or "claude" in requested_model.lower()):
+            resolved_model = default_model
+        else:
+            resolved_model = requested_model or default_model
+
         if not api_key:
             raise LLMProviderError(f"missing {key_name}")
         if not resolved_model:

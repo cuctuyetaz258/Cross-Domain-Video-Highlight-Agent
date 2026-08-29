@@ -71,9 +71,9 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     )
     parser.add_argument(
         "--llm-provider",
-        choices=["disabled", "openai", "groq", "custom"],
-        default="disabled",
-        help="Bật semantic reranking. API key được đọc từ environment, không truyền qua CLI.",
+        choices=["auto", "groq", "openai", "custom", "disabled"],
+        default="auto",
+        help="Bật semantic reranking bằng LLM (mặc định 'auto' tự động bật khi có API key trong environment).",
     )
     parser.add_argument("--llm-model", default=None, help="Model slug; bỏ trống để dùng mặc định theo provider.")
     parser.add_argument("--llm-base-url", default=None, help="OpenAI-compatible base URL cho provider custom.")
