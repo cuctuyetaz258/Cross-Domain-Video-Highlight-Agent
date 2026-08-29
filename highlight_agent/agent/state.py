@@ -9,6 +9,8 @@ from typing import Any, Callable, Literal, NotRequired, Required, TypedDict
 from highlight_agent.schemas import (
     BoundaryAdjustment,
     HighlightCandidate,
+    LLMHighlightAssessment,
+    LLMRunInfo,
     MediaWorkspace,
     RenderedHighlight,
     TranscriptDocument,
@@ -26,7 +28,7 @@ SignalProfile = dict[str, float]
 class ProgressEvent:
     """Sự kiện tiến độ emit từ bên trong các node."""
 
-    node: str              # "observe" | "plan" | "analyze" | "decide" | "explain"
+    node: str              # "preflight" | "observe" | "plan" | "analyze" | "decide" | "explain"
     step: str              # "start" | "visual_window" | "done" | "fallback" | ...
     message: str           # mô tả ngắn
     meta: dict = dc_field(default_factory=dict)  # thông tin phụ (timing, score, ...)
@@ -54,6 +56,7 @@ class AgentState(TypedDict, total=False):
     workspace: NotRequired[MediaWorkspace]
     transcript: NotRequired[TranscriptDocument]
     profile: NotRequired[SignalProfile]
+    analysis_plan: NotRequired[dict[str, Any]]
     features: NotRequired[dict[str, Any]]
     feature_path: NotRequired[str]
     feature_timeline: NotRequired[dict[str, Any]]
@@ -62,11 +65,20 @@ class AgentState(TypedDict, total=False):
     boundary_adjustments: NotRequired[list[BoundaryAdjustment]]
     rendered_highlights: NotRequired[list[RenderedHighlight]]
     reasoning: NotRequired[list[ReasoningEntry]]
+    ltr_checkpoint_info: NotRequired[dict[str, Any]]
 
-    # ── Visual scoring config ──
+    # ── LLM semantic reranking config/output ──
+    llm_provider: NotRequired[Literal["disabled", "openai", "groq", "custom"]]
+    llm_model: NotRequired[str | None]
+    llm_base_url: NotRequired[str | None]
+    llm_top_m: NotRequired[int]
+    llm_ltr_weight: NotRequired[float]
+    llm_timeout_seconds: NotRequired[float]
+    llm_assessments: NotRequired[list[LLMHighlightAssessment]]
+    llm_run: NotRequired[LLMRunInfo]
+
+    # ── Required LTR scorer ──
     ltr_model_path: NotRequired[str | None]
-    visual_method: NotRequired[Literal["pixel_diff", "raft", "scene_mediapipe"]]
-    visual_sample_fps: NotRequired[float]
 
     # ── Progress callback ──
     emit: NotRequired[EmitFn]

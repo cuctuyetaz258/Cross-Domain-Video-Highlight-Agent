@@ -6,6 +6,7 @@ from pathlib import Path
 from highlight_agent.schemas import (
     BoundaryAdjustment,
     HighlightCandidate,
+    LLMHighlightAssessment,
     MediaWorkspace,
     RenderedHighlight,
     TranscriptDocument,
@@ -163,6 +164,8 @@ def render_highlights(
     transcript: TranscriptDocument | None = None,
     burn_subtitles: bool = True,
     boundary_adjustments: list[BoundaryAdjustment] | None = None,
+    llm_assessments: dict[str, LLMHighlightAssessment] | None = None,
+    pipeline_metadata: dict | None = None,
 ) -> list[RenderedHighlight]:
     if not 3 <= len(candidates) <= 5:
         raise ValueError("MVP rendering expects between 3 and 5 highlight candidates")
@@ -174,6 +177,11 @@ def render_highlights(
         candidate.candidate_id for candidate in candidates
     }:
         raise ValueError("boundary adjustments must match rendered candidate IDs")
+    unknown_assessment_ids = set(llm_assessments or {}) - {
+        candidate.candidate_id for candidate in candidates
+    }
+    if unknown_assessment_ids:
+        raise ValueError(f"LLM assessments contain unknown rendered candidate IDs: {sorted(unknown_assessment_ids)}")
 
     workspace_dir = workspace.transcript_path.parent
     shorts_dir = workspace_dir / "shorts"
@@ -201,6 +209,7 @@ def render_highlights(
             candidate,
             thumbnails_dir / f"{basename}.jpg",
         )
+        assessment = (llm_assessments or {}).get(candidate.candidate_id)
         rendered.append(
             RenderedHighlight(
                 candidate_id=candidate.candidate_id,
@@ -209,6 +218,11 @@ def render_highlights(
                 start_time=candidate.start_time,
                 end_time=candidate.end_time,
                 reason=candidate.reason,
+                title=assessment.title if assessment else None,
+                summary=assessment.summary if assessment else None,
+                semantic_score=assessment.semantic_quality() if assessment else None,
+                completeness_score=assessment.completeness if assessment else None,
+                llm_risk_flags=list(assessment.risk_flags) if assessment else [],
             )
         )
 
@@ -221,6 +235,7 @@ def render_highlights(
         "boundary_adjustments": [
             item.model_dump(mode="json") for item in boundary_adjustments or []
         ],
+        "pipeline": pipeline_metadata or {},
     }
     (workspace_dir / "metadata.json").write_text(
         json.dumps(metadata, ensure_ascii=False, indent=2),

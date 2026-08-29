@@ -7,6 +7,7 @@ from .interaction import (
     interaction_features_from_turns,
     windowed_interaction_features,
 )
+from .ltr_pipeline import LTRFeatureBundle, build_ltr_features
 from .nms_topk import extract_topk_nms
 from .overlap_blender import blend_scores
 from .scoring import (
@@ -28,7 +29,11 @@ from .visual import (
     extract_visual_scores,
     scores_to_array,
 )
-from .visual_new import extract_gesture_signal, extract_scene_changes
+from .visual_new import (
+    extract_gesture_signal,
+    extract_scene_changes,
+    extract_scene_observation,
+)
 
 __all__ = [
     # Acoustic
@@ -60,6 +65,9 @@ __all__ = [
     "extract_windowed_semantic_features",
     "extract_scene_changes",
     "extract_gesture_signal",
+    "extract_scene_observation",
+    "LTRFeatureBundle",
+    "build_ltr_features",
     "build_feature_matrix",
     "extract_windows",
     "blend_scores",

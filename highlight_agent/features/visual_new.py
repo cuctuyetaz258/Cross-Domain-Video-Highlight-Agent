@@ -16,6 +16,16 @@ class GestureExtraction:
     status: str
     decoded_sample_count: int
     detected_sample_count: int
+    error: str | None = None
+
+
+@dataclass(frozen=True)
+class SceneExtraction:
+    """Scene timestamps plus a status that distinguishes no cuts from failure."""
+
+    timestamps: list[float]
+    status: str
+    error: str | None = None
 
 
 def extract_scene_changes(
@@ -25,7 +35,24 @@ def extract_scene_changes(
     threshold: float = 27.0,
     min_scene_len: int = 15,
 ) -> list[float]:
-    """Trả timestamp scene cut, lỗi đọc video thì trả mảng rỗng"""
+    """Compatibility wrapper returning only successfully extracted timestamps."""
+
+    return extract_scene_observation(
+        video_path,
+        duration,
+        threshold=threshold,
+        min_scene_len=min_scene_len,
+    ).timestamps
+
+
+def extract_scene_observation(
+    video_path: str | Path,
+    duration: float,
+    *,
+    threshold: float = 27.0,
+    min_scene_len: int = 15,
+) -> SceneExtraction:
+    """Return scene timestamps and preserve technical extraction failures."""
 
     if duration <= 0:
         raise ValueError("duration must be positive")
@@ -39,11 +66,12 @@ def extract_scene_changes(
             str(video_path),
             ContentDetector(threshold=threshold, min_scene_len=min_scene_len),
         )
-    except Exception:
-        return []
+    except Exception as exc:
+        return SceneExtraction([], "extraction_failed", str(exc))
 
     timestamps = [float(start.get_seconds()) for start, _ in scenes]
-    return [timestamp for timestamp in timestamps if 0.0 <= timestamp <= duration]
+    valid = [timestamp for timestamp in timestamps if 0.0 <= timestamp <= duration]
+    return SceneExtraction(valid, "ok" if valid else "no_scene_detected")
 
 
 def extract_gesture_signal(
@@ -89,9 +117,15 @@ def extract_gesture_observation(
             min_detection_confidence=0.5,
             refine_landmarks=False,
         )
-    except Exception:
+    except Exception as exc:
         capture.release()
-        return GestureExtraction(signal, "facemesh_initialization_failed", 0, 0)
+        return GestureExtraction(
+            signal,
+            "facemesh_initialization_failed",
+            0,
+            0,
+            str(exc),
+        )
 
     decoded_sample_count = 0
     detected_sample_count = 0

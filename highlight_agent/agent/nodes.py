@@ -2,10 +2,11 @@
 
 from __future__ import annotations
 
+import json
 import logging
-import random
-import time
-from pathlib import Path
+
+import numpy as np
+import torch
 
 from highlight_agent.backend import (
     load_transcript,
@@ -14,19 +15,27 @@ from highlight_agent.backend import (
     render_candidates,
 )
 from highlight_agent.features import (
-    PROFILE_WEIGHTS,
-    WindowVisualScore,
     build_feature_timeline,
-    calculate_total_score,
-    extract_interaction_features,
-    extract_visual_scores,
-    extract_windowed_acoustic_features,
-    extract_windowed_semantic_features,
-    normalize_features,
     save_feature_timeline,
     windowed_interaction_features,
 )
-from highlight_agent.schemas import HighlightCandidate, VisualFeatures
+from highlight_agent.features.ltr_contract import (
+    LTR_HOP_SIZE,
+    LTR_WINDOW_SIZE,
+    LTRPipelineError,
+)
+from highlight_agent.features.ltr_pipeline import build_ltr_features
+from highlight_agent.features.nms_topk import extract_topk_nms
+from highlight_agent.features.overlap_blender import blend_scores
+from highlight_agent.features.sliding_window import extract_windows
+from highlight_agent.llm import (
+    LLMClientConfig,
+    OpenAICompatibleAssessmentClient,
+    apply_validated_boundaries,
+    rerank_candidates,
+)
+from highlight_agent.models.ltr_scorer import AdditiveAttentionScorer
+from highlight_agent.schemas import LLMRunInfo
 
 from .state import AgentState, ProgressEvent, ReasoningEntry
 
@@ -45,6 +54,26 @@ def _emit(state: AgentState, node: str, step: str, message: str, **meta) -> None
             emit_fn(ProgressEvent(node=node, step=step, message=message, meta=meta))
         except Exception:
             pass
+
+
+def preflight(state: AgentState) -> dict:
+    """Validate the required checkpoint before any media download or transcription."""
+
+    _emit(state, "preflight", "start", "Validating required LTR checkpoint...")
+    info = AdditiveAttentionScorer.preflight(state.get("ltr_model_path"))
+    _emit(
+        state,
+        "preflight",
+        "done",
+        (
+            f"LTR checkpoint valid | device={info['device']} | "
+            f"schema={info['feature_contract']['schema_version']} | "
+            f"sha256={info['fingerprint'][:12]}"
+        ),
+        device=info["device"],
+        fingerprint=info["fingerprint"],
+    )
+    return {"ltr_checkpoint_info": info}
 
 
 # ──────────────────────────────────────────────
@@ -74,188 +103,20 @@ def observe(state: AgentState) -> dict:
 # ──────────────────────────────────────────────
 
 def plan(state: AgentState) -> dict:
-    """Chọn profile tín hiệu theo domain"""
+    """Declare extractor behavior; the domain never selects scorer weights."""
 
     _emit(state, "plan", "start", f"Lập kế hoạch cho domain={state['domain']}")
     domain = state["domain"]
-    if domain not in PROFILE_WEIGHTS:
+    if domain not in {"lecture", "podcast", "standup"}:
         raise ValueError(f"unsupported domain: {domain}")
-    profile = dict(PROFILE_WEIGHTS[domain])
-    _emit(state, "plan", "done", f"Profile weights: {profile}")
-    return {"profile": profile}
-
-
-# ──────────────────────────────────────────────
-# Visual feature extraction
-# ──────────────────────────────────────────────
-
-def _extract_visual_windows(
-    state: AgentState, window_seconds: float, duration: float
-) -> list[WindowVisualScore]:
-    """Trích xuất visual motion cùng cửa sổ với các tầng feature khác"""
-    workspace = state.get("workspace")
-    transcript = state.get("transcript")
-    if workspace is None or transcript is None:
-        raise ValueError("Analyze requires workspace and transcript from Observe")
-    if transcript.duration < 30:
-        raise ValueError("video must be at least 30 seconds to create an MVP highlight")
-
-    visual_method = state.get("visual_method", "pixel_diff")
-    sample_fps = state.get("visual_sample_fps", 1.0)
-    video_path = workspace.source_video_path
-
-    _emit(
-        state,
-        "analyze",
-        "visual_start",
-        f"Trích xuất visual motion ({visual_method}, {sample_fps} fps)...",
-    )
-
-    t0 = time.perf_counter()
-
-    def on_window(score: WindowVisualScore) -> None:
-        _emit(
-            state,
-            "analyze",
-            "visual_window",
-            f"[{score.start:.0f}s–{score.end:.0f}s] motion={score.motion_score:.3f}",
-            start=score.start,
-            end=score.end,
-            score=score.motion_score,
-        )
-
-    raw_scores = extract_visual_scores(
-        video_path=video_path,
-        window_size=window_seconds,
-        sample_fps=sample_fps,
-        method=visual_method,
-        on_window=on_window,
-        duration=duration,
-    )
-    elapsed = time.perf_counter() - t0
-
-    if not raw_scores:
-        raise ValueError("Không trích xuất được visual score nào")
-
-    _emit(
-        state,
-        "analyze",
-        "visual_done",
-        f"Trích xuất {len(raw_scores)} visual windows ({elapsed:.1f}s)",
-        count=len(raw_scores),
-        elapsed=elapsed,
-    )
-
-    return raw_scores
-
-
-def _acoustic_window_scores(acoustic_windows) -> list[float]:
-    """Quy đổi feature âm học thô thành một signal emphasis theo cửa sổ"""
-
-    return [
-        float(
-            0.55 * window.acoustic.rms_p95
-            + 0.25 * min((window.acoustic.pitch_std_hz or 0.0) / 100.0, 1.0)
-            + 0.15 * window.acoustic.voiced_ratio
-            + 0.05 * (1.0 - window.acoustic.silence_ratio)
-        )
-        for window in acoustic_windows
-    ]
-
-
-def _interaction_window_scores(interaction_windows) -> list[float]:
-    """Quy đổi turn-taking thành signal tương tác theo cửa sổ"""
-
-    if interaction_windows is None:
-        return []
-    return [
-        float(
-            0.50 * min(window.turn_rate_per_minute / 8.0, 1.0)
-            + 0.30 * window.speech_ratio
-            + 0.20 * min(window.speaker_count / 2.0, 1.0)
-        )
-        for window in interaction_windows
-    ]
-
-
-def _multimodal_candidates(state: AgentState, timeline) -> list[HighlightCandidate]:
-    """Chuẩn hóa và fusion các signal để tạo candidate có evidence"""
-
-    raw_signals: dict[str, list[float]] = {
-        "semantic": [window.semantic.raw_score if window.semantic else 0.0 for window in timeline.windows],
-        "acoustic": _acoustic_window_scores(timeline.windows),
-        "visual": [window.visual.motion_score if window.visual else 0.0 for window in timeline.windows],
+    analysis_plan = {
+        "scorer": "ltr_required",
+        "scene_extractor": "scenedetect",
+        "gesture_extractor": "mediapipe",
+        "interaction_extractor": "pyannote" if domain == "podcast" else "zero_channel",
     }
-    if state["domain"] == "podcast":
-        raw_signals["interaction"] = _interaction_window_scores(
-            [window.interaction for window in timeline.windows]
-        )
-
-    normalized = normalize_features(raw_signals, scaler_type="robust")
-    scores = calculate_total_score(
-        normalized,
-        state["profile"],
-        window_starts=[window.start for window in timeline.windows],
-        window_ends=[window.end for window in timeline.windows],
-    )
-    candidates: list[HighlightCandidate] = []
-    for score in scores:
-        if score.end - score.start < 30.0:
-            continue
-        semantic = timeline.windows[score.window_idx].semantic
-        evidence = ", ".join(semantic.cue_phrases) if semantic and semantic.cue_phrases else "không có cue phrase"
-        candidates.append(
-            HighlightCandidate(
-                candidate_id=f"fusion_{score.window_idx + 1:02d}",
-                start_time=score.start,
-                end_time=score.end,
-                score=round(score.total_score * 10.0, 3),
-                reason=(
-                    f"Multimodal fusion score={score.total_score:.3f}; "
-                    f"semantic cue: {evidence}"
-                ),
-                signals={
-                    **{name: round(value, 6) for name, value in score.signals_normalized.items()},
-                    **{f"{name}_raw": round(raw_signals[name][score.window_idx], 6) for name in score.signals_normalized},
-                },
-            )
-        )
-    if not candidates:
-        raise ValueError("Không có cửa sổ đủ 30 giây để tạo candidate")
-    return candidates
-
-
-# ──────────────────────────────────────────────
-# Naive baseline (fallback)
-# ──────────────────────────────────────────────
-
-def _naive_candidates(state: AgentState, count: int = 5) -> list[HighlightCandidate]:
-    transcript = state.get("transcript")
-    workspace = state.get("workspace")
-    if transcript is None or workspace is None:
-        raise ValueError("Analyze requires workspace and transcript from Observe")
-    if transcript.duration < 30:
-        raise ValueError("video must be at least 30 seconds to create an MVP highlight")
-
-    clip_duration = min(60.0, transcript.duration)
-    max_start = max(0.0, transcript.duration - clip_duration)
-    randomizer = random.Random(workspace.video_id)
-    candidates = []
-    for index in range(count):
-        start = round(randomizer.uniform(0, max_start), 3) if max_start else 0.0
-        end = round(start + clip_duration, 3)
-        score = round(randomizer.uniform(2.0, 5.0), 3)
-        candidates.append(
-            HighlightCandidate(
-                candidate_id=f"baseline_{index + 1:02d}",
-                start_time=start,
-                end_time=end,
-                score=score,
-                reason="Sprint 1 deterministic naive baseline; replace with LLM/features later.",
-                signals={"baseline_random": round(score / 5, 3)},
-            )
-        )
-    return candidates
+    _emit(state, "plan", "done", f"LTR extraction plan: {analysis_plan}")
+    return {"analysis_plan": analysis_plan}
 
 
 # ──────────────────────────────────────────────
@@ -263,198 +124,145 @@ def _naive_candidates(state: AgentState, count: int = 5) -> list[HighlightCandid
 # ──────────────────────────────────────────────
 
 def analyze(state: AgentState) -> dict:
-    """Trích xuất features đa tầng, fusion để tạo candidate hoặc fallback an toàn"""
+    """Run the single required path: unified features -> LTR -> deterministic NMS."""
 
-    _emit(state, "analyze", "start", "Bắt đầu phân tích đặc trưng...")
+    _emit(state, "analyze", "start", "Building unified seven-channel LTR features...")
     workspace = state.get("workspace")
-    if workspace is None:
-        raise ValueError("Analyze requires workspace from Observe")
+    transcript = state.get("transcript")
+    if workspace is None or transcript is None:
+        raise LTRPipelineError(
+            "LTR_STATE_INCOMPLETE",
+            "Analyze requires workspace and transcript from Observe",
+        )
+    if transcript.duration < 30.0:
+        raise LTRPipelineError(
+            "LTR_VIDEO_TOO_SHORT",
+            "video must be at least 30 seconds to render a highlight",
+        )
 
-    window_seconds = 30.0
-    hop_seconds = 30.0
+    checkpoint_info = AdditiveAttentionScorer.preflight(state.get("ltr_model_path"))
+    prior_info = state.get("ltr_checkpoint_info")
+    if prior_info and prior_info.get("fingerprint") != checkpoint_info["fingerprint"]:
+        raise LTRPipelineError(
+            "LTR_CHECKPOINT_CHANGED",
+            "checkpoint changed after preflight; restart the pipeline",
+        )
 
-    # 1. Acoustic features
-    acoustic, acoustic_windows = extract_windowed_acoustic_features(
-        workspace.audio_path,
-        window_seconds=window_seconds,
-        hop_seconds=hop_seconds,
+    bundle = build_ltr_features(
+        video_path=workspace.source_video_path,
+        audio_path=workspace.audio_path,
+        transcript=transcript,
+        domain=state["domain"],
+        duration=transcript.duration,
+        known_speaker_count=state.get("known_speaker_count"),
+        device=checkpoint_info["device"],
     )
-    features: dict[str, object] = {
-        "acoustic": acoustic.model_dump(mode="json"),
-        "profile": state.get("profile", {}),
-    }
+    feature_dir = workspace.audio_path.parent / "features"
+    feature_dir.mkdir(parents=True, exist_ok=True)
+    matrix_path = feature_dir / "feature_matrix.npy"
+    matrix_tmp = feature_dir / "feature_matrix.npy.tmp"
+    with matrix_tmp.open("wb") as handle:
+        np.save(handle, bundle.matrix, allow_pickle=False)
+    matrix_tmp.replace(matrix_path)
+    report_path = feature_dir / "ltr_features.json"
+    report_tmp = report_path.with_suffix(".json.tmp")
+    report_tmp.write_text(json.dumps(bundle.metadata, indent=2, sort_keys=True), encoding="utf-8")
+    report_tmp.replace(report_path)
 
-    # 2. Interaction features
-    if state["domain"] == "podcast":
-        interaction = extract_interaction_features(
-            workspace.audio_path,
-            num_speakers=state.get("known_speaker_count"),
-        )
-        features["interaction"] = interaction.model_dump(mode="json")
-        interaction_windows = windowed_interaction_features(
-            interaction,
-            window_seconds=window_seconds,
-            hop_seconds=hop_seconds,
-        )
-    else:
-        interaction = None
-        interaction_windows = None
-
-    # 3. Semantic và visual dùng cùng schedule của acoustic để fusion từng cửa sổ
-    supplied_candidates = state.get("candidates")
-    try:
-        transcript = state.get("transcript")
-        if transcript is None:
-            raise ValueError("Analyze requires transcript from Observe")
-        _emit(state, "analyze", "semantic_start", "Trích xuất semantic evidence từ transcript...")
-        semantic_scores = extract_windowed_semantic_features(
-            transcript,
-            window_seconds=window_seconds,
-            hop_seconds=hop_seconds,
-            duration=acoustic.duration,
-        )
-        semantic_windows = [score.features for score in semantic_scores]
-        _emit(state, "analyze", "semantic_done", f"Trích xuất {len(semantic_windows)} semantic windows", count=len(semantic_windows))
-
-        visual_scores = _extract_visual_windows(state, window_seconds, acoustic.duration)
-        visual_windows = [
-            VisualFeatures(
-                motion_score=score.motion_score,
-                method=score.method,
-                frame_count=score.frame_count,
-            )
-            for score in visual_scores
-        ]
-        timeline = build_feature_timeline(
-            video_id=workspace.video_id,
-            domain=state["domain"],
-            duration=acoustic.duration,
-            window_seconds=window_seconds,
-            hop_seconds=hop_seconds,
-            acoustic=acoustic,
-            acoustic_windows=acoustic_windows,
-            interaction=interaction,
-            interaction_windows=interaction_windows,
-            semantic_windows=semantic_windows,
-            visual_windows=visual_windows,
-        )
-        if supplied_candidates:
-            candidates = [HighlightCandidate.model_validate(item) for item in supplied_candidates]
-            mode = "external_candidates"
-        else:
-            _emit(state, "analyze", "fusion_start", "Chuẩn hóa các signal và chấm điểm fusion...")
-            candidates = _multimodal_candidates(state, timeline)
-            mode = "multimodal_fusion"
-            _emit(state, "analyze", "fusion_done", f"Đã tạo {len(candidates)} fusion candidates", count=len(candidates))
-    except Exception as exc:
-        logger.warning("Semantic/visual fusion thất bại (%s), fallback sang naive baseline.", exc)
-        _emit(state, "analyze", "fallback", f"Semantic/visual fusion thất bại ({exc}), dùng naive baseline")
-        timeline = build_feature_timeline(
-            video_id=workspace.video_id,
-            domain=state["domain"],
-            duration=acoustic.duration,
-            window_seconds=window_seconds,
-            hop_seconds=hop_seconds,
-            acoustic=acoustic,
-            acoustic_windows=acoustic_windows,
-            interaction=interaction,
-            interaction_windows=interaction_windows,
-        )
-        candidates = _naive_candidates(state)
-        mode = "naive_baseline"
-
+    interaction_windows = (
+        windowed_interaction_features(bundle.interaction)
+        if bundle.interaction is not None
+        else None
+    )
+    timeline = build_feature_timeline(
+        video_id=workspace.video_id,
+        domain=state["domain"],
+        duration=bundle.acoustic.duration,
+        window_seconds=30.0,
+        hop_seconds=30.0,
+        acoustic=bundle.acoustic,
+        acoustic_windows=bundle.acoustic_windows,
+        interaction=bundle.interaction,
+        interaction_windows=interaction_windows,
+    )
     feature_path = save_feature_timeline(
         timeline,
-        workspace.audio_path.parent / "features" / "features.json",
-    )
-    features.update(
-        {
-            "feature_path": str(feature_path),
-            "window_count": len(timeline.windows),
-            "window_seconds": window_seconds,
-            "visual_method": state.get("visual_method", "pixel_diff"),
-        }
+        feature_dir / "features.json",
     )
 
-    # ── LTR Dense Overlap branch (if model path provided) ──
-    _ltr_model_path = state.get("ltr_model_path")
-    if _ltr_model_path and Path(_ltr_model_path).exists():
-        _emit(state, "analyze", "ltr_start", "Running LTR dense scoring...")
-        try:
-            import torch as _torch
+    try:
+        device = torch.device(checkpoint_info["device"])
+        windows = extract_windows(
+            bundle.matrix,
+            window_size=LTR_WINDOW_SIZE,
+            hop_size=LTR_HOP_SIZE,
+            device=device,
+        )
+        model, checkpoint_metadata = AdditiveAttentionScorer.load_checkpoint(
+            checkpoint_info["path"],
+            device=device,
+            expected_in_features=7,
+        )
+        with torch.no_grad():
+            window_scores = model(windows).squeeze(-1).cpu().numpy()
+        timeline_score = blend_scores(
+            window_scores,
+            T=bundle.matrix.shape[1],
+            window_size=LTR_WINDOW_SIZE,
+            hop_size=LTR_HOP_SIZE,
+        )
+        if not np.isfinite(timeline_score).all():
+            raise LTRPipelineError("LTR_SCORE_NON_FINITE", "model produced NaN or Inf scores")
+    except LTRPipelineError:
+        raise
+    except Exception as exc:
+        raise LTRPipelineError("LTR_SCORING_FAILED", str(exc)) from exc
 
-            from highlight_agent.features.alignment import build_feature_matrix as _build_feature_matrix
-            from highlight_agent.features.nms_topk import extract_topk_nms as _extract_topk_nms
-            from highlight_agent.features.overlap_blender import blend_scores as _blend_scores
-            from highlight_agent.features.semantic import (
-                transcript_tfidf_density_scores as _transcript_tfidf_density_scores,
-            )
-            from highlight_agent.features.sliding_window import extract_windows as _extract_windows
-            from highlight_agent.features.visual_new import (
-                extract_gesture_signal as _extract_gesture_signal,
-            )
-            from highlight_agent.features.visual_new import (
-                extract_scene_changes as _extract_scene_changes,
-            )
-            from highlight_agent.models.ltr_scorer import AdditiveAttentionScorer as _LTRScorer
+    highlight_count = state.get("highlight_count", 3)
+    llm_enabled = state.get("llm_provider", "disabled") != "disabled"
+    requested_pool = state.get("llm_top_m", 10) if llm_enabled else highlight_count
+    pool_size = max(highlight_count, min(12, requested_pool))
+    candidates = extract_topk_nms(
+        timeline_score,
+        k=pool_size,
+        reference_duration=float(checkpoint_metadata["L_ref"]),
+    )
+    if len(candidates) < highlight_count:
+        raise LTRPipelineError(
+            "LTR_NOT_ENOUGH_CANDIDATES",
+            f"deterministic NMS produced {len(candidates)} candidates; need {highlight_count}",
+        )
 
-            _scene_times = _extract_scene_changes(workspace.source_video_path, acoustic.duration)
-            _gesture_sparse = _extract_gesture_signal(workspace.source_video_path, acoustic.duration)
-
-            _transcript = state.get("transcript")
-            _word_scores = (
-                _transcript_tfidf_density_scores(_transcript) if _transcript is not None else []
-            )
-
-            _feature_matrix = _build_feature_matrix(
-                acoustic, acoustic_windows, _scene_times, _gesture_sparse,
-                _word_scores, interaction, acoustic.duration
-            )
-            _ltr_device = _torch.device("cuda" if _torch.cuda.is_available() else "cpu")
-            _window_tensor = _extract_windows(_feature_matrix, device=_ltr_device)
-            _ltr_model, _checkpoint_metadata = _LTRScorer.load_checkpoint(
-                _ltr_model_path,
-                device=_ltr_device,
-                expected_in_features=7,
-            )
-            with _torch.no_grad():
-                _raw_scores = _ltr_model(_window_tensor).squeeze(-1)
-            _window_scores = _raw_scores.cpu().numpy()
-            _timeline_score = _blend_scores(_window_scores, T=_feature_matrix.shape[1])
-            _l_ref = _checkpoint_metadata.get("L_ref", 40.0)
-            _k = max(3, min(5, state.get("highlight_count", 3)))
-            _ltr_candidates = _extract_topk_nms(_timeline_score, k=_k, reference_duration=float(_l_ref))
-            if len(_ltr_candidates) >= _k:
-                candidates = _ltr_candidates
-                mode = "ltr_dense_overlap"
-                _emit(
-                    state,
-                    "analyze",
-                    "ltr_done",
-                    f"LTR produced {len(_ltr_candidates)} candidates on {_ltr_device.type}",
-                    device=_ltr_device.type,
-                    count=len(_ltr_candidates),
-                )
-            else:
-                _emit(
-                    state,
-                    "analyze",
-                    "ltr_fallback",
-                    f"LTR produced {len(_ltr_candidates)}/{_k} candidates; using baseline",
-                    count=len(_ltr_candidates),
-                    required=_k,
-                )
-        except Exception as _ltr_exc:  # noqa: BLE001
-            logger.warning("LTR scoring failed, fallback to baseline: %s", _ltr_exc)
-            _emit(state, "analyze", "ltr_fallback", f"LTR error, using baseline: {_ltr_exc}")
-
-    _emit(state, "analyze", "done", f"mode={mode} | {len(candidates)} candidates", mode=mode, count=len(candidates))
-
+    mode = "ltr_required"
+    features = {
+        "mode": mode,
+        "candidate_count": len(candidates),
+        "requested_pool_size": pool_size,
+        "feature_path": str(feature_path),
+        "feature_matrix_path": str(matrix_path),
+        "feature_report_path": str(report_path),
+        "feature_contract": bundle.metadata["feature_contract"],
+        "extractor": bundle.metadata["extractor"],
+        "observations": bundle.metadata["observations"],
+        "channel_stats": bundle.metadata["channel_stats"],
+        "checkpoint": checkpoint_info,
+        "analysis_plan": state.get("analysis_plan", {}),
+    }
+    _emit(
+        state,
+        "analyze",
+        "done",
+        f"mode={mode} | {len(candidates)} candidates | device={device.type}",
+        mode=mode,
+        count=len(candidates),
+        device=device.type,
+    )
     return {
-        "features": {"mode": mode, "candidate_count": len(candidates), **features},
+        "features": features,
         "feature_path": str(feature_path),
         "feature_timeline": timeline.model_dump(mode="json"),
         "candidates": candidates,
+        "ltr_checkpoint_info": checkpoint_info,
     }
 
 
@@ -476,7 +284,84 @@ def decide(state: AgentState) -> dict:
     if len(candidates) < highlight_count:
         raise ValueError("not enough candidates to satisfy highlight_count")
 
-    selected = sorted(candidates, key=lambda candidate: candidate.score, reverse=True)[:highlight_count]
+    base_mode = state.get("features", {}).get("mode", "unknown")
+    llm_provider = state.get("llm_provider", "disabled")
+    llm_assessments = []
+    llm_run = LLMRunInfo(enabled=False, applied=False)
+    features = dict(state.get("features", {}))
+    ranked_candidates = sorted(candidates, key=lambda candidate: candidate.score, reverse=True)
+
+    if llm_provider != "disabled":
+        top_m = state.get("llm_top_m", 10)
+        if not 3 <= top_m <= 12:
+            raise ValueError("llm_top_m must be between 3 and 12")
+        ltr_weight = state.get("llm_ltr_weight", 0.60)
+        if not 0 <= ltr_weight <= 1:
+            raise ValueError("llm_ltr_weight must be between 0 and 1")
+        pool = ranked_candidates[: max(highlight_count, top_m)]
+        _emit(
+            state,
+            "decide",
+            "llm_start",
+            f"LLM đang đánh giá ngữ nghĩa cho {len(pool)} candidates...",
+            provider=llm_provider,
+            count=len(pool),
+        )
+        try:
+            config = LLMClientConfig.from_env(
+                provider=llm_provider,
+                model=state.get("llm_model"),
+                base_url=state.get("llm_base_url"),
+                timeout_seconds=state.get("llm_timeout_seconds", 45.0),
+            )
+            client = OpenAICompatibleAssessmentClient(config)
+            ranked_candidates, llm_assessments, llm_run = rerank_candidates(
+                pool,
+                state["transcript"],
+                domain=state["domain"],
+                client=client,
+                cache_dir=workspace.transcript_path.parent / "llm",
+                ltr_weight=ltr_weight,
+                checkpoint_fingerprint=state.get("ltr_checkpoint_info", {}).get(
+                    "fingerprint", "unknown"
+                ),
+            )
+            llm_mode = "ltr_llm_rerank"
+            features.update({"base_mode": base_mode, "mode": llm_mode})
+            _emit(
+                state,
+                "decide",
+                "llm_done",
+                f"LLM rerank hoàn tất ({len(llm_assessments)} assessments).",
+                cache_hit=llm_run.cache_hit,
+            )
+        except Exception as exc:  # noqa: BLE001
+            logger.warning("LLM reranking failed, fallback to %s: %s", base_mode, exc)
+            llm_run = LLMRunInfo(
+                enabled=True,
+                applied=False,
+                provider=llm_provider,
+                model=state.get("llm_model"),
+                fallback_reason=str(exc),
+            )
+            ranked_candidates = sorted(candidates, key=lambda candidate: candidate.score, reverse=True)
+            _emit(
+                state,
+                "decide",
+                "llm_fallback",
+                f"LLM không khả dụng; tiếp tục bằng {base_mode}: {exc}",
+            )
+
+    selected = ranked_candidates[:highlight_count]
+    if llm_run.applied:
+        selected, accepted_ids = apply_validated_boundaries(
+            selected,
+            llm_assessments,
+            state["transcript"],
+        )
+        llm_run = llm_run.model_copy(
+            update={"accepted_boundary_candidate_ids": accepted_ids}
+        )
     _emit(state, "decide", "ranking", f"Đã chọn top {highlight_count} highlights. Tiến hành canh biên...")
 
     highlights, boundary_adjustments = refine_candidates_for_render(workspace, selected)
@@ -488,6 +373,17 @@ def decide(state: AgentState) -> dict:
         burn_subtitles=state.get("burn_subtitles", True),
         boundary_adjustments=boundary_adjustments,
         refine_boundaries=False,
+        llm_assessments={
+            item.candidate_id: item
+            for item in llm_assessments
+            if item.candidate_id in {candidate.candidate_id for candidate in highlights}
+        },
+        pipeline_metadata={
+            "mode": features.get("mode", base_mode),
+            "checkpoint": state.get("ltr_checkpoint_info", {}),
+            "feature_contract": features.get("feature_contract", {}),
+            "extractor": features.get("extractor", {}),
+        },
     )
     _emit(state, "decide", "done", f"Render xong {len(rendered)} clips.", rendered_count=len(rendered))
 
@@ -495,6 +391,9 @@ def decide(state: AgentState) -> dict:
         "highlights": highlights,
         "boundary_adjustments": boundary_adjustments,
         "rendered_highlights": rendered,
+        "llm_assessments": llm_assessments,
+        "llm_run": llm_run,
+        "features": features,
     }
 
 
@@ -506,17 +405,25 @@ def explain(state: AgentState) -> dict:
     """Tạo reasoning minh bạch cho kết quả highlight"""
 
     domain = state["domain"]
-    profile = state.get("profile", {})
     mode = state.get("features", {}).get("mode", "unknown")
     reasoning: list[ReasoningEntry] = []
+    assessment_map = {
+        item.candidate_id: item for item in state.get("llm_assessments", [])
+    }
     for rank, candidate in enumerate(state.get("highlights", []), start=1):
+        assessment = assessment_map.get(candidate.candidate_id)
+        semantic_note = ""
+        if assessment:
+            semantic_note = (
+                f" LLM title: {assessment.title}. Completeness={assessment.completeness:.2f}."
+            )
         reasoning.append(
             {
                 "candidate_id": candidate.candidate_id,
                 "explanation": (
                     f"Rank #{rank}: {candidate.start_time:.2f}s–{candidate.end_time:.2f}s, "
                     f"score={candidate.score:.3f}, domain={domain}, mode={mode}. "
-                    f"Reason: {candidate.reason} Active profile: {profile}."
+                    f"Reason: {candidate.reason}.{semantic_note}"
                 ),
             }
         )

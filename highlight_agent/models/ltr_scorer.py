@@ -1,10 +1,17 @@
 from __future__ import annotations
 
+import hashlib
 from pathlib import Path
 from typing import Any
 
 import torch
 import torch.nn as nn
+
+from highlight_agent.features.ltr_contract import (
+    LTR_CHECKPOINT_VERSION,
+    LTRPipelineError,
+    validate_feature_contract,
+)
 
 
 class AdditiveAttentionScorer(nn.Module):
@@ -40,7 +47,7 @@ class AdditiveAttentionScorer(nn.Module):
         output_path.parent.mkdir(parents=True, exist_ok=True)
         torch.save(
             {
-                "checkpoint_version": "1.0",
+                "checkpoint_version": LTR_CHECKPOINT_VERSION,
                 "state_dict": self.state_dict(),
                 "in_features": self.in_features,
                 "hidden_dim": self.hidden_dim,
@@ -60,7 +67,10 @@ class AdditiveAttentionScorer(nn.Module):
         """Load a validated checkpoint and place the model on ``device``."""
 
         target_device = torch.device(device or "cpu")
-        checkpoint = torch.load(path, map_location=target_device, weights_only=False)
+        # Checkpoints produced by this project only contain tensors and primitive
+        # metadata.  Restrict unpickling so an external artifact cannot execute
+        # arbitrary Python globals while being loaded.
+        checkpoint = torch.load(path, map_location=target_device, weights_only=True)
         if not isinstance(checkpoint, dict):
             raise ValueError("LTR checkpoint must be a dictionary")
 
@@ -72,9 +82,7 @@ class AdditiveAttentionScorer(nn.Module):
         in_features = int(checkpoint["in_features"])
         hidden_dim = int(checkpoint["hidden_dim"])
         if expected_in_features is not None and in_features != expected_in_features:
-            raise ValueError(
-                f"LTR checkpoint expects {in_features} features; expected {expected_in_features}"
-            )
+            raise ValueError(f"LTR checkpoint expects {in_features} features; expected {expected_in_features}")
         if hidden_dim <= 0:
             raise ValueError("LTR checkpoint hidden_dim must be positive")
 
@@ -87,6 +95,74 @@ class AdditiveAttentionScorer(nn.Module):
         model.to(target_device)
         model.eval()
         return model, dict(metadata)
+
+    @classmethod
+    def preflight(
+        cls,
+        path: str | Path | None,
+        *,
+        device: str | torch.device | None = None,
+    ) -> dict[str, Any]:
+        """Fail fast and return serializable checkpoint identity/contract data."""
+
+        if not path:
+            raise LTRPipelineError(
+                "LTR_CHECKPOINT_REQUIRED",
+                "provide --ltr-model-path or configure an LTR checkpoint in the UI",
+            )
+        checkpoint_path = Path(path)
+        if not checkpoint_path.is_file():
+            raise LTRPipelineError(
+                "LTR_CHECKPOINT_NOT_FOUND",
+                f"checkpoint does not exist: {checkpoint_path}",
+            )
+        target_device = torch.device(
+            device or ("cuda" if torch.cuda.is_available() else "cpu")
+        )
+        try:
+            checkpoint = torch.load(
+                checkpoint_path,
+                map_location=target_device,
+                weights_only=True,
+            )
+            if not isinstance(checkpoint, dict):
+                raise ValueError("checkpoint must be a dictionary")
+            version = checkpoint.get("checkpoint_version")
+            if version != LTR_CHECKPOINT_VERSION:
+                raise LTRPipelineError(
+                    "LTR_CHECKPOINT_SCHEMA_MISMATCH",
+                    f"checkpoint_version={version!r}; expected {LTR_CHECKPOINT_VERSION!r}",
+                )
+            model, metadata = cls.load_checkpoint(
+                checkpoint_path,
+                device=target_device,
+                expected_in_features=7,
+            )
+            del model
+            contract = validate_feature_contract(metadata)
+        except LTRPipelineError:
+            raise
+        except Exception as exc:
+            raise LTRPipelineError(
+                "LTR_CHECKPOINT_LOAD_FAILED",
+                f"could not load {checkpoint_path}: {exc}",
+            ) from exc
+
+        digest = hashlib.sha256()
+        with checkpoint_path.open("rb") as handle:
+            for block in iter(lambda: handle.read(1024 * 1024), b""):
+                digest.update(block)
+        return {
+            "path": str(checkpoint_path.resolve()),
+            "fingerprint": digest.hexdigest(),
+            "checkpoint_version": LTR_CHECKPOINT_VERSION,
+            "device": target_device.type,
+            "feature_contract": contract,
+            "L_ref": float(metadata["L_ref"]),
+            "epoch": metadata.get("epoch"),
+            "selection_ap": metadata.get("selection_ap"),
+            "dataset_fingerprint": metadata["dataset_fingerprint"],
+        }
 
     @classmethod
     def load(

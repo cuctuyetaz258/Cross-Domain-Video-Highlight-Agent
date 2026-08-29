@@ -1,11 +1,21 @@
-"""Integration tests for LTR pipeline wiring."""
+"""Integration tests for the checkpoint-required LTR production path."""
+
 from __future__ import annotations
 
 from pathlib import Path
+from unittest.mock import MagicMock
 
 import numpy as np
+import pytest
 
-from highlight_agent.schemas import MediaWorkspace
+from highlight_agent.features.ltr_contract import (
+    LTR_FEATURE_SCHEMA_VERSION,
+    LTRPipelineError,
+    feature_contract,
+)
+from highlight_agent.features.ltr_pipeline import LTRFeatureBundle
+from highlight_agent.models.ltr_scorer import AdditiveAttentionScorer
+from highlight_agent.schemas import HighlightCandidate, MediaWorkspace, TranscriptDocument, TranscriptSegment
 
 
 def _workspace(tmp_path: Path) -> MediaWorkspace:
@@ -19,274 +29,176 @@ def _workspace(tmp_path: Path) -> MediaWorkspace:
     )
 
 
-def test_state_accepts_ltr_model_path():
-    """AgentState TypedDict should accept ltr_model_path=None."""
-    from highlight_agent.agent.state import AgentState
-    state: AgentState = {  # type: ignore[assignment]
-        "video_path": "/tmp/v.mp4",
-        "domain": "lecture",
-        "ltr_model_path": None,
-    }
-    assert state["ltr_model_path"] is None
-
-
-def test_state_accepts_scene_mediapipe():
-    """visual_method should accept scene_mediapipe."""
-    from highlight_agent.agent.state import AgentState
-    state: AgentState = {  # type: ignore[assignment]
-        "video_path": "/tmp/v.mp4",
-        "domain": "lecture",
-        "visual_method": "scene_mediapipe",
-    }
-    assert state["visual_method"] == "scene_mediapipe"
-
-
-def test_features_init_exports_new_modules():
-    """All new modules should be importable from highlight_agent.features."""
-    from highlight_agent.features import (
-        blend_scores,
-        build_feature_matrix,
-        extract_gesture_signal,
-        extract_scene_changes,
-        extract_topk_nms,
-        extract_windows,
+def _checkpoint(tmp_path: Path) -> Path:
+    path = tmp_path / "model.pt"
+    AdditiveAttentionScorer().save(
+        path,
+        metadata={
+            "schema_version": LTR_FEATURE_SCHEMA_VERSION,
+            "feature_schema": feature_contract(),
+            "L_ref": 40.0,
+            "epoch": 2,
+            "selection_ap": 0.8,
+            "dataset_fingerprint": "fixture-dataset",
+        },
     )
-    assert callable(build_feature_matrix)
-    assert callable(extract_windows)
-    assert callable(blend_scores)
-    assert callable(extract_topk_nms)
-    assert callable(extract_scene_changes)
-    assert callable(extract_gesture_signal)
+    return path
 
 
-def test_ltr_pipeline_mock_e2e():
-    """Run feature matrix through extract_windows -> blend_scores -> extract_topk_nms."""
-    import torch
+def test_preflight_rejects_missing_checkpoint_before_media() -> None:
+    from highlight_agent.agent.nodes import preflight
 
-    from highlight_agent.features.nms_topk import extract_topk_nms
-    from highlight_agent.features.overlap_blender import blend_scores
-    from highlight_agent.features.sliding_window import extract_windows
-    from highlight_agent.models.ltr_scorer import AdditiveAttentionScorer
-
-    rng = np.random.default_rng(42)
-    feature_matrix = rng.random((7, 600)).astype(np.float32)
-    window_tensor = extract_windows(feature_matrix, device="cpu")
-    assert window_tensor.shape[1] == 7
-
-    model = AdditiveAttentionScorer()
-    model.eval()
-    with torch.no_grad():
-        raw_scores = model(window_tensor).squeeze(-1)
-    window_scores = raw_scores.cpu().numpy()
-
-    T = feature_matrix.shape[1]
-    timeline_score = blend_scores(window_scores, T=T)
-    assert timeline_score.shape == (T,)
-
-    candidates = extract_topk_nms(timeline_score, k=3, reference_duration=40.0)
-    assert isinstance(candidates, list)
-    assert len(candidates) <= 3
-    for c in candidates:
-        assert c.end_time - c.start_time >= 30
+    with pytest.raises(LTRPipelineError, match="LTR_CHECKPOINT_REQUIRED"):
+        preflight({"video_path": "video.mp4", "domain": "lecture"})
+    with pytest.raises(LTRPipelineError, match="LTR_CHECKPOINT_NOT_FOUND"):
+        preflight(
+            {
+                "video_path": "video.mp4",
+                "domain": "lecture",
+                "ltr_model_path": "missing.pt",
+            }
+        )
 
 
-def test_analyze_fallback_no_ltr_path(tmp_path):
-    """analyze() should not crash when ltr_model_path is None - LTR branch skipped."""
-    from unittest.mock import MagicMock, patch
+def test_preflight_rejects_legacy_checkpoint_schema(tmp_path: Path) -> None:
+    path = tmp_path / "legacy.pt"
+    AdditiveAttentionScorer().save(path, metadata={"L_ref": 40.0})
 
-    from highlight_agent.agent.nodes import analyze
-    from highlight_agent.schemas import AcousticFeatures, HighlightCandidate
+    with pytest.raises(LTRPipelineError, match="LTR_CHECKPOINT_SCHEMA_MISMATCH"):
+        AdditiveAttentionScorer.preflight(path)
 
-    mock_acoustic = MagicMock(spec=AcousticFeatures)
-    mock_acoustic.duration = 120.0
-    mock_acoustic.model_dump.return_value = {}
+
+def test_preflight_returns_contract_and_fingerprint(tmp_path: Path) -> None:
+    info = AdditiveAttentionScorer.preflight(_checkpoint(tmp_path), device="cpu")
+
+    assert info["device"] == "cpu"
+    assert info["feature_contract"] == feature_contract()
+    assert len(info["fingerprint"]) == 64
+
+
+def test_analyze_runs_only_unified_ltr_path(tmp_path: Path, monkeypatch) -> None:
+    from highlight_agent.agent import nodes
 
     workspace = _workspace(tmp_path)
-
-    mock_transcript = MagicMock()
-    mock_transcript.words = []
-
-    state = {
-        "video_path": "/tmp/video.mp4",
-        "domain": "lecture",
-        "ltr_model_path": None,
-        "workspace": workspace,
-        "transcript": mock_transcript,
-        "highlight_count": 3,
-    }
-
-    fake = HighlightCandidate(candidate_id="c_01", start_time=0.0, end_time=60.0, score=0.5, reason="t")
-
-    with (
-        patch("highlight_agent.agent.nodes.extract_windowed_acoustic_features", return_value=(mock_acoustic, [])),
-        patch("highlight_agent.agent.nodes.build_feature_timeline", return_value=MagicMock()),
-        patch("highlight_agent.agent.nodes.extract_visual_scores", return_value=[]),
-        patch("highlight_agent.agent.nodes.calculate_total_score", return_value=[fake]),
-        patch("highlight_agent.agent.nodes.normalize_features", return_value={}),
-        patch("highlight_agent.agent.nodes.save_feature_timeline", return_value="/tmp/f.json"),
-        patch("highlight_agent.agent.nodes._naive_candidates", return_value=[fake]),
-    ):
-        result = analyze(state)
-
-    assert isinstance(result, dict)
-    assert result.get("features", {}).get("mode") != "ltr_dense_overlap"
-
-
-def test_analyze_fallback_missing_model_file(tmp_path):
-    """analyze() should use old pipeline when model file does not exist on disk."""
-    from unittest.mock import MagicMock, patch
-
-    from highlight_agent.agent.nodes import analyze
-    from highlight_agent.schemas import AcousticFeatures, HighlightCandidate
-
-    mock_acoustic = MagicMock(spec=AcousticFeatures)
-    mock_acoustic.duration = 120.0
-    mock_acoustic.model_dump.return_value = {}
-
-    workspace = _workspace(tmp_path)
-
-    mock_transcript = MagicMock()
-    mock_transcript.words = []
-
-    state = {
-        "video_path": "/tmp/video.mp4",
-        "domain": "lecture",
-        "ltr_model_path": "/nonexistent/path/model.pt",
-        "workspace": workspace,
-        "transcript": mock_transcript,
-        "highlight_count": 3,
-    }
-
-    fake = HighlightCandidate(candidate_id="c_01", start_time=0.0, end_time=60.0, score=0.5, reason="t")
-
-    with (
-        patch("highlight_agent.agent.nodes.extract_windowed_acoustic_features", return_value=(mock_acoustic, [])),
-        patch("highlight_agent.agent.nodes.build_feature_timeline", return_value=MagicMock()),
-        patch("highlight_agent.agent.nodes.extract_visual_scores", return_value=[]),
-        patch("highlight_agent.agent.nodes.calculate_total_score", return_value=[fake]),
-        patch("highlight_agent.agent.nodes.normalize_features", return_value={}),
-        patch("highlight_agent.agent.nodes.save_feature_timeline", return_value="/tmp/f.json"),
-        patch("highlight_agent.agent.nodes._naive_candidates", return_value=[fake]),
-    ):
-        result = analyze(state)
-
-    assert isinstance(result, dict)
-    assert result.get("features", {}).get("mode") != "ltr_dense_overlap"
-
-
-def test_analyze_runs_ltr_with_real_workspace_and_checkpoint(tmp_path):
-    """The real MediaWorkspace field and checkpoint device wiring must reach LTR mode."""
-    from unittest.mock import MagicMock, patch
-
-    import torch
-
-    from highlight_agent.agent.nodes import analyze
-    from highlight_agent.agent.state import ProgressEvent
-    from highlight_agent.models.ltr_scorer import AdditiveAttentionScorer
-    from highlight_agent.schemas import AcousticFeatures, HighlightCandidate
-
-    workspace = _workspace(tmp_path)
-    checkpoint_path = tmp_path / "model.pt"
-    AdditiveAttentionScorer().save(checkpoint_path, metadata={"L_ref": 40.0})
-
-    acoustic = MagicMock(spec=AcousticFeatures)
+    checkpoint_path = _checkpoint(tmp_path)
+    transcript = TranscriptDocument(
+        video_id="test-video",
+        language="en",
+        source="whisper",
+        duration=120.0,
+        segments=[TranscriptSegment(id=0, start=0, end=120, text="Complete transcript")],
+    )
+    acoustic = MagicMock()
     acoustic.duration = 120.0
-    acoustic.model_dump.return_value = {}
-    transcript = MagicMock()
-    transcript.words = []
-    baseline = [
+    matrix = np.random.default_rng(42).random((7, 1200)).astype(np.float32)
+    bundle = LTRFeatureBundle(
+        matrix=matrix,
+        acoustic=acoustic,
+        acoustic_windows=[],
+        interaction=None,
+        metadata={
+            "feature_contract": feature_contract(),
+            "extractor": {"scene_status": "ok", "gesture_status": "ok"},
+            "observations": {},
+            "channel_stats": {},
+        },
+    )
+    candidates = [
         HighlightCandidate(
-            candidate_id=f"base_{index}",
-            start_time=float(index * 30),
-            end_time=float(index * 30 + 30),
-            score=0.5,
-            reason="baseline",
+            candidate_id=f"ltr_{index:02d}",
+            start_time=float((index - 1) * 30),
+            end_time=float(index * 30),
+            score=1.0 / index,
+            reason="LTR",
         )
-        for index in range(3)
+        for index in range(1, 4)
     ]
-    ltr_candidates = [
-        HighlightCandidate(
-            candidate_id=f"ltr_{index}",
-            start_time=float(index * 30),
-            end_time=float(index * 30 + 30),
-            score=0.8,
-            reason="ltr",
-        )
-        for index in range(3)
-    ]
-    events: list[ProgressEvent] = []
-
-    def scene_extractor(path, duration):
-        assert path == workspace.source_video_path
-        assert duration == 120.0
-        return []
-
-    def gesture_extractor(path, duration):
-        assert path == workspace.source_video_path
-        assert duration == 120.0
-        return np.zeros(240, dtype=np.float32)
-
     timeline = MagicMock()
-    timeline.windows = []
     timeline.model_dump.return_value = {}
-    feature_matrix = np.random.default_rng(42).random((7, 1200)).astype(np.float32)
-    semantic_scores = [(0.0, 10.0, 0.7)]
+    checkpoint_info = AdditiveAttentionScorer.preflight(checkpoint_path, device="cpu")
 
-    def matrix_builder(acoustic_value, acoustic_windows, scenes, gesture, word_scores, interaction, duration):
-        assert acoustic_value is acoustic
-        assert word_scores == semantic_scores
-        return feature_matrix
+    monkeypatch.setattr(nodes, "build_ltr_features", lambda **kwargs: bundle)
+    monkeypatch.setattr(nodes, "build_feature_timeline", lambda **kwargs: timeline)
+    monkeypatch.setattr(nodes, "save_feature_timeline", lambda *args: tmp_path / "features.json")
+    monkeypatch.setattr(nodes, "extract_topk_nms", lambda *args, **kwargs: candidates)
 
-    state = {
-        "video_path": str(workspace.source_video_path),
-        "domain": "lecture",
-        "workspace": workspace,
-        "transcript": transcript,
-        "highlight_count": 3,
-        "ltr_model_path": str(checkpoint_path),
-        "emit": events.append,
-    }
+    result = nodes.analyze(
+        {
+            "video_path": str(workspace.source_video_path),
+            "domain": "lecture",
+            "workspace": workspace,
+            "transcript": transcript,
+            "highlight_count": 3,
+            "ltr_model_path": str(checkpoint_path),
+            "ltr_checkpoint_info": checkpoint_info,
+        }
+    )
 
-    with (
-        patch("highlight_agent.agent.nodes.extract_windowed_acoustic_features", return_value=(acoustic, [])),
-        patch("highlight_agent.agent.nodes.build_feature_timeline", return_value=timeline),
-        patch("highlight_agent.agent.nodes.extract_visual_scores", return_value=[]),
-        patch("highlight_agent.agent.nodes.calculate_total_score", return_value=baseline),
-        patch("highlight_agent.agent.nodes.normalize_features", return_value={}),
-        patch("highlight_agent.agent.nodes.save_feature_timeline", return_value=tmp_path / "features.json"),
-        patch("highlight_agent.agent.nodes._naive_candidates", return_value=baseline),
-        patch("highlight_agent.features.visual_new.extract_scene_changes", side_effect=scene_extractor),
-        patch("highlight_agent.features.visual_new.extract_gesture_signal", side_effect=gesture_extractor),
-        patch(
-            "highlight_agent.features.semantic.transcript_tfidf_density_scores",
-            return_value=semantic_scores,
-        ),
-        patch("highlight_agent.features.alignment.build_feature_matrix", side_effect=matrix_builder),
-        patch("highlight_agent.features.nms_topk.extract_topk_nms", return_value=ltr_candidates),
-    ):
-        result = analyze(state)
-
-    assert result["features"]["mode"] == "ltr_dense_overlap"
-    assert result["candidates"] == ltr_candidates
-    assert any(event.step == "ltr_done" for event in events)
-    expected_device = "cuda" if torch.cuda.is_available() else "cpu"
-    assert any(event.meta.get("device") == expected_device for event in events)
+    assert result["features"]["mode"] == "ltr_required"
+    assert result["candidates"] == candidates
+    assert result["features"]["checkpoint"]["fingerprint"] == checkpoint_info["fingerprint"]
+    assert not hasattr(nodes, "_naive_candidates")
+    assert not hasattr(nodes, "_extract_visual_windows")
 
 
-def test_cli_exposes_ltr_model_and_scene_mediapipe():
+def test_analyze_fails_when_deterministic_pool_is_too_small(tmp_path: Path, monkeypatch) -> None:
+    from highlight_agent.agent import nodes
+
+    workspace = _workspace(tmp_path)
+    checkpoint_path = _checkpoint(tmp_path)
+    transcript = TranscriptDocument(
+        video_id="test-video",
+        language="en",
+        source="whisper",
+        duration=120.0,
+        segments=[TranscriptSegment(id=0, start=0, end=120, text="Transcript")],
+    )
+    acoustic = MagicMock()
+    acoustic.duration = 120.0
+    bundle = LTRFeatureBundle(
+        np.zeros((7, 1200), dtype=np.float32),
+        acoustic,
+        [],
+        None,
+        {
+            "feature_contract": feature_contract(),
+            "extractor": {},
+            "observations": {},
+            "channel_stats": {},
+        },
+    )
+    timeline = MagicMock()
+    timeline.model_dump.return_value = {}
+    monkeypatch.setattr(nodes, "build_ltr_features", lambda **kwargs: bundle)
+    monkeypatch.setattr(nodes, "build_feature_timeline", lambda **kwargs: timeline)
+    monkeypatch.setattr(nodes, "save_feature_timeline", lambda *args: tmp_path / "features.json")
+    monkeypatch.setattr(nodes, "extract_topk_nms", lambda *args, **kwargs: [])
+
+    with pytest.raises(LTRPipelineError, match="LTR_NOT_ENOUGH_CANDIDATES"):
+        nodes.analyze(
+            {
+                "video_path": str(workspace.source_video_path),
+                "domain": "lecture",
+                "workspace": workspace,
+                "transcript": transcript,
+                "highlight_count": 3,
+                "ltr_model_path": str(checkpoint_path),
+            }
+        )
+
+
+def test_cli_defaults_to_required_checkpoint_and_removes_visual_flags() -> None:
     from scripts.run_agent import parse_args
 
-    args = parse_args(
-        [
-            "video.mp4",
-            "--domain",
-            "lecture",
-            "--ltr-model-path",
-            "model.pt",
-            "--visual-method",
-            "scene_mediapipe",
-        ]
-    )
-
-    assert args.ltr_model_path == "model.pt"
-    assert args.visual_method == "scene_mediapipe"
+    args = parse_args(["video.mp4", "--domain", "lecture"])
+    assert args.ltr_model_path == "data/models/ltr_scorer.pt"
+    with pytest.raises(SystemExit):
+        parse_args(
+            [
+                "video.mp4",
+                "--domain",
+                "lecture",
+                "--visual-method",
+                "pixel_diff",
+            ]
+        )

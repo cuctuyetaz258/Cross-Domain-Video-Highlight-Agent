@@ -2,6 +2,9 @@ import os
 
 import streamlit as st
 
+from highlight_agent.features.ltr_contract import LTRPipelineError
+from highlight_agent.models.ltr_scorer import AdditiveAttentionScorer
+
 
 def render_sidebar():
     with st.sidebar:
@@ -19,30 +22,52 @@ def render_sidebar():
 
         domain = st.selectbox("Content Domain", ["lecture", "podcast", "standup"])
 
-        with st.expander("LTR & Visual Settings"):
-            st.selectbox(
-                "Visual method",
-                ["pixel_diff", "raft", "scene_mediapipe"],
-                key="visual_method",
-                help="scene_mediapipe is used by the dense LTR feature path.",
+        with st.expander("Required LTR Model", expanded=True):
+            checkpoint_path = st.text_input(
+                "LTR checkpoint path",
+                value="data/models/ltr_scorer.pt",
+                key="ltr_model_path",
+                help="The pipeline stops before media processing when this checkpoint is invalid.",
             )
-            st.number_input(
-                "Visual sample FPS",
-                min_value=0.25,
-                max_value=10.0,
-                value=1.0,
-                step=0.25,
-                key="visual_sample_fps",
+            checkpoint_info = None
+            try:
+                checkpoint_info = AdditiveAttentionScorer.preflight(checkpoint_path)
+                st.success(
+                    "Valid checkpoint · "
+                    f"schema {checkpoint_info['feature_contract']['schema_version']} · "
+                    f"{checkpoint_info['device']} · {checkpoint_info['fingerprint'][:12]}"
+                )
+            except LTRPipelineError as exc:
+                st.error(str(exc))
+
+        with st.expander("LLM Semantic Reranking"):
+            st.selectbox(
+                "LLM provider",
+                ["disabled", "openai", "groq", "custom"],
+                key="llm_provider",
+                help="API key is read from the process environment and is never stored in the result.",
             )
             st.text_input(
-                "LTR checkpoint path",
+                "LLM model",
                 value="",
-                key="ltr_model_path",
-                placeholder="data/models/ltr_scorer.pt",
-                help="Leave empty to use the current weighted-sum pipeline.",
+                key="llm_model",
+                placeholder="gpt-4.1-mini",
             )
+            st.text_input(
+                "Custom base URL",
+                value="",
+                key="llm_base_url",
+                placeholder="https://provider.example/v1",
+            )
+            st.slider("Candidates sent to LLM", 3, 12, 10, key="llm_top_m")
+            st.slider("LTR weight", 0.0, 1.0, 0.60, 0.05, key="llm_ltr_weight")
 
-        if st.button("Process Video", type="primary", use_container_width=True):
+        if st.button(
+            "Process Video",
+            type="primary",
+            use_container_width=True,
+            disabled=checkpoint_info is None,
+        ):
             if input_type == "YouTube URL" and youtube_url:
                 st.session_state["target_url"] = youtube_url
                 st.session_state["target_domain"] = domain

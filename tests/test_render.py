@@ -5,6 +5,7 @@ from highlight_agent.media import render
 from highlight_agent.schemas import (
     BoundaryAdjustment,
     HighlightCandidate,
+    LLMHighlightAssessment,
     MediaWorkspace,
     TranscriptDocument,
     TranscriptSegment,
@@ -115,6 +116,23 @@ def test_render_highlights_writes_metadata_without_running_ffmpeg(tmp_path: Path
         _candidates(),
         transcript=transcript,
         boundary_adjustments=adjustments,
+        llm_assessments={
+            candidate.candidate_id: LLMHighlightAssessment(
+                candidate_id=candidate.candidate_id,
+                semantic_relevance=0.8,
+                standalone_value=0.8,
+                completeness=0.9,
+                hook_strength=0.7,
+                shareability=0.8,
+                title=f"Title {candidate.candidate_id}",
+                summary="A transcript-grounded summary.",
+                evidence="Hello",
+                suggested_start_time=None,
+                suggested_end_time=None,
+                risk_flags=[],
+            )
+            for candidate in _candidates()
+        },
     )
 
     assert len(results) == 3
@@ -122,3 +140,5 @@ def test_render_highlights_writes_metadata_without_running_ffmpeg(tmp_path: Path
     assert metadata["video_id"] == "abcdefghijk"
     assert len(metadata["highlights"]) == 3
     assert metadata["boundary_adjustments"][0]["start_source"] == "original"
+    assert metadata["highlights"][0]["title"] == "Title candidate-0"
+    assert metadata["highlights"][0]["completeness_score"] == 0.9

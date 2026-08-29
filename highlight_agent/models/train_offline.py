@@ -17,19 +17,20 @@ from sklearn.metrics import average_precision_score
 from torch.optim import AdamW
 from torch.optim.lr_scheduler import CosineAnnealingLR
 
+from highlight_agent.features.ltr_contract import (
+    LTR_CHANNEL_ORDER,
+    LTR_FEATURE_SCHEMA_VERSION,
+    LTR_HOP_SIZE,
+    LTR_SAMPLE_RATE,
+    LTR_WINDOW_SIZE,
+    feature_contract,
+)
+
 from .ltr_scorer import AdditiveAttentionScorer
 
-FEATURE_SCHEMA_VERSION = "1.0"
-FEATURE_SAMPLE_RATE = 10
-FEATURE_CHANNELS = (
-    "rms",
-    "pitch",
-    "silence",
-    "text_score",
-    "scene_change",
-    "gesture",
-    "turn_rate",
-)
+FEATURE_SCHEMA_VERSION = LTR_FEATURE_SCHEMA_VERSION
+FEATURE_SAMPLE_RATE = LTR_SAMPLE_RATE
+FEATURE_CHANNELS = LTR_CHANNEL_ORDER
 LABEL_TO_INT = {"negative": 0, "positive": 1, "ignored": -1}
 
 
@@ -560,6 +561,10 @@ def train(
         raise ValueError("hidden_dim, batch_size, max_epochs and patience must be positive")
     if lambda_smooth < 0:
         raise ValueError("lambda_smooth must be non-negative")
+    if int(round(window_sec * FEATURE_SAMPLE_RATE)) != LTR_WINDOW_SIZE:
+        raise ValueError(f"window_sec must remain {LTR_WINDOW_SIZE / FEATURE_SAMPLE_RATE:g}")
+    if int(round(hop_sec * FEATURE_SAMPLE_RATE)) != LTR_HOP_SIZE:
+        raise ValueError(f"hop_sec must remain {LTR_HOP_SIZE / FEATURE_SAMPLE_RATE:g}")
 
     _set_seed(seed)
     output = Path(output_path)
@@ -671,12 +676,7 @@ def train(
                 output,
                 metadata={
                     "schema_version": FEATURE_SCHEMA_VERSION,
-                    "feature_schema": {
-                        "channel_order": list(FEATURE_CHANNELS),
-                        "sample_rate": FEATURE_SAMPLE_RATE,
-                        "window_sec": window_sec,
-                        "hop_sec": hop_sec,
-                    },
+                    "feature_schema": feature_contract(),
                     "L_ref": l_ref,
                     "epoch": best_epoch,
                     "selection_ap": best_ap,
@@ -698,12 +698,7 @@ def train(
                 last_checkpoint_path,
                 metadata={
                     "schema_version": FEATURE_SCHEMA_VERSION,
-                    "feature_schema": {
-                        "channel_order": list(FEATURE_CHANNELS),
-                        "sample_rate": FEATURE_SAMPLE_RATE,
-                        "window_sec": window_sec,
-                        "hop_sec": hop_sec,
-                    },
+                    "feature_schema": feature_contract(),
                     "L_ref": l_ref,
                     "epoch": epoch,
                     "selection_ap": selection_ap,

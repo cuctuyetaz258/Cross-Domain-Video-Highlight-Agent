@@ -20,7 +20,7 @@ class HighlightCandidate(BaseModel):
     @model_validator(mode="after")
     def validate_candidate(self) -> Self:
         duration = self.end_time - self.start_time
-        if duration < 30 or duration > 90:
+        if duration < 30 - 1e-6 or duration > 90 + 1e-6:
             raise ValueError("highlight duration must be between 30 and 90 seconds")
         if not math.isfinite(self.score):
             raise ValueError("highlight score must be finite")
@@ -62,10 +62,15 @@ class RenderedHighlight(BaseModel):
     start_time: float = Field(ge=0)
     end_time: float = Field(gt=0)
     reason: str = Field(min_length=1)
+    title: str | None = Field(default=None, max_length=120)
+    summary: str | None = Field(default=None, max_length=600)
+    semantic_score: float | None = Field(default=None, ge=0, le=1)
+    completeness_score: float | None = Field(default=None, ge=0, le=1)
+    llm_risk_flags: list[str] = Field(default_factory=list)
 
     @model_validator(mode="after")
     def validate_time_range(self) -> Self:
         duration = self.end_time - self.start_time
-        if duration < 30 or duration > 90:
+        if duration < 30 - 1e-6 or duration > 90 + 1e-6:
             raise ValueError("rendered highlight duration must be between 30 and 90 seconds")
         return self

@@ -1,4 +1,4 @@
-"""Chạy LangGraph năm pha tích hợp đa tầng tín hiệu & Live Progress"""
+"""Run the checkpoint-required LTR pipeline with optional LLM reranking."""
 
 from __future__ import annotations
 
@@ -6,6 +6,11 @@ import argparse
 import json
 import os
 import sys
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
 
 # Force UTF-8 output trên Windows (tránh cp1252 encode error với emoji)
 if sys.platform == "win32":
@@ -29,7 +34,6 @@ except ImportError:
 
 from highlight_agent.agent import build_agent_graph
 from highlight_agent.agent.state import ProgressEvent
-from highlight_agent.backend import load_candidates
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
@@ -43,7 +47,6 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         default=None,
         help="Số speaker đã biết, dùng cho Pyannote diarization của podcast",
     )
-    parser.add_argument("--candidates", help="Optional external candidate JSON")
     parser.add_argument("--output-dir", default=None)
     parser.add_argument("--cookies-browser", default=None)
     parser.add_argument(
@@ -53,22 +56,21 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     )
     parser.add_argument("--no-subtitles", action="store_true")
     parser.add_argument(
-        "--visual-method",
-        choices=["pixel_diff", "raft", "scene_mediapipe"],
-        default="pixel_diff",
-        help="Phương pháp visual: pixel_diff, raft hoặc scene_mediapipe cho nhánh LTR.",
-    )
-    parser.add_argument(
-        "--visual-sample-fps",
-        type=float,
-        default=1.0,
-        help="Số frame lấy mẫu mỗi giây (1.0 = nhanh, 2.0 = chính xác hơn).",
-    )
-    parser.add_argument(
         "--ltr-model-path",
-        default=None,
-        help="Checkpoint LTR (.pt). Bỏ trống để dùng pipeline weighted-sum hiện tại.",
+        default="data/models/ltr_scorer.pt",
+        help="Required compatible LTR checkpoint (.pt).",
     )
+    parser.add_argument(
+        "--llm-provider",
+        choices=["disabled", "openai", "groq", "custom"],
+        default="disabled",
+        help="Bật semantic reranking. API key được đọc từ environment, không truyền qua CLI.",
+    )
+    parser.add_argument("--llm-model", default=None, help="Model slug; bỏ trống để dùng mặc định theo provider.")
+    parser.add_argument("--llm-base-url", default=None, help="OpenAI-compatible base URL cho provider custom.")
+    parser.add_argument("--llm-top-m", type=int, default=10, choices=range(3, 13))
+    parser.add_argument("--llm-ltr-weight", type=float, default=0.60)
+    parser.add_argument("--llm-timeout-seconds", type=float, default=45.0)
     return parser.parse_args(argv)
 
 
@@ -87,7 +89,7 @@ def main() -> None:
             table.add_row("[dim]Đang khởi tạo...[/dim]")
         return Panel(
             table,
-            title="[bold blue]🎬 Multi-Modal Highlight Agent Flow[/bold blue]",
+            title="[bold blue]🎬 LTR-Required Highlight Agent[/bold blue]",
             border_style="blue",
         )
 
@@ -96,6 +98,7 @@ def main() -> None:
     def emit(event: ProgressEvent):
         icon = {
             "start": "🔄",
+            "preflight": "🔐",
             "visual_start": "🔄",
             "visual_window": "📐",
             "visual_normalize": "⚙️",
@@ -104,6 +107,9 @@ def main() -> None:
             "fallback": "⚠️",
             "ranking": "🏆",
             "rendering": "🎞️",
+            "llm_start": "🧠",
+            "llm_done": "✅",
+            "llm_fallback": "⚠️",
         }.get(event.step, "ℹ️")
         msg = f"{icon} [{event.node}/{event.step}] {event.message}"
         rows.append(msg)
@@ -121,14 +127,15 @@ def main() -> None:
         "cookies_browser": args.cookies_browser,
         "transcript_source": args.transcript_source,
         "burn_subtitles": not args.no_subtitles,
-        "visual_method": args.visual_method,
-        "visual_sample_fps": args.visual_sample_fps,
         "ltr_model_path": args.ltr_model_path,
+        "llm_provider": args.llm_provider,
+        "llm_model": args.llm_model,
+        "llm_base_url": args.llm_base_url,
+        "llm_top_m": args.llm_top_m,
+        "llm_ltr_weight": args.llm_ltr_weight,
+        "llm_timeout_seconds": args.llm_timeout_seconds,
         "emit": emit,
     }
-    if args.candidates:
-        state["candidates"] = load_candidates(args.candidates)
-
     graph = build_agent_graph()
 
     if HAS_RICH and console is not None:
@@ -158,6 +165,12 @@ def main() -> None:
             item.model_dump(mode="json") for item in result.get("rendered_highlights", [])
         ],
         "reasoning": result.get("reasoning", []),
+        "llm_assessments": [
+            item.model_dump(mode="json") for item in result.get("llm_assessments", [])
+        ],
+        "llm_run": (
+            result["llm_run"].model_dump(mode="json") if result.get("llm_run") else None
+        ),
     }
     print(json.dumps(summary, ensure_ascii=False, indent=2))
 

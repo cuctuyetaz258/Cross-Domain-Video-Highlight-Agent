@@ -16,7 +16,7 @@ def run_live_agent(video_url: str, domain: str, stepper_placeholder):
     """
     Executes the live LangGraph backend and updates the stepper UI & logs dynamically.
     """
-    phases = ["observe", "plan", "analyze", "decide", "explain"]
+    phases = ["preflight", "observe", "plan", "analyze", "decide", "explain"]
 
     status_container = st.status("🎬 Processing Video Pipeline...", expanded=True)
 
@@ -44,6 +44,9 @@ def run_live_agent(video_url: str, domain: str, stepper_placeholder):
             "fallback": "⚠️",
             "ranking": "🏆",
             "rendering": "🎞️",
+            "llm_start": "🧠",
+            "llm_done": "✅",
+            "llm_fallback": "⚠️",
         }
         icon = icon_map.get(event.step, "ℹ️")
         log(f"{icon} [{event.node}/{event.step}] {event.message}")
@@ -51,12 +54,11 @@ def run_live_agent(video_url: str, domain: str, stepper_placeholder):
     log(f"Starting highlight extraction for: {video_url}")
     log(f"Selected Domain: {domain}")
 
-    visual_method = st.session_state.get("visual_method", "pixel_diff")
-    visual_sample_fps = st.session_state.get("visual_sample_fps", 1.0)
-    ltr_model_path = st.session_state.get("ltr_model_path") or None
+    ltr_model_path = st.session_state.get("ltr_model_path", "data/models/ltr_scorer.pt")
     known_speaker_count = st.session_state.get("known_speaker_count", None)
-    ltr_status = ltr_model_path if ltr_model_path else "disabled"
-    log(f"Visual method: {visual_method} | Sample FPS: {visual_sample_fps} | LTR: {ltr_status}")
+    log(f"Required LTR checkpoint: {ltr_model_path}")
+    llm_provider = st.session_state.get("llm_provider", "disabled")
+    log(f"LLM semantic reranker: {llm_provider}")
 
     state = {
         "video_path": video_url,
@@ -66,9 +68,12 @@ def run_live_agent(video_url: str, domain: str, stepper_placeholder):
         "cookies_browser": st.session_state.get("cookies_browser"),
         "known_speaker_count": known_speaker_count,
         "burn_subtitles": False,
-        "visual_method": visual_method,
-        "visual_sample_fps": visual_sample_fps,
         "ltr_model_path": ltr_model_path,
+        "llm_provider": llm_provider,
+        "llm_model": st.session_state.get("llm_model") or None,
+        "llm_base_url": st.session_state.get("llm_base_url") or None,
+        "llm_top_m": st.session_state.get("llm_top_m", 10),
+        "llm_ltr_weight": st.session_state.get("llm_ltr_weight", 0.60),
         "emit": emit,
     }
 
@@ -108,6 +113,15 @@ def run_live_agent(video_url: str, domain: str, stepper_placeholder):
                     item.model_dump(mode="json") for item in final_state.get("rendered_highlights", [])
                 ] if final_state.get("rendered_highlights") else [],
                 "reasoning": final_state.get("reasoning", []),
+                "llm_assessments": [
+                    item.model_dump(mode="json")
+                    for item in final_state.get("llm_assessments", [])
+                ],
+                "llm_run": (
+                    final_state["llm_run"].model_dump(mode="json")
+                    if final_state.get("llm_run")
+                    else None
+                ),
             }
             return summary
         else:

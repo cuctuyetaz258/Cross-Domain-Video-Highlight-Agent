@@ -11,6 +11,7 @@ from highlight_agent.schemas import (
     BoundaryAdjustment,
     FeatureTimeline,
     HighlightCandidate,
+    LLMHighlightAssessment,
     MediaWorkspace,
     RenderedHighlight,
     TranscriptDocument,
@@ -78,6 +79,8 @@ def render_candidates(
     burn_subtitles: bool = True,
     boundary_adjustments: list[BoundaryAdjustment] | None = None,
     refine_boundaries: bool = True,
+    llm_assessments: dict[str, LLMHighlightAssessment] | None = None,
+    pipeline_metadata: dict | None = None,
 ) -> list[RenderedHighlight]:
     transcript = load_transcript(workspace.transcript_path)
     if refine_boundaries:
@@ -92,4 +95,6 @@ def render_candidates(
         transcript=transcript,
         burn_subtitles=burn_subtitles,
         boundary_adjustments=boundary_adjustments,
+        llm_assessments=llm_assessments,
+        pipeline_metadata=pipeline_metadata,
     )

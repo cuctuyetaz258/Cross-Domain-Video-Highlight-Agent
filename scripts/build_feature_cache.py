@@ -6,6 +6,7 @@ import argparse
 import json
 import sys
 import time
+from collections import Counter
 from pathlib import Path
 from typing import Any
 
@@ -16,15 +17,13 @@ if str(PROJECT_ROOT) not in sys.path:
 import numpy as np  # noqa: E402
 
 from highlight_agent.backend import load_transcript  # noqa: E402
-from highlight_agent.features.acoustic import extract_windowed_acoustic_features  # noqa: E402
-from highlight_agent.features.alignment import build_feature_matrix  # noqa: E402
+from highlight_agent.features.ltr_pipeline import build_ltr_features  # noqa: E402
 from highlight_agent.features.semantic import transcript_tfidf_density_scores  # noqa: E402
 from highlight_agent.features.visual_new import (  # noqa: E402
     extract_gesture_observation,
-    extract_scene_changes,
 )
 from highlight_agent.models.train_offline import (  # noqa: E402
-    FEATURE_SAMPLE_RATE,
+    FEATURE_CHANNELS,
     feature_cache_metadata,
     load_feature_matrix,
     load_training_manifest,
@@ -134,46 +133,18 @@ def build_cache_for_record(
             f"transcript duration {transcript.duration:.3f}s differs from manifest {duration:.3f}s"
         )
 
-    stage_times: dict[str, float] = {}
-    stage_started = time.perf_counter()
-    print(f"  {video_id}: acoustic", flush=True)
-    acoustic, acoustic_windows = extract_windowed_acoustic_features(audio_path)
-    stage_times["acoustic"] = time.perf_counter() - stage_started
-
-    stage_started = time.perf_counter()
-    print(f"  {video_id}: transcript TF-IDF", flush=True)
-    word_scores = transcript_word_scores(transcript)
-    stage_times["semantic"] = time.perf_counter() - stage_started
-
-    stage_started = time.perf_counter()
-    print(f"  {video_id}: scene detection", flush=True)
-    scene_times = extract_scene_changes(video_path, duration) if include_scenes else []
-    stage_times["scene"] = time.perf_counter() - stage_started
-
-    stage_started = time.perf_counter()
-    print(f"  {video_id}: gesture sampling", flush=True)
-    gesture_result = (
-        extract_gesture_observation(video_path, duration, sample_rate=2.0)
-        if include_gesture
-        else None
+    print(f"  {video_id}: unified LTR features", flush=True)
+    bundle = build_ltr_features(
+        video_path=video_path,
+        audio_path=audio_path,
+        transcript=transcript,
+        domain=record["domain"],
+        duration=duration,
+        include_scenes=include_scenes,
+        include_gesture=include_gesture,
+        device=device,
     )
-    gesture = (
-        gesture_result.signal
-        if gesture_result is not None
-        else np.zeros(int(duration * 2.0), dtype=np.float32)
-    )
-    stage_times["gesture"] = time.perf_counter() - stage_started
-
-    matrix = build_feature_matrix(
-        acoustic,
-        acoustic_windows,
-        scene_times,
-        gesture,
-        word_scores,
-        None,
-        duration,
-        sample_rate=FEATURE_SAMPLE_RATE,
-    )
+    matrix = bundle.matrix
     metadata = {
         **feature_cache_metadata(video_id, matrix),
         "duration": duration,
@@ -186,30 +157,11 @@ def build_cache_for_record(
         "video_path": str(record["video_path"]),
         "audio_path": str(record["audio_path"]),
         "transcript_path": str(record["transcript_path"]),
-        "extractor": {
-            "device": device,
-            "acoustic_window_seconds": 30.0,
-            "acoustic_hop_seconds": 30.0,
-            "text_method": "segment_tfidf_density",
-            "scene_enabled": include_scenes,
-            "gesture_enabled": include_gesture,
-            "gesture_sample_rate": 2.0,
-            "gesture_status": gesture_result.status if gesture_result is not None else "disabled",
-            "interaction_method": "none_non_podcast",
-        },
-        "observations": {
-            "acoustic_window_count": len(acoustic_windows),
-            "text_interval_count": len(word_scores),
-            "scene_count": len(scene_times),
-            "gesture_sample_count": int(len(gesture)),
-            "gesture_decoded_sample_count": (
-                gesture_result.decoded_sample_count if gesture_result is not None else 0
-            ),
-            "gesture_detected_sample_count": (
-                gesture_result.detected_sample_count if gesture_result is not None else 0
-            ),
-        },
-        "stage_seconds": {key: round(value, 3) for key, value in stage_times.items()},
+        "feature_contract": bundle.metadata["feature_contract"],
+        "extractor": bundle.metadata["extractor"],
+        "observations": bundle.metadata["observations"],
+        "channel_stats": bundle.metadata["channel_stats"],
+        "stage_seconds": bundle.metadata["stage_seconds"],
     }
     _atomic_write_cache(cache_dir, matrix, metadata)
     validated = load_feature_matrix(cache_root, video_id)
@@ -264,7 +216,7 @@ def build_manifest_caches(
             result = {"video_id": record.get("video_id"), "status": "failed", "error": str(exc)}
         results.append(result)
         print(json.dumps(result, sort_keys=True), flush=True)
-    return {
+    report = {
         "manifest": str(Path(manifest_path).resolve()),
         "output_dir": str(Path(output_dir).resolve()),
         "requested_video_count": len(records),
@@ -274,6 +226,74 @@ def build_manifest_caches(
         "elapsed_seconds": round(time.perf_counter() - started, 3),
         "results": results,
     }
+    if not report["failed_count"] and not refresh_gesture_observation:
+        report["distribution"] = summarize_feature_distribution(records, output_dir)
+    return report
+
+
+def summarize_feature_distribution(
+    records: list[dict[str, Any]],
+    output_dir: str | Path,
+) -> dict[str, Any]:
+    """Aggregate per-channel distribution and extractor statuses by split."""
+
+    groups: dict[str, list[dict[str, Any]]] = {"all": records}
+    for split in sorted({str(record["split"]) for record in records}):
+        groups[split] = [record for record in records if record["split"] == split]
+
+    result: dict[str, Any] = {}
+    for group_name, group_records in groups.items():
+        accumulators = {
+            channel: {
+                "count": 0,
+                "sum": 0.0,
+                "sum_sq": 0.0,
+                "zero_count": 0,
+                "min": float("inf"),
+                "max": float("-inf"),
+                "nonzero_video_count": 0,
+            }
+            for channel in FEATURE_CHANNELS
+        }
+        gesture_statuses: Counter[str] = Counter()
+        scene_statuses: Counter[str] = Counter()
+        for record in group_records:
+            video_id = str(record["video_id"])
+            matrix = load_feature_matrix(output_dir, video_id)
+            metadata_path = Path(output_dir) / video_id / "metadata.json"
+            metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+            gesture_statuses[str(metadata["extractor"]["gesture_status"])] += 1
+            scene_statuses[str(metadata["extractor"]["scene_status"])] += 1
+            for channel, values in zip(FEATURE_CHANNELS, matrix):
+                accumulator = accumulators[channel]
+                accumulator["count"] += int(values.size)
+                accumulator["sum"] += float(values.sum(dtype=np.float64))
+                accumulator["sum_sq"] += float(np.square(values, dtype=np.float64).sum())
+                accumulator["zero_count"] += int(np.count_nonzero(values == 0.0))
+                accumulator["min"] = min(accumulator["min"], float(values.min()))
+                accumulator["max"] = max(accumulator["max"], float(values.max()))
+                accumulator["nonzero_video_count"] += int(np.any(values != 0.0))
+
+        channel_report: dict[str, Any] = {}
+        for channel, accumulator in accumulators.items():
+            count = accumulator["count"]
+            mean = accumulator["sum"] / count
+            variance = max(0.0, accumulator["sum_sq"] / count - mean**2)
+            channel_report[channel] = {
+                "min": accumulator["min"],
+                "max": accumulator["max"],
+                "mean": mean,
+                "std": variance**0.5,
+                "zero_ratio": accumulator["zero_count"] / count,
+                "nonzero_video_count": accumulator["nonzero_video_count"],
+                "video_count": len(group_records),
+            }
+        result[group_name] = {
+            "channels": channel_report,
+            "gesture_status_counts": dict(sorted(gesture_statuses.items())),
+            "scene_status_counts": dict(sorted(scene_statuses.items())),
+        }
+    return result
 
 
 def _write_json(path: str | Path, payload: dict[str, Any]) -> None:

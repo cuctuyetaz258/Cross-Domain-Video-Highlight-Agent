@@ -18,7 +18,8 @@ def render_video_mockup(data: dict):
 
     for idx, highlight in enumerate(rendered_highlights[:3]):
         with cols[idx]:
-            st.markdown(f"### Highlight {idx + 1}")
+            title = highlight.get("title") or f"Highlight {idx + 1}"
+            st.markdown(f"### {title}")
 
             video_path = highlight.get("video_path")
             if video_path and os.path.exists(video_path):
@@ -32,5 +33,15 @@ def render_video_mockup(data: dict):
 
             exp = reason_map.get(highlight["candidate_id"], highlight.get("reason", "Highly engaging moment based on acoustic and text signals."))
 
+            if highlight.get("summary"):
+                st.markdown(highlight["summary"])
+            if highlight.get("completeness_score") is not None:
+                st.caption(
+                    f"Semantic: {highlight.get('semantic_score', 0):.2f} · "
+                    f"Completeness: {highlight['completeness_score']:.2f}"
+                )
+            if highlight.get("llm_risk_flags"):
+                st.warning("Risk flags: " + ", ".join(highlight["llm_risk_flags"]))
+
             with st.expander("Why was this selected?", expanded=True):
-                st.markdown(f"<div style='font-size: 0.9em;'>{exp}</div>", unsafe_allow_html=True)
+                st.markdown(exp)
