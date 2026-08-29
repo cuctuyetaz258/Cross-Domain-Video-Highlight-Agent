@@ -19,6 +19,7 @@ from highlight_agent.backend import load_transcript  # noqa: E402
 from highlight_agent.models.train_offline import (  # noqa: E402
     compute_lref,
     create_window_labels,
+    load_ordinal_annotation,
     load_training_manifest,
 )
 from highlight_agent.paths import resolve_project_path  # noqa: E402
@@ -136,6 +137,20 @@ def validate_manifest(
             resolved[field] = path
             if not path.is_file():
                 errors.append(f"{prefix} {video_id}: {field} not found: {path}")
+
+        if source == "in_domain_ordinal":
+            annotation_value = record.get("annotation_path")
+            if not annotation_value:
+                errors.append(f"{prefix} {video_id}: in_domain_ordinal requires annotation_path")
+            else:
+                annotation_path = resolve_record_path(annotation_value, root)
+                if not annotation_path.is_file():
+                    errors.append(f"{prefix} {video_id}: annotation_path not found: {annotation_path}")
+                else:
+                    try:
+                        load_ordinal_annotation(annotation_path, video_id=video_id)
+                    except Exception as exc:
+                        errors.append(f"{prefix} {video_id}: invalid ordinal annotation: {exc}")
 
         video_path = resolved.get("video_path")
         duration = float(record.get("duration") or 0.0)

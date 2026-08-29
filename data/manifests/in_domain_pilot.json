@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "name": "in-domain-ltr-finetuning-pilot",
+  "annotation_protocol": "multimodal_tvsum_style_2s_ordinal_1_to_5",
+  "media_root": "data/raw/in_domain_pilot",
+  "videos": [
+    {"video_id": "-cRswJf8OnI", "url": "https://www.youtube.com/watch?v=-cRswJf8OnI", "domain": "podcast", "duration": 1314.0, "annotation_path": "data/annotations/raw/-cRswJf8OnI.csv", "min_speaker_count": 1, "max_speaker_count": 3},
+    {"video_id": "1bszFX_XcbU", "url": "https://www.youtube.com/watch?v=1bszFX_XcbU", "domain": "podcast", "duration": 864.0, "annotation_path": "data/annotations/raw/1bszFX_XcbU.csv", "min_speaker_count": 1, "max_speaker_count": 3},
+    {"video_id": "DNQDqq4mWSY", "url": "https://www.youtube.com/watch?v=DNQDqq4mWSY", "domain": "podcast", "duration": 690.0, "annotation_path": "data/annotations/raw/DNQDqq4mWSY.csv", "min_speaker_count": 1, "max_speaker_count": 3},
+    {"video_id": "IHZwWFHWa-w", "url": "https://www.youtube.com/watch?v=IHZwWFHWa-w", "domain": "lecture", "duration": 1236.0, "annotation_path": "data/annotations/raw/IHZwWFHWa-w.csv"},
+    {"video_id": "u36A-YTxiOw", "url": "https://www.youtube.com/watch?v=u36A-YTxiOw", "domain": "podcast", "duration": 1266.0, "annotation_path": "data/annotations/raw/u36A-YTxiOw.csv", "min_speaker_count": 1, "max_speaker_count": 3},
+    {"video_id": "waLjtcUq5Mc", "url": "https://www.youtube.com/watch?v=waLjtcUq5Mc", "domain": "podcast", "duration": 996.0, "annotation_path": "data/annotations/raw/waLjtcUq5Mc.csv", "min_speaker_count": 1, "max_speaker_count": 3}
+  ],
+  "folds": [
+    {"id": "01", "validation": "1bszFX_XcbU", "test": "-cRswJf8OnI"},
+    {"id": "02", "validation": "DNQDqq4mWSY", "test": "1bszFX_XcbU"},
+    {"id": "03", "validation": "IHZwWFHWa-w", "test": "DNQDqq4mWSY"},
+    {"id": "04", "validation": "u36A-YTxiOw", "test": "IHZwWFHWa-w"},
+    {"id": "05", "validation": "waLjtcUq5Mc", "test": "u36A-YTxiOw"},
+    {"id": "06", "validation": "-cRswJf8OnI", "test": "waLjtcUq5Mc"}
+  ]
+}

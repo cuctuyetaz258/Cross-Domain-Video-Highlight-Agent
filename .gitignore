@@ -57,6 +57,7 @@ dist/
 # Documentation (local only)
 docs/*
 !docs/sample_videos.md
+!docs/in_domain_pilot_report.md
 
 # Local Kaggle upload and verification bundles
 kaggle_checkpoint_upload/

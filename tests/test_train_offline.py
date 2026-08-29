@@ -6,6 +6,7 @@ import numpy as np
 import pytest
 import torch
 
+from highlight_agent.models.ltr_scorer import AdditiveAttentionScorer
 from highlight_agent.models.train_offline import (
     FEATURE_CHANNELS,
     WindowExample,
@@ -152,6 +153,33 @@ def test_custom_long_highlight_uses_window_coverage_not_symmetric_iou():
     assert next(item for item in labels if item["start"] == 20.0)["label"] == "positive"
 
 
+def test_ordinal_csv_labels_use_weighted_score_and_keep_midpoint_for_pairs(tmp_path) -> None:
+    annotation = tmp_path / "video.csv"
+    annotation.write_text(
+        "video_id,start_sec,end_sec,importance\n"
+        "video,0,2,1\n"
+        "video,2,4,3\n"
+        "video,4,6,5\n"
+        "video,6,8,5\n",
+        encoding="utf-8",
+    )
+    labels = create_window_labels(
+        {
+            "video_id": "video",
+            "source": "in_domain_ordinal",
+            "annotation_path": annotation,
+            "duration": 8.0,
+        },
+        window_sec=5.0,
+        hop_sec=1.0,
+    )
+
+    assert labels[0]["score"] == pytest.approx((2 * 1 + 2 * 3 + 1 * 5) / 5)
+    assert labels[0]["label"] == "ignored"
+    assert labels[2]["score"] == pytest.approx(4.2)
+    assert labels[2]["label"] == "positive"
+
+
 def test_create_window_labels_summe_has_both_classes():
     record = {
         "source": "summe",
@@ -288,3 +316,46 @@ def test_train_writes_real_ap_checkpoint_and_log(tmp_path):
     assert training_log["epochs"]
     assert all("train_smooth_loss" in epoch for epoch in training_log["epochs"])
     assert all("val_ap" in epoch for epoch in training_log["epochs"])
+
+
+def test_train_loads_validated_initial_checkpoint(tmp_path) -> None:
+    matrix = np.zeros((7, 200), dtype=np.float32)
+    matrix[0, 100:150] = 1.0
+    _write_cache(tmp_path, "train-video", matrix)
+    _write_cache(tmp_path, "val-video", matrix)
+    initial = AdditiveAttentionScorer()
+    source_path = tmp_path / "source.pt"
+    initial.save(
+        source_path,
+        metadata={
+            "schema_version": "1.1",
+            "feature_schema": {
+                "schema_version": "1.1",
+                "channel_order": list(FEATURE_CHANNELS),
+                "sample_rate": 10,
+                "normalization": "minmax_per_video",
+                "window_size": 50,
+                "hop_size": 10,
+                "window_sec": 5.0,
+                "hop_sec": 1.0,
+                "output_clip_seconds": 30.0,
+                "extractor_version": "1.0",
+            },
+            "L_ref": 5.0,
+            "dataset_fingerprint": "source-data",
+        },
+    )
+    output = tmp_path / "fine-tuned.pt"
+    train(
+        tmp_path,
+        [_qv_record("train-video")],
+        output,
+        [_qv_record("val-video")],
+        init_checkpoint_path=source_path,
+        max_epochs=1,
+        patience=1,
+    )
+
+    _model, metadata = AdditiveAttentionScorer.load_checkpoint(output)
+    assert metadata["initialization"]["path"] == str(source_path.resolve())
+    assert metadata["initialization"]["source_dataset_fingerprint"] == "source-data"

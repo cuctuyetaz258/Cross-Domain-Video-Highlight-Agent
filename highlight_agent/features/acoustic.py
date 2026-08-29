@@ -59,7 +59,9 @@ def _pitch_statistics(
     fmin_hz: float,
     fmax_hz: float,
 ) -> tuple[dict[str, float | None], float]:
-    f0, voiced_flag, _ = librosa.pyin(
+    # YIN keeps the same F0 range as the former pYIN implementation but avoids
+    # pYIN's large candidate-probability matrix on multi-minute recordings.
+    f0 = librosa.yin(
         samples,
         fmin=fmin_hz,
         fmax=fmax_hz,
@@ -68,7 +70,12 @@ def _pitch_statistics(
         hop_length=hop_length,
     )
     voiced = f0[np.isfinite(f0)]
-    voiced_ratio = float(np.mean(voiced_flag)) if len(voiced_flag) else 0.0
+    if len(voiced):
+        median = float(np.median(voiced))
+        # Suppress octave/silence outliers that YIN can emit without pYIN's
+        # voiced-probability post-processing.
+        voiced = voiced[(voiced >= median * 0.75) & (voiced <= median * 1.25)]
+    voiced_ratio = float(np.mean(np.isfinite(f0))) if len(f0) else 0.0
     if not len(voiced):
         return {
             "pitch_mean_hz": None,
@@ -96,6 +103,7 @@ def _extract_from_samples(
     fmax_hz: float,
     silence_threshold_db: float,
     min_silence_duration: float,
+    include_pitch: bool = True,
 ) -> AcousticFeatures:
     if sample_rate <= 0 or samples.size == 0:
         raise ValueError("audio must contain at least one sample")
@@ -131,14 +139,24 @@ def _extract_from_samples(
             min_duration=min_silence_duration,
         )
         silence_duration = float(sum(interval.end - interval.start for interval in silence_intervals))
-        pitch, voiced_ratio = _pitch_statistics(
-            samples,
-            sample_rate=sample_rate,
-            frame_length=frame_length,
-            hop_length=hop_length,
-            fmin_hz=fmin_hz,
-            fmax_hz=fmax_hz,
-        )
+        if include_pitch:
+            pitch, voiced_ratio = _pitch_statistics(
+                samples,
+                sample_rate=sample_rate,
+                frame_length=frame_length,
+                hop_length=hop_length,
+                fmin_hz=fmin_hz,
+                fmax_hz=fmax_hz,
+            )
+        else:
+            pitch = {
+                "pitch_mean_hz": None,
+                "pitch_median_hz": None,
+                "pitch_std_hz": None,
+                "pitch_min_hz": None,
+                "pitch_max_hz": None,
+            }
+            voiced_ratio = 0.0
 
     return AcousticFeatures(
         duration=duration,
@@ -220,6 +238,9 @@ def extract_windowed_acoustic_features(
         fmax_hz=fmax_hz,
         silence_threshold_db=silence_threshold_db,
         min_silence_duration=min_silence_duration,
+        # Full-file pYIN allocates a very large candidate matrix on long
+        # recordings. The LTR matrix consumes the per-window pitch below.
+        include_pitch=False,
     )
 
     windows: list[FeatureWindow] = []

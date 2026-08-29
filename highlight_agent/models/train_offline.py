@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import hashlib
 import json
 import random
@@ -46,6 +47,16 @@ class WindowExample:
     feature: np.ndarray
     label: int
     score: float
+    pair_mode: str = "binary"
+
+
+@dataclass(frozen=True)
+class RankingPair:
+    """One ordered pair, with a margin scaled by its ordinal label gap."""
+
+    positive: WindowExample
+    negative: WindowExample
+    margin_scale: float = 1.0
 
 
 def _tvsum_record(
@@ -278,6 +289,43 @@ def create_window_labels(
             )
         return labels
 
+    if source == "in_domain_ordinal":
+        annotation_path = record.get("annotation_path")
+        if not annotation_path:
+            raise ValueError("in_domain_ordinal record requires annotation_path")
+        intervals = load_ordinal_annotation(annotation_path, video_id=str(record.get("video_id", "")))
+        duration = float(record.get("duration") or intervals[-1][1])
+        # Source media can end mid-annotation interval. A single 2-second
+        # template tail is excluded rather than creating labels past media.
+        if intervals[-1][1] - duration > 5.0 or duration - intervals[-1][1] > 2.0:
+            raise ValueError(
+                f"annotation duration {intervals[-1][1]:.3f}s differs from record duration {duration:.3f}s"
+            )
+        label_duration = min(duration, intervals[-1][1])
+        for start_sec in np.arange(0, label_duration, hop_sec):
+            end_sec = float(start_sec + window_sec)
+            if end_sec > label_duration + 1e-6:
+                break
+            weighted_score = 0.0
+            covered = 0.0
+            for annotation_start, annotation_end, importance in intervals:
+                overlap = max(0.0, min(end_sec, annotation_end) - max(float(start_sec), annotation_start))
+                weighted_score += overlap * importance
+                covered += overlap
+            if covered < window_sec - 1e-6:
+                raise ValueError(f"annotation does not fully cover window {start_sec:.3f}-{end_sec:.3f}")
+            window_score = weighted_score / covered
+            label = "positive" if window_score >= 4.0 else "negative" if window_score <= 2.0 else "ignored"
+            labels.append(
+                {
+                    "start": float(start_sec),
+                    "end": end_sec,
+                    "label": label,
+                    "score": window_score,
+                }
+            )
+        return labels
+
     if source != "qvhighlights":
         raise ValueError(f"unsupported training source: {source}")
 
@@ -321,11 +369,55 @@ def create_window_labels(
     return labels
 
 
+def load_ordinal_annotation(path: str | Path, *, video_id: str) -> list[tuple[float, float, float]]:
+    """Load one complete 2-second internal annotation CSV without guessing labels."""
+
+    annotation_path = Path(path)
+    with annotation_path.open(encoding="utf-8-sig", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    if not rows:
+        raise ValueError(f"ordinal annotation is empty: {annotation_path}")
+
+    intervals: list[tuple[float, float, float]] = []
+    expected_start = 0.0
+    for row_index, row in enumerate(rows, start=2):
+        if str(row.get("video_id", "")).strip() != video_id:
+            raise ValueError(f"annotation row {row_index} video_id does not match {video_id!r}")
+        try:
+            start = float(row["start_sec"])
+            end = float(row["end_sec"])
+            importance = float(str(row.get("importance", "")).strip())
+        except (KeyError, TypeError, ValueError) as exc:
+            raise ValueError(f"annotation row {row_index} has invalid timestamp or importance") from exc
+        if importance not in {1.0, 2.0, 3.0, 4.0, 5.0}:
+            raise ValueError(f"annotation row {row_index} importance must be an integer in [1, 5]")
+        if end <= start or abs(start - expected_start) > 0.15:
+            raise ValueError(f"annotation row {row_index} is not a continuous timeline")
+        intervals.append((start, end, importance))
+        expected_start = end
+    return intervals
+
+
 def compute_lref(records: Iterable[dict[str, Any]]) -> float:
     """Compute the median reference highlight duration from annotations."""
 
     durations: list[float] = []
     for record in records:
+        if record["source"] == "in_domain_ordinal":
+            intervals = load_ordinal_annotation(record["annotation_path"], video_id=str(record["video_id"]))
+            current_start: float | None = None
+            current_end: float | None = None
+            for start, end, importance in intervals:
+                if importance >= 4.0:
+                    current_start = start if current_start is None else current_start
+                    current_end = end
+                elif current_start is not None and current_end is not None:
+                    durations.append(current_end - current_start)
+                    current_start = None
+                    current_end = None
+            if current_start is not None and current_end is not None:
+                durations.append(current_end - current_start)
+            continue
         if record["source"] in {"qvhighlights", "custom", "custom_pseudo"}:
             durations.extend(float(end - start) for start, end in record.get("relevant_windows", []))
             continue
@@ -422,20 +514,62 @@ def build_window_examples(
                     feature=feature,
                     label=LABEL_TO_INT[label_record["label"]],
                     score=float(label_record["score"]),
+                    pair_mode="ordinal" if record.get("source") == "in_domain_ordinal" else "binary",
                 )
             )
     return examples
 
 
-def _pair_examples(examples: Iterable[WindowExample]) -> list[tuple[WindowExample, WindowExample]]:
+def _stable_video_seed(seed: int, video_id: str) -> int:
+    digest = hashlib.sha256(f"{seed}:{video_id}".encode("utf-8")).digest()
+    return int.from_bytes(digest[:8], "big")
+
+
+def _ordinal_pairs(
+    examples: list[WindowExample],
+    *,
+    seed: int,
+    max_pairs: int,
+) -> list[RankingPair]:
+    """Reservoir-sample score-separated ordinal pairs without long videos dominating."""
+
+    ordered = sorted(examples, key=lambda example: (example.score, example.window_index))
+    reservoir: list[RankingPair] = []
+    generator = random.Random(_stable_video_seed(seed, ordered[0].video_id))
+    seen = 0
+    for low_index, low in enumerate(ordered):
+        for high in ordered[low_index + 1 :]:
+            gap = high.score - low.score
+            if gap < 1.0 - 1e-6:
+                continue
+            seen += 1
+            pair = RankingPair(positive=high, negative=low, margin_scale=gap / 4.0)
+            if len(reservoir) < max_pairs:
+                reservoir.append(pair)
+            else:
+                replacement = generator.randrange(seen)
+                if replacement < max_pairs:
+                    reservoir[replacement] = pair
+    return reservoir
+
+
+def _pair_examples(
+    examples: Iterable[WindowExample],
+    *,
+    seed: int = 42,
+    ordinal_pair_cap: int = 10_000,
+) -> list[RankingPair]:
     by_video: dict[str, list[WindowExample]] = defaultdict(list)
     for example in examples:
         by_video[example.video_id].append(example)
-    pairs: list[tuple[WindowExample, WindowExample]] = []
+    pairs: list[RankingPair] = []
     for video_examples in by_video.values():
+        if video_examples and video_examples[0].pair_mode == "ordinal":
+            pairs.extend(_ordinal_pairs(video_examples, seed=seed, max_pairs=ordinal_pair_cap))
+            continue
         positives = [example for example in video_examples if example.label == 1]
         negatives = [example for example in video_examples if example.label == 0]
-        pairs.extend((positive, negative) for positive in positives for negative in negatives)
+        pairs.extend(RankingPair(positive=positive, negative=negative) for positive in positives for negative in negatives)
     return pairs
 
 
@@ -448,7 +582,7 @@ def create_pairwise_dataset(
     """Create positive/negative feature pairs while preserving the legacy return type."""
 
     examples = build_window_examples(feature_cache_dir, records, window_sec, hop_sec)
-    return [(positive.feature, negative.feature) for positive, negative in _pair_examples(examples)]
+    return [(pair.positive.feature, pair.negative.feature) for pair in _pair_examples(examples)]
 
 
 def margin_ranking_loss(
@@ -520,10 +654,14 @@ def _records_fingerprint(records: Iterable[dict[str, Any]]) -> str:
             "duration": record.get("duration"),
             "fps": record.get("fps"),
             "relevant_windows": record.get("relevant_windows"),
+            "annotation_path": record.get("annotation_path"),
         }
         hasher.update(json.dumps(summary, sort_keys=True, default=str).encode("utf-8"))
         if "frame_scores" in record:
             hasher.update(np.asarray(record["frame_scores"], dtype=np.float32).tobytes())
+        annotation_path = record.get("annotation_path")
+        if annotation_path:
+            hasher.update(Path(annotation_path).read_bytes())
     return hasher.hexdigest()
 
 
@@ -552,12 +690,14 @@ def train(
     seed: int = 42,
     training_log_path: str | Path | None = None,
     last_checkpoint_path: str | Path | None = None,
+    init_checkpoint_path: str | Path | None = None,
+    ordinal_pair_cap: int = 10_000,
 ) -> AdditiveAttentionScorer:
     """Train the scorer with ranking and temporal smoothness objectives."""
 
     if not records:
         raise ValueError("training records must not be empty")
-    if hidden_dim <= 0 or batch_size <= 0 or max_epochs <= 0 or patience <= 0:
+    if hidden_dim <= 0 or batch_size <= 0 or max_epochs <= 0 or patience <= 0 or ordinal_pair_cap <= 0:
         raise ValueError("hidden_dim, batch_size, max_epochs and patience must be positive")
     if lambda_smooth < 0:
         raise ValueError("lambda_smooth must be non-negative")
@@ -571,7 +711,7 @@ def train(
     log_path = Path(training_log_path) if training_log_path else output.with_name("training_log.json")
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     train_examples = build_window_examples(feature_cache_dir, records, window_sec, hop_sec)
-    train_pairs = _pair_examples(train_examples)
+    train_pairs = _pair_examples(train_examples, seed=seed, ordinal_pair_cap=ordinal_pair_cap)
     if not train_pairs:
         raise ValueError("training data must contain positive and negative windows in the same video")
 
@@ -590,7 +730,28 @@ def train(
     for video_id in chronological:
         chronological[video_id].sort(key=lambda example: example.window_index)
 
-    model = AdditiveAttentionScorer(in_features=len(FEATURE_CHANNELS), hidden_dim=hidden_dim).to(device)
+    initialization: dict[str, Any] | None = None
+    if init_checkpoint_path is not None:
+        initial_info = AdditiveAttentionScorer.preflight(init_checkpoint_path, device=device)
+        model, initial_metadata = AdditiveAttentionScorer.load_checkpoint(
+            init_checkpoint_path,
+            device=device,
+            expected_in_features=len(FEATURE_CHANNELS),
+        )
+        if model.hidden_dim != hidden_dim:
+            raise ValueError(
+                f"init checkpoint hidden_dim={model.hidden_dim} does not match requested hidden_dim={hidden_dim}"
+            )
+        initialization = {
+            "path": initial_info["path"],
+            "fingerprint": initial_info["fingerprint"],
+            "checkpoint_version": initial_info["checkpoint_version"],
+            "feature_contract": initial_info["feature_contract"],
+            "source_epoch": initial_metadata.get("epoch"),
+            "source_dataset_fingerprint": initial_metadata.get("dataset_fingerprint"),
+        }
+    else:
+        model = AdditiveAttentionScorer(in_features=len(FEATURE_CHANNELS), hidden_dim=hidden_dim).to(device)
     optimizer = AdamW(model.parameters(), lr=lr, weight_decay=weight_decay)
     scheduler = CosineAnnealingLR(optimizer, T_max=max_epochs)
     random_generator = random.Random(seed)
@@ -612,6 +773,8 @@ def train(
         "hop_sec": hop_sec,
         "seed": seed,
         "device": device.type,
+        "ordinal_pair_cap": ordinal_pair_cap,
+        "init_checkpoint": initialization,
     }
 
     for epoch in range(1, max_epochs + 1):
@@ -623,15 +786,16 @@ def train(
         for offset in range(0, len(shuffled_pairs), batch_size):
             batch = shuffled_pairs[offset : offset + batch_size]
             positive_features = torch.as_tensor(
-                np.stack([positive.feature for positive, _ in batch]), dtype=torch.float32, device=device
+                np.stack([pair.positive.feature for pair in batch]), dtype=torch.float32, device=device
             )
             negative_features = torch.as_tensor(
-                np.stack([negative.feature for _, negative in batch]), dtype=torch.float32, device=device
+                np.stack([pair.negative.feature for pair in batch]), dtype=torch.float32, device=device
             )
             optimizer.zero_grad()
-            margin_loss = margin_ranking_loss(
-                model(positive_features), model(negative_features), gamma=gamma
-            )
+            pair_margins = torch.as_tensor(
+                [gamma * pair.margin_scale for pair in batch], dtype=torch.float32, device=device
+            ).reshape(-1, 1)
+            margin_loss = torch.relu(pair_margins - model(positive_features) + model(negative_features)).mean()
             margin_loss.backward()
             optimizer.step()
             margin_total += float(margin_loss.detach().cpu()) * len(batch)
@@ -688,6 +852,7 @@ def train(
                         _records_fingerprint(val_records) if val_records else None
                     ),
                     "config": config,
+                    "initialization": initialization,
                 },
             )
         else:
@@ -710,6 +875,7 @@ def train(
                         _records_fingerprint(val_records) if val_records else None
                     ),
                     "config": config,
+                    "initialization": initialization,
                     "checkpoint_role": "last",
                 },
             )
@@ -723,6 +889,7 @@ def train(
                     "sample_rate": FEATURE_SAMPLE_RATE,
                 },
                 "config": config,
+                "initialization": initialization,
                 "selection_split": selection_split,
                 "best_epoch": best_epoch,
                 "best_ap": best_ap,
@@ -748,6 +915,7 @@ def _parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--output", required=True, help="Output checkpoint path")
     parser.add_argument("--training-log", default=None, help="Optional training log JSON path")
     parser.add_argument("--last-output", default=None, help="Optional last-epoch checkpoint path")
+    parser.add_argument("--init-checkpoint", default=None, help="Optional validated checkpoint used to initialize fine-tuning")
     parser.add_argument("--training-config", default=None, help="Optional resolved config JSON path")
     parser.add_argument("--evaluation-snapshot", default=None, help="Optional metric snapshot JSON path")
     parser.add_argument("--hidden-dim", type=int, default=32)
@@ -761,6 +929,7 @@ def _parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--window-sec", type=float, default=5.0)
     parser.add_argument("--hop-sec", type=float, default=1.0)
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--ordinal-pair-cap", type=int, default=10_000)
     return parser.parse_args(argv)
 
 
@@ -796,6 +965,8 @@ def main(argv: list[str] | None = None) -> None:
         seed=args.seed,
         training_log_path=args.training_log,
         last_checkpoint_path=args.last_output,
+        init_checkpoint_path=args.init_checkpoint,
+        ordinal_pair_cap=args.ordinal_pair_cap,
     )
     resolved_config = {
         "manifest": args.manifest,
@@ -804,6 +975,7 @@ def main(argv: list[str] | None = None) -> None:
         "cache_dir": args.cache_dir,
         "output": args.output,
         "last_output": args.last_output,
+        "init_checkpoint": args.init_checkpoint,
         "hidden_dim": args.hidden_dim,
         "gamma": args.gamma,
         "lambda_smooth": args.lambda_smooth,
@@ -815,6 +987,7 @@ def main(argv: list[str] | None = None) -> None:
         "window_sec": args.window_sec,
         "hop_sec": args.hop_sec,
         "seed": args.seed,
+        "ordinal_pair_cap": args.ordinal_pair_cap,
     }
     if args.training_config:
         _write_training_log(Path(args.training_config), resolved_config)

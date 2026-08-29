@@ -63,6 +63,7 @@ def build_ltr_features(
     max_speaker_count: int | None = None,
     include_scenes: bool = True,
     include_gesture: bool = True,
+    gesture_sample_rate: float = 0.2,
     device: str = "cpu",
 ) -> LTRFeatureBundle:
     """Build the production seven-channel, 10 Hz matrix exactly once."""
@@ -106,7 +107,7 @@ def build_ltr_features(
     started = time.perf_counter()
     try:
         gesture = (
-            extract_gesture_observation(video_path, duration, sample_rate=2.0)
+            extract_gesture_observation(video_path, duration, sample_rate=gesture_sample_rate)
             if include_gesture
             else None
         )
@@ -179,7 +180,7 @@ def build_ltr_features(
             "scene_enabled": include_scenes,
             "scene_status": scene.status if scene is not None else "disabled",
             "gesture_enabled": include_gesture,
-            "gesture_sample_rate": 2.0,
+            "gesture_sample_rate": gesture_sample_rate,
             "gesture_status": gesture.status if gesture is not None else "disabled",
             "interaction_method": "pyannote" if domain == "podcast" else "zero_non_podcast",
         },
