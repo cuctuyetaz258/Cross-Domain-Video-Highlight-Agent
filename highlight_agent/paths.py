@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from pathlib import Path, PureWindowsPath
+from pathlib import Path, PurePosixPath, PureWindowsPath
 
 
 def resolve_project_path(value: str | Path, project_root: str | Path) -> Path:
@@ -10,7 +10,13 @@ def resolve_project_path(value: str | Path, project_root: str | Path) -> Path:
 
     raw_value = str(value)
     windows_path = PureWindowsPath(raw_value)
-    if Path(raw_value).is_absolute() or windows_path.is_absolute() or windows_path.drive:
+    posix_path = PurePosixPath(raw_value)
+    if (
+        Path(raw_value).is_absolute()
+        or posix_path.is_absolute()
+        or windows_path.is_absolute()
+        or windows_path.drive
+    ):
         raise ValueError(f"manifest path must be relative to project root: {value}")
 
     root = Path(project_root).resolve()
