@@ -7,7 +7,10 @@ from pathlib import Path
 # Numba cần thư mục cache có thể ghi trước khi Librosa được import
 os.environ.setdefault("NUMBA_CACHE_DIR", str(Path(tempfile.gettempdir()) / "highlight-agent-numba-cache"))
 
-import librosa
+try:
+    import librosa
+except ImportError:
+    librosa = None
 import numpy as np
 
 from highlight_agent.schemas import AcousticFeatures, FeatureWindow, TimeInterval
@@ -174,6 +177,8 @@ def extract_acoustic_features(
     if silence_threshold_db <= 0 or min_silence_duration < 0:
         raise ValueError("silence threshold and minimum duration must be positive")
 
+    if librosa is None:
+        raise ImportError("Vui lòng cài đặt librosa: pip install librosa")
     samples, sample_rate = librosa.load(Path(audio_path), sr=None, mono=True)
     return _extract_from_samples(
         samples,
@@ -203,6 +208,8 @@ def extract_windowed_acoustic_features(
 
     if window_seconds <= 0 or hop_seconds <= 0:
         raise ValueError("window_seconds and hop_seconds must be positive")
+    if librosa is None:
+        raise ImportError("Vui lòng cài đặt librosa: pip install librosa")
     samples, sample_rate = librosa.load(Path(audio_path), sr=None, mono=True)
     global_features = _extract_from_samples(
         samples,

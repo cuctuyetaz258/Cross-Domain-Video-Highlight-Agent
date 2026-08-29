@@ -3,6 +3,7 @@ target-version = "py311"
 line-length = 120
 exclude = [
     "week1",
+    "*.ipynb",
     ".venv",
     "output",
     "data",
