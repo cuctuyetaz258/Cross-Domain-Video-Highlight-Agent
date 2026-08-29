@@ -9,6 +9,7 @@ from typing import Literal, Protocol
 
 from dotenv import load_dotenv
 from openai import OpenAI
+from pydantic import ValidationError
 
 from highlight_agent.schemas import (
     CandidateTranscriptContext,
@@ -18,6 +19,7 @@ from highlight_agent.schemas import (
 load_dotenv()
 
 PROMPT_VERSION = "ltr-semantic-rerank-v1"
+MAX_ASSESSMENT_ATTEMPTS = 2
 
 ProviderName = Literal["openai", "groq", "custom"]
 
@@ -38,6 +40,9 @@ Mỗi candidate phải có đúng một assessment. Title và summary phải đ�
 diễn sự kiện ngoài dữ liệu. evidence là một trích đoạn ngắn hoặc diễn giải sát transcript. Chỉ đề
 xuất start/end khi hai timestamp đó xuất hiện trong context và giúp clip trọn câu hơn; nếu không,
 trả null cho cả hai. Không dùng LTR score làm bằng chứng ngữ nghĩa.
+
+Giữ nguyên chính xác từng candidate_id được đưa vào. Output phải có đúng một assessment cho mỗi
+candidate_id, không lặp, không thiếu, và không thêm ID mới.
 
 Miền nội dung: {domain}. {domain_guidance}
 """
@@ -154,6 +159,7 @@ class OpenAICompatibleAssessmentClient:
         )
         user_payload = {
             "candidate_count": len(contexts),
+            "required_candidate_ids": [context.candidate_id for context in contexts],
             "candidates": [context.model_dump(mode="json") for context in contexts],
         }
         if self.provider == "openai":
@@ -171,23 +177,46 @@ class OpenAICompatibleAssessmentClient:
                 LLMHighlightAssessmentBatch.model_json_schema()
             )
 
-        try:
-            response = self._client.chat.completions.create(
-                model=self.model,
-                response_format=response_format,
-                messages=[
-                    {"role": "system", "content": system_prompt},
+        messages = [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": json.dumps(user_payload, ensure_ascii=False)},
+        ]
+        expected_ids = [context.candidate_id for context in contexts]
+        last_error: Exception | None = None
+        for attempt in range(MAX_ASSESSMENT_ATTEMPTS):
+            try:
+                response = self._client.chat.completions.create(
+                    model=self.model,
+                    response_format=response_format,
+                    messages=messages,
+                )
+                content = response.choices[0].message.content
+                if not content:
+                    raise LLMProviderError("LLM returned an empty response")
+                batch = LLMHighlightAssessmentBatch.model_validate_json(content)
+                actual_ids = [assessment.candidate_id for assessment in batch.assessments]
+                if actual_ids != expected_ids:
+                    raise ValueError(
+                        "assessment candidate IDs must exactly match required order "
+                        f"{expected_ids}; received {actual_ids}"
+                    )
+                return batch
+            except (ValidationError, ValueError) as exc:
+                last_error = exc
+                if attempt + 1 == MAX_ASSESSMENT_ATTEMPTS:
+                    break
+                messages.append(
                     {
                         "role": "user",
-                        "content": json.dumps(user_payload, ensure_ascii=False),
-                    },
-                ],
-            )
-            content = response.choices[0].message.content
-            if not content:
-                raise LLMProviderError("LLM returned an empty response")
-            return LLMHighlightAssessmentBatch.model_validate_json(content)
-        except LLMProviderError:
-            raise
-        except Exception as exc:  # noqa: BLE001
-            raise LLMProviderError(f"LLM assessment failed: {exc}") from exc
+                        "content": (
+                            "Your previous JSON was invalid because its assessments did not contain "
+                            "each required candidate_id exactly once. Return the complete corrected JSON "
+                            f"for these IDs, in this exact order: {expected_ids}."
+                        ),
+                    }
+                )
+            except LLMProviderError:
+                raise
+            except Exception as exc:  # noqa: BLE001
+                raise LLMProviderError(f"LLM assessment failed: {exc}") from exc
+        raise LLMProviderError(f"LLM assessment failed after repair retry: {last_error}")

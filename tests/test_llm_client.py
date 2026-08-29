@@ -46,6 +46,12 @@ def _response_json() -> str:
     )
 
 
+def _response_json_for(candidate_id: str) -> str:
+    payload = json.loads(_response_json())
+    payload["assessments"][0]["candidate_id"] = candidate_id
+    return json.dumps(payload)
+
+
 class _FakeCompletions:
     def __init__(self) -> None:
         self.kwargs = None
@@ -125,3 +131,42 @@ def test_malformed_provider_response_becomes_fallback_safe_error() -> None:
 
     with pytest.raises(LLMProviderError, match="assessment failed"):
         client.assess([_context()], domain="lecture")
+
+
+def test_openai_provider_repairs_duplicate_candidate_ids_once() -> None:
+    first = {
+        "assessments": [
+            json.loads(_response_json_for("c1"))["assessments"][0],
+            json.loads(_response_json_for("c1"))["assessments"][0],
+        ]
+    }
+    second = {
+        "assessments": [
+            json.loads(_response_json_for("c1"))["assessments"][0],
+            json.loads(_response_json_for("c2"))["assessments"][0],
+        ]
+    }
+
+    class SequencedCompletions:
+        def __init__(self) -> None:
+            self.calls: list[dict] = []
+
+        def create(self, **kwargs):
+            self.calls.append(kwargs)
+            payload = first if len(self.calls) == 1 else second
+            return SimpleNamespace(
+                choices=[SimpleNamespace(message=SimpleNamespace(content=json.dumps(payload)))]
+            )
+
+    client = OpenAICompatibleAssessmentClient(
+        LLMClientConfig(provider="openai", model="test-model", api_key="test-key")
+    )
+    completions = SequencedCompletions()
+    client._client = SimpleNamespace(chat=SimpleNamespace(completions=completions))
+    contexts = [_context(), _context().model_copy(update={"candidate_id": "c2"})]
+
+    result = client.assess(contexts, domain="lecture")
+
+    assert [item.candidate_id for item in result.assessments] == ["c1", "c2"]
+    assert len(completions.calls) == 2
+    assert "exact order" in completions.calls[1]["messages"][-1]["content"]
