@@ -5,6 +5,9 @@ from components.sidebar import render_sidebar
 from components.stepper import render_stepper
 from components.timeline import render_timeline
 from components.video_mockup import render_video_mockup
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Premium Web Design Setup
 st.set_page_config(

@@ -15,6 +15,8 @@ from highlight_agent.schemas import (
     LLMHighlightAssessmentBatch,
 )
 
+load_dotenv()
+
 PROMPT_VERSION = "ltr-semantic-rerank-v1"
 
 ProviderName = Literal["openai", "groq", "custom"]
