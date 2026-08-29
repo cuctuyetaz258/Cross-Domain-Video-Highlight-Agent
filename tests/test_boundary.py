@@ -89,6 +89,75 @@ def test_boundary_falls_back_to_nearest_segment_when_words_are_missing() -> None
     assert (adjustment.start_source, adjustment.end_source) == ("segment_fallback", "segment_fallback")
 
 
+def test_boundary_extends_to_next_segment_instead_of_using_previous_sentence_end() -> None:
+    transcript = TranscriptDocument(
+        video_id="abcdefghijk",
+        language="en",
+        source="whisper",
+        duration=200.0,
+        segments=[
+            TranscriptSegment(
+                id=0,
+                start=126.0,
+                end=129.0,
+                text="The previous sentence.",
+                words=[
+                    TranscriptWord(start=126.0, end=128.0, text="previous"),
+                    TranscriptWord(start=128.0, end=129.0, text="sentence."),
+                ],
+            ),
+            TranscriptSegment(
+                id=1,
+                start=129.2,
+                end=134.5,
+                text="This sentence must be completed.",
+                words=[
+                    TranscriptWord(start=129.2, end=131.0, text="This"),
+                    TranscriptWord(start=131.0, end=134.5, text="completed"),
+                ],
+            ),
+        ],
+    )
+
+    refined, adjustment = refine_candidate_boundary(
+        _candidate(start=100.0, end=130.0),
+        transcript,
+        [],
+        video_duration=200.0,
+    )
+
+    assert refined.end_time == 134.5
+    assert adjustment.end_source == "punctuation"
+
+
+def test_boundary_never_moves_end_backward_to_previous_punctuation() -> None:
+    transcript = TranscriptDocument(
+        video_id="abcdefghijk",
+        language="en",
+        source="whisper",
+        duration=200.0,
+        segments=[
+            TranscriptSegment(
+                id=0,
+                start=120.0,
+                end=129.0,
+                text="The only complete sentence.",
+                words=[TranscriptWord(start=128.0, end=129.0, text="sentence.")],
+            )
+        ],
+    )
+
+    refined, adjustment = refine_candidate_boundary(
+        _candidate(start=100.0, end=130.0),
+        transcript,
+        [],
+        video_duration=200.0,
+    )
+
+    assert refined.end_time == 130.0
+    assert adjustment.end_source == "original"
+
+
 def test_boundary_keeps_original_start_when_shift_would_make_clip_too_short() -> None:
     transcript = TranscriptDocument(
         video_id="abcdefghijk",

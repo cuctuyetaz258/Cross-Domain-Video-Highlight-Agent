@@ -18,6 +18,7 @@ class BoundaryConfig:
     """Cấu hình cho việc tìm mốc cắt tự nhiên"""
 
     search_radius_seconds: float = 3.0
+    end_search_radius_seconds: float = 8.0
     min_duration_seconds: float = 30.0
     max_duration_seconds: float = 90.0
 
@@ -27,17 +28,43 @@ DEFAULT_BOUNDARY_CONFIG = BoundaryConfig()
 
 def _sentence_boundaries(transcript: TranscriptDocument) -> tuple[list[float], list[float]]:
     words = [word for segment in transcript.segments for word in segment.words]
-    if not words:
-        return [], []
-
-    starts = [words[0].start]
-    ends: list[float] = []
+    starts: set[float] = set()
+    ends: set[float] = set()
+    if words:
+        starts.add(words[0].start)
     for index, word in enumerate(words):
         if word.text.rstrip().endswith((".", "?", "!")):
-            ends.append(word.end)
+            ends.add(word.end)
             if index + 1 < len(words):
-                starts.append(words[index + 1].start)
-    return starts, ends
+                starts.add(words[index + 1].start)
+
+    # Whisper/caption segments can retain punctuation in ``segment.text`` even
+    # when the corresponding word list is incomplete or drops that punctuation.
+    # Keep those segment-level boundaries so an end cut never falls back to a
+    # timestamp inside the final spoken sentence.
+    punctuated_segments = [
+        segment
+        for segment in transcript.segments
+        if segment.text.rstrip().endswith((".", "?", "!"))
+    ]
+    if punctuated_segments and transcript.segments:
+        first_segment = transcript.segments[0]
+        starts.add(
+            first_segment.words[0].start
+            if first_segment.words
+            else first_segment.start
+        )
+    for index, segment in enumerate(transcript.segments):
+        if segment.text.rstrip().endswith((".", "?", "!")):
+            ends.add(segment.end)
+            if index + 1 < len(transcript.segments):
+                next_segment = transcript.segments[index + 1]
+                starts.add(
+                    next_segment.words[0].start
+                    if next_segment.words
+                    else next_segment.start
+                )
+    return sorted(starts), sorted(ends)
 
 
 def _segment_boundaries(transcript: TranscriptDocument) -> tuple[list[float], list[float]]:
@@ -56,11 +83,10 @@ def _start_boundary(target: float, boundaries: list[float], radius: float) -> fl
 
 
 def _end_boundary(target: float, boundaries: list[float], radius: float) -> float | None:
+    """Return only a future end boundary so speech is never truncated."""
+
     after = [boundary for boundary in boundaries if target <= boundary <= target + radius]
-    if after:
-        return min(after)
-    before = [boundary for boundary in boundaries if target - radius <= boundary < target]
-    return max(before) if before else None
+    return min(after) if after else None
 
 
 def _nearest_silence_start(boundary: float, silence_intervals: list[TimeInterval], radius: float) -> float | None:
@@ -112,14 +138,33 @@ def _proposed_end(
     config: BoundaryConfig,
 ) -> tuple[float, BoundarySource, str]:
     _, sentence_ends = _sentence_boundaries(transcript)
-    boundary = _end_boundary(candidate.end_time, sentence_ends, config.search_radius_seconds)
+    boundary = _end_boundary(
+        candidate.end_time,
+        sentence_ends,
+        config.end_search_radius_seconds,
+    )
     source: BoundarySource = "punctuation"
     if boundary is None:
         _, segment_ends = _segment_boundaries(transcript)
-        boundary = _end_boundary(candidate.end_time, segment_ends, config.search_radius_seconds)
+        boundary = _end_boundary(
+            candidate.end_time,
+            segment_ends,
+            config.end_search_radius_seconds,
+        )
         source = "segment_fallback"
     if boundary is None:
-        return candidate.end_time, "original", "Không tìm được mốc kết thúc phù hợp trong bán kính tìm kiếm"
+        silence_end = _nearest_silence_end(
+            candidate.end_time,
+            silence_intervals,
+            config.end_search_radius_seconds,
+        )
+        if silence_end is not None:
+            return silence_end, "silence", "Kết thúc tại khoảng lặng đầu tiên sau mốc đề xuất"
+        return (
+            candidate.end_time,
+            "original",
+            "Không tìm được mốc kết thúc phía sau trong bán kính tìm kiếm",
+        )
 
     silence_end = _nearest_silence_end(boundary, silence_intervals, config.search_radius_seconds)
     if silence_end is not None:
@@ -151,6 +196,8 @@ def refine_candidate_boundary(
         raise ValueError("video_duration must be positive")
     if config.search_radius_seconds < 0:
         raise ValueError("search_radius_seconds must be non-negative")
+    if config.end_search_radius_seconds < 0:
+        raise ValueError("end_search_radius_seconds must be non-negative")
 
     proposed_start, start_source, start_reason = _proposed_start(
         candidate,
