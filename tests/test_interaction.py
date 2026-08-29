@@ -1,12 +1,27 @@
 from types import SimpleNamespace
 
+import pytest
+
 from highlight_agent.features.interaction import (
     extract_interaction_features,
     interaction_features_from_turns,
     select_device,
     windowed_interaction_features,
 )
-from highlight_agent.schemas import SpeakerTurn
+from highlight_agent.schemas import AcousticFeatures, FeatureWindow, SpeakerTurn
+
+
+def _acoustic(duration: float) -> AcousticFeatures:
+    return AcousticFeatures(
+        duration=duration,
+        rms_mean=0.1,
+        rms_peak=0.2,
+        rms_p95=0.18,
+        rms_std=0.02,
+        voiced_ratio=0.8,
+        silence_duration=0.0,
+        silence_ratio=0.0,
+    )
 
 
 def test_turn_taking_filters_short_turns_and_merges_same_speaker() -> None:
@@ -62,6 +77,24 @@ def test_windowed_interaction_clips_turns_and_recomputes_turn_taking() -> None:
     ]
     assert windows[0].turn_count == 0
     assert windows[1].turn_count == 1
+
+
+def test_windowed_interaction_reuses_partial_acoustic_window_duration() -> None:
+    features = interaction_features_from_turns(
+        [SpeakerTurn(start=721.0, end=724.6, speaker="A")],
+        duration=724.625,
+    )
+    acoustic_windows = [
+        FeatureWindow(start=0.0, end=30.0, acoustic=_acoustic(30.0)),
+        FeatureWindow(start=720.0, end=724.625, acoustic=_acoustic(4.625)),
+    ]
+
+    windows = windowed_interaction_features(features, acoustic_windows=acoustic_windows)
+
+    assert [window.duration for window in windows] == pytest.approx([30.0, 4.625])
+    assert [(turn.start, turn.end) for turn in windows[-1].turns] == [
+        pytest.approx((1.0, 4.6))
+    ]
 
 
 def test_pyannote_wrapper_uses_exclusive_turns_and_selected_device() -> None:

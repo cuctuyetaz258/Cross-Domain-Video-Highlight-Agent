@@ -133,7 +133,7 @@ def build_ltr_features(
                 num_speakers=known_speaker_count,
                 min_speakers=min_speaker_count,
                 max_speakers=max_speaker_count,
-                duration=duration,
+                duration=acoustic.duration,
             )
         except Exception as exc:
             raise LTRPipelineError("LTR_INTERACTION_EXTRACTION_FAILED", str(exc)) from exc

@@ -9,7 +9,7 @@ from typing import Any
 import numpy as np
 
 from highlight_agent.media.audio import probe_duration
-from highlight_agent.schemas import InteractionFeatures, SpeakerTurn
+from highlight_agent.schemas import FeatureWindow, InteractionFeatures, SpeakerTurn
 
 DEFAULT_DIARIZATION_MODEL = "pyannote/speaker-diarization-community-1"
 DEFAULT_MIN_TURN_DURATION = 0.30
@@ -100,6 +100,7 @@ def interaction_features_from_turns(
 def windowed_interaction_features(
     features: InteractionFeatures,
     *,
+    acoustic_windows: list[FeatureWindow] | None = None,
     window_seconds: float = 30.0,
     hop_seconds: float = 30.0,
     min_turn_duration: float = DEFAULT_MIN_TURN_DURATION,
@@ -110,10 +111,21 @@ def windowed_interaction_features(
     if window_seconds <= 0 or hop_seconds <= 0:
         raise ValueError("window_seconds and hop_seconds must be positive")
 
+    # Reuse acoustic boundaries so the final partial window has exactly the
+    # same duration in both feature channels.
+    window_bounds = (
+        [(window.start, window.end) for window in acoustic_windows]
+        if acoustic_windows is not None
+        else []
+    )
+    if not window_bounds:
+        start = 0.0
+        while start < features.duration:
+            window_bounds.append((start, min(start + window_seconds, features.duration)))
+            start += hop_seconds
+
     windowed: list[InteractionFeatures] = []
-    start = 0.0
-    while start < features.duration:
-        end = min(start + window_seconds, features.duration)
+    for start, end in window_bounds:
         turns = [
             SpeakerTurn(
                 start=max(turn.start, start) - start,
@@ -131,7 +143,6 @@ def windowed_interaction_features(
                 max_same_speaker_gap=max_same_speaker_gap,
             )
         )
-        start += hop_seconds
     return windowed
 
 

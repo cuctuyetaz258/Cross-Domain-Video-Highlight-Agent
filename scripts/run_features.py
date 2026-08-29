@@ -62,9 +62,11 @@ def main() -> None:
             num_speakers=args.known_speaker_count,
             min_speakers=args.min_speaker_count,
             max_speakers=args.max_speaker_count,
+            duration=acoustic.duration,
         )
         interaction_windows = windowed_interaction_features(
             interaction,
+            acoustic_windows=acoustic_windows,
             window_seconds=args.window_seconds,
             hop_seconds=args.hop_seconds,
         )

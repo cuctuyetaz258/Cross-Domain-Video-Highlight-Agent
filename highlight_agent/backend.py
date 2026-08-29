@@ -25,13 +25,17 @@ def prepare_video(
     cookies_browser: str | None = None,
     transcript_source: Literal["auto", "youtube", "whisper"] = "auto",
 ) -> MediaWorkspace:
-    """Chuẩn hóa input, tách audio và tạo transcript ưu tiên caption"""
+    """Chuẩn hóa input, tách audio và luôn tạo transcript bằng Whisper."""
+
+    # Keep the public argument for CLI/state compatibility while runtime uses
+    # word-level Whisper timestamps for reliable boundary refinement.
+    _ = transcript_source
 
     return prepare_media_workspace(
         video_input,
         output_root=output_root,
         cookies_browser=cookies_browser,
-        transcript_source=transcript_source,
+        transcript_source="whisper",
     )
 
 

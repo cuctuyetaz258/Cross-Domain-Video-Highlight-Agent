@@ -177,7 +177,10 @@ def analyze(state: AgentState) -> dict:
     report_tmp.replace(report_path)
 
     interaction_windows = (
-        windowed_interaction_features(bundle.interaction)
+        windowed_interaction_features(
+            bundle.interaction,
+            acoustic_windows=bundle.acoustic_windows,
+        )
         if bundle.interaction is not None
         else None
     )
