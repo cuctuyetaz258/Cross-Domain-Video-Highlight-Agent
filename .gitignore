@@ -55,7 +55,8 @@ dist/
 *.egg-info/
 
 # Documentation (local only)
-docs/
+docs/*
+!docs/sample_videos.md
 
 # Local Kaggle upload and verification bundles
 kaggle_checkpoint_upload/
