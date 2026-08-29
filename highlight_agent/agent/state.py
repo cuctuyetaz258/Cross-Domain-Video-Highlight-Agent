@@ -50,6 +50,8 @@ class AgentState(TypedDict, total=False):
     cookies_browser: NotRequired[str | None]
     transcript_source: NotRequired[Literal["auto", "youtube", "whisper"]]
     known_speaker_count: NotRequired[int]
+    min_speaker_count: NotRequired[int]
+    max_speaker_count: NotRequired[int]
     burn_subtitles: NotRequired[bool]
     highlight_count: NotRequired[int]
     aspect_ratio: NotRequired[Literal["9:16", "16:9"]]

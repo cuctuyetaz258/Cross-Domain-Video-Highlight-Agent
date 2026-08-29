@@ -26,9 +26,19 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help="Optional known number of Podcast speakers for Pyannote clustering",
     )
+    parser.add_argument("--min-speaker-count", type=int, default=None)
+    parser.add_argument("--max-speaker-count", type=int, default=None)
     parser.add_argument("--window-seconds", type=float, default=30.0)
     parser.add_argument("--hop-seconds", type=float, default=30.0)
-    return parser.parse_args()
+    args = parser.parse_args()
+    if args.known_speaker_count is not None and (
+        args.min_speaker_count is not None or args.max_speaker_count is not None
+    ):
+        parser.error("--known-speaker-count cannot be combined with speaker count bounds")
+    if args.min_speaker_count is not None and args.max_speaker_count is not None:
+        if args.min_speaker_count > args.max_speaker_count:
+            parser.error("--min-speaker-count cannot exceed --max-speaker-count")
+    return args
 
 
 def main() -> None:
@@ -50,6 +60,8 @@ def main() -> None:
         interaction = extract_interaction_features(
             args.audio_path,
             num_speakers=args.known_speaker_count,
+            min_speakers=args.min_speaker_count,
+            max_speakers=args.max_speaker_count,
         )
         interaction_windows = windowed_interaction_features(
             interaction,

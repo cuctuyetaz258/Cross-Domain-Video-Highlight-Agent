@@ -24,14 +24,15 @@ def _acoustic(duration: float) -> AcousticFeatures:
 def test_review_page_embeds_timeline_and_relative_video_source() -> None:
     interaction = InteractionFeatures(
         duration=30.0,
-        speaker_count=2,
-        turn_count=1,
-        turn_rate_per_minute=2.0,
-        speech_duration=20.0,
-        speech_ratio=2 / 3,
+        speaker_count=3,
+        turn_count=2,
+        turn_rate_per_minute=4.0,
+        speech_duration=30.0,
+        speech_ratio=1.0,
         turns=[
             SpeakerTurn(start=0.0, end=10.0, speaker="SPEAKER_00"),
             SpeakerTurn(start=10.0, end=20.0, speaker="SPEAKER_01"),
+            SpeakerTurn(start=20.0, end=30.0, speaker="SPEAKER_02"),
         ],
     )
     timeline = FeatureTimeline(
@@ -51,5 +52,8 @@ def test_review_page_embeds_timeline_and_relative_video_source() -> None:
     assert '<video id="video"' in page
     assert "SPEAKER_00" in page
     assert "SPEAKER_01" in page
+    assert "SPEAKER_02" in page
+    assert '"SPEAKER_02": "speaker-2"' in page
+    assert ".speaker-2 { background: hsl(" in page
     assert "0 lượt đổi speaker" not in page
-    assert '"turn_count": 1' in page
+    assert '"turn_count": 2' in page

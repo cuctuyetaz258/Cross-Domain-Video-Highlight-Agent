@@ -59,6 +59,8 @@ def build_ltr_features(
     domain: Domain,
     duration: float,
     known_speaker_count: int | None = None,
+    min_speaker_count: int | None = None,
+    max_speaker_count: int | None = None,
     include_scenes: bool = True,
     include_gesture: bool = True,
     device: str = "cpu",
@@ -129,6 +131,8 @@ def build_ltr_features(
             interaction = extract_interaction_features(
                 audio_path,
                 num_speakers=known_speaker_count,
+                min_speakers=min_speaker_count,
+                max_speakers=max_speaker_count,
                 duration=duration,
             )
         except Exception as exc:

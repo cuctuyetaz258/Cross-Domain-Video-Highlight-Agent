@@ -382,7 +382,8 @@ Chạy đầy đủ feature timeline 30 giây từ audio đã có, không tạo 
 conda run -n video-highlight python -m scripts.run_features \
   output/pbyQhbZJhwI/audio.wav \
   --domain podcast \
-  --known-speaker-count 2
+  --min-speaker-count 1 \
+  --max-speaker-count 3
 ```
 
 Lệnh ghi output đầy đủ vào `output/{video_id}/features/features.json`.
@@ -404,6 +405,11 @@ Pyannote cần `HF_TOKEN` trong `.env` và tài khoản Hugging Face phải ch�
 Thiết bị được chọn theo thứ tự CUDA, Apple MPS, rồi CPU. Vì vậy Podcast vẫn
 chạy được trên CPU local; chỉ gọi là demo GPU khi `torch.cuda.is_available()`
 trả về `True`.
+
+Manifest media được commit bằng path tương đối dùng `/`, nên chạy được trên
+macOS và Windows. Loader vẫn chấp nhận manifest cũ dùng `\\`. Pyannote nhận
+waveform đã được Librosa decode thay vì tự mở file bằng TorchCodec, tránh lỗi
+ABI TorchCodec/FFmpeg khác nhau giữa các máy.
 
 
 ## Git workflow

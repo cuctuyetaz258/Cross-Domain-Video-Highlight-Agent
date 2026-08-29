@@ -155,6 +155,8 @@ def analyze(state: AgentState) -> dict:
         domain=state["domain"],
         duration=transcript.duration,
         known_speaker_count=state.get("known_speaker_count"),
+        min_speaker_count=state.get("min_speaker_count"),
+        max_speaker_count=state.get("max_speaker_count"),
         device=checkpoint_info["device"],
     )
     feature_dir = workspace.audio_path.parent / "features"

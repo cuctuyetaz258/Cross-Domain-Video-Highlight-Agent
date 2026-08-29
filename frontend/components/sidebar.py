@@ -30,6 +30,27 @@ def render_sidebar():
         )
         aspect_ratio = "9:16" if "9:16" in aspect_ratio_choice else "16:9"
 
+        if domain == "podcast":
+            speaker_mode = st.selectbox(
+                "Podcast speaker detection",
+                ["Auto", "Auto (1-3 speakers)", "Known speaker count"],
+                help="Use a known count when the podcast has a clear host and guest setup.",
+            )
+            if speaker_mode == "Known speaker count":
+                st.session_state["known_speaker_count"] = int(
+                    st.number_input("Known speaker count", min_value=1, max_value=10, value=2, step=1)
+                )
+                st.session_state["min_speaker_count"] = None
+                st.session_state["max_speaker_count"] = None
+            elif speaker_mode == "Auto (1-3 speakers)":
+                st.session_state["known_speaker_count"] = None
+                st.session_state["min_speaker_count"] = 1
+                st.session_state["max_speaker_count"] = 3
+            else:
+                st.session_state["known_speaker_count"] = None
+                st.session_state["min_speaker_count"] = None
+                st.session_state["max_speaker_count"] = None
+
         with st.expander("Required LTR Model", expanded=True):
             checkpoint_path = st.text_input(
                 "LTR checkpoint path",

@@ -23,6 +23,7 @@ from highlight_agent.media import (  # noqa: E402
     transcribe_with_whisper,
 )
 from highlight_agent.models.train_offline import load_tvsum  # noqa: E402
+from highlight_agent.paths import portable_relative_path  # noqa: E402
 
 VIDEO_SUFFIXES = (".m4v", ".mkv", ".mov", ".mp4", ".webm")
 
@@ -175,13 +176,13 @@ def prepare_tvsum(
                     "category": record["category"],
                     "domain": "benchmark",
                     "source": "tvsum",
-                    "video_path": str(video_path.relative_to(root)),
-                    "audio_path": str(audio_path.relative_to(root)),
-                    "transcript_path": str(transcript_path.relative_to(root)),
+                    "video_path": portable_relative_path(video_path, root),
+                    "audio_path": portable_relative_path(audio_path, root),
+                    "transcript_path": portable_relative_path(transcript_path, root),
                     "duration": duration,
                     "fps": record["fps"],
                     "frame_scores": np.asarray(record["frame_scores"], dtype=np.float32).tolist(),
-                    "annotation_path": str(Path(annotations_path).resolve().relative_to(root)),
+                    "annotation_path": portable_relative_path(annotations_path, root),
                     "whisper_model_size": whisper_model_size,
                 }
             )

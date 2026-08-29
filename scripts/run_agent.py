@@ -48,6 +48,8 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         default=None,
         help="Số speaker đã biết, dùng cho Pyannote diarization của podcast",
     )
+    parser.add_argument("--min-speaker-count", type=int, default=None)
+    parser.add_argument("--max-speaker-count", type=int, default=None)
     parser.add_argument("--output-dir", default=None)
     parser.add_argument("--cookies-browser", default=None)
     parser.add_argument(
@@ -78,7 +80,15 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--llm-top-m", type=int, default=10, choices=range(3, 13))
     parser.add_argument("--llm-ltr-weight", type=float, default=0.60)
     parser.add_argument("--llm-timeout-seconds", type=float, default=45.0)
-    return parser.parse_args(argv)
+    args = parser.parse_args(argv)
+    if args.known_speaker_count is not None and (
+        args.min_speaker_count is not None or args.max_speaker_count is not None
+    ):
+        parser.error("--known-speaker-count cannot be combined with speaker count bounds")
+    if args.min_speaker_count is not None and args.max_speaker_count is not None:
+        if args.min_speaker_count > args.max_speaker_count:
+            parser.error("--min-speaker-count cannot exceed --max-speaker-count")
+    return args
 
 
 def main() -> None:
@@ -131,6 +141,8 @@ def main() -> None:
         "highlight_count": args.highlight_count,
         "aspect_ratio": args.aspect_ratio,
         "known_speaker_count": args.known_speaker_count,
+        "min_speaker_count": args.min_speaker_count,
+        "max_speaker_count": args.max_speaker_count,
         "output_root": args.output_dir,
         "cookies_browser": args.cookies_browser,
         "transcript_source": args.transcript_source,

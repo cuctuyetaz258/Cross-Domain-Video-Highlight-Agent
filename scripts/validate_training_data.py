@@ -21,6 +21,7 @@ from highlight_agent.models.train_offline import (  # noqa: E402
     create_window_labels,
     load_training_manifest,
 )
+from highlight_agent.paths import resolve_project_path  # noqa: E402
 
 VALID_DOMAINS = {"benchmark", "lecture", "podcast", "standup"}
 VALID_SPLITS = {"train", "val", "test"}
@@ -30,8 +31,7 @@ PATH_FIELDS = ("video_path", "audio_path", "transcript_path")
 def resolve_record_path(value: str | Path, project_root: str | Path) -> Path:
     """Resolve manifest paths relative to the explicitly selected project root."""
 
-    path = Path(value)
-    return path.resolve() if path.is_absolute() else (Path(project_root) / path).resolve()
+    return resolve_project_path(value, project_root)
 
 
 def probe_video(path: str | Path) -> tuple[float, float]:

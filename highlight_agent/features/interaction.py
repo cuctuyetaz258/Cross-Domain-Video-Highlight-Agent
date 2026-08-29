@@ -6,6 +6,8 @@ from itertools import pairwise
 from pathlib import Path
 from typing import Any
 
+import numpy as np
+
 from highlight_agent.media.audio import probe_duration
 from highlight_agent.schemas import InteractionFeatures, SpeakerTurn
 
@@ -140,6 +142,22 @@ def _turns_from_annotation(annotation: Any) -> list[SpeakerTurn]:
     ]
 
 
+def _load_waveform_for_pyannote(audio_path: str | Path, torch_module: Any) -> dict[str, Any]:
+    """Đọc WAV thành waveform để Pyannote không cần TorchCodec decode file"""
+
+    import librosa
+
+    waveform, sample_rate = librosa.load(str(audio_path), sr=None, mono=False)
+    if waveform.ndim == 1:
+        waveform = waveform[np.newaxis, :]
+    if waveform.ndim != 2 or waveform.shape[1] == 0 or sample_rate <= 0:
+        raise ValueError(f"cannot decode usable audio waveform: {audio_path}")
+    return {
+        "waveform": torch_module.as_tensor(waveform, dtype=torch_module.float32),
+        "sample_rate": int(sample_rate),
+    }
+
+
 def extract_interaction_features(
     audio_path: str | Path,
     *,
@@ -153,10 +171,11 @@ def extract_interaction_features(
     duration: float | None = None,
     pipeline_factory: Callable[..., Any] | None = None,
     torch_module: Any | None = None,
+    audio_loader: Callable[[str | Path, Any], dict[str, Any]] | None = None,
 ) -> InteractionFeatures:
     """Chạy Pyannote và tính lượt đổi speaker từ diarization độc quyền
 
-    `pipeline_factory`, `torch_module` và `duration` có thể truyền vào để unit test
+    `pipeline_factory`, `torch_module`, `audio_loader` và `duration` có thể truyền vào để unit test
     Code chạy thật sử dụng các giá trị mặc định
     """
 
@@ -195,7 +214,8 @@ def extract_interaction_features(
         }.items()
         if value is not None
     }
-    diarization_output = pipeline(str(audio_path), **speaker_options)
+    waveform_input = (audio_loader or _load_waveform_for_pyannote)(audio_path, torch_module)
+    diarization_output = pipeline(waveform_input, **speaker_options)
     annotation = getattr(
         diarization_output,
         "exclusive_speaker_diarization",
