@@ -1,6 +1,8 @@
 import json
 from pathlib import Path
 
+import pytest
+
 from highlight_agent.media import render
 from highlight_agent.schemas import (
     BoundaryAdjustment,
@@ -61,7 +63,12 @@ def test_write_highlight_srt_removes_rolling_caption_overlap(tmp_path: Path) -> 
     assert "00:00:03,000 --> 00:00:08,000\nNext caption" in content
 
 
-def test_render_highlights_writes_metadata_without_running_ffmpeg(tmp_path: Path, monkeypatch) -> None:
+@pytest.mark.parametrize("render_namespace", [None, "openai-gpt-4.1-mini-fixture"])
+def test_render_highlights_writes_metadata_without_running_ffmpeg(
+    tmp_path: Path,
+    monkeypatch,
+    render_namespace: str | None,
+) -> None:
     source = tmp_path / "source.mp4"
     source.write_bytes(b"fixture")
     workspace_dir = tmp_path / "output" / "abcdefghijk"
@@ -134,13 +141,19 @@ def test_render_highlights_writes_metadata_without_running_ffmpeg(tmp_path: Path
             )
             for candidate in _candidates()
         },
+        render_namespace=render_namespace,
     )
 
     assert len(results) == 3
     assert results[0].aspect_ratio == "9:16"
     assert results[0].width == 1080
     assert results[0].height == 1920
-    metadata = json.loads((workspace_dir / "metadata.json").read_text(encoding="utf-8"))
+    result_dir = (
+        workspace_dir / "variants" / render_namespace
+        if render_namespace
+        else workspace_dir
+    )
+    metadata = json.loads((result_dir / "metadata.json").read_text(encoding="utf-8"))
     assert metadata["video_id"] == "abcdefghijk"
     assert metadata["aspect_ratio"] == "9:16"
     assert len(metadata["highlights"]) == 3
@@ -148,6 +161,7 @@ def test_render_highlights_writes_metadata_without_running_ffmpeg(tmp_path: Path
     assert metadata["boundary_adjustments"][0]["start_source"] == "original"
     assert metadata["highlights"][0]["title"] == "Title candidate-0"
     assert metadata["highlights"][0]["completeness_score"] == 0.9
+    assert all(str(result_dir) in str(item.video_path) for item in results)
 
 
 def test_render_highlights_supports_16_9_landscape(tmp_path: Path, monkeypatch) -> None:

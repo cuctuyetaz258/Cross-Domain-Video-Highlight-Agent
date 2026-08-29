@@ -7,6 +7,7 @@ import os
 from dataclasses import dataclass
 from typing import Literal, Protocol
 
+from dotenv import load_dotenv
 from openai import OpenAI
 
 from highlight_agent.schemas import (
@@ -74,12 +75,19 @@ class LLMClientConfig:
         base_url: str | None = None,
         timeout_seconds: float = 45.0,
     ) -> "LLMClientConfig":
+        # Resume-from-snapshot can reach this code without running media ingest,
+        # so load project-local credentials here as well.
+        load_dotenv()
         if provider not in {"openai", "groq", "custom"}:
             raise ValueError(f"unsupported LLM provider: {provider}")
         if provider == "openai":
             key_name = "OPENAI_API_KEY"
             default_model = "gpt-4.1-mini"
-            resolved_base_url = base_url or os.environ.get("OPENAI_BASE_URL")
+            resolved_base_url = (
+                (base_url or "").strip()
+                or os.environ.get("OPENAI_BASE_URL", "").strip()
+                or None
+            )
         elif provider == "groq":
             key_name = "GROQ_API_KEY"
             default_model = "llama-3.3-70b-versatile"

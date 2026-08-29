@@ -90,10 +90,22 @@ def test_groq_provider_uses_compatible_json_mode() -> None:
 
 
 def test_config_does_not_accept_missing_api_key(monkeypatch) -> None:
+    monkeypatch.setattr("highlight_agent.llm.client.load_dotenv", lambda: None)
     monkeypatch.delenv("OPENAI_API_KEY", raising=False)
 
     with pytest.raises(LLMProviderError, match="OPENAI_API_KEY"):
         LLMClientConfig.from_env(provider="openai")
+
+
+def test_openai_config_treats_blank_base_url_as_official_default(monkeypatch) -> None:
+    monkeypatch.setenv("OPENAI_API_KEY", "test-key")
+    monkeypatch.setenv("OPENAI_BASE_URL", "   ")
+
+    config = LLMClientConfig.from_env(provider="openai")
+
+    assert config.provider == "openai"
+    assert config.model == "gpt-4.1-mini"
+    assert config.base_url is None
 
 
 def test_malformed_provider_response_becomes_fallback_safe_error() -> None:

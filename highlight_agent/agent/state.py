@@ -67,6 +67,10 @@ class AgentState(TypedDict, total=False):
     rendered_highlights: NotRequired[list[RenderedHighlight]]
     reasoning: NotRequired[list[ReasoningEntry]]
     ltr_checkpoint_info: NotRequired[dict[str, Any]]
+    candidate_pool_size: NotRequired[int]
+    analysis_snapshot_path: NotRequired[str]
+    analysis_id: NotRequired[str]
+    render_namespace: NotRequired[str]
 
     # ── LLM semantic reranking config/output ──
     llm_provider: NotRequired[Literal["disabled", "openai", "groq", "custom"]]

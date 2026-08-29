@@ -9,6 +9,8 @@ from highlight_agent.schemas import (
     TranscriptSegment,
 )
 
+NO_TRANSCRIPT_MARKER = "[NO TRANSCRIPT]"
+
 
 def _format_segments(segments: list[TranscriptSegment], *, max_chars: int) -> str:
     lines: list[str] = []
@@ -67,7 +69,10 @@ def build_candidate_contexts(
         ]
         core_text = _format_segments(core, max_chars=max_chars_per_section)
         if not core_text:
-            core_text = f"[{candidate.start_time:.3f}-{candidate.end_time:.3f}] [NO TRANSCRIPT]"
+            core_text = (
+                f"[{candidate.start_time:.3f}-{candidate.end_time:.3f}] "
+                f"{NO_TRANSCRIPT_MARKER}"
+            )
         contexts.append(
             CandidateTranscriptContext(
                 candidate_id=candidate.candidate_id,
@@ -81,3 +86,8 @@ def build_candidate_contexts(
         )
     return contexts
 
+
+def has_usable_transcript(context: CandidateTranscriptContext) -> bool:
+    """Return whether the candidate core contains real transcript text."""
+
+    return NO_TRANSCRIPT_MARKER not in context.core

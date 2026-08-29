@@ -156,6 +156,53 @@ class _FakeClient:
         )
 
 
+def test_reranker_skips_api_when_all_candidates_lack_transcript(tmp_path: Path) -> None:
+    transcript = TranscriptDocument(
+        video_id="video-empty",
+        language="en",
+        source="whisper",
+        duration=120,
+        segments=[TranscriptSegment(id=0, start=0, end=10, text="Intro only.")],
+    )
+    client = _FakeClient()
+
+    with pytest.raises(ValueError, match="OpenAI reranking was skipped"):
+        rerank_candidates(
+            [_candidate("c1", 30, 60, 7), _candidate("c2", 61, 91, 6)],
+            transcript,
+            domain="lecture",
+            client=client,
+            cache_dir=tmp_path,
+        )
+
+    assert client.calls == 0
+    assert list(tmp_path.glob("assessments_*.json")) == []
+
+
+def test_reranker_only_sends_candidates_with_core_transcript(tmp_path: Path) -> None:
+    transcript = TranscriptDocument(
+        video_id="video-partial",
+        language="en",
+        source="whisper",
+        duration=120,
+        segments=[TranscriptSegment(id=0, start=30, end=60, text="Usable core.")],
+    )
+    client = _FakeClient()
+
+    ranked, assessments, info = rerank_candidates(
+        [_candidate("usable", 30, 60, 7), _candidate("missing", 61, 91, 9)],
+        transcript,
+        domain="lecture",
+        client=client,
+        cache_dir=tmp_path,
+    )
+
+    assert client.calls == 1
+    assert [item.candidate_id for item in assessments] == ["usable"]
+    assert [item.candidate_id for item in ranked] == ["usable", "missing"]
+    assert info.assessed_count == 1
+
+
 def test_reranker_caches_structured_assessments_without_raw_context(tmp_path: Path) -> None:
     candidates = [_candidate("c1", 30, 60, 7), _candidate("c2", 61, 91, 6)]
     client = _FakeClient()

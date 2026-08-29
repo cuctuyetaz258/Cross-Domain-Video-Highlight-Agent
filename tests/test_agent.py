@@ -161,3 +161,48 @@ def test_decide_forwards_aspect_ratio_to_render_candidates(tmp_path: Path, monke
     assert result["rendered_highlights"][0].aspect_ratio == "16:9"
     assert result["rendered_highlights"][0].width == 1920
     assert result["rendered_highlights"][0].height == 1080
+
+
+def test_analysis_graph_stops_before_decide(tmp_path: Path, monkeypatch) -> None:
+    workspace = _workspace(tmp_path)
+    candidate = HighlightCandidate(
+        candidate_id="ltr_01",
+        start_time=0.0,
+        end_time=30.0,
+        score=0.9,
+        reason="LTR",
+    )
+    calls: list[str] = []
+
+    monkeypatch.setattr(
+        graph_module,
+        "preflight",
+        lambda state: calls.append("preflight") or {"ltr_checkpoint_info": {"fingerprint": "fixture"}},
+    )
+    monkeypatch.setattr(
+        graph_module,
+        "observe",
+        lambda state: calls.append("observe") or {"workspace": workspace, "transcript": object()},
+    )
+    monkeypatch.setattr(
+        graph_module,
+        "plan",
+        lambda state: calls.append("plan") or {"analysis_plan": {"scorer": "ltr_required"}},
+    )
+    monkeypatch.setattr(
+        graph_module,
+        "analyze",
+        lambda state: calls.append("analyze")
+        or {"features": {"mode": "ltr_required"}, "candidates": [candidate]},
+    )
+
+    result = graph_module.build_analysis_graph().invoke(
+        {
+            "video_path": str(workspace.source_video_path),
+            "domain": "lecture",
+            "ltr_model_path": "checkpoint.pt",
+        }
+    )
+
+    assert calls == ["preflight", "observe", "plan", "analyze"]
+    assert result["candidates"] == [candidate]

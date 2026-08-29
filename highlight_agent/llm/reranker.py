@@ -15,7 +15,7 @@ from highlight_agent.schemas import (
 )
 
 from .client import PROMPT_VERSION, AssessmentClient
-from .context import build_candidate_contexts
+from .context import build_candidate_contexts, has_usable_transcript
 
 
 def _normalize_scores(candidates: list[HighlightCandidate]) -> dict[str, float]:
@@ -211,7 +211,19 @@ def rerank_candidates(
     if not candidates:
         raise ValueError("LLM reranker requires at least one candidate")
     contexts = build_candidate_contexts(transcript, candidates)
-    dumped_contexts = [context.model_dump(mode="json") for context in contexts]
+    usable_contexts = [context for context in contexts if has_usable_transcript(context)]
+    usable_ids = {context.candidate_id for context in usable_contexts}
+    usable_candidates = [
+        candidate for candidate in candidates if candidate.candidate_id in usable_ids
+    ]
+    unavailable_candidates = [
+        candidate for candidate in candidates if candidate.candidate_id not in usable_ids
+    ]
+    if not usable_candidates:
+        raise ValueError(
+            "no candidate has usable transcript content; OpenAI reranking was skipped"
+        )
+    dumped_contexts = [context.model_dump(mode="json") for context in usable_contexts]
     key = _cache_key(
         contexts=dumped_contexts,
         provider=client.provider,
@@ -227,18 +239,25 @@ def rerank_candidates(
             batch = LLMHighlightAssessmentBatch.model_validate_json(
                 cache_path.read_text(encoding="utf-8")
             )
-            _validate_assessment_coverage(batch, candidates)
+            _validate_assessment_coverage(batch, usable_candidates)
         except Exception:  # noqa: BLE001
             cache_hit = False
             batch = None
     if batch is None:
-        batch = client.assess(contexts, domain=domain)
-        _validate_assessment_coverage(batch, candidates)
+        batch = client.assess(usable_contexts, domain=domain)
+        _validate_assessment_coverage(batch, usable_candidates)
         cache_path.parent.mkdir(parents=True, exist_ok=True)
         temporary_path = cache_path.with_suffix(".json.tmp")
         temporary_path.write_text(batch.model_dump_json(indent=2), encoding="utf-8")
         temporary_path.replace(cache_path)
-    reranked = hybrid_rerank(candidates, batch.assessments, ltr_weight=ltr_weight)
+    reranked = hybrid_rerank(
+        usable_candidates,
+        batch.assessments,
+        ltr_weight=ltr_weight,
+    )
+    reranked.extend(
+        sorted(unavailable_candidates, key=lambda candidate: candidate.score, reverse=True)
+    )
     info = LLMRunInfo(
         enabled=True,
         applied=True,

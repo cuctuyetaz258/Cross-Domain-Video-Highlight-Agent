@@ -12,8 +12,8 @@ def render_stepper_state(current: int):
         "Observe",
         "Plan",
         "Analyze",
-        "Decide",
-        "Explain",
+        "Snapshot",
+        "Rank + Render",
         "Completed",
     ]
 

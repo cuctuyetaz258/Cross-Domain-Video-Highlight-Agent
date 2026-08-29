@@ -222,7 +222,9 @@ def analyze(state: AgentState) -> dict:
 
     highlight_count = state.get("highlight_count", 3)
     llm_enabled = state.get("llm_provider", "disabled") != "disabled"
-    requested_pool = state.get("llm_top_m", 10) if llm_enabled else highlight_count
+    requested_pool = state.get("candidate_pool_size")
+    if requested_pool is None:
+        requested_pool = state.get("llm_top_m", 10) if llm_enabled else highlight_count
     pool_size = max(highlight_count, min(12, requested_pool))
     candidates = extract_topk_nms(
         timeline_score,
@@ -389,6 +391,7 @@ def decide(state: AgentState) -> dict:
             "extractor": features.get("extractor", {}),
             "llm_run": llm_run.model_dump(mode="json"),
         },
+        render_namespace=state.get("render_namespace"),
     )
     _emit(state, "decide", "done", f"Render xong {len(rendered)} clips.", rendered_count=len(rendered))
 

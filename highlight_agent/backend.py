@@ -82,6 +82,7 @@ def render_candidates(
     refine_boundaries: bool = True,
     llm_assessments: dict[str, LLMHighlightAssessment] | None = None,
     pipeline_metadata: dict | None = None,
+    render_namespace: str | None = None,
 ) -> list[RenderedHighlight]:
     transcript = load_transcript(workspace.transcript_path)
     if refine_boundaries:
@@ -99,4 +100,5 @@ def render_candidates(
         boundary_adjustments=boundary_adjustments,
         llm_assessments=llm_assessments,
         pipeline_metadata=pipeline_metadata,
+        render_namespace=render_namespace,
     )

@@ -1,6 +1,7 @@
 """Render clip video (9:16 hoặc 16:9), phụ đề, thumbnail và metadata"""
 
 import json
+import re
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Literal
@@ -236,6 +237,7 @@ def render_highlights(
     boundary_adjustments: list[BoundaryAdjustment] | None = None,
     llm_assessments: dict[str, LLMHighlightAssessment] | None = None,
     pipeline_metadata: dict | None = None,
+    render_namespace: str | None = None,
 ) -> list[RenderedHighlight]:
     if not 3 <= len(candidates) <= 5:
         raise ValueError("MVP rendering expects between 3 and 5 highlight candidates")
@@ -255,6 +257,10 @@ def render_highlights(
 
     spec = get_video_format_spec(aspect_ratio)
     workspace_dir = workspace.transcript_path.parent
+    if render_namespace:
+        if not re.fullmatch(r"[a-zA-Z0-9][a-zA-Z0-9_.-]{0,79}", render_namespace):
+            raise ValueError("render_namespace must be a safe 1-80 character identifier")
+        workspace_dir = workspace_dir / "variants" / render_namespace
     shorts_dir = workspace_dir / "shorts"
     thumbnails_dir = workspace_dir / "thumbnails"
     shorts_dir.mkdir(parents=True, exist_ok=True)
