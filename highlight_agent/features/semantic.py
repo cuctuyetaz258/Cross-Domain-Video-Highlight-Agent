@@ -82,9 +82,7 @@ def _tfidf_density(texts: list[str]) -> np.ndarray:
     if not non_empty_indices:
         return result
     try:
-        matrix = TfidfVectorizer(stop_words="english").fit_transform(
-            [texts[index] for index in non_empty_indices]
-        )
+        matrix = TfidfVectorizer(stop_words="english").fit_transform([texts[index] for index in non_empty_indices])
     except ValueError:
         return result
     densities = np.asarray(matrix.mean(axis=1)).ravel()
@@ -150,12 +148,7 @@ def extract_windowed_semantic_features(
     for index, (start, end) in enumerate(windows):
         cues = _cue_matches(texts[index])
         cue_score = min(1.0, len(cues) / 2.0)
-        raw_score = float(
-            0.40 * topic[index]
-            + 0.25 * novelty[index]
-            + 0.20 * tfidf[index]
-            + 0.15 * cue_score
-        )
+        raw_score = float(0.40 * topic[index] + 0.25 * novelty[index] + 0.20 * tfidf[index] + 0.15 * cue_score)
         results.append(
             SemanticWindowScore(
                 start=round(start, 3),

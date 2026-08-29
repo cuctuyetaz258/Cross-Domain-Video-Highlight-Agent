@@ -22,13 +22,14 @@ SignalProfile = dict[str, float]
 # Event callback cho hiển thị tiến độ thời gian thực
 # ──────────────────────────────────────────────
 
+
 @dataclass
 class ProgressEvent:
     """Sự kiện tiến độ emit từ bên trong các node."""
 
-    node: str              # "observe" | "plan" | "analyze" | "decide" | "explain"
-    step: str              # "start" | "visual_window" | "done" | "fallback" | ...
-    message: str           # mô tả ngắn
+    node: str  # "observe" | "plan" | "analyze" | "decide" | "explain"
+    step: str  # "start" | "visual_window" | "done" | "fallback" | ...
+    message: str  # mô tả ngắn
     meta: dict = dc_field(default_factory=dict)  # thông tin phụ (timing, score, ...)
 
 

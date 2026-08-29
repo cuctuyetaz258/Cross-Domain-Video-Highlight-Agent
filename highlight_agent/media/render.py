@@ -43,9 +43,7 @@ def write_highlight_srt(
         relative_start = overlap_start - candidate.start_time
         relative_end = overlap_end - candidate.start_time
         entries.append(
-            f"{len(entries) + 1}\n"
-            f"{_srt_timestamp(relative_start)} --> {_srt_timestamp(relative_end)}\n"
-            f"{segment.text}\n"
+            f"{len(entries) + 1}\n{_srt_timestamp(relative_start)} --> {_srt_timestamp(relative_end)}\n{segment.text}\n"
         )
 
     if not entries:
@@ -75,8 +73,7 @@ def render_short_9_16(
     duration = source_duration or probe_duration(source)
     if candidate.end_time > duration + 0.05:
         raise MediaProcessingError(
-            f"highlight '{candidate.candidate_id}' ends at {candidate.end_time}s "
-            f"but video duration is {duration:.2f}s"
+            f"highlight '{candidate.candidate_id}' ends at {candidate.end_time}s but video duration is {duration:.2f}s"
         )
 
     output = Path(output_path)
@@ -218,9 +215,7 @@ def render_highlights(
         "source_video_path": str(workspace.source_video_path),
         "transcript_path": str(workspace.transcript_path),
         "highlights": [item.model_dump(mode="json") for item in rendered],
-        "boundary_adjustments": [
-            item.model_dump(mode="json") for item in boundary_adjustments or []
-        ],
+        "boundary_adjustments": [item.model_dump(mode="json") for item in boundary_adjustments or []],
     }
     (workspace_dir / "metadata.json").write_text(
         json.dumps(metadata, ensure_ascii=False, indent=2),

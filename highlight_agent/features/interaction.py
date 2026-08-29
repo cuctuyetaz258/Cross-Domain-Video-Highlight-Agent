@@ -39,11 +39,7 @@ def normalize_speaker_turns(
         raise ValueError("turn duration and speaker gap must be non-negative")
 
     valid = sorted(
-        (
-            turn
-            for turn in turns
-            if turn.end <= duration + 1e-6 and turn.end - turn.start >= min_turn_duration
-        ),
+        (turn for turn in turns if turn.end <= duration + 1e-6 and turn.end - turn.start >= min_turn_duration),
         key=lambda turn: (turn.start, turn.end, turn.speaker),
     )
     normalized: list[SpeakerTurn] = []
@@ -79,10 +75,7 @@ def interaction_features_from_turns(
         min_turn_duration=min_turn_duration,
         max_same_speaker_gap=max_same_speaker_gap,
     )
-    turn_count = sum(
-        current.speaker != previous.speaker
-        for previous, current in pairwise(normalized)
-    )
+    turn_count = sum(current.speaker != previous.speaker for previous, current in pairwise(normalized))
     speech_duration = sum(turn.end - turn.start for turn in normalized)
     return InteractionFeatures(
         duration=duration,

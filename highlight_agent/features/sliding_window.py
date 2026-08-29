@@ -24,8 +24,8 @@ def extract_windows(
     if frame_count < window_size:
         raise ValueError("feature_matrix ngan hon window_size")
 
-    target_device = torch.device(device) if device is not None else torch.device(
-        "cuda" if torch.cuda.is_available() else "cpu"
+    target_device = (
+        torch.device(device) if device is not None else torch.device("cuda" if torch.cuda.is_available() else "cpu")
     )
     timeline = torch.as_tensor(feature_matrix, dtype=torch.float32, device=target_device)
     windows = timeline.unfold(dimension=1, size=window_size, step=hop_size)

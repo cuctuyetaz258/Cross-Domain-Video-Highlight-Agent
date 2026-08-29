@@ -19,6 +19,7 @@ from highlight_agent.features.visual import (
 # Fixture tạo dummy video ngắn
 # ──────────────────────────────────────────────
 
+
 @pytest.fixture()
 def dummy_video(tmp_path: Path) -> Path:
     """Tạo video ngắn 2 giây (10 fps) với các frame random."""
@@ -38,20 +39,17 @@ def dummy_video(tmp_path: Path) -> Path:
 # Test Pixel Difference
 # ──────────────────────────────────────────────
 
+
 class TestPixelDiffVisualScore:
     def test_returns_results(self, dummy_video: Path):
-        results = extract_visual_scores(
-            dummy_video, window_size=2.0, sample_fps=2.0, method="pixel_diff"
-        )
+        results = extract_visual_scores(dummy_video, window_size=2.0, sample_fps=2.0, method="pixel_diff")
         assert len(results) >= 1
         assert isinstance(results[0], WindowVisualScore)
         assert results[0].method == "pixel_diff"
         assert results[0].motion_score >= 0.0
 
     def test_scores_to_array(self, dummy_video: Path):
-        results = extract_visual_scores(
-            dummy_video, window_size=2.0, sample_fps=2.0, method="pixel_diff"
-        )
+        results = extract_visual_scores(dummy_video, window_size=2.0, sample_fps=2.0, method="pixel_diff")
         arr = scores_to_array(results)
         assert isinstance(arr, np.ndarray)
         assert len(arr) == len(results)
@@ -71,13 +69,16 @@ class TestPixelDiffVisualScore:
     def test_invalid_method_raises(self, dummy_video: Path):
         with pytest.raises(ValueError, match="method không hợp lệ"):
             extract_visual_scores(
-                dummy_video, window_size=2.0, method="invalid_method"  # type: ignore
+                dummy_video,
+                window_size=2.0,
+                method="invalid_method",  # type: ignore
             )
 
 
 # ──────────────────────────────────────────────
 # Test RAFT Model Loader & Inference
 # ──────────────────────────────────────────────
+
 
 class TestRAFTModelLoader:
     def test_model_loads_or_skips(self):
@@ -110,9 +111,7 @@ class TestRAFTScoreWithDummyVideo:
         pytest.importorskip("torch", reason="torch không có — skip RAFT tests")
         pytest.importorskip("torchvision", reason="torchvision không có — skip RAFT tests")
 
-        results = extract_visual_scores(
-            dummy_video, window_size=2.0, sample_fps=2.0, method="raft"
-        )
+        results = extract_visual_scores(dummy_video, window_size=2.0, sample_fps=2.0, method="raft")
         assert len(results) >= 1
         assert results[0].method == "raft"
         assert results[0].motion_score >= 0.0

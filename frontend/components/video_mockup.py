@@ -30,7 +30,10 @@ def render_video_mockup(data: dict):
             else:
                 st.error(f"Video file missing: {video_path}")
 
-            exp = reason_map.get(highlight["candidate_id"], highlight.get("reason", "Highly engaging moment based on acoustic and text signals."))
+            exp = reason_map.get(
+                highlight["candidate_id"],
+                highlight.get("reason", "Highly engaging moment based on acoustic and text signals."),
+            )
 
             with st.expander("Why was this selected?", expanded=True):
                 st.markdown(f"<div style='font-size: 0.9em;'>{exp}</div>", unsafe_allow_html=True)

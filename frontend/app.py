@@ -1,4 +1,3 @@
-
 import streamlit as st
 from agent_runner import run_live_agent
 from components.sidebar import render_sidebar
@@ -15,7 +14,8 @@ st.set_page_config(
 )
 
 # Custom CSS for glassmorphism and modern fonts
-st.markdown("""
+st.markdown(
+    """
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
     
@@ -43,7 +43,9 @@ st.markdown("""
         display: none !important;
     }
 </style>
-""", unsafe_allow_html=True)
+""",
+    unsafe_allow_html=True,
+)
 
 # Initialize Session State
 if "current_phase" not in st.session_state:
@@ -54,6 +56,7 @@ if "is_running" not in st.session_state:
     st.session_state["is_running"] = False
 if "agent_result" not in st.session_state:
     st.session_state["agent_result"] = None
+
 
 def main():
     st.title("🎬 Video Highlight Agent Console")
@@ -79,7 +82,7 @@ def main():
         if result:
             st.session_state["agent_result"] = result
             st.session_state["is_running"] = False
-            st.session_state["current_phase"] = 6 # Completed (index 6 in the padded array)
+            st.session_state["current_phase"] = 6  # Completed (index 6 in the padded array)
             # The final step is already rendered inside run_live_agent, so no need to render again
         else:
             st.session_state["is_running"] = False
@@ -89,6 +92,7 @@ def main():
 
         st.subheader("Generated Highlights")
         render_video_mockup(st.session_state["agent_result"])
+
 
 if __name__ == "__main__":
     main()

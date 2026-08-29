@@ -18,7 +18,9 @@ def blend_scores(
         raise ValueError("window_size va hop_size phai lon hon 0")
 
     # asarray ho tro ca Tensor CPU ma khong can phu thuoc torch trong module nay
-    scores = np.asarray(window_scores.detach().cpu() if hasattr(window_scores, "detach") else window_scores, dtype=np.float32)
+    scores = np.asarray(
+        window_scores.detach().cpu() if hasattr(window_scores, "detach") else window_scores, dtype=np.float32
+    )
     if scores.ndim != 1:
         raise ValueError("window_scores phai la mang mot chieu")
 

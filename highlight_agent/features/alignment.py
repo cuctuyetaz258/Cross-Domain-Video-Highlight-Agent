@@ -42,8 +42,7 @@ def _text_signal(
     return result
 
 
-def _scene_signal(
-    scene_times: list[float], *, duration: float, sample_rate: int, sample_count: int) -> np.ndarray:
+def _scene_signal(scene_times: list[float], *, duration: float, sample_rate: int, sample_count: int) -> np.ndarray:
     result = np.zeros(sample_count, dtype=np.float32)
     for timestamp in scene_times:
         if np.isfinite(timestamp) and 0.0 <= timestamp < duration:
@@ -102,13 +101,17 @@ def build_feature_matrix(
         [window.acoustic.pitch_mean_hz or 0.0 for window in acoustic_windows],
         timeline,
     )
-    silence = _interpolate_windows(acoustic_windows, [window.acoustic.silence_ratio for window in acoustic_windows], timeline)
+    silence = _interpolate_windows(
+        acoustic_windows, [window.acoustic.silence_ratio for window in acoustic_windows], timeline
+    )
     raw = {
         "rms": rms,
         "pitch": pitch,
         "silence": silence,
         "text_score": _text_signal(word_scores, duration=duration, sample_rate=sample_rate, sample_count=sample_count),
-        "scene_change": _scene_signal(scene_times, duration=duration, sample_rate=sample_rate, sample_count=sample_count),
+        "scene_change": _scene_signal(
+            scene_times, duration=duration, sample_rate=sample_rate, sample_count=sample_count
+        ),
         "gesture": _gesture_signal(gesture_sparse, timeline, duration),
         "turn_rate": _turn_rate_signal(interaction, acoustic_windows, timeline),
     }

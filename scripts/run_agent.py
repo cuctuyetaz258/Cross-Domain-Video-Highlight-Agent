@@ -21,6 +21,7 @@ try:
     from rich.live import Live
     from rich.panel import Panel
     from rich.table import Table
+
     HAS_RICH = True
     console = Console(force_terminal=True)
 except ImportError:
@@ -145,12 +146,8 @@ def main() -> None:
         "workspace": result["workspace"].model_dump(mode="json"),
         "features": result["features"],
         "highlights": [item.model_dump(mode="json") for item in result.get("highlights", [])],
-        "boundary_adjustments": [
-            item.model_dump(mode="json") for item in result.get("boundary_adjustments", [])
-        ],
-        "rendered_highlights": [
-            item.model_dump(mode="json") for item in result.get("rendered_highlights", [])
-        ],
+        "boundary_adjustments": [item.model_dump(mode="json") for item in result.get("boundary_adjustments", [])],
+        "rendered_highlights": [item.model_dump(mode="json") for item in result.get("rendered_highlights", [])],
         "reasoning": result.get("reasoning", []),
     }
     print(json.dumps(summary, ensure_ascii=False, indent=2))

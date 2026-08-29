@@ -31,7 +31,9 @@ def extract_topk_nms(
     if sample_rate <= 0:
         raise ValueError("sample_rate phai lon hon 0")
 
-    scores = np.asarray(timeline_score.detach().cpu() if hasattr(timeline_score, "detach") else timeline_score, dtype=np.float32)
+    scores = np.asarray(
+        timeline_score.detach().cpu() if hasattr(timeline_score, "detach") else timeline_score, dtype=np.float32
+    )
     if scores.ndim != 1:
         raise ValueError("timeline_score phai la mang mot chieu")
     if not np.isfinite(scores).all():

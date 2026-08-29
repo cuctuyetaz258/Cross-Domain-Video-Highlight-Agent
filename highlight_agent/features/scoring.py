@@ -62,6 +62,7 @@ PROFILE_WEIGHTS: dict[Domain, dict[str, float]] = {
 # Data class kết quả scoring
 # ──────────────────────────────────────────────
 
+
 @dataclass
 class WindowScore:
     """Kết quả đầy đủ cho một cửa sổ thời gian sau khi tính điểm."""
@@ -69,10 +70,10 @@ class WindowScore:
     window_idx: int
     start: float
     end: float
-    total_score: float                           # ∈ [0, 1]
-    signals_raw: dict[str, float]                # trước chuẩn hóa
-    signals_normalized: dict[str, float]         # sau chuẩn hóa ∈ [0, 1]
-    weights: dict[str, float]                    # trọng số đã dùng
+    total_score: float  # ∈ [0, 1]
+    signals_raw: dict[str, float]  # trước chuẩn hóa
+    signals_normalized: dict[str, float]  # sau chuẩn hóa ∈ [0, 1]
+    weights: dict[str, float]  # trọng số đã dùng
     extra: dict = field(default_factory=dict)
 
     @property
@@ -80,13 +81,8 @@ class WindowScore:
         return self.end - self.start
 
     def summary(self) -> str:
-        sigs = ", ".join(
-            f"{k}={v:.3f}" for k, v in self.signals_normalized.items()
-        )
-        return (
-            f"[{self.start:.1f}s–{self.end:.1f}s] "
-            f"total={self.total_score:.3f} | {sigs}"
-        )
+        sigs = ", ".join(f"{k}={v:.3f}" for k, v in self.signals_normalized.items())
+        return f"[{self.start:.1f}s–{self.end:.1f}s] total={self.total_score:.3f} | {sigs}"
 
 
 # ──────────────────────────────────────────────
@@ -126,10 +122,7 @@ def normalize_features(
     lengths = {k: len(v) for k, v in features.items()}
     unique_lengths = set(lengths.values())
     if len(unique_lengths) > 1:
-        raise ValueError(
-            f"Các tín hiệu không cùng số cửa sổ: {lengths}. "
-            "Tất cả tín hiệu phải có cùng độ dài."
-        )
+        raise ValueError(f"Các tín hiệu không cùng số cửa sổ: {lengths}. Tất cả tín hiệu phải có cùng độ dài.")
 
     n_samples = next(iter(unique_lengths))
     if n_samples == 0:
@@ -173,6 +166,7 @@ def normalize_features(
 # Phần A.2 — Tính điểm tổng hợp (Weighted Fusion)
 # ──────────────────────────────────────────────
 
+
 def calculate_total_score(
     normalized_features: dict[str, np.ndarray],
     weights: dict[str, float],
@@ -195,11 +189,7 @@ def calculate_total_score(
         return []
 
     # Lọc các trọng số có tín hiệu tương ứng
-    active_weights = {
-        k: float(v)
-        for k, v in weights.items()
-        if k in normalized_features and v > 0
-    }
+    active_weights = {k: float(v) for k, v in weights.items() if k in normalized_features and v > 0}
 
     if not active_weights:
         raise ValueError(
@@ -211,8 +201,7 @@ def calculate_total_score(
     weight_sum = sum(active_weights.values())
     if not (0.99 <= weight_sum <= 1.01):
         logger.warning(
-            "Tổng trọng số active = %.4f (khác 1.0). "
-            "Sẽ tự động normalize lại trọng số.",
+            "Tổng trọng số active = %.4f (khác 1.0). Sẽ tự động normalize lại trọng số.",
             weight_sum,
         )
         active_weights = {k: v / weight_sum for k, v in active_weights.items()}
@@ -284,6 +273,7 @@ def score_from_domain(
 # Phần A.3 — Grid Search trọng số
 # ──────────────────────────────────────────────
 
+
 @dataclass
 class GridSearchResult:
     """Kết quả Grid Search tốt nhất."""
@@ -354,8 +344,7 @@ def grid_search_weights(
     active_signals = [s for s in signal_names if s in normalized_features]
     if not active_signals:
         raise ValueError(
-            f"Không có signal nào trong {signal_names} khớp với features. "
-            f"Available: {list(normalized_features.keys())}"
+            f"Không có signal nào trong {signal_names} khớp với features. Available: {list(normalized_features.keys())}"
         )
 
     logger.info(

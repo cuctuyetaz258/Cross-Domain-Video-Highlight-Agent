@@ -36,6 +36,7 @@ logger = logging.getLogger(__name__)
 # Helper: Emit progress events
 # ──────────────────────────────────────────────
 
+
 def _emit(state: AgentState, node: str, step: str, message: str, **meta) -> None:
     """Gửi sự kiện tiến độ ra ngoài nếu có emit callback được cung cấp."""
     emit_fn = state.get("emit")
@@ -49,6 +50,7 @@ def _emit(state: AgentState, node: str, step: str, message: str, **meta) -> None
 # ──────────────────────────────────────────────
 # Node 1: Observe
 # ──────────────────────────────────────────────
+
 
 def observe(state: AgentState) -> dict:
     """Chuẩn hóa media và đưa transcript vào state"""
@@ -72,6 +74,7 @@ def observe(state: AgentState) -> dict:
 # Node 2: Plan
 # ──────────────────────────────────────────────
 
+
 def plan(state: AgentState) -> dict:
     """Chọn profile tín hiệu theo domain"""
 
@@ -88,9 +91,8 @@ def plan(state: AgentState) -> dict:
 # Visual feature extraction
 # ──────────────────────────────────────────────
 
-def _extract_visual_windows(
-    state: AgentState, window_seconds: float, duration: float
-) -> list[WindowVisualScore]:
+
+def _extract_visual_windows(state: AgentState, window_seconds: float, duration: float) -> list[WindowVisualScore]:
     """Trích xuất visual motion cùng cửa sổ với các tầng feature khác"""
     workspace = state.get("workspace")
     transcript = state.get("transcript")
@@ -186,9 +188,7 @@ def _multimodal_candidates(state: AgentState, timeline) -> list[HighlightCandida
         "visual": [window.visual.motion_score if window.visual else 0.0 for window in timeline.windows],
     }
     if state["domain"] == "podcast":
-        raw_signals["interaction"] = _interaction_window_scores(
-            [window.interaction for window in timeline.windows]
-        )
+        raw_signals["interaction"] = _interaction_window_scores([window.interaction for window in timeline.windows])
 
     normalized = normalize_features(raw_signals, scaler_type="robust")
     scores = calculate_total_score(
@@ -209,13 +209,13 @@ def _multimodal_candidates(state: AgentState, timeline) -> list[HighlightCandida
                 start_time=score.start,
                 end_time=score.end,
                 score=round(score.total_score * 10.0, 3),
-                reason=(
-                    f"Multimodal fusion score={score.total_score:.3f}; "
-                    f"semantic cue: {evidence}"
-                ),
+                reason=(f"Multimodal fusion score={score.total_score:.3f}; semantic cue: {evidence}"),
                 signals={
                     **{name: round(value, 6) for name, value in score.signals_normalized.items()},
-                    **{f"{name}_raw": round(raw_signals[name][score.window_idx], 6) for name in score.signals_normalized},
+                    **{
+                        f"{name}_raw": round(raw_signals[name][score.window_idx], 6)
+                        for name in score.signals_normalized
+                    },
                 },
             )
         )
@@ -227,6 +227,7 @@ def _multimodal_candidates(state: AgentState, timeline) -> list[HighlightCandida
 # ──────────────────────────────────────────────
 # Naive baseline (fallback)
 # ──────────────────────────────────────────────
+
 
 def _naive_candidates(state: AgentState, count: int = 5) -> list[HighlightCandidate]:
     transcript = state.get("transcript")
@@ -260,6 +261,7 @@ def _naive_candidates(state: AgentState, count: int = 5) -> list[HighlightCandid
 # ──────────────────────────────────────────────
 # Node 3: Analyze
 # ──────────────────────────────────────────────
+
 
 def analyze(state: AgentState) -> dict:
     """Trích xuất features đa tầng, fusion để tạo candidate hoặc fallback an toàn"""
@@ -313,7 +315,13 @@ def analyze(state: AgentState) -> dict:
             duration=acoustic.duration,
         )
         semantic_windows = [score.features for score in semantic_scores]
-        _emit(state, "analyze", "semantic_done", f"Trích xuất {len(semantic_windows)} semantic windows", count=len(semantic_windows))
+        _emit(
+            state,
+            "analyze",
+            "semantic_done",
+            f"Trích xuất {len(semantic_windows)} semantic windows",
+            count=len(semantic_windows),
+        )
 
         visual_scores = _extract_visual_windows(state, window_seconds, acoustic.duration)
         visual_windows = [
@@ -389,6 +397,7 @@ def analyze(state: AgentState) -> dict:
 # Node 4: Decide
 # ──────────────────────────────────────────────
 
+
 def decide(state: AgentState) -> dict:
     """Xếp hạng, canh biên và gọi Backend render"""
 
@@ -428,6 +437,7 @@ def decide(state: AgentState) -> dict:
 # ──────────────────────────────────────────────
 # Node 5: Explain
 # ──────────────────────────────────────────────
+
 
 def explain(state: AgentState) -> dict:
     """Tạo reasoning minh bạch cho kết quả highlight"""

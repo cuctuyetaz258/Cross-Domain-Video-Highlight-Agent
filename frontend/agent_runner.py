@@ -82,6 +82,7 @@ def run_live_agent(video_url: str, domain: str, stepper_placeholder):
                 current_phase_idx = phases.index(node_name) + 2
                 with stepper_placeholder:
                     from components.stepper import render_stepper_state
+
                     render_stepper_state(current_phase_idx)
                 time.sleep(0.5)
 
@@ -92,16 +93,29 @@ def run_live_agent(video_url: str, domain: str, stepper_placeholder):
             status_container.update(label="✅ Video Processing Complete!", state="complete", expanded=False)
 
             summary = {
-                "workspace": final_state.get("workspace", {}).model_dump(mode="json") if hasattr(final_state.get("workspace"), "model_dump") else final_state.get("workspace"),
+                "workspace": final_state.get("workspace", {}).model_dump(mode="json")
+                if hasattr(final_state.get("workspace"), "model_dump")
+                else final_state.get("workspace"),
                 "features": final_state.get("features"),
-                "candidates": [(item.model_dump(mode="json") if hasattr(item, "model_dump") else item) for item in final_state.get("candidates", [])] if final_state.get("candidates") else [],
-                "highlights": [item.model_dump(mode="json") for item in final_state.get("highlights", [])] if final_state.get("highlights") else [],
+                "candidates": [
+                    (item.model_dump(mode="json") if hasattr(item, "model_dump") else item)
+                    for item in final_state.get("candidates", [])
+                ]
+                if final_state.get("candidates")
+                else [],
+                "highlights": [item.model_dump(mode="json") for item in final_state.get("highlights", [])]
+                if final_state.get("highlights")
+                else [],
                 "boundary_adjustments": [
                     item.model_dump(mode="json") for item in final_state.get("boundary_adjustments", [])
-                ] if final_state.get("boundary_adjustments") else [],
+                ]
+                if final_state.get("boundary_adjustments")
+                else [],
                 "rendered_highlights": [
                     item.model_dump(mode="json") for item in final_state.get("rendered_highlights", [])
-                ] if final_state.get("rendered_highlights") else [],
+                ]
+                if final_state.get("rendered_highlights")
+                else [],
                 "reasoning": final_state.get("reasoning", []),
             }
             return summary

@@ -29,15 +29,16 @@ VisualMethod = Literal["pixel_diff", "raft"]
 # Data class kết quả visual theo từng cửa sổ
 # ──────────────────────────────────────────────
 
+
 @dataclass
 class WindowVisualScore:
     """Điểm chuyển động thị giác cho một cửa sổ thời gian."""
 
-    start: float                         # Giây bắt đầu
-    end: float                           # Giây kết thúc
-    motion_score: float                  # Điểm chuyển động thô (chưa chuẩn hóa)
-    method: VisualMethod                 # "pixel_diff" hoặc "raft"
-    frame_count: int = 0                 # Số frame đã phân tích trong window
+    start: float  # Giây bắt đầu
+    end: float  # Giây kết thúc
+    motion_score: float  # Điểm chuyển động thô (chưa chuẩn hóa)
+    method: VisualMethod  # "pixel_diff" hoặc "raft"
+    frame_count: int = 0  # Số frame đã phân tích trong window
     extra: dict = field(default_factory=dict)  # Metadata phụ (max, std, device, ...)
 
     @property
@@ -55,6 +56,7 @@ class WindowVisualScore:
 # ──────────────────────────────────────────────
 # Helper: Đọc video an toàn
 # ──────────────────────────────────────────────
+
 
 def _open_video(video_path: str | Path) -> cv2.VideoCapture:
     """Mở video bằng OpenCV, raise ValueError nếu không mở được."""
@@ -74,6 +76,7 @@ def _seek_to(cap: cv2.VideoCapture, time_sec: float, fps: float) -> None:
 # ──────────────────────────────────────────────
 # Phương pháp 1: Pixel Difference (CPU / Nhanh)
 # ──────────────────────────────────────────────
+
 
 def _pixel_diff_score(
     cap: cv2.VideoCapture,
@@ -122,6 +125,7 @@ def _pixel_diff_score(
 # Lazy loader cho RAFT-Small (singleton để tiết kiệm VRAM)
 # ──────────────────────────────────────────────
 
+
 class _RAFTModelLoader:
     """Singleton quản lý model RAFT-Small chỉ nạp một lần vào bộ nhớ."""
 
@@ -141,9 +145,7 @@ class _RAFTModelLoader:
                 raft_small,
             )
         except ImportError as exc:
-            raise ImportError(
-                "Để dùng method='raft', vui lòng cài: pip install torch torchvision"
-            ) from exc
+            raise ImportError("Để dùng method='raft', vui lòng cài: pip install torch torchvision") from exc
 
         cls._device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         weights = Raft_Small_Weights.DEFAULT
@@ -169,6 +171,7 @@ class _RAFTModelLoader:
 # ──────────────────────────────────────────────
 # Phương pháp 2: RAFT-Small (Deep Learning Optical Flow)
 # ──────────────────────────────────────────────
+
 
 def _raft_score(
     cap: cv2.VideoCapture,
@@ -221,11 +224,15 @@ def _raft_score(
             new_w = (w // 8) * 8
             if new_h != h or new_w != w:
                 img1_t = torch.nn.functional.interpolate(
-                    img1_t.unsqueeze(0), size=(new_h, new_w), mode="bilinear",
+                    img1_t.unsqueeze(0),
+                    size=(new_h, new_w),
+                    mode="bilinear",
                     align_corners=False,
                 ).squeeze(0)
                 img2_t = torch.nn.functional.interpolate(
-                    img2_t.unsqueeze(0), size=(new_h, new_w), mode="bilinear",
+                    img2_t.unsqueeze(0),
+                    size=(new_h, new_w),
+                    mode="bilinear",
                     align_corners=False,
                 ).squeeze(0)
 
@@ -241,9 +248,7 @@ def _raft_score(
 
             # Lấy flow cuối cùng (iteration cuối = chính xác nhất)
             final_flow = list_of_flows[-1][0]  # (2, H, W)
-            flow_mag = torch.sqrt(
-                final_flow[0] ** 2 + final_flow[1] ** 2
-            )
+            flow_mag = torch.sqrt(final_flow[0] ** 2 + final_flow[1] ** 2)
             magnitudes.append(float(flow_mag.mean().cpu()))
 
         prev_frame = frame
@@ -265,6 +270,7 @@ def _raft_score(
 # ──────────────────────────────────────────────
 # API công khai
 # ──────────────────────────────────────────────
+
 
 def extract_visual_scores(
     video_path: str | Path,
@@ -313,8 +319,7 @@ def extract_visual_scores(
 
         if duration < window_size:
             logger.warning(
-                "Video duration (%.1fs) nhỏ hơn window_size (%.1fs). "
-                "Chỉ có 1 cửa sổ.",
+                "Video duration (%.1fs) nhỏ hơn window_size (%.1fs). Chỉ có 1 cửa sổ.",
                 duration,
                 window_size,
             )
@@ -331,10 +336,7 @@ def extract_visual_scores(
             elif method == "raft":
                 score, n_frames, extra = _raft_score(cap, fps, start, end, sample_fps)
             else:
-                raise ValueError(
-                    f"method không hợp lệ: {method!r}. "
-                    "Chọn 'pixel_diff' hoặc 'raft'."
-                )
+                raise ValueError(f"method không hợp lệ: {method!r}. Chọn 'pixel_diff' hoặc 'raft'.")
 
             results.append(
                 WindowVisualScore(

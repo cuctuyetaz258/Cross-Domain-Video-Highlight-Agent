@@ -21,14 +21,15 @@ from highlight_agent.features.scoring import (
 # Fixtures
 # ──────────────────────────────────────────────
 
+
 @pytest.fixture()
 def simple_raw() -> dict[str, list[float]]:
     """4 cửa sổ, 4 tín hiệu."""
     return {
-        "semantic":    [0.1, 0.9, 0.5, 0.3],
-        "acoustic":    [5.0, 30.0, 12.0, 8.0],
+        "semantic": [0.1, 0.9, 0.5, 0.3],
+        "acoustic": [5.0, 30.0, 12.0, 8.0],
         "interaction": [0.0, 1.0, 0.5, 0.2],
-        "visual":      [2.0, 80.0, 20.0, 5.0],
+        "visual": [2.0, 80.0, 20.0, 5.0],
     }
 
 
@@ -40,6 +41,7 @@ def normed(simple_raw) -> dict[str, np.ndarray]:
 # ──────────────────────────────────────────────
 # normalize_features
 # ──────────────────────────────────────────────
+
 
 class TestNormalizeFeatures:
     def test_output_range_minmax(self, normed):
@@ -89,6 +91,7 @@ class TestNormalizeFeatures:
 # calculate_total_score
 # ──────────────────────────────────────────────
 
+
 class TestCalculateTotalScore:
     def test_returns_correct_count(self, normed):
         scores = calculate_total_score(normed, PROFILE_WEIGHTS["lecture"])
@@ -118,7 +121,7 @@ class TestCalculateTotalScore:
 
     def test_window_timestamps_attached(self, normed):
         starts = [0.0, 30.0, 60.0, 90.0]
-        ends   = [30.0, 60.0, 90.0, 120.0]
+        ends = [30.0, 60.0, 90.0, 120.0]
         scores = calculate_total_score(normed, PROFILE_WEIGHTS["lecture"], starts, ends)
         for i, s in enumerate(scores):
             assert s.start == starts[i]
@@ -134,6 +137,7 @@ class TestCalculateTotalScore:
 # ──────────────────────────────────────────────
 # score_from_domain
 # ──────────────────────────────────────────────
+
 
 class TestScoreFromDomain:
     def test_lecture_domain(self, normed):
@@ -156,6 +160,7 @@ class TestScoreFromDomain:
 # ──────────────────────────────────────────────
 # grid_search_weights
 # ──────────────────────────────────────────────
+
 
 class TestGridSearchWeights:
     def test_returns_valid_result(self, normed):

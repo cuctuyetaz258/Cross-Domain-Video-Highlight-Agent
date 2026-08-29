@@ -64,20 +64,12 @@ def _end_boundary(target: float, boundaries: list[float], radius: float) -> floa
 
 
 def _nearest_silence_start(boundary: float, silence_intervals: list[TimeInterval], radius: float) -> float | None:
-    candidates = [
-        interval.end
-        for interval in silence_intervals
-        if boundary - radius <= interval.end <= boundary
-    ]
+    candidates = [interval.end for interval in silence_intervals if boundary - radius <= interval.end <= boundary]
     return max(candidates) if candidates else None
 
 
 def _nearest_silence_end(boundary: float, silence_intervals: list[TimeInterval], radius: float) -> float | None:
-    candidates = [
-        interval.start
-        for interval in silence_intervals
-        if boundary <= interval.start <= boundary + radius
-    ]
+    candidates = [interval.start for interval in silence_intervals if boundary <= interval.start <= boundary + radius]
     return min(candidates) if candidates else None
 
 
@@ -171,9 +163,7 @@ def refine_candidate_boundary(
         (candidate.start_time, proposed_end, False, True),
         (candidate.start_time, candidate.end_time, False, False),
     ]
-    valid_options = [
-        option for option in options if _is_valid_range(option[0], option[1], video_duration, config)
-    ]
+    valid_options = [option for option in options if _is_valid_range(option[0], option[1], video_duration, config)]
     if not valid_options:
         raise ValueError("candidate boundaries must stay inside the video and satisfy highlight duration")
     start, end, used_start, used_end = min(

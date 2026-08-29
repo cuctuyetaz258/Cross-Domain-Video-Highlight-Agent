@@ -3,7 +3,7 @@ import streamlit as st
 
 def render_stepper_state(current: int):
     """
-    Renders the Stepper Bar UI natively using Streamlit's st.progress to completely eliminate 
+    Renders the Stepper Bar UI natively using Streamlit's st.progress to completely eliminate
     any DOM teardown flickering (glitching) caused by st.empty() markdown replacements.
     """
     phases = ["Ready", "Observe", "Plan", "Analyze", "Decide", "Explain", "Completed"]
@@ -16,11 +16,11 @@ def render_stepper_state(current: int):
 
         # Theming logic
         if is_completed:
-            circle_bg = "#238636" # Green
+            circle_bg = "#238636"  # Green
             text_color = "inherit"
             content = "✓"
         elif is_active:
-            circle_bg = "#58a6ff" # Blue
+            circle_bg = "#58a6ff"  # Blue
             text_color = "#58a6ff"
             content = str(i)
         else:
@@ -48,6 +48,7 @@ def render_stepper_state(current: int):
     html += "</div>"
 
     st.markdown(html, unsafe_allow_html=True)
+
 
 def render_stepper():
     current = st.session_state.get("current_phase", 0)
