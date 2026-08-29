@@ -52,3 +52,6 @@ data/reports/
 build/
 dist/
 *.egg-info/
+
+# Documentation (local only)
+docs/
