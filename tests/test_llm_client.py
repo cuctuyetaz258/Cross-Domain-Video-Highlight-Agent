@@ -104,7 +104,7 @@ def test_openai_config_treats_blank_base_url_as_official_default(monkeypatch) ->
     config = LLMClientConfig.from_env(provider="openai")
 
     assert config.provider == "openai"
-    assert config.model == "gpt-4.1-mini"
+    assert config.model == "gpt-4o-mini"
     assert config.base_url is None
 
 
