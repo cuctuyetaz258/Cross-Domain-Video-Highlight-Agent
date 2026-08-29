@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "artifact_version": "ltr-scorer-v1.1",
+  "artifact_page": "https://www.kaggle.com/datasets/cuctuyetaz258/cross-validation-checkpoint",
+  "download_urls": [
+    "https://www.kaggle.com/api/v1/datasets/download/cuctuyetaz258/cross-validation-checkpoint"
+  ],
+  "filename": "ltr_scorer.pt",
+  "size_bytes": 4540,
+  "sha256": "059038c7dd9113a48a3fc6c2e8167f7ee40ccfeaa48952a91c84cd614beb3596",
+  "checkpoint_version": "1.0",
+  "feature_schema": "1.1",
+  "channel_order": [
+    "rms",
+    "pitch",
+    "silence",
+    "text_score",
+    "scene_change",
+    "gesture",
+    "turn_rate"
+  ],
+  "sample_rate_hz": 10,
+  "normalization": "minmax_per_video",
+  "window_size": 50,
+  "hop_size": 10,
+  "validation_ap": 0.8405644228265143,
+  "dataset_fingerprint": "fe48934e68ba4f08752ff9b11abccf604c1d2cbd5c4792c5156e3bac2ac88cfe"
+}

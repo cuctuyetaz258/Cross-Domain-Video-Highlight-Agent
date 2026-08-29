@@ -78,6 +78,7 @@ def _state(tmp_path: Path) -> dict:
 def test_decide_applies_llm_metadata_to_rendered_highlights(tmp_path: Path, monkeypatch) -> None:
     state = _state(tmp_path)
     assessments = [_assessment("c1", 0.3), _assessment("c2", 1.0), _assessment("c3", 0.5)]
+    captured_pipeline = {}
 
     monkeypatch.setattr(nodes.LLMClientConfig, "from_env", lambda **kwargs: object())
     monkeypatch.setattr(nodes, "OpenAICompatibleAssessmentClient", lambda config: object())
@@ -103,7 +104,8 @@ def test_decide_applies_llm_metadata_to_rendered_highlights(tmp_path: Path, monk
         lambda workspace, candidates: (candidates, []),
     )
 
-    def fake_render(workspace, candidates, *, llm_assessments, **kwargs):
+    def fake_render(workspace, candidates, *, llm_assessments, pipeline_metadata, **kwargs):
+        captured_pipeline.update(pipeline_metadata)
         return [
             RenderedHighlight(
                 candidate_id=candidate.candidate_id,
@@ -124,10 +126,13 @@ def test_decide_applies_llm_metadata_to_rendered_highlights(tmp_path: Path, monk
     assert result["highlights"][0].candidate_id == "c2"
     assert result["rendered_highlights"][0].title == "Title c2"
     assert result["llm_run"].applied is True
+    assert captured_pipeline["mode"] == "ltr_llm_rerank"
+    assert captured_pipeline["llm_run"]["applied"] is True
 
 
 def test_decide_falls_back_to_ltr_when_provider_fails(tmp_path: Path, monkeypatch) -> None:
     state = _state(tmp_path)
+    captured_pipeline = {}
     monkeypatch.setattr(
         nodes.LLMClientConfig,
         "from_env",
@@ -138,7 +143,11 @@ def test_decide_falls_back_to_ltr_when_provider_fails(tmp_path: Path, monkeypatc
         "refine_candidates_for_render",
         lambda workspace, candidates: (candidates, []),
     )
-    monkeypatch.setattr(nodes, "render_candidates", lambda workspace, candidates, **kwargs: [])
+    def fake_render(workspace, candidates, *, pipeline_metadata, **kwargs):
+        captured_pipeline.update(pipeline_metadata)
+        return []
+
+    monkeypatch.setattr(nodes, "render_candidates", fake_render)
 
     result = nodes.decide(state)
 
@@ -146,3 +155,7 @@ def test_decide_falls_back_to_ltr_when_provider_fails(tmp_path: Path, monkeypatc
     assert result["features"]["mode"] == "ltr_required"
     assert result["llm_run"].applied is False
     assert "missing key" in result["llm_run"].fallback_reason
+    assert captured_pipeline["mode"] == "ltr_required"
+    assert captured_pipeline["llm_run"]["enabled"] is True
+    assert captured_pipeline["llm_run"]["applied"] is False
+    assert captured_pipeline["llm_run"]["fallback_reason"] == "missing key"

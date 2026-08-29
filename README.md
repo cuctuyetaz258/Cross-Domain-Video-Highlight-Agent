@@ -61,6 +61,19 @@ python -m pip install -r requirements.txt
 `requirements.txt` là nguồn dependency duy nhất của project. File này bao
 gồm cả dependency Sprint 1, feature extraction Sprint 2 và công cụ test.
 
+### Cài checkpoint production
+
+Sau khi cài dependency, chạy đúng một lệnh; không cần tài khoản hay Kaggle CLI:
+
+```bash
+python -m scripts.download_ltr_checkpoint
+```
+
+Script tải artifact `ltr-scorer-v1.1`, kiểm tra kích thước và SHA-256, chạy LTR preflight trên CPU,
+sau đó mới atomic install vào `data/models/ltr_scorer.pt`. Nếu checkpoint hợp lệ đã tồn tại, lệnh
+trả `already_installed` và không tải lại. Không dùng `--force` trừ khi chủ động muốn thay một file
+local không khớp manifest.
+
 ## Biến môi trường
 
 ```bash
@@ -149,16 +162,18 @@ Yêu cầu: `GROQ_API_KEY` đã được điền trong file `.env`.
 Pipeline production có sáu pha và bắt buộc checkpoint LTR hợp lệ:
 
 ```bash
-python scripts/run_agent.py sample.mp4 \
+python -m scripts.run_agent sample.mp4 \
   --domain lecture \
-  --highlight-count 3 \
-  --ltr-model-path data/models/ltr_scorer.pt
+  --highlight-count 3
 ```
+
+CLI mặc định đọc `data/models/ltr_scorer.pt`, nên không cần truyền `--ltr-model-path` sau khi đã
+chạy downloader ở bước cài đặt.
 
 Ép dùng Whisper và tắt subtitle khi cần test riêng:
 
 ```bash
-python scripts/run_agent.py sample.mp4 \
+python -m scripts.run_agent sample.mp4 \
   --domain lecture \
   --transcript-source whisper \
   --no-subtitles
@@ -192,7 +207,7 @@ bootstrap `0.60 * normalized_ltr + 0.40 * semantic_quality`, rồi mới chọn 
 Ví dụ OpenAI:
 
 ```bash
-python scripts/run_agent.py sample.mp4 \
+python -m scripts.run_agent sample.mp4 \
   --domain lecture \
   --ltr-model-path data/models/ltr_scorer.pt \
   --llm-provider openai \
@@ -203,7 +218,7 @@ python scripts/run_agent.py sample.mp4 \
 Ví dụ Groq:
 
 ```bash
-python scripts/run_agent.py sample.mp4 \
+python -m scripts.run_agent sample.mp4 \
   --domain podcast \
   --ltr-model-path data/models/ltr_scorer.pt \
   --llm-provider groq \
@@ -225,19 +240,31 @@ biên xác định hiện tại.
 
 ### Checkpoint chia sẻ trên Kaggle
 
-Model artifact hiện được chia sẻ tại:
+Checkpoint production được phát hành tại:
 
-- <https://www.kaggle.com/models/nguyentrann0703/video/>
+- <https://www.kaggle.com/datasets/cuctuyetaz258/cross-validation-checkpoint>
 
-Bundle Kaggle `default`, version 1 là artifact lịch sử schema 1.0 (`val_AP=0.7881894802`). Production
-preflight không chấp nhận bundle này vì thiếu feature contract đầy đủ và cache gesture cũ ghi nhận
-FaceMesh initialization failure.
+Người dùng thông thường chỉ cần:
 
-Artifact local hiện tại đã rebuild bằng Conda `MLIoT`: 20/20 cache schema 1.1, gesture nonzero ở
-19/20 video và SceneDetect `ok` ở 20/20. Checkpoint mới có best epoch 3, train AP `0.837744`,
-validation AP `0.840564`, load được trên CPU/CUDA và SHA-256
-`059038c7dd9113a48a3fc6c2e8167f7ee40ccfeaa48952a91c84cd614beb3596`. Binary/cache vẫn nằm ngoài
-Git theo `.gitignore`; khi phát hành cần upload checkpoint versioned và checksum cùng nhau.
+```bash
+python -m scripts.download_ltr_checkpoint
+```
+
+Không cần tải ZIP thủ công, giải nén, đổi tên hay nhập checkpoint path trên CLI. Danh tính artifact
+được khóa trong `artifacts/manifests/ltr_scorer_v1_1.json`:
+
+- artifact `ltr-scorer-v1.1`, feature schema `1.1`;
+- best epoch `3`, validation AP `0.840564`;
+- SHA-256 `059038c7dd9113a48a3fc6c2e8167f7ee40ccfeaa48952a91c84cd614beb3596`;
+- 7 channel theo đúng thứ tự `rms`, `pitch`, `silence`, `text_score`, `scene_change`, `gesture`,
+  `turn_rate`.
+
+Nếu downloader báo HTTP `401`, `403` hoặc `404`, maintainer cần kiểm tra Kaggle dataset đã được
+publish với visibility **Public**. Nếu file local sai nhưng thực sự muốn thay thế, chạy:
+
+```bash
+python -m scripts.download_ltr_checkpoint --force
+```
 
 Pipeline chuẩn bị TVSum và lệnh tạo smoke manifest/cache nằm trong `docs/tvsum_setup.md`.
 
@@ -267,18 +294,39 @@ Checkpoint được chọn theo Average Precision trên validation windows và c
 `L_ref`, epoch, AP, dataset fingerprint và training config. `training_log.json` ghi riêng
 margin loss, temporal smoothness loss và total loss theo epoch.
 
-### Đánh giá LTR và diagnostic baselines
+### Đánh giá Full LTR, channel ablation và LLM
 
-Chạy evaluator trên cùng manifest/cache và xuất JSON, CSV theo video cùng bảng Markdown:
+Evaluator mới luôn tách bốn nhóm: Full LTR 7-channel, từng channel bị zero-out, LTR+LLM thành
+công và LLM failure giữ ranking LTR. Không có profile-weight hoặc random fallback ngầm. Chạy trên
+cùng manifest/cache và xuất JSON, CSV cùng bảng Markdown:
 
 ```bash
-python -m evaluation.evaluate_ltr \
+python -m evaluation.evaluate_ltr_variants \
   --manifest data/manifests/tvsum_smoke.jsonl \
   --cache-dir data/features_cache \
   --checkpoint data/models/ltr_scorer.pt \
   --split val \
   --device auto
 ```
+
+Để report thêm các lần chạy LLM, truyền mỗi artifact production bằng một flag riêng:
+
+```bash
+python -m evaluation.evaluate_ltr_variants \
+  --manifest data/manifests/tvsum_smoke.jsonl \
+  --cache-dir data/features_cache \
+  --checkpoint data/models/ltr_scorer.pt \
+  --split val \
+  --run-metadata output/VIDEO_LLM_OK/metadata.json \
+  --run-metadata output/VIDEO_LLM_FAILED/metadata.json
+```
+
+`metadata.json` mới lưu `pipeline.llm_run`. Run có `applied=true` chỉ được tính vào
+`ltr_llm_rerank`; provider lỗi với `mode=ltr_required` và `fallback_reason` được tính riêng vào
+`ltr_llm_failure`. Nếu chưa cung cấp artifact, hai nhóm có trạng thái `not_run`, không được gán AP
+hoặc sinh prediction ngẫu nhiên. Các variant `ltr_without_<channel>` là channel-sensitivity
+diagnostic dùng checkpoint full; ablation chính thức vẫn cần retrain checkpoint riêng cho từng
+channel subset.
 
 Trên validation TVSum 4 video/915 windows, checkpoint schema 1.1 đạt AP `0.840564`, Kendall tau
 `0.244332`, Spearman rho `0.393953`, window-F1 `0.716814`; NMS tạo đủ 5 candidate cho cả bốn video.

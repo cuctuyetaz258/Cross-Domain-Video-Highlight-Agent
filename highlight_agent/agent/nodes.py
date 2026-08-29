@@ -383,6 +383,7 @@ def decide(state: AgentState) -> dict:
             "checkpoint": state.get("ltr_checkpoint_info", {}),
             "feature_contract": features.get("feature_contract", {}),
             "extractor": features.get("extractor", {}),
+            "llm_run": llm_run.model_dump(mode="json"),
         },
     )
     _emit(state, "decide", "done", f"Render xong {len(rendered)} clips.", rendered_count=len(rendered))
