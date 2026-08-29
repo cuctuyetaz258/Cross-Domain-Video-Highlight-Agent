@@ -55,3 +55,7 @@ dist/
 
 # Documentation (local only)
 docs/
+
+# Local Kaggle upload and verification bundles
+kaggle_checkpoint_upload/
+kaggle_checkpoint_verify/
