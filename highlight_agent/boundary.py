@@ -24,6 +24,7 @@ class BoundaryConfig:
 
 
 DEFAULT_BOUNDARY_CONFIG = BoundaryConfig()
+BOUNDARY_EPSILON_SECONDS = 1e-6
 
 
 def _sentence_boundaries(transcript: TranscriptDocument) -> tuple[list[float], list[float]]:
@@ -177,8 +178,10 @@ def _proposed_end(
 def _is_valid_range(start: float, end: float, video_duration: float, config: BoundaryConfig) -> bool:
     duration = end - start
     return (
-        0 <= start < end <= video_duration + 1e-6
-        and config.min_duration_seconds <= duration <= config.max_duration_seconds
+        0 <= start < end <= video_duration + BOUNDARY_EPSILON_SECONDS
+        and config.min_duration_seconds - BOUNDARY_EPSILON_SECONDS
+        <= duration
+        <= config.max_duration_seconds + BOUNDARY_EPSILON_SECONDS
     )
 
 

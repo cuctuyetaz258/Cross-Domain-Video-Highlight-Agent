@@ -203,6 +203,22 @@ def test_boundary_keeps_original_when_no_transcript_boundary_is_nearby() -> None
     assert adjustment.end_source == "original"
 
 
+def test_boundary_accepts_minimum_duration_with_float_roundoff() -> None:
+    candidate = _candidate(start=255.4, end=285.4)
+
+    refined, adjustment = refine_candidate_boundary(
+        candidate,
+        _word_transcript().model_copy(update={"duration": 320.555193}),
+        [],
+        video_duration=320.555193,
+    )
+
+    assert (refined.start_time, refined.end_time) == (255.4, 285.4)
+    assert refined.end_time - refined.start_time >= 30.0 - 1e-6
+    assert adjustment.start_source == "original"
+    assert adjustment.end_source == "original"
+
+
 def test_backend_extracts_silence_when_feature_timeline_does_not_exist(tmp_path: Path, monkeypatch) -> None:
     transcript = _word_transcript()
     workspace_dir = tmp_path / "output" / transcript.video_id
