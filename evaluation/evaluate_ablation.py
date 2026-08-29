@@ -212,7 +212,7 @@ def print_ablation_table(results: dict[str, Any]) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Ablation Study Evaluation Script")
-    parser.add_argument("--gt-dir", default="docs/ground_truth", help="Thư mục Ground Truth")
+    parser.add_argument("--gt-dir", default="data/annotations/raw", help="Thư mục Ground Truth")
     parser.add_argument("--pred-dir", default="output", help="Thư mục Output Predictions")
     parser.add_argument("--k", type=int, default=3, help="Top K clips (mặc định: 3)")
     parser.add_argument("--output-json", default=None, help="Lưu báo cáo JSON")

@@ -24,10 +24,62 @@ from evaluation.metrics import (
 
 
 def load_ground_truth(gt_path: str | Path) -> dict[str, Any]:
-    """Đọc file ground truth JSON của 1 video."""
+    """Đọc file ground truth (CSV 2 giây TVSum-style hoặc JSON) của 1 video."""
     path = Path(gt_path)
     if not path.is_file():
         raise FileNotFoundError(f"Không tìm thấy file Ground Truth: {path}")
+
+    if path.suffix.lower() == ".csv":
+        import csv
+        with open(path, encoding="utf-8-sig") as f:
+            rows = list(csv.DictReader(f))
+        if not rows:
+            raise ValueError(f"File CSV rỗng: {path}")
+
+        video_id = rows[0].get("video_id", path.stem.split("_")[0])
+        domain = rows[0].get("domain", "unknown")
+        annotator = rows[0].get("annotator_id", "anonymous")
+        duration = float(rows[-1].get("end_sec", 0.0))
+
+        # Gom các đoạn có importance >= 4 liên tiếp thành highlight intervals
+        highlights: list[dict[str, Any]] = []
+        curr_hl: list[tuple[float, float, int]] = []
+
+        for r in rows:
+            imp_str = str(r.get("importance", "")).strip()
+            imp = int(imp_str) if imp_str.isdigit() else 0
+            if imp >= 4:
+                curr_hl.append((float(r["start_sec"]), float(r["end_sec"]), imp))
+            else:
+                if curr_hl:
+                    st = curr_hl[0][0]
+                    en = curr_hl[-1][1]
+                    max_imp = max(x[2] for x in curr_hl)
+                    highlights.append({
+                        "start_time": st,
+                        "end_time": en,
+                        "importance_score": max_imp,
+                    })
+                    curr_hl = []
+
+        if curr_hl:
+            st = curr_hl[0][0]
+            en = curr_hl[-1][1]
+            max_imp = max(x[2] for x in curr_hl)
+            highlights.append({
+                "start_time": st,
+                "end_time": en,
+                "importance_score": max_imp,
+            })
+
+        return {
+            "video_id": video_id,
+            "title": video_id,
+            "domain": domain,
+            "annotator": annotator,
+            "duration": duration,
+            "highlights": highlights,
+        }
 
     with open(path, encoding="utf-8") as f:
         data = json.load(f)
@@ -49,20 +101,23 @@ def load_ground_truth(gt_path: str | Path) -> dict[str, Any]:
 
 
 def load_all_ground_truths(gt_dir: str | Path) -> dict[str, dict[str, Any]]:
-    """Đọc toàn bộ file Ground Truth JSON trong thư mục."""
+    """Đọc toàn bộ file Ground Truth (CSV hoặc JSON) trong thư mục."""
     directory = Path(gt_dir)
     if not directory.is_dir():
         raise NotADirectoryError(f"Thư mục Ground Truth không tồn tại: {directory}")
 
     gt_dict: dict[str, dict[str, Any]] = {}
-    for file in sorted(directory.glob("*.json")):
+    files = sorted(list(directory.glob("*.csv")) + list(directory.glob("*.json")))
+    for file in files:
         try:
             gt_data = load_ground_truth(file)
-            gt_dict[gt_data["video_id"]] = gt_data
+            if gt_data["highlights"]:  # Chỉ lấy video đã hoàn tất gán nhãn
+                gt_dict[gt_data["video_id"]] = gt_data
         except Exception as e:
             print(f"[CẢNH BÁO] Không thể đọc file Ground Truth '{file.name}': {e}")
 
     return gt_dict
+
 
 
 def generate_baseline_predictions(
@@ -333,8 +388,8 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="In-Domain Dataset Evaluation Pipeline")
     parser.add_argument(
         "--gt-dir",
-        default="docs/ground_truth",
-        help="Thư mục chứa các file nhãn chuẩn Ground Truth (.json)",
+        default="data/annotations/raw",
+        help="Thư mục chứa các file nhãn chuẩn Ground Truth (.csv hoặc .json)",
     )
     parser.add_argument(
         "--pred-dir",
