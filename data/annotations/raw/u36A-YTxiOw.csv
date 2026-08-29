@@ -1,0 +1,634 @@
+﻿video_id,start_sec,end_sec,annotator_id,importance,domain,reason_tag,transcript_hint,needs_review,label_protocol
+u36A-YTxiOw,0.0,2.0,annotator_1,,podcast,,foreign,false,multimodal_tvsum_style
+u36A-YTxiOw,2.0,4.0,annotator_1,,podcast,,foreign [Music],false,multimodal_tvsum_style
+u36A-YTxiOw,4.0,6.0,annotator_1,,podcast,,foreign [Music],false,multimodal_tvsum_style
+u36A-YTxiOw,6.0,8.0,annotator_1,,podcast,,foreign [Music],false,multimodal_tvsum_style
+u36A-YTxiOw,8.0,10.0,annotator_1,,podcast,,,false,multimodal_tvsum_style
+u36A-YTxiOw,10.0,12.0,annotator_1,,podcast,,head of Outreach at y combinator so I've,false,multimodal_tvsum_style
+u36A-YTxiOw,12.0,14.0,annotator_1,,podcast,,head of Outreach at y combinator so I've,false,multimodal_tvsum_style
+u36A-YTxiOw,14.0,16.0,annotator_1,,podcast,,head of Outreach at y combinator so I've been at YC for about nine years now and,false,multimodal_tvsum_style
+u36A-YTxiOw,16.0,18.0,annotator_1,,podcast,,head of Outreach at y combinator so I've been at YC for about nine years now and that means I've seen over 3 500,false,multimodal_tvsum_style
+u36A-YTxiOw,18.0,20.0,annotator_1,,podcast,,been at YC for about nine years now and that means I've seen over 3 500 companies go through the program and,false,multimodal_tvsum_style
+u36A-YTxiOw,20.0,22.0,annotator_1,,podcast,,that means I've seen over 3 500 companies go through the program and launch at YC one of the things my team,false,multimodal_tvsum_style
+u36A-YTxiOw,22.0,24.0,annotator_1,,podcast,,companies go through the program and launch at YC one of the things my team does is help companies with their first,false,multimodal_tvsum_style
+u36A-YTxiOw,24.0,26.0,annotator_1,,podcast,,launch at YC one of the things my team does is help companies with their first launches and today I want to change the,false,multimodal_tvsum_style
+u36A-YTxiOw,26.0,28.0,annotator_1,,podcast,,does is help companies with their first launches and today I want to change the,false,multimodal_tvsum_style
+u36A-YTxiOw,28.0,30.0,annotator_1,,podcast,,does is help companies with their first launches and today I want to change the way you think about launching most,false,multimodal_tvsum_style
+u36A-YTxiOw,30.0,32.0,annotator_1,,podcast,,launches and today I want to change the way you think about launching most Founders overthink their first launch,false,multimodal_tvsum_style
+u36A-YTxiOw,32.0,34.0,annotator_1,,podcast,,way you think about launching most Founders overthink their first launch they think they have just one shot at,false,multimodal_tvsum_style
+u36A-YTxiOw,34.0,36.0,annotator_1,,podcast,,Founders overthink their first launch they think they have just one shot at,false,multimodal_tvsum_style
+u36A-YTxiOw,36.0,38.0,annotator_1,,podcast,,Founders overthink their first launch they think they have just one shot at launching their product publicly and,false,multimodal_tvsum_style
+u36A-YTxiOw,38.0,40.0,annotator_1,,podcast,,they think they have just one shot at launching their product publicly and that the messaging has to be perfect or,false,multimodal_tvsum_style
+u36A-YTxiOw,40.0,42.0,annotator_1,,podcast,,launching their product publicly and that the messaging has to be perfect or that no one will ever buy or use or,false,multimodal_tvsum_style
+u36A-YTxiOw,42.0,44.0,annotator_1,,podcast,,that the messaging has to be perfect or that no one will ever buy or use or,false,multimodal_tvsum_style
+u36A-YTxiOw,44.0,46.0,annotator_1,,podcast,,that the messaging has to be perfect or that no one will ever buy or use or invest in their product I talked to Founders,false,multimodal_tvsum_style
+u36A-YTxiOw,46.0,48.0,annotator_1,,podcast,,invest in their product I talked to Founders constantly who,false,multimodal_tvsum_style
+u36A-YTxiOw,48.0,50.0,annotator_1,,podcast,,invest in their product I talked to Founders constantly who lovingly prepare their launch for months,false,multimodal_tvsum_style
+u36A-YTxiOw,50.0,52.0,annotator_1,,podcast,,I talked to Founders constantly who lovingly prepare their launch for months but if you're like most startups you'll,false,multimodal_tvsum_style
+u36A-YTxiOw,52.0,54.0,annotator_1,,podcast,,lovingly prepare their launch for months but if you're like most startups you'll,false,multimodal_tvsum_style
+u36A-YTxiOw,54.0,56.0,annotator_1,,podcast,,lovingly prepare their launch for months but if you're like most startups you'll launch something and no one will care,false,multimodal_tvsum_style
+u36A-YTxiOw,56.0,58.0,annotator_1,,podcast,,but if you're like most startups you'll launch something and no one will care and if it takes you six months to get,false,multimodal_tvsum_style
+u36A-YTxiOw,58.0,60.0,annotator_1,,podcast,,launch something and no one will care and if it takes you six months to get the first version of your product in,false,multimodal_tvsum_style
+u36A-YTxiOw,60.0,62.0,annotator_1,,podcast,,and if it takes you six months to get the first version of your product in front of anyone your startup may be dead,false,multimodal_tvsum_style
+u36A-YTxiOw,62.0,64.0,annotator_1,,podcast,,the first version of your product in front of anyone your startup may be dead before you get another chance to launch,false,multimodal_tvsum_style
+u36A-YTxiOw,64.0,66.0,annotator_1,,podcast,,front of anyone your startup may be dead before you get another chance to launch So In The Same Spirit of always be,false,multimodal_tvsum_style
+u36A-YTxiOw,66.0,68.0,annotator_1,,podcast,,before you get another chance to launch So In The Same Spirit of always be shipping I want you to think about,false,multimodal_tvsum_style
+u36A-YTxiOw,68.0,70.0,annotator_1,,podcast,,So In The Same Spirit of always be shipping I want you to think about launching as something that you do,false,multimodal_tvsum_style
+u36A-YTxiOw,70.0,72.0,annotator_1,,podcast,,shipping I want you to think about launching as something that you do continually so here's what we're going,false,multimodal_tvsum_style
+u36A-YTxiOw,72.0,74.0,annotator_1,,podcast,,launching as something that you do continually so here's what we're going to talk about today first we'll talk,false,multimodal_tvsum_style
+u36A-YTxiOw,74.0,76.0,annotator_1,,podcast,,continually so here's what we're going to talk about today first we'll talk about when to launch and why second,false,multimodal_tvsum_style
+u36A-YTxiOw,76.0,78.0,annotator_1,,podcast,,to talk about today first we'll talk about when to launch and why second we'll walk through some strong one-line,false,multimodal_tvsum_style
+u36A-YTxiOw,78.0,80.0,annotator_1,,podcast,,about when to launch and why second we'll walk through some strong one-line company descriptions including some that,false,multimodal_tvsum_style
+u36A-YTxiOw,80.0,82.0,annotator_1,,podcast,,we'll walk through some strong one-line company descriptions including some that,false,multimodal_tvsum_style
+u36A-YTxiOw,82.0,84.0,annotator_1,,podcast,,we'll walk through some strong one-line company descriptions including some that I pulled from the startup School commun,false,multimodal_tvsum_style
+u36A-YTxiOw,84.0,86.0,annotator_1,,podcast,,I pulled from the startup School community and third we'll talk about the types of launches you can do during,false,multimodal_tvsum_style
+u36A-YTxiOw,86.0,88.0,annotator_1,,podcast,,community and third we'll talk about the types of launches you can do during startup school so first a lot of people,false,multimodal_tvsum_style
+u36A-YTxiOw,88.0,90.0,annotator_1,,podcast,,types of launches you can do during startup school so first a lot of people,false,multimodal_tvsum_style
+u36A-YTxiOw,90.0,92.0,annotator_1,,podcast,,types of launches you can do during startup school so first a lot of people ask when should I launch and the answer,false,multimodal_tvsum_style
+u36A-YTxiOw,92.0,94.0,annotator_1,,podcast,,startup school so first a lot of people ask when should I launch and the answer is ASAP it's probably right now why so,false,multimodal_tvsum_style
+u36A-YTxiOw,94.0,96.0,annotator_1,,podcast,,ask when should I launch and the answer is ASAP it's probably right now why so,false,multimodal_tvsum_style
+u36A-YTxiOw,96.0,98.0,annotator_1,,podcast,,ask when should I launch and the answer is ASAP it's probably right now why so,false,multimodal_tvsum_style
+u36A-YTxiOw,98.0,100.0,annotator_1,,podcast,,ask when should I launch and the answer is ASAP it's probably right now why so Founders are really good at lying to,false,multimodal_tvsum_style
+u36A-YTxiOw,100.0,102.0,annotator_1,,podcast,,is ASAP it's probably right now why so Founders are really good at lying to themselves a lot of you have really,false,multimodal_tvsum_style
+u36A-YTxiOw,102.0,104.0,annotator_1,,podcast,,Founders are really good at lying to themselves a lot of you have really strong convictions about what you're,false,multimodal_tvsum_style
+u36A-YTxiOw,104.0,106.0,annotator_1,,podcast,,themselves a lot of you have really strong convictions about what you're building and that's good Founders need,false,multimodal_tvsum_style
+u36A-YTxiOw,106.0,108.0,annotator_1,,podcast,,strong convictions about what you're building and that's good Founders need,false,multimodal_tvsum_style
+u36A-YTxiOw,108.0,110.0,annotator_1,,podcast,,strong convictions about what you're building and that's good Founders need that conviction but many of you have,false,multimodal_tvsum_style
+u36A-YTxiOw,110.0,112.0,annotator_1,,podcast,,building and that's good Founders need that conviction but many of you have strong but theoretical Notions of how,false,multimodal_tvsum_style
+u36A-YTxiOw,112.0,114.0,annotator_1,,podcast,,that conviction but many of you have strong but theoretical Notions of how you're going to solve a problem and how,false,multimodal_tvsum_style
+u36A-YTxiOw,114.0,116.0,annotator_1,,podcast,,strong but theoretical Notions of how you're going to solve a problem and how people are going to interact with what,false,multimodal_tvsum_style
+u36A-YTxiOw,116.0,118.0,annotator_1,,podcast,,you're going to solve a problem and how people are going to interact with what you're building so putting your product,false,multimodal_tvsum_style
+u36A-YTxiOw,118.0,120.0,annotator_1,,podcast,,people are going to interact with what you're building so putting your product out there even in its earliest state,false,multimodal_tvsum_style
+u36A-YTxiOw,120.0,122.0,annotator_1,,podcast,,you're building so putting your product out there even in its earliest state will help you determine whether you're,false,multimodal_tvsum_style
+u36A-YTxiOw,122.0,124.0,annotator_1,,podcast,,out there even in its earliest state will help you determine whether you're solving a big enough problem that,false,multimodal_tvsum_style
+u36A-YTxiOw,124.0,126.0,annotator_1,,podcast,,will help you determine whether you're solving a big enough problem that someone is willing to pay for you or use,false,multimodal_tvsum_style
+u36A-YTxiOw,126.0,128.0,annotator_1,,podcast,,solving a big enough problem that someone is willing to pay for you or use you even in the products really,false,multimodal_tvsum_style
+u36A-YTxiOw,128.0,130.0,annotator_1,,podcast,,someone is willing to pay for you or use you even in the products really,false,multimodal_tvsum_style
+u36A-YTxiOw,130.0,132.0,annotator_1,,podcast,,someone is willing to pay for you or use you even in the products really unpolished state so if you launch too,false,multimodal_tvsum_style
+u36A-YTxiOw,132.0,134.0,annotator_1,,podcast,,you even in the products really unpolished state so if you launch too early what's the worst case scenario,false,multimodal_tvsum_style
+u36A-YTxiOw,134.0,136.0,annotator_1,,podcast,,unpolished state so if you launch too early what's the worst case scenario,false,multimodal_tvsum_style
+u36A-YTxiOw,136.0,138.0,annotator_1,,podcast,,unpolished state so if you launch too early what's the worst case scenario what's the worst thing that can happen people,false,multimodal_tvsum_style
+u36A-YTxiOw,138.0,140.0,annotator_1,,podcast,,what's the worst thing that can happen people might think the product is ugly,false,multimodal_tvsum_style
+u36A-YTxiOw,140.0,142.0,annotator_1,,podcast,,what's the worst thing that can happen people might think the product is ugly or it sucks investors might hear about,false,multimodal_tvsum_style
+u36A-YTxiOw,142.0,144.0,annotator_1,,podcast,,people might think the product is ugly or it sucks investors might hear about the product before it's ready you know,false,multimodal_tvsum_style
+u36A-YTxiOw,144.0,146.0,annotator_1,,podcast,,or it sucks investors might hear about the product before it's ready you know competitors might see it or Worse no one,false,multimodal_tvsum_style
+u36A-YTxiOw,146.0,148.0,annotator_1,,podcast,,the product before it's ready you know competitors might see it or Worse no one,false,multimodal_tvsum_style
+u36A-YTxiOw,148.0,150.0,annotator_1,,podcast,,the product before it's ready you know competitors might see it or Worse no one will see it or no one will care and,false,multimodal_tvsum_style
+u36A-YTxiOw,150.0,152.0,annotator_1,,podcast,,competitors might see it or Worse no one will see it or no one will care and that's fine just launch again,false,multimodal_tvsum_style
+u36A-YTxiOw,152.0,154.0,annotator_1,,podcast,,will see it or no one will care and that's fine just launch again Airbnb launched three times before they,false,multimodal_tvsum_style
+u36A-YTxiOw,154.0,156.0,annotator_1,,podcast,,that's fine just launch again Airbnb launched three times before they,false,multimodal_tvsum_style
+u36A-YTxiOw,156.0,158.0,annotator_1,,podcast,,that's fine just launch again Airbnb launched three times before they really started to get users launching,false,multimodal_tvsum_style
+u36A-YTxiOw,158.0,160.0,annotator_1,,podcast,,Airbnb launched three times before they really started to get users launching and having no one care that feels,false,multimodal_tvsum_style
+u36A-YTxiOw,160.0,162.0,annotator_1,,podcast,,really started to get users launching and having no one care that feels terrible but it's not a reason to give,false,multimodal_tvsum_style
+u36A-YTxiOw,162.0,164.0,annotator_1,,podcast,,and having no one care that feels terrible but it's not a reason to give up it's a reason to iterate and launch,false,multimodal_tvsum_style
+u36A-YTxiOw,164.0,166.0,annotator_1,,podcast,,terrible but it's not a reason to give up it's a reason to iterate and launch again launch and iterate launch and,false,multimodal_tvsum_style
+u36A-YTxiOw,166.0,168.0,annotator_1,,podcast,,up it's a reason to iterate and launch again launch and iterate launch and,false,multimodal_tvsum_style
+u36A-YTxiOw,168.0,170.0,annotator_1,,podcast,,up it's a reason to iterate and launch again launch and iterate launch and iterate until you have a core of users,false,multimodal_tvsum_style
+u36A-YTxiOw,170.0,172.0,annotator_1,,podcast,,again launch and iterate launch and iterate until you have a core of users who really love you Paul Buchheit he's,false,multimodal_tvsum_style
+u36A-YTxiOw,172.0,174.0,annotator_1,,podcast,,iterate until you have a core of users who really love you Paul Buchheit he's the creator of Gmail and a long time YC,false,multimodal_tvsum_style
+u36A-YTxiOw,174.0,176.0,annotator_1,,podcast,,who really love you Paul Buchheit he's the creator of Gmail and a long time YC,false,multimodal_tvsum_style
+u36A-YTxiOw,176.0,178.0,annotator_1,,podcast,,who really love you Paul Buchheit he's the creator of Gmail and a long time YC group partner he has said it's better to,false,multimodal_tvsum_style
+u36A-YTxiOw,178.0,180.0,annotator_1,,podcast,,the creator of Gmail and a long time YC group partner he has said it's better to make a few people really happy than to,false,multimodal_tvsum_style
+u36A-YTxiOw,180.0,182.0,annotator_1,,podcast,,group partner he has said it's better to make a few people really happy than to make a lot of people semi-happy,false,multimodal_tvsum_style
+u36A-YTxiOw,182.0,184.0,annotator_1,,podcast,,make a few people really happy than to make a lot of people semi-happy,false,multimodal_tvsum_style
+u36A-YTxiOw,184.0,186.0,annotator_1,,podcast,,make a few people really happy than to make a lot of people semi-happy so early on as long as you've made,false,multimodal_tvsum_style
+u36A-YTxiOw,186.0,188.0,annotator_1,,podcast,,make a lot of people semi-happy so early on as long as you've made something that a few users absolutely,false,multimodal_tvsum_style
+u36A-YTxiOw,188.0,190.0,annotator_1,,podcast,,so early on as long as you've made something that a few users absolutely love you are on the right track it'll be,false,multimodal_tvsum_style
+u36A-YTxiOw,190.0,192.0,annotator_1,,podcast,,something that a few users absolutely love you are on the right track it'll be,false,multimodal_tvsum_style
+u36A-YTxiOw,192.0,194.0,annotator_1,,podcast,,something that a few users absolutely love you are on the right track it'll be good for your morale to have even a,false,multimodal_tvsum_style
+u36A-YTxiOw,194.0,196.0,annotator_1,,podcast,,love you are on the right track it'll be good for your morale to have even a handful of users who really love what,false,multimodal_tvsum_style
+u36A-YTxiOw,196.0,198.0,annotator_1,,podcast,,good for your morale to have even a handful of users who really love what you're doing and it'll help you figure,false,multimodal_tvsum_style
+u36A-YTxiOw,198.0,200.0,annotator_1,,podcast,,handful of users who really love what you're doing and it'll help you figure out what to focus on,false,multimodal_tvsum_style
+u36A-YTxiOw,200.0,202.0,annotator_1,,podcast,,you're doing and it'll help you figure out what to focus on what is it about your product that they,false,multimodal_tvsum_style
+u36A-YTxiOw,202.0,204.0,annotator_1,,podcast,,out what to focus on what is it about your product that they love and how can you do more of that,false,multimodal_tvsum_style
+u36A-YTxiOw,204.0,206.0,annotator_1,,podcast,,what is it about your product that they love and how can you do more of that where can you find more users who love,false,multimodal_tvsum_style
+u36A-YTxiOw,206.0,208.0,annotator_1,,podcast,,love and how can you do more of that where can you find more users who love,false,multimodal_tvsum_style
+u36A-YTxiOw,208.0,210.0,annotator_1,,podcast,,love and how can you do more of that where can you find more users who love that sort of thing that you're doing if,false,multimodal_tvsum_style
+u36A-YTxiOw,210.0,212.0,annotator_1,,podcast,,where can you find more users who love that sort of thing that you're doing if you have a core of users even 10 users,false,multimodal_tvsum_style
+u36A-YTxiOw,212.0,214.0,annotator_1,,podcast,,that sort of thing that you're doing if you have a core of users even 10 users who really love you all you have to do,false,multimodal_tvsum_style
+u36A-YTxiOw,214.0,216.0,annotator_1,,podcast,,you have a core of users even 10 users who really love you all you have to do is expand that number and it might take,false,multimodal_tvsum_style
+u36A-YTxiOw,216.0,218.0,annotator_1,,podcast,,who really love you all you have to do is expand that number and it might take a while but if you keep going cockroach,false,multimodal_tvsum_style
+u36A-YTxiOw,218.0,220.0,annotator_1,,podcast,,is expand that number and it might take a while but if you keep going cockroach style you can win in the end so now that,false,multimodal_tvsum_style
+u36A-YTxiOw,220.0,222.0,annotator_1,,podcast,,a while but if you keep going cockroach style you can win in the end so now that,false,multimodal_tvsum_style
+u36A-YTxiOw,222.0,224.0,annotator_1,,podcast,,a while but if you keep going cockroach style you can win in the end so now that we've determined you should all launch,false,multimodal_tvsum_style
+u36A-YTxiOw,224.0,226.0,annotator_1,,podcast,,style you can win in the end so now that we've determined you should all launch let's talk about something every one of,false,multimodal_tvsum_style
+u36A-YTxiOw,226.0,228.0,annotator_1,,podcast,,we've determined you should all launch let's talk about something every one of you needs before you launch to create a,false,multimodal_tvsum_style
+u36A-YTxiOw,228.0,230.0,annotator_1,,podcast,,let's talk about something every one of you needs before you launch to create a,false,multimodal_tvsum_style
+u36A-YTxiOw,230.0,232.0,annotator_1,,podcast,,let's talk about something every one of you needs before you launch to create a strong one sentence pitch you need,false,multimodal_tvsum_style
+u36A-YTxiOw,232.0,234.0,annotator_1,,podcast,,you needs before you launch to create a strong one sentence pitch you need Clarity of vision,false,multimodal_tvsum_style
+u36A-YTxiOw,234.0,236.0,annotator_1,,podcast,,strong one sentence pitch you need Clarity of vision we believe that people who have thought,false,multimodal_tvsum_style
+u36A-YTxiOw,236.0,238.0,annotator_1,,podcast,,Clarity of vision we believe that people who have thought deeply and about about an idea can,false,multimodal_tvsum_style
+u36A-YTxiOw,238.0,240.0,annotator_1,,podcast,,we believe that people who have thought deeply and about about an idea can explain it clearly and succinctly they,false,multimodal_tvsum_style
+u36A-YTxiOw,240.0,242.0,annotator_1,,podcast,,deeply and about about an idea can explain it clearly and succinctly they,false,multimodal_tvsum_style
+u36A-YTxiOw,242.0,244.0,annotator_1,,podcast,,deeply and about about an idea can explain it clearly and succinctly they use less words they can explain con,false,multimodal_tvsum_style
+u36A-YTxiOw,244.0,246.0,annotator_1,,podcast,,explain it clearly and succinctly they use less words they can explain con complex Concepts in a way that a,false,multimodal_tvsum_style
+u36A-YTxiOw,246.0,248.0,annotator_1,,podcast,,use less words they can explain con complex Concepts in a way that a five-year-old can understand and having,false,multimodal_tvsum_style
+u36A-YTxiOw,248.0,250.0,annotator_1,,podcast,,complex Concepts in a way that a five-year-old can understand and having a clear idea is important because a,false,multimodal_tvsum_style
+u36A-YTxiOw,250.0,252.0,annotator_1,,podcast,,five-year-old can understand and having a clear idea is important because a,false,multimodal_tvsum_style
+u36A-YTxiOw,252.0,254.0,annotator_1,,podcast,,five-year-old can understand and having a clear idea is important because a clear idea is the best foundation for,false,multimodal_tvsum_style
+u36A-YTxiOw,254.0,256.0,annotator_1,,podcast,,a clear idea is important because a clear idea is the best foundation for growth the best companies and movements,false,multimodal_tvsum_style
+u36A-YTxiOw,256.0,258.0,annotator_1,,podcast,,clear idea is the best foundation for growth the best companies and movements grow organically by word of mouth and,false,multimodal_tvsum_style
+u36A-YTxiOw,258.0,260.0,annotator_1,,podcast,,growth the best companies and movements grow organically by word of mouth and,false,multimodal_tvsum_style
+u36A-YTxiOw,260.0,262.0,annotator_1,,podcast,,growth the best companies and movements grow organically by word of mouth and that's good news because Word of Mouth,false,multimodal_tvsum_style
+u36A-YTxiOw,262.0,264.0,annotator_1,,podcast,,grow organically by word of mouth and that's good news because Word of Mouth growth is the cheapest way to grow and,false,multimodal_tvsum_style
+u36A-YTxiOw,264.0,266.0,annotator_1,,podcast,,that's good news because Word of Mouth growth is the cheapest way to grow and if you think back to the first time you,false,multimodal_tvsum_style
+u36A-YTxiOw,266.0,268.0,annotator_1,,podcast,,growth is the cheapest way to grow and if you think back to the first time you heard about something like say tick tock ,false,multimodal_tvsum_style
+u36A-YTxiOw,268.0,270.0,annotator_1,,podcast,,heard about something like say tick tock or a slack there's a good chance you've,false,multimodal_tvsum_style
+u36A-YTxiOw,270.0,272.0,annotator_1,,podcast,,heard about something like say tick tock or a slack there's a good chance you've heard about it through a friend or,false,multimodal_tvsum_style
+u36A-YTxiOw,272.0,274.0,annotator_1,,podcast,,or a slack there's a good chance you've heard about it through a friend or co-worker talking about what you do,false,multimodal_tvsum_style
+u36A-YTxiOw,274.0,276.0,annotator_1,,podcast,,heard about it through a friend or co-worker talking about what you do clearly and succinctly is going to be,false,multimodal_tvsum_style
+u36A-YTxiOw,276.0,278.0,annotator_1,,podcast,,co-worker talking about what you do clearly and succinctly is going to be one of your most important jobs as a,false,multimodal_tvsum_style
+u36A-YTxiOw,278.0,280.0,annotator_1,,podcast,,clearly and succinctly is going to be one of your most important jobs as a Founder it's a skill that you'll need to,false,multimodal_tvsum_style
+u36A-YTxiOw,280.0,282.0,annotator_1,,podcast,,one of your most important jobs as a Founder it's a skill that you'll need to convince potential co-founders investors,false,multimodal_tvsum_style
+u36A-YTxiOw,282.0,284.0,annotator_1,,podcast,,Founder it's a skill that you'll need to convince potential co-founders investors,false,multimodal_tvsum_style
+u36A-YTxiOw,284.0,286.0,annotator_1,,podcast,,Founder it's a skill that you'll need to convince potential co-founders investors users employees and eventually hopeful,false,multimodal_tvsum_style
+u36A-YTxiOw,286.0,288.0,annotator_1,,podcast,,convince potential co-founders investors users employees and eventually hopefully shareholders to believe in you it's al,false,multimodal_tvsum_style
+u36A-YTxiOw,288.0,290.0,annotator_1,,podcast,,users employees and eventually hopefully shareholders to believe in you it's also,false,multimodal_tvsum_style
+u36A-YTxiOw,290.0,292.0,annotator_1,,podcast,,users employees and eventually hopefully shareholders to believe in you it's also a skill you'll need to grow to grow yo,false,multimodal_tvsum_style
+u36A-YTxiOw,292.0,294.0,annotator_1,,podcast,,shareholders to believe in you it's also a skill you'll need to grow to grow you need to get all these groups of people ,false,multimodal_tvsum_style
+u36A-YTxiOw,294.0,296.0,annotator_1,,podcast,,need to get all these groups of people talking about you to help you spread the,false,multimodal_tvsum_style
+u36A-YTxiOw,296.0,298.0,annotator_1,,podcast,,need to get all these groups of people talking about you to help you spread the word that's why it's necessary to make,false,multimodal_tvsum_style
+u36A-YTxiOw,298.0,300.0,annotator_1,,podcast,,talking about you to help you spread the word that's why it's necessary to make it easy for anyone your grandfather or,false,multimodal_tvsum_style
+u36A-YTxiOw,300.0,302.0,annotator_1,,podcast,,word that's why it's necessary to make it easy for anyone your grandfather or the person that you meet at the airport,false,multimodal_tvsum_style
+u36A-YTxiOw,302.0,304.0,annotator_1,,podcast,,it easy for anyone your grandfather or the person that you meet at the airport to talk about what you're doing so that,false,multimodal_tvsum_style
+u36A-YTxiOw,304.0,306.0,annotator_1,,podcast,,the person that you meet at the airport to talk about what you're doing so that word can spread about you virally when,false,multimodal_tvsum_style
+u36A-YTxiOw,306.0,308.0,annotator_1,,podcast,,to talk about what you're doing so that word can spread about you virally when people sit down at the dinner table they,false,multimodal_tvsum_style
+u36A-YTxiOw,308.0,310.0,annotator_1,,podcast,,word can spread about you virally when people sit down at the dinner table they should be talking about you and your,false,multimodal_tvsum_style
+u36A-YTxiOw,310.0,312.0,annotator_1,,podcast,,people sit down at the dinner table they should be talking about you and your company and you don't have to be,false,multimodal_tvsum_style
+u36A-YTxiOw,312.0,314.0,annotator_1,,podcast,,should be talking about you and your company and you don't have to be naturally good at talking about your,false,multimodal_tvsum_style
+u36A-YTxiOw,314.0,316.0,annotator_1,,podcast,,company and you don't have to be naturally good at talking about your company at first it takes some of our,false,multimodal_tvsum_style
+u36A-YTxiOw,316.0,318.0,annotator_1,,podcast,,naturally good at talking about your company at first it takes some of our Founders at YC months to get comfortable,false,multimodal_tvsum_style
+u36A-YTxiOw,318.0,320.0,annotator_1,,podcast,,company at first it takes some of our Founders at YC months to get comfortable doing this so here's how we think about,false,multimodal_tvsum_style
+u36A-YTxiOw,320.0,322.0,annotator_1,,podcast,,Founders at YC months to get comfortable doing this so here's how we think about coming up with a short memorable,false,multimodal_tvsum_style
+u36A-YTxiOw,322.0,324.0,annotator_1,,podcast,,doing this so here's how we think about coming up with a short memorable description of your company so first we,false,multimodal_tvsum_style
+u36A-YTxiOw,324.0,326.0,annotator_1,,podcast,,coming up with a short memorable description of your company so first we recommend leading with what not with why,false,multimodal_tvsum_style
+u36A-YTxiOw,326.0,328.0,annotator_1,,podcast,,description of your company so first we recommend leading with what not with why,false,multimodal_tvsum_style
+u36A-YTxiOw,328.0,330.0,annotator_1,,podcast,,description of your company so first we recommend leading with what not with why and this may seem counterintuitive,false,multimodal_tvsum_style
+u36A-YTxiOw,330.0,332.0,annotator_1,,podcast,,recommend leading with what not with why and this may seem counterintuitive because we tell most stories,false,multimodal_tvsum_style
+u36A-YTxiOw,332.0,334.0,annotator_1,,podcast,,and this may seem counterintuitive because we tell most stories chronologically it's natural to start,false,multimodal_tvsum_style
+u36A-YTxiOw,334.0,336.0,annotator_1,,podcast,,because we tell most stories chronologically it's natural to start,false,multimodal_tvsum_style
+u36A-YTxiOw,336.0,338.0,annotator_1,,podcast,,because we tell most stories chronologically it's natural to start with you know how you discover the,false,multimodal_tvsum_style
+u36A-YTxiOw,338.0,340.0,annotator_1,,podcast,,chronologically it's natural to start with you know how you discover the problem you're solving and why it's,false,multimodal_tvsum_style
+u36A-YTxiOw,340.0,342.0,annotator_1,,podcast,,with you know how you discover the problem you're solving and why it's important and one reason a lot of you do this is,false,multimodal_tvsum_style
+u36A-YTxiOw,342.0,344.0,annotator_1,,podcast,,important and one reason a lot of you do this is because you're all very ambitious people,false,multimodal_tvsum_style
+u36A-YTxiOw,344.0,346.0,annotator_1,,podcast,,and one reason a lot of you do this is because you're all very ambitious people and you want to solve these big problems,false,multimodal_tvsum_style
+u36A-YTxiOw,346.0,348.0,annotator_1,,podcast,,because you're all very ambitious people and you want to solve these big problems and that's really awesome and Founders,false,multimodal_tvsum_style
+u36A-YTxiOw,348.0,350.0,annotator_1,,podcast,,and you want to solve these big problems and that's really awesome and Founders need that ambition but,false,multimodal_tvsum_style
+u36A-YTxiOw,350.0,352.0,annotator_1,,podcast,,and that's really awesome and Founders need that ambition but when you only have a limited time with,false,multimodal_tvsum_style
+u36A-YTxiOw,352.0,354.0,annotator_1,,podcast,,need that ambition but when you only have a limited time with,false,multimodal_tvsum_style
+u36A-YTxiOw,354.0,356.0,annotator_1,,podcast,,when you only have a limited time with someone it's important to give them context up front so start with the,false,multimodal_tvsum_style
+u36A-YTxiOw,356.0,358.0,annotator_1,,podcast,,someone it's important to give them context up front so start with the,false,multimodal_tvsum_style
+u36A-YTxiOw,358.0,360.0,annotator_1,,podcast,,someone it's important to give them context up front so start with the company name and what you do and there's,false,multimodal_tvsum_style
+u36A-YTxiOw,360.0,362.0,annotator_1,,podcast,,context up front so start with the company name and what you do and there's no need to set up the problem just get,false,multimodal_tvsum_style
+u36A-YTxiOw,362.0,364.0,annotator_1,,podcast,,company name and what you do and there's no need to set up the problem just get to the point so I'll use a real example,false,multimodal_tvsum_style
+u36A-YTxiOw,364.0,366.0,annotator_1,,podcast,,no need to set up the problem just get to the point so I'll use a real example from a YC companies application the,false,multimodal_tvsum_style
+u36A-YTxiOw,366.0,368.0,annotator_1,,podcast,,to the point so I'll use a real example from a YC companies application the company is called pave if they'd started,false,multimodal_tvsum_style
+u36A-YTxiOw,368.0,370.0,annotator_1,,podcast,,from a YC companies application the company is called pave if they'd started with why they were building this company,false,multimodal_tvsum_style
+u36A-YTxiOw,370.0,372.0,annotator_1,,podcast,,company is called pave if they'd started with why they were building this company they would have said many of my friend,false,multimodal_tvsum_style
+u36A-YTxiOw,372.0,374.0,annotator_1,,podcast,,with why they were building this company they would have said many of my friends are super confused about their stock,false,multimodal_tvsum_style
+u36A-YTxiOw,374.0,376.0,annotator_1,,podcast,,they would have said many of my friends are super confused about their stock options and it pisses me off how,false,multimodal_tvsum_style
+u36A-YTxiOw,376.0,378.0,annotator_1,,podcast,,are super confused about their stock options and it pisses me off how,false,multimodal_tvsum_style
+u36A-YTxiOw,378.0,380.0,annotator_1,,podcast,,are super confused about their stock options and it pisses me off how stressed they get thinking about them but before y,false,multimodal_tvsum_style
+u36A-YTxiOw,380.0,382.0,annotator_1,,podcast,,stressed they get thinking about them but before you give me the back story again start with one sentence that tells,false,multimodal_tvsum_style
+u36A-YTxiOw,382.0,384.0,annotator_1,,podcast,,but before you give me the back story again start with one sentence that tells me what you're building First Press,false,multimodal_tvsum_style
+u36A-YTxiOw,384.0,386.0,annotator_1,,podcast,,again start with one sentence that tells me what you're building First Press people and investors and even other,false,multimodal_tvsum_style
+u36A-YTxiOw,386.0,388.0,annotator_1,,podcast,,me what you're building First Press people and investors and even other,false,multimodal_tvsum_style
+u36A-YTxiOw,388.0,390.0,annotator_1,,podcast,,me what you're building First Press people and investors and even other Founders get pitched tens of times per,false,multimodal_tvsum_style
+u36A-YTxiOw,390.0,392.0,annotator_1,,podcast,,people and investors and even other Founders get pitched tens of times per you know per day definitely per week and,false,multimodal_tvsum_style
+u36A-YTxiOw,392.0,394.0,annotator_1,,podcast,,Founders get pitched tens of times per you know per day definitely per week and,false,multimodal_tvsum_style
+u36A-YTxiOw,394.0,396.0,annotator_1,,podcast,,Founders get pitched tens of times per you know per day definitely per week and they have particularly short attention,false,multimodal_tvsum_style
+u36A-YTxiOw,396.0,398.0,annotator_1,,podcast,,you know per day definitely per week and they have particularly short attention spans so here's the actual description,false,multimodal_tvsum_style
+u36A-YTxiOw,398.0,400.0,annotator_1,,podcast,,they have particularly short attention spans so here's the actual description of the company pave pave lets companies,false,multimodal_tvsum_style
+u36A-YTxiOw,400.0,402.0,annotator_1,,podcast,,spans so here's the actual description of the company pave pave lets companies plan communicate and Benchmark your,false,multimodal_tvsum_style
+u36A-YTxiOw,402.0,404.0,annotator_1,,podcast,,of the company pave pave lets companies plan communicate and Benchmark your,false,multimodal_tvsum_style
+u36A-YTxiOw,404.0,406.0,annotator_1,,podcast,,of the company pave pave lets companies plan communicate and Benchmark your compensation in real time this is a,false,multimodal_tvsum_style
+u36A-YTxiOw,406.0,408.0,annotator_1,,podcast,,plan communicate and Benchmark your compensation in real time this is a straightforward description of what,false,multimodal_tvsum_style
+u36A-YTxiOw,408.0,410.0,annotator_1,,podcast,,compensation in real time this is a straightforward description of what they're building and who they're building for th,false,multimodal_tvsum_style
+u36A-YTxiOw,410.0,412.0,annotator_1,,podcast,,they're building and who they're building for they are building 2 tools,false,multimodal_tvsum_style
+u36A-YTxiOw,412.0,414.0,annotator_1,,podcast,,they're building and who they're building for they are building 2 tools to make compensation and pay more,false,multimodal_tvsum_style
+u36A-YTxiOw,414.0,416.0,annotator_1,,podcast,,building for they are building 2 tools to make compensation and pay more transparent for companies uh and and,false,multimodal_tvsum_style
+u36A-YTxiOw,416.0,418.0,annotator_1,,podcast,,to make compensation and pay more transparent for companies uh and and their employees so hopefully whoever,false,multimodal_tvsum_style
+u36A-YTxiOw,418.0,420.0,annotator_1,,podcast,,transparent for companies uh and and their employees so hopefully whoever you're talking to asks follow-up,false,multimodal_tvsum_style
+u36A-YTxiOw,420.0,422.0,annotator_1,,podcast,,their employees so hopefully whoever you're talking to asks follow-up,false,multimodal_tvsum_style
+u36A-YTxiOw,422.0,424.0,annotator_1,,podcast,,their employees so hopefully whoever you're talking to asks follow-up questions and then you can get to the,false,multimodal_tvsum_style
+u36A-YTxiOw,424.0,426.0,annotator_1,,podcast,,you're talking to asks follow-up questions and then you can get to the why later so the second mistake Founders,false,multimodal_tvsum_style
+u36A-YTxiOw,426.0,428.0,annotator_1,,podcast,,questions and then you can get to the why later so the second mistake Founders make is adding a lot of meaningless,false,multimodal_tvsum_style
+u36A-YTxiOw,428.0,430.0,annotator_1,,podcast,,why later so the second mistake Founders make is adding a lot of meaningless marketing speak to their pitches so this,false,multimodal_tvsum_style
+u36A-YTxiOw,430.0,432.0,annotator_1,,podcast,,make is adding a lot of meaningless marketing speak to their pitches so this is a tweet from Gary tan he said,false,multimodal_tvsum_style
+u36A-YTxiOw,432.0,434.0,annotator_1,,podcast,,marketing speak to their pitches so this is a tweet from Gary tan he said meaningless jargon is the number one,false,multimodal_tvsum_style
+u36A-YTxiOw,434.0,436.0,annotator_1,,podcast,,is a tweet from Gary tan he said meaningless jargon is the number one,false,multimodal_tvsum_style
+u36A-YTxiOw,436.0,438.0,annotator_1,,podcast,,is a tweet from Gary tan he said meaningless jargon is the number one issue I spend time trying to fight when,false,multimodal_tvsum_style
+u36A-YTxiOw,438.0,440.0,annotator_1,,podcast,,meaningless jargon is the number one issue I spend time trying to fight when helping startups so here is an actual,false,multimodal_tvsum_style
+u36A-YTxiOw,440.0,442.0,annotator_1,,podcast,,issue I spend time trying to fight when helping startups so here is an actual description of a company don't worry,false,multimodal_tvsum_style
+u36A-YTxiOw,442.0,444.0,annotator_1,,podcast,,helping startups so here is an actual description of a company don't worry it's not a startup School company or a,false,multimodal_tvsum_style
+u36A-YTxiOw,444.0,446.0,annotator_1,,podcast,,description of a company don't worry it's not a startup School company or a YC company indiecloud is a know-how and,false,multimodal_tvsum_style
+u36A-YTxiOw,446.0,448.0,annotator_1,,podcast,,it's not a startup School company or a YC company indiecloud is a know-how and,false,multimodal_tvsum_style
+u36A-YTxiOw,448.0,450.0,annotator_1,,podcast,,it's not a startup School company or a YC company indiecloud is a know-how and Synergy platform don't say like,false,multimodal_tvsum_style
+u36A-YTxiOw,450.0,452.0,annotator_1,,podcast,,YC company indiecloud is a know-how and Synergy platform don't say like this it has zero informational content,false,multimodal_tvsum_style
+u36A-YTxiOw,452.0,454.0,annotator_1,,podcast,,Synergy platform don't say like this it has zero informational content about what you actually do when you're,false,multimodal_tvsum_style
+u36A-YTxiOw,454.0,456.0,annotator_1,,podcast,,this it has zero informational content about what you actually do when you're,false,multimodal_tvsum_style
+u36A-YTxiOw,456.0,458.0,annotator_1,,podcast,,this it has zero informational content about what you actually do when you're describing your company the person,false,multimodal_tvsum_style
+u36A-YTxiOw,458.0,460.0,annotator_1,,podcast,,about what you actually do when you're describing your company the person you're talking to should have some idea,false,multimodal_tvsum_style
+u36A-YTxiOw,460.0,462.0,annotator_1,,podcast,,describing your company the person you're talking to should have some idea of you know what they'd have to build to,false,multimodal_tvsum_style
+u36A-YTxiOw,462.0,464.0,annotator_1,,podcast,,you're talking to should have some idea of you know what they'd have to build to reproduce what you're talking about a,false,multimodal_tvsum_style
+u36A-YTxiOw,464.0,466.0,annotator_1,,podcast,,of you know what they'd have to build to reproduce what you're talking about a know-how Synergy platform could,false,multimodal_tvsum_style
+u36A-YTxiOw,466.0,468.0,annotator_1,,podcast,,reproduce what you're talking about a know-how Synergy platform could literally be anything it could be a,false,multimodal_tvsum_style
+u36A-YTxiOw,468.0,470.0,annotator_1,,podcast,,know-how Synergy platform could literally be anything it could be a collaborative edtech company or it could,false,multimodal_tvsum_style
+u36A-YTxiOw,470.0,472.0,annotator_1,,podcast,,literally be anything it could be a collaborative edtech company or it could be a Marketplace for experts like you,false,multimodal_tvsum_style
+u36A-YTxiOw,472.0,474.0,annotator_1,,podcast,,collaborative edtech company or it could be a Marketplace for experts like you literally have no idea what you what,false,multimodal_tvsum_style
+u36A-YTxiOw,474.0,476.0,annotator_1,,podcast,,be a Marketplace for experts like you literally have no idea what you what you'd have to build to reproduce a,false,multimodal_tvsum_style
+u36A-YTxiOw,476.0,478.0,annotator_1,,podcast,,literally have no idea what you what you'd have to build to reproduce a know-how Synergy platform another,false,multimodal_tvsum_style
+u36A-YTxiOw,478.0,480.0,annotator_1,,podcast,,you'd have to build to reproduce a know-how Synergy platform another mistake Founders make is rambling they,false,multimodal_tvsum_style
+u36A-YTxiOw,480.0,482.0,annotator_1,,podcast,,know-how Synergy platform another mistake Founders make is rambling they just go on and on and on and don't do,false,multimodal_tvsum_style
+u36A-YTxiOw,482.0,484.0,annotator_1,,podcast,,mistake Founders make is rambling they just go on and on and on and don't do this the person you're talking to will,false,multimodal_tvsum_style
+u36A-YTxiOw,484.0,486.0,annotator_1,,podcast,,just go on and on and on and don't do this the person you're talking to will have already zoned out so here's the,false,multimodal_tvsum_style
+u36A-YTxiOw,486.0,488.0,annotator_1,,podcast,,this the person you're talking to will have already zoned out so here's the,false,multimodal_tvsum_style
+u36A-YTxiOw,488.0,490.0,annotator_1,,podcast,,this the person you're talking to will have already zoned out so here's the actual description Airbnb used on their,false,multimodal_tvsum_style
+u36A-YTxiOw,490.0,492.0,annotator_1,,podcast,,have already zoned out so here's the actual description Airbnb used on their YC application we built the first Online,false,multimodal_tvsum_style
+u36A-YTxiOw,492.0,494.0,annotator_1,,podcast,,actual description Airbnb used on their YC application we built the first Online Marketplace that lets Travelers book,false,multimodal_tvsum_style
+u36A-YTxiOw,494.0,496.0,annotator_1,,podcast,,YC application we built the first Online Marketplace that lets Travelers book room to locals instead of hotels this is,false,multimodal_tvsum_style
+u36A-YTxiOw,496.0,498.0,annotator_1,,podcast,,Marketplace that lets Travelers book room to locals instead of hotels this is,false,multimodal_tvsum_style
+u36A-YTxiOw,498.0,500.0,annotator_1,,podcast,,Marketplace that lets Travelers book room to locals instead of hotels this is a tight description it describes the,false,multimodal_tvsum_style
+u36A-YTxiOw,500.0,502.0,annotator_1,,podcast,,room to locals instead of hotels this is a tight description it describes the problem they're solving and who they're,false,multimodal_tvsum_style
+u36A-YTxiOw,502.0,504.0,annotator_1,,podcast,,a tight description it describes the problem they're solving and who they're solving it for so here's one I pulled,false,multimodal_tvsum_style
+u36A-YTxiOw,504.0,506.0,annotator_1,,podcast,,problem they're solving and who they're solving it for so here's one I pulled from the startup School Forum open queue,false,multimodal_tvsum_style
+u36A-YTxiOw,506.0,508.0,annotator_1,,podcast,,solving it for so here's one I pulled from the startup School Forum open queue,false,multimodal_tvsum_style
+u36A-YTxiOw,508.0,510.0,annotator_1,,podcast,,solving it for so here's one I pulled from the startup School Forum open queue find and talk to your target B2B users,false,multimodal_tvsum_style
+u36A-YTxiOw,510.0,512.0,annotator_1,,podcast,,from the startup School Forum open queue find and talk to your target B2B users fast again they tell you the problem,false,multimodal_tvsum_style
+u36A-YTxiOw,512.0,514.0,annotator_1,,podcast,,find and talk to your target B2B users fast again they tell you the problem they're solving and who they're solving,false,multimodal_tvsum_style
+u36A-YTxiOw,514.0,516.0,annotator_1,,podcast,,fast again they tell you the problem they're solving and who they're solving,false,multimodal_tvsum_style
+u36A-YTxiOw,516.0,518.0,annotator_1,,podcast,,fast again they tell you the problem they're solving and who they're solving it for they're making it easy for B2B,false,multimodal_tvsum_style
+u36A-YTxiOw,518.0,520.0,annotator_1,,podcast,,they're solving and who they're solving it for they're making it easy for B2B companies to reach potential customers,false,multimodal_tvsum_style
+u36A-YTxiOw,520.0,522.0,annotator_1,,podcast,,it for they're making it easy for B2B companies to reach potential customers and you can sort of imagine what you,false,multimodal_tvsum_style
+u36A-YTxiOw,522.0,524.0,annotator_1,,podcast,,companies to reach potential customers and you can sort of imagine what you might have to build to reproduce what,false,multimodal_tvsum_style
+u36A-YTxiOw,524.0,526.0,annotator_1,,podcast,,and you can sort of imagine what you might have to build to reproduce what they're doing okay here's another one I,false,multimodal_tvsum_style
+u36A-YTxiOw,526.0,528.0,annotator_1,,podcast,,might have to build to reproduce what they're doing okay here's another one I pulled from the startup School Forum yum,false,multimodal_tvsum_style
+u36A-YTxiOw,528.0,530.0,annotator_1,,podcast,,they're doing okay here's another one I pulled from the startup School Forum yum it's a clever name adaptive ml driven,false,multimodal_tvsum_style
+u36A-YTxiOw,530.0,532.0,annotator_1,,podcast,,pulled from the startup School Forum yum it's a clever name adaptive ml driven mental health for your team and I get,false,multimodal_tvsum_style
+u36A-YTxiOw,532.0,534.0,annotator_1,,podcast,,it's a clever name adaptive ml driven mental health for your team and I get this what this is It's a digital mental,false,multimodal_tvsum_style
+u36A-YTxiOw,534.0,536.0,annotator_1,,podcast,,mental health for your team and I get this what this is It's a digital mental,false,multimodal_tvsum_style
+u36A-YTxiOw,536.0,538.0,annotator_1,,podcast,,mental health for your team and I get this what this is It's a digital mental health tools to help your team cope with,false,multimodal_tvsum_style
+u36A-YTxiOw,538.0,540.0,annotator_1,,podcast,,this what this is It's a digital mental health tools to help your team cope with stress and burnout but I think you can,false,multimodal_tvsum_style
+u36A-YTxiOw,540.0,542.0,annotator_1,,podcast,,health tools to help your team cope with stress and burnout but I think you can Workshop it a little bit if you're,false,multimodal_tvsum_style
+u36A-YTxiOw,542.0,544.0,annotator_1,,podcast,,stress and burnout but I think you can Workshop it a little bit if you're showing this to potential customers I,false,multimodal_tvsum_style
+u36A-YTxiOw,544.0,546.0,annotator_1,,podcast,,Workshop it a little bit if you're showing this to potential customers I think they'll care less about the fact,false,multimodal_tvsum_style
+u36A-YTxiOw,546.0,548.0,annotator_1,,podcast,,showing this to potential customers I think they'll care less about the fact that the product is ml driven and more,false,multimodal_tvsum_style
+u36A-YTxiOw,548.0,550.0,annotator_1,,podcast,,think they'll care less about the fact that the product is ml driven and more about the fact that it's personalized,false,multimodal_tvsum_style
+u36A-YTxiOw,550.0,552.0,annotator_1,,podcast,,that the product is ml driven and more about the fact that it's personalized digital therapy so I I changed it up to,false,multimodal_tvsum_style
+u36A-YTxiOw,552.0,554.0,annotator_1,,podcast,,about the fact that it's personalized digital therapy so I I changed it up to personalized digital therapy programs,false,multimodal_tvsum_style
+u36A-YTxiOw,554.0,556.0,annotator_1,,podcast,,digital therapy so I I changed it up to personalized digital therapy programs,false,multimodal_tvsum_style
+u36A-YTxiOw,556.0,558.0,annotator_1,,podcast,,digital therapy so I I changed it up to personalized digital therapy programs for your team some people ask me whether,false,multimodal_tvsum_style
+u36A-YTxiOw,558.0,560.0,annotator_1,,podcast,,personalized digital therapy programs for your team some people ask me whether the X for y construction is too cliche,false,multimodal_tvsum_style
+u36A-YTxiOw,560.0,562.0,annotator_1,,podcast,,for your team some people ask me whether the X for y construction is too cliche to use when describing their company and,false,multimodal_tvsum_style
+u36A-YTxiOw,562.0,564.0,annotator_1,,podcast,,the X for y construction is too cliche to use when describing their company and,false,multimodal_tvsum_style
+u36A-YTxiOw,564.0,566.0,annotator_1,,podcast,,the X for y construction is too cliche to use when describing their company and let's be honest the term you know Uber,false,multimodal_tvsum_style
+u36A-YTxiOw,566.0,568.0,annotator_1,,podcast,,to use when describing their company and let's be honest the term you know Uber for x or Airbnb B for X has been a bit,false,multimodal_tvsum_style
+u36A-YTxiOw,568.0,570.0,annotator_1,,podcast,,let's be honest the term you know Uber for x or Airbnb B for X has been a bit overused,false,multimodal_tvsum_style
+u36A-YTxiOw,570.0,572.0,annotator_1,,podcast,,for x or Airbnb B for X has been a bit overused I want to emphasize that all of you,false,multimodal_tvsum_style
+u36A-YTxiOw,572.0,574.0,annotator_1,,podcast,,overused I want to emphasize that all of you should have a one-line description that,false,multimodal_tvsum_style
+u36A-YTxiOw,574.0,576.0,annotator_1,,podcast,,I want to emphasize that all of you should have a one-line description that does not use the X for y construction,false,multimodal_tvsum_style
+u36A-YTxiOw,576.0,578.0,annotator_1,,podcast,,should have a one-line description that does not use the X for y construction but the X for y construction can be used,false,multimodal_tvsum_style
+u36A-YTxiOw,578.0,580.0,annotator_1,,podcast,,does not use the X for y construction but the X for y construction can be used,false,multimodal_tvsum_style
+u36A-YTxiOw,580.0,582.0,annotator_1,,podcast,,does not use the X for y construction but the X for y construction can be used in certain cases so for example paisy,false,multimodal_tvsum_style
+u36A-YTxiOw,582.0,584.0,annotator_1,,podcast,,but the X for y construction can be used in certain cases so for example paisy which is a YC Alum can describe,false,multimodal_tvsum_style
+u36A-YTxiOw,584.0,586.0,annotator_1,,podcast,,in certain cases so for example paisy which is a YC Alum can describe,false,multimodal_tvsum_style
+u36A-YTxiOw,586.0,588.0,annotator_1,,podcast,,in certain cases so for example paisy which is a YC Alum can describe themselves as stripe for his former,false,multimodal_tvsum_style
+u36A-YTxiOw,588.0,590.0,annotator_1,,podcast,,which is a YC Alum can describe themselves as stripe for his former Soviet Union countries but they could,false,multimodal_tvsum_style
+u36A-YTxiOw,590.0,592.0,annotator_1,,podcast,,themselves as stripe for his former Soviet Union countries but they could also describe themselves as payment,false,multimodal_tvsum_style
+u36A-YTxiOw,592.0,594.0,annotator_1,,podcast,,Soviet Union countries but they could also describe themselves as payment processing for former Soviet countries,false,multimodal_tvsum_style
+u36A-YTxiOw,594.0,596.0,annotator_1,,podcast,,also describe themselves as payment processing for former Soviet countries but let's talk about when it's okay to,false,multimodal_tvsum_style
+u36A-YTxiOw,596.0,598.0,annotator_1,,podcast,,processing for former Soviet countries but let's talk about when it's okay to,false,multimodal_tvsum_style
+u36A-YTxiOw,598.0,600.0,annotator_1,,podcast,,processing for former Soviet countries but let's talk about when it's okay to use the X for y Construction,false,multimodal_tvsum_style
+u36A-YTxiOw,600.0,602.0,annotator_1,,podcast,,but let's talk about when it's okay to use the X for y Construction going back to paisy if the founders are,false,multimodal_tvsum_style
+u36A-YTxiOw,602.0,604.0,annotator_1,,podcast,,use the X for y Construction going back to paisy if the founders are talking to people in Silicon Valley so,false,multimodal_tvsum_style
+u36A-YTxiOw,604.0,606.0,annotator_1,,podcast,,going back to paisy if the founders are talking to people in Silicon Valley so investors or press for example uh then,false,multimodal_tvsum_style
+u36A-YTxiOw,606.0,608.0,annotator_1,,podcast,,talking to people in Silicon Valley so investors or press for example uh then,false,multimodal_tvsum_style
+u36A-YTxiOw,608.0,610.0,annotator_1,,podcast,,talking to people in Silicon Valley so investors or press for example uh then it might make sense you might use the X,false,multimodal_tvsum_style
+u36A-YTxiOw,610.0,612.0,annotator_1,,podcast,,investors or press for example uh then it might make sense you might use the X for y analogy if it really is the best,false,multimodal_tvsum_style
+u36A-YTxiOw,612.0,614.0,annotator_1,,podcast,,it might make sense you might use the X for y analogy if it really is the best way to paint a picture of what you're,false,multimodal_tvsum_style
+u36A-YTxiOw,614.0,616.0,annotator_1,,podcast,,for y analogy if it really is the best way to paint a picture of what you're building very quickly if you go with,false,multimodal_tvsum_style
+u36A-YTxiOw,616.0,618.0,annotator_1,,podcast,,way to paint a picture of what you're building very quickly if you go with this construction you need three,false,multimodal_tvsum_style
+u36A-YTxiOw,618.0,620.0,annotator_1,,podcast,,building very quickly if you go with this construction you need three ingredients first of all X should be a,false,multimodal_tvsum_style
+u36A-YTxiOw,620.0,622.0,annotator_1,,podcast,,this construction you need three ingredients first of all X should be a,false,multimodal_tvsum_style
+u36A-YTxiOw,622.0,624.0,annotator_1,,podcast,,this construction you need three ingredients first of all X should be a household name,false,multimodal_tvsum_style
+u36A-YTxiOw,624.0,626.0,annotator_1,,podcast,,ingredients first of all X should be a household name second it should be reasonably clear why,false,multimodal_tvsum_style
+u36A-YTxiOw,626.0,628.0,annotator_1,,podcast,,household name second it should be reasonably clear why y might want X,false,multimodal_tvsum_style
+u36A-YTxiOw,628.0,630.0,annotator_1,,podcast,,second it should be reasonably clear why y might want X and third y should be a huge market so,false,multimodal_tvsum_style
+u36A-YTxiOw,630.0,632.0,annotator_1,,podcast,,y might want X and third y should be a huge market so,false,multimodal_tvsum_style
+u36A-YTxiOw,632.0,634.0,annotator_1,,podcast,,y might want X and third y should be a huge market so one YC company described themselves,false,multimodal_tvsum_style
+u36A-YTxiOw,634.0,636.0,annotator_1,,podcast,,and third y should be a huge market so one YC company described themselves early on as buffer for Snapchat even,false,multimodal_tvsum_style
+u36A-YTxiOw,636.0,638.0,annotator_1,,podcast,,one YC company described themselves early on as buffer for Snapchat even know buffer is doing well as a company,false,multimodal_tvsum_style
+u36A-YTxiOw,638.0,640.0,annotator_1,,podcast,,early on as buffer for Snapchat even know buffer is doing well as a company it's not a company that not everyone,false,multimodal_tvsum_style
+u36A-YTxiOw,640.0,642.0,annotator_1,,podcast,,know buffer is doing well as a company it's not a company that not everyone necessarily knows when I was reading,false,multimodal_tvsum_style
+u36A-YTxiOw,642.0,644.0,annotator_1,,podcast,,it's not a company that not everyone necessarily knows when I was reading this description in their YC application,false,multimodal_tvsum_style
+u36A-YTxiOw,644.0,646.0,annotator_1,,podcast,,necessarily knows when I was reading this description in their YC application I literally had to go to Google and,false,multimodal_tvsum_style
+u36A-YTxiOw,646.0,648.0,annotator_1,,podcast,,this description in their YC application I literally had to go to Google and Google buffer so in this case you're,false,multimodal_tvsum_style
+u36A-YTxiOw,648.0,650.0,annotator_1,,podcast,,I literally had to go to Google and Google buffer so in this case you're better off describing the problem that,false,multimodal_tvsum_style
+u36A-YTxiOw,650.0,652.0,annotator_1,,podcast,,Google buffer so in this case you're better off describing the problem that,false,multimodal_tvsum_style
+u36A-YTxiOw,652.0,654.0,annotator_1,,podcast,,Google buffer so in this case you're better off describing the problem that you're solving so here's an X for y,false,multimodal_tvsum_style
+u36A-YTxiOw,654.0,656.0,annotator_1,,podcast,,better off describing the problem that you're solving so here's an X for y example from the startup School community tha,false,multimodal_tvsum_style
+u36A-YTxiOw,656.0,658.0,annotator_1,,podcast,,example from the startup School community that I think works hark alive is Airbnb for dance and movement classes,false,multimodal_tvsum_style
+u36A-YTxiOw,658.0,660.0,annotator_1,,podcast,,community that I think works hark alive is Airbnb for dance and movement classes,false,multimodal_tvsum_style
+u36A-YTxiOw,660.0,662.0,annotator_1,,podcast,,community that I think works hark alive is Airbnb for dance and movement classes it paints a fast picture of what Harker,false,multimodal_tvsum_style
+u36A-YTxiOw,662.0,664.0,annotator_1,,podcast,,is Airbnb for dance and movement classes it paints a fast picture of what Harker live is but honestly you could also jus,false,multimodal_tvsum_style
+u36A-YTxiOw,664.0,666.0,annotator_1,,podcast,,it paints a fast picture of what Harker live is but honestly you could also just as easily say harkalive is a Marketplac,false,multimodal_tvsum_style
+u36A-YTxiOw,666.0,668.0,annotator_1,,podcast,,live is but honestly you could also just as easily say harkalive is a Marketplace,false,multimodal_tvsum_style
+u36A-YTxiOw,668.0,670.0,annotator_1,,podcast,,live is but honestly you could also just as easily say harkalive is a Marketplace for dance and movement classes so to,false,multimodal_tvsum_style
+u36A-YTxiOw,670.0,672.0,annotator_1,,podcast,,as easily say harkalive is a Marketplace for dance and movement classes so to review the best one-liners are,false,multimodal_tvsum_style
+u36A-YTxiOw,672.0,674.0,annotator_1,,podcast,,for dance and movement classes so to review the best one-liners are descriptive they describe what you do,false,multimodal_tvsum_style
+u36A-YTxiOw,674.0,676.0,annotator_1,,podcast,,review the best one-liners are descriptive they describe what you do the problem and who you're solving it,false,multimodal_tvsum_style
+u36A-YTxiOw,676.0,678.0,annotator_1,,podcast,,descriptive they describe what you do the problem and who you're solving it for they're conversational and don't use,false,multimodal_tvsum_style
+u36A-YTxiOw,678.0,680.0,annotator_1,,podcast,,for they're conversational and don't use jargon or marketing language and there's,false,multimodal_tvsum_style
+u36A-YTxiOw,680.0,682.0,annotator_1,,podcast,,they're conversational and don't use jargon or marketing language and there's no long-winded lead up they're concise,false,multimodal_tvsum_style
+u36A-YTxiOw,682.0,684.0,annotator_1,,podcast,,jargon or marketing language and there's no long-winded lead up they're concise,false,multimodal_tvsum_style
+u36A-YTxiOw,684.0,686.0,annotator_1,,podcast,,jargon or marketing language and there's no long-winded lead up they're concise short and sweet so now that you know,false,multimodal_tvsum_style
+u36A-YTxiOw,686.0,688.0,annotator_1,,podcast,,no long-winded lead up they're concise short and sweet so now that you know what you need for a good one sentence,false,multimodal_tvsum_style
+u36A-YTxiOw,688.0,690.0,annotator_1,,podcast,,short and sweet so now that you know what you need for a good one sentence pitch let's talk about why you want to,false,multimodal_tvsum_style
+u36A-YTxiOw,690.0,692.0,annotator_1,,podcast,,what you need for a good one sentence pitch let's talk about why you want to,false,multimodal_tvsum_style
+u36A-YTxiOw,692.0,694.0,annotator_1,,podcast,,what you need for a good one sentence pitch let's talk about why you want to launch continuously even before you have,false,multimodal_tvsum_style
+u36A-YTxiOw,694.0,696.0,annotator_1,,podcast,,pitch let's talk about why you want to launch continuously even before you have a fully functioning product,false,multimodal_tvsum_style
+u36A-YTxiOw,696.0,698.0,annotator_1,,podcast,,launch continuously even before you have a fully functioning product launching early gives you the chance to,false,multimodal_tvsum_style
+u36A-YTxiOw,698.0,700.0,annotator_1,,podcast,,a fully functioning product launching early gives you the chance to practice and refine your idea you can a,false,multimodal_tvsum_style
+u36A-YTxiOw,700.0,702.0,annotator_1,,podcast,,launching early gives you the chance to practice and refine your idea you can a,false,multimodal_tvsum_style
+u36A-YTxiOw,702.0,704.0,annotator_1,,podcast,,launching early gives you the chance to practice and refine your idea you can a B test the idea or messaging on people,false,multimodal_tvsum_style
+u36A-YTxiOw,704.0,706.0,annotator_1,,podcast,,practice and refine your idea you can a B test the idea or messaging on people you get an opportunity to see how people,false,multimodal_tvsum_style
+u36A-YTxiOw,706.0,708.0,annotator_1,,podcast,,B test the idea or messaging on people you get an opportunity to see how people respond to it and then once you have a,false,multimodal_tvsum_style
+u36A-YTxiOw,708.0,710.0,annotator_1,,podcast,,you get an opportunity to see how people respond to it and then once you have a,false,multimodal_tvsum_style
+u36A-YTxiOw,710.0,712.0,annotator_1,,podcast,,you get an opportunity to see how people respond to it and then once you have a product launching through different chan,false,multimodal_tvsum_style
+u36A-YTxiOw,712.0,714.0,annotator_1,,podcast,,product launching through different channels will give you an opportunity to,false,multimodal_tvsum_style
+u36A-YTxiOw,714.0,716.0,annotator_1,,podcast,,channels will give you an opportunity to see how people respond to the actual product and launching on different,false,multimodal_tvsum_style
+u36A-YTxiOw,716.0,718.0,annotator_1,,podcast,,see how people respond to the actual product and launching on different channels will also help you determine,false,multimodal_tvsum_style
+u36A-YTxiOw,718.0,720.0,annotator_1,,podcast,,product and launching on different channels will also help you determine whether you're even talking to the right,false,multimodal_tvsum_style
+u36A-YTxiOw,720.0,722.0,annotator_1,,podcast,,channels will also help you determine whether you're even talking to the right users different channels will naturally,false,multimodal_tvsum_style
+u36A-YTxiOw,722.0,724.0,annotator_1,,podcast,,whether you're even talking to the right users different channels will naturally reach different audiences so let's talk,false,multimodal_tvsum_style
+u36A-YTxiOw,724.0,726.0,annotator_1,,podcast,,users different channels will naturally reach different audiences so let's talk,false,multimodal_tvsum_style
+u36A-YTxiOw,726.0,728.0,annotator_1,,podcast,,users different channels will naturally reach different audiences so let's talk about some of the types of launches you,false,multimodal_tvsum_style
+u36A-YTxiOw,728.0,730.0,annotator_1,,podcast,,reach different audiences so let's talk about some of the types of launches you can do in your early stages here are,false,multimodal_tvsum_style
+u36A-YTxiOw,730.0,732.0,annotator_1,,podcast,,about some of the types of launches you can do in your early stages here are different types of launches and I'm,false,multimodal_tvsum_style
+u36A-YTxiOw,732.0,734.0,annotator_1,,podcast,,can do in your early stages here are different types of launches and I'm going to go through each one of these,false,multimodal_tvsum_style
+u36A-YTxiOw,734.0,736.0,annotator_1,,podcast,,different types of launches and I'm going to go through each one of these briefly so first is the silent launch,false,multimodal_tvsum_style
+u36A-YTxiOw,736.0,738.0,annotator_1,,podcast,,going to go through each one of these briefly so first is the silent launch and this is something every one of you,false,multimodal_tvsum_style
+u36A-YTxiOw,738.0,740.0,annotator_1,,podcast,,briefly so first is the silent launch and this is something every one of you should do while you're in startup school,false,multimodal_tvsum_style
+u36A-YTxiOw,740.0,742.0,annotator_1,,podcast,,and this is something every one of you should do while you're in startup school I clicked on 10 random startup School,false,multimodal_tvsum_style
+u36A-YTxiOw,742.0,744.0,annotator_1,,podcast,,should do while you're in startup school I clicked on 10 random startup School companies today and only half of them,false,multimodal_tvsum_style
+u36A-YTxiOw,744.0,746.0,annotator_1,,podcast,,I clicked on 10 random startup School companies today and only half of them had landing pages so you don't need,false,multimodal_tvsum_style
+u36A-YTxiOw,746.0,748.0,annotator_1,,podcast,,companies today and only half of them had landing pages so you don't need,false,multimodal_tvsum_style
+u36A-YTxiOw,748.0,750.0,annotator_1,,podcast,,companies today and only half of them had landing pages so you don't need anything fancy at the very least you,false,multimodal_tvsum_style
+u36A-YTxiOw,750.0,752.0,annotator_1,,podcast,,had landing pages so you don't need anything fancy at the very least you need a domain name your company name a,false,multimodal_tvsum_style
+u36A-YTxiOw,752.0,754.0,annotator_1,,podcast,,anything fancy at the very least you need a domain name your company name a short description a way for users to,false,multimodal_tvsum_style
+u36A-YTxiOw,754.0,756.0,annotator_1,,podcast,,need a domain name your company name a short description a way for users to,false,multimodal_tvsum_style
+u36A-YTxiOw,756.0,758.0,annotator_1,,podcast,,need a domain name your company name a short description a way for users to contact you and a call to action your,false,multimodal_tvsum_style
+u36A-YTxiOw,758.0,760.0,annotator_1,,podcast,,short description a way for users to contact you and a call to action your call to action might be sign up for a,false,multimodal_tvsum_style
+u36A-YTxiOw,760.0,762.0,annotator_1,,podcast,,contact you and a call to action your call to action might be sign up for a newsletter or sign up to here when we,false,multimodal_tvsum_style
+u36A-YTxiOw,762.0,764.0,annotator_1,,podcast,,call to action might be sign up for a newsletter or sign up to here when we launch here's an example of a startup,false,multimodal_tvsum_style
+u36A-YTxiOw,764.0,766.0,annotator_1,,podcast,,newsletter or sign up to here when we launch here's an example of a startup School company landing page Lara they,false,multimodal_tvsum_style
+u36A-YTxiOw,766.0,768.0,annotator_1,,podcast,,launch here's an example of a startup School company landing page Lara they have their domain name a company name,false,multimodal_tvsum_style
+u36A-YTxiOw,768.0,770.0,annotator_1,,podcast,,School company landing page Lara they have their domain name a company name short description and a call to action,false,multimodal_tvsum_style
+u36A-YTxiOw,770.0,772.0,annotator_1,,podcast,,have their domain name a company name short description and a call to action sign up for the wait list and this is,false,multimodal_tvsum_style
+u36A-YTxiOw,772.0,774.0,annotator_1,,podcast,,short description and a call to action sign up for the wait list and this is,false,multimodal_tvsum_style
+u36A-YTxiOw,774.0,776.0,annotator_1,,podcast,,short description and a call to action sign up for the wait list and this is all you really need the next type of,false,multimodal_tvsum_style
+u36A-YTxiOw,776.0,778.0,annotator_1,,podcast,,sign up for the wait list and this is all you really need the next type of launch is to friends and family,false,multimodal_tvsum_style
+u36A-YTxiOw,778.0,780.0,annotator_1,,podcast,,all you really need the next type of launch is to friends and family even if you're at idea stage you can,false,multimodal_tvsum_style
+u36A-YTxiOw,780.0,782.0,annotator_1,,podcast,,launch is to friends and family even if you're at idea stage you can test out your one to two sentence pitch,false,multimodal_tvsum_style
+u36A-YTxiOw,782.0,784.0,annotator_1,,podcast,,even if you're at idea stage you can test out your one to two sentence pitch on friends and family and once you have,false,multimodal_tvsum_style
+u36A-YTxiOw,784.0,786.0,annotator_1,,podcast,,test out your one to two sentence pitch on friends and family and once you have an MVP you should do a friends and,false,multimodal_tvsum_style
+u36A-YTxiOw,786.0,788.0,annotator_1,,podcast,,on friends and family and once you have an MVP you should do a friends and family launch as quickly as possible so,false,multimodal_tvsum_style
+u36A-YTxiOw,788.0,790.0,annotator_1,,podcast,,an MVP you should do a friends and family launch as quickly as possible so,false,multimodal_tvsum_style
+u36A-YTxiOw,790.0,792.0,annotator_1,,podcast,,an MVP you should do a friends and family launch as quickly as possible so in its earliest days Reddit was shared,false,multimodal_tvsum_style
+u36A-YTxiOw,792.0,794.0,annotator_1,,podcast,,family launch as quickly as possible so in its earliest days Reddit was shared among the founders of the first YC batch,false,multimodal_tvsum_style
+u36A-YTxiOw,794.0,796.0,annotator_1,,podcast,,in its earliest days Reddit was shared among the founders of the first YC batch,false,multimodal_tvsum_style
+u36A-YTxiOw,796.0,798.0,annotator_1,,podcast,,in its earliest days Reddit was shared among the founders of the first YC batch I use the Wayback machine to find the,false,multimodal_tvsum_style
+u36A-YTxiOw,798.0,800.0,annotator_1,,podcast,,among the founders of the first YC batch I use the Wayback machine to find the earliest view of Reddit I can find from,false,multimodal_tvsum_style
+u36A-YTxiOw,800.0,802.0,annotator_1,,podcast,,I use the Wayback machine to find the earliest view of Reddit I can find from 2005. so this was even before they,false,multimodal_tvsum_style
+u36A-YTxiOw,802.0,804.0,annotator_1,,podcast,,earliest view of Reddit I can find from 2005. so this was even before they called upvotes upvotes so share your,false,multimodal_tvsum_style
+u36A-YTxiOw,804.0,806.0,annotator_1,,podcast,,2005. so this was even before they called upvotes upvotes so share your,false,multimodal_tvsum_style
+u36A-YTxiOw,806.0,808.0,annotator_1,,podcast,,2005. so this was even before they called upvotes upvotes so share your product with friends and family watch,false,multimodal_tvsum_style
+u36A-YTxiOw,808.0,810.0,annotator_1,,podcast,,called upvotes upvotes so share your product with friends and family watch them use the product and ask them for,false,multimodal_tvsum_style
+u36A-YTxiOw,810.0,812.0,annotator_1,,podcast,,product with friends and family watch them use the product and ask them for feedback but one thing about the friends,false,multimodal_tvsum_style
+u36A-YTxiOw,812.0,814.0,annotator_1,,podcast,,them use the product and ask them for feedback but one thing about the friends and family launch don't stay in this,false,multimodal_tvsum_style
+u36A-YTxiOw,814.0,816.0,annotator_1,,podcast,,feedback but one thing about the friends and family launch don't stay in this phase for too long because your friends,false,multimodal_tvsum_style
+u36A-YTxiOw,816.0,818.0,annotator_1,,podcast,,and family launch don't stay in this phase for too long because your friends and family might not be the ideal users,false,multimodal_tvsum_style
+u36A-YTxiOw,818.0,820.0,annotator_1,,podcast,,phase for too long because your friends and family might not be the ideal users for what you're building and sometimes,false,multimodal_tvsum_style
+u36A-YTxiOw,820.0,822.0,annotator_1,,podcast,,and family might not be the ideal users for what you're building and sometimes their feedback isn't going to be as,false,multimodal_tvsum_style
+u36A-YTxiOw,822.0,824.0,annotator_1,,podcast,,for what you're building and sometimes their feedback isn't going to be as helpful as a real users next type of,false,multimodal_tvsum_style
+u36A-YTxiOw,824.0,826.0,annotator_1,,podcast,,their feedback isn't going to be as helpful as a real users next type of launch launching to strangers I want to,false,multimodal_tvsum_style
+u36A-YTxiOw,826.0,828.0,annotator_1,,podcast,,helpful as a real users next type of launch launching to strangers I want to,false,multimodal_tvsum_style
+u36A-YTxiOw,828.0,830.0,annotator_1,,podcast,,helpful as a real users next type of launch launching to strangers I want to share the MVP for doordash this is the,false,multimodal_tvsum_style
+u36A-YTxiOw,830.0,832.0,annotator_1,,podcast,,launch launching to strangers I want to share the MVP for doordash this is the very first version of the doordash site,false,multimodal_tvsum_style
+u36A-YTxiOw,832.0,834.0,annotator_1,,podcast,,share the MVP for doordash this is the very first version of the doordash site when they first started out the founders,false,multimodal_tvsum_style
+u36A-YTxiOw,834.0,836.0,annotator_1,,podcast,,very first version of the doordash site when they first started out the founders were building other things they were,false,multimodal_tvsum_style
+u36A-YTxiOw,836.0,838.0,annotator_1,,podcast,,when they first started out the founders were building other things they were building tech for small business owners,false,multimodal_tvsum_style
+u36A-YTxiOw,838.0,840.0,annotator_1,,podcast,,were building other things they were building tech for small business owners and so they started approaching store,false,multimodal_tvsum_style
+u36A-YTxiOw,840.0,842.0,annotator_1,,podcast,,building tech for small business owners and so they started approaching store owners for feedback and they spent a lot,false,multimodal_tvsum_style
+u36A-YTxiOw,842.0,844.0,annotator_1,,podcast,,and so they started approaching store owners for feedback and they spent a lot of time talking to this one store,false,multimodal_tvsum_style
+u36A-YTxiOw,844.0,846.0,annotator_1,,podcast,,owners for feedback and they spent a lot of time talking to this one store manager Chloe she was the manager of a,false,multimodal_tvsum_style
+u36A-YTxiOw,846.0,848.0,annotator_1,,podcast,,of time talking to this one store manager Chloe she was the manager of a macaron store in Downtown Palo Alto in,false,multimodal_tvsum_style
+u36A-YTxiOw,848.0,850.0,annotator_1,,podcast,,manager Chloe she was the manager of a macaron store in Downtown Palo Alto in,false,multimodal_tvsum_style
+u36A-YTxiOw,850.0,852.0,annotator_1,,podcast,,manager Chloe she was the manager of a macaron store in Downtown Palo Alto in talking to Chloe they realized that the ap,false,multimodal_tvsum_style
+u36A-YTxiOw,852.0,854.0,annotator_1,,podcast,,talking to Chloe they realized that the app they were building really didn't solve any of her problems but just as,false,multimodal_tvsum_style
+u36A-YTxiOw,854.0,856.0,annotator_1,,podcast,,app they were building really didn't solve any of her problems but just as they were about to leave Chloe always,false,multimodal_tvsum_style
+u36A-YTxiOw,856.0,858.0,annotator_1,,podcast,,solve any of her problems but just as they were about to leave Chloe always said hey there's just one thing I want,false,multimodal_tvsum_style
+u36A-YTxiOw,858.0,860.0,annotator_1,,podcast,,they were about to leave Chloe always said hey there's just one thing I want to show you and it was this thick,false,multimodal_tvsum_style
+u36A-YTxiOw,860.0,862.0,annotator_1,,podcast,,said hey there's just one thing I want to show you and it was this thick booklet with pages and pages of pages of,false,multimodal_tvsum_style
+u36A-YTxiOw,862.0,864.0,annotator_1,,podcast,,to show you and it was this thick booklet with pages and pages of pages of delivery orders,false,multimodal_tvsum_style
+u36A-YTxiOw,864.0,866.0,annotator_1,,podcast,,booklet with pages and pages of pages of delivery orders she said this drives me crazy I have no,false,multimodal_tvsum_style
+u36A-YTxiOw,866.0,868.0,annotator_1,,podcast,,delivery orders she said this drives me crazy I have no drivers to fulfill them and I'm the one,false,multimodal_tvsum_style
+u36A-YTxiOw,868.0,870.0,annotator_1,,podcast,,she said this drives me crazy I have no drivers to fulfill them and I'm the one doing all the deliveries over the course,false,multimodal_tvsum_style
+u36A-YTxiOw,870.0,872.0,annotator_1,,podcast,,drivers to fulfill them and I'm the one doing all the deliveries over the course of the next few weeks the founders,false,multimodal_tvsum_style
+u36A-YTxiOw,872.0,874.0,annotator_1,,podcast,,doing all the deliveries over the course of the next few weeks the founders interviewed over 200 small business,false,multimodal_tvsum_style
+u36A-YTxiOw,874.0,876.0,annotator_1,,podcast,,of the next few weeks the founders interviewed over 200 small business owners across the bay area and they kept,false,multimodal_tvsum_style
+u36A-YTxiOw,876.0,878.0,annotator_1,,podcast,,interviewed over 200 small business owners across the bay area and they kept hearing the same issue deliveries are,false,multimodal_tvsum_style
+u36A-YTxiOw,878.0,880.0,annotator_1,,podcast,,owners across the bay area and they kept hearing the same issue deliveries are,false,multimodal_tvsum_style
+u36A-YTxiOw,880.0,882.0,annotator_1,,podcast,,owners across the bay area and they kept hearing the same issue deliveries are painful then after they you know absorbed,false,multimodal_tvsum_style
+u36A-YTxiOw,882.0,884.0,annotator_1,,podcast,,painful then after they you know absorbed enough,false,multimodal_tvsum_style
+u36A-YTxiOw,884.0,886.0,annotator_1,,podcast,,painful then after they you know absorbed enough information about the product they built,false,multimodal_tvsum_style
+u36A-YTxiOw,886.0,888.0,annotator_1,,podcast,,then after they you know absorbed enough information about the product they built this their MVP in just a few hours,false,multimodal_tvsum_style
+u36A-YTxiOw,888.0,890.0,annotator_1,,podcast,,information about the product they built this their MVP in just a few hours,false,multimodal_tvsum_style
+u36A-YTxiOw,890.0,892.0,annotator_1,,podcast,,information about the product they built this their MVP in just a few hours so if they'd waited too long to get,false,multimodal_tvsum_style
+u36A-YTxiOw,892.0,894.0,annotator_1,,podcast,,this their MVP in just a few hours so if they'd waited too long to get direct feedback from their customers,false,multimodal_tvsum_style
+u36A-YTxiOw,894.0,896.0,annotator_1,,podcast,,so if they'd waited too long to get direct feedback from their customers they might have spent way longer you,false,multimodal_tvsum_style
+u36A-YTxiOw,896.0,898.0,annotator_1,,podcast,,direct feedback from their customers they might have spent way longer you know six months plus building out the,false,multimodal_tvsum_style
+u36A-YTxiOw,898.0,900.0,annotator_1,,podcast,,they might have spent way longer you know six months plus building out the wrong solution for small business owners,false,multimodal_tvsum_style
+u36A-YTxiOw,900.0,902.0,annotator_1,,podcast,,know six months plus building out the wrong solution for small business owners so I'd recommend you get out there even,false,multimodal_tvsum_style
+u36A-YTxiOw,902.0,904.0,annotator_1,,podcast,,wrong solution for small business owners so I'd recommend you get out there even if it makes you slightly uncomfortable,false,multimodal_tvsum_style
+u36A-YTxiOw,904.0,906.0,annotator_1,,podcast,,so I'd recommend you get out there even if it makes you slightly uncomfortable and start talking to your potential,false,multimodal_tvsum_style
+u36A-YTxiOw,906.0,908.0,annotator_1,,podcast,,if it makes you slightly uncomfortable and start talking to your potential customers as soon as possible do what,false,multimodal_tvsum_style
+u36A-YTxiOw,908.0,910.0,annotator_1,,podcast,,and start talking to your potential customers as soon as possible do what doordash did and talk to 200. so next is,false,multimodal_tvsum_style
+u36A-YTxiOw,910.0,912.0,annotator_1,,podcast,,customers as soon as possible do what doordash did and talk to 200. so next is one of my favorite ways to launch,false,multimodal_tvsum_style
+u36A-YTxiOw,912.0,914.0,annotator_1,,podcast,,doordash did and talk to 200. so next is one of my favorite ways to launch through online communities so I think,false,multimodal_tvsum_style
+u36A-YTxiOw,914.0,916.0,annotator_1,,podcast,,one of my favorite ways to launch through online communities so I think,false,multimodal_tvsum_style
+u36A-YTxiOw,916.0,918.0,annotator_1,,podcast,,one of my favorite ways to launch through online communities so I think you should plan a launch for every single commun,false,multimodal_tvsum_style
+u36A-YTxiOw,918.0,920.0,annotator_1,,podcast,,you should plan a launch for every single community that you are part of when a company goes through YC for,false,multimodal_tvsum_style
+u36A-YTxiOw,920.0,922.0,annotator_1,,podcast,,single community that you are part of when a company goes through YC for example they have the option of,false,multimodal_tvsum_style
+u36A-YTxiOw,922.0,924.0,annotator_1,,podcast,,when a company goes through YC for example they have the option of launching on Bookface before they launch,false,multimodal_tvsum_style
+u36A-YTxiOw,924.0,926.0,annotator_1,,podcast,,example they have the option of launching on Bookface before they launch publicly Bookface is our internal,false,multimodal_tvsum_style
+u36A-YTxiOw,926.0,928.0,annotator_1,,podcast,,launching on Bookface before they launch publicly Bookface is our internal platform for Founders it's like Facebook,false,multimodal_tvsum_style
+u36A-YTxiOw,928.0,930.0,annotator_1,,podcast,,publicly Bookface is our internal platform for Founders it's like Facebook meets LinkedIn meets quora all for YC,false,multimodal_tvsum_style
+u36A-YTxiOw,930.0,932.0,annotator_1,,podcast,,platform for Founders it's like Facebook meets LinkedIn meets quora all for YC,false,multimodal_tvsum_style
+u36A-YTxiOw,932.0,934.0,annotator_1,,podcast,,platform for Founders it's like Facebook meets LinkedIn meets quora all for YC Founders and there are currently over 6,false,multimodal_tvsum_style
+u36A-YTxiOw,934.0,936.0,annotator_1,,podcast,,meets LinkedIn meets quora all for YC Founders and there are currently over 6 000 Founders on bookbase so for many,false,multimodal_tvsum_style
+u36A-YTxiOw,936.0,938.0,annotator_1,,podcast,,Founders and there are currently over 6 000 Founders on bookbase so for many companies in YC it's a good way to get,false,multimodal_tvsum_style
+u36A-YTxiOw,938.0,940.0,annotator_1,,podcast,,000 Founders on bookbase so for many companies in YC it's a good way to get some first users and some early feedback,false,multimodal_tvsum_style
+u36A-YTxiOw,940.0,942.0,annotator_1,,podcast,,companies in YC it's a good way to get some first users and some early feedback,false,multimodal_tvsum_style
+u36A-YTxiOw,942.0,944.0,annotator_1,,podcast,,companies in YC it's a good way to get some first users and some early feedback and it's a fairly low risk way to launch,false,multimodal_tvsum_style
+u36A-YTxiOw,944.0,946.0,annotator_1,,podcast,,some first users and some early feedback and it's a fairly low risk way to launch because you're launching in front of a,false,multimodal_tvsum_style
+u36A-YTxiOw,946.0,948.0,annotator_1,,podcast,,and it's a fairly low risk way to launch because you're launching in front of a friendly community of other Founders the,false,multimodal_tvsum_style
+u36A-YTxiOw,948.0,950.0,annotator_1,,podcast,,friendly community of other Founders there are countless examples of companies that have launched and gotten,false,multimodal_tvsum_style
+u36A-YTxiOw,950.0,952.0,annotator_1,,podcast,,there are countless examples of companies that have launched and gotten their first or first thousand customers,false,multimodal_tvsum_style
+u36A-YTxiOw,952.0,954.0,annotator_1,,podcast,,companies that have launched and gotten their first or first thousand customers through online communities another,false,multimodal_tvsum_style
+u36A-YTxiOw,954.0,956.0,annotator_1,,podcast,,their first or first thousand customers through online communities another community that you have access to is,false,multimodal_tvsum_style
+u36A-YTxiOw,956.0,958.0,annotator_1,,podcast,,through online communities another community that you have access to is Hacker News they have something called,false,multimodal_tvsum_style
+u36A-YTxiOw,958.0,960.0,annotator_1,,podcast,,community that you have access to is Hacker News they have something called show hn so many YC alumni Dropbox and,false,multimodal_tvsum_style
+u36A-YTxiOw,960.0,962.0,annotator_1,,podcast,,Hacker News they have something called show hn so many YC alumni Dropbox and,false,multimodal_tvsum_style
+u36A-YTxiOw,962.0,964.0,annotator_1,,podcast,,Hacker News they have something called show hn so many YC alumni Dropbox and git lab for example and hundreds more,false,multimodal_tvsum_style
+u36A-YTxiOw,964.0,966.0,annotator_1,,podcast,,show hn so many YC alumni Dropbox and git lab for example and hundreds more have launched on Hacker News Robin Hood,false,multimodal_tvsum_style
+u36A-YTxiOw,966.0,968.0,annotator_1,,podcast,,git lab for example and hundreds more have launched on Hacker News Robin Hood,false,multimodal_tvsum_style
+u36A-YTxiOw,968.0,970.0,annotator_1,,podcast,,git lab for example and hundreds more have launched on Hacker News Robin Hood is an example of another company that,false,multimodal_tvsum_style
+u36A-YTxiOw,970.0,972.0,annotator_1,,podcast,,have launched on Hacker News Robin Hood is an example of another company that successfully launched on hn so back in,false,multimodal_tvsum_style
+u36A-YTxiOw,972.0,974.0,annotator_1,,podcast,,is an example of another company that successfully launched on hn so back in December 2013 they had a really simple,false,multimodal_tvsum_style
+u36A-YTxiOw,974.0,976.0,annotator_1,,podcast,,successfully launched on hn so back in December 2013 they had a really simple site and all it said was commission free,false,multimodal_tvsum_style
+u36A-YTxiOw,976.0,978.0,annotator_1,,podcast,,December 2013 they had a really simple site and all it said was commission free,false,multimodal_tvsum_style
+u36A-YTxiOw,978.0,980.0,annotator_1,,podcast,,December 2013 they had a really simple site and all it said was commission free trading stop paying up to ten dollars,false,multimodal_tvsum_style
+u36A-YTxiOw,980.0,982.0,annotator_1,,podcast,,site and all it said was commission free trading stop paying up to ten dollars per trade at the time they only had a but,false,multimodal_tvsum_style
+u36A-YTxiOw,982.0,984.0,annotator_1,,podcast,,per trade at the time they only had a button that,false,multimodal_tvsum_style
+u36A-YTxiOw,984.0,986.0,annotator_1,,podcast,,per trade at the time they only had a button that let you join a waitlist the waitlist,false,multimodal_tvsum_style
+u36A-YTxiOw,986.0,988.0,annotator_1,,podcast,,at the time they only had a button that let you join a waitlist the waitlist would show you how many people were,false,multimodal_tvsum_style
+u36A-YTxiOw,988.0,990.0,annotator_1,,podcast,,let you join a waitlist the waitlist would show you how many people were ahead of you in line and how many people were b,false,multimodal_tvsum_style
+u36A-YTxiOw,990.0,992.0,annotator_1,,podcast,,ahead of you in line and how many people were behind you in line so it was a Friday night and they'd been,false,multimodal_tvsum_style
+u36A-YTxiOw,992.0,994.0,annotator_1,,podcast,,were behind you in line so it was a Friday night and they'd been working on building this wait list in,false,multimodal_tvsum_style
+u36A-YTxiOw,994.0,996.0,annotator_1,,podcast,,so it was a Friday night and they'd been working on building this wait list in preparation for a launch they were,false,multimodal_tvsum_style
+u36A-YTxiOw,996.0,998.0,annotator_1,,podcast,,working on building this wait list in preparation for a launch they were planning the following week with someone,false,multimodal_tvsum_style
+u36A-YTxiOw,998.0,1000.0,annotator_1,,podcast,,preparation for a launch they were planning the following week with someone totally random posted them on hn and,false,multimodal_tvsum_style
+u36A-YTxiOw,1000.0,1002.0,annotator_1,,podcast,,planning the following week with someone totally random posted them on hn and boom they got to number one on hn and,false,multimodal_tvsum_style
+u36A-YTxiOw,1002.0,1004.0,annotator_1,,podcast,,totally random posted them on hn and boom they got to number one on hn and,false,multimodal_tvsum_style
+u36A-YTxiOw,1004.0,1006.0,annotator_1,,podcast,,totally random posted them on hn and boom they got to number one on hn and ended up getting 10 000 signups the,false,multimodal_tvsum_style
+u36A-YTxiOw,1006.0,1008.0,annotator_1,,podcast,,boom they got to number one on hn and ended up getting 10 000 signups the first day and then over 50 000 over the,false,multimodal_tvsum_style
+u36A-YTxiOw,1008.0,1010.0,annotator_1,,podcast,,ended up getting 10 000 signups the first day and then over 50 000 over the next week so each Community is different,false,multimodal_tvsum_style
+u36A-YTxiOw,1010.0,1012.0,annotator_1,,podcast,,first day and then over 50 000 over the next week so each Community is different,false,multimodal_tvsum_style
+u36A-YTxiOw,1012.0,1014.0,annotator_1,,podcast,,first day and then over 50 000 over the next week so each Community is different they have different tones audiences,false,multimodal_tvsum_style
+u36A-YTxiOw,1014.0,1016.0,annotator_1,,podcast,,next week so each Community is different they have different tones audiences interests launched communities you're,false,multimodal_tvsum_style
+u36A-YTxiOw,1016.0,1018.0,annotator_1,,podcast,,they have different tones audiences interests launched communities you're genuinely genuinely engaged with so be,false,multimodal_tvsum_style
+u36A-YTxiOw,1018.0,1020.0,annotator_1,,podcast,,interests launched communities you're genuinely genuinely engaged with so be,false,multimodal_tvsum_style
+u36A-YTxiOw,1020.0,1022.0,annotator_1,,podcast,,interests launched communities you're genuinely genuinely engaged with so be authentic don't get bogged down and too,false,multimodal_tvsum_style
+u36A-YTxiOw,1022.0,1024.0,annotator_1,,podcast,,genuinely genuinely engaged with so be authentic don't get bogged down and too much marketing and promo language people,false,multimodal_tvsum_style
+u36A-YTxiOw,1024.0,1026.0,annotator_1,,podcast,,authentic don't get bogged down and too much marketing and promo language people,false,multimodal_tvsum_style
+u36A-YTxiOw,1026.0,1028.0,annotator_1,,podcast,,authentic don't get bogged down and too much marketing and promo language people these days just shut off when they see,false,multimodal_tvsum_style
+u36A-YTxiOw,1028.0,1030.0,annotator_1,,podcast,,much marketing and promo language people these days just shut off when they see that do your research and get an,false,multimodal_tvsum_style
+u36A-YTxiOw,1030.0,1032.0,annotator_1,,podcast,,these days just shut off when they see that do your research and get an understanding of what will compel,false,multimodal_tvsum_style
+u36A-YTxiOw,1032.0,1034.0,annotator_1,,podcast,,that do your research and get an understanding of what will compel members of that Community to be interested in what yo,false,multimodal_tvsum_style
+u36A-YTxiOw,1034.0,1036.0,annotator_1,,podcast,,members of that Community to be interested in what you're doing so we don't have time to do a huge Deep dive,false,multimodal_tvsum_style
+u36A-YTxiOw,1036.0,1038.0,annotator_1,,podcast,,interested in what you're doing so we don't have time to do a huge Deep dive,false,multimodal_tvsum_style
+u36A-YTxiOw,1038.0,1040.0,annotator_1,,podcast,,interested in what you're doing so we don't have time to do a huge Deep dive into these next types of launches but I,false,multimodal_tvsum_style
+u36A-YTxiOw,1040.0,1042.0,annotator_1,,podcast,,don't have time to do a huge Deep dive into these next types of launches but I wanted to skim them briefly and share,false,multimodal_tvsum_style
+u36A-YTxiOw,1042.0,1044.0,annotator_1,,podcast,,into these next types of launches but I wanted to skim them briefly and share some resources and things that I found,false,multimodal_tvsum_style
+u36A-YTxiOw,1044.0,1046.0,annotator_1,,podcast,,wanted to skim them briefly and share some resources and things that I found recently so in a q a we did with the,false,multimodal_tvsum_style
+u36A-YTxiOw,1046.0,1048.0,annotator_1,,podcast,,some resources and things that I found recently so in a q a we did with the replit founders a few weeks ago you,false,multimodal_tvsum_style
+u36A-YTxiOw,1048.0,1050.0,annotator_1,,podcast,,recently so in a q a we did with the replit founders a few weeks ago you asked amjad and Haya how did you get,false,multimodal_tvsum_style
+u36A-YTxiOw,1050.0,1052.0,annotator_1,,podcast,,replit founders a few weeks ago you asked amjad and Haya how did you get your first users and they said you just,false,multimodal_tvsum_style
+u36A-YTxiOw,1052.0,1054.0,annotator_1,,podcast,,asked amjad and Haya how did you get your first users and they said you just,false,multimodal_tvsum_style
+u36A-YTxiOw,1054.0,1056.0,annotator_1,,podcast,,asked amjad and Haya how did you get your first users and they said you just have to be everywhere Hacker News,false,multimodal_tvsum_style
+u36A-YTxiOw,1056.0,1058.0,annotator_1,,podcast,,your first users and they said you just have to be everywhere Hacker News Twitter Reddit Etc so I wanted to share,false,multimodal_tvsum_style
+u36A-YTxiOw,1058.0,1060.0,annotator_1,,podcast,,have to be everywhere Hacker News Twitter Reddit Etc so I wanted to share,false,multimodal_tvsum_style
+u36A-YTxiOw,1060.0,1062.0,annotator_1,,podcast,,have to be everywhere Hacker News Twitter Reddit Etc so I wanted to share a thread that YC Alum Catherine cross,false,multimodal_tvsum_style
+u36A-YTxiOw,1062.0,1064.0,annotator_1,,podcast,,Twitter Reddit Etc so I wanted to share a thread that YC Alum Catherine cross tweeted out about building her community,false,multimodal_tvsum_style
+u36A-YTxiOw,1064.0,1066.0,annotator_1,,podcast,,a thread that YC Alum Catherine cross tweeted out about building her community on Tick Tock Anja Health Catherine's,false,multimodal_tvsum_style
+u36A-YTxiOw,1066.0,1068.0,annotator_1,,podcast,,tweeted out about building her community on Tick Tock Anja Health Catherine's company helps parents freeze their,false,multimodal_tvsum_style
+u36A-YTxiOw,1068.0,1070.0,annotator_1,,podcast,,on Tick Tock Anja Health Catherine's company helps parents freeze their babies umbilical cords and placentas for,false,multimodal_tvsum_style
+u36A-YTxiOw,1070.0,1072.0,annotator_1,,podcast,,company helps parents freeze their babies umbilical cords and placentas for there's some stuff for their stem cells,false,multimodal_tvsum_style
+u36A-YTxiOw,1072.0,1074.0,annotator_1,,podcast,,babies umbilical cords and placentas for there's some stuff for their stem cells so she wrote This Thread about how she,false,multimodal_tvsum_style
+u36A-YTxiOw,1074.0,1076.0,annotator_1,,podcast,,there's some stuff for their stem cells so she wrote This Thread about how she committed to posting tick tocks to start,false,multimodal_tvsum_style
+u36A-YTxiOw,1076.0,1078.0,annotator_1,,podcast,,so she wrote This Thread about how she committed to posting tick tocks to start building a community in advance of the,false,multimodal_tvsum_style
+u36A-YTxiOw,1078.0,1080.0,annotator_1,,podcast,,committed to posting tick tocks to start building a community in advance of the company's launch and in just a month she,false,multimodal_tvsum_style
+u36A-YTxiOw,1080.0,1082.0,annotator_1,,podcast,,building a community in advance of the company's launch and in just a month she,false,multimodal_tvsum_style
+u36A-YTxiOw,1082.0,1084.0,annotator_1,,podcast,,building a community in advance of the company's launch and in just a month she hit 10 000 followers so she shared this,false,multimodal_tvsum_style
+u36A-YTxiOw,1084.0,1086.0,annotator_1,,podcast,,company's launch and in just a month she hit 10 000 followers so she shared this thread on tips for building a community,false,multimodal_tvsum_style
+u36A-YTxiOw,1086.0,1088.0,annotator_1,,podcast,,hit 10 000 followers so she shared this thread on tips for building a community on Tick Tock which uh we will link to in,false,multimodal_tvsum_style
+u36A-YTxiOw,1088.0,1090.0,annotator_1,,podcast,,thread on tips for building a community on Tick Tock which uh we will link to in,false,multimodal_tvsum_style
+u36A-YTxiOw,1090.0,1092.0,annotator_1,,podcast,,thread on tips for building a community on Tick Tock which uh we will link to in the chat there is of course the,false,multimodal_tvsum_style
+u36A-YTxiOw,1092.0,1094.0,annotator_1,,podcast,,on Tick Tock which uh we will link to in the chat there is of course the pre-order launch and if you are a,false,multimodal_tvsum_style
+u36A-YTxiOw,1094.0,1096.0,annotator_1,,podcast,,the chat there is of course the pre-order launch and if you are a hardware or product or physical product,false,multimodal_tvsum_style
+u36A-YTxiOw,1096.0,1098.0,annotator_1,,podcast,,pre-order launch and if you are a hardware or product or physical product you can do a pre-order campaign on a,false,multimodal_tvsum_style
+u36A-YTxiOw,1098.0,1100.0,annotator_1,,podcast,,hardware or product or physical product you can do a pre-order campaign on a platform like Kickstarter or Indiegogo,false,multimodal_tvsum_style
+u36A-YTxiOw,1100.0,1102.0,annotator_1,,podcast,,you can do a pre-order campaign on a platform like Kickstarter or Indiegogo,false,multimodal_tvsum_style
+u36A-YTxiOw,1102.0,1104.0,annotator_1,,podcast,,you can do a pre-order campaign on a platform like Kickstarter or Indiegogo so preparing uh for a pre-order launch,false,multimodal_tvsum_style
+u36A-YTxiOw,1104.0,1106.0,annotator_1,,podcast,,platform like Kickstarter or Indiegogo so preparing uh for a pre-order launch could honestly be a whole presentation,false,multimodal_tvsum_style
+u36A-YTxiOw,1106.0,1108.0,annotator_1,,podcast,,so preparing uh for a pre-order launch could honestly be a whole presentation of its own and honestly there's a little,false,multimodal_tvsum_style
+u36A-YTxiOw,1108.0,1110.0,annotator_1,,podcast,,could honestly be a whole presentation of its own and honestly there's a little,false,multimodal_tvsum_style
+u36A-YTxiOw,1110.0,1112.0,annotator_1,,podcast,,could honestly be a whole presentation of its own and honestly there's a little bit more skepticism about crowdfunding,false,multimodal_tvsum_style
+u36A-YTxiOw,1112.0,1114.0,annotator_1,,podcast,,of its own and honestly there's a little bit more skepticism about crowdfunding and pre-orders than there was say five,false,multimodal_tvsum_style
+u36A-YTxiOw,1114.0,1116.0,annotator_1,,podcast,,bit more skepticism about crowdfunding and pre-orders than there was say five years ago so it's worth thinking about,false,multimodal_tvsum_style
+u36A-YTxiOw,1116.0,1118.0,annotator_1,,podcast,,and pre-orders than there was say five years ago so it's worth thinking about whether it's the right thing for your,false,multimodal_tvsum_style
+u36A-YTxiOw,1118.0,1120.0,annotator_1,,podcast,,years ago so it's worth thinking about whether it's the right thing for your company but YC Alum ship Bob wrote a,false,multimodal_tvsum_style
+u36A-YTxiOw,1120.0,1122.0,annotator_1,,podcast,,whether it's the right thing for your company but YC Alum ship Bob wrote a,false,multimodal_tvsum_style
+u36A-YTxiOw,1122.0,1124.0,annotator_1,,podcast,,company but YC Alum ship Bob wrote a guide on pre-orders that talks about why,false,multimodal_tvsum_style
+u36A-YTxiOw,1124.0,1126.0,annotator_1,,podcast,,company but YC Alum ship Bob wrote a guide on pre-orders that talks about why you should or should not consider doing,false,multimodal_tvsum_style
+u36A-YTxiOw,1126.0,1128.0,annotator_1,,podcast,,guide on pre-orders that talks about why you should or should not consider doing this type of campaign there are a lot o,false,multimodal_tvsum_style
+u36A-YTxiOw,1128.0,1130.0,annotator_1,,podcast,,you should or should not consider doing this type of campaign there are a lot of great you know sort of guides that walk,false,multimodal_tvsum_style
+u36A-YTxiOw,1130.0,1132.0,annotator_1,,podcast,,this type of campaign there are a lot of great you know sort of guides that walk you through uh pre-order campaigns and,false,multimodal_tvsum_style
+u36A-YTxiOw,1132.0,1134.0,annotator_1,,podcast,,great you know sort of guides that walk you through uh pre-order campaigns and how to prepare for them online as well al,false,multimodal_tvsum_style
+u36A-YTxiOw,1134.0,1136.0,annotator_1,,podcast,,how to prepare for them online as well all right and then there's the waitlist launch we talked about a really good,false,multimodal_tvsum_style
+u36A-YTxiOw,1136.0,1138.0,annotator_1,,podcast,,all right and then there's the waitlist launch we talked about a really good example of that with Robin Hood earlier,false,multimodal_tvsum_style
+u36A-YTxiOw,1138.0,1140.0,annotator_1,,podcast,,launch we talked about a really good example of that with Robin Hood earlier and there are other examples like,false,multimodal_tvsum_style
+u36A-YTxiOw,1140.0,1142.0,annotator_1,,podcast,,example of that with Robin Hood earlier and there are other examples like superhuman uh that launch successfully,false,multimodal_tvsum_style
+u36A-YTxiOw,1142.0,1144.0,annotator_1,,podcast,,and there are other examples like superhuman uh that launch successfully with a wait list one note on the,false,multimodal_tvsum_style
+u36A-YTxiOw,1144.0,1146.0,annotator_1,,podcast,,superhuman uh that launch successfully with a wait list one note on the,false,multimodal_tvsum_style
+u36A-YTxiOw,1146.0,1148.0,annotator_1,,podcast,,superhuman uh that launch successfully with a wait list one note on the waitlist launch the longer you wait to,false,multimodal_tvsum_style
+u36A-YTxiOw,1148.0,1150.0,annotator_1,,podcast,,with a wait list one note on the waitlist launch the longer you wait to launch an actual product and the longer,false,multimodal_tvsum_style
+u36A-YTxiOw,1150.0,1152.0,annotator_1,,podcast,,waitlist launch the longer you wait to launch an actual product and the longer you wait to onboard people the harder it,false,multimodal_tvsum_style
+u36A-YTxiOw,1152.0,1154.0,annotator_1,,podcast,,launch an actual product and the longer you wait to onboard people the harder it,false,multimodal_tvsum_style
+u36A-YTxiOw,1154.0,1156.0,annotator_1,,podcast,,launch an actual product and the longer you wait to onboard people the harder it is to convert people from your waitlist,false,multimodal_tvsum_style
+u36A-YTxiOw,1156.0,1158.0,annotator_1,,podcast,,you wait to onboard people the harder it is to convert people from your waitlist so please don't sit on your waitlist fo,false,multimodal_tvsum_style
+u36A-YTxiOw,1158.0,1160.0,annotator_1,,podcast,,is to convert people from your waitlist so please don't sit on your waitlist for too long okay so why are we not going t,false,multimodal_tvsum_style
+u36A-YTxiOw,1160.0,1162.0,annotator_1,,podcast,,so please don't sit on your waitlist for too long okay so why are we not going to,false,multimodal_tvsum_style
+u36A-YTxiOw,1162.0,1164.0,annotator_1,,podcast,,so please don't sit on your waitlist for too long okay so why are we not going to talk about press it all in this talk,false,multimodal_tvsum_style
+u36A-YTxiOw,1164.0,1166.0,annotator_1,,podcast,,too long okay so why are we not going to talk about press it all in this talk these days if you were an early stage,false,multimodal_tvsum_style
+u36A-YTxiOw,1166.0,1168.0,annotator_1,,podcast,,talk about press it all in this talk these days if you were an early stage company that hasn't raised you know say,false,multimodal_tvsum_style
+u36A-YTxiOw,1168.0,1170.0,annotator_1,,podcast,,these days if you were an early stage company that hasn't raised you know say a million or more it's going to be,false,multimodal_tvsum_style
+u36A-YTxiOw,1170.0,1172.0,annotator_1,,podcast,,company that hasn't raised you know say a million or more it's going to be,false,multimodal_tvsum_style
+u36A-YTxiOw,1172.0,1174.0,annotator_1,,podcast,,company that hasn't raised you know say a million or more it's going to be incredibly hard to land press stories at,false,multimodal_tvsum_style
+u36A-YTxiOw,1174.0,1176.0,annotator_1,,podcast,,a million or more it's going to be incredibly hard to land press stories at least in the U.S but that said even if,false,multimodal_tvsum_style
+u36A-YTxiOw,1176.0,1178.0,annotator_1,,podcast,,incredibly hard to land press stories at least in the U.S but that said even if you do land press it's not a silver,false,multimodal_tvsum_style
+u36A-YTxiOw,1178.0,1180.0,annotator_1,,podcast,,least in the U.S but that said even if you do land press it's not a silver bullet it's not a scalable way to get,false,multimodal_tvsum_style
+u36A-YTxiOw,1180.0,1182.0,annotator_1,,podcast,,you do land press it's not a silver bullet it's not a scalable way to get,false,multimodal_tvsum_style
+u36A-YTxiOw,1182.0,1184.0,annotator_1,,podcast,,you do land press it's not a silver bullet it's not a scalable way to get users it might help you get in front of,false,multimodal_tvsum_style
+u36A-YTxiOw,1184.0,1186.0,annotator_1,,podcast,,bullet it's not a scalable way to get users it might help you get in front of some early users and investors but as,false,multimodal_tvsum_style
+u36A-YTxiOw,1186.0,1188.0,annotator_1,,podcast,,users it might help you get in front of some early users and investors but as you see press can't be counted on for,false,multimodal_tvsum_style
+u36A-YTxiOw,1188.0,1190.0,annotator_1,,podcast,,some early users and investors but as you see press can't be counted on for sustained growth it will not get you to,false,multimodal_tvsum_style
+u36A-YTxiOw,1190.0,1192.0,annotator_1,,podcast,,you see press can't be counted on for sustained growth it will not get you to,false,multimodal_tvsum_style
+u36A-YTxiOw,1192.0,1194.0,annotator_1,,podcast,,you see press can't be counted on for sustained growth it will not get you to product Market fit so don't spend a ton,false,multimodal_tvsum_style
+u36A-YTxiOw,1194.0,1196.0,annotator_1,,podcast,,sustained growth it will not get you to product Market fit so don't spend a ton of your time during startup School,false,multimodal_tvsum_style
+u36A-YTxiOw,1196.0,1198.0,annotator_1,,podcast,,product Market fit so don't spend a ton of your time during startup School worrying about getting press what I do,false,multimodal_tvsum_style
+u36A-YTxiOw,1198.0,1200.0,annotator_1,,podcast,,of your time during startup School worrying about getting press what I do want to emphasize is while you're in,false,multimodal_tvsum_style
+u36A-YTxiOw,1200.0,1202.0,annotator_1,,podcast,,worrying about getting press what I do want to emphasize is while you're in startup school you should start to build,false,multimodal_tvsum_style
+u36A-YTxiOw,1202.0,1204.0,annotator_1,,podcast,,want to emphasize is while you're in startup school you should start to build your own Community it can be as simple,false,multimodal_tvsum_style
+u36A-YTxiOw,1204.0,1206.0,annotator_1,,podcast,,startup school you should start to build your own Community it can be as simple,false,multimodal_tvsum_style
+u36A-YTxiOw,1206.0,1208.0,annotator_1,,podcast,,your own Community it can be as simple as starting an email list of your supporters and figuring out you know how,false,multimodal_tvsum_style
+u36A-YTxiOw,1208.0,1210.0,annotator_1,,podcast,,as starting an email list of your supporters and figuring out you know how,false,multimodal_tvsum_style
+u36A-YTxiOw,1210.0,1212.0,annotator_1,,podcast,,as starting an email list of your supporters and figuring out you know how to engage them on an ongoing basis and,false,multimodal_tvsum_style
+u36A-YTxiOw,1212.0,1214.0,annotator_1,,podcast,,supporters and figuring out you know how to engage them on an ongoing basis and you may be surprised who reads the email,false,multimodal_tvsum_style
+u36A-YTxiOw,1214.0,1216.0,annotator_1,,podcast,,to engage them on an ongoing basis and you may be surprised who reads the email and shows up to help and in the future,false,multimodal_tvsum_style
+u36A-YTxiOw,1216.0,1218.0,annotator_1,,podcast,,you may be surprised who reads the email and shows up to help and in the future every time you release a new product or,false,multimodal_tvsum_style
+u36A-YTxiOw,1218.0,1220.0,annotator_1,,podcast,,and shows up to help and in the future every time you release a new product or a new feature you can use all these,false,multimodal_tvsum_style
+u36A-YTxiOw,1220.0,1222.0,annotator_1,,podcast,,every time you release a new product or a new feature you can use all these,false,multimodal_tvsum_style
+u36A-YTxiOw,1222.0,1224.0,annotator_1,,podcast,,every time you release a new product or a new feature you can use all these channels to launch on them again,false,multimodal_tvsum_style
+u36A-YTxiOw,1224.0,1226.0,annotator_1,,podcast,,a new feature you can use all these channels to launch on them again stripe has always been great at engaging,false,multimodal_tvsum_style
+u36A-YTxiOw,1226.0,1228.0,annotator_1,,podcast,,channels to launch on them again stripe has always been great at engaging with the community each time a new,false,multimodal_tvsum_style
+u36A-YTxiOw,1228.0,1230.0,annotator_1,,podcast,,stripe has always been great at engaging with the community each time a new product launches they blog about it,false,multimodal_tvsum_style
+u36A-YTxiOw,1230.0,1232.0,annotator_1,,podcast,,with the community each time a new product launches they blog about it,false,multimodal_tvsum_style
+u36A-YTxiOw,1232.0,1234.0,annotator_1,,podcast,,with the community each time a new product launches they blog about it they've the founders get on Hacker News,false,multimodal_tvsum_style
+u36A-YTxiOw,1234.0,1236.0,annotator_1,,podcast,,product launches they blog about it they've the founders get on Hacker News and they talk to the hn community they,false,multimodal_tvsum_style
+u36A-YTxiOw,1236.0,1238.0,annotator_1,,podcast,,they've the founders get on Hacker News and they talk to the hn community they spread the word on social media they,false,multimodal_tvsum_style
+u36A-YTxiOw,1238.0,1240.0,annotator_1,,podcast,,and they talk to the hn community they spread the word on social media they pitch press stripe they are Masters at launc,false,multimodal_tvsum_style
+u36A-YTxiOw,1240.0,1242.0,annotator_1,,podcast,,pitch press stripe they are Masters at launching,false,multimodal_tvsum_style
+u36A-YTxiOw,1242.0,1244.0,annotator_1,,podcast,,pitch press stripe they are Masters at launching again and again so to sum up I want you,false,multimodal_tvsum_style
+u36A-YTxiOw,1244.0,1246.0,annotator_1,,podcast,,stripe they are Masters at launching again and again so to sum up I want you to stop thinking about launching as just,false,multimodal_tvsum_style
+u36A-YTxiOw,1246.0,1248.0,annotator_1,,podcast,,again and again so to sum up I want you to stop thinking about launching as just,false,multimodal_tvsum_style
+u36A-YTxiOw,1248.0,1250.0,annotator_1,,podcast,,again and again so to sum up I want you to stop thinking about launching as just one moment in time if you launch and no,false,multimodal_tvsum_style
+u36A-YTxiOw,1250.0,1252.0,annotator_1,,podcast,,to stop thinking about launching as just one moment in time if you launch and no one pays attention do what Airbnb did,false,multimodal_tvsum_style
+u36A-YTxiOw,1252.0,1254.0,annotator_1,,podcast,,one moment in time if you launch and no one pays attention do what Airbnb did,false,multimodal_tvsum_style
+u36A-YTxiOw,1254.0,1256.0,annotator_1,,podcast,,one moment in time if you launch and no one pays attention do what Airbnb did and launch again and again,false,multimodal_tvsum_style
+u36A-YTxiOw,1256.0,1258.0,annotator_1,,podcast,,one pays attention do what Airbnb did and launch again and again,false,multimodal_tvsum_style
+u36A-YTxiOw,1258.0,1260.0,annotator_1,,podcast,,one pays attention do what Airbnb did and launch again and again [Music],false,multimodal_tvsum_style
+u36A-YTxiOw,1260.0,1262.0,annotator_1,,podcast,,[Music],false,multimodal_tvsum_style
+u36A-YTxiOw,1262.0,1264.0,annotator_1,,podcast,,[Music],false,multimodal_tvsum_style
+u36A-YTxiOw,1264.0,1266.0,annotator_1,,podcast,,[Music],false,multimodal_tvsum_style

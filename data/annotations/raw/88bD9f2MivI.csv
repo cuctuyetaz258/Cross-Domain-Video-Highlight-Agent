@@ -1,0 +1,451 @@
+﻿video_id,start_sec,end_sec,annotator_id,importance,domain,reason_tag,transcript_hint,needs_review,label_protocol
+88bD9f2MivI,0.0,2.0,annotator_1,,standup,,- What I do when I travel is I try to speak to people,false,multimodal_tvsum_style
+88bD9f2MivI,2.0,4.0,annotator_1,,standup,,- What I do when I travel is I try to speak to people in their accent and see if they can catch me out.,false,multimodal_tvsum_style
+88bD9f2MivI,4.0,6.0,annotator_1,,standup,,in their accent and see if they can catch me out.,false,multimodal_tvsum_style
+88bD9f2MivI,6.0,8.0,annotator_1,,standup,,in their accent and see if they can catch me out. That's one of my favorite games. Like I'd walk into a store in Edinbur,false,multimodal_tvsum_style
+88bD9f2MivI,8.0,10.0,annotator_1,,standup,,"Like I'd walk into a store in Edinburgh and I'd just be like, ""Good afternoon.",false,multimodal_tvsum_style
+88bD9f2MivI,10.0,12.0,annotator_1,,standup,,"and I'd just be like, ""Good afternoon.",false,multimodal_tvsum_style
+88bD9f2MivI,12.0,14.0,annotator_1,,standup,,"I would like to buy a pair of shoes.""",false,multimodal_tvsum_style
+88bD9f2MivI,14.0,16.0,annotator_1,,standup,,"I would like to buy a pair of shoes.""",false,multimodal_tvsum_style
+88bD9f2MivI,16.0,18.0,annotator_1,,standup,,"They'd be like, ""Where are you from?""",false,multimodal_tvsum_style
+88bD9f2MivI,18.0,20.0,annotator_1,,standup,,"They'd be like, ""Where are you from?""",false,multimodal_tvsum_style
+88bD9f2MivI,20.0,22.0,annotator_1,,standup,,"""I'm from Scotland.""",false,multimodal_tvsum_style
+88bD9f2MivI,22.0,24.0,annotator_1,,standup,,"""I'm from Scotland.""",false,multimodal_tvsum_style
+88bD9f2MivI,24.0,26.0,annotator_1,,standup,,"""Aye, what part?""",false,multimodal_tvsum_style
+88bD9f2MivI,26.0,28.0,annotator_1,,standup,,"""Johannesburg.""",false,multimodal_tvsum_style
+88bD9f2MivI,28.0,30.0,annotator_1,,standup,,"""Johannesburg."" (audience laughs)",false,multimodal_tvsum_style
+88bD9f2MivI,30.0,32.0,annotator_1,,standup,,(audience laughs),false,multimodal_tvsum_style
+88bD9f2MivI,32.0,34.0,annotator_1,,standup,,"When people say they don't like immigrants,",false,multimodal_tvsum_style
+88bD9f2MivI,34.0,36.0,annotator_1,,standup,,"When people say they don't like immigrants, most of the time, they're not referring to immigrants",false,multimodal_tvsum_style
+88bD9f2MivI,36.0,38.0,annotator_1,,standup,,"most of the time, they're not referring to immigrants who look and sound like them. They're talking about immigrants who",false,multimodal_tvsum_style
+88bD9f2MivI,38.0,40.0,annotator_1,,standup,,"They're talking about immigrants who speak differently,",false,multimodal_tvsum_style
+88bD9f2MivI,40.0,42.0,annotator_1,,standup,,"They're talking about immigrants who speak differently, who look different, you know?",false,multimodal_tvsum_style
+88bD9f2MivI,42.0,44.0,annotator_1,,standup,,"who look different, you know? Cause an accent comes with a connotation.",false,multimodal_tvsum_style
+88bD9f2MivI,44.0,46.0,annotator_1,,standup,,Cause an accent comes with a connotation. You think you know if someone is smart or stupid because of their accent.,false,multimodal_tvsum_style
+88bD9f2MivI,46.0,48.0,annotator_1,,standup,,because of their accent. And yet the truth is an accent,false,multimodal_tvsum_style
+88bD9f2MivI,48.0,50.0,annotator_1,,standup,,"And yet the truth is an accent is not a measure of intelligence, it's just someone speaking your language",false,multimodal_tvsum_style
+88bD9f2MivI,50.0,52.0,annotator_1,,standup,,it's just someone speaking your language with the rules of theirs.,false,multimodal_tvsum_style
+88bD9f2MivI,52.0,54.0,annotator_1,,standup,,"with the rules of theirs. Accents have connotations, we cannot deny it.",false,multimodal_tvsum_style
+88bD9f2MivI,54.0,56.0,annotator_1,,standup,,"Accents have connotations, we cannot deny it. Look at the French.",false,multimodal_tvsum_style
+88bD9f2MivI,56.0,58.0,annotator_1,,standup,,Look at the French. We all believe that the French are romantic.,false,multimodal_tvsum_style
+88bD9f2MivI,58.0,60.0,annotator_1,,standup,,We all believe that the French are romantic. Why?,false,multimodal_tvsum_style
+88bD9f2MivI,60.0,62.0,annotator_1,,standup,,Why? Because of their accent.,false,multimodal_tvsum_style
+88bD9f2MivI,62.0,64.0,annotator_1,,standup,,"Because of their accent. They've got that thing. ""Duu...""",false,multimodal_tvsum_style
+88bD9f2MivI,64.0,66.0,annotator_1,,standup,,"""Duu...""",false,multimodal_tvsum_style
+88bD9f2MivI,66.0,68.0,annotator_1,,standup,,"""Duu...""",false,multimodal_tvsum_style
+88bD9f2MivI,68.0,70.0,annotator_1,,standup,,"""I was thinking that maybe we could duu...",false,multimodal_tvsum_style
+88bD9f2MivI,70.0,72.0,annotator_1,,standup,,"""I was thinking that maybe we could duu...",false,multimodal_tvsum_style
+88bD9f2MivI,72.0,74.0,annotator_1,,standup,,"""I was thinking that maybe we could duu... How you say, afterwards, maybe we could try to uhh...""",false,multimodal_tvsum_style
+88bD9f2MivI,74.0,76.0,annotator_1,,standup,,"How you say, afterwards, maybe we could try to uhh...""",false,multimodal_tvsum_style
+88bD9f2MivI,76.0,78.0,annotator_1,,standup,,"How you say, afterwards, maybe we could try to uhh...""",false,multimodal_tvsum_style
+88bD9f2MivI,78.0,80.0,annotator_1,,standup,,"""Oh my God, he's so sexy, oh my God.""",false,multimodal_tvsum_style
+88bD9f2MivI,80.0,82.0,annotator_1,,standup,,"""Oh my God, he's so sexy, oh my God.""",false,multimodal_tvsum_style
+88bD9f2MivI,82.0,84.0,annotator_1,,standup,,"""Oh my God, he's so sexy, oh my God.""",false,multimodal_tvsum_style
+88bD9f2MivI,84.0,86.0,annotator_1,,standup,,Accents determine how we see people.,false,multimodal_tvsum_style
+88bD9f2MivI,86.0,88.0,annotator_1,,standup,,Accents determine how we see people. Same thing happens with the Russians.,false,multimodal_tvsum_style
+88bD9f2MivI,88.0,90.0,annotator_1,,standup,,"Same thing happens with the Russians. The Russians, the most feared people on the planet.",false,multimodal_tvsum_style
+88bD9f2MivI,90.0,92.0,annotator_1,,standup,,"The Russians, the most feared people on the planet.",false,multimodal_tvsum_style
+88bD9f2MivI,92.0,94.0,annotator_1,,standup,,"The Russians, the most feared people on the planet. Why? Because of how they speak.",false,multimodal_tvsum_style
+88bD9f2MivI,94.0,96.0,annotator_1,,standup,,"Because of how they speak. I don't care who you are, you cannot deny",false,multimodal_tvsum_style
+88bD9f2MivI,96.0,98.0,annotator_1,,standup,,"I don't care who you are, you cannot deny that when a Russian speaks, you are not comfortable.",false,multimodal_tvsum_style
+88bD9f2MivI,98.0,100.0,annotator_1,,standup,,"that when a Russian speaks, you are not comfortable. (audience laughs)",false,multimodal_tvsum_style
+88bD9f2MivI,100.0,102.0,annotator_1,,standup,,(audience laughs),false,multimodal_tvsum_style
+88bD9f2MivI,102.0,104.0,annotator_1,,standup,,(audience laughs),false,multimodal_tvsum_style
+88bD9f2MivI,104.0,106.0,annotator_1,,standup,,Soon as they open their mouth.,false,multimodal_tvsum_style
+88bD9f2MivI,106.0,108.0,annotator_1,,standup,,"Soon as they open their mouth. ""Yeah, go to kill you, break you.""",false,multimodal_tvsum_style
+88bD9f2MivI,108.0,110.0,annotator_1,,standup,,"""Yeah, go to kill you, break you.""",false,multimodal_tvsum_style
+88bD9f2MivI,110.0,112.0,annotator_1,,standup,,"""And destroy your family.""",false,multimodal_tvsum_style
+88bD9f2MivI,112.0,114.0,annotator_1,,standup,,"""And destroy your family.""",false,multimodal_tvsum_style
+88bD9f2MivI,114.0,116.0,annotator_1,,standup,,"Even if they say nice things,",false,multimodal_tvsum_style
+88bD9f2MivI,116.0,118.0,annotator_1,,standup,,"Even if they say nice things, it still sounds menacing and dangerous.",false,multimodal_tvsum_style
+88bD9f2MivI,118.0,120.0,annotator_1,,standup,,"it still sounds menacing and dangerous. ""Yeah, fluff it up with some teddy bears.",false,multimodal_tvsum_style
+88bD9f2MivI,120.0,122.0,annotator_1,,standup,,"""Yeah, fluff it up with some teddy bears.",false,multimodal_tvsum_style
+88bD9f2MivI,122.0,124.0,annotator_1,,standup,,"Happy Valentine's Day.""",false,multimodal_tvsum_style
+88bD9f2MivI,124.0,126.0,annotator_1,,standup,,"Happy Valentine's Day.""",false,multimodal_tvsum_style
+88bD9f2MivI,126.0,128.0,annotator_1,,standup,,It sounds like a threat.,false,multimodal_tvsum_style
+88bD9f2MivI,128.0,130.0,annotator_1,,standup,,It sounds like a threat.,false,multimodal_tvsum_style
+88bD9f2MivI,130.0,132.0,annotator_1,,standup,,"You must remember, I come from an African country",false,multimodal_tvsum_style
+88bD9f2MivI,132.0,134.0,annotator_1,,standup,,"You must remember, I come from an African country",false,multimodal_tvsum_style
+88bD9f2MivI,134.0,136.0,annotator_1,,standup,,"You must remember, I come from an African country and all over Africa, we have traffic lights,",false,multimodal_tvsum_style
+88bD9f2MivI,136.0,138.0,annotator_1,,standup,,"and all over Africa, we have traffic lights, but we don't use them.",false,multimodal_tvsum_style
+88bD9f2MivI,138.0,140.0,annotator_1,,standup,,but we don't use them.,false,multimodal_tvsum_style
+88bD9f2MivI,140.0,142.0,annotator_1,,standup,,It's less of a command and more of a suggestion.,false,multimodal_tvsum_style
+88bD9f2MivI,142.0,144.0,annotator_1,,standup,,It's less of a command and more of a suggestion.,false,multimodal_tvsum_style
+88bD9f2MivI,144.0,146.0,annotator_1,,standup,,"It's less of a command and more of a suggestion. It's not ""stop!"" It's ""stop?""",false,multimodal_tvsum_style
+88bD9f2MivI,146.0,148.0,annotator_1,,standup,,"It's not ""stop!"" It's ""stop?""",false,multimodal_tvsum_style
+88bD9f2MivI,148.0,150.0,annotator_1,,standup,,"It's almost like an African traveled the world,",false,multimodal_tvsum_style
+88bD9f2MivI,150.0,152.0,annotator_1,,standup,,"It's almost like an African traveled the world, saw that other people had traffic lights",false,multimodal_tvsum_style
+88bD9f2MivI,152.0,154.0,annotator_1,,standup,,"saw that other people had traffic lights and then just brought them back,",false,multimodal_tvsum_style
+88bD9f2MivI,154.0,156.0,annotator_1,,standup,,"and then just brought them back, but didn't know what they were for. Like, the guy was just like, ""Guys, guys, guys,",false,multimodal_tvsum_style
+88bD9f2MivI,156.0,158.0,annotator_1,,standup,,"Like, the guy was just like, ""Guys, guys, guys, we need to get traffic lights, ah?""",false,multimodal_tvsum_style
+88bD9f2MivI,158.0,160.0,annotator_1,,standup,,"we need to get traffic lights, ah?""",false,multimodal_tvsum_style
+88bD9f2MivI,160.0,162.0,annotator_1,,standup,,"we need to get traffic lights, ah?"" And people were like, ""What for?"" ""It's for the intersection, it adds atmosphere.""",false,multimodal_tvsum_style
+88bD9f2MivI,162.0,164.0,annotator_1,,standup,,"""It's for the intersection, it adds atmosphere.""",false,multimodal_tvsum_style
+88bD9f2MivI,164.0,166.0,annotator_1,,standup,,"""It's for the intersection, it adds atmosphere."" (audience laughs)",false,multimodal_tvsum_style
+88bD9f2MivI,166.0,168.0,annotator_1,,standup,,"(audience laughs) I went to Bali on vacation, yeah.",false,multimodal_tvsum_style
+88bD9f2MivI,168.0,170.0,annotator_1,,standup,,"I went to Bali on vacation, yeah. Out in Indonesia. If you've never been,",false,multimodal_tvsum_style
+88bD9f2MivI,170.0,172.0,annotator_1,,standup,,"Out in Indonesia. If you've never been, make a plan and get out there, it's an amazing place.",false,multimodal_tvsum_style
+88bD9f2MivI,172.0,174.0,annotator_1,,standup,,"make a plan and get out there, it's an amazing place.",false,multimodal_tvsum_style
+88bD9f2MivI,174.0,176.0,annotator_1,,standup,,"make a plan and get out there, it's an amazing place. I went out with some of my friends,",false,multimodal_tvsum_style
+88bD9f2MivI,176.0,178.0,annotator_1,,standup,,"I went out with some of my friends, learned a few things about myself as a person. Most important thing I learned is som",false,multimodal_tvsum_style
+88bD9f2MivI,178.0,180.0,annotator_1,,standup,,Most important thing I learned is somebody needs to invent,false,multimodal_tvsum_style
+88bD9f2MivI,180.0,182.0,annotator_1,,standup,,"Most important thing I learned is somebody needs to invent a TripAdvisor specifically for Black people, right?",false,multimodal_tvsum_style
+88bD9f2MivI,182.0,184.0,annotator_1,,standup,,"a TripAdvisor specifically for Black people, right?",false,multimodal_tvsum_style
+88bD9f2MivI,184.0,186.0,annotator_1,,standup,,"a TripAdvisor specifically for Black people, right? No, because just generally I find that",false,multimodal_tvsum_style
+88bD9f2MivI,186.0,188.0,annotator_1,,standup,,"No, because just generally I find that what white people wanna do on vacation,",false,multimodal_tvsum_style
+88bD9f2MivI,188.0,190.0,annotator_1,,standup,,"what white people wanna do on vacation, is what Black people are trying to escape.",false,multimodal_tvsum_style
+88bD9f2MivI,190.0,192.0,annotator_1,,standup,,is what Black people are trying to escape.,false,multimodal_tvsum_style
+88bD9f2MivI,192.0,194.0,annotator_1,,standup,,"And not in a bad way, it's just like,",false,multimodal_tvsum_style
+88bD9f2MivI,194.0,196.0,annotator_1,,standup,,"And not in a bad way, it's just like, we want different things out of life, you know? Like my white friends are always i",false,multimodal_tvsum_style
+88bD9f2MivI,196.0,198.0,annotator_1,,standup,,"Like my white friends are always inviting me camping, for instance, always.",false,multimodal_tvsum_style
+88bD9f2MivI,198.0,200.0,annotator_1,,standup,,"for instance, always. Like with enthusiasm, they will all be like, ""Trevor, you wanna go camping, dude?""",false,multimodal_tvsum_style
+88bD9f2MivI,200.0,202.0,annotator_1,,standup,,"""Trevor, you wanna go camping, dude?"" I'm like, ""Why?""",false,multimodal_tvsum_style
+88bD9f2MivI,202.0,204.0,annotator_1,,standup,,"I'm like, ""Why?""",false,multimodal_tvsum_style
+88bD9f2MivI,204.0,206.0,annotator_1,,standup,,"""Why?"" He's like, ""Dude, what do you mean why?",false,multimodal_tvsum_style
+88bD9f2MivI,206.0,208.0,annotator_1,,standup,,"He's like, ""Dude, what do you mean why? It's amazing, you're kidding me. it's like no water, no electricity, you know?",false,multimodal_tvsum_style
+88bD9f2MivI,208.0,210.0,annotator_1,,standup,,"it's like no water, no electricity, you know? It's just like us in the great outdoors.",false,multimodal_tvsum_style
+88bD9f2MivI,210.0,212.0,annotator_1,,standup,,"It's just like us in the great outdoors. You like, you gotta like take a dump in like in the hole,",false,multimodal_tvsum_style
+88bD9f2MivI,212.0,214.0,annotator_1,,standup,,"You like, you gotta like take a dump in like in the hole, in the floor or something, dude.""",false,multimodal_tvsum_style
+88bD9f2MivI,214.0,216.0,annotator_1,,standup,,"in the floor or something, dude."" ""I'm like, yeah, that was my life.",false,multimodal_tvsum_style
+88bD9f2MivI,216.0,218.0,annotator_1,,standup,,"""I'm like, yeah, that was my life.",false,multimodal_tvsum_style
+88bD9f2MivI,218.0,220.0,annotator_1,,standup,,"That was me growing up."" You know how hard I worked to never go camping again.",false,multimodal_tvsum_style
+88bD9f2MivI,220.0,222.0,annotator_1,,standup,,You know how hard I worked to never go camping again.,false,multimodal_tvsum_style
+88bD9f2MivI,222.0,224.0,annotator_1,,standup,,You know how hard I worked to never go camping again.,false,multimodal_tvsum_style
+88bD9f2MivI,224.0,226.0,annotator_1,,standup,,Every day. (audience cheers),false,multimodal_tvsum_style
+88bD9f2MivI,226.0,228.0,annotator_1,,standup,,(audience cheers) Every day.,false,multimodal_tvsum_style
+88bD9f2MivI,228.0,230.0,annotator_1,,standup,,"Every day. Every day I wake up in my bed and I'm like,",false,multimodal_tvsum_style
+88bD9f2MivI,230.0,232.0,annotator_1,,standup,,"Every day I wake up in my bed and I'm like, ""Thank God I'm not camping.""",false,multimodal_tvsum_style
+88bD9f2MivI,232.0,234.0,annotator_1,,standup,,"""Thank God I'm not camping.""",false,multimodal_tvsum_style
+88bD9f2MivI,234.0,236.0,annotator_1,,standup,,"If my family saw pictures of me camping,",false,multimodal_tvsum_style
+88bD9f2MivI,236.0,238.0,annotator_1,,standup,,"If my family saw pictures of me camping, they would be devastated.",false,multimodal_tvsum_style
+88bD9f2MivI,238.0,240.0,annotator_1,,standup,,"they would be devastated. My grandmother saw me out in the woods she'd be like,",false,multimodal_tvsum_style
+88bD9f2MivI,240.0,242.0,annotator_1,,standup,,"My grandmother saw me out in the woods she'd be like, ""Oh, what happened to Trevor?",false,multimodal_tvsum_style
+88bD9f2MivI,242.0,244.0,annotator_1,,standup,,"""Oh, what happened to Trevor?",false,multimodal_tvsum_style
+88bD9f2MivI,244.0,246.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+88bD9f2MivI,246.0,248.0,annotator_1,,standup,,I thought he was successful.,false,multimodal_tvsum_style
+88bD9f2MivI,248.0,250.0,annotator_1,,standup,,"I thought he was successful. Oh, it must be the crack (cries).""",false,multimodal_tvsum_style
+88bD9f2MivI,250.0,252.0,annotator_1,,standup,,"Oh, it must be the crack (cries).""",false,multimodal_tvsum_style
+88bD9f2MivI,252.0,254.0,annotator_1,,standup,,"Before we went I asked my friend, I was like,",false,multimodal_tvsum_style
+88bD9f2MivI,254.0,256.0,annotator_1,,standup,,"Before we went I asked my friend, I was like, ""Yo, Mitch, what are we gonna be doing?"" And he was like, ""Dude, don't ask",false,multimodal_tvsum_style
+88bD9f2MivI,256.0,258.0,annotator_1,,standup,,"And he was like, ""Dude, don't ask questions Trevor,",false,multimodal_tvsum_style
+88bD9f2MivI,258.0,260.0,annotator_1,,standup,,"And he was like, ""Dude, don't ask questions Trevor, it's just gonna be a great time.""",false,multimodal_tvsum_style
+88bD9f2MivI,260.0,262.0,annotator_1,,standup,,"it's just gonna be a great time."" I was like, ""Yeah, I wanna know what the great time",false,multimodal_tvsum_style
+88bD9f2MivI,262.0,264.0,annotator_1,,standup,,"I was like, ""Yeah, I wanna know what the great time is gonna be about."" He was like, ""Dude, don't ask questions.""",false,multimodal_tvsum_style
+88bD9f2MivI,264.0,266.0,annotator_1,,standup,,"He was like, ""Dude, don't ask questions.""",false,multimodal_tvsum_style
+88bD9f2MivI,266.0,268.0,annotator_1,,standup,,"He was like, ""Dude, don't ask questions."" I should have asked questions.",false,multimodal_tvsum_style
+88bD9f2MivI,268.0,270.0,annotator_1,,standup,,I should have asked questions.,false,multimodal_tvsum_style
+88bD9f2MivI,270.0,272.0,annotator_1,,standup,,"Cause we had fun. But the trip, like there were a few things that were weird",false,multimodal_tvsum_style
+88bD9f2MivI,272.0,274.0,annotator_1,,standup,,"But the trip, like there were a few things that were weird that I wouldn't necessarily do on my own.",false,multimodal_tvsum_style
+88bD9f2MivI,274.0,276.0,annotator_1,,standup,,"that I wouldn't necessarily do on my own. For instance, on the third day of the trip, right.",false,multimodal_tvsum_style
+88bD9f2MivI,276.0,278.0,annotator_1,,standup,,"For instance, on the third day of the trip, right. We had what was planned, was billed in our itinerary",false,multimodal_tvsum_style
+88bD9f2MivI,278.0,280.0,annotator_1,,standup,,"We had what was planned, was billed in our itinerary",false,multimodal_tvsum_style
+88bD9f2MivI,280.0,282.0,annotator_1,,standup,,"We had what was planned, was billed in our itinerary as an authentic Balinese experience, right?",false,multimodal_tvsum_style
+88bD9f2MivI,282.0,284.0,annotator_1,,standup,,"as an authentic Balinese experience, right?",false,multimodal_tvsum_style
+88bD9f2MivI,284.0,286.0,annotator_1,,standup,,"as an authentic Balinese experience, right? That's what they call it, an authentic Balinese experience.",false,multimodal_tvsum_style
+88bD9f2MivI,286.0,288.0,annotator_1,,standup,,"That's what they call it, an authentic Balinese experience. And what they did was they woke us up at 5:00 AM,",false,multimodal_tvsum_style
+88bD9f2MivI,288.0,290.0,annotator_1,,standup,,"And what they did was they woke us up at 5:00 AM, put us in a little bus and we drove for like three hours",false,multimodal_tvsum_style
+88bD9f2MivI,290.0,292.0,annotator_1,,standup,,put us in a little bus and we drove for like three hours,false,multimodal_tvsum_style
+88bD9f2MivI,292.0,294.0,annotator_1,,standup,,"put us in a little bus and we drove for like three hours and we got there, get off the bus, we're like",false,multimodal_tvsum_style
+88bD9f2MivI,294.0,296.0,annotator_1,,standup,,"and we got there, get off the bus, we're like in the middle of it, it's like a remote village and the little tour guide ",false,multimodal_tvsum_style
+88bD9f2MivI,296.0,298.0,annotator_1,,standup,,"and the little tour guide really happy, way too happy",false,multimodal_tvsum_style
+88bD9f2MivI,298.0,300.0,annotator_1,,standup,,"and the little tour guide really happy, way too happy for that time. And he's just like, ""Welcome, everybody,",false,multimodal_tvsum_style
+88bD9f2MivI,300.0,302.0,annotator_1,,standup,,"And he's just like, ""Welcome, everybody, are you ready for a good time?""",false,multimodal_tvsum_style
+88bD9f2MivI,302.0,304.0,annotator_1,,standup,,"are you ready for a good time?"" And I'm like, ""Yay.""",false,multimodal_tvsum_style
+88bD9f2MivI,304.0,306.0,annotator_1,,standup,,"And I'm like, ""Yay."" And so he's like, ""My name is Dang Basan.",false,multimodal_tvsum_style
+88bD9f2MivI,306.0,308.0,annotator_1,,standup,,"And so he's like, ""My name is Dang Basan. And I'm going to be your guide.",false,multimodal_tvsum_style
+88bD9f2MivI,308.0,310.0,annotator_1,,standup,,"And I'm going to be your guide. Today, you will have an authentic Balinese experience.",false,multimodal_tvsum_style
+88bD9f2MivI,310.0,312.0,annotator_1,,standup,,"Today, you will have an authentic Balinese experience. So exciting, follow me.""",false,multimodal_tvsum_style
+88bD9f2MivI,312.0,314.0,annotator_1,,standup,,"So exciting, follow me."" And so we follow him and he walks up to a little door",false,multimodal_tvsum_style
+88bD9f2MivI,314.0,316.0,annotator_1,,standup,,"And so we follow him and he walks up to a little door and I'm like, ""Oh, okay, this is gonna be like a temple",false,multimodal_tvsum_style
+88bD9f2MivI,316.0,318.0,annotator_1,,standup,,"and I'm like, ""Oh, okay, this is gonna be like a temple or a cave or something.",false,multimodal_tvsum_style
+88bD9f2MivI,318.0,320.0,annotator_1,,standup,,"or a cave or something. And he's like, ""Welcome ladies and gentlemen to the real Bali.""",false,multimodal_tvsum_style
+88bD9f2MivI,320.0,322.0,annotator_1,,standup,,"""Welcome ladies and gentlemen to the real Bali.""",false,multimodal_tvsum_style
+88bD9f2MivI,322.0,324.0,annotator_1,,standup,,"""Welcome ladies and gentlemen to the real Bali."" And he opens the door into somebody's house.",false,multimodal_tvsum_style
+88bD9f2MivI,324.0,326.0,annotator_1,,standup,,And he opens the door into somebody's house.,false,multimodal_tvsum_style
+88bD9f2MivI,326.0,328.0,annotator_1,,standup,,"This is not a museum house, this is just a house.",false,multimodal_tvsum_style
+88bD9f2MivI,328.0,330.0,annotator_1,,standup,,"This is not a museum house, this is just a house. Like someone lives there every single day.",false,multimodal_tvsum_style
+88bD9f2MivI,330.0,332.0,annotator_1,,standup,,"Like someone lives there every single day. He opens the door and he's like,",false,multimodal_tvsum_style
+88bD9f2MivI,332.0,334.0,annotator_1,,standup,,"He opens the door and he's like, ""This is the home of someone in Bali.",false,multimodal_tvsum_style
+88bD9f2MivI,334.0,336.0,annotator_1,,standup,,"""This is the home of someone in Bali.",false,multimodal_tvsum_style
+88bD9f2MivI,336.0,338.0,annotator_1,,standup,,"He eats here, he sleeps here.""",false,multimodal_tvsum_style
+88bD9f2MivI,338.0,340.0,annotator_1,,standup,,"He eats here, he sleeps here."" I'm like, ""Does he know we're here?""",false,multimodal_tvsum_style
+88bD9f2MivI,340.0,342.0,annotator_1,,standup,,"I'm like, ""Does he know we're here?"" (audience laughs)",false,multimodal_tvsum_style
+88bD9f2MivI,342.0,344.0,annotator_1,,standup,,(audience laughs) Because like we didn't knock.,false,multimodal_tvsum_style
+88bD9f2MivI,344.0,346.0,annotator_1,,standup,,Because like we didn't knock. Nobody answered the door. For all I know we're breaking and entering right now.,false,multimodal_tvsum_style
+88bD9f2MivI,346.0,348.0,annotator_1,,standup,,For all I know we're breaking and entering right now. We're in some weird Balinese gang. I don't know how this works.,false,multimodal_tvsum_style
+88bD9f2MivI,348.0,350.0,annotator_1,,standup,,"I don't know how this works. And as I'm about to ask the question, he turns",false,multimodal_tvsum_style
+88bD9f2MivI,350.0,352.0,annotator_1,,standup,,"And as I'm about to ask the question, he turns and he's like, ""Over here, you can see the owner",false,multimodal_tvsum_style
+88bD9f2MivI,352.0,354.0,annotator_1,,standup,,"and he's like, ""Over here, you can see the owner",false,multimodal_tvsum_style
+88bD9f2MivI,354.0,356.0,annotator_1,,standup,,"and he's like, ""Over here, you can see the owner of the house, he's in the corner.""",false,multimodal_tvsum_style
+88bD9f2MivI,356.0,358.0,annotator_1,,standup,,"of the house, he's in the corner."" And we turn and there's a man, the whole time. He was just sitting there, frozen stif",false,multimodal_tvsum_style
+88bD9f2MivI,358.0,360.0,annotator_1,,standup,,"He was just sitting there, frozen stiff.",false,multimodal_tvsum_style
+88bD9f2MivI,360.0,362.0,annotator_1,,standup,,"He was just sitting there, frozen stiff. And now I'm like, ""Is this guy part of this?",false,multimodal_tvsum_style
+88bD9f2MivI,362.0,364.0,annotator_1,,standup,,"And now I'm like, ""Is this guy part of this? I don't know if we should be doing this",false,multimodal_tvsum_style
+88bD9f2MivI,364.0,366.0,annotator_1,,standup,,"I don't know if we should be doing this or should not be doing this.""",false,multimodal_tvsum_style
+88bD9f2MivI,366.0,368.0,annotator_1,,standup,,"or should not be doing this."" And Dang Basan turns to him, he starts speaking to him in Balinese.",false,multimodal_tvsum_style
+88bD9f2MivI,368.0,370.0,annotator_1,,standup,,"he starts speaking to him in Balinese. And he's like, (mimics Balinese)",false,multimodal_tvsum_style
+88bD9f2MivI,370.0,372.0,annotator_1,,standup,,"And he's like, (mimics Balinese) He's like, ""Okay, you can touch anything.""",false,multimodal_tvsum_style
+88bD9f2MivI,372.0,374.0,annotator_1,,standup,,"He's like, ""Okay, you can touch anything.""",false,multimodal_tvsum_style
+88bD9f2MivI,374.0,376.0,annotator_1,,standup,,"And so I'm like, ""Oh no, I don't think we should-""",false,multimodal_tvsum_style
+88bD9f2MivI,376.0,378.0,annotator_1,,standup,,"And so I'm like, ""Oh no, I don't think we should-"" Before I can even finish the people in our tour group",false,multimodal_tvsum_style
+88bD9f2MivI,378.0,380.0,annotator_1,,standup,,"Before I can even finish the people in our tour group were like, ""Yeah, touch it all.",false,multimodal_tvsum_style
+88bD9f2MivI,380.0,382.0,annotator_1,,standup,,"were like, ""Yeah, touch it all. Oh my God, touch it all.",false,multimodal_tvsum_style
+88bD9f2MivI,382.0,384.0,annotator_1,,standup,,"Oh my God, touch it all.",false,multimodal_tvsum_style
+88bD9f2MivI,384.0,386.0,annotator_1,,standup,,"Oh my God, touch it all. Oh my God. Does he sleep here?",false,multimodal_tvsum_style
+88bD9f2MivI,386.0,388.0,annotator_1,,standup,,"Does he sleep here? Oh wow, is this where he eats?",false,multimodal_tvsum_style
+88bD9f2MivI,388.0,390.0,annotator_1,,standup,,"Oh wow, is this where he eats? Oh my God, I can never do this.",false,multimodal_tvsum_style
+88bD9f2MivI,390.0,392.0,annotator_1,,standup,,"Oh my God, I can never do this.",false,multimodal_tvsum_style
+88bD9f2MivI,392.0,394.0,annotator_1,,standup,,"Oh my God. Excuse me, thank you so much for having us.",false,multimodal_tvsum_style
+88bD9f2MivI,394.0,396.0,annotator_1,,standup,,"Excuse me, thank you so much for having us.",false,multimodal_tvsum_style
+88bD9f2MivI,396.0,398.0,annotator_1,,standup,,"Excuse me, thank you so much for having us. Oh my God, I appreciate my life so much more right now.",false,multimodal_tvsum_style
+88bD9f2MivI,398.0,400.0,annotator_1,,standup,,"Oh my God, I appreciate my life so much more right now.",false,multimodal_tvsum_style
+88bD9f2MivI,400.0,402.0,annotator_1,,standup,,"Oh my God, I appreciate my life so much more right now. Thank you so much, this is horrible.",false,multimodal_tvsum_style
+88bD9f2MivI,402.0,404.0,annotator_1,,standup,,"Thank you so much, this is horrible. Can we take a selfie?",false,multimodal_tvsum_style
+88bD9f2MivI,404.0,406.0,annotator_1,,standup,,"Can we take a selfie? Thank you, are you on Instagram?",false,multimodal_tvsum_style
+88bD9f2MivI,406.0,408.0,annotator_1,,standup,,"Thank you, are you on Instagram? I'll just put hashtag the man, thank you.",false,multimodal_tvsum_style
+88bD9f2MivI,408.0,410.0,annotator_1,,standup,,"I'll just put hashtag the man, thank you. Oh my God.""",false,multimodal_tvsum_style
+88bD9f2MivI,410.0,412.0,annotator_1,,standup,,"Oh my God."" This is like something culturally, I'm not supposed to be doing.",false,multimodal_tvsum_style
+88bD9f2MivI,412.0,414.0,annotator_1,,standup,,"I'm not supposed to be doing. As an African person, I should not be in somebody's house,",false,multimodal_tvsum_style
+88bD9f2MivI,414.0,416.0,annotator_1,,standup,,"As an African person, I should not be in somebody's house, rummaging through their life.",false,multimodal_tvsum_style
+88bD9f2MivI,416.0,418.0,annotator_1,,standup,,rummaging through their life. So I'm standing in the corner really uncomfortable.,false,multimodal_tvsum_style
+88bD9f2MivI,418.0,420.0,annotator_1,,standup,,"So I'm standing in the corner really uncomfortable. And the owner of the house, he's really accommodating,",false,multimodal_tvsum_style
+88bD9f2MivI,420.0,422.0,annotator_1,,standup,,"And the owner of the house, he's really accommodating,",false,multimodal_tvsum_style
+88bD9f2MivI,422.0,424.0,annotator_1,,standup,,"And the owner of the house, he's really accommodating, he's friendly. You know, he's like, ""Yes, thank you, enjoy, enjoy",false,multimodal_tvsum_style
+88bD9f2MivI,424.0,426.0,annotator_1,,standup,,"You know, he's like, ""Yes, thank you, enjoy, enjoy, thank you.""",false,multimodal_tvsum_style
+88bD9f2MivI,426.0,428.0,annotator_1,,standup,,"thank you."" And then he turns and he looks at me",false,multimodal_tvsum_style
+88bD9f2MivI,428.0,430.0,annotator_1,,standup,,"And then he turns and he looks at me and this was one of the most magical moments, right?",false,multimodal_tvsum_style
+88bD9f2MivI,430.0,432.0,annotator_1,,standup,,"and this was one of the most magical moments, right? Because he was smiling at everyone else,",false,multimodal_tvsum_style
+88bD9f2MivI,432.0,434.0,annotator_1,,standup,,"Because he was smiling at everyone else, and his face completely changed when he turned.",false,multimodal_tvsum_style
+88bD9f2MivI,434.0,436.0,annotator_1,,standup,,and his face completely changed when he turned.,false,multimodal_tvsum_style
+88bD9f2MivI,436.0,438.0,annotator_1,,standup,,"and his face completely changed when he turned. He was a little hospitable, he's like, ""Yes, thank you, thank you-""",false,multimodal_tvsum_style
+88bD9f2MivI,438.0,440.0,annotator_1,,standup,,"""Yes, thank you, thank you-""",false,multimodal_tvsum_style
+88bD9f2MivI,440.0,442.0,annotator_1,,standup,,(audience laughs),false,multimodal_tvsum_style
+88bD9f2MivI,442.0,444.0,annotator_1,,standup,,"(audience laughs) And with his eyes,",false,multimodal_tvsum_style
+88bD9f2MivI,444.0,446.0,annotator_1,,standup,,"And with his eyes,",false,multimodal_tvsum_style
+88bD9f2MivI,446.0,448.0,annotator_1,,standup,,"And with his eyes, he proceeded to have the most in-depth conversation with me",false,multimodal_tvsum_style
+88bD9f2MivI,448.0,450.0,annotator_1,,standup,,he proceeded to have the most in-depth conversation with me that I've ever had. And it's not like the eyes conversation ,false,multimodal_tvsum_style
+88bD9f2MivI,450.0,452.0,annotator_1,,standup,,And it's not like the eyes conversation was new to me. Like you can have an eyes conversation with anyone,false,multimodal_tvsum_style
+88bD9f2MivI,452.0,454.0,annotator_1,,standup,,"Like you can have an eyes conversation with anyone you have a connection with, you know what I'm talking about?",false,multimodal_tvsum_style
+88bD9f2MivI,454.0,456.0,annotator_1,,standup,,"you have a connection with, you know what I'm talking about? Like, it could be somebody of the same race",false,multimodal_tvsum_style
+88bD9f2MivI,456.0,458.0,annotator_1,,standup,,"Like, it could be somebody of the same race when you're in public. It could be like a husband and wife,",false,multimodal_tvsum_style
+88bD9f2MivI,458.0,460.0,annotator_1,,standup,,"It could be like a husband and wife, like wives are really good at having eyes conversations.",false,multimodal_tvsum_style
+88bD9f2MivI,460.0,462.0,annotator_1,,standup,,like wives are really good at having eyes conversations. Like they'll like shit on you hard.,false,multimodal_tvsum_style
+88bD9f2MivI,462.0,464.0,annotator_1,,standup,,Like they'll like shit on you hard. Like you'll be in public together,false,multimodal_tvsum_style
+88bD9f2MivI,464.0,466.0,annotator_1,,standup,,"Like you'll be in public together and then you'll say something off, you'll be like,",false,multimodal_tvsum_style
+88bD9f2MivI,466.0,468.0,annotator_1,,standup,,"and then you'll say something off, you'll be like, ""If only she did that."" And she'd be like, ""Oh hell no,",false,multimodal_tvsum_style
+88bD9f2MivI,468.0,470.0,annotator_1,,standup,,"And she'd be like, ""Oh hell no, I cannot believe you said.""",false,multimodal_tvsum_style
+88bD9f2MivI,470.0,472.0,annotator_1,,standup,,"I cannot believe you said."" But it's just eyes, ""I cannot believe you said all of that.",false,multimodal_tvsum_style
+88bD9f2MivI,472.0,474.0,annotator_1,,standup,,"""I cannot believe you said all of that. Wait until the next, oh, you wanna air our dirty laundry",false,multimodal_tvsum_style
+88bD9f2MivI,474.0,476.0,annotator_1,,standup,,"Wait until the next, oh, you wanna air our dirty laundry out in public. Oh, you're gonna see how this is gonna end up.",false,multimodal_tvsum_style
+88bD9f2MivI,476.0,478.0,annotator_1,,standup,,"Oh, you're gonna see how this is gonna end up. Oh, you say this and enjoy this moment right now.",false,multimodal_tvsum_style
+88bD9f2MivI,478.0,480.0,annotator_1,,standup,,"Oh, you say this and enjoy this moment right now. Cause you know, it's over."" And you're like, ""Yeah, I shouldn't have d",false,multimodal_tvsum_style
+88bD9f2MivI,480.0,482.0,annotator_1,,standup,,"And you're like, ""Yeah, I shouldn't have done that."" All with eyes, right.",false,multimodal_tvsum_style
+88bD9f2MivI,482.0,484.0,annotator_1,,standup,,"All with eyes, right. That's what he did to me.",false,multimodal_tvsum_style
+88bD9f2MivI,484.0,486.0,annotator_1,,standup,,That's what he did to me. Cause one minute he's smiling at everybody.,false,multimodal_tvsum_style
+88bD9f2MivI,486.0,488.0,annotator_1,,standup,,"Cause one minute he's smiling at everybody. And then he turns and he looks at me and just with his eyes,",false,multimodal_tvsum_style
+88bD9f2MivI,488.0,490.0,annotator_1,,standup,,"And then he turns and he looks at me and just with his eyes, he was like, ""What are you doing here?""",false,multimodal_tvsum_style
+88bD9f2MivI,490.0,492.0,annotator_1,,standup,,"he was like, ""What are you doing here?""",false,multimodal_tvsum_style
+88bD9f2MivI,492.0,494.0,annotator_1,,standup,,"And so with my eyes, I was like, ""Hey man, I'm sorry.",false,multimodal_tvsum_style
+88bD9f2MivI,494.0,496.0,annotator_1,,standup,,"And so with my eyes, I was like, ""Hey man, I'm sorry. I didn't know this was your house.",false,multimodal_tvsum_style
+88bD9f2MivI,496.0,498.0,annotator_1,,standup,,"I didn't know this was your house. They said it was an authentic experience, that's why I came.""",false,multimodal_tvsum_style
+88bD9f2MivI,498.0,500.0,annotator_1,,standup,,"that's why I came."" He's like, ""Yeah, authentic for white people.",false,multimodal_tvsum_style
+88bD9f2MivI,500.0,502.0,annotator_1,,standup,,"He's like, ""Yeah, authentic for white people.",false,multimodal_tvsum_style
+88bD9f2MivI,502.0,504.0,annotator_1,,standup,,"You got your own poor, go back to where you came from.""",false,multimodal_tvsum_style
+88bD9f2MivI,504.0,506.0,annotator_1,,standup,,"You got your own poor, go back to where you came from."" I said yeah, ""I shouldn't be here, man.",false,multimodal_tvsum_style
+88bD9f2MivI,506.0,508.0,annotator_1,,standup,,"I said yeah, ""I shouldn't be here, man. I'm sorry, man, I'm sorry.""",false,multimodal_tvsum_style
+88bD9f2MivI,508.0,510.0,annotator_1,,standup,,"If you expanded your view,",false,multimodal_tvsum_style
+88bD9f2MivI,510.0,512.0,annotator_1,,standup,,"If you expanded your view, you realized that the rise of nationalism is taking place",false,multimodal_tvsum_style
+88bD9f2MivI,512.0,514.0,annotator_1,,standup,,"you realized that the rise of nationalism is taking place all over the world in Austria, in Australia, in England.",false,multimodal_tvsum_style
+88bD9f2MivI,514.0,516.0,annotator_1,,standup,,"all over the world in Austria, in Australia, in England.",false,multimodal_tvsum_style
+88bD9f2MivI,516.0,518.0,annotator_1,,standup,,"all over the world in Austria, in Australia, in England.",false,multimodal_tvsum_style
+88bD9f2MivI,518.0,520.0,annotator_1,,standup,,"all over the world in Austria, in Australia, in England. That was what Brexit was all about, right?",false,multimodal_tvsum_style
+88bD9f2MivI,520.0,522.0,annotator_1,,standup,,"That was what Brexit was all about, right? They made it seem like it was about the economy,",false,multimodal_tvsum_style
+88bD9f2MivI,522.0,524.0,annotator_1,,standup,,"They made it seem like it was about the economy, but it wasn't. The truth was it was fundamentally people",false,multimodal_tvsum_style
+88bD9f2MivI,524.0,526.0,annotator_1,,standup,,The truth was it was fundamentally people who wanted their country back.,false,multimodal_tvsum_style
+88bD9f2MivI,526.0,528.0,annotator_1,,standup,,who wanted their country back.,false,multimodal_tvsum_style
+88bD9f2MivI,528.0,530.0,annotator_1,,standup,,"who wanted their country back. It never went anywhere, but they still wanted it back.",false,multimodal_tvsum_style
+88bD9f2MivI,530.0,532.0,annotator_1,,standup,,"It never went anywhere, but they still wanted it back.",false,multimodal_tvsum_style
+88bD9f2MivI,532.0,534.0,annotator_1,,standup,,"It never went anywhere, but they still wanted it back. I saw people on the news talking to the BBC.",false,multimodal_tvsum_style
+88bD9f2MivI,534.0,536.0,annotator_1,,standup,,I saw people on the news talking to the BBC.,false,multimodal_tvsum_style
+88bD9f2MivI,536.0,538.0,annotator_1,,standup,,"I saw people on the news talking to the BBC. ""That's why I'm voting for Brexit, that's why I'm voting for Brexit, right?",false,multimodal_tvsum_style
+88bD9f2MivI,538.0,540.0,annotator_1,,standup,,"that's why I'm voting for Brexit, right? Because this bloody country is going to the dogs, right?",false,multimodal_tvsum_style
+88bD9f2MivI,540.0,542.0,annotator_1,,standup,,"Because this bloody country is going to the dogs, right?",false,multimodal_tvsum_style
+88bD9f2MivI,542.0,544.0,annotator_1,,standup,,"Because this bloody country is going to the dogs, right? This bloody country and I want Britain back.",false,multimodal_tvsum_style
+88bD9f2MivI,544.0,546.0,annotator_1,,standup,,"This bloody country and I want Britain back. That's why we voting for Brexit,",false,multimodal_tvsum_style
+88bD9f2MivI,546.0,548.0,annotator_1,,standup,,"That's why we voting for Brexit, because we want Britain back."" From who?",false,multimodal_tvsum_style
+88bD9f2MivI,548.0,550.0,annotator_1,,standup,,From who?,false,multimodal_tvsum_style
+88bD9f2MivI,550.0,552.0,annotator_1,,standup,,From who? Britain is like 95% white.,false,multimodal_tvsum_style
+88bD9f2MivI,552.0,554.0,annotator_1,,standup,,Britain is like 95% white. Who do you want it back from?,false,multimodal_tvsum_style
+88bD9f2MivI,554.0,556.0,annotator_1,,standup,,Who do you want it back from?,false,multimodal_tvsum_style
+88bD9f2MivI,556.0,558.0,annotator_1,,standup,,"People say the weirdest things, the craziest things.",false,multimodal_tvsum_style
+88bD9f2MivI,558.0,560.0,annotator_1,,standup,,"People say the weirdest things, the craziest things.",false,multimodal_tvsum_style
+88bD9f2MivI,560.0,562.0,annotator_1,,standup,,"People say the weirdest things, the craziest things. ""These bloody immigrants, they come over here.",false,multimodal_tvsum_style
+88bD9f2MivI,562.0,564.0,annotator_1,,standup,,"""These bloody immigrants, they come over here. They up to no good, right?",false,multimodal_tvsum_style
+88bD9f2MivI,564.0,566.0,annotator_1,,standup,,"They up to no good, right? I hate these bloody immigrants, they need to go back to where they came from.""",false,multimodal_tvsum_style
+88bD9f2MivI,566.0,568.0,annotator_1,,standup,,"they need to go back to where they came from."" ""But why do you hate them so much?""",false,multimodal_tvsum_style
+88bD9f2MivI,568.0,570.0,annotator_1,,standup,,"""But why do you hate them so much?"" ""I'll tell you why I hate them, tell you why, right.",false,multimodal_tvsum_style
+88bD9f2MivI,570.0,572.0,annotator_1,,standup,,"""I'll tell you why I hate them, tell you why, right. Because they're not even trying to be British, that's why.",false,multimodal_tvsum_style
+88bD9f2MivI,572.0,574.0,annotator_1,,standup,,"that's why. They don't even try to be British, right?",false,multimodal_tvsum_style
+88bD9f2MivI,574.0,576.0,annotator_1,,standup,,"They don't even try to be British, right? They come here, they bring their own bloody culture.",false,multimodal_tvsum_style
+88bD9f2MivI,576.0,578.0,annotator_1,,standup,,"They come here, they bring their own bloody culture. They bring their own food,",false,multimodal_tvsum_style
+88bD9f2MivI,578.0,580.0,annotator_1,,standup,,"They bring their own food, spit their own bloody languages, try to take over the whole bloody place.",false,multimodal_tvsum_style
+88bD9f2MivI,580.0,582.0,annotator_1,,standup,,try to take over the whole bloody place.,false,multimodal_tvsum_style
+88bD9f2MivI,582.0,584.0,annotator_1,,standup,,"""Well, that sounds British to me, I mean.""",false,multimodal_tvsum_style
+88bD9f2MivI,584.0,586.0,annotator_1,,standup,,"""Well, that sounds British to me, I mean."" (audience cheers)",false,multimodal_tvsum_style
+88bD9f2MivI,586.0,588.0,annotator_1,,standup,,(audience cheers),false,multimodal_tvsum_style
+88bD9f2MivI,588.0,590.0,annotator_1,,standup,,(audience cheers),false,multimodal_tvsum_style
+88bD9f2MivI,590.0,592.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+88bD9f2MivI,592.0,594.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+88bD9f2MivI,594.0,596.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+88bD9f2MivI,596.0,598.0,annotator_1,,standup,,"If there's one country, if there's one nation in the world",false,multimodal_tvsum_style
+88bD9f2MivI,598.0,600.0,annotator_1,,standup,,"If there's one country, if there's one nation in the world",false,multimodal_tvsum_style
+88bD9f2MivI,600.0,602.0,annotator_1,,standup,,"If there's one country, if there's one nation in the world",false,multimodal_tvsum_style
+88bD9f2MivI,602.0,604.0,annotator_1,,standup,,"If there's one country, if there's one nation in the world that has no rights to complain about immigration,",false,multimodal_tvsum_style
+88bD9f2MivI,604.0,606.0,annotator_1,,standup,,"that has no rights to complain about immigration,",false,multimodal_tvsum_style
+88bD9f2MivI,606.0,608.0,annotator_1,,standup,,"that has no rights to complain about immigration,",false,multimodal_tvsum_style
+88bD9f2MivI,608.0,610.0,annotator_1,,standup,,it's Great Britain.,false,multimodal_tvsum_style
+88bD9f2MivI,610.0,612.0,annotator_1,,standup,,"I also understand that for me,",false,multimodal_tvsum_style
+88bD9f2MivI,612.0,614.0,annotator_1,,standup,,"I also understand that for me, it is a little bit different, you know,",false,multimodal_tvsum_style
+88bD9f2MivI,614.0,616.0,annotator_1,,standup,,"it is a little bit different, you know, I have a privilege in that I come from a country",false,multimodal_tvsum_style
+88bD9f2MivI,616.0,618.0,annotator_1,,standup,,I have a privilege in that I come from a country where the word n***a was never used to oppress anybody.,false,multimodal_tvsum_style
+88bD9f2MivI,618.0,620.0,annotator_1,,standup,,where the word n***a was never used to oppress anybody.,false,multimodal_tvsum_style
+88bD9f2MivI,620.0,622.0,annotator_1,,standup,,"I mean, we had another word 'cause we have the best racism, come on now.",false,multimodal_tvsum_style
+88bD9f2MivI,622.0,624.0,annotator_1,,standup,,"'cause we have the best racism, come on now. But not that word.",false,multimodal_tvsum_style
+88bD9f2MivI,624.0,626.0,annotator_1,,standup,,But not that word. The word we had was the word kaffir or kafir.,false,multimodal_tvsum_style
+88bD9f2MivI,626.0,628.0,annotator_1,,standup,,The word we had was the word kaffir or kafir.,false,multimodal_tvsum_style
+88bD9f2MivI,628.0,630.0,annotator_1,,standup,,"The word we had was the word kaffir or kafir. So we had another word, same thing. It's crazy to me as well sometimes.",false,multimodal_tvsum_style
+88bD9f2MivI,630.0,632.0,annotator_1,,standup,,"It's crazy to me as well sometimes. You know, same racism, different word.",false,multimodal_tvsum_style
+88bD9f2MivI,632.0,634.0,annotator_1,,standup,,"You know, same racism, different word. And here it means nothing, right?",false,multimodal_tvsum_style
+88bD9f2MivI,634.0,636.0,annotator_1,,standup,,"And here it means nothing, right? Kafir, kafir, nothing.",false,multimodal_tvsum_style
+88bD9f2MivI,636.0,638.0,annotator_1,,standup,,"Kafir, kafir, nothing. Some people be like, ""Is that like a probiotic?",false,multimodal_tvsum_style
+88bD9f2MivI,638.0,640.0,annotator_1,,standup,,"Some people be like, ""Is that like a probiotic? Is that what that is?""",false,multimodal_tvsum_style
+88bD9f2MivI,640.0,642.0,annotator_1,,standup,,"Is that what that is?"" Yeah, probiotic of my pain.",false,multimodal_tvsum_style
+88bD9f2MivI,642.0,644.0,annotator_1,,standup,,"Yeah, probiotic of my pain.",false,multimodal_tvsum_style
+88bD9f2MivI,644.0,646.0,annotator_1,,standup,,'Cause we don't have that in our supermarkets,false,multimodal_tvsum_style
+88bD9f2MivI,646.0,648.0,annotator_1,,standup,,'Cause we don't have that in our supermarkets for obvious reasons.,false,multimodal_tvsum_style
+88bD9f2MivI,648.0,650.0,annotator_1,,standup,,"No one warned me in America, I walked down the dairy aisle.",false,multimodal_tvsum_style
+88bD9f2MivI,650.0,652.0,annotator_1,,standup,,"No one warned me in America, I walked down the dairy aisle. I was like, ""Oh, yogurt, ice cream (screams),",false,multimodal_tvsum_style
+88bD9f2MivI,652.0,654.0,annotator_1,,standup,,"I was like, ""Oh, yogurt, ice cream (screams),",false,multimodal_tvsum_style
+88bD9f2MivI,654.0,656.0,annotator_1,,standup,,"this lactose is intolerant.""",false,multimodal_tvsum_style
+88bD9f2MivI,656.0,658.0,annotator_1,,standup,,"this lactose is intolerant.""",false,multimodal_tvsum_style
+88bD9f2MivI,658.0,660.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+88bD9f2MivI,660.0,662.0,annotator_1,,standup,,"I still can't believe the things Donald Trump says,",false,multimodal_tvsum_style
+88bD9f2MivI,662.0,664.0,annotator_1,,standup,,"I still can't believe the things Donald Trump says, he's such a, for me, Donald Trump is an emotional paradox,",false,multimodal_tvsum_style
+88bD9f2MivI,664.0,666.0,annotator_1,,standup,,"he's such a, for me, Donald Trump is an emotional paradox,",false,multimodal_tvsum_style
+88bD9f2MivI,666.0,668.0,annotator_1,,standup,,"he's such a, for me, Donald Trump is an emotional paradox, I'm not gonna lie.",false,multimodal_tvsum_style
+88bD9f2MivI,668.0,670.0,annotator_1,,standup,,"Logically I can process him. Emotionally, I struggle.",false,multimodal_tvsum_style
+88bD9f2MivI,670.0,672.0,annotator_1,,standup,,"Logically I can process him. Emotionally, I struggle.",false,multimodal_tvsum_style
+88bD9f2MivI,672.0,674.0,annotator_1,,standup,,"Logically I can process him. Emotionally, I struggle. On the one hand I will admit, I wake up many days,",false,multimodal_tvsum_style
+88bD9f2MivI,674.0,676.0,annotator_1,,standup,,"On the one hand I will admit, I wake up many days, terrified at the notion that he's president",false,multimodal_tvsum_style
+88bD9f2MivI,676.0,678.0,annotator_1,,standup,,terrified at the notion that he's president of the most powerful nation in the world.,false,multimodal_tvsum_style
+88bD9f2MivI,678.0,680.0,annotator_1,,standup,,"of the most powerful nation in the world. But I also must admit,",false,multimodal_tvsum_style
+88bD9f2MivI,680.0,682.0,annotator_1,,standup,,"But I also must admit, I wake up many days knowing he's gonna make me laugh.",false,multimodal_tvsum_style
+88bD9f2MivI,682.0,684.0,annotator_1,,standup,,I wake up many days knowing he's gonna make me laugh.,false,multimodal_tvsum_style
+88bD9f2MivI,684.0,686.0,annotator_1,,standup,,"I wake up many days knowing he's gonna make me laugh. Yeah, there's terror and there's joy",false,multimodal_tvsum_style
+88bD9f2MivI,686.0,688.0,annotator_1,,standup,,"Yeah, there's terror and there's joy and I don't know how to feel.",false,multimodal_tvsum_style
+88bD9f2MivI,688.0,690.0,annotator_1,,standup,,and I don't know how to feel. You know what it feels like sometimes?,false,multimodal_tvsum_style
+88bD9f2MivI,690.0,692.0,annotator_1,,standup,,You know what it feels like sometimes? It feels like there's a giant asteroid,false,multimodal_tvsum_style
+88bD9f2MivI,692.0,694.0,annotator_1,,standup,,"It feels like there's a giant asteroid headed towards the earth, but it's shaped like a penis.",false,multimodal_tvsum_style
+88bD9f2MivI,694.0,696.0,annotator_1,,standup,,"headed towards the earth, but it's shaped like a penis.",false,multimodal_tvsum_style
+88bD9f2MivI,696.0,698.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+88bD9f2MivI,698.0,700.0,annotator_1,,standup,,"Like I think I'm gonna die, but I know I'm gonna laugh.",false,multimodal_tvsum_style
+88bD9f2MivI,700.0,702.0,annotator_1,,standup,,"Like I think I'm gonna die, but I know I'm gonna laugh.",false,multimodal_tvsum_style
+88bD9f2MivI,702.0,704.0,annotator_1,,standup,,"Like I think I'm gonna die, but I know I'm gonna laugh.",false,multimodal_tvsum_style
+88bD9f2MivI,704.0,706.0,annotator_1,,standup,,I have the pleasure of meeting president Obama,false,multimodal_tvsum_style
+88bD9f2MivI,706.0,708.0,annotator_1,,standup,,I have the pleasure of meeting president Obama while he was still in office.,false,multimodal_tvsum_style
+88bD9f2MivI,708.0,710.0,annotator_1,,standup,,while he was still in office. Probably one of the craziest experiences I've ever had in my life.,false,multimodal_tvsum_style
+88bD9f2MivI,710.0,712.0,annotator_1,,standup,,I've ever had in my life. (audience cheers),false,multimodal_tvsum_style
+88bD9f2MivI,712.0,714.0,annotator_1,,standup,,"(audience cheers) Came out of nowhere, came out of nowhere.",false,multimodal_tvsum_style
+88bD9f2MivI,714.0,716.0,annotator_1,,standup,,"Came out of nowhere, came out of nowhere.",false,multimodal_tvsum_style
+88bD9f2MivI,716.0,718.0,annotator_1,,standup,,"Came out of nowhere, came out of nowhere. I was at The Daily Show, I was in my office and I got a phone call from the ad",false,multimodal_tvsum_style
+88bD9f2MivI,718.0,720.0,annotator_1,,standup,,"and I got a phone call from the administration. And someone on the other end was like,",false,multimodal_tvsum_style
+88bD9f2MivI,720.0,722.0,annotator_1,,standup,,"And someone on the other end was like, ""Hi, Trevor, would you like to interview",false,multimodal_tvsum_style
+88bD9f2MivI,722.0,724.0,annotator_1,,standup,,"""Hi, Trevor, would you like to interview the President of the United States in the White House?",false,multimodal_tvsum_style
+88bD9f2MivI,724.0,726.0,annotator_1,,standup,,"the President of the United States in the White House? And I was like, ""Ah, do you ask stupid questions?""",false,multimodal_tvsum_style
+88bD9f2MivI,726.0,728.0,annotator_1,,standup,,"And I was like, ""Ah, do you ask stupid questions?""",false,multimodal_tvsum_style
+88bD9f2MivI,728.0,730.0,annotator_1,,standup,,"And I was like, ""Ah, do you ask stupid questions?"" It's like, of course I wanna meet the President of the United States.",false,multimodal_tvsum_style
+88bD9f2MivI,730.0,732.0,annotator_1,,standup,,"of the United States. Are you serious? And the day finally came, went to DC with my TV crew",false,multimodal_tvsum_style
+88bD9f2MivI,732.0,734.0,annotator_1,,standup,,"And the day finally came, went to DC with my TV crew",false,multimodal_tvsum_style
+88bD9f2MivI,734.0,736.0,annotator_1,,standup,,"And the day finally came, went to DC with my TV crew and they set us up in a room,",false,multimodal_tvsum_style
+88bD9f2MivI,736.0,738.0,annotator_1,,standup,,"and they set us up in a room, which is literally opposite the Oval Office.",false,multimodal_tvsum_style
+88bD9f2MivI,738.0,740.0,annotator_1,,standup,,which is literally opposite the Oval Office.,false,multimodal_tvsum_style
+88bD9f2MivI,740.0,742.0,annotator_1,,standup,,which is literally opposite the Oval Office. We put all our cameras in place.,false,multimodal_tvsum_style
+88bD9f2MivI,742.0,744.0,annotator_1,,standup,,We put all our cameras in place. And all we're doing now is waiting for the president,false,multimodal_tvsum_style
+88bD9f2MivI,744.0,746.0,annotator_1,,standup,,And all we're doing now is waiting for the president to arrive. So we're staring at the door with bated breath.,false,multimodal_tvsum_style
+88bD9f2MivI,746.0,748.0,annotator_1,,standup,,So we're staring at the door with bated breath. And the reason we're staring is because they don't give you,false,multimodal_tvsum_style
+88bD9f2MivI,748.0,750.0,annotator_1,,standup,,And the reason we're staring is because they don't give you an exact time of the president's arrival for his safety.,false,multimodal_tvsum_style
+88bD9f2MivI,750.0,752.0,annotator_1,,standup,,an exact time of the president's arrival for his safety.,false,multimodal_tvsum_style
+88bD9f2MivI,752.0,754.0,annotator_1,,standup,,"an exact time of the president's arrival for his safety. So they just give you a window, like the cable guy.",false,multimodal_tvsum_style
+88bD9f2MivI,754.0,756.0,annotator_1,,standup,,"So they just give you a window, like the cable guy.",false,multimodal_tvsum_style
+88bD9f2MivI,756.0,758.0,annotator_1,,standup,,"So we're all waiting there listening to every footstep,",false,multimodal_tvsum_style
+88bD9f2MivI,758.0,760.0,annotator_1,,standup,,"So we're all waiting there listening to every footstep,",false,multimodal_tvsum_style
+88bD9f2MivI,760.0,762.0,annotator_1,,standup,,"So we're all waiting there listening to every footstep, every moment.",false,multimodal_tvsum_style
+88bD9f2MivI,762.0,764.0,annotator_1,,standup,,"every moment. And then he just popped in behind us, scared the shit out of everybody.",false,multimodal_tvsum_style
+88bD9f2MivI,764.0,766.0,annotator_1,,standup,,"scared the shit out of everybody. 'Cause there's a secret door,",false,multimodal_tvsum_style
+88bD9f2MivI,766.0,768.0,annotator_1,,standup,,"'Cause there's a secret door, but they don't tell you, again, for safety, right?",false,multimodal_tvsum_style
+88bD9f2MivI,768.0,770.0,annotator_1,,standup,,"but they don't tell you, again, for safety, right? So we're staring at that door and all of a sudden he was like, ""Hello",false,multimodal_tvsum_style
+88bD9f2MivI,770.0,772.0,annotator_1,,standup,,"and all of a sudden he was like, ""Hello."" And I was like, ""Ahh! (screams)""",false,multimodal_tvsum_style
+88bD9f2MivI,772.0,774.0,annotator_1,,standup,,"And I was like, ""Ahh! (screams)"" But I had a great time in the interview with him.",false,multimodal_tvsum_style
+88bD9f2MivI,774.0,776.0,annotator_1,,standup,,But I had a great time in the interview with him.,false,multimodal_tvsum_style
+88bD9f2MivI,776.0,778.0,annotator_1,,standup,,"But I had a great time in the interview with him. He was really, really kind to everyone in the room.",false,multimodal_tvsum_style
+88bD9f2MivI,778.0,780.0,annotator_1,,standup,,"He was really, really kind to everyone in the room. And then we turned off the cameras and I promise you,",false,multimodal_tvsum_style
+88bD9f2MivI,780.0,782.0,annotator_1,,standup,,"And then we turned off the cameras and I promise you, he became even nicer.",false,multimodal_tvsum_style
+88bD9f2MivI,782.0,784.0,annotator_1,,standup,,"he became even nicer. We just had a conversation, I thought he was gonna leave. I mean, he's President of the United Sta",false,multimodal_tvsum_style
+88bD9f2MivI,784.0,786.0,annotator_1,,standup,,"I mean, he's President of the United States. You've gotta go do something.",false,multimodal_tvsum_style
+88bD9f2MivI,786.0,788.0,annotator_1,,standup,,"You've gotta go do something. And he just chilled for a bit, you know? And we spoke as human beings and it went really w",false,multimodal_tvsum_style
+88bD9f2MivI,788.0,790.0,annotator_1,,standup,,And we spoke as human beings and it went really well,false,multimodal_tvsum_style
+88bD9f2MivI,790.0,792.0,annotator_1,,standup,,"And we spoke as human beings and it went really well until he turned to me and he said,",false,multimodal_tvsum_style
+88bD9f2MivI,792.0,794.0,annotator_1,,standup,,"until he turned to me and he said, ""Trevor, you know, I actually, I got a show",false,multimodal_tvsum_style
+88bD9f2MivI,794.0,796.0,annotator_1,,standup,,"""Trevor, you know, I actually, I got a show",false,multimodal_tvsum_style
+88bD9f2MivI,796.0,798.0,annotator_1,,standup,,"""Trevor, you know, I actually, I got a show that I'm doing in a few weeks, got a little thing,",false,multimodal_tvsum_style
+88bD9f2MivI,798.0,800.0,annotator_1,,standup,,"that I'm doing in a few weeks, got a little thing, that I thought maybe you want to pop by and perform,",false,multimodal_tvsum_style
+88bD9f2MivI,800.0,802.0,annotator_1,,standup,,"that I thought maybe you want to pop by and perform, if you don't mind.""",false,multimodal_tvsum_style
+88bD9f2MivI,802.0,804.0,annotator_1,,standup,,"if you don't mind."" I said, ""Mr. President, I would be honored,",false,multimodal_tvsum_style
+88bD9f2MivI,804.0,806.0,annotator_1,,standup,,"I said, ""Mr. President, I would be honored, you just let me know when and where, what's the show gonna be for, sir?""",false,multimodal_tvsum_style
+88bD9f2MivI,806.0,808.0,annotator_1,,standup,,"what's the show gonna be for, sir?"" He said, ""Well, Trevor I'm doing a little thing for my aides",false,multimodal_tvsum_style
+88bD9f2MivI,808.0,810.0,annotator_1,,standup,,"He said, ""Well, Trevor I'm doing a little thing for my aides and I thought, maybe you'd want to be there.""",false,multimodal_tvsum_style
+88bD9f2MivI,810.0,812.0,annotator_1,,standup,,"and I thought, maybe you'd want to be there."" I said, ""I would love to, thank you...",false,multimodal_tvsum_style
+88bD9f2MivI,812.0,814.0,annotator_1,,standup,,"I said, ""I would love to, thank you... Um, I'm sorry, a show for what?""",false,multimodal_tvsum_style
+88bD9f2MivI,814.0,816.0,annotator_1,,standup,,"Um, I'm sorry, a show for what?"" He said, ""For my aides, Trevor.""",false,multimodal_tvsum_style
+88bD9f2MivI,816.0,818.0,annotator_1,,standup,,"He said, ""For my aides, Trevor.""",false,multimodal_tvsum_style
+88bD9f2MivI,818.0,820.0,annotator_1,,standup,,"I said, ""You have AIDS?""",false,multimodal_tvsum_style
+88bD9f2MivI,820.0,822.0,annotator_1,,standup,,"I said, ""You have AIDS?"" (audience laughs)",false,multimodal_tvsum_style
+88bD9f2MivI,822.0,824.0,annotator_1,,standup,,(audience laughs),false,multimodal_tvsum_style
+88bD9f2MivI,824.0,826.0,annotator_1,,standup,,(audience laughs),false,multimodal_tvsum_style
+88bD9f2MivI,826.0,828.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+88bD9f2MivI,828.0,830.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+88bD9f2MivI,830.0,832.0,annotator_1,,standup,,And then he explained what he meant,false,multimodal_tvsum_style
+88bD9f2MivI,832.0,834.0,annotator_1,,standup,,And then he explained what he meant,false,multimodal_tvsum_style
+88bD9f2MivI,834.0,836.0,annotator_1,,standup,,And then he explained what he meant,false,multimodal_tvsum_style
+88bD9f2MivI,836.0,838.0,annotator_1,,standup,,and I wanted the earth to swallow me whole,false,multimodal_tvsum_style
+88bD9f2MivI,838.0,840.0,annotator_1,,standup,,and I wanted the earth to swallow me whole,false,multimodal_tvsum_style
+88bD9f2MivI,840.0,842.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+88bD9f2MivI,842.0,844.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+88bD9f2MivI,844.0,846.0,annotator_1,,standup,,because I had just looked at the President,false,multimodal_tvsum_style
+88bD9f2MivI,846.0,848.0,annotator_1,,standup,,because I had just looked at the President of the United States and asked him if he had AIDS.,false,multimodal_tvsum_style
+88bD9f2MivI,848.0,850.0,annotator_1,,standup,,of the United States and asked him if he had AIDS.,false,multimodal_tvsum_style
+88bD9f2MivI,850.0,852.0,annotator_1,,standup,,of the United States and asked him if he had AIDS.,false,multimodal_tvsum_style
+88bD9f2MivI,852.0,854.0,annotator_1,,standup,,of the United States and asked him if he had AIDS.,false,multimodal_tvsum_style
+88bD9f2MivI,854.0,856.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+88bD9f2MivI,856.0,858.0,annotator_1,,standup,,"And you know what the worst thing is,",false,multimodal_tvsum_style
+88bD9f2MivI,858.0,860.0,annotator_1,,standup,,"And you know what the worst thing is, is that he was nice to me as well.",false,multimodal_tvsum_style
+88bD9f2MivI,860.0,862.0,annotator_1,,standup,,is that he was nice to me as well. 'Cause I said that and then he explained,false,multimodal_tvsum_style
+88bD9f2MivI,862.0,864.0,annotator_1,,standup,,"'Cause I said that and then he explained and I was like, ""Oh, I'm so sorry Mr. President,",false,multimodal_tvsum_style
+88bD9f2MivI,864.0,866.0,annotator_1,,standup,,"and I was like, ""Oh, I'm so sorry Mr. President, I didn't mean that. I don't even know why I thought,",false,multimodal_tvsum_style
+88bD9f2MivI,866.0,868.0,annotator_1,,standup,,"I don't even know why I thought, it's just like, you said aides and like the AIDS.""",false,multimodal_tvsum_style
+88bD9f2MivI,868.0,870.0,annotator_1,,standup,,"it's just like, you said aides and like the AIDS."" You know, because here's the thing in my defense, right.",false,multimodal_tvsum_style
+88bD9f2MivI,870.0,872.0,annotator_1,,standup,,"You know, because here's the thing in my defense, right. I get it now, he means aides,",false,multimodal_tvsum_style
+88bD9f2MivI,872.0,874.0,annotator_1,,standup,,"I get it now, he means aides, as in, the White House aides, the people who help the president, I get it now.",false,multimodal_tvsum_style
+88bD9f2MivI,874.0,876.0,annotator_1,,standup,,"the people who help the president, I get it now.",false,multimodal_tvsum_style
+88bD9f2MivI,876.0,878.0,annotator_1,,standup,,"the people who help the president, I get it now. But in my defense where I'm from, AIDS is some other shit",false,multimodal_tvsum_style
+88bD9f2MivI,878.0,880.0,annotator_1,,standup,,"But in my defense where I'm from, AIDS is some other shit that doesn't help anybody.",false,multimodal_tvsum_style
+88bD9f2MivI,880.0,882.0,annotator_1,,standup,,"that doesn't help anybody. No one in Africa is walking around like,",false,multimodal_tvsum_style
+88bD9f2MivI,882.0,884.0,annotator_1,,standup,,"No one in Africa is walking around like, ""Let me introduce you to my AIDS.""",false,multimodal_tvsum_style
+88bD9f2MivI,884.0,886.0,annotator_1,,standup,,"""Let me introduce you to my AIDS.""",false,multimodal_tvsum_style
+88bD9f2MivI,886.0,888.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+88bD9f2MivI,888.0,890.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+88bD9f2MivI,890.0,892.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+88bD9f2MivI,892.0,894.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+88bD9f2MivI,894.0,896.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+88bD9f2MivI,896.0,898.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+88bD9f2MivI,898.0,900.0,annotator_1,,standup,,,false,multimodal_tvsum_style

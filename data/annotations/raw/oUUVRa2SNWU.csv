@@ -1,0 +1,478 @@
+﻿video_id,start_sec,end_sec,annotator_id,importance,domain,reason_tag,transcript_hint,needs_review,label_protocol
+oUUVRa2SNWU,0.0,2.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,2.0,4.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,4.0,6.0,annotator_1,,standup,,"- Of course, every race has its racist, awful people.",false,multimodal_tvsum_style
+oUUVRa2SNWU,6.0,8.0,annotator_1,,standup,,"- Of course, every race has its racist, awful people.",false,multimodal_tvsum_style
+oUUVRa2SNWU,8.0,10.0,annotator_1,,standup,,"- Of course, every race has its racist, awful people. The problem is we keep comparing the worst 10% of one race",false,multimodal_tvsum_style
+oUUVRa2SNWU,10.0,12.0,annotator_1,,standup,,The problem is we keep comparing the worst 10% of one race,false,multimodal_tvsum_style
+oUUVRa2SNWU,12.0,14.0,annotator_1,,standup,,The problem is we keep comparing the worst 10% of one race,false,multimodal_tvsum_style
+oUUVRa2SNWU,14.0,16.0,annotator_1,,standup,,The problem is we keep comparing the worst 10% of one race,false,multimodal_tvsum_style
+oUUVRa2SNWU,16.0,18.0,annotator_1,,standup,,with like the best 10% of another race.,false,multimodal_tvsum_style
+oUUVRa2SNWU,18.0,20.0,annotator_1,,standup,,with like the best 10% of another race.,false,multimodal_tvsum_style
+oUUVRa2SNWU,20.0,22.0,annotator_1,,standup,,"Right, which is obviously a mistake.",false,multimodal_tvsum_style
+oUUVRa2SNWU,22.0,24.0,annotator_1,,standup,,"Right, which is obviously a mistake.",false,multimodal_tvsum_style
+oUUVRa2SNWU,24.0,26.0,annotator_1,,standup,,Because what we should be doing,false,multimodal_tvsum_style
+oUUVRa2SNWU,26.0,28.0,annotator_1,,standup,,Because what we should be doing is we should be getting the worst 10% of every race.,false,multimodal_tvsum_style
+oUUVRa2SNWU,28.0,30.0,annotator_1,,standup,,is we should be getting the worst 10% of every race.,false,multimodal_tvsum_style
+oUUVRa2SNWU,30.0,32.0,annotator_1,,standup,,is we should be getting the worst 10% of every race.,false,multimodal_tvsum_style
+oUUVRa2SNWU,32.0,34.0,annotator_1,,standup,,And comparing that.,false,multimodal_tvsum_style
+oUUVRa2SNWU,34.0,36.0,annotator_1,,standup,,And comparing that.,false,multimodal_tvsum_style
+oUUVRa2SNWU,36.0,38.0,annotator_1,,standup,,So we can figure out which is the worst race.,false,multimodal_tvsum_style
+oUUVRa2SNWU,38.0,40.0,annotator_1,,standup,,So we can figure out which is the worst race.,false,multimodal_tvsum_style
+oUUVRa2SNWU,40.0,42.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,42.0,44.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,44.0,46.0,annotator_1,,standup,,"In fact, you know what?",false,multimodal_tvsum_style
+oUUVRa2SNWU,46.0,48.0,annotator_1,,standup,,"In fact, you know what? Fuck it. Let's do it right now. Yeah, let's do it right now.",false,multimodal_tvsum_style
+oUUVRa2SNWU,48.0,50.0,annotator_1,,standup,,"Yeah, let's do it right now. Let's figure out which is the worst race.",false,multimodal_tvsum_style
+oUUVRa2SNWU,50.0,52.0,annotator_1,,standup,,"Let's figure out which is the worst race. Right now, okay?",false,multimodal_tvsum_style
+oUUVRa2SNWU,52.0,54.0,annotator_1,,standup,,"Right now, okay? You guys up for it? - Yeah. - All right, okay, cool.",false,multimodal_tvsum_style
+oUUVRa2SNWU,54.0,56.0,annotator_1,,standup,,"- Yeah. - All right, okay, cool. On three, I want you to shout out which race",false,multimodal_tvsum_style
+oUUVRa2SNWU,56.0,58.0,annotator_1,,standup,,"On three, I want you to shout out which race you think is the worst.",false,multimodal_tvsum_style
+oUUVRa2SNWU,58.0,60.0,annotator_1,,standup,,you think is the worst.,false,multimodal_tvsum_style
+oUUVRa2SNWU,60.0,62.0,annotator_1,,standup,,"All right, Okay. No, don't worry, we'll all do it together.",false,multimodal_tvsum_style
+oUUVRa2SNWU,62.0,64.0,annotator_1,,standup,,"No, don't worry, we'll all do it together. We'll all do it together.",false,multimodal_tvsum_style
+oUUVRa2SNWU,64.0,66.0,annotator_1,,standup,,"I'll join in, of course, I'll join in.",false,multimodal_tvsum_style
+oUUVRa2SNWU,66.0,68.0,annotator_1,,standup,,"I'll join in, of course, I'll join in. Right, don't worry.",false,multimodal_tvsum_style
+oUUVRa2SNWU,68.0,70.0,annotator_1,,standup,,"Right, don't worry. This is a comedy show. This is a safe space.",false,multimodal_tvsum_style
+oUUVRa2SNWU,70.0,72.0,annotator_1,,standup,,This is a safe space. We asked you to put your phones away,false,multimodal_tvsum_style
+oUUVRa2SNWU,72.0,74.0,annotator_1,,standup,,We asked you to put your phones away for this moment right now.,false,multimodal_tvsum_style
+oUUVRa2SNWU,74.0,76.0,annotator_1,,standup,,for this moment right now. Now it's the time to let it out.,false,multimodal_tvsum_style
+oUUVRa2SNWU,76.0,78.0,annotator_1,,standup,,"Now it's the time to let it out. This is it, don't barrel it up and go crazy outside.",false,multimodal_tvsum_style
+oUUVRa2SNWU,78.0,80.0,annotator_1,,standup,,"This is it, don't barrel it up and go crazy outside.",false,multimodal_tvsum_style
+oUUVRa2SNWU,80.0,82.0,annotator_1,,standup,,"This is it, don't barrel it up and go crazy outside. Let's lay out now. Let the demons out now, all right?",false,multimodal_tvsum_style
+oUUVRa2SNWU,82.0,84.0,annotator_1,,standup,,"Let the demons out now, all right?",false,multimodal_tvsum_style
+oUUVRa2SNWU,84.0,86.0,annotator_1,,standup,,"You don't even have to be specific, okay?",false,multimodal_tvsum_style
+oUUVRa2SNWU,86.0,88.0,annotator_1,,standup,,"You don't even have to be specific, okay? Just shout the color.",false,multimodal_tvsum_style
+oUUVRa2SNWU,88.0,90.0,annotator_1,,standup,,Just shout the color.,false,multimodal_tvsum_style
+oUUVRa2SNWU,90.0,92.0,annotator_1,,standup,,"Guys, we all know what the answer's gonna be.",false,multimodal_tvsum_style
+oUUVRa2SNWU,92.0,94.0,annotator_1,,standup,,"Guys, we all know what the answer's gonna be.",false,multimodal_tvsum_style
+oUUVRa2SNWU,94.0,96.0,annotator_1,,standup,,Who are we fooling here?,false,multimodal_tvsum_style
+oUUVRa2SNWU,96.0,98.0,annotator_1,,standup,,"Who are we fooling here? All right, okay. On three, worst race, on three, okay?",false,multimodal_tvsum_style
+oUUVRa2SNWU,98.0,100.0,annotator_1,,standup,,"On three, worst race, on three, okay? One...",false,multimodal_tvsum_style
+oUUVRa2SNWU,100.0,102.0,annotator_1,,standup,,This is happening!,false,multimodal_tvsum_style
+oUUVRa2SNWU,102.0,104.0,annotator_1,,standup,,Whether you join in or not.,false,multimodal_tvsum_style
+oUUVRa2SNWU,104.0,106.0,annotator_1,,standup,,Whether you join in or not. You might as well say something!,false,multimodal_tvsum_style
+oUUVRa2SNWU,106.0,108.0,annotator_1,,standup,,You might as well say something! Even if you don't believe it.,false,multimodal_tvsum_style
+oUUVRa2SNWU,108.0,110.0,annotator_1,,standup,,Even if you don't believe it. Just as a creative exercise.,false,multimodal_tvsum_style
+oUUVRa2SNWU,110.0,112.0,annotator_1,,standup,,Just as a creative exercise. Just lay it out. It's like speaking in tongues.,false,multimodal_tvsum_style
+oUUVRa2SNWU,112.0,114.0,annotator_1,,standup,,"It's like speaking in tongues. Just go. All right, okay, on three.",false,multimodal_tvsum_style
+oUUVRa2SNWU,114.0,116.0,annotator_1,,standup,,"All right, okay, on three. Okay, worst race, on three.",false,multimodal_tvsum_style
+oUUVRa2SNWU,116.0,118.0,annotator_1,,standup,,"Okay, worst race, on three. All right? Okay, one, worst race.",false,multimodal_tvsum_style
+oUUVRa2SNWU,118.0,120.0,annotator_1,,standup,,"Okay, one, worst race. Two, three.",false,multimodal_tvsum_style
+oUUVRa2SNWU,120.0,122.0,annotator_1,,standup,,"Two, three.",false,multimodal_tvsum_style
+oUUVRa2SNWU,122.0,124.0,annotator_1,,standup,,"Two, three. If you said anything, you're the worst 10% of your race.",false,multimodal_tvsum_style
+oUUVRa2SNWU,124.0,126.0,annotator_1,,standup,,"If you said anything, you're the worst 10% of your race.",false,multimodal_tvsum_style
+oUUVRa2SNWU,126.0,128.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,128.0,130.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,130.0,132.0,annotator_1,,standup,,That was fucking disgusting.,false,multimodal_tvsum_style
+oUUVRa2SNWU,132.0,134.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,134.0,136.0,annotator_1,,standup,,Bunch of god damned racists,false,multimodal_tvsum_style
+oUUVRa2SNWU,136.0,138.0,annotator_1,,standup,,Bunch of god damned racists coming to my show in New York City.,false,multimodal_tvsum_style
+oUUVRa2SNWU,138.0,140.0,annotator_1,,standup,,coming to my show in New York City.,false,multimodal_tvsum_style
+oUUVRa2SNWU,140.0,142.0,annotator_1,,standup,,Completely missing the point of that joke.,false,multimodal_tvsum_style
+oUUVRa2SNWU,142.0,144.0,annotator_1,,standup,,Completely missing the point of that joke.,false,multimodal_tvsum_style
+oUUVRa2SNWU,144.0,146.0,annotator_1,,standup,,"Yeah, it's been great meeting",false,multimodal_tvsum_style
+oUUVRa2SNWU,146.0,148.0,annotator_1,,standup,,"Yeah, it's been great meeting the different types of Americans as well.",false,multimodal_tvsum_style
+oUUVRa2SNWU,148.0,150.0,annotator_1,,standup,,"the different types of Americans as well. Think of every other different races, different ethnicities,",false,multimodal_tvsum_style
+oUUVRa2SNWU,150.0,152.0,annotator_1,,standup,,"Think of every other different races, different ethnicities,",false,multimodal_tvsum_style
+oUUVRa2SNWU,152.0,154.0,annotator_1,,standup,,"Think of every other different races, different ethnicities, different cities, all different people.",false,multimodal_tvsum_style
+oUUVRa2SNWU,154.0,156.0,annotator_1,,standup,,"different cities, all different people. Of all the Americans I've met, I think African Americans have got to be the cool",false,multimodal_tvsum_style
+oUUVRa2SNWU,156.0,158.0,annotator_1,,standup,,I think African Americans have got to be the coolest race,false,multimodal_tvsum_style
+oUUVRa2SNWU,158.0,160.0,annotator_1,,standup,,"I think African Americans have got to be the coolest race of them all, all right?",false,multimodal_tvsum_style
+oUUVRa2SNWU,160.0,162.0,annotator_1,,standup,,"of them all, all right? So they're the coolest.",false,multimodal_tvsum_style
+oUUVRa2SNWU,162.0,164.0,annotator_1,,standup,,So they're the coolest. Everything they do is just cooler.,false,multimodal_tvsum_style
+oUUVRa2SNWU,164.0,166.0,annotator_1,,standup,,"Everything they do is just cooler. Everything they touch, it's just smoother, right?",false,multimodal_tvsum_style
+oUUVRa2SNWU,166.0,168.0,annotator_1,,standup,,"Everything they touch, it's just smoother, right?",false,multimodal_tvsum_style
+oUUVRa2SNWU,168.0,170.0,annotator_1,,standup,,"Sports, science, music, presidencies, right?",false,multimodal_tvsum_style
+oUUVRa2SNWU,170.0,172.0,annotator_1,,standup,,"Sports, science, music, presidencies, right? Everything they do.",false,multimodal_tvsum_style
+oUUVRa2SNWU,172.0,174.0,annotator_1,,standup,,Everything they do.,false,multimodal_tvsum_style
+oUUVRa2SNWU,174.0,176.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,176.0,178.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,178.0,180.0,annotator_1,,standup,,They got the swag. Black people have the swag.,false,multimodal_tvsum_style
+oUUVRa2SNWU,180.0,182.0,annotator_1,,standup,,Black people have the swag.,false,multimodal_tvsum_style
+oUUVRa2SNWU,182.0,184.0,annotator_1,,standup,,You cannot deny the swag.,false,multimodal_tvsum_style
+oUUVRa2SNWU,184.0,186.0,annotator_1,,standup,,You cannot deny the swag. Black people have the swag.,false,multimodal_tvsum_style
+oUUVRa2SNWU,186.0,188.0,annotator_1,,standup,,"Black people have the swag. Even white supremacists are like, ""Yeah, they have swag.""",false,multimodal_tvsum_style
+oUUVRa2SNWU,188.0,190.0,annotator_1,,standup,,"Even white supremacists are like, ""Yeah, they have swag.""",false,multimodal_tvsum_style
+oUUVRa2SNWU,190.0,192.0,annotator_1,,standup,,It's undeniable coolness.,false,multimodal_tvsum_style
+oUUVRa2SNWU,192.0,194.0,annotator_1,,standup,,It's undeniable coolness. Black people are so cool.,false,multimodal_tvsum_style
+oUUVRa2SNWU,194.0,196.0,annotator_1,,standup,,Black people are so cool. They can own their own racial slur.,false,multimodal_tvsum_style
+oUUVRa2SNWU,196.0,198.0,annotator_1,,standup,,They can own their own racial slur.,false,multimodal_tvsum_style
+oUUVRa2SNWU,198.0,200.0,annotator_1,,standup,,"Okay, that's how cool they are. No other minority in America is cool",false,multimodal_tvsum_style
+oUUVRa2SNWU,200.0,202.0,annotator_1,,standup,,No other minority in America is cool enough to own their own slur.,false,multimodal_tvsum_style
+oUUVRa2SNWU,202.0,204.0,annotator_1,,standup,,enough to own their own slur.,false,multimodal_tvsum_style
+oUUVRa2SNWU,204.0,206.0,annotator_1,,standup,,enough to own their own slur. You never see Chinese people walking around,false,multimodal_tvsum_style
+oUUVRa2SNWU,206.0,208.0,annotator_1,,standup,,"You never see Chinese people walking around just going, ""Hey yo, hey, yo, my chinks.",false,multimodal_tvsum_style
+oUUVRa2SNWU,208.0,210.0,annotator_1,,standup,,"just going, ""Hey yo, hey, yo, my chinks.",false,multimodal_tvsum_style
+oUUVRa2SNWU,210.0,212.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,212.0,214.0,annotator_1,,standup,,"""Yo, where my chinks at?",false,multimodal_tvsum_style
+oUUVRa2SNWU,214.0,216.0,annotator_1,,standup,,"""Yo, where my chinks at?",false,multimodal_tvsum_style
+oUUVRa2SNWU,216.0,218.0,annotator_1,,standup,,"""Yo holler at me, chinks.",false,multimodal_tvsum_style
+oUUVRa2SNWU,218.0,220.0,annotator_1,,standup,,"""My chinks.""",false,multimodal_tvsum_style
+oUUVRa2SNWU,220.0,222.0,annotator_1,,standup,,"""My chinks.""",false,multimodal_tvsum_style
+oUUVRa2SNWU,222.0,224.0,annotator_1,,standup,,"Hey, stay yellow my fellows, what?",false,multimodal_tvsum_style
+oUUVRa2SNWU,224.0,226.0,annotator_1,,standup,,"Hey, stay yellow my fellows, what?",false,multimodal_tvsum_style
+oUUVRa2SNWU,226.0,228.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,228.0,230.0,annotator_1,,standup,,Sounds awful.,false,multimodal_tvsum_style
+oUUVRa2SNWU,230.0,232.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,232.0,234.0,annotator_1,,standup,,"It's like nails on a chalkboard. My chinks, my chinks, my chinks!",false,multimodal_tvsum_style
+oUUVRa2SNWU,234.0,236.0,annotator_1,,standup,,"My chinks, my chinks, my chinks!",false,multimodal_tvsum_style
+oUUVRa2SNWU,236.0,238.0,annotator_1,,standup,,"My chinks, my chinks, my chinks!",false,multimodal_tvsum_style
+oUUVRa2SNWU,238.0,240.0,annotator_1,,standup,,"Think outside of America, we think",false,multimodal_tvsum_style
+oUUVRa2SNWU,240.0,242.0,annotator_1,,standup,,"Think outside of America, we think",false,multimodal_tvsum_style
+oUUVRa2SNWU,242.0,244.0,annotator_1,,standup,,"Think outside of America, we think of America as like a monolith, right?",false,multimodal_tvsum_style
+oUUVRa2SNWU,244.0,246.0,annotator_1,,standup,,"of America as like a monolith, right? Like America, Americans, like one entity.",false,multimodal_tvsum_style
+oUUVRa2SNWU,246.0,248.0,annotator_1,,standup,,"Like America, Americans, like one entity. Right, but you live here long enough,",false,multimodal_tvsum_style
+oUUVRa2SNWU,248.0,250.0,annotator_1,,standup,,"Right, but you live here long enough, you realize it's such a big country.",false,multimodal_tvsum_style
+oUUVRa2SNWU,250.0,252.0,annotator_1,,standup,,you realize it's such a big country. Every state is like its own nation unto itself.,false,multimodal_tvsum_style
+oUUVRa2SNWU,252.0,254.0,annotator_1,,standup,,"Every state is like its own nation unto itself. Their own cuisine, their own way of talking,",false,multimodal_tvsum_style
+oUUVRa2SNWU,254.0,256.0,annotator_1,,standup,,"Their own cuisine, their own way of talking, their own values, their own flags.",false,multimodal_tvsum_style
+oUUVRa2SNWU,256.0,258.0,annotator_1,,standup,,"their own values, their own flags. Right, that's why there's so much division here.",false,multimodal_tvsum_style
+oUUVRa2SNWU,258.0,260.0,annotator_1,,standup,,"Right, that's why there's so much division here. It's all these different countries trying to federate",false,multimodal_tvsum_style
+oUUVRa2SNWU,260.0,262.0,annotator_1,,standup,,It's all these different countries trying to federate and become so obvious once you start living here,false,multimodal_tvsum_style
+oUUVRa2SNWU,262.0,264.0,annotator_1,,standup,,and become so obvious once you start living here you can tell the difference between the different types,false,multimodal_tvsum_style
+oUUVRa2SNWU,264.0,266.0,annotator_1,,standup,,"you can tell the difference between the different types of Americans, the different energies, right?",false,multimodal_tvsum_style
+oUUVRa2SNWU,266.0,268.0,annotator_1,,standup,,"of Americans, the different energies, right? From East coast to West coast.",false,multimodal_tvsum_style
+oUUVRa2SNWU,268.0,270.0,annotator_1,,standup,,"From East coast to West coast. It's so obvious, you can call it out.",false,multimodal_tvsum_style
+oUUVRa2SNWU,270.0,272.0,annotator_1,,standup,,"It's so obvious, you can call it out. Like East coast Americans, super intense.",false,multimodal_tvsum_style
+oUUVRa2SNWU,272.0,274.0,annotator_1,,standup,,"Like East coast Americans, super intense.",false,multimodal_tvsum_style
+oUUVRa2SNWU,274.0,276.0,annotator_1,,standup,,"Right, West coast, everyone calms the fuck down a bit.",false,multimodal_tvsum_style
+oUUVRa2SNWU,276.0,278.0,annotator_1,,standup,,"Right, West coast, everyone calms the fuck down a bit.",false,multimodal_tvsum_style
+oUUVRa2SNWU,278.0,280.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,280.0,282.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,282.0,284.0,annotator_1,,standup,,"Yeah, it's like the East coast of America.",false,multimodal_tvsum_style
+oUUVRa2SNWU,284.0,286.0,annotator_1,,standup,,"Yeah, it's like the East coast of America. Everyone's still fighting the British.",false,multimodal_tvsum_style
+oUUVRa2SNWU,286.0,288.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,288.0,290.0,annotator_1,,standup,,"It's like they never got over it. America is like, the whole world is in trouble.",false,multimodal_tvsum_style
+oUUVRa2SNWU,290.0,292.0,annotator_1,,standup,,"America is like, the whole world is in trouble.",false,multimodal_tvsum_style
+oUUVRa2SNWU,292.0,294.0,annotator_1,,standup,,"America is like, the whole world is in trouble.",false,multimodal_tvsum_style
+oUUVRa2SNWU,294.0,296.0,annotator_1,,standup,,"America is like, the whole world is in trouble. Let's use everything we've ever learned.",false,multimodal_tvsum_style
+oUUVRa2SNWU,296.0,298.0,annotator_1,,standup,,Let's use everything we've ever learned. Our entire knowledge base.,false,multimodal_tvsum_style
+oUUVRa2SNWU,298.0,300.0,annotator_1,,standup,,Our entire knowledge base. Every resource at our disposal. Every immigrant who ever got a PhD.,false,multimodal_tvsum_style
+oUUVRa2SNWU,300.0,302.0,annotator_1,,standup,,"Every immigrant who ever got a PhD. Every local born PhD student, let's combine forces",false,multimodal_tvsum_style
+oUUVRa2SNWU,302.0,304.0,annotator_1,,standup,,"Every local born PhD student, let's combine forces",false,multimodal_tvsum_style
+oUUVRa2SNWU,304.0,306.0,annotator_1,,standup,,"Every local born PhD student, let's combine forces and create this miracle mRNA vaccine in under a year.",false,multimodal_tvsum_style
+oUUVRa2SNWU,306.0,308.0,annotator_1,,standup,,and create this miracle mRNA vaccine in under a year.,false,multimodal_tvsum_style
+oUUVRa2SNWU,308.0,310.0,annotator_1,,standup,,and create this miracle mRNA vaccine in under a year. And we did it and it fucking works.,false,multimodal_tvsum_style
+oUUVRa2SNWU,310.0,312.0,annotator_1,,standup,,"And we did it and it fucking works. And fuck you, we're not gonna take it.",false,multimodal_tvsum_style
+oUUVRa2SNWU,312.0,314.0,annotator_1,,standup,,"And fuck you, we're not gonna take it. Fuck you, we're not taking that shit!",false,multimodal_tvsum_style
+oUUVRa2SNWU,314.0,316.0,annotator_1,,standup,,"Fuck you, we're not taking that shit! We're not taking that.",false,multimodal_tvsum_style
+oUUVRa2SNWU,316.0,318.0,annotator_1,,standup,,"We're not taking that. You take it. We're not take it, you take it. Oh, what?",false,multimodal_tvsum_style
+oUUVRa2SNWU,318.0,320.0,annotator_1,,standup,,"Oh, what? You want it? Oh, you want it?",false,multimodal_tvsum_style
+oUUVRa2SNWU,320.0,322.0,annotator_1,,standup,,"Oh, you want it? Oh, fuck that, we're not gonna give it to you.",false,multimodal_tvsum_style
+oUUVRa2SNWU,322.0,324.0,annotator_1,,standup,,"Oh, fuck that, we're not gonna give it to you. We're gonna throw it in the river.",false,multimodal_tvsum_style
+oUUVRa2SNWU,324.0,326.0,annotator_1,,standup,,We're gonna throw it in the river. The river. Go suck it up from the river.,false,multimodal_tvsum_style
+oUUVRa2SNWU,326.0,328.0,annotator_1,,standup,,"Go suck it up from the river. Suck it, suck my dick.",false,multimodal_tvsum_style
+oUUVRa2SNWU,328.0,330.0,annotator_1,,standup,,"Suck it, suck my dick. Fuck you and fuck us.",false,multimodal_tvsum_style
+oUUVRa2SNWU,330.0,332.0,annotator_1,,standup,,"Fuck you and fuck us. Oh, what? What, does it work?",false,multimodal_tvsum_style
+oUUVRa2SNWU,332.0,334.0,annotator_1,,standup,,"What, does it work? Oh my God. It works like a charm.",false,multimodal_tvsum_style
+oUUVRa2SNWU,334.0,336.0,annotator_1,,standup,,It works like a charm. It's like a 90% efficacy. It blows all simulations out of the water.,false,multimodal_tvsum_style
+oUUVRa2SNWU,336.0,338.0,annotator_1,,standup,,"It blows all simulations out of the water. But fuck that shit, we're not taking it.",false,multimodal_tvsum_style
+oUUVRa2SNWU,338.0,340.0,annotator_1,,standup,,"But fuck that shit, we're not taking it. Fuck you and fuck us.",false,multimodal_tvsum_style
+oUUVRa2SNWU,340.0,342.0,annotator_1,,standup,,Fuck you and fuck us.,false,multimodal_tvsum_style
+oUUVRa2SNWU,342.0,344.0,annotator_1,,standup,,That is the most American shit ever.,false,multimodal_tvsum_style
+oUUVRa2SNWU,344.0,346.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,346.0,348.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,348.0,350.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,350.0,352.0,annotator_1,,standup,,"Yeah, like I said, I used to live in Australia.",false,multimodal_tvsum_style
+oUUVRa2SNWU,352.0,354.0,annotator_1,,standup,,"Yeah, like I said, I used to live in Australia. I started doing comedy in Australia.",false,multimodal_tvsum_style
+oUUVRa2SNWU,354.0,356.0,annotator_1,,standup,,I started doing comedy in Australia. Australia was always very good to me.,false,multimodal_tvsum_style
+oUUVRa2SNWU,356.0,358.0,annotator_1,,standup,,Australia was always very good to me.,false,multimodal_tvsum_style
+oUUVRa2SNWU,358.0,360.0,annotator_1,,standup,,My wife is Australian and I love my wife a lot.,false,multimodal_tvsum_style
+oUUVRa2SNWU,360.0,362.0,annotator_1,,standup,,"My wife is Australian and I love my wife a lot. I love my wife so much, I married her three times.",false,multimodal_tvsum_style
+oUUVRa2SNWU,362.0,364.0,annotator_1,,standup,,"I love my wife so much, I married her three times.",false,multimodal_tvsum_style
+oUUVRa2SNWU,364.0,366.0,annotator_1,,standup,,"I love my wife so much, I married her three times. That's right, I married the same woman three separate times.",false,multimodal_tvsum_style
+oUUVRa2SNWU,366.0,368.0,annotator_1,,standup,,"That's right, I married the same woman three separate times.",false,multimodal_tvsum_style
+oUUVRa2SNWU,368.0,370.0,annotator_1,,standup,,"That's right, I married the same woman three separate times. Why?",false,multimodal_tvsum_style
+oUUVRa2SNWU,370.0,372.0,annotator_1,,standup,,Why? Because when you have Asian parents you have to get married in every fucking country,false,multimodal_tvsum_style
+oUUVRa2SNWU,372.0,374.0,annotator_1,,standup,,you have to get married in every fucking country,false,multimodal_tvsum_style
+oUUVRa2SNWU,374.0,376.0,annotator_1,,standup,,you have to get married in every fucking country you have relatives in.,false,multimodal_tvsum_style
+oUUVRa2SNWU,376.0,378.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,378.0,380.0,annotator_1,,standup,,"Because Asian parents have to brag, okay?",false,multimodal_tvsum_style
+oUUVRa2SNWU,380.0,382.0,annotator_1,,standup,,"Because Asian parents have to brag, okay? And I know every parent has to brag.",false,multimodal_tvsum_style
+oUUVRa2SNWU,382.0,384.0,annotator_1,,standup,,And I know every parent has to brag. I'm not trying to take anything away from anyone.,false,multimodal_tvsum_style
+oUUVRa2SNWU,384.0,386.0,annotator_1,,standup,,I'm not trying to take anything away from anyone. I'm just saying Asian parents also have to brag.,false,multimodal_tvsum_style
+oUUVRa2SNWU,386.0,388.0,annotator_1,,standup,,I'm just saying Asian parents also have to brag. And like weddings is how they do it.,false,multimodal_tvsum_style
+oUUVRa2SNWU,388.0,390.0,annotator_1,,standup,,And like weddings is how they do it.,false,multimodal_tvsum_style
+oUUVRa2SNWU,390.0,392.0,annotator_1,,standup,,So we had to get married three times.,false,multimodal_tvsum_style
+oUUVRa2SNWU,392.0,394.0,annotator_1,,standup,,"So we had to get married three times. So the first wedding we had in Melbourne, Australia",false,multimodal_tvsum_style
+oUUVRa2SNWU,394.0,396.0,annotator_1,,standup,,"So the first wedding we had in Melbourne, Australia because my wife is from Melbourne, Australia.",false,multimodal_tvsum_style
+oUUVRa2SNWU,396.0,398.0,annotator_1,,standup,,"because my wife is from Melbourne, Australia. Then we got married in Kuala Lumpur, Malaysia.",false,multimodal_tvsum_style
+oUUVRa2SNWU,398.0,400.0,annotator_1,,standup,,"Then we got married in Kuala Lumpur, Malaysia.",false,multimodal_tvsum_style
+oUUVRa2SNWU,400.0,402.0,annotator_1,,standup,,"Then we got married in Kuala Lumpur, Malaysia. Even though I'm not from Kuala Lumpur! But who gives a fuck what the groo",false,multimodal_tvsum_style
+oUUVRa2SNWU,402.0,404.0,annotator_1,,standup,,But who gives a fuck what the groom wants?,false,multimodal_tvsum_style
+oUUVRa2SNWU,404.0,406.0,annotator_1,,standup,,Let's just find the nearest landmark in Malaysia,false,multimodal_tvsum_style
+oUUVRa2SNWU,406.0,408.0,annotator_1,,standup,,Let's just find the nearest landmark in Malaysia everyone can pronounce with the most direct flights.,false,multimodal_tvsum_style
+oUUVRa2SNWU,408.0,410.0,annotator_1,,standup,,everyone can pronounce with the most direct flights.,false,multimodal_tvsum_style
+oUUVRa2SNWU,410.0,412.0,annotator_1,,standup,,And then we got married in New York for green card purposes.,false,multimodal_tvsum_style
+oUUVRa2SNWU,412.0,414.0,annotator_1,,standup,,And then we got married in New York for green card purposes.,false,multimodal_tvsum_style
+oUUVRa2SNWU,414.0,416.0,annotator_1,,standup,,And then we got married in New York for green card purposes.,false,multimodal_tvsum_style
+oUUVRa2SNWU,416.0,418.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,418.0,420.0,annotator_1,,standup,,So three very romantic weddings,false,multimodal_tvsum_style
+oUUVRa2SNWU,420.0,422.0,annotator_1,,standup,,"So three very romantic weddings for the right reasons, chain migration.",false,multimodal_tvsum_style
+oUUVRa2SNWU,422.0,424.0,annotator_1,,standup,,"for the right reasons, chain migration.",false,multimodal_tvsum_style
+oUUVRa2SNWU,424.0,426.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,426.0,428.0,annotator_1,,standup,,And let me tell you something. Let me speak from the heart here for just one minute.,false,multimodal_tvsum_style
+oUUVRa2SNWU,428.0,430.0,annotator_1,,standup,,Let me speak from the heart here for just one minute.,false,multimodal_tvsum_style
+oUUVRa2SNWU,430.0,432.0,annotator_1,,standup,,"Let me speak from the heart here for just one minute. If you take nothing else away from the show here tonight, please j",false,multimodal_tvsum_style
+oUUVRa2SNWU,432.0,434.0,annotator_1,,standup,,"here tonight, please just hear me now. Okay, I'm speaking from personal experience here.",false,multimodal_tvsum_style
+oUUVRa2SNWU,434.0,436.0,annotator_1,,standup,,"Okay, I'm speaking from personal experience here.",false,multimodal_tvsum_style
+oUUVRa2SNWU,436.0,438.0,annotator_1,,standup,,"Okay, I'm speaking from personal experience here. There are fewer joys you will experience in life,",false,multimodal_tvsum_style
+oUUVRa2SNWU,438.0,440.0,annotator_1,,standup,,"There are fewer joys you will experience in life,",false,multimodal_tvsum_style
+oUUVRa2SNWU,440.0,442.0,annotator_1,,standup,,"There are fewer joys you will experience in life, than organizing three weddings at the same time.",false,multimodal_tvsum_style
+oUUVRa2SNWU,442.0,444.0,annotator_1,,standup,,than organizing three weddings at the same time.,false,multimodal_tvsum_style
+oUUVRa2SNWU,444.0,446.0,annotator_1,,standup,,Oh my God. It's so much fun and so easy to do.,false,multimodal_tvsum_style
+oUUVRa2SNWU,446.0,448.0,annotator_1,,standup,,It's so much fun and so easy to do.,false,multimodal_tvsum_style
+oUUVRa2SNWU,448.0,450.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,450.0,452.0,annotator_1,,standup,,I highly recommend it.,false,multimodal_tvsum_style
+oUUVRa2SNWU,452.0,454.0,annotator_1,,standup,,I highly recommend it. So like whenever I bring up another country,false,multimodal_tvsum_style
+oUUVRa2SNWU,454.0,456.0,annotator_1,,standup,,So like whenever I bring up another country,false,multimodal_tvsum_style
+oUUVRa2SNWU,456.0,458.0,annotator_1,,standup,,"So like whenever I bring up another country to my American friends, my American friends will always",false,multimodal_tvsum_style
+oUUVRa2SNWU,458.0,460.0,annotator_1,,standup,,"to my American friends, my American friends will always bring up the one fact, they read one time",false,multimodal_tvsum_style
+oUUVRa2SNWU,460.0,462.0,annotator_1,,standup,,"bring up the one fact, they read one time",false,multimodal_tvsum_style
+oUUVRa2SNWU,462.0,464.0,annotator_1,,standup,,"bring up the one fact, they read one time on the back of a Snapple cap.",false,multimodal_tvsum_style
+oUUVRa2SNWU,464.0,466.0,annotator_1,,standup,,on the back of a Snapple cap.,false,multimodal_tvsum_style
+oUUVRa2SNWU,466.0,468.0,annotator_1,,standup,,And they just throw it back at you. And they try to use it to paint the entire history,false,multimodal_tvsum_style
+oUUVRa2SNWU,468.0,470.0,annotator_1,,standup,,And they try to use it to paint the entire history,false,multimodal_tvsum_style
+oUUVRa2SNWU,470.0,472.0,annotator_1,,standup,,"And they try to use it to paint the entire history of your civilization with like whatever half remembered,",false,multimodal_tvsum_style
+oUUVRa2SNWU,472.0,474.0,annotator_1,,standup,,"of your civilization with like whatever half remembered, back of the brain stem, regurgitated fact,",false,multimodal_tvsum_style
+oUUVRa2SNWU,474.0,476.0,annotator_1,,standup,,"back of the brain stem, regurgitated fact,",false,multimodal_tvsum_style
+oUUVRa2SNWU,476.0,478.0,annotator_1,,standup,,"back of the brain stem, regurgitated fact, they can just flick it from this part",false,multimodal_tvsum_style
+oUUVRa2SNWU,478.0,480.0,annotator_1,,standup,,"they can just flick it from this part to like this part as quickly as possible, right?",false,multimodal_tvsum_style
+oUUVRa2SNWU,480.0,482.0,annotator_1,,standup,,"to like this part as quickly as possible, right?",false,multimodal_tvsum_style
+oUUVRa2SNWU,482.0,484.0,annotator_1,,standup,,"Just spit it out. Like when I tell my American friends,",false,multimodal_tvsum_style
+oUUVRa2SNWU,484.0,486.0,annotator_1,,standup,,"Like when I tell my American friends, like I grew up in Singapore,",false,multimodal_tvsum_style
+oUUVRa2SNWU,486.0,488.0,annotator_1,,standup,,"like I grew up in Singapore, they're always like, ""Singapore?",false,multimodal_tvsum_style
+oUUVRa2SNWU,488.0,490.0,annotator_1,,standup,,"they're always like, ""Singapore? ""You grew up in Singapore?",false,multimodal_tvsum_style
+oUUVRa2SNWU,490.0,492.0,annotator_1,,standup,,"""You grew up in Singapore?",false,multimodal_tvsum_style
+oUUVRa2SNWU,492.0,494.0,annotator_1,,standup,,"""They cane people in Singapore.",false,multimodal_tvsum_style
+oUUVRa2SNWU,494.0,496.0,annotator_1,,standup,,"""Right? Like in Singapore, if you spit gum on the floor,",false,multimodal_tvsum_style
+oUUVRa2SNWU,496.0,498.0,annotator_1,,standup,,"""Right? Like in Singapore, if you spit gum on the floor,",false,multimodal_tvsum_style
+oUUVRa2SNWU,498.0,500.0,annotator_1,,standup,,"""Right? Like in Singapore, if you spit gum on the floor, ""someone just runs up immediately behind you",false,multimodal_tvsum_style
+oUUVRa2SNWU,500.0,502.0,annotator_1,,standup,,"""someone just runs up immediately behind you ""and just canes you in your ass.""",false,multimodal_tvsum_style
+oUUVRa2SNWU,502.0,504.0,annotator_1,,standup,,"""and just canes you in your ass.""",false,multimodal_tvsum_style
+oUUVRa2SNWU,504.0,506.0,annotator_1,,standup,,"And I'm like,",false,multimodal_tvsum_style
+oUUVRa2SNWU,506.0,508.0,annotator_1,,standup,,"And I'm like,",false,multimodal_tvsum_style
+oUUVRa2SNWU,508.0,510.0,annotator_1,,standup,,"""Yeah...""",false,multimodal_tvsum_style
+oUUVRa2SNWU,510.0,512.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,512.0,514.0,annotator_1,,standup,,So don't fucking do that shit.,false,multimodal_tvsum_style
+oUUVRa2SNWU,514.0,516.0,annotator_1,,standup,,So don't fucking do that shit.,false,multimodal_tvsum_style
+oUUVRa2SNWU,516.0,518.0,annotator_1,,standup,,So don't fucking do that shit.,false,multimodal_tvsum_style
+oUUVRa2SNWU,518.0,520.0,annotator_1,,standup,,What is it?,false,multimodal_tvsum_style
+oUUVRa2SNWU,520.0,522.0,annotator_1,,standup,,What is it? Some kind innate need of yours?,false,multimodal_tvsum_style
+oUUVRa2SNWU,522.0,524.0,annotator_1,,standup,,Some kind innate need of yours? To visit other people's countries and spit gum on the floor.,false,multimodal_tvsum_style
+oUUVRa2SNWU,524.0,526.0,annotator_1,,standup,,To visit other people's countries and spit gum on the floor.,false,multimodal_tvsum_style
+oUUVRa2SNWU,526.0,528.0,annotator_1,,standup,,"To visit other people's countries and spit gum on the floor. In which case, please do not visit Singapore",false,multimodal_tvsum_style
+oUUVRa2SNWU,528.0,530.0,annotator_1,,standup,,"In which case, please do not visit Singapore",false,multimodal_tvsum_style
+oUUVRa2SNWU,530.0,532.0,annotator_1,,standup,,"In which case, please do not visit Singapore because they will cane you on your fucking face.",false,multimodal_tvsum_style
+oUUVRa2SNWU,532.0,534.0,annotator_1,,standup,,because they will cane you on your fucking face.,false,multimodal_tvsum_style
+oUUVRa2SNWU,534.0,536.0,annotator_1,,standup,,because they will cane you on your fucking face.,false,multimodal_tvsum_style
+oUUVRa2SNWU,536.0,538.0,annotator_1,,standup,,And like some Americans are like outraged by that.,false,multimodal_tvsum_style
+oUUVRa2SNWU,538.0,540.0,annotator_1,,standup,,And like some Americans are like outraged by that.,false,multimodal_tvsum_style
+oUUVRa2SNWU,540.0,542.0,annotator_1,,standup,,And like some Americans are like outraged by that. The thought of grown men being caned,false,multimodal_tvsum_style
+oUUVRa2SNWU,542.0,544.0,annotator_1,,standup,,The thought of grown men being caned on the ass for being a dick.,false,multimodal_tvsum_style
+oUUVRa2SNWU,544.0,546.0,annotator_1,,standup,,on the ass for being a dick.,false,multimodal_tvsum_style
+oUUVRa2SNWU,546.0,548.0,annotator_1,,standup,,on the ass for being a dick. It's like outrageous to them.,false,multimodal_tvsum_style
+oUUVRa2SNWU,548.0,550.0,annotator_1,,standup,,"It's like outrageous to them. But what's funny is you ask any American,",false,multimodal_tvsum_style
+oUUVRa2SNWU,550.0,552.0,annotator_1,,standup,,"But what's funny is you ask any American, especially any New Yorker, what they would do",false,multimodal_tvsum_style
+oUUVRa2SNWU,552.0,554.0,annotator_1,,standup,,"especially any New Yorker, what they would do",false,multimodal_tvsum_style
+oUUVRa2SNWU,554.0,556.0,annotator_1,,standup,,"especially any New Yorker, what they would do if a guest came into their home and spit gum on the floor.",false,multimodal_tvsum_style
+oUUVRa2SNWU,556.0,558.0,annotator_1,,standup,,if a guest came into their home and spit gum on the floor.,false,multimodal_tvsum_style
+oUUVRa2SNWU,558.0,560.0,annotator_1,,standup,,if a guest came into their home and spit gum on the floor.,false,multimodal_tvsum_style
+oUUVRa2SNWU,560.0,562.0,annotator_1,,standup,,"They would be like, ""We would beat the fuck out of them.""",false,multimodal_tvsum_style
+oUUVRa2SNWU,562.0,564.0,annotator_1,,standup,,"They would be like, ""We would beat the fuck out of them.""",false,multimodal_tvsum_style
+oUUVRa2SNWU,564.0,566.0,annotator_1,,standup,,"They would be like, ""We would beat the fuck out of them.""",false,multimodal_tvsum_style
+oUUVRa2SNWU,566.0,568.0,annotator_1,,standup,,"I'm like, ""Yeah, that's what we do in Singapore.""",false,multimodal_tvsum_style
+oUUVRa2SNWU,568.0,570.0,annotator_1,,standup,,"I'm like, ""Yeah, that's what we do in Singapore.""",false,multimodal_tvsum_style
+oUUVRa2SNWU,570.0,572.0,annotator_1,,standup,,We just outsourced the ass kicking to the government.,false,multimodal_tvsum_style
+oUUVRa2SNWU,572.0,574.0,annotator_1,,standup,,We just outsourced the ass kicking to the government.,false,multimodal_tvsum_style
+oUUVRa2SNWU,574.0,576.0,annotator_1,,standup,,Becomes a more cost efficient punishment,false,multimodal_tvsum_style
+oUUVRa2SNWU,576.0,578.0,annotator_1,,standup,,Becomes a more cost efficient punishment for everyone involved.,false,multimodal_tvsum_style
+oUUVRa2SNWU,578.0,580.0,annotator_1,,standup,,for everyone involved. That's why we pay our taxes.,false,multimodal_tvsum_style
+oUUVRa2SNWU,580.0,582.0,annotator_1,,standup,,That's why we pay our taxes.,false,multimodal_tvsum_style
+oUUVRa2SNWU,582.0,584.0,annotator_1,,standup,,"My first week in New York,",false,multimodal_tvsum_style
+oUUVRa2SNWU,584.0,586.0,annotator_1,,standup,,"My first week in New York,",false,multimodal_tvsum_style
+oUUVRa2SNWU,586.0,588.0,annotator_1,,standup,,I was on this crowded subway train.,false,multimodal_tvsum_style
+oUUVRa2SNWU,588.0,590.0,annotator_1,,standup,,"I was on this crowded subway train. And it was packed, all the way to the doors.",false,multimodal_tvsum_style
+oUUVRa2SNWU,590.0,592.0,annotator_1,,standup,,"And it was packed, all the way to the doors. I'm on the train and it's packed",false,multimodal_tvsum_style
+oUUVRa2SNWU,592.0,594.0,annotator_1,,standup,,I'm on the train and it's packed all the way to the doors and the doors start closing in front of me.,false,multimodal_tvsum_style
+oUUVRa2SNWU,594.0,596.0,annotator_1,,standup,,"and the doors start closing in front of me. And as the doors start closing, this guy like walks up",false,multimodal_tvsum_style
+oUUVRa2SNWU,596.0,598.0,annotator_1,,standup,,"And as the doors start closing, this guy like walks up",false,multimodal_tvsum_style
+oUUVRa2SNWU,598.0,600.0,annotator_1,,standup,,"And as the doors start closing, this guy like walks up to the closing train doors and just jams his fingers.",false,multimodal_tvsum_style
+oUUVRa2SNWU,600.0,602.0,annotator_1,,standup,,to the closing train doors and just jams his fingers.,false,multimodal_tvsum_style
+oUUVRa2SNWU,602.0,604.0,annotator_1,,standup,,Just right into the door. No regard for his limbs or appendages.,false,multimodal_tvsum_style
+oUUVRa2SNWU,604.0,606.0,annotator_1,,standup,,No regard for his limbs or appendages.,false,multimodal_tvsum_style
+oUUVRa2SNWU,606.0,608.0,annotator_1,,standup,,No regard for his limbs or appendages.,false,multimodal_tvsum_style
+oUUVRa2SNWU,608.0,610.0,annotator_1,,standup,,Like his need to get on this train,false,multimodal_tvsum_style
+oUUVRa2SNWU,610.0,612.0,annotator_1,,standup,,Like his need to get on this train exceeded his need to grip things.,false,multimodal_tvsum_style
+oUUVRa2SNWU,612.0,614.0,annotator_1,,standup,,exceeded his need to grip things.,false,multimodal_tvsum_style
+oUUVRa2SNWU,614.0,616.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,616.0,618.0,annotator_1,,standup,,He did a cost benefit analysis in his head,false,multimodal_tvsum_style
+oUUVRa2SNWU,618.0,620.0,annotator_1,,standup,,He did a cost benefit analysis in his head,false,multimodal_tvsum_style
+oUUVRa2SNWU,620.0,622.0,annotator_1,,standup,,"and he was like, ""You know what, this is overrated.",false,multimodal_tvsum_style
+oUUVRa2SNWU,622.0,624.0,annotator_1,,standup,,"and he was like, ""You know what, this is overrated.",false,multimodal_tvsum_style
+oUUVRa2SNWU,624.0,626.0,annotator_1,,standup,,"and he was like, ""You know what, this is overrated. ""Who needs this motion?",false,multimodal_tvsum_style
+oUUVRa2SNWU,626.0,628.0,annotator_1,,standup,,"""Who needs this motion? ""Who needs this point of articulation?",false,multimodal_tvsum_style
+oUUVRa2SNWU,628.0,630.0,annotator_1,,standup,,"""Who needs this point of articulation? ""Let's get on this train, my life will be perfect.""",false,multimodal_tvsum_style
+oUUVRa2SNWU,630.0,632.0,annotator_1,,standup,,"""Let's get on this train, my life will be perfect."" So just creates enough of a gap to start fighting.",false,multimodal_tvsum_style
+oUUVRa2SNWU,632.0,634.0,annotator_1,,standup,,So just creates enough of a gap to start fighting. And he fights this train for eight seconds.,false,multimodal_tvsum_style
+oUUVRa2SNWU,634.0,636.0,annotator_1,,standup,,And he fights this train for eight seconds.,false,multimodal_tvsum_style
+oUUVRa2SNWU,636.0,638.0,annotator_1,,standup,,And he fights this train for eight seconds. He just fights it to a stalemate.,false,multimodal_tvsum_style
+oUUVRa2SNWU,638.0,640.0,annotator_1,,standup,,He just fights it to a stalemate. It's a judge's decision.,false,multimodal_tvsum_style
+oUUVRa2SNWU,640.0,642.0,annotator_1,,standup,,"It's a judge's decision. He can't move, the train can't move.",false,multimodal_tvsum_style
+oUUVRa2SNWU,642.0,644.0,annotator_1,,standup,,"He can't move, the train can't move. No one can move.",false,multimodal_tvsum_style
+oUUVRa2SNWU,644.0,646.0,annotator_1,,standup,,No one can move. And after eight seconds he gets like tired.,false,multimodal_tvsum_style
+oUUVRa2SNWU,646.0,648.0,annotator_1,,standup,,And after eight seconds he gets like tired. He starts gassing out.,false,multimodal_tvsum_style
+oUUVRa2SNWU,648.0,650.0,annotator_1,,standup,,He starts gassing out.,false,multimodal_tvsum_style
+oUUVRa2SNWU,650.0,652.0,annotator_1,,standup,,So he uses his head to jam up the door.,false,multimodal_tvsum_style
+oUUVRa2SNWU,652.0,654.0,annotator_1,,standup,,So he uses his head to jam up the door.,false,multimodal_tvsum_style
+oUUVRa2SNWU,654.0,656.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,656.0,658.0,annotator_1,,standup,,Like a door stop.,false,multimodal_tvsum_style
+oUUVRa2SNWU,658.0,660.0,annotator_1,,standup,,"As he like readjusts his grip, right?",false,multimodal_tvsum_style
+oUUVRa2SNWU,660.0,662.0,annotator_1,,standup,,"As he like readjusts his grip, right? He starts chalk up his hands for round two.",false,multimodal_tvsum_style
+oUUVRa2SNWU,662.0,664.0,annotator_1,,standup,,He starts chalk up his hands for round two. And I'm standing there just facing,false,multimodal_tvsum_style
+oUUVRa2SNWU,664.0,666.0,annotator_1,,standup,,And I'm standing there just facing the top of his oily scalp.,false,multimodal_tvsum_style
+oUUVRa2SNWU,666.0,668.0,annotator_1,,standup,,the top of his oily scalp.,false,multimodal_tvsum_style
+oUUVRa2SNWU,668.0,670.0,annotator_1,,standup,,the top of his oily scalp.,false,multimodal_tvsum_style
+oUUVRa2SNWU,670.0,672.0,annotator_1,,standup,,"Just thinking, yo man, just let it go, all right?",false,multimodal_tvsum_style
+oUUVRa2SNWU,672.0,674.0,annotator_1,,standup,,"Just thinking, yo man, just let it go, all right?",false,multimodal_tvsum_style
+oUUVRa2SNWU,674.0,676.0,annotator_1,,standup,,I'm new in town. I'm not sure if I'm supposed to help you,false,multimodal_tvsum_style
+oUUVRa2SNWU,676.0,678.0,annotator_1,,standup,,I'm not sure if I'm supposed to help you or if we're both gonna get arrested.,false,multimodal_tvsum_style
+oUUVRa2SNWU,678.0,680.0,annotator_1,,standup,,or if we're both gonna get arrested.,false,multimodal_tvsum_style
+oUUVRa2SNWU,680.0,682.0,annotator_1,,standup,,"or if we're both gonna get arrested. Okay, I don't know the social etiquette in this situation.",false,multimodal_tvsum_style
+oUUVRa2SNWU,682.0,684.0,annotator_1,,standup,,"Okay, I don't know the social etiquette in this situation.",false,multimodal_tvsum_style
+oUUVRa2SNWU,684.0,686.0,annotator_1,,standup,,All I know is there's a train in three minutes.,false,multimodal_tvsum_style
+oUUVRa2SNWU,686.0,688.0,annotator_1,,standup,,All I know is there's a train in three minutes.,false,multimodal_tvsum_style
+oUUVRa2SNWU,688.0,690.0,annotator_1,,standup,,All I know is there's a train in three minutes.,false,multimodal_tvsum_style
+oUUVRa2SNWU,690.0,692.0,annotator_1,,standup,,That shit will never fly in Malaysia.,false,multimodal_tvsum_style
+oUUVRa2SNWU,692.0,694.0,annotator_1,,standup,,"That shit will never fly in Malaysia. Where I'm from in Malaysia, you stick your hand in the door,",false,multimodal_tvsum_style
+oUUVRa2SNWU,694.0,696.0,annotator_1,,standup,,"Where I'm from in Malaysia, you stick your hand in the door, the doors close, you get dragged for like a mile.",false,multimodal_tvsum_style
+oUUVRa2SNWU,696.0,698.0,annotator_1,,standup,,"the doors close, you get dragged for like a mile.",false,multimodal_tvsum_style
+oUUVRa2SNWU,698.0,700.0,annotator_1,,standup,,"the doors close, you get dragged for like a mile. Right, you get brought to your knees by the system.",false,multimodal_tvsum_style
+oUUVRa2SNWU,700.0,702.0,annotator_1,,standup,,"Right, you get brought to your knees by the system.",false,multimodal_tvsum_style
+oUUVRa2SNWU,702.0,704.0,annotator_1,,standup,,"Right, you get brought to your knees by the system. As the train runs over you,",false,multimodal_tvsum_style
+oUUVRa2SNWU,704.0,706.0,annotator_1,,standup,,"As the train runs over you, it starts going after your family, right?",false,multimodal_tvsum_style
+oUUVRa2SNWU,706.0,708.0,annotator_1,,standup,,"it starts going after your family, right?",false,multimodal_tvsum_style
+oUUVRa2SNWU,708.0,710.0,annotator_1,,standup,,You start like bleeding out on the tracks.,false,multimodal_tvsum_style
+oUUVRa2SNWU,710.0,712.0,annotator_1,,standup,,You start like bleeding out on the tracks. The door's open. We all walk over your dead corpse.,false,multimodal_tvsum_style
+oUUVRa2SNWU,712.0,714.0,annotator_1,,standup,,We all walk over your dead corpse.,false,multimodal_tvsum_style
+oUUVRa2SNWU,714.0,716.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,716.0,718.0,annotator_1,,standup,,"Yeah, that's what you get you dumb fuck.",false,multimodal_tvsum_style
+oUUVRa2SNWU,718.0,720.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,720.0,722.0,annotator_1,,standup,,Not in America.,false,multimodal_tvsum_style
+oUUVRa2SNWU,722.0,724.0,annotator_1,,standup,,"In America one, man can stop the entire train line.",false,multimodal_tvsum_style
+oUUVRa2SNWU,724.0,726.0,annotator_1,,standup,,"In America one, man can stop the entire train line.",false,multimodal_tvsum_style
+oUUVRa2SNWU,726.0,728.0,annotator_1,,standup,,"In America one, man can stop the entire train line. Because everyone can make a difference.",false,multimodal_tvsum_style
+oUUVRa2SNWU,728.0,730.0,annotator_1,,standup,,Because everyone can make a difference.,false,multimodal_tvsum_style
+oUUVRa2SNWU,730.0,732.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,732.0,734.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,734.0,736.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,736.0,738.0,annotator_1,,standup,,"I was walking down West 4th street in Manhattan,",false,multimodal_tvsum_style
+oUUVRa2SNWU,738.0,740.0,annotator_1,,standup,,"I was walking down West 4th street in Manhattan,",false,multimodal_tvsum_style
+oUUVRa2SNWU,740.0,742.0,annotator_1,,standup,,"I was walking down West 4th street in Manhattan, in New York City, minding my own business.",false,multimodal_tvsum_style
+oUUVRa2SNWU,742.0,744.0,annotator_1,,standup,,"in New York City, minding my own business.",false,multimodal_tvsum_style
+oUUVRa2SNWU,744.0,746.0,annotator_1,,standup,,"in New York City, minding my own business. Not looking at my phone, actually paying attention",false,multimodal_tvsum_style
+oUUVRa2SNWU,746.0,748.0,annotator_1,,standup,,"Not looking at my phone, actually paying attention to the world around me during the pandemic.",false,multimodal_tvsum_style
+oUUVRa2SNWU,748.0,750.0,annotator_1,,standup,,to the world around me during the pandemic. Just trying to get some fresh air. Actually having a nice night.,false,multimodal_tvsum_style
+oUUVRa2SNWU,750.0,752.0,annotator_1,,standup,,"Actually having a nice night. I was walking down the street in Manhattan,",false,multimodal_tvsum_style
+oUUVRa2SNWU,752.0,754.0,annotator_1,,standup,,"I was walking down the street in Manhattan,",false,multimodal_tvsum_style
+oUUVRa2SNWU,754.0,756.0,annotator_1,,standup,,"I was walking down the street in Manhattan, looking around and out of nowhere,",false,multimodal_tvsum_style
+oUUVRa2SNWU,756.0,758.0,annotator_1,,standup,,"looking around and out of nowhere, this woman walks right up to me,",false,multimodal_tvsum_style
+oUUVRa2SNWU,758.0,760.0,annotator_1,,standup,,"this woman walks right up to me, grabs me on the throat and just starts squeezing.",false,multimodal_tvsum_style
+oUUVRa2SNWU,760.0,762.0,annotator_1,,standup,,grabs me on the throat and just starts squeezing.,false,multimodal_tvsum_style
+oUUVRa2SNWU,762.0,764.0,annotator_1,,standup,,grabs me on the throat and just starts squeezing. So like I throw her off and then she squares up.,false,multimodal_tvsum_style
+oUUVRa2SNWU,764.0,766.0,annotator_1,,standup,,So like I throw her off and then she squares up.,false,multimodal_tvsum_style
+oUUVRa2SNWU,766.0,768.0,annotator_1,,standup,,So like I throw her off and then she squares up.,false,multimodal_tvsum_style
+oUUVRa2SNWU,768.0,770.0,annotator_1,,standup,,And then I look at her and I just walk away.,false,multimodal_tvsum_style
+oUUVRa2SNWU,770.0,772.0,annotator_1,,standup,,And then I look at her and I just walk away.,false,multimodal_tvsum_style
+oUUVRa2SNWU,772.0,774.0,annotator_1,,standup,,And then I look at her and I just walk away.,false,multimodal_tvsum_style
+oUUVRa2SNWU,774.0,776.0,annotator_1,,standup,,And that's like a normal interaction in New York.,false,multimodal_tvsum_style
+oUUVRa2SNWU,776.0,778.0,annotator_1,,standup,,And that's like a normal interaction in New York.,false,multimodal_tvsum_style
+oUUVRa2SNWU,778.0,780.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,780.0,782.0,annotator_1,,standup,,Neither of us said a word.,false,multimodal_tvsum_style
+oUUVRa2SNWU,782.0,784.0,annotator_1,,standup,,The entire time we didn't even make a sound.,false,multimodal_tvsum_style
+oUUVRa2SNWU,784.0,786.0,annotator_1,,standup,,The entire time we didn't even make a sound.,false,multimodal_tvsum_style
+oUUVRa2SNWU,786.0,788.0,annotator_1,,standup,,"We didn't review each other,",false,multimodal_tvsum_style
+oUUVRa2SNWU,788.0,790.0,annotator_1,,standup,,"We didn't review each other, because we both knew what was going on.",false,multimodal_tvsum_style
+oUUVRa2SNWU,790.0,792.0,annotator_1,,standup,,because we both knew what was going on. We both knew what that whole thing was about.,false,multimodal_tvsum_style
+oUUVRa2SNWU,792.0,794.0,annotator_1,,standup,,We both knew what that whole thing was about.,false,multimodal_tvsum_style
+oUUVRa2SNWU,794.0,796.0,annotator_1,,standup,,"I looked at her and I was like,",false,multimodal_tvsum_style
+oUUVRa2SNWU,796.0,798.0,annotator_1,,standup,,Oh you crazy?,false,multimodal_tvsum_style
+oUUVRa2SNWU,798.0,800.0,annotator_1,,standup,,Oh you crazy?,false,multimodal_tvsum_style
+oUUVRa2SNWU,800.0,802.0,annotator_1,,standup,,Oh you crazy? Just like everyone on the internet.,false,multimodal_tvsum_style
+oUUVRa2SNWU,802.0,804.0,annotator_1,,standup,,"Just like everyone on the internet. All right, see you later crazy.",false,multimodal_tvsum_style
+oUUVRa2SNWU,804.0,806.0,annotator_1,,standup,,"All right, see you later crazy. I didn't engage and I walked away.",false,multimodal_tvsum_style
+oUUVRa2SNWU,806.0,808.0,annotator_1,,standup,,"I didn't engage and I walked away. And then she looked at me and she was like,",false,multimodal_tvsum_style
+oUUVRa2SNWU,808.0,810.0,annotator_1,,standup,,"And then she looked at me and she was like, ""Oh, this is not a man who's gonna",false,multimodal_tvsum_style
+oUUVRa2SNWU,810.0,812.0,annotator_1,,standup,,"""Oh, this is not a man who's gonna ""fight a woman on the street.",false,multimodal_tvsum_style
+oUUVRa2SNWU,812.0,814.0,annotator_1,,standup,,"""fight a woman on the street.",false,multimodal_tvsum_style
+oUUVRa2SNWU,814.0,816.0,annotator_1,,standup,,"""See you later, man.""",false,multimodal_tvsum_style
+oUUVRa2SNWU,816.0,818.0,annotator_1,,standup,,Then we just went separate ways.,false,multimodal_tvsum_style
+oUUVRa2SNWU,818.0,820.0,annotator_1,,standup,,Then we just went separate ways. And that was the end of it.,false,multimodal_tvsum_style
+oUUVRa2SNWU,820.0,822.0,annotator_1,,standup,,And that was the end of it.,false,multimodal_tvsum_style
+oUUVRa2SNWU,822.0,824.0,annotator_1,,standup,,And I still respect that woman more,false,multimodal_tvsum_style
+oUUVRa2SNWU,824.0,826.0,annotator_1,,standup,,And I still respect that woman more than these fucking Twitter Yelp reviewing bloggers.,false,multimodal_tvsum_style
+oUUVRa2SNWU,826.0,828.0,annotator_1,,standup,,than these fucking Twitter Yelp reviewing bloggers.,false,multimodal_tvsum_style
+oUUVRa2SNWU,828.0,830.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,830.0,832.0,annotator_1,,standup,,Because she was unhappy about something in her life.,false,multimodal_tvsum_style
+oUUVRa2SNWU,832.0,834.0,annotator_1,,standup,,Because she was unhappy about something in her life.,false,multimodal_tvsum_style
+oUUVRa2SNWU,834.0,836.0,annotator_1,,standup,,Because she was unhappy about something in her life. She got off her ass and did something about it.,false,multimodal_tvsum_style
+oUUVRa2SNWU,836.0,838.0,annotator_1,,standup,,She got off her ass and did something about it. She didn't just sit behind a keyboard,false,multimodal_tvsum_style
+oUUVRa2SNWU,838.0,840.0,annotator_1,,standup,,She didn't just sit behind a keyboard tweeting with her balls.,false,multimodal_tvsum_style
+oUUVRa2SNWU,840.0,842.0,annotator_1,,standup,,tweeting with her balls. Critiquing other people's creations,false,multimodal_tvsum_style
+oUUVRa2SNWU,842.0,844.0,annotator_1,,standup,,Critiquing other people's creations,false,multimodal_tvsum_style
+oUUVRa2SNWU,844.0,846.0,annotator_1,,standup,,Critiquing other people's creations without making anything for themselves.,false,multimodal_tvsum_style
+oUUVRa2SNWU,846.0,848.0,annotator_1,,standup,,without making anything for themselves. Like a bunch of parasites eating the host.,false,multimodal_tvsum_style
+oUUVRa2SNWU,848.0,850.0,annotator_1,,standup,,"Like a bunch of parasites eating the host. No, she didn't like Asian people.",false,multimodal_tvsum_style
+oUUVRa2SNWU,850.0,852.0,annotator_1,,standup,,"No, she didn't like Asian people.",false,multimodal_tvsum_style
+oUUVRa2SNWU,852.0,854.0,annotator_1,,standup,,"No, she didn't like Asian people. She went and committed a hate crime.",false,multimodal_tvsum_style
+oUUVRa2SNWU,854.0,856.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,856.0,858.0,annotator_1,,standup,,And I can respect that.,false,multimodal_tvsum_style
+oUUVRa2SNWU,858.0,860.0,annotator_1,,standup,,That's proactive.,false,multimodal_tvsum_style
+oUUVRa2SNWU,860.0,862.0,annotator_1,,standup,,That's proactive. It's gone to a point where you can flunk,false,multimodal_tvsum_style
+oUUVRa2SNWU,862.0,864.0,annotator_1,,standup,,"It's gone to a point where you can flunk out of med school, very next day review doctors.",false,multimodal_tvsum_style
+oUUVRa2SNWU,864.0,866.0,annotator_1,,standup,,"out of med school, very next day review doctors.",false,multimodal_tvsum_style
+oUUVRa2SNWU,866.0,868.0,annotator_1,,standup,,"out of med school, very next day review doctors. Doesn't make any sense. Everybody reviewing everything",false,multimodal_tvsum_style
+oUUVRa2SNWU,868.0,870.0,annotator_1,,standup,,"Everybody reviewing everything like their experts, people reviewing comedy.",false,multimodal_tvsum_style
+oUUVRa2SNWU,870.0,872.0,annotator_1,,standup,,"like their experts, people reviewing comedy.",false,multimodal_tvsum_style
+oUUVRa2SNWU,872.0,874.0,annotator_1,,standup,,"like their experts, people reviewing comedy. Can you imagine that? Who the fuck reviews comedy?",false,multimodal_tvsum_style
+oUUVRa2SNWU,874.0,876.0,annotator_1,,standup,,Who the fuck reviews comedy?,false,multimodal_tvsum_style
+oUUVRa2SNWU,876.0,878.0,annotator_1,,standup,,Who the fuck reviews comedy? So what the fuck do you know about it?,false,multimodal_tvsum_style
+oUUVRa2SNWU,878.0,880.0,annotator_1,,standup,,So what the fuck do you know about it?,false,multimodal_tvsum_style
+oUUVRa2SNWU,880.0,882.0,annotator_1,,standup,,Ever been on stage in your life? Try to tell me how to do my job.,false,multimodal_tvsum_style
+oUUVRa2SNWU,882.0,884.0,annotator_1,,standup,,Try to tell me how to do my job. That's like me going to a maternity ward,false,multimodal_tvsum_style
+oUUVRa2SNWU,884.0,886.0,annotator_1,,standup,,That's like me going to a maternity ward in a hospital and giving women tips on how to give birth.,false,multimodal_tvsum_style
+oUUVRa2SNWU,886.0,888.0,annotator_1,,standup,,in a hospital and giving women tips on how to give birth.,false,multimodal_tvsum_style
+oUUVRa2SNWU,888.0,890.0,annotator_1,,standup,,"in a hospital and giving women tips on how to give birth. Yeah, what kind of fucking asshole would",false,multimodal_tvsum_style
+oUUVRa2SNWU,890.0,892.0,annotator_1,,standup,,"Yeah, what kind of fucking asshole would go into a maternity ward and just look for women in labor.",false,multimodal_tvsum_style
+oUUVRa2SNWU,892.0,894.0,annotator_1,,standup,,go into a maternity ward and just look for women in labor.,false,multimodal_tvsum_style
+oUUVRa2SNWU,894.0,896.0,annotator_1,,standup,,go into a maternity ward and just look for women in labor.,false,multimodal_tvsum_style
+oUUVRa2SNWU,896.0,898.0,annotator_1,,standup,,"Just go, ""Hey, you really should be ""pushing harder during childbirth.",false,multimodal_tvsum_style
+oUUVRa2SNWU,898.0,900.0,annotator_1,,standup,,"""pushing harder during childbirth.",false,multimodal_tvsum_style
+oUUVRa2SNWU,900.0,902.0,annotator_1,,standup,,"""You don't look like you're pushing ""hard enough during childbirth.",false,multimodal_tvsum_style
+oUUVRa2SNWU,902.0,904.0,annotator_1,,standup,,"""hard enough during childbirth.",false,multimodal_tvsum_style
+oUUVRa2SNWU,904.0,906.0,annotator_1,,standup,,"""I think you're relying too much ""on your ethnic background during childbirth.",false,multimodal_tvsum_style
+oUUVRa2SNWU,906.0,908.0,annotator_1,,standup,,"""on your ethnic background during childbirth.",false,multimodal_tvsum_style
+oUUVRa2SNWU,908.0,910.0,annotator_1,,standup,,"""on your ethnic background during childbirth.",false,multimodal_tvsum_style
+oUUVRa2SNWU,910.0,912.0,annotator_1,,standup,,"""Oh, the C-section, that's a real lazy form of childbirth.""",false,multimodal_tvsum_style
+oUUVRa2SNWU,912.0,914.0,annotator_1,,standup,,"""Oh, the C-section, that's a real lazy form of childbirth.""",false,multimodal_tvsum_style
+oUUVRa2SNWU,914.0,916.0,annotator_1,,standup,,"""Oh, the C-section, that's a real lazy form of childbirth."" ""Two stars.""",false,multimodal_tvsum_style
+oUUVRa2SNWU,916.0,918.0,annotator_1,,standup,,"""Two stars.""",false,multimodal_tvsum_style
+oUUVRa2SNWU,918.0,920.0,annotator_1,,standup,,It's also not my job to teach you,false,multimodal_tvsum_style
+oUUVRa2SNWU,920.0,922.0,annotator_1,,standup,,"It's also not my job to teach you how to fucking do comedy, all right?",false,multimodal_tvsum_style
+oUUVRa2SNWU,922.0,924.0,annotator_1,,standup,,"how to fucking do comedy, all right? If you wanna find out how to do this,",false,multimodal_tvsum_style
+oUUVRa2SNWU,924.0,926.0,annotator_1,,standup,,"If you wanna find out how to do this, you go do an open mic multiple times a night",false,multimodal_tvsum_style
+oUUVRa2SNWU,926.0,928.0,annotator_1,,standup,,"you go do an open mic multiple times a night for the next decade. And you come and tell me, all right?",false,multimodal_tvsum_style
+oUUVRa2SNWU,928.0,930.0,annotator_1,,standup,,"And you come and tell me, all right? If you think there's no artistry to this,",false,multimodal_tvsum_style
+oUUVRa2SNWU,930.0,932.0,annotator_1,,standup,,"If you think there's no artistry to this, if you think it's just about saying offensive shit,",false,multimodal_tvsum_style
+oUUVRa2SNWU,932.0,934.0,annotator_1,,standup,,"if you think it's just about saying offensive shit, or never saying anything offensive, whatever then you fucking go do ",false,multimodal_tvsum_style
+oUUVRa2SNWU,934.0,936.0,annotator_1,,standup,,then you fucking go do it. You do it and you tell me.,false,multimodal_tvsum_style
+oUUVRa2SNWU,936.0,938.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,938.0,940.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,940.0,942.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,942.0,944.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,944.0,946.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,946.0,948.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,948.0,950.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,950.0,952.0,annotator_1,,standup,,,false,multimodal_tvsum_style
+oUUVRa2SNWU,952.0,954.0,annotator_1,,standup,,,false,multimodal_tvsum_style
