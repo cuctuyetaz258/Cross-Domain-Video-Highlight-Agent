@@ -6,7 +6,16 @@ def render_stepper_state(current: int):
     Renders the Stepper Bar UI natively using Streamlit's st.progress to completely eliminate 
     any DOM teardown flickering (glitching) caused by st.empty() markdown replacements.
     """
-    phases = ["Ready", "Observe", "Plan", "Analyze", "Decide", "Explain", "Completed"]
+    phases = [
+        "Ready",
+        "Preflight",
+        "Observe",
+        "Plan",
+        "Analyze",
+        "Decide",
+        "Explain",
+        "Completed",
+    ]
 
     html = "<div style='display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 10px; margin-bottom: 30px; font-family: \"Inter\", sans-serif;'>"
 

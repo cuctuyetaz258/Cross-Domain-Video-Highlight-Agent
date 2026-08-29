@@ -32,8 +32,9 @@ except ImportError:
     HAS_RICH = False
     console = None
 
-from highlight_agent.agent import build_agent_graph
-from highlight_agent.agent.state import ProgressEvent
+from highlight_agent.agent import build_agent_graph  # noqa: E402
+from highlight_agent.agent.state import ProgressEvent  # noqa: E402
+from highlight_agent.features.ltr_contract import LTRPipelineError  # noqa: E402
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
@@ -175,5 +176,21 @@ def main() -> None:
     print(json.dumps(summary, ensure_ascii=False, indent=2))
 
 
+def cli() -> None:
+    """Run the CLI and serialize required-LTR failures for automation and UI wrappers."""
+
+    try:
+        main()
+    except LTRPipelineError as exc:
+        print(
+            json.dumps(
+                {"error": {"code": exc.code, "message": exc.message}},
+                ensure_ascii=False,
+            ),
+            file=sys.stderr,
+        )
+        raise SystemExit(2) from None
+
+
 if __name__ == "__main__":
-    main()
+    cli()

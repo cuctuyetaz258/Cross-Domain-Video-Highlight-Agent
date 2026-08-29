@@ -267,7 +267,7 @@ Checkpoint được chọn theo Average Precision trên validation windows và c
 `L_ref`, epoch, AP, dataset fingerprint và training config. `training_log.json` ghi riêng
 margin loss, temporal smoothness loss và total loss theo epoch.
 
-### Đánh giá LTR với profile weights
+### Đánh giá LTR và diagnostic baselines
 
 Chạy evaluator trên cùng manifest/cache và xuất JSON, CSV theo video cùng bảng Markdown:
 

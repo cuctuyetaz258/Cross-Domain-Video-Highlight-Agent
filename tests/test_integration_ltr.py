@@ -202,3 +202,21 @@ def test_cli_defaults_to_required_checkpoint_and_removes_visual_flags() -> None:
                 "pixel_diff",
             ]
         )
+
+
+def test_cli_serializes_ltr_failure_and_exits_nonzero(monkeypatch, capsys) -> None:
+    from scripts import run_agent
+
+    def fail() -> None:
+        raise LTRPipelineError("LTR_CHECKPOINT_NOT_FOUND", "missing fixture")
+
+    monkeypatch.setattr(run_agent, "main", fail)
+
+    with pytest.raises(SystemExit) as exit_info:
+        run_agent.cli()
+
+    assert exit_info.value.code == 2
+    assert capsys.readouterr().err.strip() == (
+        '{"error": {"code": "LTR_CHECKPOINT_NOT_FOUND", '
+        '"message": "missing fixture"}}'
+    )

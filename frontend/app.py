@@ -79,7 +79,7 @@ def main():
         if result:
             st.session_state["agent_result"] = result
             st.session_state["is_running"] = False
-            st.session_state["current_phase"] = 6 # Completed (index 6 in the padded array)
+            st.session_state["current_phase"] = 7  # Completed
             # The final step is already rendered inside run_live_agent, so no need to render again
         else:
             st.session_state["is_running"] = False

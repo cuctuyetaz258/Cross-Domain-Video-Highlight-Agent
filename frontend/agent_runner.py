@@ -87,7 +87,7 @@ def run_live_agent(video_url: str, domain: str, stepper_placeholder):
             accumulated_state.update(output[node_name])
 
             if node_name in phases:
-                current_phase_idx = phases.index(node_name) + 2
+                current_phase_idx = phases.index(node_name) + 1
                 with stepper_placeholder:
                     from components.stepper import render_stepper_state
                     render_stepper_state(current_phase_idx)

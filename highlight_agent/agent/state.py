@@ -17,7 +17,6 @@ from highlight_agent.schemas import (
 )
 
 Domain = Literal["lecture", "podcast", "standup"]
-SignalProfile = dict[str, float]
 
 
 # ──────────────────────────────────────────────
@@ -55,7 +54,6 @@ class AgentState(TypedDict, total=False):
     highlight_count: NotRequired[int]
     workspace: NotRequired[MediaWorkspace]
     transcript: NotRequired[TranscriptDocument]
-    profile: NotRequired[SignalProfile]
     analysis_plan: NotRequired[dict[str, Any]]
     features: NotRequired[dict[str, Any]]
     feature_path: NotRequired[str]
