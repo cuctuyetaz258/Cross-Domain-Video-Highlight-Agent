@@ -119,10 +119,20 @@ pytest tests
 
 ---
 
+### 4.3 Đồng bộ Feature Caches & Models (Chỉ ~1.6 MB)
+Không cần copy file video/audio nặng (~850 MB). Toàn bộ quá trình training chỉ cần các file feature cache, transcript và model checkpoint có trong file `custom_features_and_models.zip` (1.66 MB):
+```bash
+# Giải nén tại thư mục gốc của repo trên máy mới
+unzip -o custom_features_and_models.zip
+```
+*(Nếu đã giải nén file này, bạn có thể bỏ qua Bước 1 bên dưới và chuyển thẳng đến Bước 2).*
+
+---
+
 ## 5. Quy trình huấn luyện từng bước trên máy mới
 
-### BƯỚC 1: Trích xuất 10 Feature Caches cho Custom In-Domain Video
-Chạy lệnh sau để build/rebuild toàn bộ feature cache cho 10 video in-domain với Extractor v1.1:
+### BƯỚC 1: Trích xuất Feature Caches (Chỉ cần nếu tự trích xuất lại từ video gốc)
+Nếu muốn tự tính toán lại feature cache trên máy mới:
 ```bash
 python scripts/build_feature_cache.py \
   --manifest data/manifests/custom_fold0.jsonl \
@@ -131,7 +141,6 @@ python scripts/build_feature_cache.py \
   --device cuda \
   --report data/reports/custom_cache_build.json
 ```
-*(Nếu máy không có CUDA, đổi `--device cpu`)*.
 
 ---
 
