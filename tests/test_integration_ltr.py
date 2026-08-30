@@ -191,7 +191,7 @@ def test_cli_defaults_to_required_checkpoint_and_removes_visual_flags() -> None:
     from scripts.run_agent import parse_args
 
     args = parse_args(["video.mp4", "--domain", "lecture"])
-    assert args.ltr_model_path == "data/models/ltr_scorer.pt"
+    assert args.ltr_model_path == "data/models/ltr_target_lecture_podcast.pt"
     ranged = parse_args(
         ["video.mp4", "--domain", "podcast", "--min-speaker-count", "1", "--max-speaker-count", "3"]
     )

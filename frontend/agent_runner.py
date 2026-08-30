@@ -98,7 +98,9 @@ def run_live_analysis(video_url: str, domain: str, stepper_placeholder):
 
     phases = ["preflight", "observe", "plan", "analyze"]
     status, log, emit = _progress_ui("🎬 Building reusable LTR analysis...")
-    ltr_model_path = st.session_state.get("ltr_model_path", "data/models/ltr_scorer.pt")
+    ltr_model_path = st.session_state.get(
+        "ltr_model_path", "data/models/ltr_target_lecture_podcast.pt"
+    )
     known_speaker_count = st.session_state.get("known_speaker_count", None)
     aspect_ratio = st.session_state.get("target_aspect_ratio", "9:16")
     min_speaker_count = st.session_state.get("min_speaker_count", None)

@@ -69,8 +69,8 @@ Sau khi cài dependency, chạy đúng một lệnh; không cần tài khoản h
 python -m scripts.download_ltr_checkpoint
 ```
 
-Script tải artifact `ltr-scorer-v1.1`, kiểm tra kích thước và SHA-256, chạy LTR preflight trên CPU,
-sau đó mới atomic install vào `data/models/ltr_scorer.pt`. Nếu checkpoint hợp lệ đã tồn tại, lệnh
+Script tải artifact `in-domain-ltr-5fold-v1`, kiểm tra kích thước và SHA-256, chạy LTR preflight trên CPU,
+sau đó mới atomic install vào `data/models/ltr_target_lecture_podcast.pt`. Nếu checkpoint hợp lệ đã tồn tại, lệnh
 trả `already_installed` và không tải lại. Không dùng `--force` trừ khi chủ động muốn thay một file
 local không khớp manifest.
 
@@ -167,7 +167,7 @@ python -m scripts.run_agent sample.mp4 \
   --highlight-count 3
 ```
 
-CLI mặc định đọc `data/models/ltr_scorer.pt`, nên không cần truyền `--ltr-model-path` sau khi đã
+CLI mặc định đọc `data/models/ltr_target_lecture_podcast.pt`, nên không cần truyền `--ltr-model-path` sau khi đã
 chạy downloader ở bước cài đặt.
 
 Ép dùng Whisper và tắt subtitle khi cần test riêng:
@@ -240,9 +240,9 @@ biên xác định hiện tại.
 
 ### Checkpoint chia sẻ trên Kaggle
 
-Checkpoint production được phát hành tại:
+Checkpoint operational được phát hành tại:
 
-- <https://www.kaggle.com/datasets/cuctuyetaz258/cross-validation-checkpoint>
+- <https://www.kaggle.com/datasets/nguyentrann0703/in-domain-ltr-5fold-results>
 
 Người dùng thông thường chỉ cần:
 
@@ -251,11 +251,11 @@ python -m scripts.download_ltr_checkpoint
 ```
 
 Không cần tải ZIP thủ công, giải nén, đổi tên hay nhập checkpoint path trên CLI. Danh tính artifact
-được khóa trong `artifacts/manifests/ltr_scorer_v1_1.json`:
+được khóa trong `artifacts/manifests/ltr_target_lecture_podcast_v1.json`:
 
-- artifact `ltr-scorer-v1.1`, feature schema `1.1`;
-- best epoch `3`, validation AP `0.840564`;
-- SHA-256 `059038c7dd9113a48a3fc6c2e8167f7ee40ccfeaa48952a91c84cd614beb3596`;
+- artifact `in-domain-ltr-5fold-v1`, feature schema `1.1`;
+- release epoch `40` sau 5-fold evaluation; training-set AP không phải held-out metric;
+- SHA-256 `6355b8c39ad3038db5fde803b6cc8e90fb4044af8cbddfe7e567b463af76cb87`;
 - 7 channel theo đúng thứ tự `rms`, `pitch`, `silence`, `text_score`, `scene_change`, `gesture`,
   `turn_rate`.
 

@@ -71,7 +71,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--no-subtitles", action="store_true")
     parser.add_argument(
         "--ltr-model-path",
-        default="data/models/ltr_scorer.pt",
+        default="data/models/ltr_target_lecture_podcast.pt",
         help="Required compatible LTR checkpoint (.pt).",
     )
     parser.add_argument(

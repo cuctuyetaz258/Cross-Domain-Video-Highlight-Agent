@@ -16,8 +16,8 @@ from typing import Any, Callable
 
 from highlight_agent.models.ltr_scorer import AdditiveAttentionScorer
 
-DEFAULT_MANIFEST = Path("artifacts/manifests/ltr_scorer_v1_1.json")
-DEFAULT_OUTPUT = Path("data/models/ltr_scorer.pt")
+DEFAULT_MANIFEST = Path("artifacts/manifests/ltr_target_lecture_podcast_v1.json")
+DEFAULT_OUTPUT = Path("data/models/ltr_target_lecture_podcast.pt")
 
 
 class CheckpointInstallError(RuntimeError):

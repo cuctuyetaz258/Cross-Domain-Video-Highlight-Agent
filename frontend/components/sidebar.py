@@ -88,7 +88,7 @@ def render_sidebar():
 
         checkpoint_path = st.text_input(
             "LTR checkpoint path",
-            value="data/models/ltr_scorer.pt",
+            value="data/models/ltr_target_lecture_podcast.pt",
             key="ltr_model_path",
             help="Verified before media processing and whenever a snapshot is resumed.",
         )

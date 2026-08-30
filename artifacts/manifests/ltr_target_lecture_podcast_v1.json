@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "artifact_version": "in-domain-ltr-5fold-v1",
+  "artifact_page": "https://www.kaggle.com/datasets/nguyentrann0703/in-domain-ltr-5fold-results",
+  "download_urls": [
+    "https://www.kaggle.com/api/v1/datasets/download/nguyentrann0703/in-domain-ltr-5fold-results"
+  ],
+  "filename": "ltr_target_lecture_podcast.pt",
+  "size_bytes": 5500,
+  "sha256": "6355b8c39ad3038db5fde803b6cc8e90fb4044af8cbddfe7e567b463af76cb87",
+  "checkpoint_version": "1.0",
+  "feature_schema": "1.1",
+  "channel_order": [
+    "rms",
+    "pitch",
+    "silence",
+    "text_score",
+    "scene_change",
+    "gesture",
+    "turn_rate"
+  ],
+  "sample_rate_hz": 10,
+  "normalization": "minmax_per_video",
+  "window_size": 50,
+  "hop_size": 10,
+  "dataset_fingerprint": "5c6f2567a7a9b81da764bf12efeb01a9cf0d4c4d519bc4b68f3319c8928f68df"
+}
