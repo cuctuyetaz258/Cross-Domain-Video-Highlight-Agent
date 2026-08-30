@@ -1,562 +1,562 @@
 ﻿video_id,start_sec,end_sec,annotator_id,importance,domain,reason_tag,transcript_hint,needs_review,label_protocol
-aircAruvnKk,0.0,2.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-aircAruvnKk,2.0,4.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-aircAruvnKk,4.0,6.0,annotator_1,,lecture,,This is a 3.,false,multimodal_tvsum_style
-aircAruvnKk,6.0,8.0,annotator_1,,lecture,,"It's sloppily written and rendered at an extremely low resolution of 28x28 pixels,",false,multimodal_tvsum_style
-aircAruvnKk,8.0,10.0,annotator_1,,lecture,,"It's sloppily written and rendered at an extremely low resolution of 28x28 pixels,",false,multimodal_tvsum_style
-aircAruvnKk,10.0,12.0,annotator_1,,lecture,,"It's sloppily written and rendered at an extremely low resolution of 28x28 pixels, but your brain has no trouble recogni",false,multimodal_tvsum_style
-aircAruvnKk,12.0,14.0,annotator_1,,lecture,,but your brain has no trouble recognizing it as a 3.,false,multimodal_tvsum_style
-aircAruvnKk,14.0,16.0,annotator_1,,lecture,,And I want you to take a moment to appreciate how,false,multimodal_tvsum_style
-aircAruvnKk,16.0,18.0,annotator_1,,lecture,,And I want you to take a moment to appreciate how crazy it is that brains can do this so effortlessly.,false,multimodal_tvsum_style
-aircAruvnKk,18.0,20.0,annotator_1,,lecture,,"crazy it is that brains can do this so effortlessly. I mean, this, this and this are also recognizable as 3s,",false,multimodal_tvsum_style
-aircAruvnKk,20.0,22.0,annotator_1,,lecture,,"I mean, this, this and this are also recognizable as 3s,",false,multimodal_tvsum_style
-aircAruvnKk,22.0,24.0,annotator_1,,lecture,,"I mean, this, this and this are also recognizable as 3s, even though the specific values of each pixel is very different",false,multimodal_tvsum_style
-aircAruvnKk,24.0,26.0,annotator_1,,lecture,,even though the specific values of each pixel is very different from one,false,multimodal_tvsum_style
-aircAruvnKk,26.0,28.0,annotator_1,,lecture,,even though the specific values of each pixel is very different from one image to the next.,false,multimodal_tvsum_style
-aircAruvnKk,28.0,30.0,annotator_1,,lecture,,image to the next. The particular light-sensitive cells in your eye that are firing when you,false,multimodal_tvsum_style
-aircAruvnKk,30.0,32.0,annotator_1,,lecture,,The particular light-sensitive cells in your eye that are firing when you,false,multimodal_tvsum_style
-aircAruvnKk,32.0,34.0,annotator_1,,lecture,,The particular light-sensitive cells in your eye that are firing when you see this 3 are very different from the ones fi,false,multimodal_tvsum_style
-aircAruvnKk,34.0,36.0,annotator_1,,lecture,,see this 3 are very different from the ones firing when you see this 3.,false,multimodal_tvsum_style
-aircAruvnKk,36.0,38.0,annotator_1,,lecture,,see this 3 are very different from the ones firing when you see this 3. But something in that crazy-smart visual cortex ,false,multimodal_tvsum_style
-aircAruvnKk,38.0,40.0,annotator_1,,lecture,,But something in that crazy-smart visual cortex of yours resolves these as representing,false,multimodal_tvsum_style
-aircAruvnKk,40.0,42.0,annotator_1,,lecture,,But something in that crazy-smart visual cortex of yours resolves these as representing,false,multimodal_tvsum_style
-aircAruvnKk,42.0,44.0,annotator_1,,lecture,,"But something in that crazy-smart visual cortex of yours resolves these as representing the same idea, while at the same",false,multimodal_tvsum_style
-aircAruvnKk,44.0,46.0,annotator_1,,lecture,,"the same idea, while at the same time recognizing other images as their own distinct",false,multimodal_tvsum_style
-aircAruvnKk,46.0,48.0,annotator_1,,lecture,,"the same idea, while at the same time recognizing other images as their own distinct ideas.",false,multimodal_tvsum_style
-aircAruvnKk,48.0,50.0,annotator_1,,lecture,,"ideas. But if I told you, hey, sit down and write for me a program that takes in a grid of",false,multimodal_tvsum_style
-aircAruvnKk,50.0,52.0,annotator_1,,lecture,,"But if I told you, hey, sit down and write for me a program that takes in a grid of",false,multimodal_tvsum_style
-aircAruvnKk,52.0,54.0,annotator_1,,lecture,,"But if I told you, hey, sit down and write for me a program that takes in a grid of",false,multimodal_tvsum_style
-aircAruvnKk,54.0,56.0,annotator_1,,lecture,,"But if I told you, hey, sit down and write for me a program that takes in a grid of 28x28 pixels like this and outputs a",false,multimodal_tvsum_style
-aircAruvnKk,56.0,58.0,annotator_1,,lecture,,"28x28 pixels like this and outputs a single number between 0 and 10,",false,multimodal_tvsum_style
-aircAruvnKk,58.0,60.0,annotator_1,,lecture,,"28x28 pixels like this and outputs a single number between 0 and 10, telling you what it thinks the digit is, well the t",false,multimodal_tvsum_style
-aircAruvnKk,60.0,62.0,annotator_1,,lecture,,"telling you what it thinks the digit is, well the task goes from comically trivial to",false,multimodal_tvsum_style
-aircAruvnKk,62.0,64.0,annotator_1,,lecture,,"telling you what it thinks the digit is, well the task goes from comically trivial to",false,multimodal_tvsum_style
-aircAruvnKk,64.0,66.0,annotator_1,,lecture,,"telling you what it thinks the digit is, well the task goes from comically trivial to dauntingly difficult.",false,multimodal_tvsum_style
-aircAruvnKk,66.0,68.0,annotator_1,,lecture,,"dauntingly difficult. Unless you've been living under a rock, I think I hardly need to motivate the relevance",false,multimodal_tvsum_style
-aircAruvnKk,68.0,70.0,annotator_1,,lecture,,"Unless you've been living under a rock, I think I hardly need to motivate the relevance",false,multimodal_tvsum_style
-aircAruvnKk,70.0,72.0,annotator_1,,lecture,,"Unless you've been living under a rock, I think I hardly need to motivate the relevance and importance of machine learni",false,multimodal_tvsum_style
-aircAruvnKk,72.0,74.0,annotator_1,,lecture,,and importance of machine learning and neural networks to the present and to the future.,false,multimodal_tvsum_style
-aircAruvnKk,74.0,76.0,annotator_1,,lecture,,and importance of machine learning and neural networks to the present and to the future. But what I want to do here is s,false,multimodal_tvsum_style
-aircAruvnKk,76.0,78.0,annotator_1,,lecture,,"But what I want to do here is show you what a neural network actually is,",false,multimodal_tvsum_style
-aircAruvnKk,78.0,80.0,annotator_1,,lecture,,"But what I want to do here is show you what a neural network actually is, assuming no background, and to help visualize ",false,multimodal_tvsum_style
-aircAruvnKk,80.0,82.0,annotator_1,,lecture,,"assuming no background, and to help visualize what it's doing,",false,multimodal_tvsum_style
-aircAruvnKk,82.0,84.0,annotator_1,,lecture,,"assuming no background, and to help visualize what it's doing, not as a buzzword but as a piece of math.",false,multimodal_tvsum_style
-aircAruvnKk,84.0,86.0,annotator_1,,lecture,,"not as a buzzword but as a piece of math. My hope is that you come away feeling like the structure itself is motivated,",false,multimodal_tvsum_style
-aircAruvnKk,86.0,88.0,annotator_1,,lecture,,"My hope is that you come away feeling like the structure itself is motivated,",false,multimodal_tvsum_style
-aircAruvnKk,88.0,90.0,annotator_1,,lecture,,"My hope is that you come away feeling like the structure itself is motivated, and to feel like you know what it means wh",false,multimodal_tvsum_style
-aircAruvnKk,90.0,92.0,annotator_1,,lecture,,"and to feel like you know what it means when you read, or you hear about a neural network quote-unquote learning.",false,multimodal_tvsum_style
-aircAruvnKk,92.0,94.0,annotator_1,,lecture,,or you hear about a neural network quote-unquote learning.,false,multimodal_tvsum_style
-aircAruvnKk,94.0,96.0,annotator_1,,lecture,,or you hear about a neural network quote-unquote learning. This video is just going to be devoted to the structure compo,false,multimodal_tvsum_style
-aircAruvnKk,96.0,98.0,annotator_1,,lecture,,"This video is just going to be devoted to the structure component of that,",false,multimodal_tvsum_style
-aircAruvnKk,98.0,100.0,annotator_1,,lecture,,"This video is just going to be devoted to the structure component of that, and the following one is going to tackle lear",false,multimodal_tvsum_style
-aircAruvnKk,100.0,102.0,annotator_1,,lecture,,and the following one is going to tackle learning. What we're going to do is put together a neural,false,multimodal_tvsum_style
-aircAruvnKk,102.0,104.0,annotator_1,,lecture,,What we're going to do is put together a neural network that can learn to recognize handwritten digits.,false,multimodal_tvsum_style
-aircAruvnKk,104.0,106.0,annotator_1,,lecture,,network that can learn to recognize handwritten digits.,false,multimodal_tvsum_style
-aircAruvnKk,106.0,108.0,annotator_1,,lecture,,network that can learn to recognize handwritten digits.,false,multimodal_tvsum_style
-aircAruvnKk,108.0,110.0,annotator_1,,lecture,,"This is a somewhat classic example for introducing the topic,",false,multimodal_tvsum_style
-aircAruvnKk,110.0,112.0,annotator_1,,lecture,,"This is a somewhat classic example for introducing the topic,",false,multimodal_tvsum_style
-aircAruvnKk,112.0,114.0,annotator_1,,lecture,,"This is a somewhat classic example for introducing the topic, and I'm happy to stick with the status quo here,",false,multimodal_tvsum_style
-aircAruvnKk,114.0,116.0,annotator_1,,lecture,,"and I'm happy to stick with the status quo here, because at the end of the two videos I want to point you to a couple go",false,multimodal_tvsum_style
-aircAruvnKk,116.0,118.0,annotator_1,,lecture,,"because at the end of the two videos I want to point you to a couple good resources where you can learn more, and where ",false,multimodal_tvsum_style
-aircAruvnKk,118.0,120.0,annotator_1,,lecture,,"resources where you can learn more, and where you can download the code that",false,multimodal_tvsum_style
-aircAruvnKk,120.0,122.0,annotator_1,,lecture,,"resources where you can learn more, and where you can download the code that does this and play with it on your own comp",false,multimodal_tvsum_style
-aircAruvnKk,122.0,124.0,annotator_1,,lecture,,does this and play with it on your own computer.,false,multimodal_tvsum_style
-aircAruvnKk,124.0,126.0,annotator_1,,lecture,,"There are many many variants of neural networks,",false,multimodal_tvsum_style
-aircAruvnKk,126.0,128.0,annotator_1,,lecture,,"There are many many variants of neural networks, and in recent years there's been sort of a boom in research towards the",false,multimodal_tvsum_style
-aircAruvnKk,128.0,130.0,annotator_1,,lecture,,"and in recent years there's been sort of a boom in research towards these variants,",false,multimodal_tvsum_style
-aircAruvnKk,130.0,132.0,annotator_1,,lecture,,"and in recent years there's been sort of a boom in research towards these variants,",false,multimodal_tvsum_style
-aircAruvnKk,132.0,134.0,annotator_1,,lecture,,"and in recent years there's been sort of a boom in research towards these variants, but in these two introductory videos",false,multimodal_tvsum_style
-aircAruvnKk,134.0,136.0,annotator_1,,lecture,,but in these two introductory videos you and I are just going to look at the simplest,false,multimodal_tvsum_style
-aircAruvnKk,136.0,138.0,annotator_1,,lecture,,but in these two introductory videos you and I are just going to look at the simplest plain vanilla form with no added f,false,multimodal_tvsum_style
-aircAruvnKk,138.0,140.0,annotator_1,,lecture,,plain vanilla form with no added frills. This is kind of a necessary prerequisite for understanding any of the more powe,false,multimodal_tvsum_style
-aircAruvnKk,140.0,142.0,annotator_1,,lecture,,This is kind of a necessary prerequisite for understanding any of the more powerful,false,multimodal_tvsum_style
-aircAruvnKk,142.0,144.0,annotator_1,,lecture,,"This is kind of a necessary prerequisite for understanding any of the more powerful modern variants, and trust me it sti",false,multimodal_tvsum_style
-aircAruvnKk,144.0,146.0,annotator_1,,lecture,,"modern variants, and trust me it still has plenty of complexity for us to wrap our minds",false,multimodal_tvsum_style
-aircAruvnKk,146.0,148.0,annotator_1,,lecture,,"modern variants, and trust me it still has plenty of complexity for us to wrap our minds",false,multimodal_tvsum_style
-aircAruvnKk,148.0,150.0,annotator_1,,lecture,,"modern variants, and trust me it still has plenty of complexity for us to wrap our minds around. But even in this simple",false,multimodal_tvsum_style
-aircAruvnKk,150.0,152.0,annotator_1,,lecture,,"But even in this simplest form it can learn to recognize handwritten digits,",false,multimodal_tvsum_style
-aircAruvnKk,152.0,154.0,annotator_1,,lecture,,"But even in this simplest form it can learn to recognize handwritten digits, which is a pretty cool thing for a computer",false,multimodal_tvsum_style
-aircAruvnKk,154.0,156.0,annotator_1,,lecture,,which is a pretty cool thing for a computer to be able to do.,false,multimodal_tvsum_style
-aircAruvnKk,156.0,158.0,annotator_1,,lecture,,which is a pretty cool thing for a computer to be able to do. And at the same time you'll see how it does fall,false,multimodal_tvsum_style
-aircAruvnKk,158.0,160.0,annotator_1,,lecture,,And at the same time you'll see how it does fall short of a couple hopes that we might have for it.,false,multimodal_tvsum_style
-aircAruvnKk,160.0,162.0,annotator_1,,lecture,,short of a couple hopes that we might have for it.,false,multimodal_tvsum_style
-aircAruvnKk,162.0,164.0,annotator_1,,lecture,,"short of a couple hopes that we might have for it. As the name suggests neural networks are inspired by the brain, but l",false,multimodal_tvsum_style
-aircAruvnKk,164.0,166.0,annotator_1,,lecture,,"As the name suggests neural networks are inspired by the brain, but let's break that down.",false,multimodal_tvsum_style
-aircAruvnKk,166.0,168.0,annotator_1,,lecture,,"As the name suggests neural networks are inspired by the brain, but let's break that down.",false,multimodal_tvsum_style
-aircAruvnKk,168.0,170.0,annotator_1,,lecture,,"As the name suggests neural networks are inspired by the brain, but let's break that down. What are the neurons, and in ",false,multimodal_tvsum_style
-aircAruvnKk,170.0,172.0,annotator_1,,lecture,,"What are the neurons, and in what sense are they linked together?",false,multimodal_tvsum_style
-aircAruvnKk,172.0,174.0,annotator_1,,lecture,,"Right now when I say neuron all I want you to think about is a thing that holds a number,",false,multimodal_tvsum_style
-aircAruvnKk,174.0,176.0,annotator_1,,lecture,,"Right now when I say neuron all I want you to think about is a thing that holds a number,",false,multimodal_tvsum_style
-aircAruvnKk,176.0,178.0,annotator_1,,lecture,,"Right now when I say neuron all I want you to think about is a thing that holds a number,",false,multimodal_tvsum_style
-aircAruvnKk,178.0,180.0,annotator_1,,lecture,,"Right now when I say neuron all I want you to think about is a thing that holds a number, specifically a number between ",false,multimodal_tvsum_style
-aircAruvnKk,180.0,182.0,annotator_1,,lecture,,specifically a number between 0 and 1. It's really not more than that.,false,multimodal_tvsum_style
-aircAruvnKk,182.0,184.0,annotator_1,,lecture,,It's really not more than that. For example the network starts with a bunch of neurons corresponding to,false,multimodal_tvsum_style
-aircAruvnKk,184.0,186.0,annotator_1,,lecture,,For example the network starts with a bunch of neurons corresponding to,false,multimodal_tvsum_style
-aircAruvnKk,186.0,188.0,annotator_1,,lecture,,For example the network starts with a bunch of neurons corresponding to,false,multimodal_tvsum_style
-aircAruvnKk,188.0,190.0,annotator_1,,lecture,,"For example the network starts with a bunch of neurons corresponding to each of the 28x28 pixels of the input image, whi",false,multimodal_tvsum_style
-aircAruvnKk,190.0,192.0,annotator_1,,lecture,,"each of the 28x28 pixels of the input image, which is 784 neurons in total.",false,multimodal_tvsum_style
-aircAruvnKk,192.0,194.0,annotator_1,,lecture,,"each of the 28x28 pixels of the input image, which is 784 neurons in total.",false,multimodal_tvsum_style
-aircAruvnKk,194.0,196.0,annotator_1,,lecture,,"each of the 28x28 pixels of the input image, which is 784 neurons in total. Each one of these holds a number that repres",false,multimodal_tvsum_style
-aircAruvnKk,196.0,198.0,annotator_1,,lecture,,Each one of these holds a number that represents the grayscale value of the,false,multimodal_tvsum_style
-aircAruvnKk,198.0,200.0,annotator_1,,lecture,,"Each one of these holds a number that represents the grayscale value of the corresponding pixel, ranging from 0 for blac",false,multimodal_tvsum_style
-aircAruvnKk,200.0,202.0,annotator_1,,lecture,,"corresponding pixel, ranging from 0 for black pixels up to 1 for white pixels.",false,multimodal_tvsum_style
-aircAruvnKk,202.0,204.0,annotator_1,,lecture,,"corresponding pixel, ranging from 0 for black pixels up to 1 for white pixels.",false,multimodal_tvsum_style
-aircAruvnKk,204.0,206.0,annotator_1,,lecture,,"corresponding pixel, ranging from 0 for black pixels up to 1 for white pixels. This number inside the neuron is called i",false,multimodal_tvsum_style
-aircAruvnKk,206.0,208.0,annotator_1,,lecture,,"This number inside the neuron is called its activation,",false,multimodal_tvsum_style
-aircAruvnKk,208.0,210.0,annotator_1,,lecture,,"This number inside the neuron is called its activation, and the image you might have in mind here is that each neuron is",false,multimodal_tvsum_style
-aircAruvnKk,210.0,212.0,annotator_1,,lecture,,and the image you might have in mind here is that each neuron is lit up when its,false,multimodal_tvsum_style
-aircAruvnKk,212.0,214.0,annotator_1,,lecture,,and the image you might have in mind here is that each neuron is lit up when its activation is a high number.,false,multimodal_tvsum_style
-aircAruvnKk,214.0,216.0,annotator_1,,lecture,,activation is a high number.,false,multimodal_tvsum_style
-aircAruvnKk,216.0,218.0,annotator_1,,lecture,,So all of these 784 neurons make up the first layer of our network.,false,multimodal_tvsum_style
-aircAruvnKk,218.0,220.0,annotator_1,,lecture,,So all of these 784 neurons make up the first layer of our network.,false,multimodal_tvsum_style
-aircAruvnKk,220.0,222.0,annotator_1,,lecture,,So all of these 784 neurons make up the first layer of our network.,false,multimodal_tvsum_style
-aircAruvnKk,222.0,224.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-aircAruvnKk,224.0,226.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-aircAruvnKk,226.0,228.0,annotator_1,,lecture,,"Now jumping over to the last layer, this has 10 neurons,",false,multimodal_tvsum_style
-aircAruvnKk,228.0,230.0,annotator_1,,lecture,,"Now jumping over to the last layer, this has 10 neurons, each representing one of the digits.",false,multimodal_tvsum_style
-aircAruvnKk,230.0,232.0,annotator_1,,lecture,,each representing one of the digits.,false,multimodal_tvsum_style
-aircAruvnKk,232.0,234.0,annotator_1,,lecture,,"The activation in these neurons, again some number that's between 0 and 1,",false,multimodal_tvsum_style
-aircAruvnKk,234.0,236.0,annotator_1,,lecture,,"The activation in these neurons, again some number that's between 0 and 1,",false,multimodal_tvsum_style
-aircAruvnKk,236.0,238.0,annotator_1,,lecture,,"The activation in these neurons, again some number that's between 0 and 1, represents how much the system thinks that a ",false,multimodal_tvsum_style
-aircAruvnKk,238.0,240.0,annotator_1,,lecture,,represents how much the system thinks that a given image corresponds with a given digit.,false,multimodal_tvsum_style
-aircAruvnKk,240.0,242.0,annotator_1,,lecture,,represents how much the system thinks that a given image corresponds with a given digit.,false,multimodal_tvsum_style
-aircAruvnKk,242.0,244.0,annotator_1,,lecture,,represents how much the system thinks that a given image corresponds with a given digit. There's also a couple layers in,false,multimodal_tvsum_style
-aircAruvnKk,244.0,246.0,annotator_1,,lecture,,"There's also a couple layers in between called the hidden layers,",false,multimodal_tvsum_style
-aircAruvnKk,246.0,248.0,annotator_1,,lecture,,"There's also a couple layers in between called the hidden layers, which for the time being should just be a giant questi",false,multimodal_tvsum_style
-aircAruvnKk,248.0,250.0,annotator_1,,lecture,,which for the time being should just be a giant question mark for how on earth this process of recognizing digits is goi,false,multimodal_tvsum_style
-aircAruvnKk,250.0,252.0,annotator_1,,lecture,,how on earth this process of recognizing digits is going to be handled.,false,multimodal_tvsum_style
-aircAruvnKk,252.0,254.0,annotator_1,,lecture,,how on earth this process of recognizing digits is going to be handled.,false,multimodal_tvsum_style
-aircAruvnKk,254.0,256.0,annotator_1,,lecture,,"In this network I chose two hidden layers, each one with 16 neurons,",false,multimodal_tvsum_style
-aircAruvnKk,256.0,258.0,annotator_1,,lecture,,"In this network I chose two hidden layers, each one with 16 neurons, and admittedly that's kind of an arbitrary choice.",false,multimodal_tvsum_style
-aircAruvnKk,258.0,260.0,annotator_1,,lecture,,and admittedly that's kind of an arbitrary choice.,false,multimodal_tvsum_style
-aircAruvnKk,260.0,262.0,annotator_1,,lecture,,and admittedly that's kind of an arbitrary choice. To be honest I chose two layers based on how I want to motivate the s,false,multimodal_tvsum_style
-aircAruvnKk,262.0,264.0,annotator_1,,lecture,,To be honest I chose two layers based on how I want to motivate the structure in,false,multimodal_tvsum_style
-aircAruvnKk,264.0,266.0,annotator_1,,lecture,,"To be honest I chose two layers based on how I want to motivate the structure in just a moment, and 16, well that was ju",false,multimodal_tvsum_style
-aircAruvnKk,266.0,268.0,annotator_1,,lecture,,"just a moment, and 16, well that was just a nice number to fit on the screen.",false,multimodal_tvsum_style
-aircAruvnKk,268.0,270.0,annotator_1,,lecture,,"just a moment, and 16, well that was just a nice number to fit on the screen. In practice there is a lot of room for exp",false,multimodal_tvsum_style
-aircAruvnKk,270.0,272.0,annotator_1,,lecture,,In practice there is a lot of room for experiment with a specific structure here.,false,multimodal_tvsum_style
-aircAruvnKk,272.0,274.0,annotator_1,,lecture,,"In practice there is a lot of room for experiment with a specific structure here. The way the network operates, activati",false,multimodal_tvsum_style
-aircAruvnKk,274.0,276.0,annotator_1,,lecture,,"The way the network operates, activations in one layer determine the activations of the next layer.",false,multimodal_tvsum_style
-aircAruvnKk,276.0,278.0,annotator_1,,lecture,,layer determine the activations of the next layer.,false,multimodal_tvsum_style
-aircAruvnKk,278.0,280.0,annotator_1,,lecture,,layer determine the activations of the next layer. And of course the heart of the network as an information processing m,false,multimodal_tvsum_style
-aircAruvnKk,280.0,282.0,annotator_1,,lecture,,And of course the heart of the network as an information processing mechanism comes down,false,multimodal_tvsum_style
-aircAruvnKk,282.0,284.0,annotator_1,,lecture,,And of course the heart of the network as an information processing mechanism comes down to exactly how those activation,false,multimodal_tvsum_style
-aircAruvnKk,284.0,286.0,annotator_1,,lecture,,to exactly how those activations from one layer bring about activations in the next,false,multimodal_tvsum_style
-aircAruvnKk,286.0,288.0,annotator_1,,lecture,,to exactly how those activations from one layer bring about activations in the next,false,multimodal_tvsum_style
-aircAruvnKk,288.0,290.0,annotator_1,,lecture,,to exactly how those activations from one layer bring about activations in the next layer. It's meant to be loosely anal,false,multimodal_tvsum_style
-aircAruvnKk,290.0,292.0,annotator_1,,lecture,,"It's meant to be loosely analogous to how in biological networks of neurons,",false,multimodal_tvsum_style
-aircAruvnKk,292.0,294.0,annotator_1,,lecture,,"It's meant to be loosely analogous to how in biological networks of neurons, some groups of neurons firing cause certain",false,multimodal_tvsum_style
-aircAruvnKk,294.0,296.0,annotator_1,,lecture,,some groups of neurons firing cause certain others to fire.,false,multimodal_tvsum_style
-aircAruvnKk,296.0,298.0,annotator_1,,lecture,,some groups of neurons firing cause certain others to fire.,false,multimodal_tvsum_style
-aircAruvnKk,298.0,300.0,annotator_1,,lecture,,"Now the network I'm showing here has already been trained to recognize digits,",false,multimodal_tvsum_style
-aircAruvnKk,300.0,302.0,annotator_1,,lecture,,"Now the network I'm showing here has already been trained to recognize digits, and let me show you what I mean by that.",false,multimodal_tvsum_style
-aircAruvnKk,302.0,304.0,annotator_1,,lecture,,"and let me show you what I mean by that. It means if you feed in an image, lighting up all 784 neurons of the input laye",false,multimodal_tvsum_style
-aircAruvnKk,304.0,306.0,annotator_1,,lecture,,"It means if you feed in an image, lighting up all 784 neurons of the input layer",false,multimodal_tvsum_style
-aircAruvnKk,306.0,308.0,annotator_1,,lecture,,"It means if you feed in an image, lighting up all 784 neurons of the input layer",false,multimodal_tvsum_style
-aircAruvnKk,308.0,310.0,annotator_1,,lecture,,"It means if you feed in an image, lighting up all 784 neurons of the input layer according to the brightness of each pix",false,multimodal_tvsum_style
-aircAruvnKk,310.0,312.0,annotator_1,,lecture,,"according to the brightness of each pixel in the image, that pattern of activations causes some very specific pattern in",false,multimodal_tvsum_style
-aircAruvnKk,312.0,314.0,annotator_1,,lecture,,that pattern of activations causes some very specific pattern in the next layer,false,multimodal_tvsum_style
-aircAruvnKk,314.0,316.0,annotator_1,,lecture,,that pattern of activations causes some very specific pattern in the next layer,false,multimodal_tvsum_style
-aircAruvnKk,316.0,318.0,annotator_1,,lecture,,that pattern of activations causes some very specific pattern in the next layer which causes some pattern in the one aft,false,multimodal_tvsum_style
-aircAruvnKk,318.0,320.0,annotator_1,,lecture,,"which causes some pattern in the one after it, which finally gives some pattern in the output layer.",false,multimodal_tvsum_style
-aircAruvnKk,320.0,322.0,annotator_1,,lecture,,which finally gives some pattern in the output layer.,false,multimodal_tvsum_style
-aircAruvnKk,322.0,324.0,annotator_1,,lecture,,which finally gives some pattern in the output layer. And the brightest neuron of that output layer is the network's cho,false,multimodal_tvsum_style
-aircAruvnKk,324.0,326.0,annotator_1,,lecture,,"And the brightest neuron of that output layer is the network's choice,",false,multimodal_tvsum_style
-aircAruvnKk,326.0,328.0,annotator_1,,lecture,,"And the brightest neuron of that output layer is the network's choice, so to speak, for what digit this image represents",false,multimodal_tvsum_style
-aircAruvnKk,328.0,330.0,annotator_1,,lecture,,"so to speak, for what digit this image represents.",false,multimodal_tvsum_style
-aircAruvnKk,330.0,332.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-aircAruvnKk,332.0,334.0,annotator_1,,lecture,,"And before jumping into the math for how one layer influences the next,",false,multimodal_tvsum_style
-aircAruvnKk,334.0,336.0,annotator_1,,lecture,,"And before jumping into the math for how one layer influences the next,",false,multimodal_tvsum_style
-aircAruvnKk,336.0,338.0,annotator_1,,lecture,,"And before jumping into the math for how one layer influences the next, or how training works, let's just talk about why",false,multimodal_tvsum_style
-aircAruvnKk,338.0,340.0,annotator_1,,lecture,,"or how training works, let's just talk about why it's even reasonable",false,multimodal_tvsum_style
-aircAruvnKk,340.0,342.0,annotator_1,,lecture,,"or how training works, let's just talk about why it's even reasonable to expect a layered structure like this to behave ",false,multimodal_tvsum_style
-aircAruvnKk,342.0,344.0,annotator_1,,lecture,,to expect a layered structure like this to behave intelligently.,false,multimodal_tvsum_style
-aircAruvnKk,344.0,346.0,annotator_1,,lecture,,What are we expecting here? What is the best hope for what those middle layers might be doing?,false,multimodal_tvsum_style
-aircAruvnKk,346.0,348.0,annotator_1,,lecture,,What is the best hope for what those middle layers might be doing?,false,multimodal_tvsum_style
-aircAruvnKk,348.0,350.0,annotator_1,,lecture,,"Well, when you or I recognize digits, we piece together various components.",false,multimodal_tvsum_style
-aircAruvnKk,350.0,352.0,annotator_1,,lecture,,"Well, when you or I recognize digits, we piece together various components.",false,multimodal_tvsum_style
-aircAruvnKk,352.0,354.0,annotator_1,,lecture,,"Well, when you or I recognize digits, we piece together various components.",false,multimodal_tvsum_style
-aircAruvnKk,354.0,356.0,annotator_1,,lecture,,A 9 has a loop up top and a line on the right.,false,multimodal_tvsum_style
-aircAruvnKk,356.0,358.0,annotator_1,,lecture,,"A 9 has a loop up top and a line on the right. An 8 also has a loop up top, but it's paired with another loop down low.",false,multimodal_tvsum_style
-aircAruvnKk,358.0,360.0,annotator_1,,lecture,,"An 8 also has a loop up top, but it's paired with another loop down low.",false,multimodal_tvsum_style
-aircAruvnKk,360.0,362.0,annotator_1,,lecture,,"An 8 also has a loop up top, but it's paired with another loop down low. A 4 basically breaks down into three specific l",false,multimodal_tvsum_style
-aircAruvnKk,362.0,364.0,annotator_1,,lecture,,"A 4 basically breaks down into three specific lines, and things like that.",false,multimodal_tvsum_style
-aircAruvnKk,364.0,366.0,annotator_1,,lecture,,"A 4 basically breaks down into three specific lines, and things like that.",false,multimodal_tvsum_style
-aircAruvnKk,366.0,368.0,annotator_1,,lecture,,"A 4 basically breaks down into three specific lines, and things like that. Now in a perfect world, we might hope that ea",false,multimodal_tvsum_style
-aircAruvnKk,368.0,370.0,annotator_1,,lecture,,"Now in a perfect world, we might hope that each neuron in the second",false,multimodal_tvsum_style
-aircAruvnKk,370.0,372.0,annotator_1,,lecture,,"Now in a perfect world, we might hope that each neuron in the second to last layer corresponds with one of these subcomp",false,multimodal_tvsum_style
-aircAruvnKk,372.0,374.0,annotator_1,,lecture,,"to last layer corresponds with one of these subcomponents,",false,multimodal_tvsum_style
-aircAruvnKk,374.0,376.0,annotator_1,,lecture,,"to last layer corresponds with one of these subcomponents, that anytime you feed in an image with, say, a loop up top,",false,multimodal_tvsum_style
-aircAruvnKk,376.0,378.0,annotator_1,,lecture,,"that anytime you feed in an image with, say, a loop up top,",false,multimodal_tvsum_style
-aircAruvnKk,378.0,380.0,annotator_1,,lecture,,"that anytime you feed in an image with, say, a loop up top, like a 9 or an 8, there's some specific neuron whose activat",false,multimodal_tvsum_style
-aircAruvnKk,380.0,382.0,annotator_1,,lecture,,"like a 9 or an 8, there's some specific neuron whose activation is",false,multimodal_tvsum_style
-aircAruvnKk,382.0,384.0,annotator_1,,lecture,,"like a 9 or an 8, there's some specific neuron whose activation is going to be close to 1.",false,multimodal_tvsum_style
-aircAruvnKk,384.0,386.0,annotator_1,,lecture,,"And I don't mean this specific loop of pixels,",false,multimodal_tvsum_style
-aircAruvnKk,386.0,388.0,annotator_1,,lecture,,"And I don't mean this specific loop of pixels, the hope would be that any generally loopy pattern towards the top sets o",false,multimodal_tvsum_style
-aircAruvnKk,388.0,390.0,annotator_1,,lecture,,the hope would be that any generally loopy pattern towards the top sets off this neuron.,false,multimodal_tvsum_style
-aircAruvnKk,390.0,392.0,annotator_1,,lecture,,the hope would be that any generally loopy pattern towards the top sets off this neuron.,false,multimodal_tvsum_style
-aircAruvnKk,392.0,394.0,annotator_1,,lecture,,"That way, going from the third layer to the last one just requires",false,multimodal_tvsum_style
-aircAruvnKk,394.0,396.0,annotator_1,,lecture,,"That way, going from the third layer to the last one just requires",false,multimodal_tvsum_style
-aircAruvnKk,396.0,398.0,annotator_1,,lecture,,"That way, going from the third layer to the last one just requires learning which combination of subcomponents correspon",false,multimodal_tvsum_style
-aircAruvnKk,398.0,400.0,annotator_1,,lecture,,learning which combination of subcomponents corresponds to which digits.,false,multimodal_tvsum_style
-aircAruvnKk,400.0,402.0,annotator_1,,lecture,,"learning which combination of subcomponents corresponds to which digits. Of course, that just kicks the problem down the",false,multimodal_tvsum_style
-aircAruvnKk,402.0,404.0,annotator_1,,lecture,,"Of course, that just kicks the problem down the road, because how would you recognize these subcomponents,",false,multimodal_tvsum_style
-aircAruvnKk,404.0,406.0,annotator_1,,lecture,,"because how would you recognize these subcomponents, or even learn what the right subcomponents should be?",false,multimodal_tvsum_style
-aircAruvnKk,406.0,408.0,annotator_1,,lecture,,or even learn what the right subcomponents should be?,false,multimodal_tvsum_style
-aircAruvnKk,408.0,410.0,annotator_1,,lecture,,"And I still haven't even talked about how one layer influences the next,",false,multimodal_tvsum_style
-aircAruvnKk,410.0,412.0,annotator_1,,lecture,,"And I still haven't even talked about how one layer influences the next, but run with me on this one for a moment.",false,multimodal_tvsum_style
-aircAruvnKk,412.0,414.0,annotator_1,,lecture,,but run with me on this one for a moment. Recognizing a loop can also break down into subproblems.,false,multimodal_tvsum_style
-aircAruvnKk,414.0,416.0,annotator_1,,lecture,,Recognizing a loop can also break down into subproblems.,false,multimodal_tvsum_style
-aircAruvnKk,416.0,418.0,annotator_1,,lecture,,Recognizing a loop can also break down into subproblems. One reasonable way to do this would be to first,false,multimodal_tvsum_style
-aircAruvnKk,418.0,420.0,annotator_1,,lecture,,One reasonable way to do this would be to first recognize the various little edges that make it up.,false,multimodal_tvsum_style
-aircAruvnKk,420.0,422.0,annotator_1,,lecture,,recognize the various little edges that make it up.,false,multimodal_tvsum_style
-aircAruvnKk,422.0,424.0,annotator_1,,lecture,,"recognize the various little edges that make it up. Similarly, a long line, like the kind you might see in the digits 1 ",false,multimodal_tvsum_style
-aircAruvnKk,424.0,426.0,annotator_1,,lecture,,"Similarly, a long line, like the kind you might see in the digits 1 or 4 or 7,",false,multimodal_tvsum_style
-aircAruvnKk,426.0,428.0,annotator_1,,lecture,,"Similarly, a long line, like the kind you might see in the digits 1 or 4 or 7,",false,multimodal_tvsum_style
-aircAruvnKk,428.0,430.0,annotator_1,,lecture,,"Similarly, a long line, like the kind you might see in the digits 1 or 4 or 7, is really just a long edge, or maybe you ",false,multimodal_tvsum_style
-aircAruvnKk,430.0,432.0,annotator_1,,lecture,,"is really just a long edge, or maybe you think of it as a certain pattern of several",false,multimodal_tvsum_style
-aircAruvnKk,432.0,434.0,annotator_1,,lecture,,"is really just a long edge, or maybe you think of it as a certain pattern of several smaller edges.",false,multimodal_tvsum_style
-aircAruvnKk,434.0,436.0,annotator_1,,lecture,,smaller edges. So maybe our hope is that each neuron in the second layer of,false,multimodal_tvsum_style
-aircAruvnKk,436.0,438.0,annotator_1,,lecture,,So maybe our hope is that each neuron in the second layer of,false,multimodal_tvsum_style
-aircAruvnKk,438.0,440.0,annotator_1,,lecture,,So maybe our hope is that each neuron in the second layer of the network corresponds with the various relevant little ed,false,multimodal_tvsum_style
-aircAruvnKk,440.0,442.0,annotator_1,,lecture,,the network corresponds with the various relevant little edges.,false,multimodal_tvsum_style
-aircAruvnKk,442.0,444.0,annotator_1,,lecture,,"the network corresponds with the various relevant little edges. Maybe when an image like this one comes in, it lights up",false,multimodal_tvsum_style
-aircAruvnKk,444.0,446.0,annotator_1,,lecture,,"Maybe when an image like this one comes in, it lights up all of the",false,multimodal_tvsum_style
-aircAruvnKk,446.0,448.0,annotator_1,,lecture,,"Maybe when an image like this one comes in, it lights up all of the neurons associated with around 8 to 10 specific litt",false,multimodal_tvsum_style
-aircAruvnKk,448.0,450.0,annotator_1,,lecture,,"neurons associated with around 8 to 10 specific little edges,",false,multimodal_tvsum_style
-aircAruvnKk,450.0,452.0,annotator_1,,lecture,,"neurons associated with around 8 to 10 specific little edges, which in turn lights up the neurons associated with the up",false,multimodal_tvsum_style
-aircAruvnKk,452.0,454.0,annotator_1,,lecture,,which in turn lights up the neurons associated with the upper loop,false,multimodal_tvsum_style
-aircAruvnKk,454.0,456.0,annotator_1,,lecture,,"which in turn lights up the neurons associated with the upper loop and a long vertical line, and those light up the neur",false,multimodal_tvsum_style
-aircAruvnKk,456.0,458.0,annotator_1,,lecture,,"and a long vertical line, and those light up the neuron associated with a 9.",false,multimodal_tvsum_style
-aircAruvnKk,458.0,460.0,annotator_1,,lecture,,"and a long vertical line, and those light up the neuron associated with a 9.",false,multimodal_tvsum_style
-aircAruvnKk,460.0,462.0,annotator_1,,lecture,,"Whether or not this is what our final network actually does is another question,",false,multimodal_tvsum_style
-aircAruvnKk,462.0,464.0,annotator_1,,lecture,,"Whether or not this is what our final network actually does is another question,",false,multimodal_tvsum_style
-aircAruvnKk,464.0,466.0,annotator_1,,lecture,,"Whether or not this is what our final network actually does is another question, one that I'll come back to once we see ",false,multimodal_tvsum_style
-aircAruvnKk,466.0,468.0,annotator_1,,lecture,,"one that I'll come back to once we see how to train the network, but this is a hope that we might have, a sort of goal w",false,multimodal_tvsum_style
-aircAruvnKk,468.0,470.0,annotator_1,,lecture,,"but this is a hope that we might have, a sort of goal with the layered structure",false,multimodal_tvsum_style
-aircAruvnKk,470.0,472.0,annotator_1,,lecture,,"but this is a hope that we might have, a sort of goal with the layered structure like this.",false,multimodal_tvsum_style
-aircAruvnKk,472.0,474.0,annotator_1,,lecture,,"like this. Moreover, you can imagine how being able to detect edges and patterns",false,multimodal_tvsum_style
-aircAruvnKk,474.0,476.0,annotator_1,,lecture,,"Moreover, you can imagine how being able to detect edges and patterns",false,multimodal_tvsum_style
-aircAruvnKk,476.0,478.0,annotator_1,,lecture,,"Moreover, you can imagine how being able to detect edges and patterns like this would be really useful for other image r",false,multimodal_tvsum_style
-aircAruvnKk,478.0,480.0,annotator_1,,lecture,,like this would be really useful for other image recognition tasks.,false,multimodal_tvsum_style
-aircAruvnKk,480.0,482.0,annotator_1,,lecture,,"like this would be really useful for other image recognition tasks. And even beyond image recognition, there are all sor",false,multimodal_tvsum_style
-aircAruvnKk,482.0,484.0,annotator_1,,lecture,,"And even beyond image recognition, there are all sorts of intelligent",false,multimodal_tvsum_style
-aircAruvnKk,484.0,486.0,annotator_1,,lecture,,"And even beyond image recognition, there are all sorts of intelligent things you might want to do that break down into l",false,multimodal_tvsum_style
-aircAruvnKk,486.0,488.0,annotator_1,,lecture,,things you might want to do that break down into layers of abstraction.,false,multimodal_tvsum_style
-aircAruvnKk,488.0,490.0,annotator_1,,lecture,,"Parsing speech, for example, involves taking raw audio and picking out distinct sounds,",false,multimodal_tvsum_style
-aircAruvnKk,490.0,492.0,annotator_1,,lecture,,"Parsing speech, for example, involves taking raw audio and picking out distinct sounds,",false,multimodal_tvsum_style
-aircAruvnKk,492.0,494.0,annotator_1,,lecture,,"Parsing speech, for example, involves taking raw audio and picking out distinct sounds, which combine to make certain sy",false,multimodal_tvsum_style
-aircAruvnKk,494.0,496.0,annotator_1,,lecture,,"which combine to make certain syllables, which combine to form words,",false,multimodal_tvsum_style
-aircAruvnKk,496.0,498.0,annotator_1,,lecture,,"which combine to make certain syllables, which combine to form words, which combine to make up phrases and more abstract",false,multimodal_tvsum_style
-aircAruvnKk,498.0,500.0,annotator_1,,lecture,,"which combine to make up phrases and more abstract thoughts, etc.",false,multimodal_tvsum_style
-aircAruvnKk,500.0,502.0,annotator_1,,lecture,,"which combine to make up phrases and more abstract thoughts, etc. But getting back to how any of this actually works,",false,multimodal_tvsum_style
-aircAruvnKk,502.0,504.0,annotator_1,,lecture,,"But getting back to how any of this actually works, picture yourself right now designing how exactly the activations in ",false,multimodal_tvsum_style
-aircAruvnKk,504.0,506.0,annotator_1,,lecture,,picture yourself right now designing how exactly the activations in one layer might,false,multimodal_tvsum_style
-aircAruvnKk,506.0,508.0,annotator_1,,lecture,,picture yourself right now designing how exactly the activations in one layer might determine the activations in the nex,false,multimodal_tvsum_style
-aircAruvnKk,508.0,510.0,annotator_1,,lecture,,determine the activations in the next.,false,multimodal_tvsum_style
-aircAruvnKk,510.0,512.0,annotator_1,,lecture,,"The goal is to have some mechanism that could conceivably combine pixels into edges,",false,multimodal_tvsum_style
-aircAruvnKk,512.0,514.0,annotator_1,,lecture,,"The goal is to have some mechanism that could conceivably combine pixels into edges,",false,multimodal_tvsum_style
-aircAruvnKk,514.0,516.0,annotator_1,,lecture,,"The goal is to have some mechanism that could conceivably combine pixels into edges, or edges into patterns, or patterns",false,multimodal_tvsum_style
-aircAruvnKk,516.0,518.0,annotator_1,,lecture,,"or edges into patterns, or patterns into digits.",false,multimodal_tvsum_style
-aircAruvnKk,518.0,520.0,annotator_1,,lecture,,"or edges into patterns, or patterns into digits. And to zoom in on one very specific example, let's say the hope",false,multimodal_tvsum_style
-aircAruvnKk,520.0,522.0,annotator_1,,lecture,,"And to zoom in on one very specific example, let's say the hope",false,multimodal_tvsum_style
-aircAruvnKk,522.0,524.0,annotator_1,,lecture,,"And to zoom in on one very specific example, let's say the hope is for one particular neuron in the second layer to pick",false,multimodal_tvsum_style
-aircAruvnKk,524.0,526.0,annotator_1,,lecture,,is for one particular neuron in the second layer to pick up,false,multimodal_tvsum_style
-aircAruvnKk,526.0,528.0,annotator_1,,lecture,,is for one particular neuron in the second layer to pick up on whether or not the image has an edge in this region here.,false,multimodal_tvsum_style
-aircAruvnKk,528.0,530.0,annotator_1,,lecture,,on whether or not the image has an edge in this region here.,false,multimodal_tvsum_style
-aircAruvnKk,530.0,532.0,annotator_1,,lecture,,on whether or not the image has an edge in this region here. The question at hand is what parameters should the network ,false,multimodal_tvsum_style
-aircAruvnKk,532.0,534.0,annotator_1,,lecture,,The question at hand is what parameters should the network have?,false,multimodal_tvsum_style
-aircAruvnKk,534.0,536.0,annotator_1,,lecture,,The question at hand is what parameters should the network have? What dials and knobs should you be able to tweak so tha,false,multimodal_tvsum_style
-aircAruvnKk,536.0,538.0,annotator_1,,lecture,,What dials and knobs should you be able to tweak so that it's expressive,false,multimodal_tvsum_style
-aircAruvnKk,538.0,540.0,annotator_1,,lecture,,"What dials and knobs should you be able to tweak so that it's expressive enough to potentially capture this pattern, or ",false,multimodal_tvsum_style
-aircAruvnKk,540.0,542.0,annotator_1,,lecture,,"enough to potentially capture this pattern, or any other pixel pattern,",false,multimodal_tvsum_style
-aircAruvnKk,542.0,544.0,annotator_1,,lecture,,"enough to potentially capture this pattern, or any other pixel pattern, or the pattern that several edges can make a loo",false,multimodal_tvsum_style
-aircAruvnKk,544.0,546.0,annotator_1,,lecture,,"or the pattern that several edges can make a loop, and other such things?",false,multimodal_tvsum_style
-aircAruvnKk,546.0,548.0,annotator_1,,lecture,,"or the pattern that several edges can make a loop, and other such things?",false,multimodal_tvsum_style
-aircAruvnKk,548.0,550.0,annotator_1,,lecture,,"Well, what we'll do is assign a weight to each one of the",false,multimodal_tvsum_style
-aircAruvnKk,550.0,552.0,annotator_1,,lecture,,"Well, what we'll do is assign a weight to each one of the connections between our neuron and the neurons from the first ",false,multimodal_tvsum_style
-aircAruvnKk,552.0,554.0,annotator_1,,lecture,,connections between our neuron and the neurons from the first layer.,false,multimodal_tvsum_style
-aircAruvnKk,554.0,556.0,annotator_1,,lecture,,connections between our neuron and the neurons from the first layer.,false,multimodal_tvsum_style
-aircAruvnKk,556.0,558.0,annotator_1,,lecture,,These weights are just numbers.,false,multimodal_tvsum_style
-aircAruvnKk,558.0,560.0,annotator_1,,lecture,,Then take all of those activations from the first layer,false,multimodal_tvsum_style
-aircAruvnKk,560.0,562.0,annotator_1,,lecture,,Then take all of those activations from the first layer and compute their weighted sum according to these weights.,false,multimodal_tvsum_style
-aircAruvnKk,562.0,564.0,annotator_1,,lecture,,and compute their weighted sum according to these weights.,false,multimodal_tvsum_style
-aircAruvnKk,564.0,566.0,annotator_1,,lecture,,and compute their weighted sum according to these weights.,false,multimodal_tvsum_style
-aircAruvnKk,566.0,568.0,annotator_1,,lecture,,I find it helpful to think of these weights as being organized into a,false,multimodal_tvsum_style
-aircAruvnKk,568.0,570.0,annotator_1,,lecture,,I find it helpful to think of these weights as being organized into a,false,multimodal_tvsum_style
-aircAruvnKk,570.0,572.0,annotator_1,,lecture,,"I find it helpful to think of these weights as being organized into a little grid of their own, and I'm going to use gre",false,multimodal_tvsum_style
-aircAruvnKk,572.0,574.0,annotator_1,,lecture,,"little grid of their own, and I'm going to use green pixels to indicate",false,multimodal_tvsum_style
-aircAruvnKk,574.0,576.0,annotator_1,,lecture,,"little grid of their own, and I'm going to use green pixels to indicate positive weights, and red pixels to indicate neg",false,multimodal_tvsum_style
-aircAruvnKk,576.0,578.0,annotator_1,,lecture,,"positive weights, and red pixels to indicate negative weights, where the brightness of that pixel is some loose depictio",false,multimodal_tvsum_style
-aircAruvnKk,578.0,580.0,annotator_1,,lecture,,where the brightness of that pixel is some loose depiction of the weight's value.,false,multimodal_tvsum_style
-aircAruvnKk,580.0,582.0,annotator_1,,lecture,,where the brightness of that pixel is some loose depiction of the weight's value.,false,multimodal_tvsum_style
-aircAruvnKk,582.0,584.0,annotator_1,,lecture,,Now if we made the weights associated with almost all of the pixels zero,false,multimodal_tvsum_style
-aircAruvnKk,584.0,586.0,annotator_1,,lecture,,Now if we made the weights associated with almost all of the pixels zero,false,multimodal_tvsum_style
-aircAruvnKk,586.0,588.0,annotator_1,,lecture,,Now if we made the weights associated with almost all of the pixels zero except for some positive weights in this region,false,multimodal_tvsum_style
-aircAruvnKk,588.0,590.0,annotator_1,,lecture,,"except for some positive weights in this region that we care about,",false,multimodal_tvsum_style
-aircAruvnKk,590.0,592.0,annotator_1,,lecture,,"except for some positive weights in this region that we care about, then taking the weighted sum of all the pixel values",false,multimodal_tvsum_style
-aircAruvnKk,592.0,594.0,annotator_1,,lecture,,then taking the weighted sum of all the pixel values really just amounts to adding up the values of the pixel just in th,false,multimodal_tvsum_style
-aircAruvnKk,594.0,596.0,annotator_1,,lecture,,to adding up the values of the pixel just in the region that we care about.,false,multimodal_tvsum_style
-aircAruvnKk,596.0,598.0,annotator_1,,lecture,,to adding up the values of the pixel just in the region that we care about.,false,multimodal_tvsum_style
-aircAruvnKk,598.0,600.0,annotator_1,,lecture,,"And if you really wanted to pick up on whether there's an edge here,",false,multimodal_tvsum_style
-aircAruvnKk,600.0,602.0,annotator_1,,lecture,,"And if you really wanted to pick up on whether there's an edge here,",false,multimodal_tvsum_style
-aircAruvnKk,602.0,604.0,annotator_1,,lecture,,"And if you really wanted to pick up on whether there's an edge here, what you might do is have some negative weights ass",false,multimodal_tvsum_style
-aircAruvnKk,604.0,606.0,annotator_1,,lecture,,what you might do is have some negative weights associated with the surrounding pixels.,false,multimodal_tvsum_style
-aircAruvnKk,606.0,608.0,annotator_1,,lecture,,what you might do is have some negative weights associated with the surrounding pixels. Then the sum is largest when tho,false,multimodal_tvsum_style
-aircAruvnKk,608.0,610.0,annotator_1,,lecture,,Then the sum is largest when those middle pixels,false,multimodal_tvsum_style
-aircAruvnKk,610.0,612.0,annotator_1,,lecture,,Then the sum is largest when those middle pixels are bright but the surrounding pixels are darker.,false,multimodal_tvsum_style
-aircAruvnKk,612.0,614.0,annotator_1,,lecture,,are bright but the surrounding pixels are darker.,false,multimodal_tvsum_style
-aircAruvnKk,614.0,616.0,annotator_1,,lecture,,"When you compute a weighted sum like this, you might come out with any number,",false,multimodal_tvsum_style
-aircAruvnKk,616.0,618.0,annotator_1,,lecture,,"When you compute a weighted sum like this, you might come out with any number,",false,multimodal_tvsum_style
-aircAruvnKk,618.0,620.0,annotator_1,,lecture,,"When you compute a weighted sum like this, you might come out with any number, but for this network what we want is for ",false,multimodal_tvsum_style
-aircAruvnKk,620.0,622.0,annotator_1,,lecture,,but for this network what we want is for activations to be some value between 0 and 1.,false,multimodal_tvsum_style
-aircAruvnKk,622.0,624.0,annotator_1,,lecture,,but for this network what we want is for activations to be some value between 0 and 1.,false,multimodal_tvsum_style
-aircAruvnKk,624.0,626.0,annotator_1,,lecture,,So a common thing to do is to pump this weighted sum into some function,false,multimodal_tvsum_style
-aircAruvnKk,626.0,628.0,annotator_1,,lecture,,So a common thing to do is to pump this weighted sum into some function,false,multimodal_tvsum_style
-aircAruvnKk,628.0,630.0,annotator_1,,lecture,,So a common thing to do is to pump this weighted sum into some function that squishes the real number line into the rang,false,multimodal_tvsum_style
-aircAruvnKk,630.0,632.0,annotator_1,,lecture,,that squishes the real number line into the range between 0 and 1.,false,multimodal_tvsum_style
-aircAruvnKk,632.0,634.0,annotator_1,,lecture,,that squishes the real number line into the range between 0 and 1. And a common function that does this is called the si,false,multimodal_tvsum_style
-aircAruvnKk,634.0,636.0,annotator_1,,lecture,,"And a common function that does this is called the sigmoid function, also known as a logistic curve.",false,multimodal_tvsum_style
-aircAruvnKk,636.0,638.0,annotator_1,,lecture,,also known as a logistic curve.,false,multimodal_tvsum_style
-aircAruvnKk,638.0,640.0,annotator_1,,lecture,,"Basically very negative inputs end up close to 0, positive inputs end up close to 1,",false,multimodal_tvsum_style
-aircAruvnKk,640.0,642.0,annotator_1,,lecture,,"Basically very negative inputs end up close to 0, positive inputs end up close to 1,",false,multimodal_tvsum_style
-aircAruvnKk,642.0,644.0,annotator_1,,lecture,,"Basically very negative inputs end up close to 0, positive inputs end up close to 1, and it just steadily increases arou",false,multimodal_tvsum_style
-aircAruvnKk,644.0,646.0,annotator_1,,lecture,,and it just steadily increases around the input 0.,false,multimodal_tvsum_style
-aircAruvnKk,646.0,648.0,annotator_1,,lecture,,and it just steadily increases around the input 0.,false,multimodal_tvsum_style
-aircAruvnKk,648.0,650.0,annotator_1,,lecture,,So the activation of the neuron here is basically a,false,multimodal_tvsum_style
-aircAruvnKk,650.0,652.0,annotator_1,,lecture,,So the activation of the neuron here is basically a,false,multimodal_tvsum_style
-aircAruvnKk,652.0,654.0,annotator_1,,lecture,,So the activation of the neuron here is basically a measure of how positive the relevant weighted sum is.,false,multimodal_tvsum_style
-aircAruvnKk,654.0,656.0,annotator_1,,lecture,,measure of how positive the relevant weighted sum is.,false,multimodal_tvsum_style
-aircAruvnKk,656.0,658.0,annotator_1,,lecture,,measure of how positive the relevant weighted sum is. But maybe it's not that you want the neuron to,false,multimodal_tvsum_style
-aircAruvnKk,658.0,660.0,annotator_1,,lecture,,But maybe it's not that you want the neuron to light up when the weighted sum is bigger than 0.,false,multimodal_tvsum_style
-aircAruvnKk,660.0,662.0,annotator_1,,lecture,,light up when the weighted sum is bigger than 0.,false,multimodal_tvsum_style
-aircAruvnKk,662.0,664.0,annotator_1,,lecture,,Maybe you only want it to be active when the sum is bigger than say 10.,false,multimodal_tvsum_style
-aircAruvnKk,664.0,666.0,annotator_1,,lecture,,Maybe you only want it to be active when the sum is bigger than say 10.,false,multimodal_tvsum_style
-aircAruvnKk,666.0,668.0,annotator_1,,lecture,,"Maybe you only want it to be active when the sum is bigger than say 10. That is, you want some bias for it to be inactiv",false,multimodal_tvsum_style
-aircAruvnKk,668.0,670.0,annotator_1,,lecture,,"That is, you want some bias for it to be inactive.",false,multimodal_tvsum_style
-aircAruvnKk,670.0,672.0,annotator_1,,lecture,,"That is, you want some bias for it to be inactive. What we'll do then is just add in some other number like negative 10 ",false,multimodal_tvsum_style
-aircAruvnKk,672.0,674.0,annotator_1,,lecture,,What we'll do then is just add in some other number like negative 10 to this,false,multimodal_tvsum_style
-aircAruvnKk,674.0,676.0,annotator_1,,lecture,,What we'll do then is just add in some other number like negative 10 to this weighted sum before plugging it through the,false,multimodal_tvsum_style
-aircAruvnKk,676.0,678.0,annotator_1,,lecture,,weighted sum before plugging it through the sigmoid squishification function.,false,multimodal_tvsum_style
-aircAruvnKk,678.0,680.0,annotator_1,,lecture,,weighted sum before plugging it through the sigmoid squishification function.,false,multimodal_tvsum_style
-aircAruvnKk,680.0,682.0,annotator_1,,lecture,,That additional number is called the bias.,false,multimodal_tvsum_style
-aircAruvnKk,682.0,684.0,annotator_1,,lecture,,That additional number is called the bias. So the weights tell you what pixel pattern this neuron in the second,false,multimodal_tvsum_style
-aircAruvnKk,684.0,686.0,annotator_1,,lecture,,So the weights tell you what pixel pattern this neuron in the second,false,multimodal_tvsum_style
-aircAruvnKk,686.0,688.0,annotator_1,,lecture,,"So the weights tell you what pixel pattern this neuron in the second layer is picking up on, and the bias tells you how ",false,multimodal_tvsum_style
-aircAruvnKk,688.0,690.0,annotator_1,,lecture,,"layer is picking up on, and the bias tells you how high the weighted",false,multimodal_tvsum_style
-aircAruvnKk,690.0,692.0,annotator_1,,lecture,,"layer is picking up on, and the bias tells you how high the weighted sum needs to be before the neuron starts getting me",false,multimodal_tvsum_style
-aircAruvnKk,692.0,694.0,annotator_1,,lecture,,sum needs to be before the neuron starts getting meaningfully active.,false,multimodal_tvsum_style
-aircAruvnKk,694.0,696.0,annotator_1,,lecture,,sum needs to be before the neuron starts getting meaningfully active.,false,multimodal_tvsum_style
-aircAruvnKk,696.0,698.0,annotator_1,,lecture,,And that is just one neuron.,false,multimodal_tvsum_style
-aircAruvnKk,698.0,700.0,annotator_1,,lecture,,Every other neuron in this layer is going to be connected to,false,multimodal_tvsum_style
-aircAruvnKk,700.0,702.0,annotator_1,,lecture,,Every other neuron in this layer is going to be connected to,false,multimodal_tvsum_style
-aircAruvnKk,702.0,704.0,annotator_1,,lecture,,"Every other neuron in this layer is going to be connected to all 784 pixel neurons from the first layer, and each one of",false,multimodal_tvsum_style
-aircAruvnKk,704.0,706.0,annotator_1,,lecture,,"all 784 pixel neurons from the first layer, and each one of",false,multimodal_tvsum_style
-aircAruvnKk,706.0,708.0,annotator_1,,lecture,,"all 784 pixel neurons from the first layer, and each one of those 784 connections has its own weight associated with it.",false,multimodal_tvsum_style
-aircAruvnKk,708.0,710.0,annotator_1,,lecture,,those 784 connections has its own weight associated with it.,false,multimodal_tvsum_style
-aircAruvnKk,710.0,712.0,annotator_1,,lecture,,"those 784 connections has its own weight associated with it. Also, each one has some bias, some other number that you ad",false,multimodal_tvsum_style
-aircAruvnKk,712.0,714.0,annotator_1,,lecture,,"Also, each one has some bias, some other number that you add",false,multimodal_tvsum_style
-aircAruvnKk,714.0,716.0,annotator_1,,lecture,,"Also, each one has some bias, some other number that you add on to the weighted sum before squishing it with the sigmoid",false,multimodal_tvsum_style
-aircAruvnKk,716.0,718.0,annotator_1,,lecture,,on to the weighted sum before squishing it with the sigmoid.,false,multimodal_tvsum_style
-aircAruvnKk,718.0,720.0,annotator_1,,lecture,,"And that's a lot to think about! With this hidden layer of 16 neurons, that's a total of 784 times 16 weights,",false,multimodal_tvsum_style
-aircAruvnKk,720.0,722.0,annotator_1,,lecture,,"With this hidden layer of 16 neurons, that's a total of 784 times 16 weights,",false,multimodal_tvsum_style
-aircAruvnKk,722.0,724.0,annotator_1,,lecture,,"With this hidden layer of 16 neurons, that's a total of 784 times 16 weights,",false,multimodal_tvsum_style
-aircAruvnKk,724.0,726.0,annotator_1,,lecture,,"With this hidden layer of 16 neurons, that's a total of 784 times 16 weights,",false,multimodal_tvsum_style
-aircAruvnKk,726.0,728.0,annotator_1,,lecture,,"With this hidden layer of 16 neurons, that's a total of 784 times 16 weights, along with 16 biases.",false,multimodal_tvsum_style
-aircAruvnKk,728.0,730.0,annotator_1,,lecture,,And all of that is just the connections from the first layer to the second.,false,multimodal_tvsum_style
-aircAruvnKk,730.0,732.0,annotator_1,,lecture,,And all of that is just the connections from the first layer to the second.,false,multimodal_tvsum_style
-aircAruvnKk,732.0,734.0,annotator_1,,lecture,,The connections between the other layers also have,false,multimodal_tvsum_style
-aircAruvnKk,734.0,736.0,annotator_1,,lecture,,The connections between the other layers also have a bunch of weights and biases associated with them.,false,multimodal_tvsum_style
-aircAruvnKk,736.0,738.0,annotator_1,,lecture,,a bunch of weights and biases associated with them.,false,multimodal_tvsum_style
-aircAruvnKk,738.0,740.0,annotator_1,,lecture,,"All said and done, this network has almost exactly 13,000 total weights and biases.",false,multimodal_tvsum_style
-aircAruvnKk,740.0,742.0,annotator_1,,lecture,,"All said and done, this network has almost exactly 13,000 total weights and biases.",false,multimodal_tvsum_style
-aircAruvnKk,742.0,744.0,annotator_1,,lecture,,"All said and done, this network has almost exactly 13,000 total weights and biases. 13,000 knobs and dials that can be t",false,multimodal_tvsum_style
-aircAruvnKk,744.0,746.0,annotator_1,,lecture,,"13,000 knobs and dials that can be tweaked and turned",false,multimodal_tvsum_style
-aircAruvnKk,746.0,748.0,annotator_1,,lecture,,"13,000 knobs and dials that can be tweaked and turned to make this network behave in different ways.",false,multimodal_tvsum_style
-aircAruvnKk,748.0,750.0,annotator_1,,lecture,,to make this network behave in different ways.,false,multimodal_tvsum_style
-aircAruvnKk,750.0,752.0,annotator_1,,lecture,,"So when we talk about learning, what that's referring to is",false,multimodal_tvsum_style
-aircAruvnKk,752.0,754.0,annotator_1,,lecture,,"So when we talk about learning, what that's referring to is",false,multimodal_tvsum_style
-aircAruvnKk,754.0,756.0,annotator_1,,lecture,,"So when we talk about learning, what that's referring to is getting the computer to find a valid setting for all of thes",false,multimodal_tvsum_style
-aircAruvnKk,756.0,758.0,annotator_1,,lecture,,getting the computer to find a valid setting for all of these many many numbers so that it'll actually solve the problem,false,multimodal_tvsum_style
-aircAruvnKk,758.0,760.0,annotator_1,,lecture,,many many numbers so that it'll actually solve the problem at hand.,false,multimodal_tvsum_style
-aircAruvnKk,760.0,762.0,annotator_1,,lecture,,many many numbers so that it'll actually solve the problem at hand.,false,multimodal_tvsum_style
-aircAruvnKk,762.0,764.0,annotator_1,,lecture,,One thought experiment that is at once fun and kind of horrifying is to imagine sitting,false,multimodal_tvsum_style
-aircAruvnKk,764.0,766.0,annotator_1,,lecture,,One thought experiment that is at once fun and kind of horrifying is to imagine sitting,false,multimodal_tvsum_style
-aircAruvnKk,766.0,768.0,annotator_1,,lecture,,One thought experiment that is at once fun and kind of horrifying is to imagine sitting down and setting all of these we,false,multimodal_tvsum_style
-aircAruvnKk,768.0,770.0,annotator_1,,lecture,,"down and setting all of these weights and biases by hand,",false,multimodal_tvsum_style
-aircAruvnKk,770.0,772.0,annotator_1,,lecture,,"down and setting all of these weights and biases by hand, purposefully tweaking the numbers so that the second layer pic",false,multimodal_tvsum_style
-aircAruvnKk,772.0,774.0,annotator_1,,lecture,,"purposefully tweaking the numbers so that the second layer picks up on edges,",false,multimodal_tvsum_style
-aircAruvnKk,774.0,776.0,annotator_1,,lecture,,"purposefully tweaking the numbers so that the second layer picks up on edges, the third layer picks up on patterns, etc.",false,multimodal_tvsum_style
-aircAruvnKk,776.0,778.0,annotator_1,,lecture,,"the third layer picks up on patterns, etc. I personally find this satisfying rather than just treating the network as a ",false,multimodal_tvsum_style
-aircAruvnKk,778.0,780.0,annotator_1,,lecture,,I personally find this satisfying rather than just treating the network as a total black,false,multimodal_tvsum_style
-aircAruvnKk,780.0,782.0,annotator_1,,lecture,,"I personally find this satisfying rather than just treating the network as a total black box, because when the network d",false,multimodal_tvsum_style
-aircAruvnKk,782.0,784.0,annotator_1,,lecture,,"box, because when the network doesn't perform the way you anticipate,",false,multimodal_tvsum_style
-aircAruvnKk,784.0,786.0,annotator_1,,lecture,,"box, because when the network doesn't perform the way you anticipate, if you've built up a little bit of a relationship ",false,multimodal_tvsum_style
-aircAruvnKk,786.0,788.0,annotator_1,,lecture,,if you've built up a little bit of a relationship with what those weights and biases,false,multimodal_tvsum_style
-aircAruvnKk,788.0,790.0,annotator_1,,lecture,,"if you've built up a little bit of a relationship with what those weights and biases actually mean, you have a starting ",false,multimodal_tvsum_style
-aircAruvnKk,790.0,792.0,annotator_1,,lecture,,"actually mean, you have a starting place for experimenting with how to change the",false,multimodal_tvsum_style
-aircAruvnKk,792.0,794.0,annotator_1,,lecture,,"actually mean, you have a starting place for experimenting with how to change the structure to improve.",false,multimodal_tvsum_style
-aircAruvnKk,794.0,796.0,annotator_1,,lecture,,"structure to improve. Or when the network does work but not for the reasons you might expect,",false,multimodal_tvsum_style
-aircAruvnKk,796.0,798.0,annotator_1,,lecture,,"Or when the network does work but not for the reasons you might expect,",false,multimodal_tvsum_style
-aircAruvnKk,798.0,800.0,annotator_1,,lecture,,"Or when the network does work but not for the reasons you might expect, digging into what the weights and biases are doi",false,multimodal_tvsum_style
-aircAruvnKk,800.0,802.0,annotator_1,,lecture,,digging into what the weights and biases are doing is a good way to challenge,false,multimodal_tvsum_style
-aircAruvnKk,802.0,804.0,annotator_1,,lecture,,digging into what the weights and biases are doing is a good way to challenge your assumptions and really expose the ful,false,multimodal_tvsum_style
-aircAruvnKk,804.0,806.0,annotator_1,,lecture,,your assumptions and really expose the full space of possible solutions.,false,multimodal_tvsum_style
-aircAruvnKk,806.0,808.0,annotator_1,,lecture,,"By the way, the actual function here is a little cumbersome to write down,",false,multimodal_tvsum_style
-aircAruvnKk,808.0,810.0,annotator_1,,lecture,,"By the way, the actual function here is a little cumbersome to write down, don't you think?",false,multimodal_tvsum_style
-aircAruvnKk,810.0,812.0,annotator_1,,lecture,,don't you think?,false,multimodal_tvsum_style
-aircAruvnKk,812.0,814.0,annotator_1,,lecture,,So let me show you a more notationally compact way that these connections are represented.,false,multimodal_tvsum_style
-aircAruvnKk,814.0,816.0,annotator_1,,lecture,,So let me show you a more notationally compact way that these connections are represented.,false,multimodal_tvsum_style
-aircAruvnKk,816.0,818.0,annotator_1,,lecture,,So let me show you a more notationally compact way that these connections are represented. This is how you'd see it if y,false,multimodal_tvsum_style
-aircAruvnKk,818.0,820.0,annotator_1,,lecture,,This is how you'd see it if you choose to read up more about neural networks.,false,multimodal_tvsum_style
-aircAruvnKk,820.0,822.0,annotator_1,,lecture,,This is how you'd see it if you choose to read up more about neural networks. Organize all of the activations from one l,false,multimodal_tvsum_style
-aircAruvnKk,822.0,824.0,annotator_1,,lecture,,Organize all of the activations from one layer into a column as a vector.,false,multimodal_tvsum_style
-aircAruvnKk,824.0,826.0,annotator_1,,lecture,,Organize all of the activations from one layer into a column as a vector.,false,multimodal_tvsum_style
-aircAruvnKk,826.0,828.0,annotator_1,,lecture,,Organize all of the activations from one layer into a column as a vector.,false,multimodal_tvsum_style
-aircAruvnKk,828.0,830.0,annotator_1,,lecture,,"Organize all of the activations from one layer into a column as a vector. Then organize all of the weights as a matrix, ",false,multimodal_tvsum_style
-aircAruvnKk,830.0,832.0,annotator_1,,lecture,,"Then organize all of the weights as a matrix, where each row of that matrix corresponds to the connections between one l",false,multimodal_tvsum_style
-aircAruvnKk,832.0,834.0,annotator_1,,lecture,,to the connections between one layer and a particular neuron in the next layer.,false,multimodal_tvsum_style
-aircAruvnKk,834.0,836.0,annotator_1,,lecture,,to the connections between one layer and a particular neuron in the next layer.,false,multimodal_tvsum_style
-aircAruvnKk,836.0,838.0,annotator_1,,lecture,,to the connections between one layer and a particular neuron in the next layer.,false,multimodal_tvsum_style
-aircAruvnKk,838.0,840.0,annotator_1,,lecture,,What that means is that taking the weighted sum of the activations in,false,multimodal_tvsum_style
-aircAruvnKk,840.0,842.0,annotator_1,,lecture,,What that means is that taking the weighted sum of the activations in,false,multimodal_tvsum_style
-aircAruvnKk,842.0,844.0,annotator_1,,lecture,,What that means is that taking the weighted sum of the activations in the first layer according to these weights corresp,false,multimodal_tvsum_style
-aircAruvnKk,844.0,846.0,annotator_1,,lecture,,the first layer according to these weights corresponds to one of the terms in the matrix vector product of everything we,false,multimodal_tvsum_style
-aircAruvnKk,846.0,848.0,annotator_1,,lecture,,terms in the matrix vector product of everything we have on the left here.,false,multimodal_tvsum_style
-aircAruvnKk,848.0,850.0,annotator_1,,lecture,,terms in the matrix vector product of everything we have on the left here.,false,multimodal_tvsum_style
-aircAruvnKk,850.0,852.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-aircAruvnKk,852.0,854.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-aircAruvnKk,854.0,856.0,annotator_1,,lecture,,"By the way, so much of machine learning just comes down to having a good",false,multimodal_tvsum_style
-aircAruvnKk,856.0,858.0,annotator_1,,lecture,,"By the way, so much of machine learning just comes down to having a good grasp of linear algebra, so for any of you who ",false,multimodal_tvsum_style
-aircAruvnKk,858.0,860.0,annotator_1,,lecture,,"grasp of linear algebra, so for any of you who want a nice visual",false,multimodal_tvsum_style
-aircAruvnKk,860.0,862.0,annotator_1,,lecture,,"grasp of linear algebra, so for any of you who want a nice visual understanding for matrices and what matrix vector mult",false,multimodal_tvsum_style
-aircAruvnKk,862.0,864.0,annotator_1,,lecture,,"understanding for matrices and what matrix vector multiplication means,",false,multimodal_tvsum_style
-aircAruvnKk,864.0,866.0,annotator_1,,lecture,,"understanding for matrices and what matrix vector multiplication means, take a look at the series I did on linear algebr",false,multimodal_tvsum_style
-aircAruvnKk,866.0,868.0,annotator_1,,lecture,,"take a look at the series I did on linear algebra, especially chapter 3.",false,multimodal_tvsum_style
-aircAruvnKk,868.0,870.0,annotator_1,,lecture,,"take a look at the series I did on linear algebra, especially chapter 3. Back to our expression, instead of talking abou",false,multimodal_tvsum_style
-aircAruvnKk,870.0,872.0,annotator_1,,lecture,,"Back to our expression, instead of talking about adding the bias to each one of",false,multimodal_tvsum_style
-aircAruvnKk,872.0,874.0,annotator_1,,lecture,,"Back to our expression, instead of talking about adding the bias to each one of these values independently, we represent",false,multimodal_tvsum_style
-aircAruvnKk,874.0,876.0,annotator_1,,lecture,,"these values independently, we represent it by organizing all those biases into",false,multimodal_tvsum_style
-aircAruvnKk,876.0,878.0,annotator_1,,lecture,,"these values independently, we represent it by organizing all those biases into",false,multimodal_tvsum_style
-aircAruvnKk,878.0,880.0,annotator_1,,lecture,,"a vector, and adding the entire vector to the previous matrix vector product.",false,multimodal_tvsum_style
-aircAruvnKk,880.0,882.0,annotator_1,,lecture,,"a vector, and adding the entire vector to the previous matrix vector product.",false,multimodal_tvsum_style
-aircAruvnKk,882.0,884.0,annotator_1,,lecture,,"a vector, and adding the entire vector to the previous matrix vector product. Then as a final step, I'll wrap a sigmoid ",false,multimodal_tvsum_style
-aircAruvnKk,884.0,886.0,annotator_1,,lecture,,"Then as a final step, I'll wrap a sigmoid around the outside here,",false,multimodal_tvsum_style
-aircAruvnKk,886.0,888.0,annotator_1,,lecture,,"Then as a final step, I'll wrap a sigmoid around the outside here, and what that's supposed to represent is that you're ",false,multimodal_tvsum_style
-aircAruvnKk,888.0,890.0,annotator_1,,lecture,,and what that's supposed to represent is that you're going to apply the,false,multimodal_tvsum_style
-aircAruvnKk,890.0,892.0,annotator_1,,lecture,,and what that's supposed to represent is that you're going to apply the sigmoid function to each specific component of t,false,multimodal_tvsum_style
-aircAruvnKk,892.0,894.0,annotator_1,,lecture,,sigmoid function to each specific component of the resulting vector inside.,false,multimodal_tvsum_style
-aircAruvnKk,894.0,896.0,annotator_1,,lecture,,sigmoid function to each specific component of the resulting vector inside. So once you write down this weight matrix an,false,multimodal_tvsum_style
-aircAruvnKk,896.0,898.0,annotator_1,,lecture,,"So once you write down this weight matrix and these vectors as their own symbols,",false,multimodal_tvsum_style
-aircAruvnKk,898.0,900.0,annotator_1,,lecture,,"So once you write down this weight matrix and these vectors as their own symbols,",false,multimodal_tvsum_style
-aircAruvnKk,900.0,902.0,annotator_1,,lecture,,"So once you write down this weight matrix and these vectors as their own symbols, you can communicate the full transitio",false,multimodal_tvsum_style
-aircAruvnKk,902.0,904.0,annotator_1,,lecture,,you can communicate the full transition of activations from one layer to the next in an,false,multimodal_tvsum_style
-aircAruvnKk,904.0,906.0,annotator_1,,lecture,,you can communicate the full transition of activations from one layer to the next in an extremely tight and neat little ,false,multimodal_tvsum_style
-aircAruvnKk,906.0,908.0,annotator_1,,lecture,,"extremely tight and neat little expression, and this makes the relevant code both a lot",false,multimodal_tvsum_style
-aircAruvnKk,908.0,910.0,annotator_1,,lecture,,"extremely tight and neat little expression, and this makes the relevant code both a lot",false,multimodal_tvsum_style
-aircAruvnKk,910.0,912.0,annotator_1,,lecture,,"extremely tight and neat little expression, and this makes the relevant code both a lot simpler and a lot faster, since ",false,multimodal_tvsum_style
-aircAruvnKk,912.0,914.0,annotator_1,,lecture,,"simpler and a lot faster, since many libraries optimize the heck out of matrix",false,multimodal_tvsum_style
-aircAruvnKk,914.0,916.0,annotator_1,,lecture,,"simpler and a lot faster, since many libraries optimize the heck out of matrix multiplication.",false,multimodal_tvsum_style
-aircAruvnKk,916.0,918.0,annotator_1,,lecture,,Remember how earlier I said these neurons are simply things that hold numbers?,false,multimodal_tvsum_style
-aircAruvnKk,918.0,920.0,annotator_1,,lecture,,Remember how earlier I said these neurons are simply things that hold numbers?,false,multimodal_tvsum_style
-aircAruvnKk,920.0,922.0,annotator_1,,lecture,,Remember how earlier I said these neurons are simply things that hold numbers?,false,multimodal_tvsum_style
-aircAruvnKk,922.0,924.0,annotator_1,,lecture,,"Well of course the specific numbers that they hold depends on the image you feed in,",false,multimodal_tvsum_style
-aircAruvnKk,924.0,926.0,annotator_1,,lecture,,"Well of course the specific numbers that they hold depends on the image you feed in,",false,multimodal_tvsum_style
-aircAruvnKk,926.0,928.0,annotator_1,,lecture,,"Well of course the specific numbers that they hold depends on the image you feed in, so it's actually more accurate to t",false,multimodal_tvsum_style
-aircAruvnKk,928.0,930.0,annotator_1,,lecture,,"so it's actually more accurate to think of each neuron as a function,",false,multimodal_tvsum_style
-aircAruvnKk,930.0,932.0,annotator_1,,lecture,,"so it's actually more accurate to think of each neuron as a function, one that takes in the outputs of all the neurons i",false,multimodal_tvsum_style
-aircAruvnKk,932.0,934.0,annotator_1,,lecture,,one that takes in the outputs of all the neurons in the previous layer and spits out a,false,multimodal_tvsum_style
-aircAruvnKk,934.0,936.0,annotator_1,,lecture,,one that takes in the outputs of all the neurons in the previous layer and spits out a,false,multimodal_tvsum_style
-aircAruvnKk,936.0,938.0,annotator_1,,lecture,,one that takes in the outputs of all the neurons in the previous layer and spits out a number between 0 and 1.,false,multimodal_tvsum_style
-aircAruvnKk,938.0,940.0,annotator_1,,lecture,,"number between 0 and 1. Really the entire network is just a function, one that takes in",false,multimodal_tvsum_style
-aircAruvnKk,940.0,942.0,annotator_1,,lecture,,"Really the entire network is just a function, one that takes in",false,multimodal_tvsum_style
-aircAruvnKk,942.0,944.0,annotator_1,,lecture,,"Really the entire network is just a function, one that takes in 784 numbers as an input and spits out 10 numbers as an o",false,multimodal_tvsum_style
-aircAruvnKk,944.0,946.0,annotator_1,,lecture,,784 numbers as an input and spits out 10 numbers as an output.,false,multimodal_tvsum_style
-aircAruvnKk,946.0,948.0,annotator_1,,lecture,,"784 numbers as an input and spits out 10 numbers as an output. It's an absurdly complicated function, one that involves ",false,multimodal_tvsum_style
-aircAruvnKk,948.0,950.0,annotator_1,,lecture,,"It's an absurdly complicated function, one that involves 13,000 parameters",false,multimodal_tvsum_style
-aircAruvnKk,950.0,952.0,annotator_1,,lecture,,"It's an absurdly complicated function, one that involves 13,000 parameters in the forms of these weights and biases that",false,multimodal_tvsum_style
-aircAruvnKk,952.0,954.0,annotator_1,,lecture,,"in the forms of these weights and biases that pick up on certain patterns,",false,multimodal_tvsum_style
-aircAruvnKk,954.0,956.0,annotator_1,,lecture,,"in the forms of these weights and biases that pick up on certain patterns, and which involves iterating many matrix vect",false,multimodal_tvsum_style
-aircAruvnKk,956.0,958.0,annotator_1,,lecture,,and which involves iterating many matrix vector products and the sigmoid,false,multimodal_tvsum_style
-aircAruvnKk,958.0,960.0,annotator_1,,lecture,,"and which involves iterating many matrix vector products and the sigmoid squishification function, but it's just a funct",false,multimodal_tvsum_style
-aircAruvnKk,960.0,962.0,annotator_1,,lecture,,"squishification function, but it's just a function nonetheless.",false,multimodal_tvsum_style
-aircAruvnKk,962.0,964.0,annotator_1,,lecture,,"squishification function, but it's just a function nonetheless. And in a way it's kind of reassuring that it looks compl",false,multimodal_tvsum_style
-aircAruvnKk,964.0,966.0,annotator_1,,lecture,,And in a way it's kind of reassuring that it looks complicated.,false,multimodal_tvsum_style
-aircAruvnKk,966.0,968.0,annotator_1,,lecture,,"And in a way it's kind of reassuring that it looks complicated. I mean if it were any simpler, what hope would we have",false,multimodal_tvsum_style
-aircAruvnKk,968.0,970.0,annotator_1,,lecture,,"I mean if it were any simpler, what hope would we have that it could take on the challenge of recognizing digits?",false,multimodal_tvsum_style
-aircAruvnKk,970.0,972.0,annotator_1,,lecture,,that it could take on the challenge of recognizing digits?,false,multimodal_tvsum_style
-aircAruvnKk,972.0,974.0,annotator_1,,lecture,,that it could take on the challenge of recognizing digits? And how does it take on that challenge?,false,multimodal_tvsum_style
-aircAruvnKk,974.0,976.0,annotator_1,,lecture,,And how does it take on that challenge? How does this network learn the appropriate weights and biases just by looking a,false,multimodal_tvsum_style
-aircAruvnKk,976.0,978.0,annotator_1,,lecture,,How does this network learn the appropriate weights and biases just by looking at data?,false,multimodal_tvsum_style
-aircAruvnKk,978.0,980.0,annotator_1,,lecture,,How does this network learn the appropriate weights and biases just by looking at data?,false,multimodal_tvsum_style
-aircAruvnKk,980.0,982.0,annotator_1,,lecture,,"Well that's what I'll show in the next video, and I'll also dig a little",false,multimodal_tvsum_style
-aircAruvnKk,982.0,984.0,annotator_1,,lecture,,"Well that's what I'll show in the next video, and I'll also dig a little more into what this particular network we're se",false,multimodal_tvsum_style
-aircAruvnKk,984.0,986.0,annotator_1,,lecture,,more into what this particular network we're seeing is really doing.,false,multimodal_tvsum_style
-aircAruvnKk,986.0,988.0,annotator_1,,lecture,,more into what this particular network we're seeing is really doing. Now is the point I suppose I should say subscribe t,false,multimodal_tvsum_style
-aircAruvnKk,988.0,990.0,annotator_1,,lecture,,Now is the point I suppose I should say subscribe to stay notified,false,multimodal_tvsum_style
-aircAruvnKk,990.0,992.0,annotator_1,,lecture,,"Now is the point I suppose I should say subscribe to stay notified about when that video or any new videos come out,",false,multimodal_tvsum_style
-aircAruvnKk,992.0,994.0,annotator_1,,lecture,,"about when that video or any new videos come out, but realistically most of you don't actually receive notifications fro",false,multimodal_tvsum_style
-aircAruvnKk,994.0,996.0,annotator_1,,lecture,,"but realistically most of you don't actually receive notifications from YouTube, do you?",false,multimodal_tvsum_style
-aircAruvnKk,996.0,998.0,annotator_1,,lecture,,"but realistically most of you don't actually receive notifications from YouTube, do you?",false,multimodal_tvsum_style
-aircAruvnKk,998.0,1000.0,annotator_1,,lecture,,Maybe more honestly I should say subscribe so that the neural networks,false,multimodal_tvsum_style
-aircAruvnKk,1000.0,1002.0,annotator_1,,lecture,,Maybe more honestly I should say subscribe so that the neural networks that underlie YouTube's recommendation algorithm ,false,multimodal_tvsum_style
-aircAruvnKk,1002.0,1004.0,annotator_1,,lecture,,that underlie YouTube's recommendation algorithm are primed to believe,false,multimodal_tvsum_style
-aircAruvnKk,1004.0,1006.0,annotator_1,,lecture,,that underlie YouTube's recommendation algorithm are primed to believe that you want to see content from this channel ge,false,multimodal_tvsum_style
-aircAruvnKk,1006.0,1008.0,annotator_1,,lecture,,that you want to see content from this channel get recommended to you.,false,multimodal_tvsum_style
-aircAruvnKk,1008.0,1010.0,annotator_1,,lecture,,"Anyway, stay posted for more.",false,multimodal_tvsum_style
-aircAruvnKk,1010.0,1012.0,annotator_1,,lecture,,Thank you very much to everyone supporting these videos on Patreon.,false,multimodal_tvsum_style
-aircAruvnKk,1012.0,1014.0,annotator_1,,lecture,,Thank you very much to everyone supporting these videos on Patreon.,false,multimodal_tvsum_style
-aircAruvnKk,1014.0,1016.0,annotator_1,,lecture,,"I've been a little slow to progress in the probability series this summer,",false,multimodal_tvsum_style
-aircAruvnKk,1016.0,1018.0,annotator_1,,lecture,,"I've been a little slow to progress in the probability series this summer, but I'm jumping back into it after this proje",false,multimodal_tvsum_style
-aircAruvnKk,1018.0,1020.0,annotator_1,,lecture,,"but I'm jumping back into it after this project, so patrons you can look out for updates there.",false,multimodal_tvsum_style
-aircAruvnKk,1020.0,1022.0,annotator_1,,lecture,,so patrons you can look out for updates there.,false,multimodal_tvsum_style
-aircAruvnKk,1022.0,1024.0,annotator_1,,lecture,,To close things off here I have with me Lisha Li who did her PhD work on the,false,multimodal_tvsum_style
-aircAruvnKk,1024.0,1026.0,annotator_1,,lecture,,To close things off here I have with me Lisha Li who did her PhD work on the,false,multimodal_tvsum_style
-aircAruvnKk,1026.0,1028.0,annotator_1,,lecture,,To close things off here I have with me Lisha Li who did her PhD work on the theoretical side of deep learning and who c,false,multimodal_tvsum_style
-aircAruvnKk,1028.0,1030.0,annotator_1,,lecture,,theoretical side of deep learning and who currently works at a venture capital,false,multimodal_tvsum_style
-aircAruvnKk,1030.0,1032.0,annotator_1,,lecture,,theoretical side of deep learning and who currently works at a venture capital firm called Amplify Partners who kindly p,false,multimodal_tvsum_style
-aircAruvnKk,1032.0,1034.0,annotator_1,,lecture,,firm called Amplify Partners who kindly provided some of the funding for this video.,false,multimodal_tvsum_style
-aircAruvnKk,1034.0,1036.0,annotator_1,,lecture,,firm called Amplify Partners who kindly provided some of the funding for this video. So Lisha one thing I think we shoul,false,multimodal_tvsum_style
-aircAruvnKk,1036.0,1038.0,annotator_1,,lecture,,So Lisha one thing I think we should quickly bring up is this sigmoid function.,false,multimodal_tvsum_style
-aircAruvnKk,1038.0,1040.0,annotator_1,,lecture,,So Lisha one thing I think we should quickly bring up is this sigmoid function. As I understand it early networks use th,false,multimodal_tvsum_style
-aircAruvnKk,1040.0,1042.0,annotator_1,,lecture,,As I understand it early networks use this to squish the relevant weighted,false,multimodal_tvsum_style
-aircAruvnKk,1042.0,1044.0,annotator_1,,lecture,,"As I understand it early networks use this to squish the relevant weighted sum into that interval between zero and one, ",false,multimodal_tvsum_style
-aircAruvnKk,1044.0,1046.0,annotator_1,,lecture,,"sum into that interval between zero and one, you know kind of motivated",false,multimodal_tvsum_style
-aircAruvnKk,1046.0,1048.0,annotator_1,,lecture,,"sum into that interval between zero and one, you know kind of motivated by this biological analogy of neurons either bei",false,multimodal_tvsum_style
-aircAruvnKk,1048.0,1050.0,annotator_1,,lecture,,by this biological analogy of neurons either being inactive or active.,false,multimodal_tvsum_style
-aircAruvnKk,1050.0,1052.0,annotator_1,,lecture,,Exactly. But relatively few modern networks actually use sigmoid anymore.,false,multimodal_tvsum_style
-aircAruvnKk,1052.0,1054.0,annotator_1,,lecture,,Exactly. But relatively few modern networks actually use sigmoid anymore.,false,multimodal_tvsum_style
-aircAruvnKk,1054.0,1056.0,annotator_1,,lecture,,Exactly. But relatively few modern networks actually use sigmoid anymore. Yeah. It's kind of old school right? Yeah or r,false,multimodal_tvsum_style
-aircAruvnKk,1056.0,1058.0,annotator_1,,lecture,,Yeah or rather ReLU seems to be much easier to train.,false,multimodal_tvsum_style
-aircAruvnKk,1058.0,1060.0,annotator_1,,lecture,,"Yeah or rather ReLU seems to be much easier to train. And ReLU, ReLU stands for rectified linear unit?",false,multimodal_tvsum_style
-aircAruvnKk,1060.0,1062.0,annotator_1,,lecture,,"And ReLU, ReLU stands for rectified linear unit?",false,multimodal_tvsum_style
-aircAruvnKk,1062.0,1064.0,annotator_1,,lecture,,"And ReLU, ReLU stands for rectified linear unit? Yes it's this kind of function where you're just taking a max of zero",false,multimodal_tvsum_style
-aircAruvnKk,1064.0,1066.0,annotator_1,,lecture,,Yes it's this kind of function where you're just taking a max of zero,false,multimodal_tvsum_style
-aircAruvnKk,1066.0,1068.0,annotator_1,,lecture,,Yes it's this kind of function where you're just taking a max of zero and a where a is given by what you were explaining,false,multimodal_tvsum_style
-aircAruvnKk,1068.0,1070.0,annotator_1,,lecture,,and a where a is given by what you were explaining in the video and,false,multimodal_tvsum_style
-aircAruvnKk,1070.0,1072.0,annotator_1,,lecture,,and a where a is given by what you were explaining in the video and,false,multimodal_tvsum_style
-aircAruvnKk,1072.0,1074.0,annotator_1,,lecture,,and a where a is given by what you were explaining in the video and what this was sort of motivated from I think was a p,false,multimodal_tvsum_style
-aircAruvnKk,1074.0,1076.0,annotator_1,,lecture,,what this was sort of motivated from I think was a partially by a,false,multimodal_tvsum_style
-aircAruvnKk,1076.0,1078.0,annotator_1,,lecture,,what this was sort of motivated from I think was a partially by a biological analogy with how neurons would either be ac,false,multimodal_tvsum_style
-aircAruvnKk,1078.0,1080.0,annotator_1,,lecture,,biological analogy with how neurons would either be activated or not.,false,multimodal_tvsum_style
-aircAruvnKk,1080.0,1082.0,annotator_1,,lecture,,biological analogy with how neurons would either be activated or not. And so if it passes a certain threshold it would b,false,multimodal_tvsum_style
-aircAruvnKk,1082.0,1084.0,annotator_1,,lecture,,And so if it passes a certain threshold it would be the identity function but if it did,false,multimodal_tvsum_style
-aircAruvnKk,1084.0,1086.0,annotator_1,,lecture,,And so if it passes a certain threshold it would be the identity function but if it did,false,multimodal_tvsum_style
-aircAruvnKk,1086.0,1088.0,annotator_1,,lecture,,And so if it passes a certain threshold it would be the identity function but if it did not then it would just not be ac,false,multimodal_tvsum_style
-aircAruvnKk,1088.0,1090.0,annotator_1,,lecture,,not then it would just not be activated so it'd be zero so it's kind of a simplification.,false,multimodal_tvsum_style
-aircAruvnKk,1090.0,1092.0,annotator_1,,lecture,,not then it would just not be activated so it'd be zero so it's kind of a simplification. Using sigmoids didn't help tra,false,multimodal_tvsum_style
-aircAruvnKk,1092.0,1094.0,annotator_1,,lecture,,Using sigmoids didn't help training or it was very difficult to,false,multimodal_tvsum_style
-aircAruvnKk,1094.0,1096.0,annotator_1,,lecture,,Using sigmoids didn't help training or it was very difficult to train at some point and people just tried ReLU and it ha,false,multimodal_tvsum_style
-aircAruvnKk,1096.0,1098.0,annotator_1,,lecture,,train at some point and people just tried ReLU and it happened,false,multimodal_tvsum_style
-aircAruvnKk,1098.0,1100.0,annotator_1,,lecture,,train at some point and people just tried ReLU and it happened,false,multimodal_tvsum_style
-aircAruvnKk,1100.0,1102.0,annotator_1,,lecture,,train at some point and people just tried ReLU and it happened to work very well for these incredibly deep neural networ,false,multimodal_tvsum_style
-aircAruvnKk,1102.0,1104.0,annotator_1,,lecture,,to work very well for these incredibly deep neural networks.,false,multimodal_tvsum_style
-aircAruvnKk,1104.0,1106.0,annotator_1,,lecture,,to work very well for these incredibly deep neural networks. All right thank you Lisha.,false,multimodal_tvsum_style
-aircAruvnKk,1106.0,1108.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-aircAruvnKk,1108.0,1110.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-aircAruvnKk,1110.0,1112.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-aircAruvnKk,1112.0,1114.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-aircAruvnKk,1114.0,1116.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-aircAruvnKk,1116.0,1118.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-aircAruvnKk,1118.0,1120.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-aircAruvnKk,1120.0,1122.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
+aircAruvnKk,0.0,2.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+aircAruvnKk,2.0,4.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+aircAruvnKk,4.0,6.0,annotator_1,3,lecture,,This is a 3.,false,multimodal_tvsum_style
+aircAruvnKk,6.0,8.0,annotator_1,3,lecture,,"It's sloppily written and rendered at an extremely low resolution of 28x28 pixels,",false,multimodal_tvsum_style
+aircAruvnKk,8.0,10.0,annotator_1,3,lecture,,"It's sloppily written and rendered at an extremely low resolution of 28x28 pixels,",false,multimodal_tvsum_style
+aircAruvnKk,10.0,12.0,annotator_1,3,lecture,,"It's sloppily written and rendered at an extremely low resolution of 28x28 pixels, but your brain has no trouble recogni",false,multimodal_tvsum_style
+aircAruvnKk,12.0,14.0,annotator_1,3,lecture,,but your brain has no trouble recognizing it as a 3.,false,multimodal_tvsum_style
+aircAruvnKk,14.0,16.0,annotator_1,3,lecture,,And I want you to take a moment to appreciate how,false,multimodal_tvsum_style
+aircAruvnKk,16.0,18.0,annotator_1,3,lecture,,And I want you to take a moment to appreciate how crazy it is that brains can do this so effortlessly.,false,multimodal_tvsum_style
+aircAruvnKk,18.0,20.0,annotator_1,3,lecture,,"crazy it is that brains can do this so effortlessly. I mean, this, this and this are also recognizable as 3s,",false,multimodal_tvsum_style
+aircAruvnKk,20.0,22.0,annotator_1,5,lecture,,"I mean, this, this and this are also recognizable as 3s,",false,multimodal_tvsum_style
+aircAruvnKk,22.0,24.0,annotator_1,5,lecture,,"I mean, this, this and this are also recognizable as 3s, even though the specific values of each pixel is very different",false,multimodal_tvsum_style
+aircAruvnKk,24.0,26.0,annotator_1,5,lecture,,even though the specific values of each pixel is very different from one,false,multimodal_tvsum_style
+aircAruvnKk,26.0,28.0,annotator_1,5,lecture,,even though the specific values of each pixel is very different from one image to the next.,false,multimodal_tvsum_style
+aircAruvnKk,28.0,30.0,annotator_1,5,lecture,,image to the next. The particular light-sensitive cells in your eye that are firing when you,false,multimodal_tvsum_style
+aircAruvnKk,30.0,32.0,annotator_1,5,lecture,,The particular light-sensitive cells in your eye that are firing when you,false,multimodal_tvsum_style
+aircAruvnKk,32.0,34.0,annotator_1,5,lecture,,The particular light-sensitive cells in your eye that are firing when you see this 3 are very different from the ones fi,false,multimodal_tvsum_style
+aircAruvnKk,34.0,36.0,annotator_1,5,lecture,,see this 3 are very different from the ones firing when you see this 3.,false,multimodal_tvsum_style
+aircAruvnKk,36.0,38.0,annotator_1,5,lecture,,see this 3 are very different from the ones firing when you see this 3. But something in that crazy-smart visual cortex ,false,multimodal_tvsum_style
+aircAruvnKk,38.0,40.0,annotator_1,4,lecture,,But something in that crazy-smart visual cortex of yours resolves these as representing,false,multimodal_tvsum_style
+aircAruvnKk,40.0,42.0,annotator_1,4,lecture,,But something in that crazy-smart visual cortex of yours resolves these as representing,false,multimodal_tvsum_style
+aircAruvnKk,42.0,44.0,annotator_1,4,lecture,,"But something in that crazy-smart visual cortex of yours resolves these as representing the same idea, while at the same",false,multimodal_tvsum_style
+aircAruvnKk,44.0,46.0,annotator_1,4,lecture,,"the same idea, while at the same time recognizing other images as their own distinct",false,multimodal_tvsum_style
+aircAruvnKk,46.0,48.0,annotator_1,4,lecture,,"the same idea, while at the same time recognizing other images as their own distinct ideas.",false,multimodal_tvsum_style
+aircAruvnKk,48.0,50.0,annotator_1,4,lecture,,"ideas. But if I told you, hey, sit down and write for me a program that takes in a grid of",false,multimodal_tvsum_style
+aircAruvnKk,50.0,52.0,annotator_1,4,lecture,,"But if I told you, hey, sit down and write for me a program that takes in a grid of",false,multimodal_tvsum_style
+aircAruvnKk,52.0,54.0,annotator_1,4,lecture,,"But if I told you, hey, sit down and write for me a program that takes in a grid of",false,multimodal_tvsum_style
+aircAruvnKk,54.0,56.0,annotator_1,4,lecture,,"But if I told you, hey, sit down and write for me a program that takes in a grid of 28x28 pixels like this and outputs a",false,multimodal_tvsum_style
+aircAruvnKk,56.0,58.0,annotator_1,4,lecture,,"28x28 pixels like this and outputs a single number between 0 and 10,",false,multimodal_tvsum_style
+aircAruvnKk,58.0,60.0,annotator_1,4,lecture,,"28x28 pixels like this and outputs a single number between 0 and 10, telling you what it thinks the digit is, well the t",false,multimodal_tvsum_style
+aircAruvnKk,60.0,62.0,annotator_1,4,lecture,,"telling you what it thinks the digit is, well the task goes from comically trivial to",false,multimodal_tvsum_style
+aircAruvnKk,62.0,64.0,annotator_1,4,lecture,,"telling you what it thinks the digit is, well the task goes from comically trivial to",false,multimodal_tvsum_style
+aircAruvnKk,64.0,66.0,annotator_1,4,lecture,,"telling you what it thinks the digit is, well the task goes from comically trivial to dauntingly difficult.",false,multimodal_tvsum_style
+aircAruvnKk,66.0,68.0,annotator_1,4,lecture,,"dauntingly difficult. Unless you've been living under a rock, I think I hardly need to motivate the relevance",false,multimodal_tvsum_style
+aircAruvnKk,68.0,70.0,annotator_1,3,lecture,,"Unless you've been living under a rock, I think I hardly need to motivate the relevance",false,multimodal_tvsum_style
+aircAruvnKk,70.0,72.0,annotator_1,3,lecture,,"Unless you've been living under a rock, I think I hardly need to motivate the relevance and importance of machine learni",false,multimodal_tvsum_style
+aircAruvnKk,72.0,74.0,annotator_1,3,lecture,,and importance of machine learning and neural networks to the present and to the future.,false,multimodal_tvsum_style
+aircAruvnKk,74.0,76.0,annotator_1,3,lecture,,and importance of machine learning and neural networks to the present and to the future. But what I want to do here is s,false,multimodal_tvsum_style
+aircAruvnKk,76.0,78.0,annotator_1,3,lecture,,"But what I want to do here is show you what a neural network actually is,",false,multimodal_tvsum_style
+aircAruvnKk,78.0,80.0,annotator_1,3,lecture,,"But what I want to do here is show you what a neural network actually is, assuming no background, and to help visualize ",false,multimodal_tvsum_style
+aircAruvnKk,80.0,82.0,annotator_1,3,lecture,,"assuming no background, and to help visualize what it's doing,",false,multimodal_tvsum_style
+aircAruvnKk,82.0,84.0,annotator_1,3,lecture,,"assuming no background, and to help visualize what it's doing, not as a buzzword but as a piece of math.",false,multimodal_tvsum_style
+aircAruvnKk,84.0,86.0,annotator_1,3,lecture,,"not as a buzzword but as a piece of math. My hope is that you come away feeling like the structure itself is motivated,",false,multimodal_tvsum_style
+aircAruvnKk,86.0,88.0,annotator_1,3,lecture,,"My hope is that you come away feeling like the structure itself is motivated,",false,multimodal_tvsum_style
+aircAruvnKk,88.0,90.0,annotator_1,3,lecture,,"My hope is that you come away feeling like the structure itself is motivated, and to feel like you know what it means wh",false,multimodal_tvsum_style
+aircAruvnKk,90.0,92.0,annotator_1,3,lecture,,"and to feel like you know what it means when you read, or you hear about a neural network quote-unquote learning.",false,multimodal_tvsum_style
+aircAruvnKk,92.0,94.0,annotator_1,3,lecture,,or you hear about a neural network quote-unquote learning.,false,multimodal_tvsum_style
+aircAruvnKk,94.0,96.0,annotator_1,3,lecture,,or you hear about a neural network quote-unquote learning. This video is just going to be devoted to the structure compo,false,multimodal_tvsum_style
+aircAruvnKk,96.0,98.0,annotator_1,3,lecture,,"This video is just going to be devoted to the structure component of that,",false,multimodal_tvsum_style
+aircAruvnKk,98.0,100.0,annotator_1,3,lecture,,"This video is just going to be devoted to the structure component of that, and the following one is going to tackle lear",false,multimodal_tvsum_style
+aircAruvnKk,100.0,102.0,annotator_1,3,lecture,,and the following one is going to tackle learning. What we're going to do is put together a neural,false,multimodal_tvsum_style
+aircAruvnKk,102.0,104.0,annotator_1,3,lecture,,What we're going to do is put together a neural network that can learn to recognize handwritten digits.,false,multimodal_tvsum_style
+aircAruvnKk,104.0,106.0,annotator_1,3,lecture,,network that can learn to recognize handwritten digits.,false,multimodal_tvsum_style
+aircAruvnKk,106.0,108.0,annotator_1,3,lecture,,network that can learn to recognize handwritten digits.,false,multimodal_tvsum_style
+aircAruvnKk,108.0,110.0,annotator_1,3,lecture,,"This is a somewhat classic example for introducing the topic,",false,multimodal_tvsum_style
+aircAruvnKk,110.0,112.0,annotator_1,3,lecture,,"This is a somewhat classic example for introducing the topic,",false,multimodal_tvsum_style
+aircAruvnKk,112.0,114.0,annotator_1,3,lecture,,"This is a somewhat classic example for introducing the topic, and I'm happy to stick with the status quo here,",false,multimodal_tvsum_style
+aircAruvnKk,114.0,116.0,annotator_1,3,lecture,,"and I'm happy to stick with the status quo here, because at the end of the two videos I want to point you to a couple go",false,multimodal_tvsum_style
+aircAruvnKk,116.0,118.0,annotator_1,3,lecture,,"because at the end of the two videos I want to point you to a couple good resources where you can learn more, and where ",false,multimodal_tvsum_style
+aircAruvnKk,118.0,120.0,annotator_1,3,lecture,,"resources where you can learn more, and where you can download the code that",false,multimodal_tvsum_style
+aircAruvnKk,120.0,122.0,annotator_1,3,lecture,,"resources where you can learn more, and where you can download the code that does this and play with it on your own comp",false,multimodal_tvsum_style
+aircAruvnKk,122.0,124.0,annotator_1,3,lecture,,does this and play with it on your own computer.,false,multimodal_tvsum_style
+aircAruvnKk,124.0,126.0,annotator_1,3,lecture,,"There are many many variants of neural networks,",false,multimodal_tvsum_style
+aircAruvnKk,126.0,128.0,annotator_1,3,lecture,,"There are many many variants of neural networks, and in recent years there's been sort of a boom in research towards the",false,multimodal_tvsum_style
+aircAruvnKk,128.0,130.0,annotator_1,3,lecture,,"and in recent years there's been sort of a boom in research towards these variants,",false,multimodal_tvsum_style
+aircAruvnKk,130.0,132.0,annotator_1,3,lecture,,"and in recent years there's been sort of a boom in research towards these variants,",false,multimodal_tvsum_style
+aircAruvnKk,132.0,134.0,annotator_1,3,lecture,,"and in recent years there's been sort of a boom in research towards these variants, but in these two introductory videos",false,multimodal_tvsum_style
+aircAruvnKk,134.0,136.0,annotator_1,3,lecture,,but in these two introductory videos you and I are just going to look at the simplest,false,multimodal_tvsum_style
+aircAruvnKk,136.0,138.0,annotator_1,3,lecture,,but in these two introductory videos you and I are just going to look at the simplest plain vanilla form with no added f,false,multimodal_tvsum_style
+aircAruvnKk,138.0,140.0,annotator_1,3,lecture,,plain vanilla form with no added frills. This is kind of a necessary prerequisite for understanding any of the more powe,false,multimodal_tvsum_style
+aircAruvnKk,140.0,142.0,annotator_1,3,lecture,,This is kind of a necessary prerequisite for understanding any of the more powerful,false,multimodal_tvsum_style
+aircAruvnKk,142.0,144.0,annotator_1,3,lecture,,"This is kind of a necessary prerequisite for understanding any of the more powerful modern variants, and trust me it sti",false,multimodal_tvsum_style
+aircAruvnKk,144.0,146.0,annotator_1,3,lecture,,"modern variants, and trust me it still has plenty of complexity for us to wrap our minds",false,multimodal_tvsum_style
+aircAruvnKk,146.0,148.0,annotator_1,3,lecture,,"modern variants, and trust me it still has plenty of complexity for us to wrap our minds",false,multimodal_tvsum_style
+aircAruvnKk,148.0,150.0,annotator_1,3,lecture,,"modern variants, and trust me it still has plenty of complexity for us to wrap our minds around. But even in this simple",false,multimodal_tvsum_style
+aircAruvnKk,150.0,152.0,annotator_1,3,lecture,,"But even in this simplest form it can learn to recognize handwritten digits,",false,multimodal_tvsum_style
+aircAruvnKk,152.0,154.0,annotator_1,3,lecture,,"But even in this simplest form it can learn to recognize handwritten digits, which is a pretty cool thing for a computer",false,multimodal_tvsum_style
+aircAruvnKk,154.0,156.0,annotator_1,3,lecture,,which is a pretty cool thing for a computer to be able to do.,false,multimodal_tvsum_style
+aircAruvnKk,156.0,158.0,annotator_1,3,lecture,,which is a pretty cool thing for a computer to be able to do. And at the same time you'll see how it does fall,false,multimodal_tvsum_style
+aircAruvnKk,158.0,160.0,annotator_1,3,lecture,,And at the same time you'll see how it does fall short of a couple hopes that we might have for it.,false,multimodal_tvsum_style
+aircAruvnKk,160.0,162.0,annotator_1,3,lecture,,short of a couple hopes that we might have for it.,false,multimodal_tvsum_style
+aircAruvnKk,162.0,164.0,annotator_1,3,lecture,,"short of a couple hopes that we might have for it. As the name suggests neural networks are inspired by the brain, but l",false,multimodal_tvsum_style
+aircAruvnKk,164.0,166.0,annotator_1,3,lecture,,"As the name suggests neural networks are inspired by the brain, but let's break that down.",false,multimodal_tvsum_style
+aircAruvnKk,166.0,168.0,annotator_1,3,lecture,,"As the name suggests neural networks are inspired by the brain, but let's break that down.",false,multimodal_tvsum_style
+aircAruvnKk,168.0,170.0,annotator_1,3,lecture,,"As the name suggests neural networks are inspired by the brain, but let's break that down. What are the neurons, and in ",false,multimodal_tvsum_style
+aircAruvnKk,170.0,172.0,annotator_1,3,lecture,,"What are the neurons, and in what sense are they linked together?",false,multimodal_tvsum_style
+aircAruvnKk,172.0,174.0,annotator_1,3,lecture,,"Right now when I say neuron all I want you to think about is a thing that holds a number,",false,multimodal_tvsum_style
+aircAruvnKk,174.0,176.0,annotator_1,3,lecture,,"Right now when I say neuron all I want you to think about is a thing that holds a number,",false,multimodal_tvsum_style
+aircAruvnKk,176.0,178.0,annotator_1,3,lecture,,"Right now when I say neuron all I want you to think about is a thing that holds a number,",false,multimodal_tvsum_style
+aircAruvnKk,178.0,180.0,annotator_1,3,lecture,,"Right now when I say neuron all I want you to think about is a thing that holds a number, specifically a number between ",false,multimodal_tvsum_style
+aircAruvnKk,180.0,182.0,annotator_1,3,lecture,,specifically a number between 0 and 1. It's really not more than that.,false,multimodal_tvsum_style
+aircAruvnKk,182.0,184.0,annotator_1,3,lecture,,It's really not more than that. For example the network starts with a bunch of neurons corresponding to,false,multimodal_tvsum_style
+aircAruvnKk,184.0,186.0,annotator_1,3,lecture,,For example the network starts with a bunch of neurons corresponding to,false,multimodal_tvsum_style
+aircAruvnKk,186.0,188.0,annotator_1,3,lecture,,For example the network starts with a bunch of neurons corresponding to,false,multimodal_tvsum_style
+aircAruvnKk,188.0,190.0,annotator_1,3,lecture,,"For example the network starts with a bunch of neurons corresponding to each of the 28x28 pixels of the input image, whi",false,multimodal_tvsum_style
+aircAruvnKk,190.0,192.0,annotator_1,3,lecture,,"each of the 28x28 pixels of the input image, which is 784 neurons in total.",false,multimodal_tvsum_style
+aircAruvnKk,192.0,194.0,annotator_1,3,lecture,,"each of the 28x28 pixels of the input image, which is 784 neurons in total.",false,multimodal_tvsum_style
+aircAruvnKk,194.0,196.0,annotator_1,3,lecture,,"each of the 28x28 pixels of the input image, which is 784 neurons in total. Each one of these holds a number that repres",false,multimodal_tvsum_style
+aircAruvnKk,196.0,198.0,annotator_1,3,lecture,,Each one of these holds a number that represents the grayscale value of the,false,multimodal_tvsum_style
+aircAruvnKk,198.0,200.0,annotator_1,3,lecture,,"Each one of these holds a number that represents the grayscale value of the corresponding pixel, ranging from 0 for blac",false,multimodal_tvsum_style
+aircAruvnKk,200.0,202.0,annotator_1,3,lecture,,"corresponding pixel, ranging from 0 for black pixels up to 1 for white pixels.",false,multimodal_tvsum_style
+aircAruvnKk,202.0,204.0,annotator_1,3,lecture,,"corresponding pixel, ranging from 0 for black pixels up to 1 for white pixels.",false,multimodal_tvsum_style
+aircAruvnKk,204.0,206.0,annotator_1,3,lecture,,"corresponding pixel, ranging from 0 for black pixels up to 1 for white pixels. This number inside the neuron is called i",false,multimodal_tvsum_style
+aircAruvnKk,206.0,208.0,annotator_1,3,lecture,,"This number inside the neuron is called its activation,",false,multimodal_tvsum_style
+aircAruvnKk,208.0,210.0,annotator_1,3,lecture,,"This number inside the neuron is called its activation, and the image you might have in mind here is that each neuron is",false,multimodal_tvsum_style
+aircAruvnKk,210.0,212.0,annotator_1,3,lecture,,and the image you might have in mind here is that each neuron is lit up when its,false,multimodal_tvsum_style
+aircAruvnKk,212.0,214.0,annotator_1,3,lecture,,and the image you might have in mind here is that each neuron is lit up when its activation is a high number.,false,multimodal_tvsum_style
+aircAruvnKk,214.0,216.0,annotator_1,3,lecture,,activation is a high number.,false,multimodal_tvsum_style
+aircAruvnKk,216.0,218.0,annotator_1,3,lecture,,So all of these 784 neurons make up the first layer of our network.,false,multimodal_tvsum_style
+aircAruvnKk,218.0,220.0,annotator_1,3,lecture,,So all of these 784 neurons make up the first layer of our network.,false,multimodal_tvsum_style
+aircAruvnKk,220.0,222.0,annotator_1,3,lecture,,So all of these 784 neurons make up the first layer of our network.,false,multimodal_tvsum_style
+aircAruvnKk,222.0,224.0,annotator_1,3,lecture,,,false,multimodal_tvsum_style
+aircAruvnKk,224.0,226.0,annotator_1,3,lecture,,,false,multimodal_tvsum_style
+aircAruvnKk,226.0,228.0,annotator_1,3,lecture,,"Now jumping over to the last layer, this has 10 neurons,",false,multimodal_tvsum_style
+aircAruvnKk,228.0,230.0,annotator_1,3,lecture,,"Now jumping over to the last layer, this has 10 neurons, each representing one of the digits.",false,multimodal_tvsum_style
+aircAruvnKk,230.0,232.0,annotator_1,3,lecture,,each representing one of the digits.,false,multimodal_tvsum_style
+aircAruvnKk,232.0,234.0,annotator_1,3,lecture,,"The activation in these neurons, again some number that's between 0 and 1,",false,multimodal_tvsum_style
+aircAruvnKk,234.0,236.0,annotator_1,3,lecture,,"The activation in these neurons, again some number that's between 0 and 1,",false,multimodal_tvsum_style
+aircAruvnKk,236.0,238.0,annotator_1,3,lecture,,"The activation in these neurons, again some number that's between 0 and 1, represents how much the system thinks that a ",false,multimodal_tvsum_style
+aircAruvnKk,238.0,240.0,annotator_1,3,lecture,,represents how much the system thinks that a given image corresponds with a given digit.,false,multimodal_tvsum_style
+aircAruvnKk,240.0,242.0,annotator_1,3,lecture,,represents how much the system thinks that a given image corresponds with a given digit.,false,multimodal_tvsum_style
+aircAruvnKk,242.0,244.0,annotator_1,3,lecture,,represents how much the system thinks that a given image corresponds with a given digit. There's also a couple layers in,false,multimodal_tvsum_style
+aircAruvnKk,244.0,246.0,annotator_1,3,lecture,,"There's also a couple layers in between called the hidden layers,",false,multimodal_tvsum_style
+aircAruvnKk,246.0,248.0,annotator_1,3,lecture,,"There's also a couple layers in between called the hidden layers, which for the time being should just be a giant questi",false,multimodal_tvsum_style
+aircAruvnKk,248.0,250.0,annotator_1,3,lecture,,which for the time being should just be a giant question mark for how on earth this process of recognizing digits is goi,false,multimodal_tvsum_style
+aircAruvnKk,250.0,252.0,annotator_1,3,lecture,,how on earth this process of recognizing digits is going to be handled.,false,multimodal_tvsum_style
+aircAruvnKk,252.0,254.0,annotator_1,3,lecture,,how on earth this process of recognizing digits is going to be handled.,false,multimodal_tvsum_style
+aircAruvnKk,254.0,256.0,annotator_1,3,lecture,,"In this network I chose two hidden layers, each one with 16 neurons,",false,multimodal_tvsum_style
+aircAruvnKk,256.0,258.0,annotator_1,3,lecture,,"In this network I chose two hidden layers, each one with 16 neurons, and admittedly that's kind of an arbitrary choice.",false,multimodal_tvsum_style
+aircAruvnKk,258.0,260.0,annotator_1,3,lecture,,and admittedly that's kind of an arbitrary choice.,false,multimodal_tvsum_style
+aircAruvnKk,260.0,262.0,annotator_1,3,lecture,,and admittedly that's kind of an arbitrary choice. To be honest I chose two layers based on how I want to motivate the s,false,multimodal_tvsum_style
+aircAruvnKk,262.0,264.0,annotator_1,3,lecture,,To be honest I chose two layers based on how I want to motivate the structure in,false,multimodal_tvsum_style
+aircAruvnKk,264.0,266.0,annotator_1,3,lecture,,"To be honest I chose two layers based on how I want to motivate the structure in just a moment, and 16, well that was ju",false,multimodal_tvsum_style
+aircAruvnKk,266.0,268.0,annotator_1,3,lecture,,"just a moment, and 16, well that was just a nice number to fit on the screen.",false,multimodal_tvsum_style
+aircAruvnKk,268.0,270.0,annotator_1,3,lecture,,"just a moment, and 16, well that was just a nice number to fit on the screen. In practice there is a lot of room for exp",false,multimodal_tvsum_style
+aircAruvnKk,270.0,272.0,annotator_1,3,lecture,,In practice there is a lot of room for experiment with a specific structure here.,false,multimodal_tvsum_style
+aircAruvnKk,272.0,274.0,annotator_1,3,lecture,,"In practice there is a lot of room for experiment with a specific structure here. The way the network operates, activati",false,multimodal_tvsum_style
+aircAruvnKk,274.0,276.0,annotator_1,3,lecture,,"The way the network operates, activations in one layer determine the activations of the next layer.",false,multimodal_tvsum_style
+aircAruvnKk,276.0,278.0,annotator_1,3,lecture,,layer determine the activations of the next layer.,false,multimodal_tvsum_style
+aircAruvnKk,278.0,280.0,annotator_1,3,lecture,,layer determine the activations of the next layer. And of course the heart of the network as an information processing m,false,multimodal_tvsum_style
+aircAruvnKk,280.0,282.0,annotator_1,3,lecture,,And of course the heart of the network as an information processing mechanism comes down,false,multimodal_tvsum_style
+aircAruvnKk,282.0,284.0,annotator_1,3,lecture,,And of course the heart of the network as an information processing mechanism comes down to exactly how those activation,false,multimodal_tvsum_style
+aircAruvnKk,284.0,286.0,annotator_1,3,lecture,,to exactly how those activations from one layer bring about activations in the next,false,multimodal_tvsum_style
+aircAruvnKk,286.0,288.0,annotator_1,3,lecture,,to exactly how those activations from one layer bring about activations in the next,false,multimodal_tvsum_style
+aircAruvnKk,288.0,290.0,annotator_1,3,lecture,,to exactly how those activations from one layer bring about activations in the next layer. It's meant to be loosely anal,false,multimodal_tvsum_style
+aircAruvnKk,290.0,292.0,annotator_1,3,lecture,,"It's meant to be loosely analogous to how in biological networks of neurons,",false,multimodal_tvsum_style
+aircAruvnKk,292.0,294.0,annotator_1,3,lecture,,"It's meant to be loosely analogous to how in biological networks of neurons, some groups of neurons firing cause certain",false,multimodal_tvsum_style
+aircAruvnKk,294.0,296.0,annotator_1,3,lecture,,some groups of neurons firing cause certain others to fire.,false,multimodal_tvsum_style
+aircAruvnKk,296.0,298.0,annotator_1,3,lecture,,some groups of neurons firing cause certain others to fire.,false,multimodal_tvsum_style
+aircAruvnKk,298.0,300.0,annotator_1,3,lecture,,"Now the network I'm showing here has already been trained to recognize digits,",false,multimodal_tvsum_style
+aircAruvnKk,300.0,302.0,annotator_1,3,lecture,,"Now the network I'm showing here has already been trained to recognize digits, and let me show you what I mean by that.",false,multimodal_tvsum_style
+aircAruvnKk,302.0,304.0,annotator_1,3,lecture,,"and let me show you what I mean by that. It means if you feed in an image, lighting up all 784 neurons of the input laye",false,multimodal_tvsum_style
+aircAruvnKk,304.0,306.0,annotator_1,3,lecture,,"It means if you feed in an image, lighting up all 784 neurons of the input layer",false,multimodal_tvsum_style
+aircAruvnKk,306.0,308.0,annotator_1,3,lecture,,"It means if you feed in an image, lighting up all 784 neurons of the input layer",false,multimodal_tvsum_style
+aircAruvnKk,308.0,310.0,annotator_1,3,lecture,,"It means if you feed in an image, lighting up all 784 neurons of the input layer according to the brightness of each pix",false,multimodal_tvsum_style
+aircAruvnKk,310.0,312.0,annotator_1,3,lecture,,"according to the brightness of each pixel in the image, that pattern of activations causes some very specific pattern in",false,multimodal_tvsum_style
+aircAruvnKk,312.0,314.0,annotator_1,3,lecture,,that pattern of activations causes some very specific pattern in the next layer,false,multimodal_tvsum_style
+aircAruvnKk,314.0,316.0,annotator_1,3,lecture,,that pattern of activations causes some very specific pattern in the next layer,false,multimodal_tvsum_style
+aircAruvnKk,316.0,318.0,annotator_1,3,lecture,,that pattern of activations causes some very specific pattern in the next layer which causes some pattern in the one aft,false,multimodal_tvsum_style
+aircAruvnKk,318.0,320.0,annotator_1,3,lecture,,"which causes some pattern in the one after it, which finally gives some pattern in the output layer.",false,multimodal_tvsum_style
+aircAruvnKk,320.0,322.0,annotator_1,3,lecture,,which finally gives some pattern in the output layer.,false,multimodal_tvsum_style
+aircAruvnKk,322.0,324.0,annotator_1,3,lecture,,which finally gives some pattern in the output layer. And the brightest neuron of that output layer is the network's cho,false,multimodal_tvsum_style
+aircAruvnKk,324.0,326.0,annotator_1,3,lecture,,"And the brightest neuron of that output layer is the network's choice,",false,multimodal_tvsum_style
+aircAruvnKk,326.0,328.0,annotator_1,3,lecture,,"And the brightest neuron of that output layer is the network's choice, so to speak, for what digit this image represents",false,multimodal_tvsum_style
+aircAruvnKk,328.0,330.0,annotator_1,3,lecture,,"so to speak, for what digit this image represents.",false,multimodal_tvsum_style
+aircAruvnKk,330.0,332.0,annotator_1,3,lecture,,,false,multimodal_tvsum_style
+aircAruvnKk,332.0,334.0,annotator_1,3,lecture,,"And before jumping into the math for how one layer influences the next,",false,multimodal_tvsum_style
+aircAruvnKk,334.0,336.0,annotator_1,3,lecture,,"And before jumping into the math for how one layer influences the next,",false,multimodal_tvsum_style
+aircAruvnKk,336.0,338.0,annotator_1,3,lecture,,"And before jumping into the math for how one layer influences the next, or how training works, let's just talk about why",false,multimodal_tvsum_style
+aircAruvnKk,338.0,340.0,annotator_1,3,lecture,,"or how training works, let's just talk about why it's even reasonable",false,multimodal_tvsum_style
+aircAruvnKk,340.0,342.0,annotator_1,3,lecture,,"or how training works, let's just talk about why it's even reasonable to expect a layered structure like this to behave ",false,multimodal_tvsum_style
+aircAruvnKk,342.0,344.0,annotator_1,3,lecture,,to expect a layered structure like this to behave intelligently.,false,multimodal_tvsum_style
+aircAruvnKk,344.0,346.0,annotator_1,4,lecture,,What are we expecting here? What is the best hope for what those middle layers might be doing?,false,multimodal_tvsum_style
+aircAruvnKk,346.0,348.0,annotator_1,4,lecture,,What is the best hope for what those middle layers might be doing?,false,multimodal_tvsum_style
+aircAruvnKk,348.0,350.0,annotator_1,4,lecture,,"Well, when you or I recognize digits, we piece together various components.",false,multimodal_tvsum_style
+aircAruvnKk,350.0,352.0,annotator_1,4,lecture,,"Well, when you or I recognize digits, we piece together various components.",false,multimodal_tvsum_style
+aircAruvnKk,352.0,354.0,annotator_1,4,lecture,,"Well, when you or I recognize digits, we piece together various components.",false,multimodal_tvsum_style
+aircAruvnKk,354.0,356.0,annotator_1,4,lecture,,A 9 has a loop up top and a line on the right.,false,multimodal_tvsum_style
+aircAruvnKk,356.0,358.0,annotator_1,4,lecture,,"A 9 has a loop up top and a line on the right. An 8 also has a loop up top, but it's paired with another loop down low.",false,multimodal_tvsum_style
+aircAruvnKk,358.0,360.0,annotator_1,4,lecture,,"An 8 also has a loop up top, but it's paired with another loop down low.",false,multimodal_tvsum_style
+aircAruvnKk,360.0,362.0,annotator_1,4,lecture,,"An 8 also has a loop up top, but it's paired with another loop down low. A 4 basically breaks down into three specific l",false,multimodal_tvsum_style
+aircAruvnKk,362.0,364.0,annotator_1,4,lecture,,"A 4 basically breaks down into three specific lines, and things like that.",false,multimodal_tvsum_style
+aircAruvnKk,364.0,366.0,annotator_1,4,lecture,,"A 4 basically breaks down into three specific lines, and things like that.",false,multimodal_tvsum_style
+aircAruvnKk,366.0,368.0,annotator_1,4,lecture,,"A 4 basically breaks down into three specific lines, and things like that. Now in a perfect world, we might hope that ea",false,multimodal_tvsum_style
+aircAruvnKk,368.0,370.0,annotator_1,5,lecture,,"Now in a perfect world, we might hope that each neuron in the second",false,multimodal_tvsum_style
+aircAruvnKk,370.0,372.0,annotator_1,5,lecture,,"Now in a perfect world, we might hope that each neuron in the second to last layer corresponds with one of these subcomp",false,multimodal_tvsum_style
+aircAruvnKk,372.0,374.0,annotator_1,5,lecture,,"to last layer corresponds with one of these subcomponents,",false,multimodal_tvsum_style
+aircAruvnKk,374.0,376.0,annotator_1,5,lecture,,"to last layer corresponds with one of these subcomponents, that anytime you feed in an image with, say, a loop up top,",false,multimodal_tvsum_style
+aircAruvnKk,376.0,378.0,annotator_1,5,lecture,,"that anytime you feed in an image with, say, a loop up top,",false,multimodal_tvsum_style
+aircAruvnKk,378.0,380.0,annotator_1,5,lecture,,"that anytime you feed in an image with, say, a loop up top, like a 9 or an 8, there's some specific neuron whose activat",false,multimodal_tvsum_style
+aircAruvnKk,380.0,382.0,annotator_1,5,lecture,,"like a 9 or an 8, there's some specific neuron whose activation is",false,multimodal_tvsum_style
+aircAruvnKk,382.0,384.0,annotator_1,5,lecture,,"like a 9 or an 8, there's some specific neuron whose activation is going to be close to 1.",false,multimodal_tvsum_style
+aircAruvnKk,384.0,386.0,annotator_1,5,lecture,,"And I don't mean this specific loop of pixels,",false,multimodal_tvsum_style
+aircAruvnKk,386.0,388.0,annotator_1,5,lecture,,"And I don't mean this specific loop of pixels, the hope would be that any generally loopy pattern towards the top sets o",false,multimodal_tvsum_style
+aircAruvnKk,388.0,390.0,annotator_1,5,lecture,,the hope would be that any generally loopy pattern towards the top sets off this neuron.,false,multimodal_tvsum_style
+aircAruvnKk,390.0,392.0,annotator_1,5,lecture,,the hope would be that any generally loopy pattern towards the top sets off this neuron.,false,multimodal_tvsum_style
+aircAruvnKk,392.0,394.0,annotator_1,5,lecture,,"That way, going from the third layer to the last one just requires",false,multimodal_tvsum_style
+aircAruvnKk,394.0,396.0,annotator_1,5,lecture,,"That way, going from the third layer to the last one just requires",false,multimodal_tvsum_style
+aircAruvnKk,396.0,398.0,annotator_1,5,lecture,,"That way, going from the third layer to the last one just requires learning which combination of subcomponents correspon",false,multimodal_tvsum_style
+aircAruvnKk,398.0,400.0,annotator_1,5,lecture,,learning which combination of subcomponents corresponds to which digits.,false,multimodal_tvsum_style
+aircAruvnKk,400.0,402.0,annotator_1,4,lecture,,"learning which combination of subcomponents corresponds to which digits. Of course, that just kicks the problem down the",false,multimodal_tvsum_style
+aircAruvnKk,402.0,404.0,annotator_1,4,lecture,,"Of course, that just kicks the problem down the road, because how would you recognize these subcomponents,",false,multimodal_tvsum_style
+aircAruvnKk,404.0,406.0,annotator_1,4,lecture,,"because how would you recognize these subcomponents, or even learn what the right subcomponents should be?",false,multimodal_tvsum_style
+aircAruvnKk,406.0,408.0,annotator_1,4,lecture,,or even learn what the right subcomponents should be?,false,multimodal_tvsum_style
+aircAruvnKk,408.0,410.0,annotator_1,4,lecture,,"And I still haven't even talked about how one layer influences the next,",false,multimodal_tvsum_style
+aircAruvnKk,410.0,412.0,annotator_1,4,lecture,,"And I still haven't even talked about how one layer influences the next, but run with me on this one for a moment.",false,multimodal_tvsum_style
+aircAruvnKk,412.0,414.0,annotator_1,4,lecture,,but run with me on this one for a moment. Recognizing a loop can also break down into subproblems.,false,multimodal_tvsum_style
+aircAruvnKk,414.0,416.0,annotator_1,3,lecture,,Recognizing a loop can also break down into subproblems.,false,multimodal_tvsum_style
+aircAruvnKk,416.0,418.0,annotator_1,3,lecture,,Recognizing a loop can also break down into subproblems. One reasonable way to do this would be to first,false,multimodal_tvsum_style
+aircAruvnKk,418.0,420.0,annotator_1,3,lecture,,One reasonable way to do this would be to first recognize the various little edges that make it up.,false,multimodal_tvsum_style
+aircAruvnKk,420.0,422.0,annotator_1,3,lecture,,recognize the various little edges that make it up.,false,multimodal_tvsum_style
+aircAruvnKk,422.0,424.0,annotator_1,3,lecture,,"recognize the various little edges that make it up. Similarly, a long line, like the kind you might see in the digits 1 ",false,multimodal_tvsum_style
+aircAruvnKk,424.0,426.0,annotator_1,3,lecture,,"Similarly, a long line, like the kind you might see in the digits 1 or 4 or 7,",false,multimodal_tvsum_style
+aircAruvnKk,426.0,428.0,annotator_1,3,lecture,,"Similarly, a long line, like the kind you might see in the digits 1 or 4 or 7,",false,multimodal_tvsum_style
+aircAruvnKk,428.0,430.0,annotator_1,3,lecture,,"Similarly, a long line, like the kind you might see in the digits 1 or 4 or 7, is really just a long edge, or maybe you ",false,multimodal_tvsum_style
+aircAruvnKk,430.0,432.0,annotator_1,3,lecture,,"is really just a long edge, or maybe you think of it as a certain pattern of several",false,multimodal_tvsum_style
+aircAruvnKk,432.0,434.0,annotator_1,3,lecture,,"is really just a long edge, or maybe you think of it as a certain pattern of several smaller edges.",false,multimodal_tvsum_style
+aircAruvnKk,434.0,436.0,annotator_1,3,lecture,,smaller edges. So maybe our hope is that each neuron in the second layer of,false,multimodal_tvsum_style
+aircAruvnKk,436.0,438.0,annotator_1,3,lecture,,So maybe our hope is that each neuron in the second layer of,false,multimodal_tvsum_style
+aircAruvnKk,438.0,440.0,annotator_1,3,lecture,,So maybe our hope is that each neuron in the second layer of the network corresponds with the various relevant little ed,false,multimodal_tvsum_style
+aircAruvnKk,440.0,442.0,annotator_1,3,lecture,,the network corresponds with the various relevant little edges.,false,multimodal_tvsum_style
+aircAruvnKk,442.0,444.0,annotator_1,3,lecture,,"the network corresponds with the various relevant little edges. Maybe when an image like this one comes in, it lights up",false,multimodal_tvsum_style
+aircAruvnKk,444.0,446.0,annotator_1,3,lecture,,"Maybe when an image like this one comes in, it lights up all of the",false,multimodal_tvsum_style
+aircAruvnKk,446.0,448.0,annotator_1,3,lecture,,"Maybe when an image like this one comes in, it lights up all of the neurons associated with around 8 to 10 specific litt",false,multimodal_tvsum_style
+aircAruvnKk,448.0,450.0,annotator_1,3,lecture,,"neurons associated with around 8 to 10 specific little edges,",false,multimodal_tvsum_style
+aircAruvnKk,450.0,452.0,annotator_1,3,lecture,,"neurons associated with around 8 to 10 specific little edges, which in turn lights up the neurons associated with the up",false,multimodal_tvsum_style
+aircAruvnKk,452.0,454.0,annotator_1,3,lecture,,which in turn lights up the neurons associated with the upper loop,false,multimodal_tvsum_style
+aircAruvnKk,454.0,456.0,annotator_1,3,lecture,,"which in turn lights up the neurons associated with the upper loop and a long vertical line, and those light up the neur",false,multimodal_tvsum_style
+aircAruvnKk,456.0,458.0,annotator_1,3,lecture,,"and a long vertical line, and those light up the neuron associated with a 9.",false,multimodal_tvsum_style
+aircAruvnKk,458.0,460.0,annotator_1,3,lecture,,"and a long vertical line, and those light up the neuron associated with a 9.",false,multimodal_tvsum_style
+aircAruvnKk,460.0,462.0,annotator_1,3,lecture,,"Whether or not this is what our final network actually does is another question,",false,multimodal_tvsum_style
+aircAruvnKk,462.0,464.0,annotator_1,3,lecture,,"Whether or not this is what our final network actually does is another question,",false,multimodal_tvsum_style
+aircAruvnKk,464.0,466.0,annotator_1,3,lecture,,"Whether or not this is what our final network actually does is another question, one that I'll come back to once we see ",false,multimodal_tvsum_style
+aircAruvnKk,466.0,468.0,annotator_1,3,lecture,,"one that I'll come back to once we see how to train the network, but this is a hope that we might have, a sort of goal w",false,multimodal_tvsum_style
+aircAruvnKk,468.0,470.0,annotator_1,3,lecture,,"but this is a hope that we might have, a sort of goal with the layered structure",false,multimodal_tvsum_style
+aircAruvnKk,470.0,472.0,annotator_1,3,lecture,,"but this is a hope that we might have, a sort of goal with the layered structure like this.",false,multimodal_tvsum_style
+aircAruvnKk,472.0,474.0,annotator_1,3,lecture,,"like this. Moreover, you can imagine how being able to detect edges and patterns",false,multimodal_tvsum_style
+aircAruvnKk,474.0,476.0,annotator_1,3,lecture,,"Moreover, you can imagine how being able to detect edges and patterns",false,multimodal_tvsum_style
+aircAruvnKk,476.0,478.0,annotator_1,3,lecture,,"Moreover, you can imagine how being able to detect edges and patterns like this would be really useful for other image r",false,multimodal_tvsum_style
+aircAruvnKk,478.0,480.0,annotator_1,3,lecture,,like this would be really useful for other image recognition tasks.,false,multimodal_tvsum_style
+aircAruvnKk,480.0,482.0,annotator_1,3,lecture,,"like this would be really useful for other image recognition tasks. And even beyond image recognition, there are all sor",false,multimodal_tvsum_style
+aircAruvnKk,482.0,484.0,annotator_1,3,lecture,,"And even beyond image recognition, there are all sorts of intelligent",false,multimodal_tvsum_style
+aircAruvnKk,484.0,486.0,annotator_1,3,lecture,,"And even beyond image recognition, there are all sorts of intelligent things you might want to do that break down into l",false,multimodal_tvsum_style
+aircAruvnKk,486.0,488.0,annotator_1,3,lecture,,things you might want to do that break down into layers of abstraction.,false,multimodal_tvsum_style
+aircAruvnKk,488.0,490.0,annotator_1,3,lecture,,"Parsing speech, for example, involves taking raw audio and picking out distinct sounds,",false,multimodal_tvsum_style
+aircAruvnKk,490.0,492.0,annotator_1,3,lecture,,"Parsing speech, for example, involves taking raw audio and picking out distinct sounds,",false,multimodal_tvsum_style
+aircAruvnKk,492.0,494.0,annotator_1,3,lecture,,"Parsing speech, for example, involves taking raw audio and picking out distinct sounds, which combine to make certain sy",false,multimodal_tvsum_style
+aircAruvnKk,494.0,496.0,annotator_1,3,lecture,,"which combine to make certain syllables, which combine to form words,",false,multimodal_tvsum_style
+aircAruvnKk,496.0,498.0,annotator_1,3,lecture,,"which combine to make certain syllables, which combine to form words, which combine to make up phrases and more abstract",false,multimodal_tvsum_style
+aircAruvnKk,498.0,500.0,annotator_1,3,lecture,,"which combine to make up phrases and more abstract thoughts, etc.",false,multimodal_tvsum_style
+aircAruvnKk,500.0,502.0,annotator_1,3,lecture,,"which combine to make up phrases and more abstract thoughts, etc. But getting back to how any of this actually works,",false,multimodal_tvsum_style
+aircAruvnKk,502.0,504.0,annotator_1,3,lecture,,"But getting back to how any of this actually works, picture yourself right now designing how exactly the activations in ",false,multimodal_tvsum_style
+aircAruvnKk,504.0,506.0,annotator_1,3,lecture,,picture yourself right now designing how exactly the activations in one layer might,false,multimodal_tvsum_style
+aircAruvnKk,506.0,508.0,annotator_1,3,lecture,,picture yourself right now designing how exactly the activations in one layer might determine the activations in the nex,false,multimodal_tvsum_style
+aircAruvnKk,508.0,510.0,annotator_1,3,lecture,,determine the activations in the next.,false,multimodal_tvsum_style
+aircAruvnKk,510.0,512.0,annotator_1,3,lecture,,"The goal is to have some mechanism that could conceivably combine pixels into edges,",false,multimodal_tvsum_style
+aircAruvnKk,512.0,514.0,annotator_1,3,lecture,,"The goal is to have some mechanism that could conceivably combine pixels into edges,",false,multimodal_tvsum_style
+aircAruvnKk,514.0,516.0,annotator_1,3,lecture,,"The goal is to have some mechanism that could conceivably combine pixels into edges, or edges into patterns, or patterns",false,multimodal_tvsum_style
+aircAruvnKk,516.0,518.0,annotator_1,3,lecture,,"or edges into patterns, or patterns into digits.",false,multimodal_tvsum_style
+aircAruvnKk,518.0,520.0,annotator_1,3,lecture,,"or edges into patterns, or patterns into digits. And to zoom in on one very specific example, let's say the hope",false,multimodal_tvsum_style
+aircAruvnKk,520.0,522.0,annotator_1,3,lecture,,"And to zoom in on one very specific example, let's say the hope",false,multimodal_tvsum_style
+aircAruvnKk,522.0,524.0,annotator_1,3,lecture,,"And to zoom in on one very specific example, let's say the hope is for one particular neuron in the second layer to pick",false,multimodal_tvsum_style
+aircAruvnKk,524.0,526.0,annotator_1,3,lecture,,is for one particular neuron in the second layer to pick up,false,multimodal_tvsum_style
+aircAruvnKk,526.0,528.0,annotator_1,3,lecture,,is for one particular neuron in the second layer to pick up on whether or not the image has an edge in this region here.,false,multimodal_tvsum_style
+aircAruvnKk,528.0,530.0,annotator_1,3,lecture,,on whether or not the image has an edge in this region here.,false,multimodal_tvsum_style
+aircAruvnKk,530.0,532.0,annotator_1,3,lecture,,on whether or not the image has an edge in this region here. The question at hand is what parameters should the network ,false,multimodal_tvsum_style
+aircAruvnKk,532.0,534.0,annotator_1,3,lecture,,The question at hand is what parameters should the network have?,false,multimodal_tvsum_style
+aircAruvnKk,534.0,536.0,annotator_1,3,lecture,,The question at hand is what parameters should the network have? What dials and knobs should you be able to tweak so tha,false,multimodal_tvsum_style
+aircAruvnKk,536.0,538.0,annotator_1,3,lecture,,What dials and knobs should you be able to tweak so that it's expressive,false,multimodal_tvsum_style
+aircAruvnKk,538.0,540.0,annotator_1,3,lecture,,"What dials and knobs should you be able to tweak so that it's expressive enough to potentially capture this pattern, or ",false,multimodal_tvsum_style
+aircAruvnKk,540.0,542.0,annotator_1,3,lecture,,"enough to potentially capture this pattern, or any other pixel pattern,",false,multimodal_tvsum_style
+aircAruvnKk,542.0,544.0,annotator_1,3,lecture,,"enough to potentially capture this pattern, or any other pixel pattern, or the pattern that several edges can make a loo",false,multimodal_tvsum_style
+aircAruvnKk,544.0,546.0,annotator_1,3,lecture,,"or the pattern that several edges can make a loop, and other such things?",false,multimodal_tvsum_style
+aircAruvnKk,546.0,548.0,annotator_1,3,lecture,,"or the pattern that several edges can make a loop, and other such things?",false,multimodal_tvsum_style
+aircAruvnKk,548.0,550.0,annotator_1,3,lecture,,"Well, what we'll do is assign a weight to each one of the",false,multimodal_tvsum_style
+aircAruvnKk,550.0,552.0,annotator_1,3,lecture,,"Well, what we'll do is assign a weight to each one of the connections between our neuron and the neurons from the first ",false,multimodal_tvsum_style
+aircAruvnKk,552.0,554.0,annotator_1,3,lecture,,connections between our neuron and the neurons from the first layer.,false,multimodal_tvsum_style
+aircAruvnKk,554.0,556.0,annotator_1,3,lecture,,connections between our neuron and the neurons from the first layer.,false,multimodal_tvsum_style
+aircAruvnKk,556.0,558.0,annotator_1,3,lecture,,These weights are just numbers.,false,multimodal_tvsum_style
+aircAruvnKk,558.0,560.0,annotator_1,3,lecture,,Then take all of those activations from the first layer,false,multimodal_tvsum_style
+aircAruvnKk,560.0,562.0,annotator_1,3,lecture,,Then take all of those activations from the first layer and compute their weighted sum according to these weights.,false,multimodal_tvsum_style
+aircAruvnKk,562.0,564.0,annotator_1,3,lecture,,and compute their weighted sum according to these weights.,false,multimodal_tvsum_style
+aircAruvnKk,564.0,566.0,annotator_1,3,lecture,,and compute their weighted sum according to these weights.,false,multimodal_tvsum_style
+aircAruvnKk,566.0,568.0,annotator_1,3,lecture,,I find it helpful to think of these weights as being organized into a,false,multimodal_tvsum_style
+aircAruvnKk,568.0,570.0,annotator_1,3,lecture,,I find it helpful to think of these weights as being organized into a,false,multimodal_tvsum_style
+aircAruvnKk,570.0,572.0,annotator_1,3,lecture,,"I find it helpful to think of these weights as being organized into a little grid of their own, and I'm going to use gre",false,multimodal_tvsum_style
+aircAruvnKk,572.0,574.0,annotator_1,3,lecture,,"little grid of their own, and I'm going to use green pixels to indicate",false,multimodal_tvsum_style
+aircAruvnKk,574.0,576.0,annotator_1,3,lecture,,"little grid of their own, and I'm going to use green pixels to indicate positive weights, and red pixels to indicate neg",false,multimodal_tvsum_style
+aircAruvnKk,576.0,578.0,annotator_1,3,lecture,,"positive weights, and red pixels to indicate negative weights, where the brightness of that pixel is some loose depictio",false,multimodal_tvsum_style
+aircAruvnKk,578.0,580.0,annotator_1,3,lecture,,where the brightness of that pixel is some loose depiction of the weight's value.,false,multimodal_tvsum_style
+aircAruvnKk,580.0,582.0,annotator_1,3,lecture,,where the brightness of that pixel is some loose depiction of the weight's value.,false,multimodal_tvsum_style
+aircAruvnKk,582.0,584.0,annotator_1,3,lecture,,Now if we made the weights associated with almost all of the pixels zero,false,multimodal_tvsum_style
+aircAruvnKk,584.0,586.0,annotator_1,3,lecture,,Now if we made the weights associated with almost all of the pixels zero,false,multimodal_tvsum_style
+aircAruvnKk,586.0,588.0,annotator_1,3,lecture,,Now if we made the weights associated with almost all of the pixels zero except for some positive weights in this region,false,multimodal_tvsum_style
+aircAruvnKk,588.0,590.0,annotator_1,3,lecture,,"except for some positive weights in this region that we care about,",false,multimodal_tvsum_style
+aircAruvnKk,590.0,592.0,annotator_1,3,lecture,,"except for some positive weights in this region that we care about, then taking the weighted sum of all the pixel values",false,multimodal_tvsum_style
+aircAruvnKk,592.0,594.0,annotator_1,3,lecture,,then taking the weighted sum of all the pixel values really just amounts to adding up the values of the pixel just in th,false,multimodal_tvsum_style
+aircAruvnKk,594.0,596.0,annotator_1,3,lecture,,to adding up the values of the pixel just in the region that we care about.,false,multimodal_tvsum_style
+aircAruvnKk,596.0,598.0,annotator_1,3,lecture,,to adding up the values of the pixel just in the region that we care about.,false,multimodal_tvsum_style
+aircAruvnKk,598.0,600.0,annotator_1,3,lecture,,"And if you really wanted to pick up on whether there's an edge here,",false,multimodal_tvsum_style
+aircAruvnKk,600.0,602.0,annotator_1,3,lecture,,"And if you really wanted to pick up on whether there's an edge here,",false,multimodal_tvsum_style
+aircAruvnKk,602.0,604.0,annotator_1,3,lecture,,"And if you really wanted to pick up on whether there's an edge here, what you might do is have some negative weights ass",false,multimodal_tvsum_style
+aircAruvnKk,604.0,606.0,annotator_1,3,lecture,,what you might do is have some negative weights associated with the surrounding pixels.,false,multimodal_tvsum_style
+aircAruvnKk,606.0,608.0,annotator_1,3,lecture,,what you might do is have some negative weights associated with the surrounding pixels. Then the sum is largest when tho,false,multimodal_tvsum_style
+aircAruvnKk,608.0,610.0,annotator_1,3,lecture,,Then the sum is largest when those middle pixels,false,multimodal_tvsum_style
+aircAruvnKk,610.0,612.0,annotator_1,3,lecture,,Then the sum is largest when those middle pixels are bright but the surrounding pixels are darker.,false,multimodal_tvsum_style
+aircAruvnKk,612.0,614.0,annotator_1,3,lecture,,are bright but the surrounding pixels are darker.,false,multimodal_tvsum_style
+aircAruvnKk,614.0,616.0,annotator_1,3,lecture,,"When you compute a weighted sum like this, you might come out with any number,",false,multimodal_tvsum_style
+aircAruvnKk,616.0,618.0,annotator_1,3,lecture,,"When you compute a weighted sum like this, you might come out with any number,",false,multimodal_tvsum_style
+aircAruvnKk,618.0,620.0,annotator_1,3,lecture,,"When you compute a weighted sum like this, you might come out with any number, but for this network what we want is for ",false,multimodal_tvsum_style
+aircAruvnKk,620.0,622.0,annotator_1,3,lecture,,but for this network what we want is for activations to be some value between 0 and 1.,false,multimodal_tvsum_style
+aircAruvnKk,622.0,624.0,annotator_1,3,lecture,,but for this network what we want is for activations to be some value between 0 and 1.,false,multimodal_tvsum_style
+aircAruvnKk,624.0,626.0,annotator_1,3,lecture,,So a common thing to do is to pump this weighted sum into some function,false,multimodal_tvsum_style
+aircAruvnKk,626.0,628.0,annotator_1,3,lecture,,So a common thing to do is to pump this weighted sum into some function,false,multimodal_tvsum_style
+aircAruvnKk,628.0,630.0,annotator_1,3,lecture,,So a common thing to do is to pump this weighted sum into some function that squishes the real number line into the rang,false,multimodal_tvsum_style
+aircAruvnKk,630.0,632.0,annotator_1,3,lecture,,that squishes the real number line into the range between 0 and 1.,false,multimodal_tvsum_style
+aircAruvnKk,632.0,634.0,annotator_1,3,lecture,,that squishes the real number line into the range between 0 and 1. And a common function that does this is called the si,false,multimodal_tvsum_style
+aircAruvnKk,634.0,636.0,annotator_1,3,lecture,,"And a common function that does this is called the sigmoid function, also known as a logistic curve.",false,multimodal_tvsum_style
+aircAruvnKk,636.0,638.0,annotator_1,3,lecture,,also known as a logistic curve.,false,multimodal_tvsum_style
+aircAruvnKk,638.0,640.0,annotator_1,4,lecture,,"Basically very negative inputs end up close to 0, positive inputs end up close to 1,",false,multimodal_tvsum_style
+aircAruvnKk,640.0,642.0,annotator_1,4,lecture,,"Basically very negative inputs end up close to 0, positive inputs end up close to 1,",false,multimodal_tvsum_style
+aircAruvnKk,642.0,644.0,annotator_1,4,lecture,,"Basically very negative inputs end up close to 0, positive inputs end up close to 1, and it just steadily increases arou",false,multimodal_tvsum_style
+aircAruvnKk,644.0,646.0,annotator_1,4,lecture,,and it just steadily increases around the input 0.,false,multimodal_tvsum_style
+aircAruvnKk,646.0,648.0,annotator_1,4,lecture,,and it just steadily increases around the input 0.,false,multimodal_tvsum_style
+aircAruvnKk,648.0,650.0,annotator_1,5,lecture,,So the activation of the neuron here is basically a,false,multimodal_tvsum_style
+aircAruvnKk,650.0,652.0,annotator_1,5,lecture,,So the activation of the neuron here is basically a,false,multimodal_tvsum_style
+aircAruvnKk,652.0,654.0,annotator_1,5,lecture,,So the activation of the neuron here is basically a measure of how positive the relevant weighted sum is.,false,multimodal_tvsum_style
+aircAruvnKk,654.0,656.0,annotator_1,5,lecture,,measure of how positive the relevant weighted sum is.,false,multimodal_tvsum_style
+aircAruvnKk,656.0,658.0,annotator_1,5,lecture,,measure of how positive the relevant weighted sum is. But maybe it's not that you want the neuron to,false,multimodal_tvsum_style
+aircAruvnKk,658.0,660.0,annotator_1,5,lecture,,But maybe it's not that you want the neuron to light up when the weighted sum is bigger than 0.,false,multimodal_tvsum_style
+aircAruvnKk,660.0,662.0,annotator_1,5,lecture,,light up when the weighted sum is bigger than 0.,false,multimodal_tvsum_style
+aircAruvnKk,662.0,664.0,annotator_1,5,lecture,,Maybe you only want it to be active when the sum is bigger than say 10.,false,multimodal_tvsum_style
+aircAruvnKk,664.0,666.0,annotator_1,5,lecture,,Maybe you only want it to be active when the sum is bigger than say 10.,false,multimodal_tvsum_style
+aircAruvnKk,666.0,668.0,annotator_1,5,lecture,,"Maybe you only want it to be active when the sum is bigger than say 10. That is, you want some bias for it to be inactiv",false,multimodal_tvsum_style
+aircAruvnKk,668.0,670.0,annotator_1,5,lecture,,"That is, you want some bias for it to be inactive.",false,multimodal_tvsum_style
+aircAruvnKk,670.0,672.0,annotator_1,5,lecture,,"That is, you want some bias for it to be inactive. What we'll do then is just add in some other number like negative 10 ",false,multimodal_tvsum_style
+aircAruvnKk,672.0,674.0,annotator_1,5,lecture,,What we'll do then is just add in some other number like negative 10 to this,false,multimodal_tvsum_style
+aircAruvnKk,674.0,676.0,annotator_1,5,lecture,,What we'll do then is just add in some other number like negative 10 to this weighted sum before plugging it through the,false,multimodal_tvsum_style
+aircAruvnKk,676.0,678.0,annotator_1,5,lecture,,weighted sum before plugging it through the sigmoid squishification function.,false,multimodal_tvsum_style
+aircAruvnKk,678.0,680.0,annotator_1,5,lecture,,weighted sum before plugging it through the sigmoid squishification function.,false,multimodal_tvsum_style
+aircAruvnKk,680.0,682.0,annotator_1,5,lecture,,That additional number is called the bias.,false,multimodal_tvsum_style
+aircAruvnKk,682.0,684.0,annotator_1,4,lecture,,That additional number is called the bias. So the weights tell you what pixel pattern this neuron in the second,false,multimodal_tvsum_style
+aircAruvnKk,684.0,686.0,annotator_1,4,lecture,,So the weights tell you what pixel pattern this neuron in the second,false,multimodal_tvsum_style
+aircAruvnKk,686.0,688.0,annotator_1,4,lecture,,"So the weights tell you what pixel pattern this neuron in the second layer is picking up on, and the bias tells you how ",false,multimodal_tvsum_style
+aircAruvnKk,688.0,690.0,annotator_1,4,lecture,,"layer is picking up on, and the bias tells you how high the weighted",false,multimodal_tvsum_style
+aircAruvnKk,690.0,692.0,annotator_1,4,lecture,,"layer is picking up on, and the bias tells you how high the weighted sum needs to be before the neuron starts getting me",false,multimodal_tvsum_style
+aircAruvnKk,692.0,694.0,annotator_1,4,lecture,,sum needs to be before the neuron starts getting meaningfully active.,false,multimodal_tvsum_style
+aircAruvnKk,694.0,696.0,annotator_1,4,lecture,,sum needs to be before the neuron starts getting meaningfully active.,false,multimodal_tvsum_style
+aircAruvnKk,696.0,698.0,annotator_1,4,lecture,,And that is just one neuron.,false,multimodal_tvsum_style
+aircAruvnKk,698.0,700.0,annotator_1,3,lecture,,Every other neuron in this layer is going to be connected to,false,multimodal_tvsum_style
+aircAruvnKk,700.0,702.0,annotator_1,3,lecture,,Every other neuron in this layer is going to be connected to,false,multimodal_tvsum_style
+aircAruvnKk,702.0,704.0,annotator_1,3,lecture,,"Every other neuron in this layer is going to be connected to all 784 pixel neurons from the first layer, and each one of",false,multimodal_tvsum_style
+aircAruvnKk,704.0,706.0,annotator_1,3,lecture,,"all 784 pixel neurons from the first layer, and each one of",false,multimodal_tvsum_style
+aircAruvnKk,706.0,708.0,annotator_1,3,lecture,,"all 784 pixel neurons from the first layer, and each one of those 784 connections has its own weight associated with it.",false,multimodal_tvsum_style
+aircAruvnKk,708.0,710.0,annotator_1,3,lecture,,those 784 connections has its own weight associated with it.,false,multimodal_tvsum_style
+aircAruvnKk,710.0,712.0,annotator_1,3,lecture,,"those 784 connections has its own weight associated with it. Also, each one has some bias, some other number that you ad",false,multimodal_tvsum_style
+aircAruvnKk,712.0,714.0,annotator_1,3,lecture,,"Also, each one has some bias, some other number that you add",false,multimodal_tvsum_style
+aircAruvnKk,714.0,716.0,annotator_1,3,lecture,,"Also, each one has some bias, some other number that you add on to the weighted sum before squishing it with the sigmoid",false,multimodal_tvsum_style
+aircAruvnKk,716.0,718.0,annotator_1,3,lecture,,on to the weighted sum before squishing it with the sigmoid.,false,multimodal_tvsum_style
+aircAruvnKk,718.0,720.0,annotator_1,3,lecture,,"And that's a lot to think about! With this hidden layer of 16 neurons, that's a total of 784 times 16 weights,",false,multimodal_tvsum_style
+aircAruvnKk,720.0,722.0,annotator_1,3,lecture,,"With this hidden layer of 16 neurons, that's a total of 784 times 16 weights,",false,multimodal_tvsum_style
+aircAruvnKk,722.0,724.0,annotator_1,3,lecture,,"With this hidden layer of 16 neurons, that's a total of 784 times 16 weights,",false,multimodal_tvsum_style
+aircAruvnKk,724.0,726.0,annotator_1,3,lecture,,"With this hidden layer of 16 neurons, that's a total of 784 times 16 weights,",false,multimodal_tvsum_style
+aircAruvnKk,726.0,728.0,annotator_1,3,lecture,,"With this hidden layer of 16 neurons, that's a total of 784 times 16 weights, along with 16 biases.",false,multimodal_tvsum_style
+aircAruvnKk,728.0,730.0,annotator_1,3,lecture,,And all of that is just the connections from the first layer to the second.,false,multimodal_tvsum_style
+aircAruvnKk,730.0,732.0,annotator_1,3,lecture,,And all of that is just the connections from the first layer to the second.,false,multimodal_tvsum_style
+aircAruvnKk,732.0,734.0,annotator_1,3,lecture,,The connections between the other layers also have,false,multimodal_tvsum_style
+aircAruvnKk,734.0,736.0,annotator_1,3,lecture,,The connections between the other layers also have a bunch of weights and biases associated with them.,false,multimodal_tvsum_style
+aircAruvnKk,736.0,738.0,annotator_1,3,lecture,,a bunch of weights and biases associated with them.,false,multimodal_tvsum_style
+aircAruvnKk,738.0,740.0,annotator_1,3,lecture,,"All said and done, this network has almost exactly 13,000 total weights and biases.",false,multimodal_tvsum_style
+aircAruvnKk,740.0,742.0,annotator_1,3,lecture,,"All said and done, this network has almost exactly 13,000 total weights and biases.",false,multimodal_tvsum_style
+aircAruvnKk,742.0,744.0,annotator_1,3,lecture,,"All said and done, this network has almost exactly 13,000 total weights and biases. 13,000 knobs and dials that can be t",false,multimodal_tvsum_style
+aircAruvnKk,744.0,746.0,annotator_1,3,lecture,,"13,000 knobs and dials that can be tweaked and turned",false,multimodal_tvsum_style
+aircAruvnKk,746.0,748.0,annotator_1,3,lecture,,"13,000 knobs and dials that can be tweaked and turned to make this network behave in different ways.",false,multimodal_tvsum_style
+aircAruvnKk,748.0,750.0,annotator_1,3,lecture,,to make this network behave in different ways.,false,multimodal_tvsum_style
+aircAruvnKk,750.0,752.0,annotator_1,3,lecture,,"So when we talk about learning, what that's referring to is",false,multimodal_tvsum_style
+aircAruvnKk,752.0,754.0,annotator_1,3,lecture,,"So when we talk about learning, what that's referring to is",false,multimodal_tvsum_style
+aircAruvnKk,754.0,756.0,annotator_1,3,lecture,,"So when we talk about learning, what that's referring to is getting the computer to find a valid setting for all of thes",false,multimodal_tvsum_style
+aircAruvnKk,756.0,758.0,annotator_1,3,lecture,,getting the computer to find a valid setting for all of these many many numbers so that it'll actually solve the problem,false,multimodal_tvsum_style
+aircAruvnKk,758.0,760.0,annotator_1,3,lecture,,many many numbers so that it'll actually solve the problem at hand.,false,multimodal_tvsum_style
+aircAruvnKk,760.0,762.0,annotator_1,3,lecture,,many many numbers so that it'll actually solve the problem at hand.,false,multimodal_tvsum_style
+aircAruvnKk,762.0,764.0,annotator_1,3,lecture,,One thought experiment that is at once fun and kind of horrifying is to imagine sitting,false,multimodal_tvsum_style
+aircAruvnKk,764.0,766.0,annotator_1,3,lecture,,One thought experiment that is at once fun and kind of horrifying is to imagine sitting,false,multimodal_tvsum_style
+aircAruvnKk,766.0,768.0,annotator_1,3,lecture,,One thought experiment that is at once fun and kind of horrifying is to imagine sitting down and setting all of these we,false,multimodal_tvsum_style
+aircAruvnKk,768.0,770.0,annotator_1,3,lecture,,"down and setting all of these weights and biases by hand,",false,multimodal_tvsum_style
+aircAruvnKk,770.0,772.0,annotator_1,3,lecture,,"down and setting all of these weights and biases by hand, purposefully tweaking the numbers so that the second layer pic",false,multimodal_tvsum_style
+aircAruvnKk,772.0,774.0,annotator_1,3,lecture,,"purposefully tweaking the numbers so that the second layer picks up on edges,",false,multimodal_tvsum_style
+aircAruvnKk,774.0,776.0,annotator_1,3,lecture,,"purposefully tweaking the numbers so that the second layer picks up on edges, the third layer picks up on patterns, etc.",false,multimodal_tvsum_style
+aircAruvnKk,776.0,778.0,annotator_1,3,lecture,,"the third layer picks up on patterns, etc. I personally find this satisfying rather than just treating the network as a ",false,multimodal_tvsum_style
+aircAruvnKk,778.0,780.0,annotator_1,3,lecture,,I personally find this satisfying rather than just treating the network as a total black,false,multimodal_tvsum_style
+aircAruvnKk,780.0,782.0,annotator_1,3,lecture,,"I personally find this satisfying rather than just treating the network as a total black box, because when the network d",false,multimodal_tvsum_style
+aircAruvnKk,782.0,784.0,annotator_1,3,lecture,,"box, because when the network doesn't perform the way you anticipate,",false,multimodal_tvsum_style
+aircAruvnKk,784.0,786.0,annotator_1,3,lecture,,"box, because when the network doesn't perform the way you anticipate, if you've built up a little bit of a relationship ",false,multimodal_tvsum_style
+aircAruvnKk,786.0,788.0,annotator_1,3,lecture,,if you've built up a little bit of a relationship with what those weights and biases,false,multimodal_tvsum_style
+aircAruvnKk,788.0,790.0,annotator_1,3,lecture,,"if you've built up a little bit of a relationship with what those weights and biases actually mean, you have a starting ",false,multimodal_tvsum_style
+aircAruvnKk,790.0,792.0,annotator_1,3,lecture,,"actually mean, you have a starting place for experimenting with how to change the",false,multimodal_tvsum_style
+aircAruvnKk,792.0,794.0,annotator_1,3,lecture,,"actually mean, you have a starting place for experimenting with how to change the structure to improve.",false,multimodal_tvsum_style
+aircAruvnKk,794.0,796.0,annotator_1,3,lecture,,"structure to improve. Or when the network does work but not for the reasons you might expect,",false,multimodal_tvsum_style
+aircAruvnKk,796.0,798.0,annotator_1,3,lecture,,"Or when the network does work but not for the reasons you might expect,",false,multimodal_tvsum_style
+aircAruvnKk,798.0,800.0,annotator_1,3,lecture,,"Or when the network does work but not for the reasons you might expect, digging into what the weights and biases are doi",false,multimodal_tvsum_style
+aircAruvnKk,800.0,802.0,annotator_1,3,lecture,,digging into what the weights and biases are doing is a good way to challenge,false,multimodal_tvsum_style
+aircAruvnKk,802.0,804.0,annotator_1,3,lecture,,digging into what the weights and biases are doing is a good way to challenge your assumptions and really expose the ful,false,multimodal_tvsum_style
+aircAruvnKk,804.0,806.0,annotator_1,3,lecture,,your assumptions and really expose the full space of possible solutions.,false,multimodal_tvsum_style
+aircAruvnKk,806.0,808.0,annotator_1,3,lecture,,"By the way, the actual function here is a little cumbersome to write down,",false,multimodal_tvsum_style
+aircAruvnKk,808.0,810.0,annotator_1,3,lecture,,"By the way, the actual function here is a little cumbersome to write down, don't you think?",false,multimodal_tvsum_style
+aircAruvnKk,810.0,812.0,annotator_1,3,lecture,,don't you think?,false,multimodal_tvsum_style
+aircAruvnKk,812.0,814.0,annotator_1,3,lecture,,So let me show you a more notationally compact way that these connections are represented.,false,multimodal_tvsum_style
+aircAruvnKk,814.0,816.0,annotator_1,3,lecture,,So let me show you a more notationally compact way that these connections are represented.,false,multimodal_tvsum_style
+aircAruvnKk,816.0,818.0,annotator_1,3,lecture,,So let me show you a more notationally compact way that these connections are represented. This is how you'd see it if y,false,multimodal_tvsum_style
+aircAruvnKk,818.0,820.0,annotator_1,3,lecture,,This is how you'd see it if you choose to read up more about neural networks.,false,multimodal_tvsum_style
+aircAruvnKk,820.0,822.0,annotator_1,3,lecture,,This is how you'd see it if you choose to read up more about neural networks. Organize all of the activations from one l,false,multimodal_tvsum_style
+aircAruvnKk,822.0,824.0,annotator_1,3,lecture,,Organize all of the activations from one layer into a column as a vector.,false,multimodal_tvsum_style
+aircAruvnKk,824.0,826.0,annotator_1,3,lecture,,Organize all of the activations from one layer into a column as a vector.,false,multimodal_tvsum_style
+aircAruvnKk,826.0,828.0,annotator_1,3,lecture,,Organize all of the activations from one layer into a column as a vector.,false,multimodal_tvsum_style
+aircAruvnKk,828.0,830.0,annotator_1,3,lecture,,"Organize all of the activations from one layer into a column as a vector. Then organize all of the weights as a matrix, ",false,multimodal_tvsum_style
+aircAruvnKk,830.0,832.0,annotator_1,3,lecture,,"Then organize all of the weights as a matrix, where each row of that matrix corresponds to the connections between one l",false,multimodal_tvsum_style
+aircAruvnKk,832.0,834.0,annotator_1,3,lecture,,to the connections between one layer and a particular neuron in the next layer.,false,multimodal_tvsum_style
+aircAruvnKk,834.0,836.0,annotator_1,3,lecture,,to the connections between one layer and a particular neuron in the next layer.,false,multimodal_tvsum_style
+aircAruvnKk,836.0,838.0,annotator_1,3,lecture,,to the connections between one layer and a particular neuron in the next layer.,false,multimodal_tvsum_style
+aircAruvnKk,838.0,840.0,annotator_1,3,lecture,,What that means is that taking the weighted sum of the activations in,false,multimodal_tvsum_style
+aircAruvnKk,840.0,842.0,annotator_1,3,lecture,,What that means is that taking the weighted sum of the activations in,false,multimodal_tvsum_style
+aircAruvnKk,842.0,844.0,annotator_1,3,lecture,,What that means is that taking the weighted sum of the activations in the first layer according to these weights corresp,false,multimodal_tvsum_style
+aircAruvnKk,844.0,846.0,annotator_1,3,lecture,,the first layer according to these weights corresponds to one of the terms in the matrix vector product of everything we,false,multimodal_tvsum_style
+aircAruvnKk,846.0,848.0,annotator_1,3,lecture,,terms in the matrix vector product of everything we have on the left here.,false,multimodal_tvsum_style
+aircAruvnKk,848.0,850.0,annotator_1,3,lecture,,terms in the matrix vector product of everything we have on the left here.,false,multimodal_tvsum_style
+aircAruvnKk,850.0,852.0,annotator_1,3,lecture,,,false,multimodal_tvsum_style
+aircAruvnKk,852.0,854.0,annotator_1,3,lecture,,,false,multimodal_tvsum_style
+aircAruvnKk,854.0,856.0,annotator_1,3,lecture,,"By the way, so much of machine learning just comes down to having a good",false,multimodal_tvsum_style
+aircAruvnKk,856.0,858.0,annotator_1,3,lecture,,"By the way, so much of machine learning just comes down to having a good grasp of linear algebra, so for any of you who ",false,multimodal_tvsum_style
+aircAruvnKk,858.0,860.0,annotator_1,3,lecture,,"grasp of linear algebra, so for any of you who want a nice visual",false,multimodal_tvsum_style
+aircAruvnKk,860.0,862.0,annotator_1,3,lecture,,"grasp of linear algebra, so for any of you who want a nice visual understanding for matrices and what matrix vector mult",false,multimodal_tvsum_style
+aircAruvnKk,862.0,864.0,annotator_1,3,lecture,,"understanding for matrices and what matrix vector multiplication means,",false,multimodal_tvsum_style
+aircAruvnKk,864.0,866.0,annotator_1,3,lecture,,"understanding for matrices and what matrix vector multiplication means, take a look at the series I did on linear algebr",false,multimodal_tvsum_style
+aircAruvnKk,866.0,868.0,annotator_1,3,lecture,,"take a look at the series I did on linear algebra, especially chapter 3.",false,multimodal_tvsum_style
+aircAruvnKk,868.0,870.0,annotator_1,3,lecture,,"take a look at the series I did on linear algebra, especially chapter 3. Back to our expression, instead of talking abou",false,multimodal_tvsum_style
+aircAruvnKk,870.0,872.0,annotator_1,3,lecture,,"Back to our expression, instead of talking about adding the bias to each one of",false,multimodal_tvsum_style
+aircAruvnKk,872.0,874.0,annotator_1,3,lecture,,"Back to our expression, instead of talking about adding the bias to each one of these values independently, we represent",false,multimodal_tvsum_style
+aircAruvnKk,874.0,876.0,annotator_1,3,lecture,,"these values independently, we represent it by organizing all those biases into",false,multimodal_tvsum_style
+aircAruvnKk,876.0,878.0,annotator_1,3,lecture,,"these values independently, we represent it by organizing all those biases into",false,multimodal_tvsum_style
+aircAruvnKk,878.0,880.0,annotator_1,3,lecture,,"a vector, and adding the entire vector to the previous matrix vector product.",false,multimodal_tvsum_style
+aircAruvnKk,880.0,882.0,annotator_1,3,lecture,,"a vector, and adding the entire vector to the previous matrix vector product.",false,multimodal_tvsum_style
+aircAruvnKk,882.0,884.0,annotator_1,3,lecture,,"a vector, and adding the entire vector to the previous matrix vector product. Then as a final step, I'll wrap a sigmoid ",false,multimodal_tvsum_style
+aircAruvnKk,884.0,886.0,annotator_1,3,lecture,,"Then as a final step, I'll wrap a sigmoid around the outside here,",false,multimodal_tvsum_style
+aircAruvnKk,886.0,888.0,annotator_1,3,lecture,,"Then as a final step, I'll wrap a sigmoid around the outside here, and what that's supposed to represent is that you're ",false,multimodal_tvsum_style
+aircAruvnKk,888.0,890.0,annotator_1,3,lecture,,and what that's supposed to represent is that you're going to apply the,false,multimodal_tvsum_style
+aircAruvnKk,890.0,892.0,annotator_1,3,lecture,,and what that's supposed to represent is that you're going to apply the sigmoid function to each specific component of t,false,multimodal_tvsum_style
+aircAruvnKk,892.0,894.0,annotator_1,3,lecture,,sigmoid function to each specific component of the resulting vector inside.,false,multimodal_tvsum_style
+aircAruvnKk,894.0,896.0,annotator_1,3,lecture,,sigmoid function to each specific component of the resulting vector inside. So once you write down this weight matrix an,false,multimodal_tvsum_style
+aircAruvnKk,896.0,898.0,annotator_1,3,lecture,,"So once you write down this weight matrix and these vectors as their own symbols,",false,multimodal_tvsum_style
+aircAruvnKk,898.0,900.0,annotator_1,3,lecture,,"So once you write down this weight matrix and these vectors as their own symbols,",false,multimodal_tvsum_style
+aircAruvnKk,900.0,902.0,annotator_1,3,lecture,,"So once you write down this weight matrix and these vectors as their own symbols, you can communicate the full transitio",false,multimodal_tvsum_style
+aircAruvnKk,902.0,904.0,annotator_1,3,lecture,,you can communicate the full transition of activations from one layer to the next in an,false,multimodal_tvsum_style
+aircAruvnKk,904.0,906.0,annotator_1,3,lecture,,you can communicate the full transition of activations from one layer to the next in an extremely tight and neat little ,false,multimodal_tvsum_style
+aircAruvnKk,906.0,908.0,annotator_1,3,lecture,,"extremely tight and neat little expression, and this makes the relevant code both a lot",false,multimodal_tvsum_style
+aircAruvnKk,908.0,910.0,annotator_1,3,lecture,,"extremely tight and neat little expression, and this makes the relevant code both a lot",false,multimodal_tvsum_style
+aircAruvnKk,910.0,912.0,annotator_1,3,lecture,,"extremely tight and neat little expression, and this makes the relevant code both a lot simpler and a lot faster, since ",false,multimodal_tvsum_style
+aircAruvnKk,912.0,914.0,annotator_1,3,lecture,,"simpler and a lot faster, since many libraries optimize the heck out of matrix",false,multimodal_tvsum_style
+aircAruvnKk,914.0,916.0,annotator_1,3,lecture,,"simpler and a lot faster, since many libraries optimize the heck out of matrix multiplication.",false,multimodal_tvsum_style
+aircAruvnKk,916.0,918.0,annotator_1,3,lecture,,Remember how earlier I said these neurons are simply things that hold numbers?,false,multimodal_tvsum_style
+aircAruvnKk,918.0,920.0,annotator_1,3,lecture,,Remember how earlier I said these neurons are simply things that hold numbers?,false,multimodal_tvsum_style
+aircAruvnKk,920.0,922.0,annotator_1,4,lecture,,Remember how earlier I said these neurons are simply things that hold numbers?,false,multimodal_tvsum_style
+aircAruvnKk,922.0,924.0,annotator_1,4,lecture,,"Well of course the specific numbers that they hold depends on the image you feed in,",false,multimodal_tvsum_style
+aircAruvnKk,924.0,926.0,annotator_1,4,lecture,,"Well of course the specific numbers that they hold depends on the image you feed in,",false,multimodal_tvsum_style
+aircAruvnKk,926.0,928.0,annotator_1,4,lecture,,"Well of course the specific numbers that they hold depends on the image you feed in, so it's actually more accurate to t",false,multimodal_tvsum_style
+aircAruvnKk,928.0,930.0,annotator_1,4,lecture,,"so it's actually more accurate to think of each neuron as a function,",false,multimodal_tvsum_style
+aircAruvnKk,930.0,932.0,annotator_1,4,lecture,,"so it's actually more accurate to think of each neuron as a function, one that takes in the outputs of all the neurons i",false,multimodal_tvsum_style
+aircAruvnKk,932.0,934.0,annotator_1,4,lecture,,one that takes in the outputs of all the neurons in the previous layer and spits out a,false,multimodal_tvsum_style
+aircAruvnKk,934.0,936.0,annotator_1,4,lecture,,one that takes in the outputs of all the neurons in the previous layer and spits out a,false,multimodal_tvsum_style
+aircAruvnKk,936.0,938.0,annotator_1,4,lecture,,one that takes in the outputs of all the neurons in the previous layer and spits out a number between 0 and 1.,false,multimodal_tvsum_style
+aircAruvnKk,938.0,940.0,annotator_1,5,lecture,,"number between 0 and 1. Really the entire network is just a function, one that takes in",false,multimodal_tvsum_style
+aircAruvnKk,940.0,942.0,annotator_1,5,lecture,,"Really the entire network is just a function, one that takes in",false,multimodal_tvsum_style
+aircAruvnKk,942.0,944.0,annotator_1,5,lecture,,"Really the entire network is just a function, one that takes in 784 numbers as an input and spits out 10 numbers as an o",false,multimodal_tvsum_style
+aircAruvnKk,944.0,946.0,annotator_1,5,lecture,,784 numbers as an input and spits out 10 numbers as an output.,false,multimodal_tvsum_style
+aircAruvnKk,946.0,948.0,annotator_1,5,lecture,,"784 numbers as an input and spits out 10 numbers as an output. It's an absurdly complicated function, one that involves ",false,multimodal_tvsum_style
+aircAruvnKk,948.0,950.0,annotator_1,5,lecture,,"It's an absurdly complicated function, one that involves 13,000 parameters",false,multimodal_tvsum_style
+aircAruvnKk,950.0,952.0,annotator_1,5,lecture,,"It's an absurdly complicated function, one that involves 13,000 parameters in the forms of these weights and biases that",false,multimodal_tvsum_style
+aircAruvnKk,952.0,954.0,annotator_1,5,lecture,,"in the forms of these weights and biases that pick up on certain patterns,",false,multimodal_tvsum_style
+aircAruvnKk,954.0,956.0,annotator_1,5,lecture,,"in the forms of these weights and biases that pick up on certain patterns, and which involves iterating many matrix vect",false,multimodal_tvsum_style
+aircAruvnKk,956.0,958.0,annotator_1,5,lecture,,and which involves iterating many matrix vector products and the sigmoid,false,multimodal_tvsum_style
+aircAruvnKk,958.0,960.0,annotator_1,5,lecture,,"and which involves iterating many matrix vector products and the sigmoid squishification function, but it's just a funct",false,multimodal_tvsum_style
+aircAruvnKk,960.0,962.0,annotator_1,5,lecture,,"squishification function, but it's just a function nonetheless.",false,multimodal_tvsum_style
+aircAruvnKk,962.0,964.0,annotator_1,5,lecture,,"squishification function, but it's just a function nonetheless. And in a way it's kind of reassuring that it looks compl",false,multimodal_tvsum_style
+aircAruvnKk,964.0,966.0,annotator_1,3,lecture,,And in a way it's kind of reassuring that it looks complicated.,false,multimodal_tvsum_style
+aircAruvnKk,966.0,968.0,annotator_1,2,lecture,,"And in a way it's kind of reassuring that it looks complicated. I mean if it were any simpler, what hope would we have",false,multimodal_tvsum_style
+aircAruvnKk,968.0,970.0,annotator_1,2,lecture,,"I mean if it were any simpler, what hope would we have that it could take on the challenge of recognizing digits?",false,multimodal_tvsum_style
+aircAruvnKk,970.0,972.0,annotator_1,2,lecture,,that it could take on the challenge of recognizing digits?,false,multimodal_tvsum_style
+aircAruvnKk,972.0,974.0,annotator_1,2,lecture,,that it could take on the challenge of recognizing digits? And how does it take on that challenge?,false,multimodal_tvsum_style
+aircAruvnKk,974.0,976.0,annotator_1,2,lecture,,And how does it take on that challenge? How does this network learn the appropriate weights and biases just by looking a,false,multimodal_tvsum_style
+aircAruvnKk,976.0,978.0,annotator_1,2,lecture,,How does this network learn the appropriate weights and biases just by looking at data?,false,multimodal_tvsum_style
+aircAruvnKk,978.0,980.0,annotator_1,2,lecture,,How does this network learn the appropriate weights and biases just by looking at data?,false,multimodal_tvsum_style
+aircAruvnKk,980.0,982.0,annotator_1,2,lecture,,"Well that's what I'll show in the next video, and I'll also dig a little",false,multimodal_tvsum_style
+aircAruvnKk,982.0,984.0,annotator_1,2,lecture,,"Well that's what I'll show in the next video, and I'll also dig a little more into what this particular network we're se",false,multimodal_tvsum_style
+aircAruvnKk,984.0,986.0,annotator_1,2,lecture,,more into what this particular network we're seeing is really doing.,false,multimodal_tvsum_style
+aircAruvnKk,986.0,988.0,annotator_1,1,lecture,,more into what this particular network we're seeing is really doing. Now is the point I suppose I should say subscribe t,false,multimodal_tvsum_style
+aircAruvnKk,988.0,990.0,annotator_1,1,lecture,,Now is the point I suppose I should say subscribe to stay notified,false,multimodal_tvsum_style
+aircAruvnKk,990.0,992.0,annotator_1,1,lecture,,"Now is the point I suppose I should say subscribe to stay notified about when that video or any new videos come out,",false,multimodal_tvsum_style
+aircAruvnKk,992.0,994.0,annotator_1,1,lecture,,"about when that video or any new videos come out, but realistically most of you don't actually receive notifications fro",false,multimodal_tvsum_style
+aircAruvnKk,994.0,996.0,annotator_1,1,lecture,,"but realistically most of you don't actually receive notifications from YouTube, do you?",false,multimodal_tvsum_style
+aircAruvnKk,996.0,998.0,annotator_1,1,lecture,,"but realistically most of you don't actually receive notifications from YouTube, do you?",false,multimodal_tvsum_style
+aircAruvnKk,998.0,1000.0,annotator_1,1,lecture,,Maybe more honestly I should say subscribe so that the neural networks,false,multimodal_tvsum_style
+aircAruvnKk,1000.0,1002.0,annotator_1,1,lecture,,Maybe more honestly I should say subscribe so that the neural networks that underlie YouTube's recommendation algorithm ,false,multimodal_tvsum_style
+aircAruvnKk,1002.0,1004.0,annotator_1,1,lecture,,that underlie YouTube's recommendation algorithm are primed to believe,false,multimodal_tvsum_style
+aircAruvnKk,1004.0,1006.0,annotator_1,1,lecture,,that underlie YouTube's recommendation algorithm are primed to believe that you want to see content from this channel ge,false,multimodal_tvsum_style
+aircAruvnKk,1006.0,1008.0,annotator_1,1,lecture,,that you want to see content from this channel get recommended to you.,false,multimodal_tvsum_style
+aircAruvnKk,1008.0,1010.0,annotator_1,1,lecture,,"Anyway, stay posted for more.",false,multimodal_tvsum_style
+aircAruvnKk,1010.0,1012.0,annotator_1,1,lecture,,Thank you very much to everyone supporting these videos on Patreon.,false,multimodal_tvsum_style
+aircAruvnKk,1012.0,1014.0,annotator_1,1,lecture,,Thank you very much to everyone supporting these videos on Patreon.,false,multimodal_tvsum_style
+aircAruvnKk,1014.0,1016.0,annotator_1,1,lecture,,"I've been a little slow to progress in the probability series this summer,",false,multimodal_tvsum_style
+aircAruvnKk,1016.0,1018.0,annotator_1,1,lecture,,"I've been a little slow to progress in the probability series this summer, but I'm jumping back into it after this proje",false,multimodal_tvsum_style
+aircAruvnKk,1018.0,1020.0,annotator_1,1,lecture,,"but I'm jumping back into it after this project, so patrons you can look out for updates there.",false,multimodal_tvsum_style
+aircAruvnKk,1020.0,1022.0,annotator_1,1,lecture,,so patrons you can look out for updates there.,false,multimodal_tvsum_style
+aircAruvnKk,1022.0,1024.0,annotator_1,3,lecture,,To close things off here I have with me Lisha Li who did her PhD work on the,false,multimodal_tvsum_style
+aircAruvnKk,1024.0,1026.0,annotator_1,3,lecture,,To close things off here I have with me Lisha Li who did her PhD work on the,false,multimodal_tvsum_style
+aircAruvnKk,1026.0,1028.0,annotator_1,3,lecture,,To close things off here I have with me Lisha Li who did her PhD work on the theoretical side of deep learning and who c,false,multimodal_tvsum_style
+aircAruvnKk,1028.0,1030.0,annotator_1,3,lecture,,theoretical side of deep learning and who currently works at a venture capital,false,multimodal_tvsum_style
+aircAruvnKk,1030.0,1032.0,annotator_1,3,lecture,,theoretical side of deep learning and who currently works at a venture capital firm called Amplify Partners who kindly p,false,multimodal_tvsum_style
+aircAruvnKk,1032.0,1034.0,annotator_1,3,lecture,,firm called Amplify Partners who kindly provided some of the funding for this video.,false,multimodal_tvsum_style
+aircAruvnKk,1034.0,1036.0,annotator_1,3,lecture,,firm called Amplify Partners who kindly provided some of the funding for this video. So Lisha one thing I think we shoul,false,multimodal_tvsum_style
+aircAruvnKk,1036.0,1038.0,annotator_1,3,lecture,,So Lisha one thing I think we should quickly bring up is this sigmoid function.,false,multimodal_tvsum_style
+aircAruvnKk,1038.0,1040.0,annotator_1,3,lecture,,So Lisha one thing I think we should quickly bring up is this sigmoid function. As I understand it early networks use th,false,multimodal_tvsum_style
+aircAruvnKk,1040.0,1042.0,annotator_1,3,lecture,,As I understand it early networks use this to squish the relevant weighted,false,multimodal_tvsum_style
+aircAruvnKk,1042.0,1044.0,annotator_1,3,lecture,,"As I understand it early networks use this to squish the relevant weighted sum into that interval between zero and one, ",false,multimodal_tvsum_style
+aircAruvnKk,1044.0,1046.0,annotator_1,3,lecture,,"sum into that interval between zero and one, you know kind of motivated",false,multimodal_tvsum_style
+aircAruvnKk,1046.0,1048.0,annotator_1,3,lecture,,"sum into that interval between zero and one, you know kind of motivated by this biological analogy of neurons either bei",false,multimodal_tvsum_style
+aircAruvnKk,1048.0,1050.0,annotator_1,3,lecture,,by this biological analogy of neurons either being inactive or active.,false,multimodal_tvsum_style
+aircAruvnKk,1050.0,1052.0,annotator_1,3,lecture,,Exactly. But relatively few modern networks actually use sigmoid anymore.,false,multimodal_tvsum_style
+aircAruvnKk,1052.0,1054.0,annotator_1,3,lecture,,Exactly. But relatively few modern networks actually use sigmoid anymore.,false,multimodal_tvsum_style
+aircAruvnKk,1054.0,1056.0,annotator_1,3,lecture,,Exactly. But relatively few modern networks actually use sigmoid anymore. Yeah. It's kind of old school right? Yeah or r,false,multimodal_tvsum_style
+aircAruvnKk,1056.0,1058.0,annotator_1,3,lecture,,Yeah or rather ReLU seems to be much easier to train.,false,multimodal_tvsum_style
+aircAruvnKk,1058.0,1060.0,annotator_1,3,lecture,,"Yeah or rather ReLU seems to be much easier to train. And ReLU, ReLU stands for rectified linear unit?",false,multimodal_tvsum_style
+aircAruvnKk,1060.0,1062.0,annotator_1,3,lecture,,"And ReLU, ReLU stands for rectified linear unit?",false,multimodal_tvsum_style
+aircAruvnKk,1062.0,1064.0,annotator_1,3,lecture,,"And ReLU, ReLU stands for rectified linear unit? Yes it's this kind of function where you're just taking a max of zero",false,multimodal_tvsum_style
+aircAruvnKk,1064.0,1066.0,annotator_1,3,lecture,,Yes it's this kind of function where you're just taking a max of zero,false,multimodal_tvsum_style
+aircAruvnKk,1066.0,1068.0,annotator_1,3,lecture,,Yes it's this kind of function where you're just taking a max of zero and a where a is given by what you were explaining,false,multimodal_tvsum_style
+aircAruvnKk,1068.0,1070.0,annotator_1,3,lecture,,and a where a is given by what you were explaining in the video and,false,multimodal_tvsum_style
+aircAruvnKk,1070.0,1072.0,annotator_1,3,lecture,,and a where a is given by what you were explaining in the video and,false,multimodal_tvsum_style
+aircAruvnKk,1072.0,1074.0,annotator_1,3,lecture,,and a where a is given by what you were explaining in the video and what this was sort of motivated from I think was a p,false,multimodal_tvsum_style
+aircAruvnKk,1074.0,1076.0,annotator_1,3,lecture,,what this was sort of motivated from I think was a partially by a,false,multimodal_tvsum_style
+aircAruvnKk,1076.0,1078.0,annotator_1,3,lecture,,what this was sort of motivated from I think was a partially by a biological analogy with how neurons would either be ac,false,multimodal_tvsum_style
+aircAruvnKk,1078.0,1080.0,annotator_1,3,lecture,,biological analogy with how neurons would either be activated or not.,false,multimodal_tvsum_style
+aircAruvnKk,1080.0,1082.0,annotator_1,3,lecture,,biological analogy with how neurons would either be activated or not. And so if it passes a certain threshold it would b,false,multimodal_tvsum_style
+aircAruvnKk,1082.0,1084.0,annotator_1,3,lecture,,And so if it passes a certain threshold it would be the identity function but if it did,false,multimodal_tvsum_style
+aircAruvnKk,1084.0,1086.0,annotator_1,3,lecture,,And so if it passes a certain threshold it would be the identity function but if it did,false,multimodal_tvsum_style
+aircAruvnKk,1086.0,1088.0,annotator_1,3,lecture,,And so if it passes a certain threshold it would be the identity function but if it did not then it would just not be ac,false,multimodal_tvsum_style
+aircAruvnKk,1088.0,1090.0,annotator_1,3,lecture,,not then it would just not be activated so it'd be zero so it's kind of a simplification.,false,multimodal_tvsum_style
+aircAruvnKk,1090.0,1092.0,annotator_1,3,lecture,,not then it would just not be activated so it'd be zero so it's kind of a simplification. Using sigmoids didn't help tra,false,multimodal_tvsum_style
+aircAruvnKk,1092.0,1094.0,annotator_1,3,lecture,,Using sigmoids didn't help training or it was very difficult to,false,multimodal_tvsum_style
+aircAruvnKk,1094.0,1096.0,annotator_1,3,lecture,,Using sigmoids didn't help training or it was very difficult to train at some point and people just tried ReLU and it ha,false,multimodal_tvsum_style
+aircAruvnKk,1096.0,1098.0,annotator_1,3,lecture,,train at some point and people just tried ReLU and it happened,false,multimodal_tvsum_style
+aircAruvnKk,1098.0,1100.0,annotator_1,3,lecture,,train at some point and people just tried ReLU and it happened,false,multimodal_tvsum_style
+aircAruvnKk,1100.0,1102.0,annotator_1,3,lecture,,train at some point and people just tried ReLU and it happened to work very well for these incredibly deep neural networ,false,multimodal_tvsum_style
+aircAruvnKk,1102.0,1104.0,annotator_1,3,lecture,,to work very well for these incredibly deep neural networks.,false,multimodal_tvsum_style
+aircAruvnKk,1104.0,1106.0,annotator_1,3,lecture,,to work very well for these incredibly deep neural networks. All right thank you Lisha.,false,multimodal_tvsum_style
+aircAruvnKk,1106.0,1108.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+aircAruvnKk,1108.0,1110.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+aircAruvnKk,1110.0,1112.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+aircAruvnKk,1112.0,1114.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+aircAruvnKk,1114.0,1116.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+aircAruvnKk,1116.0,1118.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+aircAruvnKk,1118.0,1120.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+aircAruvnKk,1120.0,1122.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style

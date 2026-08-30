@@ -1,514 +1,514 @@
 ﻿video_id,start_sec,end_sec,annotator_id,importance,domain,reason_tag,transcript_hint,needs_review,label_protocol
-WUvTyaaNkzM,0.0,2.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-WUvTyaaNkzM,2.0,4.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-WUvTyaaNkzM,4.0,6.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-WUvTyaaNkzM,6.0,8.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-WUvTyaaNkzM,8.0,10.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-WUvTyaaNkzM,10.0,12.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-WUvTyaaNkzM,12.0,14.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-WUvTyaaNkzM,14.0,16.0,annotator_1,,lecture,,"Hey everyone, Grant here.",false,multimodal_tvsum_style
-WUvTyaaNkzM,16.0,18.0,annotator_1,,lecture,,"Hey everyone, Grant here. This is the first video in a series on the essence of calculus,",false,multimodal_tvsum_style
-WUvTyaaNkzM,18.0,20.0,annotator_1,,lecture,,"This is the first video in a series on the essence of calculus, and I'll be publishing the following videos once per day",false,multimodal_tvsum_style
-WUvTyaaNkzM,20.0,22.0,annotator_1,,lecture,,and I'll be publishing the following videos once per day for the next 10 days.,false,multimodal_tvsum_style
-WUvTyaaNkzM,22.0,24.0,annotator_1,,lecture,,and I'll be publishing the following videos once per day for the next 10 days.,false,multimodal_tvsum_style
-WUvTyaaNkzM,24.0,26.0,annotator_1,,lecture,,"The goal here, as the name suggests, is to really get",false,multimodal_tvsum_style
-WUvTyaaNkzM,26.0,28.0,annotator_1,,lecture,,"The goal here, as the name suggests, is to really get the heart of the subject out in one binge-watchable set.",false,multimodal_tvsum_style
-WUvTyaaNkzM,28.0,30.0,annotator_1,,lecture,,the heart of the subject out in one binge-watchable set.,false,multimodal_tvsum_style
-WUvTyaaNkzM,30.0,32.0,annotator_1,,lecture,,"But with a topic that's as broad as calculus, there's a lot of things that can mean,",false,multimodal_tvsum_style
-WUvTyaaNkzM,32.0,34.0,annotator_1,,lecture,,"But with a topic that's as broad as calculus, there's a lot of things that can mean,",false,multimodal_tvsum_style
-WUvTyaaNkzM,34.0,36.0,annotator_1,,lecture,,"But with a topic that's as broad as calculus, there's a lot of things that can mean, so here's what I have in mind speci",false,multimodal_tvsum_style
-WUvTyaaNkzM,36.0,38.0,annotator_1,,lecture,,so here's what I have in mind specifically. Calculus has a lot of rules and formulas which,false,multimodal_tvsum_style
-WUvTyaaNkzM,38.0,40.0,annotator_1,,lecture,,Calculus has a lot of rules and formulas which are often presented as things to be memorized.,false,multimodal_tvsum_style
-WUvTyaaNkzM,40.0,42.0,annotator_1,,lecture,,are often presented as things to be memorized.,false,multimodal_tvsum_style
-WUvTyaaNkzM,42.0,44.0,annotator_1,,lecture,,"Lots of derivative formulas, the product rule, the chain rule,",false,multimodal_tvsum_style
-WUvTyaaNkzM,44.0,46.0,annotator_1,,lecture,,"Lots of derivative formulas, the product rule, the chain rule, implicit differentiation, the fact that integrals and der",false,multimodal_tvsum_style
-WUvTyaaNkzM,46.0,48.0,annotator_1,,lecture,,"implicit differentiation, the fact that integrals and derivatives are opposite,",false,multimodal_tvsum_style
-WUvTyaaNkzM,48.0,50.0,annotator_1,,lecture,,"implicit differentiation, the fact that integrals and derivatives are opposite, Taylor series, just a lot of things like",false,multimodal_tvsum_style
-WUvTyaaNkzM,50.0,52.0,annotator_1,,lecture,,"Taylor series, just a lot of things like that.",false,multimodal_tvsum_style
-WUvTyaaNkzM,52.0,54.0,annotator_1,,lecture,,"Taylor series, just a lot of things like that. And my goal is for you to come away feeling like",false,multimodal_tvsum_style
-WUvTyaaNkzM,54.0,56.0,annotator_1,,lecture,,And my goal is for you to come away feeling like you could have invented calculus yourself.,false,multimodal_tvsum_style
-WUvTyaaNkzM,56.0,58.0,annotator_1,,lecture,,"you could have invented calculus yourself. That is, cover all those core ideas, but in a way that makes clear where they",false,multimodal_tvsum_style
-WUvTyaaNkzM,58.0,60.0,annotator_1,,lecture,,"That is, cover all those core ideas, but in a way that makes clear where they",false,multimodal_tvsum_style
-WUvTyaaNkzM,60.0,62.0,annotator_1,,lecture,,"That is, cover all those core ideas, but in a way that makes clear where they actually come from, and what they really m",false,multimodal_tvsum_style
-WUvTyaaNkzM,62.0,64.0,annotator_1,,lecture,,"actually come from, and what they really mean, using an all-around visual approach.",false,multimodal_tvsum_style
-WUvTyaaNkzM,64.0,66.0,annotator_1,,lecture,,"actually come from, and what they really mean, using an all-around visual approach.",false,multimodal_tvsum_style
-WUvTyaaNkzM,66.0,68.0,annotator_1,,lecture,,"Inventing math is no joke, and there is a difference between being",false,multimodal_tvsum_style
-WUvTyaaNkzM,68.0,70.0,annotator_1,,lecture,,"Inventing math is no joke, and there is a difference between being",false,multimodal_tvsum_style
-WUvTyaaNkzM,70.0,72.0,annotator_1,,lecture,,"Inventing math is no joke, and there is a difference between being told why something's true, and actually generating it",false,multimodal_tvsum_style
-WUvTyaaNkzM,72.0,74.0,annotator_1,,lecture,,"told why something's true, and actually generating it from scratch.",false,multimodal_tvsum_style
-WUvTyaaNkzM,74.0,76.0,annotator_1,,lecture,,"told why something's true, and actually generating it from scratch. But at all points, I want you to think to yourself, ",false,multimodal_tvsum_style
-WUvTyaaNkzM,76.0,78.0,annotator_1,,lecture,,"But at all points, I want you to think to yourself, if you were an early mathematician,",false,multimodal_tvsum_style
-WUvTyaaNkzM,78.0,80.0,annotator_1,,lecture,,"But at all points, I want you to think to yourself, if you were an early mathematician, pondering these ideas and drawin",false,multimodal_tvsum_style
-WUvTyaaNkzM,80.0,82.0,annotator_1,,lecture,,"pondering these ideas and drawing out the right diagrams,",false,multimodal_tvsum_style
-WUvTyaaNkzM,82.0,84.0,annotator_1,,lecture,,"pondering these ideas and drawing out the right diagrams, does it feel reasonable that you could have stumbled across th",false,multimodal_tvsum_style
-WUvTyaaNkzM,84.0,86.0,annotator_1,,lecture,,does it feel reasonable that you could have stumbled across these truths yourself?,false,multimodal_tvsum_style
-WUvTyaaNkzM,86.0,88.0,annotator_1,,lecture,,"does it feel reasonable that you could have stumbled across these truths yourself? In this initial video, I want to show",false,multimodal_tvsum_style
-WUvTyaaNkzM,88.0,90.0,annotator_1,,lecture,,"In this initial video, I want to show how you might stumble into the core ideas of",false,multimodal_tvsum_style
-WUvTyaaNkzM,90.0,92.0,annotator_1,,lecture,,"In this initial video, I want to show how you might stumble into the core ideas of calculus by thinking very deeply abou",false,multimodal_tvsum_style
-WUvTyaaNkzM,92.0,94.0,annotator_1,,lecture,,"calculus by thinking very deeply about one specific bit of geometry,",false,multimodal_tvsum_style
-WUvTyaaNkzM,94.0,96.0,annotator_1,,lecture,,"calculus by thinking very deeply about one specific bit of geometry, the area of a circle.",false,multimodal_tvsum_style
-WUvTyaaNkzM,96.0,98.0,annotator_1,,lecture,,"the area of a circle. Maybe you know that this is pi times its radius squared, but why?",false,multimodal_tvsum_style
-WUvTyaaNkzM,98.0,100.0,annotator_1,,lecture,,"Maybe you know that this is pi times its radius squared, but why?",false,multimodal_tvsum_style
-WUvTyaaNkzM,100.0,102.0,annotator_1,,lecture,,"Maybe you know that this is pi times its radius squared, but why? Is there a nice way to think about where this formula ",false,multimodal_tvsum_style
-WUvTyaaNkzM,102.0,104.0,annotator_1,,lecture,,Is there a nice way to think about where this formula comes from?,false,multimodal_tvsum_style
-WUvTyaaNkzM,104.0,106.0,annotator_1,,lecture,,"Is there a nice way to think about where this formula comes from? Well, contemplating this problem and leaving yourself ",false,multimodal_tvsum_style
-WUvTyaaNkzM,106.0,108.0,annotator_1,,lecture,,"Well, contemplating this problem and leaving yourself open to exploring the",false,multimodal_tvsum_style
-WUvTyaaNkzM,108.0,110.0,annotator_1,,lecture,,"Well, contemplating this problem and leaving yourself open to exploring the interesting thoughts that come about can act",false,multimodal_tvsum_style
-WUvTyaaNkzM,110.0,112.0,annotator_1,,lecture,,interesting thoughts that come about can actually lead you to a glimpse of three,false,multimodal_tvsum_style
-WUvTyaaNkzM,112.0,114.0,annotator_1,,lecture,,"interesting thoughts that come about can actually lead you to a glimpse of three big ideas in calculus, integrals, deriv",false,multimodal_tvsum_style
-WUvTyaaNkzM,114.0,116.0,annotator_1,,lecture,,"big ideas in calculus, integrals, derivatives, and the fact that they're opposites.",false,multimodal_tvsum_style
-WUvTyaaNkzM,116.0,118.0,annotator_1,,lecture,,"big ideas in calculus, integrals, derivatives, and the fact that they're opposites.",false,multimodal_tvsum_style
-WUvTyaaNkzM,118.0,120.0,annotator_1,,lecture,,"But the story starts more simply, just you and a circle, let's say with radius 3.",false,multimodal_tvsum_style
-WUvTyaaNkzM,120.0,122.0,annotator_1,,lecture,,"But the story starts more simply, just you and a circle, let's say with radius 3.",false,multimodal_tvsum_style
-WUvTyaaNkzM,122.0,124.0,annotator_1,,lecture,,"But the story starts more simply, just you and a circle, let's say with radius 3.",false,multimodal_tvsum_style
-WUvTyaaNkzM,124.0,126.0,annotator_1,,lecture,,"But the story starts more simply, just you and a circle, let's say with radius 3. You're trying to figure out its area, ",false,multimodal_tvsum_style
-WUvTyaaNkzM,126.0,128.0,annotator_1,,lecture,,"You're trying to figure out its area, and after going through a lot of",false,multimodal_tvsum_style
-WUvTyaaNkzM,128.0,130.0,annotator_1,,lecture,,"You're trying to figure out its area, and after going through a lot of paper trying different ways to chop up and rearra",false,multimodal_tvsum_style
-WUvTyaaNkzM,130.0,132.0,annotator_1,,lecture,,"paper trying different ways to chop up and rearrange the pieces of that area,",false,multimodal_tvsum_style
-WUvTyaaNkzM,132.0,134.0,annotator_1,,lecture,,"paper trying different ways to chop up and rearrange the pieces of that area, many of which might lead to their own inte",false,multimodal_tvsum_style
-WUvTyaaNkzM,134.0,136.0,annotator_1,,lecture,,"many of which might lead to their own interesting observations,",false,multimodal_tvsum_style
-WUvTyaaNkzM,136.0,138.0,annotator_1,,lecture,,"many of which might lead to their own interesting observations, maybe you try out the idea of slicing up the circle into",false,multimodal_tvsum_style
-WUvTyaaNkzM,138.0,140.0,annotator_1,,lecture,,maybe you try out the idea of slicing up the circle into many concentric rings.,false,multimodal_tvsum_style
-WUvTyaaNkzM,140.0,142.0,annotator_1,,lecture,,maybe you try out the idea of slicing up the circle into many concentric rings.,false,multimodal_tvsum_style
-WUvTyaaNkzM,142.0,144.0,annotator_1,,lecture,,"This should seem promising because it respects the symmetry of the circle,",false,multimodal_tvsum_style
-WUvTyaaNkzM,144.0,146.0,annotator_1,,lecture,,"This should seem promising because it respects the symmetry of the circle, and math has a tendency to reward you when yo",false,multimodal_tvsum_style
-WUvTyaaNkzM,146.0,148.0,annotator_1,,lecture,,and math has a tendency to reward you when you respect its symmetries.,false,multimodal_tvsum_style
-WUvTyaaNkzM,148.0,150.0,annotator_1,,lecture,,and math has a tendency to reward you when you respect its symmetries.,false,multimodal_tvsum_style
-WUvTyaaNkzM,150.0,152.0,annotator_1,,lecture,,"Let's take one of those rings, which has some inner radius r that's between 0 and 3.",false,multimodal_tvsum_style
-WUvTyaaNkzM,152.0,154.0,annotator_1,,lecture,,"Let's take one of those rings, which has some inner radius r that's between 0 and 3.",false,multimodal_tvsum_style
-WUvTyaaNkzM,154.0,156.0,annotator_1,,lecture,,"Let's take one of those rings, which has some inner radius r that's between 0 and 3.",false,multimodal_tvsum_style
-WUvTyaaNkzM,156.0,158.0,annotator_1,,lecture,,"If we can find a nice expression for the area of each ring like this one,",false,multimodal_tvsum_style
-WUvTyaaNkzM,158.0,160.0,annotator_1,,lecture,,"If we can find a nice expression for the area of each ring like this one, and if we have a nice way to add them all up,",false,multimodal_tvsum_style
-WUvTyaaNkzM,160.0,162.0,annotator_1,,lecture,,"and if we have a nice way to add them all up,",false,multimodal_tvsum_style
-WUvTyaaNkzM,162.0,164.0,annotator_1,,lecture,,"and if we have a nice way to add them all up, it might lead us to an understanding of the full circle's area.",false,multimodal_tvsum_style
-WUvTyaaNkzM,164.0,166.0,annotator_1,,lecture,,it might lead us to an understanding of the full circle's area.,false,multimodal_tvsum_style
-WUvTyaaNkzM,166.0,168.0,annotator_1,,lecture,,Maybe you start by imagining straightening out this ring.,false,multimodal_tvsum_style
-WUvTyaaNkzM,168.0,170.0,annotator_1,,lecture,,Maybe you start by imagining straightening out this ring.,false,multimodal_tvsum_style
-WUvTyaaNkzM,170.0,172.0,annotator_1,,lecture,,And you could try thinking through exactly what this new shape is and what its,false,multimodal_tvsum_style
-WUvTyaaNkzM,172.0,174.0,annotator_1,,lecture,,And you could try thinking through exactly what this new shape is and what its,false,multimodal_tvsum_style
-WUvTyaaNkzM,174.0,176.0,annotator_1,,lecture,,"And you could try thinking through exactly what this new shape is and what its area should be, but for simplicity, let's",false,multimodal_tvsum_style
-WUvTyaaNkzM,176.0,178.0,annotator_1,,lecture,,"area should be, but for simplicity, let's just approximate it as a rectangle.",false,multimodal_tvsum_style
-WUvTyaaNkzM,178.0,180.0,annotator_1,,lecture,,"area should be, but for simplicity, let's just approximate it as a rectangle.",false,multimodal_tvsum_style
-WUvTyaaNkzM,180.0,182.0,annotator_1,,lecture,,"The width of that rectangle is the circumference of the original ring,",false,multimodal_tvsum_style
-WUvTyaaNkzM,182.0,184.0,annotator_1,,lecture,,"The width of that rectangle is the circumference of the original ring, which is 2 pi times r, right?",false,multimodal_tvsum_style
-WUvTyaaNkzM,184.0,186.0,annotator_1,,lecture,,"which is 2 pi times r, right? I mean, that's essentially the definition of pi.",false,multimodal_tvsum_style
-WUvTyaaNkzM,186.0,188.0,annotator_1,,lecture,,"I mean, that's essentially the definition of pi.",false,multimodal_tvsum_style
-WUvTyaaNkzM,188.0,190.0,annotator_1,,lecture,,"I mean, that's essentially the definition of pi. And its thickness?",false,multimodal_tvsum_style
-WUvTyaaNkzM,190.0,192.0,annotator_1,,lecture,,"Well, that depends on how finely you chopped up the circle in the first place,",false,multimodal_tvsum_style
-WUvTyaaNkzM,192.0,194.0,annotator_1,,lecture,,"Well, that depends on how finely you chopped up the circle in the first place,",false,multimodal_tvsum_style
-WUvTyaaNkzM,194.0,196.0,annotator_1,,lecture,,"Well, that depends on how finely you chopped up the circle in the first place, which was kind of arbitrary.",false,multimodal_tvsum_style
-WUvTyaaNkzM,196.0,198.0,annotator_1,,lecture,,"In the spirit of using what will come to be standard calculus notation,",false,multimodal_tvsum_style
-WUvTyaaNkzM,198.0,200.0,annotator_1,,lecture,,"In the spirit of using what will come to be standard calculus notation,",false,multimodal_tvsum_style
-WUvTyaaNkzM,200.0,202.0,annotator_1,,lecture,,"In the spirit of using what will come to be standard calculus notation, let's call that thickness dr for a tiny differen",false,multimodal_tvsum_style
-WUvTyaaNkzM,202.0,204.0,annotator_1,,lecture,,let's call that thickness dr for a tiny difference in the radius from one ring to,false,multimodal_tvsum_style
-WUvTyaaNkzM,204.0,206.0,annotator_1,,lecture,,let's call that thickness dr for a tiny difference in the radius from one ring to the next. Maybe you think of it as som,false,multimodal_tvsum_style
-WUvTyaaNkzM,206.0,208.0,annotator_1,,lecture,,Maybe you think of it as something like 0.1.,false,multimodal_tvsum_style
-WUvTyaaNkzM,208.0,210.0,annotator_1,,lecture,,"So approximating this unwrapped ring as a thin rectangle,",false,multimodal_tvsum_style
-WUvTyaaNkzM,210.0,212.0,annotator_1,,lecture,,"So approximating this unwrapped ring as a thin rectangle,",false,multimodal_tvsum_style
-WUvTyaaNkzM,212.0,214.0,annotator_1,,lecture,,"So approximating this unwrapped ring as a thin rectangle, its area is 2 pi times r, the radius, times dr, the little thi",false,multimodal_tvsum_style
-WUvTyaaNkzM,214.0,216.0,annotator_1,,lecture,,"its area is 2 pi times r, the radius, times dr, the little thickness.",false,multimodal_tvsum_style
-WUvTyaaNkzM,216.0,218.0,annotator_1,,lecture,,"its area is 2 pi times r, the radius, times dr, the little thickness.",false,multimodal_tvsum_style
-WUvTyaaNkzM,218.0,220.0,annotator_1,,lecture,,"And even though that's not perfect, for smaller and smaller choices of dr,",false,multimodal_tvsum_style
-WUvTyaaNkzM,220.0,222.0,annotator_1,,lecture,,"And even though that's not perfect, for smaller and smaller choices of dr,",false,multimodal_tvsum_style
-WUvTyaaNkzM,222.0,224.0,annotator_1,,lecture,,"And even though that's not perfect, for smaller and smaller choices of dr, this is actually going to be a better and bet",false,multimodal_tvsum_style
-WUvTyaaNkzM,224.0,226.0,annotator_1,,lecture,,"this is actually going to be a better and better approximation for that area,",false,multimodal_tvsum_style
-WUvTyaaNkzM,226.0,228.0,annotator_1,,lecture,,"this is actually going to be a better and better approximation for that area, since the top and the bottom sides of this",false,multimodal_tvsum_style
-WUvTyaaNkzM,228.0,230.0,annotator_1,,lecture,,since the top and the bottom sides of this shape are going to get closer and closer to,false,multimodal_tvsum_style
-WUvTyaaNkzM,230.0,232.0,annotator_1,,lecture,,since the top and the bottom sides of this shape are going to get closer and closer to being exactly the same length.,false,multimodal_tvsum_style
-WUvTyaaNkzM,232.0,234.0,annotator_1,,lecture,,"being exactly the same length. So let's just move forward with this approximation,",false,multimodal_tvsum_style
-WUvTyaaNkzM,234.0,236.0,annotator_1,,lecture,,"So let's just move forward with this approximation, keeping in the back of our minds that it's slightly wrong,",false,multimodal_tvsum_style
-WUvTyaaNkzM,236.0,238.0,annotator_1,,lecture,,"keeping in the back of our minds that it's slightly wrong,",false,multimodal_tvsum_style
-WUvTyaaNkzM,238.0,240.0,annotator_1,,lecture,,"keeping in the back of our minds that it's slightly wrong, but it's going to become more accurate for smaller and smalle",false,multimodal_tvsum_style
-WUvTyaaNkzM,240.0,242.0,annotator_1,,lecture,,but it's going to become more accurate for smaller and smaller choices of dr.,false,multimodal_tvsum_style
-WUvTyaaNkzM,242.0,244.0,annotator_1,,lecture,,"but it's going to become more accurate for smaller and smaller choices of dr. That is, if we slice up the circle into th",false,multimodal_tvsum_style
-WUvTyaaNkzM,244.0,246.0,annotator_1,,lecture,,"That is, if we slice up the circle into thinner and thinner rings.",false,multimodal_tvsum_style
-WUvTyaaNkzM,246.0,248.0,annotator_1,,lecture,,"That is, if we slice up the circle into thinner and thinner rings. So just to sum up where we are, you've broken up the ",false,multimodal_tvsum_style
-WUvTyaaNkzM,248.0,250.0,annotator_1,,lecture,,"So just to sum up where we are, you've broken up the area of the circle into",false,multimodal_tvsum_style
-WUvTyaaNkzM,250.0,252.0,annotator_1,,lecture,,"So just to sum up where we are, you've broken up the area of the circle into",false,multimodal_tvsum_style
-WUvTyaaNkzM,252.0,254.0,annotator_1,,lecture,,"So just to sum up where we are, you've broken up the area of the circle into all of these rings, and you're approximatin",false,multimodal_tvsum_style
-WUvTyaaNkzM,254.0,256.0,annotator_1,,lecture,,"all of these rings, and you're approximating the area of each one of those as",false,multimodal_tvsum_style
-WUvTyaaNkzM,256.0,258.0,annotator_1,,lecture,,"all of these rings, and you're approximating the area of each one of those as 2 pi times its radius times dr, where the ",false,multimodal_tvsum_style
-WUvTyaaNkzM,258.0,260.0,annotator_1,,lecture,,"2 pi times its radius times dr, where the specific value for that inner radius",false,multimodal_tvsum_style
-WUvTyaaNkzM,260.0,262.0,annotator_1,,lecture,,"2 pi times its radius times dr, where the specific value for that inner radius",false,multimodal_tvsum_style
-WUvTyaaNkzM,262.0,264.0,annotator_1,,lecture,,"2 pi times its radius times dr, where the specific value for that inner radius ranges from 0 for the smallest ring up to",false,multimodal_tvsum_style
-WUvTyaaNkzM,264.0,266.0,annotator_1,,lecture,,"ranges from 0 for the smallest ring up to just under 3 for the biggest ring,",false,multimodal_tvsum_style
-WUvTyaaNkzM,266.0,268.0,annotator_1,,lecture,,"ranges from 0 for the smallest ring up to just under 3 for the biggest ring, spaced out by whatever the thickness is tha",false,multimodal_tvsum_style
-WUvTyaaNkzM,268.0,270.0,annotator_1,,lecture,,"spaced out by whatever the thickness is that you choose for dr, something like 0.1.",false,multimodal_tvsum_style
-WUvTyaaNkzM,270.0,272.0,annotator_1,,lecture,,"spaced out by whatever the thickness is that you choose for dr, something like 0.1.",false,multimodal_tvsum_style
-WUvTyaaNkzM,272.0,274.0,annotator_1,,lecture,,And notice that the spacing between the values here corresponds to the,false,multimodal_tvsum_style
-WUvTyaaNkzM,274.0,276.0,annotator_1,,lecture,,And notice that the spacing between the values here corresponds to the,false,multimodal_tvsum_style
-WUvTyaaNkzM,276.0,278.0,annotator_1,,lecture,,"And notice that the spacing between the values here corresponds to the thickness dr of each ring, the difference in radi",false,multimodal_tvsum_style
-WUvTyaaNkzM,278.0,280.0,annotator_1,,lecture,,"thickness dr of each ring, the difference in radius from one ring to the next.",false,multimodal_tvsum_style
-WUvTyaaNkzM,280.0,282.0,annotator_1,,lecture,,"thickness dr of each ring, the difference in radius from one ring to the next.",false,multimodal_tvsum_style
-WUvTyaaNkzM,282.0,284.0,annotator_1,,lecture,,"In fact, a nice way to think about the rectangles approximating each",false,multimodal_tvsum_style
-WUvTyaaNkzM,284.0,286.0,annotator_1,,lecture,,"In fact, a nice way to think about the rectangles approximating each",false,multimodal_tvsum_style
-WUvTyaaNkzM,286.0,288.0,annotator_1,,lecture,,"In fact, a nice way to think about the rectangles approximating each ring's area is to fit them all upright side by side",false,multimodal_tvsum_style
-WUvTyaaNkzM,288.0,290.0,annotator_1,,lecture,,ring's area is to fit them all upright side by side along this axis.,false,multimodal_tvsum_style
-WUvTyaaNkzM,290.0,292.0,annotator_1,,lecture,,"Each one has a thickness dr, which is why they fit so snugly right there together,",false,multimodal_tvsum_style
-WUvTyaaNkzM,292.0,294.0,annotator_1,,lecture,,"Each one has a thickness dr, which is why they fit so snugly right there together,",false,multimodal_tvsum_style
-WUvTyaaNkzM,294.0,296.0,annotator_1,,lecture,,"Each one has a thickness dr, which is why they fit so snugly right there together, and the height of any one of these re",false,multimodal_tvsum_style
-WUvTyaaNkzM,296.0,298.0,annotator_1,,lecture,,"and the height of any one of these rectangles sitting above some specific value of r,",false,multimodal_tvsum_style
-WUvTyaaNkzM,298.0,300.0,annotator_1,,lecture,,"and the height of any one of these rectangles sitting above some specific value of r,",false,multimodal_tvsum_style
-WUvTyaaNkzM,300.0,302.0,annotator_1,,lecture,,"and the height of any one of these rectangles sitting above some specific value of r, like 0.6, is exactly 2 pi times th",false,multimodal_tvsum_style
-WUvTyaaNkzM,302.0,304.0,annotator_1,,lecture,,"like 0.6, is exactly 2 pi times that value.",false,multimodal_tvsum_style
-WUvTyaaNkzM,304.0,306.0,annotator_1,,lecture,,That's the circumference of the corresponding ring that this rectangle approximates.,false,multimodal_tvsum_style
-WUvTyaaNkzM,306.0,308.0,annotator_1,,lecture,,That's the circumference of the corresponding ring that this rectangle approximates.,false,multimodal_tvsum_style
-WUvTyaaNkzM,308.0,310.0,annotator_1,,lecture,,That's the circumference of the corresponding ring that this rectangle approximates. Pictures like this 2 pi r can get t,false,multimodal_tvsum_style
-WUvTyaaNkzM,310.0,312.0,annotator_1,,lecture,,"Pictures like this 2 pi r can get tall for the screen,",false,multimodal_tvsum_style
-WUvTyaaNkzM,312.0,314.0,annotator_1,,lecture,,"Pictures like this 2 pi r can get tall for the screen, I mean 2 times pi times 3 is around 19, so let's just throw up a ",false,multimodal_tvsum_style
-WUvTyaaNkzM,314.0,316.0,annotator_1,,lecture,,"I mean 2 times pi times 3 is around 19, so let's just throw up a y axis that's",false,multimodal_tvsum_style
-WUvTyaaNkzM,316.0,318.0,annotator_1,,lecture,,"I mean 2 times pi times 3 is around 19, so let's just throw up a y axis that's scaled a little differently so that we ca",false,multimodal_tvsum_style
-WUvTyaaNkzM,318.0,320.0,annotator_1,,lecture,,scaled a little differently so that we can actually fit all of these rectangles,false,multimodal_tvsum_style
-WUvTyaaNkzM,320.0,322.0,annotator_1,,lecture,,scaled a little differently so that we can actually fit all of these rectangles on the screen.,false,multimodal_tvsum_style
-WUvTyaaNkzM,322.0,324.0,annotator_1,,lecture,,"on the screen. A nice way to think about this setup is to draw the graph of 2 pi r,",false,multimodal_tvsum_style
-WUvTyaaNkzM,324.0,326.0,annotator_1,,lecture,,"A nice way to think about this setup is to draw the graph of 2 pi r,",false,multimodal_tvsum_style
-WUvTyaaNkzM,326.0,328.0,annotator_1,,lecture,,"A nice way to think about this setup is to draw the graph of 2 pi r, which is a straight line that has a slope 2 pi.",false,multimodal_tvsum_style
-WUvTyaaNkzM,328.0,330.0,annotator_1,,lecture,,which is a straight line that has a slope 2 pi.,false,multimodal_tvsum_style
-WUvTyaaNkzM,330.0,332.0,annotator_1,,lecture,,Each of these rectangles extends up to the point where it just barely touches that graph.,false,multimodal_tvsum_style
-WUvTyaaNkzM,332.0,334.0,annotator_1,,lecture,,Each of these rectangles extends up to the point where it just barely touches that graph.,false,multimodal_tvsum_style
-WUvTyaaNkzM,334.0,336.0,annotator_1,,lecture,,Each of these rectangles extends up to the point where it just barely touches that graph.,false,multimodal_tvsum_style
-WUvTyaaNkzM,336.0,338.0,annotator_1,,lecture,,"Again, we're being approximate here. Each of these rectangles only approximates the",false,multimodal_tvsum_style
-WUvTyaaNkzM,338.0,340.0,annotator_1,,lecture,,Each of these rectangles only approximates the,false,multimodal_tvsum_style
-WUvTyaaNkzM,340.0,342.0,annotator_1,,lecture,,Each of these rectangles only approximates the area of the corresponding ring from the circle.,false,multimodal_tvsum_style
-WUvTyaaNkzM,342.0,344.0,annotator_1,,lecture,,"area of the corresponding ring from the circle. But remember, that approximation, 2 pi r times dr,",false,multimodal_tvsum_style
-WUvTyaaNkzM,344.0,346.0,annotator_1,,lecture,,"But remember, that approximation, 2 pi r times dr,",false,multimodal_tvsum_style
-WUvTyaaNkzM,346.0,348.0,annotator_1,,lecture,,"But remember, that approximation, 2 pi r times dr, gets less and less wrong as the size of dr gets smaller and smaller.",false,multimodal_tvsum_style
-WUvTyaaNkzM,348.0,350.0,annotator_1,,lecture,,gets less and less wrong as the size of dr gets smaller and smaller.,false,multimodal_tvsum_style
-WUvTyaaNkzM,350.0,352.0,annotator_1,,lecture,,gets less and less wrong as the size of dr gets smaller and smaller. And this has a very beautiful meaning when we're,false,multimodal_tvsum_style
-WUvTyaaNkzM,352.0,354.0,annotator_1,,lecture,,And this has a very beautiful meaning when we're looking at the sum of the areas of all those rectangles.,false,multimodal_tvsum_style
-WUvTyaaNkzM,354.0,356.0,annotator_1,,lecture,,looking at the sum of the areas of all those rectangles.,false,multimodal_tvsum_style
-WUvTyaaNkzM,356.0,358.0,annotator_1,,lecture,,"looking at the sum of the areas of all those rectangles. For smaller and smaller choices of dr, you might at first",false,multimodal_tvsum_style
-WUvTyaaNkzM,358.0,360.0,annotator_1,,lecture,,"For smaller and smaller choices of dr, you might at first",false,multimodal_tvsum_style
-WUvTyaaNkzM,360.0,362.0,annotator_1,,lecture,,"For smaller and smaller choices of dr, you might at first think that turns the problem into a monstrously large sum.",false,multimodal_tvsum_style
-WUvTyaaNkzM,362.0,364.0,annotator_1,,lecture,,"think that turns the problem into a monstrously large sum. I mean, there's many many rectangles to consider,",false,multimodal_tvsum_style
-WUvTyaaNkzM,364.0,366.0,annotator_1,,lecture,,"I mean, there's many many rectangles to consider, and the decimal precision of each one of their areas is going to be an",false,multimodal_tvsum_style
-WUvTyaaNkzM,366.0,368.0,annotator_1,,lecture,,and the decimal precision of each one of their areas is going to be an,false,multimodal_tvsum_style
-WUvTyaaNkzM,368.0,370.0,annotator_1,,lecture,,and the decimal precision of each one of their areas is going to be an absolute nightmare.,false,multimodal_tvsum_style
-WUvTyaaNkzM,370.0,372.0,annotator_1,,lecture,,"But notice, all of their areas in aggregate just looks like the area under a graph.",false,multimodal_tvsum_style
-WUvTyaaNkzM,372.0,374.0,annotator_1,,lecture,,"But notice, all of their areas in aggregate just looks like the area under a graph.",false,multimodal_tvsum_style
-WUvTyaaNkzM,374.0,376.0,annotator_1,,lecture,,"But notice, all of their areas in aggregate just looks like the area under a graph. And that portion under the graph is ",false,multimodal_tvsum_style
-WUvTyaaNkzM,376.0,378.0,annotator_1,,lecture,,"And that portion under the graph is just a triangle,",false,multimodal_tvsum_style
-WUvTyaaNkzM,378.0,380.0,annotator_1,,lecture,,"And that portion under the graph is just a triangle, a triangle with a base of 3 and a height that's 2 pi times 3.",false,multimodal_tvsum_style
-WUvTyaaNkzM,380.0,382.0,annotator_1,,lecture,,a triangle with a base of 3 and a height that's 2 pi times 3.,false,multimodal_tvsum_style
-WUvTyaaNkzM,382.0,384.0,annotator_1,,lecture,,a triangle with a base of 3 and a height that's 2 pi times 3.,false,multimodal_tvsum_style
-WUvTyaaNkzM,384.0,386.0,annotator_1,,lecture,,"So its area, 1 half base times height, works out to be exactly pi times 3 squared.",false,multimodal_tvsum_style
-WUvTyaaNkzM,386.0,388.0,annotator_1,,lecture,,"So its area, 1 half base times height, works out to be exactly pi times 3 squared.",false,multimodal_tvsum_style
-WUvTyaaNkzM,388.0,390.0,annotator_1,,lecture,,"So its area, 1 half base times height, works out to be exactly pi times 3 squared.",false,multimodal_tvsum_style
-WUvTyaaNkzM,390.0,392.0,annotator_1,,lecture,,"So its area, 1 half base times height, works out to be exactly pi times 3 squared. Or if the radius of our original circ",false,multimodal_tvsum_style
-WUvTyaaNkzM,392.0,394.0,annotator_1,,lecture,,"Or if the radius of our original circle was some other value,",false,multimodal_tvsum_style
-WUvTyaaNkzM,394.0,396.0,annotator_1,,lecture,,"Or if the radius of our original circle was some other value, capital R, that area comes out to be pi times r squared.",false,multimodal_tvsum_style
-WUvTyaaNkzM,396.0,398.0,annotator_1,,lecture,,"capital R, that area comes out to be pi times r squared.",false,multimodal_tvsum_style
-WUvTyaaNkzM,398.0,400.0,annotator_1,,lecture,,"capital R, that area comes out to be pi times r squared. And that's the formula for the area of a circle.",false,multimodal_tvsum_style
-WUvTyaaNkzM,400.0,402.0,annotator_1,,lecture,,And that's the formula for the area of a circle.,false,multimodal_tvsum_style
-WUvTyaaNkzM,402.0,404.0,annotator_1,,lecture,,"It doesn't matter who you are or what you typically think of math,",false,multimodal_tvsum_style
-WUvTyaaNkzM,404.0,406.0,annotator_1,,lecture,,"It doesn't matter who you are or what you typically think of math, that right there is a beautiful argument.",false,multimodal_tvsum_style
-WUvTyaaNkzM,406.0,408.0,annotator_1,,lecture,,that right there is a beautiful argument.,false,multimodal_tvsum_style
-WUvTyaaNkzM,408.0,410.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-WUvTyaaNkzM,410.0,412.0,annotator_1,,lecture,,"But if you want to think like a mathematician here,",false,multimodal_tvsum_style
-WUvTyaaNkzM,412.0,414.0,annotator_1,,lecture,,"But if you want to think like a mathematician here, you don't just care about finding the answer,",false,multimodal_tvsum_style
-WUvTyaaNkzM,414.0,416.0,annotator_1,,lecture,,"you don't just care about finding the answer, you care about developing general problem-solving tools and techniques.",false,multimodal_tvsum_style
-WUvTyaaNkzM,416.0,418.0,annotator_1,,lecture,,you care about developing general problem-solving tools and techniques.,false,multimodal_tvsum_style
-WUvTyaaNkzM,418.0,420.0,annotator_1,,lecture,,you care about developing general problem-solving tools and techniques. So take a moment to meditate on what exactly jus,false,multimodal_tvsum_style
-WUvTyaaNkzM,420.0,422.0,annotator_1,,lecture,,"So take a moment to meditate on what exactly just happened and why it worked,",false,multimodal_tvsum_style
-WUvTyaaNkzM,422.0,424.0,annotator_1,,lecture,,"So take a moment to meditate on what exactly just happened and why it worked, because the way we transitioned from somet",false,multimodal_tvsum_style
-WUvTyaaNkzM,424.0,426.0,annotator_1,,lecture,,because the way we transitioned from something approximate to something,false,multimodal_tvsum_style
-WUvTyaaNkzM,426.0,428.0,annotator_1,,lecture,,because the way we transitioned from something approximate to something precise is actually pretty subtle and cuts deep ,false,multimodal_tvsum_style
-WUvTyaaNkzM,428.0,430.0,annotator_1,,lecture,,precise is actually pretty subtle and cuts deep to what calculus is all about.,false,multimodal_tvsum_style
-WUvTyaaNkzM,430.0,432.0,annotator_1,,lecture,,precise is actually pretty subtle and cuts deep to what calculus is all about.,false,multimodal_tvsum_style
-WUvTyaaNkzM,432.0,434.0,annotator_1,,lecture,,"You had this problem that could be approximated with the sum of many small numbers,",false,multimodal_tvsum_style
-WUvTyaaNkzM,434.0,436.0,annotator_1,,lecture,,"You had this problem that could be approximated with the sum of many small numbers,",false,multimodal_tvsum_style
-WUvTyaaNkzM,436.0,438.0,annotator_1,,lecture,,"You had this problem that could be approximated with the sum of many small numbers,",false,multimodal_tvsum_style
-WUvTyaaNkzM,438.0,440.0,annotator_1,,lecture,,"You had this problem that could be approximated with the sum of many small numbers, each of which looked like 2 pi r tim",false,multimodal_tvsum_style
-WUvTyaaNkzM,440.0,442.0,annotator_1,,lecture,,"each of which looked like 2 pi r times dr, for values of r ranging between 0 and 3.",false,multimodal_tvsum_style
-WUvTyaaNkzM,442.0,444.0,annotator_1,,lecture,,"each of which looked like 2 pi r times dr, for values of r ranging between 0 and 3.",false,multimodal_tvsum_style
-WUvTyaaNkzM,444.0,446.0,annotator_1,,lecture,,"each of which looked like 2 pi r times dr, for values of r ranging between 0 and 3.",false,multimodal_tvsum_style
-WUvTyaaNkzM,446.0,448.0,annotator_1,,lecture,,"Remember, the small number dr here represents our choice for the thickness of each ring,",false,multimodal_tvsum_style
-WUvTyaaNkzM,448.0,450.0,annotator_1,,lecture,,"Remember, the small number dr here represents our choice for the thickness of each ring,",false,multimodal_tvsum_style
-WUvTyaaNkzM,450.0,452.0,annotator_1,,lecture,,"Remember, the small number dr here represents our choice for the thickness of each ring, for example 0.1.",false,multimodal_tvsum_style
-WUvTyaaNkzM,452.0,454.0,annotator_1,,lecture,,for example 0.1. And there are two important things to note here.,false,multimodal_tvsum_style
-WUvTyaaNkzM,454.0,456.0,annotator_1,,lecture,,And there are two important things to note here.,false,multimodal_tvsum_style
-WUvTyaaNkzM,456.0,458.0,annotator_1,,lecture,,"First of all, not only is dr a factor in the quantities we're adding up,",false,multimodal_tvsum_style
-WUvTyaaNkzM,458.0,460.0,annotator_1,,lecture,,"First of all, not only is dr a factor in the quantities we're adding up,",false,multimodal_tvsum_style
-WUvTyaaNkzM,460.0,462.0,annotator_1,,lecture,,"First of all, not only is dr a factor in the quantities we're adding up, 2 pi r times dr, it also gives the spacing betw",false,multimodal_tvsum_style
-WUvTyaaNkzM,462.0,464.0,annotator_1,,lecture,,"2 pi r times dr, it also gives the spacing between the different values of r.",false,multimodal_tvsum_style
-WUvTyaaNkzM,464.0,466.0,annotator_1,,lecture,,"2 pi r times dr, it also gives the spacing between the different values of r.",false,multimodal_tvsum_style
-WUvTyaaNkzM,466.0,468.0,annotator_1,,lecture,,"And secondly, the smaller our choice for dr, the better the approximation.",false,multimodal_tvsum_style
-WUvTyaaNkzM,468.0,470.0,annotator_1,,lecture,,"And secondly, the smaller our choice for dr, the better the approximation.",false,multimodal_tvsum_style
-WUvTyaaNkzM,470.0,472.0,annotator_1,,lecture,,"And secondly, the smaller our choice for dr, the better the approximation.",false,multimodal_tvsum_style
-WUvTyaaNkzM,472.0,474.0,annotator_1,,lecture,,"Adding all of those numbers could be seen in a different,",false,multimodal_tvsum_style
-WUvTyaaNkzM,474.0,476.0,annotator_1,,lecture,,"Adding all of those numbers could be seen in a different, pretty clever way as adding the areas of many thin rectangles",false,multimodal_tvsum_style
-WUvTyaaNkzM,476.0,478.0,annotator_1,,lecture,,pretty clever way as adding the areas of many thin rectangles,false,multimodal_tvsum_style
-WUvTyaaNkzM,478.0,480.0,annotator_1,,lecture,,"pretty clever way as adding the areas of many thin rectangles sitting underneath a graph, the graph of the function 2 pi",false,multimodal_tvsum_style
-WUvTyaaNkzM,480.0,482.0,annotator_1,,lecture,,"sitting underneath a graph, the graph of the function 2 pi r in this case.",false,multimodal_tvsum_style
-WUvTyaaNkzM,482.0,484.0,annotator_1,,lecture,,"sitting underneath a graph, the graph of the function 2 pi r in this case. Then, and this is key, by considering smaller",false,multimodal_tvsum_style
-WUvTyaaNkzM,484.0,486.0,annotator_1,,lecture,,"Then, and this is key, by considering smaller and smaller choices for dr,",false,multimodal_tvsum_style
-WUvTyaaNkzM,486.0,488.0,annotator_1,,lecture,,"Then, and this is key, by considering smaller and smaller choices for dr, corresponding to better and better approximati",false,multimodal_tvsum_style
-WUvTyaaNkzM,488.0,490.0,annotator_1,,lecture,,"corresponding to better and better approximations of the original problem, the sum,",false,multimodal_tvsum_style
-WUvTyaaNkzM,490.0,492.0,annotator_1,,lecture,,"corresponding to better and better approximations of the original problem, the sum,",false,multimodal_tvsum_style
-WUvTyaaNkzM,492.0,494.0,annotator_1,,lecture,,"corresponding to better and better approximations of the original problem, the sum, thought of as the aggregate area of ",false,multimodal_tvsum_style
-WUvTyaaNkzM,494.0,496.0,annotator_1,,lecture,,"thought of as the aggregate area of those rectangles, approaches the area under the graph.",false,multimodal_tvsum_style
-WUvTyaaNkzM,496.0,498.0,annotator_1,,lecture,,approaches the area under the graph.,false,multimodal_tvsum_style
-WUvTyaaNkzM,498.0,500.0,annotator_1,,lecture,,"approaches the area under the graph. And because of that, you can conclude that the answer to the original question,",false,multimodal_tvsum_style
-WUvTyaaNkzM,500.0,502.0,annotator_1,,lecture,,"And because of that, you can conclude that the answer to the original question,",false,multimodal_tvsum_style
-WUvTyaaNkzM,502.0,504.0,annotator_1,,lecture,,"And because of that, you can conclude that the answer to the original question, in full unapproximated precision, is exa",false,multimodal_tvsum_style
-WUvTyaaNkzM,504.0,506.0,annotator_1,,lecture,,"in full unapproximated precision, is exactly the same as the area underneath this graph.",false,multimodal_tvsum_style
-WUvTyaaNkzM,506.0,508.0,annotator_1,,lecture,,"in full unapproximated precision, is exactly the same as the area underneath this graph.",false,multimodal_tvsum_style
-WUvTyaaNkzM,508.0,510.0,annotator_1,,lecture,,"in full unapproximated precision, is exactly the same as the area underneath this graph.",false,multimodal_tvsum_style
-WUvTyaaNkzM,510.0,512.0,annotator_1,,lecture,,A lot of other hard problems in math and science can be broken down and,false,multimodal_tvsum_style
-WUvTyaaNkzM,512.0,514.0,annotator_1,,lecture,,A lot of other hard problems in math and science can be broken down and,false,multimodal_tvsum_style
-WUvTyaaNkzM,514.0,516.0,annotator_1,,lecture,,A lot of other hard problems in math and science can be broken down and approximated as the sum of many small quantities,false,multimodal_tvsum_style
-WUvTyaaNkzM,516.0,518.0,annotator_1,,lecture,,"approximated as the sum of many small quantities,",false,multimodal_tvsum_style
-WUvTyaaNkzM,518.0,520.0,annotator_1,,lecture,,"approximated as the sum of many small quantities, like figuring out how far a car has traveled based on its velocity at ",false,multimodal_tvsum_style
-WUvTyaaNkzM,520.0,522.0,annotator_1,,lecture,,like figuring out how far a car has traveled based on its velocity at each point in time.,false,multimodal_tvsum_style
-WUvTyaaNkzM,522.0,524.0,annotator_1,,lecture,,like figuring out how far a car has traveled based on its velocity at each point in time.,false,multimodal_tvsum_style
-WUvTyaaNkzM,524.0,526.0,annotator_1,,lecture,,"In a case like that, you might range through many different points in time,",false,multimodal_tvsum_style
-WUvTyaaNkzM,526.0,528.0,annotator_1,,lecture,,"In a case like that, you might range through many different points in time,",false,multimodal_tvsum_style
-WUvTyaaNkzM,528.0,530.0,annotator_1,,lecture,,"In a case like that, you might range through many different points in time, and at each one multiply the velocity at tha",false,multimodal_tvsum_style
-WUvTyaaNkzM,530.0,532.0,annotator_1,,lecture,,"and at each one multiply the velocity at that time times a tiny change in time, dt,",false,multimodal_tvsum_style
-WUvTyaaNkzM,532.0,534.0,annotator_1,,lecture,,"and at each one multiply the velocity at that time times a tiny change in time, dt, which would give the corresponding l",false,multimodal_tvsum_style
-WUvTyaaNkzM,534.0,536.0,annotator_1,,lecture,,which would give the corresponding little bit of distance traveled during that little,false,multimodal_tvsum_style
-WUvTyaaNkzM,536.0,538.0,annotator_1,,lecture,,which would give the corresponding little bit of distance traveled during that little time.,false,multimodal_tvsum_style
-WUvTyaaNkzM,538.0,540.0,annotator_1,,lecture,,"time. I'll talk through the details of examples like this later in the series,",false,multimodal_tvsum_style
-WUvTyaaNkzM,540.0,542.0,annotator_1,,lecture,,"I'll talk through the details of examples like this later in the series,",false,multimodal_tvsum_style
-WUvTyaaNkzM,542.0,544.0,annotator_1,,lecture,,"I'll talk through the details of examples like this later in the series, but at a high level many of these types of prob",false,multimodal_tvsum_style
-WUvTyaaNkzM,544.0,546.0,annotator_1,,lecture,,but at a high level many of these types of problems turn out to be equivalent,false,multimodal_tvsum_style
-WUvTyaaNkzM,546.0,548.0,annotator_1,,lecture,,"but at a high level many of these types of problems turn out to be equivalent to finding the area under some graph, in m",false,multimodal_tvsum_style
-WUvTyaaNkzM,548.0,550.0,annotator_1,,lecture,,"to finding the area under some graph, in much the same way that our circle problem did.",false,multimodal_tvsum_style
-WUvTyaaNkzM,550.0,552.0,annotator_1,,lecture,,"to finding the area under some graph, in much the same way that our circle problem did.",false,multimodal_tvsum_style
-WUvTyaaNkzM,552.0,554.0,annotator_1,,lecture,,"to finding the area under some graph, in much the same way that our circle problem did. This happens whenever the quanti",false,multimodal_tvsum_style
-WUvTyaaNkzM,554.0,556.0,annotator_1,,lecture,,"This happens whenever the quantities you're adding up,",false,multimodal_tvsum_style
-WUvTyaaNkzM,556.0,558.0,annotator_1,,lecture,,"This happens whenever the quantities you're adding up, the one whose sum approximates the original problem,",false,multimodal_tvsum_style
-WUvTyaaNkzM,558.0,560.0,annotator_1,,lecture,,"the one whose sum approximates the original problem, can be thought of as the areas of many thin rectangles sitting side",false,multimodal_tvsum_style
-WUvTyaaNkzM,560.0,562.0,annotator_1,,lecture,,can be thought of as the areas of many thin rectangles sitting side by side.,false,multimodal_tvsum_style
-WUvTyaaNkzM,562.0,564.0,annotator_1,,lecture,,can be thought of as the areas of many thin rectangles sitting side by side.,false,multimodal_tvsum_style
-WUvTyaaNkzM,564.0,566.0,annotator_1,,lecture,,If finer and finer approximations of the original problem correspond to thinner and,false,multimodal_tvsum_style
-WUvTyaaNkzM,566.0,568.0,annotator_1,,lecture,,If finer and finer approximations of the original problem correspond to thinner and,false,multimodal_tvsum_style
-WUvTyaaNkzM,568.0,570.0,annotator_1,,lecture,,"If finer and finer approximations of the original problem correspond to thinner and thinner rings, then the original pro",false,multimodal_tvsum_style
-WUvTyaaNkzM,570.0,572.0,annotator_1,,lecture,,"thinner rings, then the original problem is equivalent to finding the area under some",false,multimodal_tvsum_style
-WUvTyaaNkzM,572.0,574.0,annotator_1,,lecture,,"thinner rings, then the original problem is equivalent to finding the area under some",false,multimodal_tvsum_style
-WUvTyaaNkzM,574.0,576.0,annotator_1,,lecture,,"thinner rings, then the original problem is equivalent to finding the area under some graph.",false,multimodal_tvsum_style
-WUvTyaaNkzM,576.0,578.0,annotator_1,,lecture,,"Again, this is an idea we'll see in more detail later in the series,",false,multimodal_tvsum_style
-WUvTyaaNkzM,578.0,580.0,annotator_1,,lecture,,"Again, this is an idea we'll see in more detail later in the series,",false,multimodal_tvsum_style
-WUvTyaaNkzM,580.0,582.0,annotator_1,,lecture,,"Again, this is an idea we'll see in more detail later in the series, so don't worry if it's not 100% clear right now.",false,multimodal_tvsum_style
-WUvTyaaNkzM,582.0,584.0,annotator_1,,lecture,,"so don't worry if it's not 100% clear right now. The point now is that you, as the mathematician having just",false,multimodal_tvsum_style
-WUvTyaaNkzM,584.0,586.0,annotator_1,,lecture,,"The point now is that you, as the mathematician having just",false,multimodal_tvsum_style
-WUvTyaaNkzM,586.0,588.0,annotator_1,,lecture,,"The point now is that you, as the mathematician having just solved a problem by reframing it as the area under a graph,",false,multimodal_tvsum_style
-WUvTyaaNkzM,588.0,590.0,annotator_1,,lecture,,"solved a problem by reframing it as the area under a graph,",false,multimodal_tvsum_style
-WUvTyaaNkzM,590.0,592.0,annotator_1,,lecture,,"solved a problem by reframing it as the area under a graph, might start thinking about how to find the areas under other",false,multimodal_tvsum_style
-WUvTyaaNkzM,592.0,594.0,annotator_1,,lecture,,might start thinking about how to find the areas under other graphs.,false,multimodal_tvsum_style
-WUvTyaaNkzM,594.0,596.0,annotator_1,,lecture,,might start thinking about how to find the areas under other graphs. We were lucky in the circle problem that the releva,false,multimodal_tvsum_style
-WUvTyaaNkzM,596.0,598.0,annotator_1,,lecture,,"We were lucky in the circle problem that the relevant area turned out to be a triangle,",false,multimodal_tvsum_style
-WUvTyaaNkzM,598.0,600.0,annotator_1,,lecture,,"We were lucky in the circle problem that the relevant area turned out to be a triangle,",false,multimodal_tvsum_style
-WUvTyaaNkzM,600.0,602.0,annotator_1,,lecture,,"We were lucky in the circle problem that the relevant area turned out to be a triangle, but imagine instead something li",false,multimodal_tvsum_style
-WUvTyaaNkzM,602.0,604.0,annotator_1,,lecture,,"but imagine instead something like a parabola, the graph of x2.",false,multimodal_tvsum_style
-WUvTyaaNkzM,604.0,606.0,annotator_1,,lecture,,"What's the area underneath that curve, say between",false,multimodal_tvsum_style
-WUvTyaaNkzM,606.0,608.0,annotator_1,,lecture,,"What's the area underneath that curve, say between",false,multimodal_tvsum_style
-WUvTyaaNkzM,608.0,610.0,annotator_1,,lecture,,"What's the area underneath that curve, say between the values of x equals 0 and x equals 3?",false,multimodal_tvsum_style
-WUvTyaaNkzM,610.0,612.0,annotator_1,,lecture,,the values of x equals 0 and x equals 3?,false,multimodal_tvsum_style
-WUvTyaaNkzM,612.0,614.0,annotator_1,,lecture,,"Well, it's hard to think about, right?",false,multimodal_tvsum_style
-WUvTyaaNkzM,614.0,616.0,annotator_1,,lecture,,"Well, it's hard to think about, right? And let me reframe that question in a slightly different way.",false,multimodal_tvsum_style
-WUvTyaaNkzM,616.0,618.0,annotator_1,,lecture,,And let me reframe that question in a slightly different way.,false,multimodal_tvsum_style
-WUvTyaaNkzM,618.0,620.0,annotator_1,,lecture,,"And let me reframe that question in a slightly different way. We'll fix that left endpoint in place at 0, and let the ri",false,multimodal_tvsum_style
-WUvTyaaNkzM,620.0,622.0,annotator_1,,lecture,,"We'll fix that left endpoint in place at 0, and let the right endpoint vary.",false,multimodal_tvsum_style
-WUvTyaaNkzM,622.0,624.0,annotator_1,,lecture,,"We'll fix that left endpoint in place at 0, and let the right endpoint vary.",false,multimodal_tvsum_style
-WUvTyaaNkzM,624.0,626.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-WUvTyaaNkzM,626.0,628.0,annotator_1,,lecture,,"Are you able to find a function, a of x, that gives",false,multimodal_tvsum_style
-WUvTyaaNkzM,628.0,630.0,annotator_1,,lecture,,"Are you able to find a function, a of x, that gives",false,multimodal_tvsum_style
-WUvTyaaNkzM,630.0,632.0,annotator_1,,lecture,,"Are you able to find a function, a of x, that gives you the area under this parabola between 0 and x?",false,multimodal_tvsum_style
-WUvTyaaNkzM,632.0,634.0,annotator_1,,lecture,,you the area under this parabola between 0 and x?,false,multimodal_tvsum_style
-WUvTyaaNkzM,634.0,636.0,annotator_1,,lecture,,you the area under this parabola between 0 and x? A function a of x like this is called an integral of x2.,false,multimodal_tvsum_style
-WUvTyaaNkzM,636.0,638.0,annotator_1,,lecture,,A function a of x like this is called an integral of x2.,false,multimodal_tvsum_style
-WUvTyaaNkzM,638.0,640.0,annotator_1,,lecture,,A function a of x like this is called an integral of x2.,false,multimodal_tvsum_style
-WUvTyaaNkzM,640.0,642.0,annotator_1,,lecture,,"Calculus holds within it the tools to figure out what an integral like this is,",false,multimodal_tvsum_style
-WUvTyaaNkzM,642.0,644.0,annotator_1,,lecture,,"Calculus holds within it the tools to figure out what an integral like this is,",false,multimodal_tvsum_style
-WUvTyaaNkzM,644.0,646.0,annotator_1,,lecture,,"Calculus holds within it the tools to figure out what an integral like this is, but right now it's just a mystery functi",false,multimodal_tvsum_style
-WUvTyaaNkzM,646.0,648.0,annotator_1,,lecture,,but right now it's just a mystery function to us. We know it gives the area under the graph of x2 between some fixed lef,false,multimodal_tvsum_style
-WUvTyaaNkzM,648.0,650.0,annotator_1,,lecture,,We know it gives the area under the graph of x2 between some fixed left,false,multimodal_tvsum_style
-WUvTyaaNkzM,650.0,652.0,annotator_1,,lecture,,"We know it gives the area under the graph of x2 between some fixed left point and some variable right point, but we don'",false,multimodal_tvsum_style
-WUvTyaaNkzM,652.0,654.0,annotator_1,,lecture,,"point and some variable right point, but we don't know what it is.",false,multimodal_tvsum_style
-WUvTyaaNkzM,654.0,656.0,annotator_1,,lecture,,"point and some variable right point, but we don't know what it is. And again, the reason we care about this kind of ques",false,multimodal_tvsum_style
-WUvTyaaNkzM,656.0,658.0,annotator_1,,lecture,,"And again, the reason we care about this kind of question is not just for",false,multimodal_tvsum_style
-WUvTyaaNkzM,658.0,660.0,annotator_1,,lecture,,"And again, the reason we care about this kind of question is not just for the sake of asking hard geometry questions, it",false,multimodal_tvsum_style
-WUvTyaaNkzM,660.0,662.0,annotator_1,,lecture,,"the sake of asking hard geometry questions, it's because many practical",false,multimodal_tvsum_style
-WUvTyaaNkzM,662.0,664.0,annotator_1,,lecture,,"the sake of asking hard geometry questions, it's because many practical problems that can be approximated by adding up a",false,multimodal_tvsum_style
-WUvTyaaNkzM,664.0,666.0,annotator_1,,lecture,,problems that can be approximated by adding up a large number of small,false,multimodal_tvsum_style
-WUvTyaaNkzM,666.0,668.0,annotator_1,,lecture,,problems that can be approximated by adding up a large number of small,false,multimodal_tvsum_style
-WUvTyaaNkzM,668.0,670.0,annotator_1,,lecture,,problems that can be approximated by adding up a large number of small things can be reframed as a question about an are,false,multimodal_tvsum_style
-WUvTyaaNkzM,670.0,672.0,annotator_1,,lecture,,things can be reframed as a question about an area under a certain graph.,false,multimodal_tvsum_style
-WUvTyaaNkzM,672.0,674.0,annotator_1,,lecture,,things can be reframed as a question about an area under a certain graph. I'll tell you right now that finding this area,false,multimodal_tvsum_style
-WUvTyaaNkzM,674.0,676.0,annotator_1,,lecture,,"I'll tell you right now that finding this area, this integral function,",false,multimodal_tvsum_style
-WUvTyaaNkzM,676.0,678.0,annotator_1,,lecture,,"I'll tell you right now that finding this area, this integral function, is genuinely hard, and whenever you come across ",false,multimodal_tvsum_style
-WUvTyaaNkzM,678.0,680.0,annotator_1,,lecture,,"is genuinely hard, and whenever you come across a genuinely hard question in math,",false,multimodal_tvsum_style
-WUvTyaaNkzM,680.0,682.0,annotator_1,,lecture,,"is genuinely hard, and whenever you come across a genuinely hard question in math, a good policy is to not try too hard ",false,multimodal_tvsum_style
-WUvTyaaNkzM,682.0,684.0,annotator_1,,lecture,,"a good policy is to not try too hard to get at the answer directly,",false,multimodal_tvsum_style
-WUvTyaaNkzM,684.0,686.0,annotator_1,,lecture,,"a good policy is to not try too hard to get at the answer directly, since usually you just end up banging your head agai",false,multimodal_tvsum_style
-WUvTyaaNkzM,686.0,688.0,annotator_1,,lecture,,since usually you just end up banging your head against a wall.,false,multimodal_tvsum_style
-WUvTyaaNkzM,688.0,690.0,annotator_1,,lecture,,since usually you just end up banging your head against a wall.,false,multimodal_tvsum_style
-WUvTyaaNkzM,690.0,692.0,annotator_1,,lecture,,"Instead, play around with the idea, with no particular goal in mind.",false,multimodal_tvsum_style
-WUvTyaaNkzM,692.0,694.0,annotator_1,,lecture,,"Instead, play around with the idea, with no particular goal in mind.",false,multimodal_tvsum_style
-WUvTyaaNkzM,694.0,696.0,annotator_1,,lecture,,Spend some time building up familiarity with the interplay between the function,false,multimodal_tvsum_style
-WUvTyaaNkzM,696.0,698.0,annotator_1,,lecture,,Spend some time building up familiarity with the interplay between the function,false,multimodal_tvsum_style
-WUvTyaaNkzM,698.0,700.0,annotator_1,,lecture,,"Spend some time building up familiarity with the interplay between the function defining the graph, in this case x2, and",false,multimodal_tvsum_style
-WUvTyaaNkzM,700.0,702.0,annotator_1,,lecture,,"defining the graph, in this case x2, and the function giving the area.",false,multimodal_tvsum_style
-WUvTyaaNkzM,702.0,704.0,annotator_1,,lecture,,"defining the graph, in this case x2, and the function giving the area.",false,multimodal_tvsum_style
-WUvTyaaNkzM,704.0,706.0,annotator_1,,lecture,,"In that playful spirit, if you're lucky, here's something you might notice.",false,multimodal_tvsum_style
-WUvTyaaNkzM,706.0,708.0,annotator_1,,lecture,,"In that playful spirit, if you're lucky, here's something you might notice.",false,multimodal_tvsum_style
-WUvTyaaNkzM,708.0,710.0,annotator_1,,lecture,,"In that playful spirit, if you're lucky, here's something you might notice. When you slightly increase x by some tiny nu",false,multimodal_tvsum_style
-WUvTyaaNkzM,710.0,712.0,annotator_1,,lecture,,"When you slightly increase x by some tiny nudge dx, look at the resulting change in area,",false,multimodal_tvsum_style
-WUvTyaaNkzM,712.0,714.0,annotator_1,,lecture,,"When you slightly increase x by some tiny nudge dx, look at the resulting change in area,",false,multimodal_tvsum_style
-WUvTyaaNkzM,714.0,716.0,annotator_1,,lecture,,"When you slightly increase x by some tiny nudge dx, look at the resulting change in area, represented with this sliver I",false,multimodal_tvsum_style
-WUvTyaaNkzM,716.0,718.0,annotator_1,,lecture,,represented with this sliver I'm going to call da for a tiny difference in area.,false,multimodal_tvsum_style
-WUvTyaaNkzM,718.0,720.0,annotator_1,,lecture,,represented with this sliver I'm going to call da for a tiny difference in area.,false,multimodal_tvsum_style
-WUvTyaaNkzM,720.0,722.0,annotator_1,,lecture,,represented with this sliver I'm going to call da for a tiny difference in area. That sliver can be pretty well approxim,false,multimodal_tvsum_style
-WUvTyaaNkzM,722.0,724.0,annotator_1,,lecture,,"That sliver can be pretty well approximated with a rectangle,",false,multimodal_tvsum_style
-WUvTyaaNkzM,724.0,726.0,annotator_1,,lecture,,"That sliver can be pretty well approximated with a rectangle, one whose height is x2 and whose width is dx.",false,multimodal_tvsum_style
-WUvTyaaNkzM,726.0,728.0,annotator_1,,lecture,,one whose height is x2 and whose width is dx.,false,multimodal_tvsum_style
-WUvTyaaNkzM,728.0,730.0,annotator_1,,lecture,,"one whose height is x2 and whose width is dx. And the smaller the size of that nudge dx, the",false,multimodal_tvsum_style
-WUvTyaaNkzM,730.0,732.0,annotator_1,,lecture,,"And the smaller the size of that nudge dx, the",false,multimodal_tvsum_style
-WUvTyaaNkzM,732.0,734.0,annotator_1,,lecture,,"And the smaller the size of that nudge dx, the more that sliver actually looks like a rectangle.",false,multimodal_tvsum_style
-WUvTyaaNkzM,734.0,736.0,annotator_1,,lecture,,more that sliver actually looks like a rectangle.,false,multimodal_tvsum_style
-WUvTyaaNkzM,736.0,738.0,annotator_1,,lecture,,This gives us an interesting way to think about how a of x is related to x2.,false,multimodal_tvsum_style
-WUvTyaaNkzM,738.0,740.0,annotator_1,,lecture,,This gives us an interesting way to think about how a of x is related to x2.,false,multimodal_tvsum_style
-WUvTyaaNkzM,740.0,742.0,annotator_1,,lecture,,This gives us an interesting way to think about how a of x is related to x2.,false,multimodal_tvsum_style
-WUvTyaaNkzM,742.0,744.0,annotator_1,,lecture,,"A change to the output of a, this little da, is about equal to x2,",false,multimodal_tvsum_style
-WUvTyaaNkzM,744.0,746.0,annotator_1,,lecture,,"A change to the output of a, this little da, is about equal to x2,",false,multimodal_tvsum_style
-WUvTyaaNkzM,746.0,748.0,annotator_1,,lecture,,"A change to the output of a, this little da, is about equal to x2, where x is whatever input you started at, times dx,",false,multimodal_tvsum_style
-WUvTyaaNkzM,748.0,750.0,annotator_1,,lecture,,"where x is whatever input you started at, times dx,",false,multimodal_tvsum_style
-WUvTyaaNkzM,750.0,752.0,annotator_1,,lecture,,"where x is whatever input you started at, times dx, the little nudge to the input that caused a to change.",false,multimodal_tvsum_style
-WUvTyaaNkzM,752.0,754.0,annotator_1,,lecture,,the little nudge to the input that caused a to change.,false,multimodal_tvsum_style
-WUvTyaaNkzM,754.0,756.0,annotator_1,,lecture,,"Or rearranged, da divided by dx, the ratio of a tiny change in a to the tiny",false,multimodal_tvsum_style
-WUvTyaaNkzM,756.0,758.0,annotator_1,,lecture,,"Or rearranged, da divided by dx, the ratio of a tiny change in a to the tiny",false,multimodal_tvsum_style
-WUvTyaaNkzM,758.0,760.0,annotator_1,,lecture,,"Or rearranged, da divided by dx, the ratio of a tiny change in a to the tiny",false,multimodal_tvsum_style
-WUvTyaaNkzM,760.0,762.0,annotator_1,,lecture,,"Or rearranged, da divided by dx, the ratio of a tiny change in a to the tiny change in x that caused it, is approximatel",false,multimodal_tvsum_style
-WUvTyaaNkzM,762.0,764.0,annotator_1,,lecture,,"change in x that caused it, is approximately whatever x2 is at that point.",false,multimodal_tvsum_style
-WUvTyaaNkzM,764.0,766.0,annotator_1,,lecture,,"change in x that caused it, is approximately whatever x2 is at that point.",false,multimodal_tvsum_style
-WUvTyaaNkzM,766.0,768.0,annotator_1,,lecture,,And that's an approximation that should get better,false,multimodal_tvsum_style
-WUvTyaaNkzM,768.0,770.0,annotator_1,,lecture,,And that's an approximation that should get better and better for smaller and smaller choices of dx.,false,multimodal_tvsum_style
-WUvTyaaNkzM,770.0,772.0,annotator_1,,lecture,,and better for smaller and smaller choices of dx.,false,multimodal_tvsum_style
-WUvTyaaNkzM,772.0,774.0,annotator_1,,lecture,,"In other words, we don't know what a of x is, that remains a mystery.",false,multimodal_tvsum_style
-WUvTyaaNkzM,774.0,776.0,annotator_1,,lecture,,"In other words, we don't know what a of x is, that remains a mystery.",false,multimodal_tvsum_style
-WUvTyaaNkzM,776.0,778.0,annotator_1,,lecture,,But we do know a property that this mystery function must have.,false,multimodal_tvsum_style
-WUvTyaaNkzM,778.0,780.0,annotator_1,,lecture,,But we do know a property that this mystery function must have.,false,multimodal_tvsum_style
-WUvTyaaNkzM,780.0,782.0,annotator_1,,lecture,,"When you look at two nearby points, for example 3 and 3.001,",false,multimodal_tvsum_style
-WUvTyaaNkzM,782.0,784.0,annotator_1,,lecture,,"When you look at two nearby points, for example 3 and 3.001,",false,multimodal_tvsum_style
-WUvTyaaNkzM,784.0,786.0,annotator_1,,lecture,,"When you look at two nearby points, for example 3 and 3.001, consider the change to the output of a between those two po",false,multimodal_tvsum_style
-WUvTyaaNkzM,786.0,788.0,annotator_1,,lecture,,"consider the change to the output of a between those two points,",false,multimodal_tvsum_style
-WUvTyaaNkzM,788.0,790.0,annotator_1,,lecture,,"consider the change to the output of a between those two points,",false,multimodal_tvsum_style
-WUvTyaaNkzM,790.0,792.0,annotator_1,,lecture,,"consider the change to the output of a between those two points, the difference between the mystery function evaluated a",false,multimodal_tvsum_style
-WUvTyaaNkzM,792.0,794.0,annotator_1,,lecture,,the difference between the mystery function evaluated at 3.001 and 3.001.,false,multimodal_tvsum_style
-WUvTyaaNkzM,794.0,796.0,annotator_1,,lecture,,the difference between the mystery function evaluated at 3.001 and 3.001.,false,multimodal_tvsum_style
-WUvTyaaNkzM,796.0,798.0,annotator_1,,lecture,,"the difference between the mystery function evaluated at 3.001 and 3.001. That change, divided by the difference in the ",false,multimodal_tvsum_style
-WUvTyaaNkzM,798.0,800.0,annotator_1,,lecture,,"That change, divided by the difference in the input values, which in this case is 0.001,",false,multimodal_tvsum_style
-WUvTyaaNkzM,800.0,802.0,annotator_1,,lecture,,"That change, divided by the difference in the input values, which in this case is 0.001,",false,multimodal_tvsum_style
-WUvTyaaNkzM,802.0,804.0,annotator_1,,lecture,,"That change, divided by the difference in the input values, which in this case is 0.001, should be about equal to the va",false,multimodal_tvsum_style
-WUvTyaaNkzM,804.0,806.0,annotator_1,,lecture,,"should be about equal to the value of x2 for the starting input, in this case 3 squared.",false,multimodal_tvsum_style
-WUvTyaaNkzM,806.0,808.0,annotator_1,,lecture,,"should be about equal to the value of x2 for the starting input, in this case 3 squared.",false,multimodal_tvsum_style
-WUvTyaaNkzM,808.0,810.0,annotator_1,,lecture,,"should be about equal to the value of x2 for the starting input, in this case 3 squared.",false,multimodal_tvsum_style
-WUvTyaaNkzM,810.0,812.0,annotator_1,,lecture,,And this relationship between tiny changes to the mystery function,false,multimodal_tvsum_style
-WUvTyaaNkzM,812.0,814.0,annotator_1,,lecture,,And this relationship between tiny changes to the mystery function,false,multimodal_tvsum_style
-WUvTyaaNkzM,814.0,816.0,annotator_1,,lecture,,"And this relationship between tiny changes to the mystery function and the values of x2 itself is true at all inputs, no",false,multimodal_tvsum_style
-WUvTyaaNkzM,816.0,818.0,annotator_1,,lecture,,"and the values of x2 itself is true at all inputs, not just 3.",false,multimodal_tvsum_style
-WUvTyaaNkzM,818.0,820.0,annotator_1,,lecture,,"and the values of x2 itself is true at all inputs, not just 3. That doesn't immediately tell us how to find a of x,",false,multimodal_tvsum_style
-WUvTyaaNkzM,820.0,822.0,annotator_1,,lecture,,"That doesn't immediately tell us how to find a of x, but it provides a very strong clue that we can work with.",false,multimodal_tvsum_style
-WUvTyaaNkzM,822.0,824.0,annotator_1,,lecture,,but it provides a very strong clue that we can work with.,false,multimodal_tvsum_style
-WUvTyaaNkzM,824.0,826.0,annotator_1,,lecture,,but it provides a very strong clue that we can work with.,false,multimodal_tvsum_style
-WUvTyaaNkzM,826.0,828.0,annotator_1,,lecture,,And there's nothing special about the graph x2 here.,false,multimodal_tvsum_style
-WUvTyaaNkzM,828.0,830.0,annotator_1,,lecture,,And there's nothing special about the graph x2 here. Any function defined as the area under some graph has this property,false,multimodal_tvsum_style
-WUvTyaaNkzM,830.0,832.0,annotator_1,,lecture,,"Any function defined as the area under some graph has this property,",false,multimodal_tvsum_style
-WUvTyaaNkzM,832.0,834.0,annotator_1,,lecture,,"Any function defined as the area under some graph has this property, that da divided by dx, a slight nudge to the output",false,multimodal_tvsum_style
-WUvTyaaNkzM,834.0,836.0,annotator_1,,lecture,,"that da divided by dx, a slight nudge to the output of a divided by a slight",false,multimodal_tvsum_style
-WUvTyaaNkzM,836.0,838.0,annotator_1,,lecture,,"that da divided by dx, a slight nudge to the output of a divided by a slight",false,multimodal_tvsum_style
-WUvTyaaNkzM,838.0,840.0,annotator_1,,lecture,,"that da divided by dx, a slight nudge to the output of a divided by a slight nudge to the input that caused it, is about",false,multimodal_tvsum_style
-WUvTyaaNkzM,840.0,842.0,annotator_1,,lecture,,"nudge to the input that caused it, is about equal to the height of the graph at",false,multimodal_tvsum_style
-WUvTyaaNkzM,842.0,844.0,annotator_1,,lecture,,"nudge to the input that caused it, is about equal to the height of the graph at that point.",false,multimodal_tvsum_style
-WUvTyaaNkzM,844.0,846.0,annotator_1,,lecture,,that point.,false,multimodal_tvsum_style
-WUvTyaaNkzM,846.0,848.0,annotator_1,,lecture,,"Again, that's an approximation that gets better and better for smaller choices of dx.",false,multimodal_tvsum_style
-WUvTyaaNkzM,848.0,850.0,annotator_1,,lecture,,"Again, that's an approximation that gets better and better for smaller choices of dx.",false,multimodal_tvsum_style
-WUvTyaaNkzM,850.0,852.0,annotator_1,,lecture,,"Again, that's an approximation that gets better and better for smaller choices of dx. And here, we're stumbling into ano",false,multimodal_tvsum_style
-WUvTyaaNkzM,852.0,854.0,annotator_1,,lecture,,"And here, we're stumbling into another big idea from calculus, derivatives.",false,multimodal_tvsum_style
-WUvTyaaNkzM,854.0,856.0,annotator_1,,lecture,,"And here, we're stumbling into another big idea from calculus, derivatives.",false,multimodal_tvsum_style
-WUvTyaaNkzM,856.0,858.0,annotator_1,,lecture,,"And here, we're stumbling into another big idea from calculus, derivatives. This ratio da divided by dx is called the de",false,multimodal_tvsum_style
-WUvTyaaNkzM,858.0,860.0,annotator_1,,lecture,,"This ratio da divided by dx is called the derivative of a, or more technically,",false,multimodal_tvsum_style
-WUvTyaaNkzM,860.0,862.0,annotator_1,,lecture,,"This ratio da divided by dx is called the derivative of a, or more technically,",false,multimodal_tvsum_style
-WUvTyaaNkzM,862.0,864.0,annotator_1,,lecture,,"This ratio da divided by dx is called the derivative of a, or more technically, the derivative is whatever this ratio ap",false,multimodal_tvsum_style
-WUvTyaaNkzM,864.0,866.0,annotator_1,,lecture,,the derivative is whatever this ratio approaches as dx gets smaller and smaller.,false,multimodal_tvsum_style
-WUvTyaaNkzM,866.0,868.0,annotator_1,,lecture,,the derivative is whatever this ratio approaches as dx gets smaller and smaller.,false,multimodal_tvsum_style
-WUvTyaaNkzM,868.0,870.0,annotator_1,,lecture,,"I'll dive much more deeply into the idea of a derivative in the next video,",false,multimodal_tvsum_style
-WUvTyaaNkzM,870.0,872.0,annotator_1,,lecture,,"I'll dive much more deeply into the idea of a derivative in the next video,",false,multimodal_tvsum_style
-WUvTyaaNkzM,872.0,874.0,annotator_1,,lecture,,"I'll dive much more deeply into the idea of a derivative in the next video, but loosely speaking it's a measure of how s",false,multimodal_tvsum_style
-WUvTyaaNkzM,874.0,876.0,annotator_1,,lecture,,but loosely speaking it's a measure of how sensitive a function is to small changes in,false,multimodal_tvsum_style
-WUvTyaaNkzM,876.0,878.0,annotator_1,,lecture,,but loosely speaking it's a measure of how sensitive a function is to small changes in its input. You'll see as the seri,false,multimodal_tvsum_style
-WUvTyaaNkzM,878.0,880.0,annotator_1,,lecture,,"You'll see as the series goes on that there are many ways you can visualize a derivative,",false,multimodal_tvsum_style
-WUvTyaaNkzM,880.0,882.0,annotator_1,,lecture,,"You'll see as the series goes on that there are many ways you can visualize a derivative,",false,multimodal_tvsum_style
-WUvTyaaNkzM,882.0,884.0,annotator_1,,lecture,,"You'll see as the series goes on that there are many ways you can visualize a derivative, depending on what function you",false,multimodal_tvsum_style
-WUvTyaaNkzM,884.0,886.0,annotator_1,,lecture,,depending on what function you're looking at and how you think about tiny nudges to its output.,false,multimodal_tvsum_style
-WUvTyaaNkzM,886.0,888.0,annotator_1,,lecture,,about tiny nudges to its output.,false,multimodal_tvsum_style
-WUvTyaaNkzM,888.0,890.0,annotator_1,,lecture,,"We care about derivatives because they help us solve problems,",false,multimodal_tvsum_style
-WUvTyaaNkzM,890.0,892.0,annotator_1,,lecture,,"We care about derivatives because they help us solve problems,",false,multimodal_tvsum_style
-WUvTyaaNkzM,892.0,894.0,annotator_1,,lecture,,"We care about derivatives because they help us solve problems, and in our little exploration here, we already have a gli",false,multimodal_tvsum_style
-WUvTyaaNkzM,894.0,896.0,annotator_1,,lecture,,"and in our little exploration here, we already have a glimpse of one way they're used.",false,multimodal_tvsum_style
-WUvTyaaNkzM,896.0,898.0,annotator_1,,lecture,,"and in our little exploration here, we already have a glimpse of one way they're used. They are the key to solving integ",false,multimodal_tvsum_style
-WUvTyaaNkzM,898.0,900.0,annotator_1,,lecture,,"They are the key to solving integral questions,",false,multimodal_tvsum_style
-WUvTyaaNkzM,900.0,902.0,annotator_1,,lecture,,"They are the key to solving integral questions, problems that require finding the area under a curve.",false,multimodal_tvsum_style
-WUvTyaaNkzM,902.0,904.0,annotator_1,,lecture,,problems that require finding the area under a curve.,false,multimodal_tvsum_style
-WUvTyaaNkzM,904.0,906.0,annotator_1,,lecture,,"Once you gain enough familiarity with computing derivatives,",false,multimodal_tvsum_style
-WUvTyaaNkzM,906.0,908.0,annotator_1,,lecture,,"Once you gain enough familiarity with computing derivatives, you'll be able to look at a situation like this one where y",false,multimodal_tvsum_style
-WUvTyaaNkzM,908.0,910.0,annotator_1,,lecture,,you'll be able to look at a situation like this one where you don't know what a function,false,multimodal_tvsum_style
-WUvTyaaNkzM,910.0,912.0,annotator_1,,lecture,,you'll be able to look at a situation like this one where you don't know what a function,false,multimodal_tvsum_style
-WUvTyaaNkzM,912.0,914.0,annotator_1,,lecture,,"you'll be able to look at a situation like this one where you don't know what a function is, but you do know that its de",false,multimodal_tvsum_style
-WUvTyaaNkzM,914.0,916.0,annotator_1,,lecture,,"is, but you do know that its derivative should be x2, and from that reverse engineer what the function must be.",false,multimodal_tvsum_style
-WUvTyaaNkzM,916.0,918.0,annotator_1,,lecture,,and from that reverse engineer what the function must be.,false,multimodal_tvsum_style
-WUvTyaaNkzM,918.0,920.0,annotator_1,,lecture,,and from that reverse engineer what the function must be.,false,multimodal_tvsum_style
-WUvTyaaNkzM,920.0,922.0,annotator_1,,lecture,,"This back and forth between integrals and derivatives,",false,multimodal_tvsum_style
-WUvTyaaNkzM,922.0,924.0,annotator_1,,lecture,,"This back and forth between integrals and derivatives, where the derivative of a function for the area under a graph giv",false,multimodal_tvsum_style
-WUvTyaaNkzM,924.0,926.0,annotator_1,,lecture,,where the derivative of a function for the area under a graph gives you,false,multimodal_tvsum_style
-WUvTyaaNkzM,926.0,928.0,annotator_1,,lecture,,"where the derivative of a function for the area under a graph gives you back the function defining the graph itself, is ",false,multimodal_tvsum_style
-WUvTyaaNkzM,928.0,930.0,annotator_1,,lecture,,"back the function defining the graph itself, is called the fundamental",false,multimodal_tvsum_style
-WUvTyaaNkzM,930.0,932.0,annotator_1,,lecture,,"back the function defining the graph itself, is called the fundamental",false,multimodal_tvsum_style
-WUvTyaaNkzM,932.0,934.0,annotator_1,,lecture,,"back the function defining the graph itself, is called the fundamental theorem of calculus.",false,multimodal_tvsum_style
-WUvTyaaNkzM,934.0,936.0,annotator_1,,lecture,,"It ties together the two big ideas of integrals and derivatives,",false,multimodal_tvsum_style
-WUvTyaaNkzM,936.0,938.0,annotator_1,,lecture,,"It ties together the two big ideas of integrals and derivatives,",false,multimodal_tvsum_style
-WUvTyaaNkzM,938.0,940.0,annotator_1,,lecture,,"It ties together the two big ideas of integrals and derivatives, and shows how each one is an inverse of the other.",false,multimodal_tvsum_style
-WUvTyaaNkzM,940.0,942.0,annotator_1,,lecture,,and shows how each one is an inverse of the other.,false,multimodal_tvsum_style
-WUvTyaaNkzM,942.0,944.0,annotator_1,,lecture,,and shows how each one is an inverse of the other.,false,multimodal_tvsum_style
-WUvTyaaNkzM,944.0,946.0,annotator_1,,lecture,,"All of this is only a high-level view, just a peek",false,multimodal_tvsum_style
-WUvTyaaNkzM,946.0,948.0,annotator_1,,lecture,,"All of this is only a high-level view, just a peek at some of the core ideas that emerge in calculus.",false,multimodal_tvsum_style
-WUvTyaaNkzM,948.0,950.0,annotator_1,,lecture,,at some of the core ideas that emerge in calculus.,false,multimodal_tvsum_style
-WUvTyaaNkzM,950.0,952.0,annotator_1,,lecture,,"And what follows in this series are the details, for derivatives and integrals and more.",false,multimodal_tvsum_style
-WUvTyaaNkzM,952.0,954.0,annotator_1,,lecture,,"And what follows in this series are the details, for derivatives and integrals and more.",false,multimodal_tvsum_style
-WUvTyaaNkzM,954.0,956.0,annotator_1,,lecture,,"And what follows in this series are the details, for derivatives and integrals and more. At all points, I want you to fe",false,multimodal_tvsum_style
-WUvTyaaNkzM,956.0,958.0,annotator_1,,lecture,,"At all points, I want you to feel that you could have invented calculus yourself,",false,multimodal_tvsum_style
-WUvTyaaNkzM,958.0,960.0,annotator_1,,lecture,,"At all points, I want you to feel that you could have invented calculus yourself, that if you drew the right pictures an",false,multimodal_tvsum_style
-WUvTyaaNkzM,960.0,962.0,annotator_1,,lecture,,"that if you drew the right pictures and played with each idea in just the right way,",false,multimodal_tvsum_style
-WUvTyaaNkzM,962.0,964.0,annotator_1,,lecture,,"that if you drew the right pictures and played with each idea in just the right way, these formulas and rules and constr",false,multimodal_tvsum_style
-WUvTyaaNkzM,964.0,966.0,annotator_1,,lecture,,these formulas and rules and constructs that are presented could have just,false,multimodal_tvsum_style
-WUvTyaaNkzM,966.0,968.0,annotator_1,,lecture,,these formulas and rules and constructs that are presented could have just as easily popped out naturally from your own ,false,multimodal_tvsum_style
-WUvTyaaNkzM,968.0,970.0,annotator_1,,lecture,,as easily popped out naturally from your own explorations.,false,multimodal_tvsum_style
-WUvTyaaNkzM,970.0,972.0,annotator_1,,lecture,,as easily popped out naturally from your own explorations.,false,multimodal_tvsum_style
-WUvTyaaNkzM,972.0,974.0,annotator_1,,lecture,,"And before you go, it would feel wrong not to give the people who supported this",false,multimodal_tvsum_style
-WUvTyaaNkzM,974.0,976.0,annotator_1,,lecture,,"And before you go, it would feel wrong not to give the people who supported this",false,multimodal_tvsum_style
-WUvTyaaNkzM,976.0,978.0,annotator_1,,lecture,,"And before you go, it would feel wrong not to give the people who supported this series on Patreon a well-deserved thank",false,multimodal_tvsum_style
-WUvTyaaNkzM,978.0,980.0,annotator_1,,lecture,,"series on Patreon a well-deserved thanks, both for their financial backing as",false,multimodal_tvsum_style
-WUvTyaaNkzM,980.0,982.0,annotator_1,,lecture,,"series on Patreon a well-deserved thanks, both for their financial backing as well as for the suggestions they gave whil",false,multimodal_tvsum_style
-WUvTyaaNkzM,982.0,984.0,annotator_1,,lecture,,well as for the suggestions they gave while the series was being developed.,false,multimodal_tvsum_style
-WUvTyaaNkzM,984.0,986.0,annotator_1,,lecture,,"You see, supporters got early access to the videos as I made them,",false,multimodal_tvsum_style
-WUvTyaaNkzM,986.0,988.0,annotator_1,,lecture,,"You see, supporters got early access to the videos as I made them, and they'll continue to get early access for future e",false,multimodal_tvsum_style
-WUvTyaaNkzM,988.0,990.0,annotator_1,,lecture,,and they'll continue to get early access for future essence-of type series.,false,multimodal_tvsum_style
-WUvTyaaNkzM,990.0,992.0,annotator_1,,lecture,,and they'll continue to get early access for future essence-of type series.,false,multimodal_tvsum_style
-WUvTyaaNkzM,992.0,994.0,annotator_1,,lecture,,"And as a thanks to the community, I keep ads off of new videos for their first month.",false,multimodal_tvsum_style
-WUvTyaaNkzM,994.0,996.0,annotator_1,,lecture,,"And as a thanks to the community, I keep ads off of new videos for their first month.",false,multimodal_tvsum_style
-WUvTyaaNkzM,996.0,998.0,annotator_1,,lecture,,"And as a thanks to the community, I keep ads off of new videos for their first month. I'm still astounded that I can spe",false,multimodal_tvsum_style
-WUvTyaaNkzM,998.0,1000.0,annotator_1,,lecture,,"I'm still astounded that I can spend time working on videos like these,",false,multimodal_tvsum_style
-WUvTyaaNkzM,1000.0,1002.0,annotator_1,,lecture,,"I'm still astounded that I can spend time working on videos like these, and in a very direct way, you are the one to tha",false,multimodal_tvsum_style
-WUvTyaaNkzM,1002.0,1004.0,annotator_1,,lecture,,"and in a very direct way, you are the one to thank for that.",false,multimodal_tvsum_style
-WUvTyaaNkzM,1004.0,1006.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-WUvTyaaNkzM,1006.0,1008.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-WUvTyaaNkzM,1008.0,1010.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-WUvTyaaNkzM,1010.0,1012.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-WUvTyaaNkzM,1012.0,1014.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-WUvTyaaNkzM,1014.0,1016.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-WUvTyaaNkzM,1016.0,1018.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-WUvTyaaNkzM,1018.0,1020.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-WUvTyaaNkzM,1020.0,1022.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-WUvTyaaNkzM,1022.0,1024.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
-WUvTyaaNkzM,1024.0,1026.0,annotator_1,,lecture,,,false,multimodal_tvsum_style
+WUvTyaaNkzM,0.0,2.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+WUvTyaaNkzM,2.0,4.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+WUvTyaaNkzM,4.0,6.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+WUvTyaaNkzM,6.0,8.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+WUvTyaaNkzM,8.0,10.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+WUvTyaaNkzM,10.0,12.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+WUvTyaaNkzM,12.0,14.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+WUvTyaaNkzM,14.0,16.0,annotator_1,1,lecture,,"Hey everyone, Grant here.",false,multimodal_tvsum_style
+WUvTyaaNkzM,16.0,18.0,annotator_1,1,lecture,,"Hey everyone, Grant here. This is the first video in a series on the essence of calculus,",false,multimodal_tvsum_style
+WUvTyaaNkzM,18.0,20.0,annotator_1,1,lecture,,"This is the first video in a series on the essence of calculus, and I'll be publishing the following videos once per day",false,multimodal_tvsum_style
+WUvTyaaNkzM,20.0,22.0,annotator_1,1,lecture,,and I'll be publishing the following videos once per day for the next 10 days.,false,multimodal_tvsum_style
+WUvTyaaNkzM,22.0,24.0,annotator_1,1,lecture,,and I'll be publishing the following videos once per day for the next 10 days.,false,multimodal_tvsum_style
+WUvTyaaNkzM,24.0,26.0,annotator_1,1,lecture,,"The goal here, as the name suggests, is to really get",false,multimodal_tvsum_style
+WUvTyaaNkzM,26.0,28.0,annotator_1,1,lecture,,"The goal here, as the name suggests, is to really get the heart of the subject out in one binge-watchable set.",false,multimodal_tvsum_style
+WUvTyaaNkzM,28.0,30.0,annotator_1,1,lecture,,the heart of the subject out in one binge-watchable set.,false,multimodal_tvsum_style
+WUvTyaaNkzM,30.0,32.0,annotator_1,1,lecture,,"But with a topic that's as broad as calculus, there's a lot of things that can mean,",false,multimodal_tvsum_style
+WUvTyaaNkzM,32.0,34.0,annotator_1,1,lecture,,"But with a topic that's as broad as calculus, there's a lot of things that can mean,",false,multimodal_tvsum_style
+WUvTyaaNkzM,34.0,36.0,annotator_1,1,lecture,,"But with a topic that's as broad as calculus, there's a lot of things that can mean, so here's what I have in mind speci",false,multimodal_tvsum_style
+WUvTyaaNkzM,36.0,38.0,annotator_1,1,lecture,,so here's what I have in mind specifically. Calculus has a lot of rules and formulas which,false,multimodal_tvsum_style
+WUvTyaaNkzM,38.0,40.0,annotator_1,2,lecture,,Calculus has a lot of rules and formulas which are often presented as things to be memorized.,false,multimodal_tvsum_style
+WUvTyaaNkzM,40.0,42.0,annotator_1,2,lecture,,are often presented as things to be memorized.,false,multimodal_tvsum_style
+WUvTyaaNkzM,42.0,44.0,annotator_1,2,lecture,,"Lots of derivative formulas, the product rule, the chain rule,",false,multimodal_tvsum_style
+WUvTyaaNkzM,44.0,46.0,annotator_1,2,lecture,,"Lots of derivative formulas, the product rule, the chain rule, implicit differentiation, the fact that integrals and der",false,multimodal_tvsum_style
+WUvTyaaNkzM,46.0,48.0,annotator_1,2,lecture,,"implicit differentiation, the fact that integrals and derivatives are opposite,",false,multimodal_tvsum_style
+WUvTyaaNkzM,48.0,50.0,annotator_1,2,lecture,,"implicit differentiation, the fact that integrals and derivatives are opposite, Taylor series, just a lot of things like",false,multimodal_tvsum_style
+WUvTyaaNkzM,50.0,52.0,annotator_1,2,lecture,,"Taylor series, just a lot of things like that.",false,multimodal_tvsum_style
+WUvTyaaNkzM,52.0,54.0,annotator_1,2,lecture,,"Taylor series, just a lot of things like that. And my goal is for you to come away feeling like",false,multimodal_tvsum_style
+WUvTyaaNkzM,54.0,56.0,annotator_1,2,lecture,,And my goal is for you to come away feeling like you could have invented calculus yourself.,false,multimodal_tvsum_style
+WUvTyaaNkzM,56.0,58.0,annotator_1,2,lecture,,"you could have invented calculus yourself. That is, cover all those core ideas, but in a way that makes clear where they",false,multimodal_tvsum_style
+WUvTyaaNkzM,58.0,60.0,annotator_1,2,lecture,,"That is, cover all those core ideas, but in a way that makes clear where they",false,multimodal_tvsum_style
+WUvTyaaNkzM,60.0,62.0,annotator_1,2,lecture,,"That is, cover all those core ideas, but in a way that makes clear where they actually come from, and what they really m",false,multimodal_tvsum_style
+WUvTyaaNkzM,62.0,64.0,annotator_1,2,lecture,,"actually come from, and what they really mean, using an all-around visual approach.",false,multimodal_tvsum_style
+WUvTyaaNkzM,64.0,66.0,annotator_1,2,lecture,,"actually come from, and what they really mean, using an all-around visual approach.",false,multimodal_tvsum_style
+WUvTyaaNkzM,66.0,68.0,annotator_1,2,lecture,,"Inventing math is no joke, and there is a difference between being",false,multimodal_tvsum_style
+WUvTyaaNkzM,68.0,70.0,annotator_1,2,lecture,,"Inventing math is no joke, and there is a difference between being",false,multimodal_tvsum_style
+WUvTyaaNkzM,70.0,72.0,annotator_1,2,lecture,,"Inventing math is no joke, and there is a difference between being told why something's true, and actually generating it",false,multimodal_tvsum_style
+WUvTyaaNkzM,72.0,74.0,annotator_1,2,lecture,,"told why something's true, and actually generating it from scratch.",false,multimodal_tvsum_style
+WUvTyaaNkzM,74.0,76.0,annotator_1,2,lecture,,"told why something's true, and actually generating it from scratch. But at all points, I want you to think to yourself, ",false,multimodal_tvsum_style
+WUvTyaaNkzM,76.0,78.0,annotator_1,2,lecture,,"But at all points, I want you to think to yourself, if you were an early mathematician,",false,multimodal_tvsum_style
+WUvTyaaNkzM,78.0,80.0,annotator_1,2,lecture,,"But at all points, I want you to think to yourself, if you were an early mathematician, pondering these ideas and drawin",false,multimodal_tvsum_style
+WUvTyaaNkzM,80.0,82.0,annotator_1,2,lecture,,"pondering these ideas and drawing out the right diagrams,",false,multimodal_tvsum_style
+WUvTyaaNkzM,82.0,84.0,annotator_1,2,lecture,,"pondering these ideas and drawing out the right diagrams, does it feel reasonable that you could have stumbled across th",false,multimodal_tvsum_style
+WUvTyaaNkzM,84.0,86.0,annotator_1,2,lecture,,does it feel reasonable that you could have stumbled across these truths yourself?,false,multimodal_tvsum_style
+WUvTyaaNkzM,86.0,88.0,annotator_1,2,lecture,,"does it feel reasonable that you could have stumbled across these truths yourself? In this initial video, I want to show",false,multimodal_tvsum_style
+WUvTyaaNkzM,88.0,90.0,annotator_1,3,lecture,,"In this initial video, I want to show how you might stumble into the core ideas of",false,multimodal_tvsum_style
+WUvTyaaNkzM,90.0,92.0,annotator_1,3,lecture,,"In this initial video, I want to show how you might stumble into the core ideas of calculus by thinking very deeply abou",false,multimodal_tvsum_style
+WUvTyaaNkzM,92.0,94.0,annotator_1,3,lecture,,"calculus by thinking very deeply about one specific bit of geometry,",false,multimodal_tvsum_style
+WUvTyaaNkzM,94.0,96.0,annotator_1,3,lecture,,"calculus by thinking very deeply about one specific bit of geometry, the area of a circle.",false,multimodal_tvsum_style
+WUvTyaaNkzM,96.0,98.0,annotator_1,3,lecture,,"the area of a circle. Maybe you know that this is pi times its radius squared, but why?",false,multimodal_tvsum_style
+WUvTyaaNkzM,98.0,100.0,annotator_1,3,lecture,,"Maybe you know that this is pi times its radius squared, but why?",false,multimodal_tvsum_style
+WUvTyaaNkzM,100.0,102.0,annotator_1,3,lecture,,"Maybe you know that this is pi times its radius squared, but why? Is there a nice way to think about where this formula ",false,multimodal_tvsum_style
+WUvTyaaNkzM,102.0,104.0,annotator_1,3,lecture,,Is there a nice way to think about where this formula comes from?,false,multimodal_tvsum_style
+WUvTyaaNkzM,104.0,106.0,annotator_1,3,lecture,,"Is there a nice way to think about where this formula comes from? Well, contemplating this problem and leaving yourself ",false,multimodal_tvsum_style
+WUvTyaaNkzM,106.0,108.0,annotator_1,3,lecture,,"Well, contemplating this problem and leaving yourself open to exploring the",false,multimodal_tvsum_style
+WUvTyaaNkzM,108.0,110.0,annotator_1,3,lecture,,"Well, contemplating this problem and leaving yourself open to exploring the interesting thoughts that come about can act",false,multimodal_tvsum_style
+WUvTyaaNkzM,110.0,112.0,annotator_1,3,lecture,,interesting thoughts that come about can actually lead you to a glimpse of three,false,multimodal_tvsum_style
+WUvTyaaNkzM,112.0,114.0,annotator_1,3,lecture,,"interesting thoughts that come about can actually lead you to a glimpse of three big ideas in calculus, integrals, deriv",false,multimodal_tvsum_style
+WUvTyaaNkzM,114.0,116.0,annotator_1,3,lecture,,"big ideas in calculus, integrals, derivatives, and the fact that they're opposites.",false,multimodal_tvsum_style
+WUvTyaaNkzM,116.0,118.0,annotator_1,3,lecture,,"big ideas in calculus, integrals, derivatives, and the fact that they're opposites.",false,multimodal_tvsum_style
+WUvTyaaNkzM,118.0,120.0,annotator_1,3,lecture,,"But the story starts more simply, just you and a circle, let's say with radius 3.",false,multimodal_tvsum_style
+WUvTyaaNkzM,120.0,122.0,annotator_1,3,lecture,,"But the story starts more simply, just you and a circle, let's say with radius 3.",false,multimodal_tvsum_style
+WUvTyaaNkzM,122.0,124.0,annotator_1,3,lecture,,"But the story starts more simply, just you and a circle, let's say with radius 3.",false,multimodal_tvsum_style
+WUvTyaaNkzM,124.0,126.0,annotator_1,3,lecture,,"But the story starts more simply, just you and a circle, let's say with radius 3. You're trying to figure out its area, ",false,multimodal_tvsum_style
+WUvTyaaNkzM,126.0,128.0,annotator_1,3,lecture,,"You're trying to figure out its area, and after going through a lot of",false,multimodal_tvsum_style
+WUvTyaaNkzM,128.0,130.0,annotator_1,3,lecture,,"You're trying to figure out its area, and after going through a lot of paper trying different ways to chop up and rearra",false,multimodal_tvsum_style
+WUvTyaaNkzM,130.0,132.0,annotator_1,3,lecture,,"paper trying different ways to chop up and rearrange the pieces of that area,",false,multimodal_tvsum_style
+WUvTyaaNkzM,132.0,134.0,annotator_1,3,lecture,,"paper trying different ways to chop up and rearrange the pieces of that area, many of which might lead to their own inte",false,multimodal_tvsum_style
+WUvTyaaNkzM,134.0,136.0,annotator_1,3,lecture,,"many of which might lead to their own interesting observations,",false,multimodal_tvsum_style
+WUvTyaaNkzM,136.0,138.0,annotator_1,3,lecture,,"many of which might lead to their own interesting observations, maybe you try out the idea of slicing up the circle into",false,multimodal_tvsum_style
+WUvTyaaNkzM,138.0,140.0,annotator_1,3,lecture,,maybe you try out the idea of slicing up the circle into many concentric rings.,false,multimodal_tvsum_style
+WUvTyaaNkzM,140.0,142.0,annotator_1,3,lecture,,maybe you try out the idea of slicing up the circle into many concentric rings.,false,multimodal_tvsum_style
+WUvTyaaNkzM,142.0,144.0,annotator_1,3,lecture,,"This should seem promising because it respects the symmetry of the circle,",false,multimodal_tvsum_style
+WUvTyaaNkzM,144.0,146.0,annotator_1,3,lecture,,"This should seem promising because it respects the symmetry of the circle, and math has a tendency to reward you when yo",false,multimodal_tvsum_style
+WUvTyaaNkzM,146.0,148.0,annotator_1,3,lecture,,and math has a tendency to reward you when you respect its symmetries.,false,multimodal_tvsum_style
+WUvTyaaNkzM,148.0,150.0,annotator_1,3,lecture,,and math has a tendency to reward you when you respect its symmetries.,false,multimodal_tvsum_style
+WUvTyaaNkzM,150.0,152.0,annotator_1,3,lecture,,"Let's take one of those rings, which has some inner radius r that's between 0 and 3.",false,multimodal_tvsum_style
+WUvTyaaNkzM,152.0,154.0,annotator_1,3,lecture,,"Let's take one of those rings, which has some inner radius r that's between 0 and 3.",false,multimodal_tvsum_style
+WUvTyaaNkzM,154.0,156.0,annotator_1,3,lecture,,"Let's take one of those rings, which has some inner radius r that's between 0 and 3.",false,multimodal_tvsum_style
+WUvTyaaNkzM,156.0,158.0,annotator_1,3,lecture,,"If we can find a nice expression for the area of each ring like this one,",false,multimodal_tvsum_style
+WUvTyaaNkzM,158.0,160.0,annotator_1,3,lecture,,"If we can find a nice expression for the area of each ring like this one, and if we have a nice way to add them all up,",false,multimodal_tvsum_style
+WUvTyaaNkzM,160.0,162.0,annotator_1,3,lecture,,"and if we have a nice way to add them all up,",false,multimodal_tvsum_style
+WUvTyaaNkzM,162.0,164.0,annotator_1,3,lecture,,"and if we have a nice way to add them all up, it might lead us to an understanding of the full circle's area.",false,multimodal_tvsum_style
+WUvTyaaNkzM,164.0,166.0,annotator_1,3,lecture,,it might lead us to an understanding of the full circle's area.,false,multimodal_tvsum_style
+WUvTyaaNkzM,166.0,168.0,annotator_1,4,lecture,,Maybe you start by imagining straightening out this ring.,false,multimodal_tvsum_style
+WUvTyaaNkzM,168.0,170.0,annotator_1,4,lecture,,Maybe you start by imagining straightening out this ring.,false,multimodal_tvsum_style
+WUvTyaaNkzM,170.0,172.0,annotator_1,4,lecture,,And you could try thinking through exactly what this new shape is and what its,false,multimodal_tvsum_style
+WUvTyaaNkzM,172.0,174.0,annotator_1,4,lecture,,And you could try thinking through exactly what this new shape is and what its,false,multimodal_tvsum_style
+WUvTyaaNkzM,174.0,176.0,annotator_1,4,lecture,,"And you could try thinking through exactly what this new shape is and what its area should be, but for simplicity, let's",false,multimodal_tvsum_style
+WUvTyaaNkzM,176.0,178.0,annotator_1,4,lecture,,"area should be, but for simplicity, let's just approximate it as a rectangle.",false,multimodal_tvsum_style
+WUvTyaaNkzM,178.0,180.0,annotator_1,4,lecture,,"area should be, but for simplicity, let's just approximate it as a rectangle.",false,multimodal_tvsum_style
+WUvTyaaNkzM,180.0,182.0,annotator_1,5,lecture,,"The width of that rectangle is the circumference of the original ring,",false,multimodal_tvsum_style
+WUvTyaaNkzM,182.0,184.0,annotator_1,5,lecture,,"The width of that rectangle is the circumference of the original ring, which is 2 pi times r, right?",false,multimodal_tvsum_style
+WUvTyaaNkzM,184.0,186.0,annotator_1,5,lecture,,"which is 2 pi times r, right? I mean, that's essentially the definition of pi.",false,multimodal_tvsum_style
+WUvTyaaNkzM,186.0,188.0,annotator_1,5,lecture,,"I mean, that's essentially the definition of pi.",false,multimodal_tvsum_style
+WUvTyaaNkzM,188.0,190.0,annotator_1,5,lecture,,"I mean, that's essentially the definition of pi. And its thickness?",false,multimodal_tvsum_style
+WUvTyaaNkzM,190.0,192.0,annotator_1,5,lecture,,"Well, that depends on how finely you chopped up the circle in the first place,",false,multimodal_tvsum_style
+WUvTyaaNkzM,192.0,194.0,annotator_1,5,lecture,,"Well, that depends on how finely you chopped up the circle in the first place,",false,multimodal_tvsum_style
+WUvTyaaNkzM,194.0,196.0,annotator_1,5,lecture,,"Well, that depends on how finely you chopped up the circle in the first place, which was kind of arbitrary.",false,multimodal_tvsum_style
+WUvTyaaNkzM,196.0,198.0,annotator_1,5,lecture,,"In the spirit of using what will come to be standard calculus notation,",false,multimodal_tvsum_style
+WUvTyaaNkzM,198.0,200.0,annotator_1,5,lecture,,"In the spirit of using what will come to be standard calculus notation,",false,multimodal_tvsum_style
+WUvTyaaNkzM,200.0,202.0,annotator_1,5,lecture,,"In the spirit of using what will come to be standard calculus notation, let's call that thickness dr for a tiny differen",false,multimodal_tvsum_style
+WUvTyaaNkzM,202.0,204.0,annotator_1,5,lecture,,let's call that thickness dr for a tiny difference in the radius from one ring to,false,multimodal_tvsum_style
+WUvTyaaNkzM,204.0,206.0,annotator_1,5,lecture,,let's call that thickness dr for a tiny difference in the radius from one ring to the next. Maybe you think of it as som,false,multimodal_tvsum_style
+WUvTyaaNkzM,206.0,208.0,annotator_1,5,lecture,,Maybe you think of it as something like 0.1.,false,multimodal_tvsum_style
+WUvTyaaNkzM,208.0,210.0,annotator_1,5,lecture,,"So approximating this unwrapped ring as a thin rectangle,",false,multimodal_tvsum_style
+WUvTyaaNkzM,210.0,212.0,annotator_1,5,lecture,,"So approximating this unwrapped ring as a thin rectangle,",false,multimodal_tvsum_style
+WUvTyaaNkzM,212.0,214.0,annotator_1,5,lecture,,"So approximating this unwrapped ring as a thin rectangle, its area is 2 pi times r, the radius, times dr, the little thi",false,multimodal_tvsum_style
+WUvTyaaNkzM,214.0,216.0,annotator_1,5,lecture,,"its area is 2 pi times r, the radius, times dr, the little thickness.",false,multimodal_tvsum_style
+WUvTyaaNkzM,216.0,218.0,annotator_1,5,lecture,,"its area is 2 pi times r, the radius, times dr, the little thickness.",false,multimodal_tvsum_style
+WUvTyaaNkzM,218.0,220.0,annotator_1,4,lecture,,"And even though that's not perfect, for smaller and smaller choices of dr,",false,multimodal_tvsum_style
+WUvTyaaNkzM,220.0,222.0,annotator_1,4,lecture,,"And even though that's not perfect, for smaller and smaller choices of dr,",false,multimodal_tvsum_style
+WUvTyaaNkzM,222.0,224.0,annotator_1,4,lecture,,"And even though that's not perfect, for smaller and smaller choices of dr, this is actually going to be a better and bet",false,multimodal_tvsum_style
+WUvTyaaNkzM,224.0,226.0,annotator_1,4,lecture,,"this is actually going to be a better and better approximation for that area,",false,multimodal_tvsum_style
+WUvTyaaNkzM,226.0,228.0,annotator_1,4,lecture,,"this is actually going to be a better and better approximation for that area, since the top and the bottom sides of this",false,multimodal_tvsum_style
+WUvTyaaNkzM,228.0,230.0,annotator_1,4,lecture,,since the top and the bottom sides of this shape are going to get closer and closer to,false,multimodal_tvsum_style
+WUvTyaaNkzM,230.0,232.0,annotator_1,4,lecture,,since the top and the bottom sides of this shape are going to get closer and closer to being exactly the same length.,false,multimodal_tvsum_style
+WUvTyaaNkzM,232.0,234.0,annotator_1,4,lecture,,"being exactly the same length. So let's just move forward with this approximation,",false,multimodal_tvsum_style
+WUvTyaaNkzM,234.0,236.0,annotator_1,3,lecture,,"So let's just move forward with this approximation, keeping in the back of our minds that it's slightly wrong,",false,multimodal_tvsum_style
+WUvTyaaNkzM,236.0,238.0,annotator_1,3,lecture,,"keeping in the back of our minds that it's slightly wrong,",false,multimodal_tvsum_style
+WUvTyaaNkzM,238.0,240.0,annotator_1,3,lecture,,"keeping in the back of our minds that it's slightly wrong, but it's going to become more accurate for smaller and smalle",false,multimodal_tvsum_style
+WUvTyaaNkzM,240.0,242.0,annotator_1,3,lecture,,but it's going to become more accurate for smaller and smaller choices of dr.,false,multimodal_tvsum_style
+WUvTyaaNkzM,242.0,244.0,annotator_1,3,lecture,,"but it's going to become more accurate for smaller and smaller choices of dr. That is, if we slice up the circle into th",false,multimodal_tvsum_style
+WUvTyaaNkzM,244.0,246.0,annotator_1,3,lecture,,"That is, if we slice up the circle into thinner and thinner rings.",false,multimodal_tvsum_style
+WUvTyaaNkzM,246.0,248.0,annotator_1,3,lecture,,"That is, if we slice up the circle into thinner and thinner rings. So just to sum up where we are, you've broken up the ",false,multimodal_tvsum_style
+WUvTyaaNkzM,248.0,250.0,annotator_1,3,lecture,,"So just to sum up where we are, you've broken up the area of the circle into",false,multimodal_tvsum_style
+WUvTyaaNkzM,250.0,252.0,annotator_1,3,lecture,,"So just to sum up where we are, you've broken up the area of the circle into",false,multimodal_tvsum_style
+WUvTyaaNkzM,252.0,254.0,annotator_1,3,lecture,,"So just to sum up where we are, you've broken up the area of the circle into all of these rings, and you're approximatin",false,multimodal_tvsum_style
+WUvTyaaNkzM,254.0,256.0,annotator_1,3,lecture,,"all of these rings, and you're approximating the area of each one of those as",false,multimodal_tvsum_style
+WUvTyaaNkzM,256.0,258.0,annotator_1,3,lecture,,"all of these rings, and you're approximating the area of each one of those as 2 pi times its radius times dr, where the ",false,multimodal_tvsum_style
+WUvTyaaNkzM,258.0,260.0,annotator_1,3,lecture,,"2 pi times its radius times dr, where the specific value for that inner radius",false,multimodal_tvsum_style
+WUvTyaaNkzM,260.0,262.0,annotator_1,3,lecture,,"2 pi times its radius times dr, where the specific value for that inner radius",false,multimodal_tvsum_style
+WUvTyaaNkzM,262.0,264.0,annotator_1,3,lecture,,"2 pi times its radius times dr, where the specific value for that inner radius ranges from 0 for the smallest ring up to",false,multimodal_tvsum_style
+WUvTyaaNkzM,264.0,266.0,annotator_1,3,lecture,,"ranges from 0 for the smallest ring up to just under 3 for the biggest ring,",false,multimodal_tvsum_style
+WUvTyaaNkzM,266.0,268.0,annotator_1,3,lecture,,"ranges from 0 for the smallest ring up to just under 3 for the biggest ring, spaced out by whatever the thickness is tha",false,multimodal_tvsum_style
+WUvTyaaNkzM,268.0,270.0,annotator_1,3,lecture,,"spaced out by whatever the thickness is that you choose for dr, something like 0.1.",false,multimodal_tvsum_style
+WUvTyaaNkzM,270.0,272.0,annotator_1,3,lecture,,"spaced out by whatever the thickness is that you choose for dr, something like 0.1.",false,multimodal_tvsum_style
+WUvTyaaNkzM,272.0,274.0,annotator_1,3,lecture,,And notice that the spacing between the values here corresponds to the,false,multimodal_tvsum_style
+WUvTyaaNkzM,274.0,276.0,annotator_1,3,lecture,,And notice that the spacing between the values here corresponds to the,false,multimodal_tvsum_style
+WUvTyaaNkzM,276.0,278.0,annotator_1,3,lecture,,"And notice that the spacing between the values here corresponds to the thickness dr of each ring, the difference in radi",false,multimodal_tvsum_style
+WUvTyaaNkzM,278.0,280.0,annotator_1,3,lecture,,"thickness dr of each ring, the difference in radius from one ring to the next.",false,multimodal_tvsum_style
+WUvTyaaNkzM,280.0,282.0,annotator_1,3,lecture,,"thickness dr of each ring, the difference in radius from one ring to the next.",false,multimodal_tvsum_style
+WUvTyaaNkzM,282.0,284.0,annotator_1,3,lecture,,"In fact, a nice way to think about the rectangles approximating each",false,multimodal_tvsum_style
+WUvTyaaNkzM,284.0,286.0,annotator_1,3,lecture,,"In fact, a nice way to think about the rectangles approximating each",false,multimodal_tvsum_style
+WUvTyaaNkzM,286.0,288.0,annotator_1,3,lecture,,"In fact, a nice way to think about the rectangles approximating each ring's area is to fit them all upright side by side",false,multimodal_tvsum_style
+WUvTyaaNkzM,288.0,290.0,annotator_1,3,lecture,,ring's area is to fit them all upright side by side along this axis.,false,multimodal_tvsum_style
+WUvTyaaNkzM,290.0,292.0,annotator_1,3,lecture,,"Each one has a thickness dr, which is why they fit so snugly right there together,",false,multimodal_tvsum_style
+WUvTyaaNkzM,292.0,294.0,annotator_1,3,lecture,,"Each one has a thickness dr, which is why they fit so snugly right there together,",false,multimodal_tvsum_style
+WUvTyaaNkzM,294.0,296.0,annotator_1,3,lecture,,"Each one has a thickness dr, which is why they fit so snugly right there together, and the height of any one of these re",false,multimodal_tvsum_style
+WUvTyaaNkzM,296.0,298.0,annotator_1,3,lecture,,"and the height of any one of these rectangles sitting above some specific value of r,",false,multimodal_tvsum_style
+WUvTyaaNkzM,298.0,300.0,annotator_1,3,lecture,,"and the height of any one of these rectangles sitting above some specific value of r,",false,multimodal_tvsum_style
+WUvTyaaNkzM,300.0,302.0,annotator_1,3,lecture,,"and the height of any one of these rectangles sitting above some specific value of r, like 0.6, is exactly 2 pi times th",false,multimodal_tvsum_style
+WUvTyaaNkzM,302.0,304.0,annotator_1,3,lecture,,"like 0.6, is exactly 2 pi times that value.",false,multimodal_tvsum_style
+WUvTyaaNkzM,304.0,306.0,annotator_1,3,lecture,,That's the circumference of the corresponding ring that this rectangle approximates.,false,multimodal_tvsum_style
+WUvTyaaNkzM,306.0,308.0,annotator_1,3,lecture,,That's the circumference of the corresponding ring that this rectangle approximates.,false,multimodal_tvsum_style
+WUvTyaaNkzM,308.0,310.0,annotator_1,3,lecture,,That's the circumference of the corresponding ring that this rectangle approximates. Pictures like this 2 pi r can get t,false,multimodal_tvsum_style
+WUvTyaaNkzM,310.0,312.0,annotator_1,3,lecture,,"Pictures like this 2 pi r can get tall for the screen,",false,multimodal_tvsum_style
+WUvTyaaNkzM,312.0,314.0,annotator_1,3,lecture,,"Pictures like this 2 pi r can get tall for the screen, I mean 2 times pi times 3 is around 19, so let's just throw up a ",false,multimodal_tvsum_style
+WUvTyaaNkzM,314.0,316.0,annotator_1,3,lecture,,"I mean 2 times pi times 3 is around 19, so let's just throw up a y axis that's",false,multimodal_tvsum_style
+WUvTyaaNkzM,316.0,318.0,annotator_1,3,lecture,,"I mean 2 times pi times 3 is around 19, so let's just throw up a y axis that's scaled a little differently so that we ca",false,multimodal_tvsum_style
+WUvTyaaNkzM,318.0,320.0,annotator_1,3,lecture,,scaled a little differently so that we can actually fit all of these rectangles,false,multimodal_tvsum_style
+WUvTyaaNkzM,320.0,322.0,annotator_1,3,lecture,,scaled a little differently so that we can actually fit all of these rectangles on the screen.,false,multimodal_tvsum_style
+WUvTyaaNkzM,322.0,324.0,annotator_1,3,lecture,,"on the screen. A nice way to think about this setup is to draw the graph of 2 pi r,",false,multimodal_tvsum_style
+WUvTyaaNkzM,324.0,326.0,annotator_1,3,lecture,,"A nice way to think about this setup is to draw the graph of 2 pi r,",false,multimodal_tvsum_style
+WUvTyaaNkzM,326.0,328.0,annotator_1,3,lecture,,"A nice way to think about this setup is to draw the graph of 2 pi r, which is a straight line that has a slope 2 pi.",false,multimodal_tvsum_style
+WUvTyaaNkzM,328.0,330.0,annotator_1,3,lecture,,which is a straight line that has a slope 2 pi.,false,multimodal_tvsum_style
+WUvTyaaNkzM,330.0,332.0,annotator_1,3,lecture,,Each of these rectangles extends up to the point where it just barely touches that graph.,false,multimodal_tvsum_style
+WUvTyaaNkzM,332.0,334.0,annotator_1,3,lecture,,Each of these rectangles extends up to the point where it just barely touches that graph.,false,multimodal_tvsum_style
+WUvTyaaNkzM,334.0,336.0,annotator_1,3,lecture,,Each of these rectangles extends up to the point where it just barely touches that graph.,false,multimodal_tvsum_style
+WUvTyaaNkzM,336.0,338.0,annotator_1,3,lecture,,"Again, we're being approximate here. Each of these rectangles only approximates the",false,multimodal_tvsum_style
+WUvTyaaNkzM,338.0,340.0,annotator_1,3,lecture,,Each of these rectangles only approximates the,false,multimodal_tvsum_style
+WUvTyaaNkzM,340.0,342.0,annotator_1,3,lecture,,Each of these rectangles only approximates the area of the corresponding ring from the circle.,false,multimodal_tvsum_style
+WUvTyaaNkzM,342.0,344.0,annotator_1,3,lecture,,"area of the corresponding ring from the circle. But remember, that approximation, 2 pi r times dr,",false,multimodal_tvsum_style
+WUvTyaaNkzM,344.0,346.0,annotator_1,3,lecture,,"But remember, that approximation, 2 pi r times dr,",false,multimodal_tvsum_style
+WUvTyaaNkzM,346.0,348.0,annotator_1,3,lecture,,"But remember, that approximation, 2 pi r times dr, gets less and less wrong as the size of dr gets smaller and smaller.",false,multimodal_tvsum_style
+WUvTyaaNkzM,348.0,350.0,annotator_1,3,lecture,,gets less and less wrong as the size of dr gets smaller and smaller.,false,multimodal_tvsum_style
+WUvTyaaNkzM,350.0,352.0,annotator_1,4,lecture,,gets less and less wrong as the size of dr gets smaller and smaller. And this has a very beautiful meaning when we're,false,multimodal_tvsum_style
+WUvTyaaNkzM,352.0,354.0,annotator_1,4,lecture,,And this has a very beautiful meaning when we're looking at the sum of the areas of all those rectangles.,false,multimodal_tvsum_style
+WUvTyaaNkzM,354.0,356.0,annotator_1,4,lecture,,looking at the sum of the areas of all those rectangles.,false,multimodal_tvsum_style
+WUvTyaaNkzM,356.0,358.0,annotator_1,4,lecture,,"looking at the sum of the areas of all those rectangles. For smaller and smaller choices of dr, you might at first",false,multimodal_tvsum_style
+WUvTyaaNkzM,358.0,360.0,annotator_1,4,lecture,,"For smaller and smaller choices of dr, you might at first",false,multimodal_tvsum_style
+WUvTyaaNkzM,360.0,362.0,annotator_1,4,lecture,,"For smaller and smaller choices of dr, you might at first think that turns the problem into a monstrously large sum.",false,multimodal_tvsum_style
+WUvTyaaNkzM,362.0,364.0,annotator_1,4,lecture,,"think that turns the problem into a monstrously large sum. I mean, there's many many rectangles to consider,",false,multimodal_tvsum_style
+WUvTyaaNkzM,364.0,366.0,annotator_1,4,lecture,,"I mean, there's many many rectangles to consider, and the decimal precision of each one of their areas is going to be an",false,multimodal_tvsum_style
+WUvTyaaNkzM,366.0,368.0,annotator_1,4,lecture,,and the decimal precision of each one of their areas is going to be an,false,multimodal_tvsum_style
+WUvTyaaNkzM,368.0,370.0,annotator_1,4,lecture,,and the decimal precision of each one of their areas is going to be an absolute nightmare.,false,multimodal_tvsum_style
+WUvTyaaNkzM,370.0,372.0,annotator_1,5,lecture,,"But notice, all of their areas in aggregate just looks like the area under a graph.",false,multimodal_tvsum_style
+WUvTyaaNkzM,372.0,374.0,annotator_1,5,lecture,,"But notice, all of their areas in aggregate just looks like the area under a graph.",false,multimodal_tvsum_style
+WUvTyaaNkzM,374.0,376.0,annotator_1,5,lecture,,"But notice, all of their areas in aggregate just looks like the area under a graph. And that portion under the graph is ",false,multimodal_tvsum_style
+WUvTyaaNkzM,376.0,378.0,annotator_1,5,lecture,,"And that portion under the graph is just a triangle,",false,multimodal_tvsum_style
+WUvTyaaNkzM,378.0,380.0,annotator_1,5,lecture,,"And that portion under the graph is just a triangle, a triangle with a base of 3 and a height that's 2 pi times 3.",false,multimodal_tvsum_style
+WUvTyaaNkzM,380.0,382.0,annotator_1,5,lecture,,a triangle with a base of 3 and a height that's 2 pi times 3.,false,multimodal_tvsum_style
+WUvTyaaNkzM,382.0,384.0,annotator_1,5,lecture,,a triangle with a base of 3 and a height that's 2 pi times 3.,false,multimodal_tvsum_style
+WUvTyaaNkzM,384.0,386.0,annotator_1,5,lecture,,"So its area, 1 half base times height, works out to be exactly pi times 3 squared.",false,multimodal_tvsum_style
+WUvTyaaNkzM,386.0,388.0,annotator_1,5,lecture,,"So its area, 1 half base times height, works out to be exactly pi times 3 squared.",false,multimodal_tvsum_style
+WUvTyaaNkzM,388.0,390.0,annotator_1,5,lecture,,"So its area, 1 half base times height, works out to be exactly pi times 3 squared.",false,multimodal_tvsum_style
+WUvTyaaNkzM,390.0,392.0,annotator_1,5,lecture,,"So its area, 1 half base times height, works out to be exactly pi times 3 squared. Or if the radius of our original circ",false,multimodal_tvsum_style
+WUvTyaaNkzM,392.0,394.0,annotator_1,3,lecture,,"Or if the radius of our original circle was some other value,",false,multimodal_tvsum_style
+WUvTyaaNkzM,394.0,396.0,annotator_1,3,lecture,,"Or if the radius of our original circle was some other value, capital R, that area comes out to be pi times r squared.",false,multimodal_tvsum_style
+WUvTyaaNkzM,396.0,398.0,annotator_1,3,lecture,,"capital R, that area comes out to be pi times r squared.",false,multimodal_tvsum_style
+WUvTyaaNkzM,398.0,400.0,annotator_1,3,lecture,,"capital R, that area comes out to be pi times r squared. And that's the formula for the area of a circle.",false,multimodal_tvsum_style
+WUvTyaaNkzM,400.0,402.0,annotator_1,3,lecture,,And that's the formula for the area of a circle.,false,multimodal_tvsum_style
+WUvTyaaNkzM,402.0,404.0,annotator_1,3,lecture,,"It doesn't matter who you are or what you typically think of math,",false,multimodal_tvsum_style
+WUvTyaaNkzM,404.0,406.0,annotator_1,3,lecture,,"It doesn't matter who you are or what you typically think of math, that right there is a beautiful argument.",false,multimodal_tvsum_style
+WUvTyaaNkzM,406.0,408.0,annotator_1,3,lecture,,that right there is a beautiful argument.,false,multimodal_tvsum_style
+WUvTyaaNkzM,408.0,410.0,annotator_1,3,lecture,,,false,multimodal_tvsum_style
+WUvTyaaNkzM,410.0,412.0,annotator_1,3,lecture,,"But if you want to think like a mathematician here,",false,multimodal_tvsum_style
+WUvTyaaNkzM,412.0,414.0,annotator_1,3,lecture,,"But if you want to think like a mathematician here, you don't just care about finding the answer,",false,multimodal_tvsum_style
+WUvTyaaNkzM,414.0,416.0,annotator_1,3,lecture,,"you don't just care about finding the answer, you care about developing general problem-solving tools and techniques.",false,multimodal_tvsum_style
+WUvTyaaNkzM,416.0,418.0,annotator_1,3,lecture,,you care about developing general problem-solving tools and techniques.,false,multimodal_tvsum_style
+WUvTyaaNkzM,418.0,420.0,annotator_1,3,lecture,,you care about developing general problem-solving tools and techniques. So take a moment to meditate on what exactly jus,false,multimodal_tvsum_style
+WUvTyaaNkzM,420.0,422.0,annotator_1,3,lecture,,"So take a moment to meditate on what exactly just happened and why it worked,",false,multimodal_tvsum_style
+WUvTyaaNkzM,422.0,424.0,annotator_1,3,lecture,,"So take a moment to meditate on what exactly just happened and why it worked, because the way we transitioned from somet",false,multimodal_tvsum_style
+WUvTyaaNkzM,424.0,426.0,annotator_1,3,lecture,,because the way we transitioned from something approximate to something,false,multimodal_tvsum_style
+WUvTyaaNkzM,426.0,428.0,annotator_1,3,lecture,,because the way we transitioned from something approximate to something precise is actually pretty subtle and cuts deep ,false,multimodal_tvsum_style
+WUvTyaaNkzM,428.0,430.0,annotator_1,3,lecture,,precise is actually pretty subtle and cuts deep to what calculus is all about.,false,multimodal_tvsum_style
+WUvTyaaNkzM,430.0,432.0,annotator_1,3,lecture,,precise is actually pretty subtle and cuts deep to what calculus is all about.,false,multimodal_tvsum_style
+WUvTyaaNkzM,432.0,434.0,annotator_1,3,lecture,,"You had this problem that could be approximated with the sum of many small numbers,",false,multimodal_tvsum_style
+WUvTyaaNkzM,434.0,436.0,annotator_1,3,lecture,,"You had this problem that could be approximated with the sum of many small numbers,",false,multimodal_tvsum_style
+WUvTyaaNkzM,436.0,438.0,annotator_1,3,lecture,,"You had this problem that could be approximated with the sum of many small numbers,",false,multimodal_tvsum_style
+WUvTyaaNkzM,438.0,440.0,annotator_1,3,lecture,,"You had this problem that could be approximated with the sum of many small numbers, each of which looked like 2 pi r tim",false,multimodal_tvsum_style
+WUvTyaaNkzM,440.0,442.0,annotator_1,3,lecture,,"each of which looked like 2 pi r times dr, for values of r ranging between 0 and 3.",false,multimodal_tvsum_style
+WUvTyaaNkzM,442.0,444.0,annotator_1,3,lecture,,"each of which looked like 2 pi r times dr, for values of r ranging between 0 and 3.",false,multimodal_tvsum_style
+WUvTyaaNkzM,444.0,446.0,annotator_1,3,lecture,,"each of which looked like 2 pi r times dr, for values of r ranging between 0 and 3.",false,multimodal_tvsum_style
+WUvTyaaNkzM,446.0,448.0,annotator_1,3,lecture,,"Remember, the small number dr here represents our choice for the thickness of each ring,",false,multimodal_tvsum_style
+WUvTyaaNkzM,448.0,450.0,annotator_1,3,lecture,,"Remember, the small number dr here represents our choice for the thickness of each ring,",false,multimodal_tvsum_style
+WUvTyaaNkzM,450.0,452.0,annotator_1,3,lecture,,"Remember, the small number dr here represents our choice for the thickness of each ring, for example 0.1.",false,multimodal_tvsum_style
+WUvTyaaNkzM,452.0,454.0,annotator_1,3,lecture,,for example 0.1. And there are two important things to note here.,false,multimodal_tvsum_style
+WUvTyaaNkzM,454.0,456.0,annotator_1,3,lecture,,And there are two important things to note here.,false,multimodal_tvsum_style
+WUvTyaaNkzM,456.0,458.0,annotator_1,3,lecture,,"First of all, not only is dr a factor in the quantities we're adding up,",false,multimodal_tvsum_style
+WUvTyaaNkzM,458.0,460.0,annotator_1,3,lecture,,"First of all, not only is dr a factor in the quantities we're adding up,",false,multimodal_tvsum_style
+WUvTyaaNkzM,460.0,462.0,annotator_1,3,lecture,,"First of all, not only is dr a factor in the quantities we're adding up, 2 pi r times dr, it also gives the spacing betw",false,multimodal_tvsum_style
+WUvTyaaNkzM,462.0,464.0,annotator_1,3,lecture,,"2 pi r times dr, it also gives the spacing between the different values of r.",false,multimodal_tvsum_style
+WUvTyaaNkzM,464.0,466.0,annotator_1,3,lecture,,"2 pi r times dr, it also gives the spacing between the different values of r.",false,multimodal_tvsum_style
+WUvTyaaNkzM,466.0,468.0,annotator_1,3,lecture,,"And secondly, the smaller our choice for dr, the better the approximation.",false,multimodal_tvsum_style
+WUvTyaaNkzM,468.0,470.0,annotator_1,3,lecture,,"And secondly, the smaller our choice for dr, the better the approximation.",false,multimodal_tvsum_style
+WUvTyaaNkzM,470.0,472.0,annotator_1,3,lecture,,"And secondly, the smaller our choice for dr, the better the approximation.",false,multimodal_tvsum_style
+WUvTyaaNkzM,472.0,474.0,annotator_1,3,lecture,,"Adding all of those numbers could be seen in a different,",false,multimodal_tvsum_style
+WUvTyaaNkzM,474.0,476.0,annotator_1,3,lecture,,"Adding all of those numbers could be seen in a different, pretty clever way as adding the areas of many thin rectangles",false,multimodal_tvsum_style
+WUvTyaaNkzM,476.0,478.0,annotator_1,3,lecture,,pretty clever way as adding the areas of many thin rectangles,false,multimodal_tvsum_style
+WUvTyaaNkzM,478.0,480.0,annotator_1,3,lecture,,"pretty clever way as adding the areas of many thin rectangles sitting underneath a graph, the graph of the function 2 pi",false,multimodal_tvsum_style
+WUvTyaaNkzM,480.0,482.0,annotator_1,3,lecture,,"sitting underneath a graph, the graph of the function 2 pi r in this case.",false,multimodal_tvsum_style
+WUvTyaaNkzM,482.0,484.0,annotator_1,3,lecture,,"sitting underneath a graph, the graph of the function 2 pi r in this case. Then, and this is key, by considering smaller",false,multimodal_tvsum_style
+WUvTyaaNkzM,484.0,486.0,annotator_1,3,lecture,,"Then, and this is key, by considering smaller and smaller choices for dr,",false,multimodal_tvsum_style
+WUvTyaaNkzM,486.0,488.0,annotator_1,3,lecture,,"Then, and this is key, by considering smaller and smaller choices for dr, corresponding to better and better approximati",false,multimodal_tvsum_style
+WUvTyaaNkzM,488.0,490.0,annotator_1,3,lecture,,"corresponding to better and better approximations of the original problem, the sum,",false,multimodal_tvsum_style
+WUvTyaaNkzM,490.0,492.0,annotator_1,3,lecture,,"corresponding to better and better approximations of the original problem, the sum,",false,multimodal_tvsum_style
+WUvTyaaNkzM,492.0,494.0,annotator_1,3,lecture,,"corresponding to better and better approximations of the original problem, the sum, thought of as the aggregate area of ",false,multimodal_tvsum_style
+WUvTyaaNkzM,494.0,496.0,annotator_1,3,lecture,,"thought of as the aggregate area of those rectangles, approaches the area under the graph.",false,multimodal_tvsum_style
+WUvTyaaNkzM,496.0,498.0,annotator_1,3,lecture,,approaches the area under the graph.,false,multimodal_tvsum_style
+WUvTyaaNkzM,498.0,500.0,annotator_1,3,lecture,,"approaches the area under the graph. And because of that, you can conclude that the answer to the original question,",false,multimodal_tvsum_style
+WUvTyaaNkzM,500.0,502.0,annotator_1,3,lecture,,"And because of that, you can conclude that the answer to the original question,",false,multimodal_tvsum_style
+WUvTyaaNkzM,502.0,504.0,annotator_1,3,lecture,,"And because of that, you can conclude that the answer to the original question, in full unapproximated precision, is exa",false,multimodal_tvsum_style
+WUvTyaaNkzM,504.0,506.0,annotator_1,3,lecture,,"in full unapproximated precision, is exactly the same as the area underneath this graph.",false,multimodal_tvsum_style
+WUvTyaaNkzM,506.0,508.0,annotator_1,3,lecture,,"in full unapproximated precision, is exactly the same as the area underneath this graph.",false,multimodal_tvsum_style
+WUvTyaaNkzM,508.0,510.0,annotator_1,3,lecture,,"in full unapproximated precision, is exactly the same as the area underneath this graph.",false,multimodal_tvsum_style
+WUvTyaaNkzM,510.0,512.0,annotator_1,3,lecture,,A lot of other hard problems in math and science can be broken down and,false,multimodal_tvsum_style
+WUvTyaaNkzM,512.0,514.0,annotator_1,3,lecture,,A lot of other hard problems in math and science can be broken down and,false,multimodal_tvsum_style
+WUvTyaaNkzM,514.0,516.0,annotator_1,3,lecture,,A lot of other hard problems in math and science can be broken down and approximated as the sum of many small quantities,false,multimodal_tvsum_style
+WUvTyaaNkzM,516.0,518.0,annotator_1,3,lecture,,"approximated as the sum of many small quantities,",false,multimodal_tvsum_style
+WUvTyaaNkzM,518.0,520.0,annotator_1,3,lecture,,"approximated as the sum of many small quantities, like figuring out how far a car has traveled based on its velocity at ",false,multimodal_tvsum_style
+WUvTyaaNkzM,520.0,522.0,annotator_1,3,lecture,,like figuring out how far a car has traveled based on its velocity at each point in time.,false,multimodal_tvsum_style
+WUvTyaaNkzM,522.0,524.0,annotator_1,3,lecture,,like figuring out how far a car has traveled based on its velocity at each point in time.,false,multimodal_tvsum_style
+WUvTyaaNkzM,524.0,526.0,annotator_1,3,lecture,,"In a case like that, you might range through many different points in time,",false,multimodal_tvsum_style
+WUvTyaaNkzM,526.0,528.0,annotator_1,3,lecture,,"In a case like that, you might range through many different points in time,",false,multimodal_tvsum_style
+WUvTyaaNkzM,528.0,530.0,annotator_1,3,lecture,,"In a case like that, you might range through many different points in time, and at each one multiply the velocity at tha",false,multimodal_tvsum_style
+WUvTyaaNkzM,530.0,532.0,annotator_1,3,lecture,,"and at each one multiply the velocity at that time times a tiny change in time, dt,",false,multimodal_tvsum_style
+WUvTyaaNkzM,532.0,534.0,annotator_1,3,lecture,,"and at each one multiply the velocity at that time times a tiny change in time, dt, which would give the corresponding l",false,multimodal_tvsum_style
+WUvTyaaNkzM,534.0,536.0,annotator_1,3,lecture,,which would give the corresponding little bit of distance traveled during that little,false,multimodal_tvsum_style
+WUvTyaaNkzM,536.0,538.0,annotator_1,3,lecture,,which would give the corresponding little bit of distance traveled during that little time.,false,multimodal_tvsum_style
+WUvTyaaNkzM,538.0,540.0,annotator_1,3,lecture,,"time. I'll talk through the details of examples like this later in the series,",false,multimodal_tvsum_style
+WUvTyaaNkzM,540.0,542.0,annotator_1,3,lecture,,"I'll talk through the details of examples like this later in the series,",false,multimodal_tvsum_style
+WUvTyaaNkzM,542.0,544.0,annotator_1,3,lecture,,"I'll talk through the details of examples like this later in the series, but at a high level many of these types of prob",false,multimodal_tvsum_style
+WUvTyaaNkzM,544.0,546.0,annotator_1,3,lecture,,but at a high level many of these types of problems turn out to be equivalent,false,multimodal_tvsum_style
+WUvTyaaNkzM,546.0,548.0,annotator_1,3,lecture,,"but at a high level many of these types of problems turn out to be equivalent to finding the area under some graph, in m",false,multimodal_tvsum_style
+WUvTyaaNkzM,548.0,550.0,annotator_1,3,lecture,,"to finding the area under some graph, in much the same way that our circle problem did.",false,multimodal_tvsum_style
+WUvTyaaNkzM,550.0,552.0,annotator_1,3,lecture,,"to finding the area under some graph, in much the same way that our circle problem did.",false,multimodal_tvsum_style
+WUvTyaaNkzM,552.0,554.0,annotator_1,3,lecture,,"to finding the area under some graph, in much the same way that our circle problem did. This happens whenever the quanti",false,multimodal_tvsum_style
+WUvTyaaNkzM,554.0,556.0,annotator_1,3,lecture,,"This happens whenever the quantities you're adding up,",false,multimodal_tvsum_style
+WUvTyaaNkzM,556.0,558.0,annotator_1,3,lecture,,"This happens whenever the quantities you're adding up, the one whose sum approximates the original problem,",false,multimodal_tvsum_style
+WUvTyaaNkzM,558.0,560.0,annotator_1,3,lecture,,"the one whose sum approximates the original problem, can be thought of as the areas of many thin rectangles sitting side",false,multimodal_tvsum_style
+WUvTyaaNkzM,560.0,562.0,annotator_1,3,lecture,,can be thought of as the areas of many thin rectangles sitting side by side.,false,multimodal_tvsum_style
+WUvTyaaNkzM,562.0,564.0,annotator_1,3,lecture,,can be thought of as the areas of many thin rectangles sitting side by side.,false,multimodal_tvsum_style
+WUvTyaaNkzM,564.0,566.0,annotator_1,3,lecture,,If finer and finer approximations of the original problem correspond to thinner and,false,multimodal_tvsum_style
+WUvTyaaNkzM,566.0,568.0,annotator_1,3,lecture,,If finer and finer approximations of the original problem correspond to thinner and,false,multimodal_tvsum_style
+WUvTyaaNkzM,568.0,570.0,annotator_1,3,lecture,,"If finer and finer approximations of the original problem correspond to thinner and thinner rings, then the original pro",false,multimodal_tvsum_style
+WUvTyaaNkzM,570.0,572.0,annotator_1,3,lecture,,"thinner rings, then the original problem is equivalent to finding the area under some",false,multimodal_tvsum_style
+WUvTyaaNkzM,572.0,574.0,annotator_1,3,lecture,,"thinner rings, then the original problem is equivalent to finding the area under some",false,multimodal_tvsum_style
+WUvTyaaNkzM,574.0,576.0,annotator_1,3,lecture,,"thinner rings, then the original problem is equivalent to finding the area under some graph.",false,multimodal_tvsum_style
+WUvTyaaNkzM,576.0,578.0,annotator_1,3,lecture,,"Again, this is an idea we'll see in more detail later in the series,",false,multimodal_tvsum_style
+WUvTyaaNkzM,578.0,580.0,annotator_1,3,lecture,,"Again, this is an idea we'll see in more detail later in the series,",false,multimodal_tvsum_style
+WUvTyaaNkzM,580.0,582.0,annotator_1,3,lecture,,"Again, this is an idea we'll see in more detail later in the series, so don't worry if it's not 100% clear right now.",false,multimodal_tvsum_style
+WUvTyaaNkzM,582.0,584.0,annotator_1,3,lecture,,"so don't worry if it's not 100% clear right now. The point now is that you, as the mathematician having just",false,multimodal_tvsum_style
+WUvTyaaNkzM,584.0,586.0,annotator_1,3,lecture,,"The point now is that you, as the mathematician having just",false,multimodal_tvsum_style
+WUvTyaaNkzM,586.0,588.0,annotator_1,3,lecture,,"The point now is that you, as the mathematician having just solved a problem by reframing it as the area under a graph,",false,multimodal_tvsum_style
+WUvTyaaNkzM,588.0,590.0,annotator_1,3,lecture,,"solved a problem by reframing it as the area under a graph,",false,multimodal_tvsum_style
+WUvTyaaNkzM,590.0,592.0,annotator_1,3,lecture,,"solved a problem by reframing it as the area under a graph, might start thinking about how to find the areas under other",false,multimodal_tvsum_style
+WUvTyaaNkzM,592.0,594.0,annotator_1,3,lecture,,might start thinking about how to find the areas under other graphs.,false,multimodal_tvsum_style
+WUvTyaaNkzM,594.0,596.0,annotator_1,3,lecture,,might start thinking about how to find the areas under other graphs. We were lucky in the circle problem that the releva,false,multimodal_tvsum_style
+WUvTyaaNkzM,596.0,598.0,annotator_1,3,lecture,,"We were lucky in the circle problem that the relevant area turned out to be a triangle,",false,multimodal_tvsum_style
+WUvTyaaNkzM,598.0,600.0,annotator_1,3,lecture,,"We were lucky in the circle problem that the relevant area turned out to be a triangle,",false,multimodal_tvsum_style
+WUvTyaaNkzM,600.0,602.0,annotator_1,3,lecture,,"We were lucky in the circle problem that the relevant area turned out to be a triangle, but imagine instead something li",false,multimodal_tvsum_style
+WUvTyaaNkzM,602.0,604.0,annotator_1,3,lecture,,"but imagine instead something like a parabola, the graph of x2.",false,multimodal_tvsum_style
+WUvTyaaNkzM,604.0,606.0,annotator_1,3,lecture,,"What's the area underneath that curve, say between",false,multimodal_tvsum_style
+WUvTyaaNkzM,606.0,608.0,annotator_1,3,lecture,,"What's the area underneath that curve, say between",false,multimodal_tvsum_style
+WUvTyaaNkzM,608.0,610.0,annotator_1,3,lecture,,"What's the area underneath that curve, say between the values of x equals 0 and x equals 3?",false,multimodal_tvsum_style
+WUvTyaaNkzM,610.0,612.0,annotator_1,3,lecture,,the values of x equals 0 and x equals 3?,false,multimodal_tvsum_style
+WUvTyaaNkzM,612.0,614.0,annotator_1,3,lecture,,"Well, it's hard to think about, right?",false,multimodal_tvsum_style
+WUvTyaaNkzM,614.0,616.0,annotator_1,3,lecture,,"Well, it's hard to think about, right? And let me reframe that question in a slightly different way.",false,multimodal_tvsum_style
+WUvTyaaNkzM,616.0,618.0,annotator_1,3,lecture,,And let me reframe that question in a slightly different way.,false,multimodal_tvsum_style
+WUvTyaaNkzM,618.0,620.0,annotator_1,3,lecture,,"And let me reframe that question in a slightly different way. We'll fix that left endpoint in place at 0, and let the ri",false,multimodal_tvsum_style
+WUvTyaaNkzM,620.0,622.0,annotator_1,3,lecture,,"We'll fix that left endpoint in place at 0, and let the right endpoint vary.",false,multimodal_tvsum_style
+WUvTyaaNkzM,622.0,624.0,annotator_1,3,lecture,,"We'll fix that left endpoint in place at 0, and let the right endpoint vary.",false,multimodal_tvsum_style
+WUvTyaaNkzM,624.0,626.0,annotator_1,3,lecture,,,false,multimodal_tvsum_style
+WUvTyaaNkzM,626.0,628.0,annotator_1,3,lecture,,"Are you able to find a function, a of x, that gives",false,multimodal_tvsum_style
+WUvTyaaNkzM,628.0,630.0,annotator_1,3,lecture,,"Are you able to find a function, a of x, that gives",false,multimodal_tvsum_style
+WUvTyaaNkzM,630.0,632.0,annotator_1,3,lecture,,"Are you able to find a function, a of x, that gives you the area under this parabola between 0 and x?",false,multimodal_tvsum_style
+WUvTyaaNkzM,632.0,634.0,annotator_1,3,lecture,,you the area under this parabola between 0 and x?,false,multimodal_tvsum_style
+WUvTyaaNkzM,634.0,636.0,annotator_1,3,lecture,,you the area under this parabola between 0 and x? A function a of x like this is called an integral of x2.,false,multimodal_tvsum_style
+WUvTyaaNkzM,636.0,638.0,annotator_1,3,lecture,,A function a of x like this is called an integral of x2.,false,multimodal_tvsum_style
+WUvTyaaNkzM,638.0,640.0,annotator_1,3,lecture,,A function a of x like this is called an integral of x2.,false,multimodal_tvsum_style
+WUvTyaaNkzM,640.0,642.0,annotator_1,3,lecture,,"Calculus holds within it the tools to figure out what an integral like this is,",false,multimodal_tvsum_style
+WUvTyaaNkzM,642.0,644.0,annotator_1,3,lecture,,"Calculus holds within it the tools to figure out what an integral like this is,",false,multimodal_tvsum_style
+WUvTyaaNkzM,644.0,646.0,annotator_1,3,lecture,,"Calculus holds within it the tools to figure out what an integral like this is, but right now it's just a mystery functi",false,multimodal_tvsum_style
+WUvTyaaNkzM,646.0,648.0,annotator_1,3,lecture,,but right now it's just a mystery function to us. We know it gives the area under the graph of x2 between some fixed lef,false,multimodal_tvsum_style
+WUvTyaaNkzM,648.0,650.0,annotator_1,3,lecture,,We know it gives the area under the graph of x2 between some fixed left,false,multimodal_tvsum_style
+WUvTyaaNkzM,650.0,652.0,annotator_1,3,lecture,,"We know it gives the area under the graph of x2 between some fixed left point and some variable right point, but we don'",false,multimodal_tvsum_style
+WUvTyaaNkzM,652.0,654.0,annotator_1,3,lecture,,"point and some variable right point, but we don't know what it is.",false,multimodal_tvsum_style
+WUvTyaaNkzM,654.0,656.0,annotator_1,3,lecture,,"point and some variable right point, but we don't know what it is. And again, the reason we care about this kind of ques",false,multimodal_tvsum_style
+WUvTyaaNkzM,656.0,658.0,annotator_1,3,lecture,,"And again, the reason we care about this kind of question is not just for",false,multimodal_tvsum_style
+WUvTyaaNkzM,658.0,660.0,annotator_1,3,lecture,,"And again, the reason we care about this kind of question is not just for the sake of asking hard geometry questions, it",false,multimodal_tvsum_style
+WUvTyaaNkzM,660.0,662.0,annotator_1,3,lecture,,"the sake of asking hard geometry questions, it's because many practical",false,multimodal_tvsum_style
+WUvTyaaNkzM,662.0,664.0,annotator_1,3,lecture,,"the sake of asking hard geometry questions, it's because many practical problems that can be approximated by adding up a",false,multimodal_tvsum_style
+WUvTyaaNkzM,664.0,666.0,annotator_1,3,lecture,,problems that can be approximated by adding up a large number of small,false,multimodal_tvsum_style
+WUvTyaaNkzM,666.0,668.0,annotator_1,3,lecture,,problems that can be approximated by adding up a large number of small,false,multimodal_tvsum_style
+WUvTyaaNkzM,668.0,670.0,annotator_1,3,lecture,,problems that can be approximated by adding up a large number of small things can be reframed as a question about an are,false,multimodal_tvsum_style
+WUvTyaaNkzM,670.0,672.0,annotator_1,3,lecture,,things can be reframed as a question about an area under a certain graph.,false,multimodal_tvsum_style
+WUvTyaaNkzM,672.0,674.0,annotator_1,3,lecture,,things can be reframed as a question about an area under a certain graph. I'll tell you right now that finding this area,false,multimodal_tvsum_style
+WUvTyaaNkzM,674.0,676.0,annotator_1,3,lecture,,"I'll tell you right now that finding this area, this integral function,",false,multimodal_tvsum_style
+WUvTyaaNkzM,676.0,678.0,annotator_1,3,lecture,,"I'll tell you right now that finding this area, this integral function, is genuinely hard, and whenever you come across ",false,multimodal_tvsum_style
+WUvTyaaNkzM,678.0,680.0,annotator_1,3,lecture,,"is genuinely hard, and whenever you come across a genuinely hard question in math,",false,multimodal_tvsum_style
+WUvTyaaNkzM,680.0,682.0,annotator_1,3,lecture,,"is genuinely hard, and whenever you come across a genuinely hard question in math, a good policy is to not try too hard ",false,multimodal_tvsum_style
+WUvTyaaNkzM,682.0,684.0,annotator_1,3,lecture,,"a good policy is to not try too hard to get at the answer directly,",false,multimodal_tvsum_style
+WUvTyaaNkzM,684.0,686.0,annotator_1,3,lecture,,"a good policy is to not try too hard to get at the answer directly, since usually you just end up banging your head agai",false,multimodal_tvsum_style
+WUvTyaaNkzM,686.0,688.0,annotator_1,3,lecture,,since usually you just end up banging your head against a wall.,false,multimodal_tvsum_style
+WUvTyaaNkzM,688.0,690.0,annotator_1,3,lecture,,since usually you just end up banging your head against a wall.,false,multimodal_tvsum_style
+WUvTyaaNkzM,690.0,692.0,annotator_1,3,lecture,,"Instead, play around with the idea, with no particular goal in mind.",false,multimodal_tvsum_style
+WUvTyaaNkzM,692.0,694.0,annotator_1,3,lecture,,"Instead, play around with the idea, with no particular goal in mind.",false,multimodal_tvsum_style
+WUvTyaaNkzM,694.0,696.0,annotator_1,3,lecture,,Spend some time building up familiarity with the interplay between the function,false,multimodal_tvsum_style
+WUvTyaaNkzM,696.0,698.0,annotator_1,3,lecture,,Spend some time building up familiarity with the interplay between the function,false,multimodal_tvsum_style
+WUvTyaaNkzM,698.0,700.0,annotator_1,3,lecture,,"Spend some time building up familiarity with the interplay between the function defining the graph, in this case x2, and",false,multimodal_tvsum_style
+WUvTyaaNkzM,700.0,702.0,annotator_1,3,lecture,,"defining the graph, in this case x2, and the function giving the area.",false,multimodal_tvsum_style
+WUvTyaaNkzM,702.0,704.0,annotator_1,3,lecture,,"defining the graph, in this case x2, and the function giving the area.",false,multimodal_tvsum_style
+WUvTyaaNkzM,704.0,706.0,annotator_1,3,lecture,,"In that playful spirit, if you're lucky, here's something you might notice.",false,multimodal_tvsum_style
+WUvTyaaNkzM,706.0,708.0,annotator_1,3,lecture,,"In that playful spirit, if you're lucky, here's something you might notice.",false,multimodal_tvsum_style
+WUvTyaaNkzM,708.0,710.0,annotator_1,3,lecture,,"In that playful spirit, if you're lucky, here's something you might notice. When you slightly increase x by some tiny nu",false,multimodal_tvsum_style
+WUvTyaaNkzM,710.0,712.0,annotator_1,3,lecture,,"When you slightly increase x by some tiny nudge dx, look at the resulting change in area,",false,multimodal_tvsum_style
+WUvTyaaNkzM,712.0,714.0,annotator_1,3,lecture,,"When you slightly increase x by some tiny nudge dx, look at the resulting change in area,",false,multimodal_tvsum_style
+WUvTyaaNkzM,714.0,716.0,annotator_1,4,lecture,,"When you slightly increase x by some tiny nudge dx, look at the resulting change in area, represented with this sliver I",false,multimodal_tvsum_style
+WUvTyaaNkzM,716.0,718.0,annotator_1,4,lecture,,represented with this sliver I'm going to call da for a tiny difference in area.,false,multimodal_tvsum_style
+WUvTyaaNkzM,718.0,720.0,annotator_1,4,lecture,,represented with this sliver I'm going to call da for a tiny difference in area.,false,multimodal_tvsum_style
+WUvTyaaNkzM,720.0,722.0,annotator_1,4,lecture,,represented with this sliver I'm going to call da for a tiny difference in area. That sliver can be pretty well approxim,false,multimodal_tvsum_style
+WUvTyaaNkzM,722.0,724.0,annotator_1,4,lecture,,"That sliver can be pretty well approximated with a rectangle,",false,multimodal_tvsum_style
+WUvTyaaNkzM,724.0,726.0,annotator_1,4,lecture,,"That sliver can be pretty well approximated with a rectangle, one whose height is x2 and whose width is dx.",false,multimodal_tvsum_style
+WUvTyaaNkzM,726.0,728.0,annotator_1,4,lecture,,one whose height is x2 and whose width is dx.,false,multimodal_tvsum_style
+WUvTyaaNkzM,728.0,730.0,annotator_1,4,lecture,,"one whose height is x2 and whose width is dx. And the smaller the size of that nudge dx, the",false,multimodal_tvsum_style
+WUvTyaaNkzM,730.0,732.0,annotator_1,4,lecture,,"And the smaller the size of that nudge dx, the",false,multimodal_tvsum_style
+WUvTyaaNkzM,732.0,734.0,annotator_1,4,lecture,,"And the smaller the size of that nudge dx, the more that sliver actually looks like a rectangle.",false,multimodal_tvsum_style
+WUvTyaaNkzM,734.0,736.0,annotator_1,4,lecture,,more that sliver actually looks like a rectangle.,false,multimodal_tvsum_style
+WUvTyaaNkzM,736.0,738.0,annotator_1,4,lecture,,This gives us an interesting way to think about how a of x is related to x2.,false,multimodal_tvsum_style
+WUvTyaaNkzM,738.0,740.0,annotator_1,4,lecture,,This gives us an interesting way to think about how a of x is related to x2.,false,multimodal_tvsum_style
+WUvTyaaNkzM,740.0,742.0,annotator_1,4,lecture,,This gives us an interesting way to think about how a of x is related to x2.,false,multimodal_tvsum_style
+WUvTyaaNkzM,742.0,744.0,annotator_1,5,lecture,,"A change to the output of a, this little da, is about equal to x2,",false,multimodal_tvsum_style
+WUvTyaaNkzM,744.0,746.0,annotator_1,5,lecture,,"A change to the output of a, this little da, is about equal to x2,",false,multimodal_tvsum_style
+WUvTyaaNkzM,746.0,748.0,annotator_1,5,lecture,,"A change to the output of a, this little da, is about equal to x2, where x is whatever input you started at, times dx,",false,multimodal_tvsum_style
+WUvTyaaNkzM,748.0,750.0,annotator_1,5,lecture,,"where x is whatever input you started at, times dx,",false,multimodal_tvsum_style
+WUvTyaaNkzM,750.0,752.0,annotator_1,5,lecture,,"where x is whatever input you started at, times dx, the little nudge to the input that caused a to change.",false,multimodal_tvsum_style
+WUvTyaaNkzM,752.0,754.0,annotator_1,5,lecture,,the little nudge to the input that caused a to change.,false,multimodal_tvsum_style
+WUvTyaaNkzM,754.0,756.0,annotator_1,5,lecture,,"Or rearranged, da divided by dx, the ratio of a tiny change in a to the tiny",false,multimodal_tvsum_style
+WUvTyaaNkzM,756.0,758.0,annotator_1,5,lecture,,"Or rearranged, da divided by dx, the ratio of a tiny change in a to the tiny",false,multimodal_tvsum_style
+WUvTyaaNkzM,758.0,760.0,annotator_1,5,lecture,,"Or rearranged, da divided by dx, the ratio of a tiny change in a to the tiny",false,multimodal_tvsum_style
+WUvTyaaNkzM,760.0,762.0,annotator_1,5,lecture,,"Or rearranged, da divided by dx, the ratio of a tiny change in a to the tiny change in x that caused it, is approximatel",false,multimodal_tvsum_style
+WUvTyaaNkzM,762.0,764.0,annotator_1,5,lecture,,"change in x that caused it, is approximately whatever x2 is at that point.",false,multimodal_tvsum_style
+WUvTyaaNkzM,764.0,766.0,annotator_1,5,lecture,,"change in x that caused it, is approximately whatever x2 is at that point.",false,multimodal_tvsum_style
+WUvTyaaNkzM,766.0,768.0,annotator_1,3,lecture,,And that's an approximation that should get better,false,multimodal_tvsum_style
+WUvTyaaNkzM,768.0,770.0,annotator_1,3,lecture,,And that's an approximation that should get better and better for smaller and smaller choices of dx.,false,multimodal_tvsum_style
+WUvTyaaNkzM,770.0,772.0,annotator_1,3,lecture,,and better for smaller and smaller choices of dx.,false,multimodal_tvsum_style
+WUvTyaaNkzM,772.0,774.0,annotator_1,3,lecture,,"In other words, we don't know what a of x is, that remains a mystery.",false,multimodal_tvsum_style
+WUvTyaaNkzM,774.0,776.0,annotator_1,3,lecture,,"In other words, we don't know what a of x is, that remains a mystery.",false,multimodal_tvsum_style
+WUvTyaaNkzM,776.0,778.0,annotator_1,3,lecture,,But we do know a property that this mystery function must have.,false,multimodal_tvsum_style
+WUvTyaaNkzM,778.0,780.0,annotator_1,3,lecture,,But we do know a property that this mystery function must have.,false,multimodal_tvsum_style
+WUvTyaaNkzM,780.0,782.0,annotator_1,3,lecture,,"When you look at two nearby points, for example 3 and 3.001,",false,multimodal_tvsum_style
+WUvTyaaNkzM,782.0,784.0,annotator_1,3,lecture,,"When you look at two nearby points, for example 3 and 3.001,",false,multimodal_tvsum_style
+WUvTyaaNkzM,784.0,786.0,annotator_1,3,lecture,,"When you look at two nearby points, for example 3 and 3.001, consider the change to the output of a between those two po",false,multimodal_tvsum_style
+WUvTyaaNkzM,786.0,788.0,annotator_1,3,lecture,,"consider the change to the output of a between those two points,",false,multimodal_tvsum_style
+WUvTyaaNkzM,788.0,790.0,annotator_1,3,lecture,,"consider the change to the output of a between those two points,",false,multimodal_tvsum_style
+WUvTyaaNkzM,790.0,792.0,annotator_1,3,lecture,,"consider the change to the output of a between those two points, the difference between the mystery function evaluated a",false,multimodal_tvsum_style
+WUvTyaaNkzM,792.0,794.0,annotator_1,3,lecture,,the difference between the mystery function evaluated at 3.001 and 3.001.,false,multimodal_tvsum_style
+WUvTyaaNkzM,794.0,796.0,annotator_1,3,lecture,,the difference between the mystery function evaluated at 3.001 and 3.001.,false,multimodal_tvsum_style
+WUvTyaaNkzM,796.0,798.0,annotator_1,3,lecture,,"the difference between the mystery function evaluated at 3.001 and 3.001. That change, divided by the difference in the ",false,multimodal_tvsum_style
+WUvTyaaNkzM,798.0,800.0,annotator_1,3,lecture,,"That change, divided by the difference in the input values, which in this case is 0.001,",false,multimodal_tvsum_style
+WUvTyaaNkzM,800.0,802.0,annotator_1,3,lecture,,"That change, divided by the difference in the input values, which in this case is 0.001,",false,multimodal_tvsum_style
+WUvTyaaNkzM,802.0,804.0,annotator_1,3,lecture,,"That change, divided by the difference in the input values, which in this case is 0.001, should be about equal to the va",false,multimodal_tvsum_style
+WUvTyaaNkzM,804.0,806.0,annotator_1,3,lecture,,"should be about equal to the value of x2 for the starting input, in this case 3 squared.",false,multimodal_tvsum_style
+WUvTyaaNkzM,806.0,808.0,annotator_1,3,lecture,,"should be about equal to the value of x2 for the starting input, in this case 3 squared.",false,multimodal_tvsum_style
+WUvTyaaNkzM,808.0,810.0,annotator_1,3,lecture,,"should be about equal to the value of x2 for the starting input, in this case 3 squared.",false,multimodal_tvsum_style
+WUvTyaaNkzM,810.0,812.0,annotator_1,3,lecture,,And this relationship between tiny changes to the mystery function,false,multimodal_tvsum_style
+WUvTyaaNkzM,812.0,814.0,annotator_1,3,lecture,,And this relationship between tiny changes to the mystery function,false,multimodal_tvsum_style
+WUvTyaaNkzM,814.0,816.0,annotator_1,3,lecture,,"And this relationship between tiny changes to the mystery function and the values of x2 itself is true at all inputs, no",false,multimodal_tvsum_style
+WUvTyaaNkzM,816.0,818.0,annotator_1,3,lecture,,"and the values of x2 itself is true at all inputs, not just 3.",false,multimodal_tvsum_style
+WUvTyaaNkzM,818.0,820.0,annotator_1,3,lecture,,"and the values of x2 itself is true at all inputs, not just 3. That doesn't immediately tell us how to find a of x,",false,multimodal_tvsum_style
+WUvTyaaNkzM,820.0,822.0,annotator_1,3,lecture,,"That doesn't immediately tell us how to find a of x, but it provides a very strong clue that we can work with.",false,multimodal_tvsum_style
+WUvTyaaNkzM,822.0,824.0,annotator_1,3,lecture,,but it provides a very strong clue that we can work with.,false,multimodal_tvsum_style
+WUvTyaaNkzM,824.0,826.0,annotator_1,3,lecture,,but it provides a very strong clue that we can work with.,false,multimodal_tvsum_style
+WUvTyaaNkzM,826.0,828.0,annotator_1,3,lecture,,And there's nothing special about the graph x2 here.,false,multimodal_tvsum_style
+WUvTyaaNkzM,828.0,830.0,annotator_1,3,lecture,,And there's nothing special about the graph x2 here. Any function defined as the area under some graph has this property,false,multimodal_tvsum_style
+WUvTyaaNkzM,830.0,832.0,annotator_1,3,lecture,,"Any function defined as the area under some graph has this property,",false,multimodal_tvsum_style
+WUvTyaaNkzM,832.0,834.0,annotator_1,3,lecture,,"Any function defined as the area under some graph has this property, that da divided by dx, a slight nudge to the output",false,multimodal_tvsum_style
+WUvTyaaNkzM,834.0,836.0,annotator_1,3,lecture,,"that da divided by dx, a slight nudge to the output of a divided by a slight",false,multimodal_tvsum_style
+WUvTyaaNkzM,836.0,838.0,annotator_1,3,lecture,,"that da divided by dx, a slight nudge to the output of a divided by a slight",false,multimodal_tvsum_style
+WUvTyaaNkzM,838.0,840.0,annotator_1,3,lecture,,"that da divided by dx, a slight nudge to the output of a divided by a slight nudge to the input that caused it, is about",false,multimodal_tvsum_style
+WUvTyaaNkzM,840.0,842.0,annotator_1,3,lecture,,"nudge to the input that caused it, is about equal to the height of the graph at",false,multimodal_tvsum_style
+WUvTyaaNkzM,842.0,844.0,annotator_1,3,lecture,,"nudge to the input that caused it, is about equal to the height of the graph at that point.",false,multimodal_tvsum_style
+WUvTyaaNkzM,844.0,846.0,annotator_1,3,lecture,,that point.,false,multimodal_tvsum_style
+WUvTyaaNkzM,846.0,848.0,annotator_1,3,lecture,,"Again, that's an approximation that gets better and better for smaller choices of dx.",false,multimodal_tvsum_style
+WUvTyaaNkzM,848.0,850.0,annotator_1,3,lecture,,"Again, that's an approximation that gets better and better for smaller choices of dx.",false,multimodal_tvsum_style
+WUvTyaaNkzM,850.0,852.0,annotator_1,3,lecture,,"Again, that's an approximation that gets better and better for smaller choices of dx. And here, we're stumbling into ano",false,multimodal_tvsum_style
+WUvTyaaNkzM,852.0,854.0,annotator_1,3,lecture,,"And here, we're stumbling into another big idea from calculus, derivatives.",false,multimodal_tvsum_style
+WUvTyaaNkzM,854.0,856.0,annotator_1,3,lecture,,"And here, we're stumbling into another big idea from calculus, derivatives.",false,multimodal_tvsum_style
+WUvTyaaNkzM,856.0,858.0,annotator_1,3,lecture,,"And here, we're stumbling into another big idea from calculus, derivatives. This ratio da divided by dx is called the de",false,multimodal_tvsum_style
+WUvTyaaNkzM,858.0,860.0,annotator_1,3,lecture,,"This ratio da divided by dx is called the derivative of a, or more technically,",false,multimodal_tvsum_style
+WUvTyaaNkzM,860.0,862.0,annotator_1,3,lecture,,"This ratio da divided by dx is called the derivative of a, or more technically,",false,multimodal_tvsum_style
+WUvTyaaNkzM,862.0,864.0,annotator_1,3,lecture,,"This ratio da divided by dx is called the derivative of a, or more technically, the derivative is whatever this ratio ap",false,multimodal_tvsum_style
+WUvTyaaNkzM,864.0,866.0,annotator_1,3,lecture,,the derivative is whatever this ratio approaches as dx gets smaller and smaller.,false,multimodal_tvsum_style
+WUvTyaaNkzM,866.0,868.0,annotator_1,3,lecture,,the derivative is whatever this ratio approaches as dx gets smaller and smaller.,false,multimodal_tvsum_style
+WUvTyaaNkzM,868.0,870.0,annotator_1,3,lecture,,"I'll dive much more deeply into the idea of a derivative in the next video,",false,multimodal_tvsum_style
+WUvTyaaNkzM,870.0,872.0,annotator_1,3,lecture,,"I'll dive much more deeply into the idea of a derivative in the next video,",false,multimodal_tvsum_style
+WUvTyaaNkzM,872.0,874.0,annotator_1,3,lecture,,"I'll dive much more deeply into the idea of a derivative in the next video, but loosely speaking it's a measure of how s",false,multimodal_tvsum_style
+WUvTyaaNkzM,874.0,876.0,annotator_1,3,lecture,,but loosely speaking it's a measure of how sensitive a function is to small changes in,false,multimodal_tvsum_style
+WUvTyaaNkzM,876.0,878.0,annotator_1,3,lecture,,but loosely speaking it's a measure of how sensitive a function is to small changes in its input. You'll see as the seri,false,multimodal_tvsum_style
+WUvTyaaNkzM,878.0,880.0,annotator_1,3,lecture,,"You'll see as the series goes on that there are many ways you can visualize a derivative,",false,multimodal_tvsum_style
+WUvTyaaNkzM,880.0,882.0,annotator_1,3,lecture,,"You'll see as the series goes on that there are many ways you can visualize a derivative,",false,multimodal_tvsum_style
+WUvTyaaNkzM,882.0,884.0,annotator_1,3,lecture,,"You'll see as the series goes on that there are many ways you can visualize a derivative, depending on what function you",false,multimodal_tvsum_style
+WUvTyaaNkzM,884.0,886.0,annotator_1,3,lecture,,depending on what function you're looking at and how you think about tiny nudges to its output.,false,multimodal_tvsum_style
+WUvTyaaNkzM,886.0,888.0,annotator_1,3,lecture,,about tiny nudges to its output.,false,multimodal_tvsum_style
+WUvTyaaNkzM,888.0,890.0,annotator_1,3,lecture,,"We care about derivatives because they help us solve problems,",false,multimodal_tvsum_style
+WUvTyaaNkzM,890.0,892.0,annotator_1,3,lecture,,"We care about derivatives because they help us solve problems,",false,multimodal_tvsum_style
+WUvTyaaNkzM,892.0,894.0,annotator_1,3,lecture,,"We care about derivatives because they help us solve problems, and in our little exploration here, we already have a gli",false,multimodal_tvsum_style
+WUvTyaaNkzM,894.0,896.0,annotator_1,3,lecture,,"and in our little exploration here, we already have a glimpse of one way they're used.",false,multimodal_tvsum_style
+WUvTyaaNkzM,896.0,898.0,annotator_1,3,lecture,,"and in our little exploration here, we already have a glimpse of one way they're used. They are the key to solving integ",false,multimodal_tvsum_style
+WUvTyaaNkzM,898.0,900.0,annotator_1,4,lecture,,"They are the key to solving integral questions,",false,multimodal_tvsum_style
+WUvTyaaNkzM,900.0,902.0,annotator_1,4,lecture,,"They are the key to solving integral questions, problems that require finding the area under a curve.",false,multimodal_tvsum_style
+WUvTyaaNkzM,902.0,904.0,annotator_1,4,lecture,,problems that require finding the area under a curve.,false,multimodal_tvsum_style
+WUvTyaaNkzM,904.0,906.0,annotator_1,4,lecture,,"Once you gain enough familiarity with computing derivatives,",false,multimodal_tvsum_style
+WUvTyaaNkzM,906.0,908.0,annotator_1,4,lecture,,"Once you gain enough familiarity with computing derivatives, you'll be able to look at a situation like this one where y",false,multimodal_tvsum_style
+WUvTyaaNkzM,908.0,910.0,annotator_1,4,lecture,,you'll be able to look at a situation like this one where you don't know what a function,false,multimodal_tvsum_style
+WUvTyaaNkzM,910.0,912.0,annotator_1,4,lecture,,you'll be able to look at a situation like this one where you don't know what a function,false,multimodal_tvsum_style
+WUvTyaaNkzM,912.0,914.0,annotator_1,4,lecture,,"you'll be able to look at a situation like this one where you don't know what a function is, but you do know that its de",false,multimodal_tvsum_style
+WUvTyaaNkzM,914.0,916.0,annotator_1,4,lecture,,"is, but you do know that its derivative should be x2, and from that reverse engineer what the function must be.",false,multimodal_tvsum_style
+WUvTyaaNkzM,916.0,918.0,annotator_1,4,lecture,,and from that reverse engineer what the function must be.,false,multimodal_tvsum_style
+WUvTyaaNkzM,918.0,920.0,annotator_1,4,lecture,,and from that reverse engineer what the function must be.,false,multimodal_tvsum_style
+WUvTyaaNkzM,920.0,922.0,annotator_1,5,lecture,,"This back and forth between integrals and derivatives,",false,multimodal_tvsum_style
+WUvTyaaNkzM,922.0,924.0,annotator_1,5,lecture,,"This back and forth between integrals and derivatives, where the derivative of a function for the area under a graph giv",false,multimodal_tvsum_style
+WUvTyaaNkzM,924.0,926.0,annotator_1,5,lecture,,where the derivative of a function for the area under a graph gives you,false,multimodal_tvsum_style
+WUvTyaaNkzM,926.0,928.0,annotator_1,5,lecture,,"where the derivative of a function for the area under a graph gives you back the function defining the graph itself, is ",false,multimodal_tvsum_style
+WUvTyaaNkzM,928.0,930.0,annotator_1,5,lecture,,"back the function defining the graph itself, is called the fundamental",false,multimodal_tvsum_style
+WUvTyaaNkzM,930.0,932.0,annotator_1,5,lecture,,"back the function defining the graph itself, is called the fundamental",false,multimodal_tvsum_style
+WUvTyaaNkzM,932.0,934.0,annotator_1,5,lecture,,"back the function defining the graph itself, is called the fundamental theorem of calculus.",false,multimodal_tvsum_style
+WUvTyaaNkzM,934.0,936.0,annotator_1,5,lecture,,"It ties together the two big ideas of integrals and derivatives,",false,multimodal_tvsum_style
+WUvTyaaNkzM,936.0,938.0,annotator_1,5,lecture,,"It ties together the two big ideas of integrals and derivatives,",false,multimodal_tvsum_style
+WUvTyaaNkzM,938.0,940.0,annotator_1,5,lecture,,"It ties together the two big ideas of integrals and derivatives, and shows how each one is an inverse of the other.",false,multimodal_tvsum_style
+WUvTyaaNkzM,940.0,942.0,annotator_1,5,lecture,,and shows how each one is an inverse of the other.,false,multimodal_tvsum_style
+WUvTyaaNkzM,942.0,944.0,annotator_1,5,lecture,,and shows how each one is an inverse of the other.,false,multimodal_tvsum_style
+WUvTyaaNkzM,944.0,946.0,annotator_1,3,lecture,,"All of this is only a high-level view, just a peek",false,multimodal_tvsum_style
+WUvTyaaNkzM,946.0,948.0,annotator_1,3,lecture,,"All of this is only a high-level view, just a peek at some of the core ideas that emerge in calculus.",false,multimodal_tvsum_style
+WUvTyaaNkzM,948.0,950.0,annotator_1,3,lecture,,at some of the core ideas that emerge in calculus.,false,multimodal_tvsum_style
+WUvTyaaNkzM,950.0,952.0,annotator_1,3,lecture,,"And what follows in this series are the details, for derivatives and integrals and more.",false,multimodal_tvsum_style
+WUvTyaaNkzM,952.0,954.0,annotator_1,3,lecture,,"And what follows in this series are the details, for derivatives and integrals and more.",false,multimodal_tvsum_style
+WUvTyaaNkzM,954.0,956.0,annotator_1,3,lecture,,"And what follows in this series are the details, for derivatives and integrals and more. At all points, I want you to fe",false,multimodal_tvsum_style
+WUvTyaaNkzM,956.0,958.0,annotator_1,3,lecture,,"At all points, I want you to feel that you could have invented calculus yourself,",false,multimodal_tvsum_style
+WUvTyaaNkzM,958.0,960.0,annotator_1,3,lecture,,"At all points, I want you to feel that you could have invented calculus yourself, that if you drew the right pictures an",false,multimodal_tvsum_style
+WUvTyaaNkzM,960.0,962.0,annotator_1,3,lecture,,"that if you drew the right pictures and played with each idea in just the right way,",false,multimodal_tvsum_style
+WUvTyaaNkzM,962.0,964.0,annotator_1,3,lecture,,"that if you drew the right pictures and played with each idea in just the right way, these formulas and rules and constr",false,multimodal_tvsum_style
+WUvTyaaNkzM,964.0,966.0,annotator_1,3,lecture,,these formulas and rules and constructs that are presented could have just,false,multimodal_tvsum_style
+WUvTyaaNkzM,966.0,968.0,annotator_1,3,lecture,,these formulas and rules and constructs that are presented could have just as easily popped out naturally from your own ,false,multimodal_tvsum_style
+WUvTyaaNkzM,968.0,970.0,annotator_1,3,lecture,,as easily popped out naturally from your own explorations.,false,multimodal_tvsum_style
+WUvTyaaNkzM,970.0,972.0,annotator_1,3,lecture,,as easily popped out naturally from your own explorations.,false,multimodal_tvsum_style
+WUvTyaaNkzM,972.0,974.0,annotator_1,1,lecture,,"And before you go, it would feel wrong not to give the people who supported this",false,multimodal_tvsum_style
+WUvTyaaNkzM,974.0,976.0,annotator_1,1,lecture,,"And before you go, it would feel wrong not to give the people who supported this",false,multimodal_tvsum_style
+WUvTyaaNkzM,976.0,978.0,annotator_1,1,lecture,,"And before you go, it would feel wrong not to give the people who supported this series on Patreon a well-deserved thank",false,multimodal_tvsum_style
+WUvTyaaNkzM,978.0,980.0,annotator_1,1,lecture,,"series on Patreon a well-deserved thanks, both for their financial backing as",false,multimodal_tvsum_style
+WUvTyaaNkzM,980.0,982.0,annotator_1,1,lecture,,"series on Patreon a well-deserved thanks, both for their financial backing as well as for the suggestions they gave whil",false,multimodal_tvsum_style
+WUvTyaaNkzM,982.0,984.0,annotator_1,1,lecture,,well as for the suggestions they gave while the series was being developed.,false,multimodal_tvsum_style
+WUvTyaaNkzM,984.0,986.0,annotator_1,1,lecture,,"You see, supporters got early access to the videos as I made them,",false,multimodal_tvsum_style
+WUvTyaaNkzM,986.0,988.0,annotator_1,1,lecture,,"You see, supporters got early access to the videos as I made them, and they'll continue to get early access for future e",false,multimodal_tvsum_style
+WUvTyaaNkzM,988.0,990.0,annotator_1,1,lecture,,and they'll continue to get early access for future essence-of type series.,false,multimodal_tvsum_style
+WUvTyaaNkzM,990.0,992.0,annotator_1,1,lecture,,and they'll continue to get early access for future essence-of type series.,false,multimodal_tvsum_style
+WUvTyaaNkzM,992.0,994.0,annotator_1,1,lecture,,"And as a thanks to the community, I keep ads off of new videos for their first month.",false,multimodal_tvsum_style
+WUvTyaaNkzM,994.0,996.0,annotator_1,1,lecture,,"And as a thanks to the community, I keep ads off of new videos for their first month.",false,multimodal_tvsum_style
+WUvTyaaNkzM,996.0,998.0,annotator_1,1,lecture,,"And as a thanks to the community, I keep ads off of new videos for their first month. I'm still astounded that I can spe",false,multimodal_tvsum_style
+WUvTyaaNkzM,998.0,1000.0,annotator_1,1,lecture,,"I'm still astounded that I can spend time working on videos like these,",false,multimodal_tvsum_style
+WUvTyaaNkzM,1000.0,1002.0,annotator_1,1,lecture,,"I'm still astounded that I can spend time working on videos like these, and in a very direct way, you are the one to tha",false,multimodal_tvsum_style
+WUvTyaaNkzM,1002.0,1004.0,annotator_1,1,lecture,,"and in a very direct way, you are the one to thank for that.",false,multimodal_tvsum_style
+WUvTyaaNkzM,1004.0,1006.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+WUvTyaaNkzM,1006.0,1008.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+WUvTyaaNkzM,1008.0,1010.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+WUvTyaaNkzM,1010.0,1012.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+WUvTyaaNkzM,1012.0,1014.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+WUvTyaaNkzM,1014.0,1016.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+WUvTyaaNkzM,1016.0,1018.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+WUvTyaaNkzM,1018.0,1020.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+WUvTyaaNkzM,1020.0,1022.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+WUvTyaaNkzM,1022.0,1024.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+WUvTyaaNkzM,1024.0,1026.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
