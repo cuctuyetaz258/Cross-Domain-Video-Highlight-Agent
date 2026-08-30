@@ -60,6 +60,7 @@ dist/
 docs/*
 !docs/sample_videos.md
 !docs/in_domain_ltr_5fold_report.md
+!docs/docker.md
 
 # Local Kaggle upload and verification bundles
 kaggle_checkpoint_upload/
