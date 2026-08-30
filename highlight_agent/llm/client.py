@@ -4,8 +4,9 @@ from __future__ import annotations
 
 import json
 import os
+from copy import deepcopy
 from dataclasses import dataclass
-from typing import Literal, Protocol
+from typing import Any, Literal, Protocol
 
 from dotenv import load_dotenv
 from openai import OpenAI
@@ -66,6 +67,29 @@ class AssessmentClient(Protocol):
 
 class LLMProviderError(RuntimeError):
     """Lỗi provider được phép fallback về LTR."""
+
+
+def _openai_strict_schema() -> dict[str, Any]:
+    """Adapt Pydantic's backward-compatible schema to OpenAI strict mode."""
+
+    schema = deepcopy(LLMHighlightAssessmentBatch.model_json_schema())
+
+    def require_all_properties(node: Any) -> None:
+        if isinstance(node, dict):
+            # OpenAI strict schemas require every declared property, including
+            # nullable fields. Keep Pydantic defaults for reading legacy caches.
+            node.pop("default", None)
+            properties = node.get("properties")
+            if isinstance(properties, dict):
+                node["required"] = list(properties)
+            for value in node.values():
+                require_all_properties(value)
+        elif isinstance(node, list):
+            for value in node:
+                require_all_properties(value)
+
+    require_all_properties(schema)
+    return schema
 
 
 @dataclass(frozen=True)
@@ -172,7 +196,7 @@ class OpenAICompatibleAssessmentClient:
                 "json_schema": {
                     "name": "highlight_assessments",
                     "strict": True,
-                    "schema": LLMHighlightAssessmentBatch.model_json_schema(),
+                    "schema": _openai_strict_schema(),
                 },
             }
         else:

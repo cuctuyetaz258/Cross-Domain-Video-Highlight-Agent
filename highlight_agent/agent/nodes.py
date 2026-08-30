@@ -500,9 +500,10 @@ def _build_highlight_explanation(
         return "\n\n".join(lines)
 
     score_label = (
-        f"**📊 Multimodal Score**: {candidate.score:.2f}/10"
-        if candidate.score > 1.0
-        else f"**📊 Multimodal Score**: {candidate.score:.3f}"
+        f"**📊 LTR Relative Rank Score**: {candidate.score:.1%} "
+        "(normalized within this video)"
+        if 0.0 <= candidate.score <= 1.0
+        else f"**📊 LTR Score**: {candidate.score:.3f}"
     )
 
     if llm_run and llm_run.fallback_reason:

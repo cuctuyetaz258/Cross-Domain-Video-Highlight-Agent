@@ -77,6 +77,11 @@ def test_openai_provider_uses_strict_json_schema() -> None:
     response_format = completions.kwargs["response_format"]
     assert response_format["type"] == "json_schema"
     assert response_format["json_schema"]["strict"] is True
+    assessment_schema = response_format["json_schema"]["schema"]["$defs"][
+        "LLMHighlightAssessment"
+    ]
+    assert set(assessment_schema["required"]) == set(assessment_schema["properties"])
+    assert "default" not in assessment_schema["properties"]["overall_quality"]
 
 
 def test_groq_provider_uses_compatible_json_mode() -> None:

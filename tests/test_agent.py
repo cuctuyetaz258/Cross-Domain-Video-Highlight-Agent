@@ -229,7 +229,8 @@ def test_explain_generates_user_friendly_offline_reasoning() -> None:
     assert "🎯 Highlight #1" in explanation
     assert "0:49 – 1:24" in explanation
     assert "Semantic explanation unavailable (LLM API key not provided or LLM disabled)" in explanation
-    assert "📊 Multimodal Score" in explanation
+    assert "📊 LTR Relative Rank Score**: 95.0%" in explanation
+    assert "normalized within this video" in explanation
 
 
 def test_explain_generates_user_friendly_llm_reasoning() -> None:
