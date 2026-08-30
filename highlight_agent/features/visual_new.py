@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -59,6 +60,14 @@ def extract_scene_observation(
     if threshold <= 0 or min_scene_len < 1:
         raise ValueError("threshold must be positive and min_scene_len must be at least one")
 
+    if os.getenv("HIGHLIGHT_AGENT_SCENE_BACKEND") == "opencv":
+        return _extract_scene_observation_opencv(
+            video_path,
+            duration,
+            threshold=threshold,
+            min_scene_len=min_scene_len,
+        )
+
     try:
         from scenedetect import ContentDetector, detect
 
@@ -72,6 +81,49 @@ def extract_scene_observation(
     timestamps = [float(start.get_seconds()) for start, _ in scenes]
     valid = [timestamp for timestamp in timestamps if 0.0 <= timestamp <= duration]
     return SceneExtraction(valid, "ok" if valid else "no_scene_detected")
+
+
+def _extract_scene_observation_opencv(
+    video_path: str | Path,
+    duration: float,
+    *,
+    threshold: float,
+    min_scene_len: int,
+) -> SceneExtraction:
+    """Portable fallback for environments where SceneDetect cannot decode media."""
+
+    try:
+        import cv2
+    except ImportError as exc:
+        return SceneExtraction([], "extraction_failed", str(exc))
+    capture = cv2.VideoCapture(str(video_path))
+    if not capture.isOpened():
+        capture.release()
+        return SceneExtraction([], "extraction_failed", "video cannot be opened")
+    fps = float(capture.get(cv2.CAP_PROP_FPS))
+    sample_interval = 5.0
+    minimum_seconds = (
+        max(sample_interval, min_scene_len / fps) if fps > 0 else sample_interval
+    )
+    previous = None
+    last_cut = -minimum_seconds
+    timestamps: list[float] = []
+    try:
+        for timestamp in np.arange(0.0, duration, sample_interval):
+            capture.set(cv2.CAP_PROP_POS_MSEC, float(timestamp * 1000.0))
+            success, frame = capture.read()
+            if not success or frame is None:
+                continue
+            small = cv2.resize(frame, (160, 90), interpolation=cv2.INTER_AREA)
+            if previous is not None:
+                difference = float(cv2.absdiff(small, previous).mean())
+                if difference >= threshold and timestamp - last_cut >= minimum_seconds:
+                    timestamps.append(float(timestamp))
+                    last_cut = float(timestamp)
+            previous = small
+    finally:
+        capture.release()
+    return SceneExtraction(timestamps, "ok" if timestamps else "no_scene_detected")
 
 
 def extract_gesture_signal(
@@ -134,6 +186,7 @@ def extract_gesture_observation(
             fps = float(capture.get(cv2.CAP_PROP_FPS)) if hasattr(capture, "get") else 0.0
             can_decode_sequentially = (
                 fps > 0
+                and sample_rate >= 1.0
                 and hasattr(capture, "grab")
                 and hasattr(capture, "retrieve")
             )

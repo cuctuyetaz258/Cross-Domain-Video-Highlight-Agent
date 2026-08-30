@@ -16,16 +16,18 @@ from highlight_agent.schemas import (
 
 from .client import PROMPT_VERSION, AssessmentClient
 from .context import build_candidate_contexts, has_usable_transcript
+from .fusion import FUSION_METHOD, fuse_ranked_scores, percentile_rank
 
 
 def _normalize_scores(candidates: list[HighlightCandidate]) -> dict[str, float]:
-    values = [candidate.score for candidate in candidates]
-    low, high = min(values), max(values)
-    if high - low <= 1e-9:
-        return {candidate.candidate_id: 0.5 for candidate in candidates}
+    values = fuse_ranked_scores(
+        [candidate.score for candidate in candidates],
+        [0.0 for _ in candidates],
+        alpha=1.0,
+    )
     return {
-        candidate.candidate_id: (candidate.score - low) / (high - low)
-        for candidate in candidates
+        candidate.candidate_id: float(value)
+        for candidate, value in zip(candidates, values)
     }
 
 
@@ -58,11 +60,26 @@ def hybrid_rerank(
         raise ValueError("every candidate must have exactly one LLM assessment")
 
     ltr_scores = _normalize_scores(candidates)
+    llm_scores = {
+        candidate.candidate_id: float(assessment_map[candidate.candidate_id].semantic_quality())
+        for candidate in candidates
+    }
+    llm_ranks = {
+        candidate.candidate_id: float(rank)
+        for candidate, rank in zip(
+            candidates,
+            percentile_rank([llm_scores[candidate.candidate_id] for candidate in candidates]),
+        )
+    }
+    hybrid_scores = fuse_ranked_scores(
+        [candidate.score for candidate in candidates],
+        [llm_scores[candidate.candidate_id] for candidate in candidates],
+        alpha=ltr_weight,
+    )
     reranked: list[HighlightCandidate] = []
-    for candidate in candidates:
+    for candidate, hybrid_score in zip(candidates, hybrid_scores):
         assessment = assessment_map[candidate.candidate_id]
         semantic_quality = assessment.semantic_quality()
-        hybrid_score = ltr_weight * ltr_scores[candidate.candidate_id] + (1 - ltr_weight) * semantic_quality
         reranked.append(
             candidate.model_copy(
                 update={
@@ -75,6 +92,9 @@ def hybrid_rerank(
                         "ltr_score_original": candidate.score,
                         "ltr_score_normalized": round(ltr_scores[candidate.candidate_id], 6),
                         "llm_semantic_quality": round(semantic_quality, 6),
+                        "llm_score_rank": round(llm_ranks[candidate.candidate_id], 6),
+                        "fusion_method": FUSION_METHOD,
+                        "fusion_alpha": ltr_weight,
                     },
                 }
             )

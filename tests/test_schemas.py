@@ -46,6 +46,18 @@ def test_transcript_document_accepts_sorted_word_timestamps() -> None:
     assert document.segments[0].words[1].text == "world"
 
 
+def test_transcript_document_accepts_explicit_no_speech_benchmark() -> None:
+    document = TranscriptDocument(
+        video_id="benchmark-video",
+        language="und",
+        source="whisper",
+        duration=60,
+        segments=[],
+    )
+
+    assert document.segments == []
+
+
 @pytest.mark.parametrize("start,end", [(0, 29.9), (0, 90.1), (50, 49)])
 def test_highlight_candidate_enforces_mvp_duration(start: float, end: float) -> None:
     with pytest.raises(ValidationError):

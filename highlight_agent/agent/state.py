@@ -77,7 +77,7 @@ class AgentState(TypedDict, total=False):
     llm_model: NotRequired[str | None]
     llm_base_url: NotRequired[str | None]
     llm_top_m: NotRequired[int]
-    llm_ltr_weight: NotRequired[float]
+    fusion_calibrator_path: NotRequired[str | None]
     llm_timeout_seconds: NotRequired[float]
     llm_assessments: NotRequired[list[LLMHighlightAssessment]]
     llm_run: NotRequired[LLMRunInfo]

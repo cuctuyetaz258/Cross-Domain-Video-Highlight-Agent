@@ -60,11 +60,16 @@ def render_video_mockup(data: dict):
 
                     debug_info = {}
                     if raw_cand:
+                        visible_signals = {
+                            key: value
+                            for key, value in raw_cand.get("signals", {}).items()
+                            if key not in {"fusion_alpha"}
+                        }
                         debug_info["candidate_metrics"] = {
                             "candidate_id": raw_cand.get("candidate_id"),
                             "score": raw_cand.get("score"),
                             "internal_reason": raw_cand.get("reason"),
-                            "signals": raw_cand.get("signals", {}),
+                            "signals": visible_signals,
                         }
                     if raw_bound:
                         debug_info["boundary_refinement"] = {
@@ -75,11 +80,7 @@ def render_video_mockup(data: dict):
                         }
                     if raw_assess:
                         debug_info["llm_raw_assessment"] = {
-                            "semantic_relevance": raw_assess.get("semantic_relevance"),
-                            "standalone_value": raw_assess.get("standalone_value"),
-                            "completeness": raw_assess.get("completeness"),
-                            "hook_strength": raw_assess.get("hook_strength"),
-                            "shareability": raw_assess.get("shareability"),
+                            "overall_quality": raw_assess.get("overall_quality"),
                             "risk_flags": raw_assess.get("risk_flags", []),
                         }
                     st.json(debug_info if debug_info else highlight)

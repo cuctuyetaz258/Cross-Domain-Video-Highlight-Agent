@@ -17,6 +17,7 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 from highlight_agent.media import (  # noqa: E402
+    MediaProcessingError,
     extract_audio_16k_mono,
     probe_duration,
     save_transcript,
@@ -24,6 +25,7 @@ from highlight_agent.media import (  # noqa: E402
 )
 from highlight_agent.models.train_offline import load_tvsum  # noqa: E402
 from highlight_agent.paths import portable_relative_path  # noqa: E402
+from highlight_agent.schemas import TranscriptDocument  # noqa: E402
 
 VIDEO_SUFFIXES = (".m4v", ".mkv", ".mov", ".mp4", ".webm")
 
@@ -78,12 +80,15 @@ def _assign_tvsum_splits(
     *,
     train_count: int,
     val_count: int,
+    test_count: int = 0,
 ) -> list[dict[str, Any]]:
     """Chia tập video đã chuẩn bị thành train va validation theo category"""
     if train_count <= 0 or val_count <= 0:
         raise ValueError("train_count va val_count phai lon hon 0")
-    if train_count + val_count != len(selected):
-        raise ValueError("train_count + val_count phai bang so video da chon")
+    if test_count < 0:
+        raise ValueError("test_count phai khong am")
+    if train_count + val_count + test_count != len(selected):
+        raise ValueError("train_count + val_count + test_count phai bang so video da chon")
 
     limit = len(selected)
     by_category: dict[str, list[dict[str, Any]]] = defaultdict(list)
@@ -102,9 +107,32 @@ def _assign_tvsum_splits(
     while len(validation_ids) > val_count:
         validation_ids.remove(next(video_id for video_id in reversed(ordered_ids) if video_id in validation_ids))
 
+    test_ids: set[str] = set()
+    remaining_by_category = {
+        category: [
+            record
+            for record in category_records
+            if str(record["video_id"]) not in validation_ids
+        ]
+        for category, category_records in by_category.items()
+    }
+    for category in sorted(remaining_by_category):
+        category_records = remaining_by_category[category]
+        requested = round(len(category_records) * test_count / max(limit - val_count, 1))
+        test_ids.update(str(record["video_id"]) for record in category_records[:requested])
+    for video_id in ordered_ids:
+        if len(test_ids) >= test_count:
+            break
+        if video_id not in validation_ids:
+            test_ids.add(video_id)
+    while len(test_ids) > test_count:
+        test_ids.remove(next(video_id for video_id in reversed(ordered_ids) if video_id in test_ids))
+
     prepared: list[dict[str, Any]] = []
     for record in selected:
-        prepared.append({**record, "split": "val" if str(record["video_id"]) in validation_ids else "train"})
+        video_id = str(record["video_id"])
+        split = "val" if video_id in validation_ids else "test" if video_id in test_ids else "train"
+        prepared.append({**record, "split": split})
     if sum(record["split"] == "train" for record in prepared) != train_count:
         raise RuntimeError("TVSum split did not produce the requested train count")
     return prepared
@@ -116,11 +144,17 @@ def select_tvsum_records(
     limit: int,
     train_count: int,
     val_count: int,
+    test_count: int = 0,
     seed: int,
 ) -> list[dict[str, Any]]:
     """Chọn và chia TVSum theo video với thứ tự tái lập và phủ category tối đa"""
     selected = _select_tvsum_candidates(records, limit=limit, seed=seed)
-    return _assign_tvsum_splits(selected, train_count=train_count, val_count=val_count)
+    return _assign_tvsum_splits(
+        selected,
+        train_count=train_count,
+        val_count=val_count,
+        test_count=test_count,
+    )
 
 
 def prepare_tvsum(
@@ -133,6 +167,7 @@ def prepare_tvsum(
     limit: int = 20,
     train_count: int = 16,
     val_count: int = 4,
+    test_count: int = 0,
     seed: int = 42,
     whisper_model_size: str = "small.en",
     force: bool = False,
@@ -161,14 +196,30 @@ def prepare_tvsum(
             duration = probe_duration(video_path)
             if force or not audio_path.is_file():
                 extract_audio_16k_mono(video_path, audio_path)
+            transcript_available = True
             if force or not transcript_path.is_file():
-                transcript = transcribe_with_whisper(
-                    audio_path,
-                    video_id=video_id,
-                    duration=duration,
-                    model_size=whisper_model_size,
-                )
+                try:
+                    transcript = transcribe_with_whisper(
+                        audio_path,
+                        video_id=video_id,
+                        duration=duration,
+                        model_size=whisper_model_size,
+                    )
+                except (ValueError, MediaProcessingError) as exc:
+                    if "Whisper did not detect usable" not in str(exc):
+                        raise
+                    transcript_available = False
+                    transcript = TranscriptDocument(
+                        video_id=video_id,
+                        language="und",
+                        source="whisper",
+                        duration=duration,
+                        segments=[],
+                    )
                 save_transcript(transcript, transcript_path)
+            else:
+                transcript_payload = json.loads(transcript_path.read_text(encoding="utf-8"))
+                transcript_available = bool(transcript_payload.get("segments"))
             manifest_records.append(
                 {
                     "video_id": video_id,
@@ -184,13 +235,19 @@ def prepare_tvsum(
                     "frame_scores": np.asarray(record["frame_scores"], dtype=np.float32).tolist(),
                     "annotation_path": portable_relative_path(annotations_path, root),
                     "whisper_model_size": whisper_model_size,
+                    "transcript_available": transcript_available,
                 }
             )
-            results.append({"video_id": video_id, "status": "prepared", "duration": duration})
+            results.append(
+                {
+                    "video_id": video_id,
+                    "status": "prepared" if transcript_available else "prepared_no_transcript",
+                    "duration": duration,
+                }
+            )
         except Exception as exc:
             message = str(exc)
-            status = "skipped_no_transcript" if "Whisper did not detect usable" in message else "failed"
-            results.append({"video_id": video_id, "status": status, "error": message})
+            results.append({"video_id": video_id, "status": "failed", "error": message})
 
     if len(manifest_records) < limit:
         return {
@@ -203,6 +260,7 @@ def prepare_tvsum(
         manifest_records,
         train_count=train_count,
         val_count=val_count,
+        test_count=test_count,
     )
     destination = Path(manifest_path)
     destination.parent.mkdir(parents=True, exist_ok=True)
@@ -230,6 +288,7 @@ def _parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--limit", type=int, default=20)
     parser.add_argument("--train-count", type=int, default=16)
     parser.add_argument("--val-count", type=int, default=4)
+    parser.add_argument("--test-count", type=int, default=0)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--whisper-model-size", default="small.en")
     parser.add_argument("--force", action="store_true")
@@ -247,6 +306,7 @@ def main(argv: list[str] | None = None) -> int:
         limit=args.limit,
         train_count=args.train_count,
         val_count=args.val_count,
+        test_count=args.test_count,
         seed=args.seed,
         whisper_model_size=args.whisper_model_size,
         force=args.force,

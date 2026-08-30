@@ -45,6 +45,12 @@ class LLMHighlightAssessment(BaseModel):
     model_config = ConfigDict(extra="forbid", str_strip_whitespace=True)
 
     candidate_id: str = Field(min_length=1)
+    overall_quality: float | None = Field(
+        default=None,
+        ge=0,
+        le=1,
+        description="Điểm chất lượng tổng thể duy nhất dùng cho semantic reranking.",
+    )
     semantic_relevance: float = Field(
         ge=0,
         le=1,
@@ -114,14 +120,19 @@ class LLMHighlightAssessment(BaseModel):
         return self
 
     def semantic_quality(self) -> float:
-        """Điểm semantic tổng hợp dùng cho bootstrap reranking."""
+        """Return the single LLM score, with an unweighted v1-cache fallback."""
 
+        if self.overall_quality is not None:
+            return float(self.overall_quality)
         return float(
-            0.30 * self.semantic_relevance
-            + 0.20 * self.standalone_value
-            + 0.25 * self.completeness
-            + 0.10 * self.hook_strength
-            + 0.15 * self.shareability
+            (
+                self.semantic_relevance
+                + self.standalone_value
+                + self.completeness
+                + self.hook_strength
+                + self.shareability
+            )
+            / 5.0
         )
 
 
@@ -154,3 +165,6 @@ class LLMRunInfo(BaseModel):
     assessed_count: int = Field(default=0, ge=0)
     fallback_reason: str | None = None
     accepted_boundary_candidate_ids: list[str] = Field(default_factory=list)
+    fusion_method: str | None = None
+    fusion_alpha: float | None = Field(default=None, ge=0, le=1)
+    fusion_calibrator_path: str | None = None

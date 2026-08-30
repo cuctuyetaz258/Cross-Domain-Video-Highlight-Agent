@@ -158,8 +158,25 @@ def render_sidebar():
                 help="Change the model name to compare OpenAI models on the same LTR snapshot.",
             )
             st.slider("Candidates sent to OpenAI", 3, 12, 10, key="llm_top_m")
-            st.slider("LTR weight", 0.0, 1.0, 0.60, 0.05, key="llm_ltr_weight")
+            st.text_input(
+                "Fusion calibrator path (optional until trained)",
+                key="fusion_calibrator_path",
+                placeholder="data/models/fusion_calibrator.json",
+                help=(
+                    "Loads percentile-rank alpha learned on validation data. "
+                    "If blank, the temporary equal-rank baseline is used; no manual weight is exposed."
+                ),
+            )
+            fusion_path = st.session_state.get("fusion_calibrator_path", "").strip()
+            fusion_ready = not fusion_path or Path(fusion_path).expanduser().is_file()
+            if fusion_path and fusion_ready:
+                st.success("Fusion calibrator found; compatibility is checked at runtime.")
+            elif fusion_path:
+                st.error("Fusion calibrator file was not found.")
+            else:
+                st.info("Temporary equal-rank fusion baseline; no learned alpha is loaded.")
         else:
+            fusion_ready = True
             st.info("LTR-only mode · no API key or LLM request is required.")
         st.checkbox("Burn subtitles into rendered clips", value=False, key="burn_subtitles")
         action_label = (
@@ -173,6 +190,7 @@ def render_sidebar():
                 not bool(snapshot_path)
                 or checkpoint_info is None
                 or (use_openai and not openai_key_ready)
+                or (use_openai and not fusion_ready)
             ),
         ):
             st.session_state.update(

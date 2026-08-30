@@ -29,6 +29,7 @@ def _response_json() -> str:
             "assessments": [
                 {
                     "candidate_id": "c1",
+                    "overall_quality": 0.85,
                     "semantic_relevance": 0.9,
                     "standalone_value": 0.8,
                     "completeness": 0.9,

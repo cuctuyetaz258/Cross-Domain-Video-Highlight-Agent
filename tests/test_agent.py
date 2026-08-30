@@ -244,6 +244,7 @@ def test_explain_generates_user_friendly_llm_reasoning() -> None:
     )
     assessment = LLMHighlightAssessment(
         candidate_id="ltr_01",
+        overall_quality=0.88,
         semantic_relevance=0.9,
         standalone_value=0.85,
         completeness=0.95,
@@ -270,4 +271,4 @@ def test_explain_generates_user_friendly_llm_reasoning() -> None:
     assert "Clear and structured explanation" in explanation
     assert '💬 *"The steepest slope points to the local minimum."' in explanation
     assert "0:30 – 1:05" in explanation
-    assert "Completeness: 95%" in explanation
+    assert "LLM Overall Quality**: 88%" in explanation

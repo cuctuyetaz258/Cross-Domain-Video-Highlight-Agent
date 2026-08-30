@@ -67,7 +67,10 @@ class TranscriptDocument(BaseModel):
     language: str = Field(min_length=2)
     source: Literal["youtube_caption", "whisper"]
     duration: float = Field(gt=0)
-    segments: list[TranscriptSegment] = Field(min_length=1)
+    # Benchmark videos may legitimately contain no speech. Runtime ingestion
+    # still rejects unusable Whisper output, while dataset adapters explicitly
+    # persist an empty transcript so the semantic channel is exactly zero.
+    segments: list[TranscriptSegment] = Field(default_factory=list)
     chapters: list[Chapter] = Field(default_factory=list)
 
     @model_validator(mode="after")

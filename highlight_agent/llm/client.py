@@ -18,7 +18,7 @@ from highlight_agent.schemas import (
 
 load_dotenv()
 
-PROMPT_VERSION = "ltr-semantic-rerank-v1"
+PROMPT_VERSION = "ltr-semantic-rerank-v2-overall-quality"
 MAX_ASSESSMENT_ATTEMPTS = 2
 
 ProviderName = Literal["openai", "groq", "custom"]
@@ -40,6 +40,10 @@ Mỗi candidate phải có đúng một assessment. Title và summary phải đ�
 diễn sự kiện ngoài dữ liệu. evidence là một trích đoạn ngắn hoặc diễn giải sát transcript. Chỉ đề
 xuất start/end khi hai timestamp đó xuất hiện trong context và giúp clip trọn câu hơn; nếu không,
 trả null cho cả hai. Không dùng LTR score làm bằng chứng ngữ nghĩa.
+
+`overall_quality` là đánh giá tổng thể trực tiếp từ 0 đến 1 về giá trị highlight của candidate.
+Không tự tính trường này bằng một công thức trọng số từ các tiêu chí con. Các tiêu chí con chỉ phục
+vụ giải thích và kiểm tra chất lượng, không phải trọng số ranking.
 
 Giữ nguyên chính xác từng candidate_id được đưa vào. Output phải có đúng một assessment cho mỗi
 candidate_id, không lặp, không thiếu, và không thêm ID mới.
@@ -194,6 +198,11 @@ class OpenAICompatibleAssessmentClient:
                 if not content:
                     raise LLMProviderError("LLM returned an empty response")
                 batch = LLMHighlightAssessmentBatch.model_validate_json(content)
+                if any(
+                    assessment.overall_quality is None
+                    for assessment in batch.assessments
+                ):
+                    raise ValueError("every new assessment must include overall_quality")
                 actual_ids = [assessment.candidate_id for assessment in batch.assessments]
                 if actual_ids != expected_ids:
                     raise ValueError(

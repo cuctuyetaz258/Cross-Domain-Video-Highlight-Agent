@@ -30,6 +30,9 @@ from highlight_agent.features.nms_topk import extract_topk_nms
 from highlight_agent.features.overlap_blender import blend_scores
 from highlight_agent.features.sliding_window import extract_windows
 from highlight_agent.llm import (
+    FUSION_METHOD,
+    PROMPT_VERSION,
+    FusionCalibrator,
     LLMClientConfig,
     OpenAICompatibleAssessmentClient,
     apply_validated_boundaries,
@@ -321,9 +324,6 @@ def decide(state: AgentState) -> dict:
         top_m = state.get("llm_top_m", 10)
         if not 3 <= top_m <= 12:
             raise ValueError("llm_top_m must be between 3 and 12")
-        ltr_weight = state.get("llm_ltr_weight", 0.60)
-        if not 0 <= ltr_weight <= 1:
-            raise ValueError("llm_ltr_weight must be between 0 and 1")
         pool = ranked_candidates[: max(highlight_count, top_m)]
         _emit(
             state,
@@ -341,16 +341,38 @@ def decide(state: AgentState) -> dict:
                 timeout_seconds=state.get("llm_timeout_seconds", 45.0),
             )
             client = OpenAICompatibleAssessmentClient(config)
+            calibrator_path = state.get("fusion_calibrator_path")
+            if calibrator_path:
+                calibrator = FusionCalibrator.load(
+                    calibrator_path,
+                    expected_checkpoint_fingerprint=state.get(
+                        "ltr_checkpoint_info", {}
+                    ).get("fingerprint"),
+                    expected_llm_model=config.model,
+                    expected_prompt_version=PROMPT_VERSION,
+                )
+            else:
+                calibrator = FusionCalibrator(
+                    alpha=0.5,
+                    selection_metric="untrained_equal_rank_baseline",
+                )
             ranked_candidates, llm_assessments, llm_run = rerank_candidates(
                 pool,
                 state["transcript"],
                 domain=state["domain"],
                 client=client,
                 cache_dir=workspace.transcript_path.parent / "llm",
-                ltr_weight=ltr_weight,
+                ltr_weight=calibrator.alpha,
                 checkpoint_fingerprint=state.get("ltr_checkpoint_info", {}).get(
                     "fingerprint", "unknown"
                 ),
+            )
+            llm_run = llm_run.model_copy(
+                update={
+                    "fusion_method": FUSION_METHOD,
+                    "fusion_alpha": calibrator.alpha,
+                    "fusion_calibrator_path": calibrator.source_path,
+                }
             )
             llm_mode = "ltr_llm_rerank"
             features.update({"base_mode": base_mode, "mode": llm_mode})
@@ -412,6 +434,18 @@ def decide(state: AgentState) -> dict:
             "feature_contract": features.get("feature_contract", {}),
             "extractor": features.get("extractor", {}),
             "llm_run": llm_run.model_dump(mode="json"),
+            "fusion_candidates": [
+                {
+                    "candidate_id": candidate.candidate_id,
+                    "start_time": candidate.start_time,
+                    "end_time": candidate.end_time,
+                    "ltr_score": candidate.score,
+                    "llm_score": assessment.semantic_quality(),
+                }
+                for candidate in candidates
+                for assessment in llm_assessments
+                if assessment.candidate_id == candidate.candidate_id
+            ],
         },
         render_namespace=state.get("render_namespace"),
     )
@@ -461,11 +495,7 @@ def _build_highlight_explanation(
             f"**💡 Key Insight**: {assessment.summary}",
             f'💬 *"{assessment.evidence}"*',
             f"**⏱️ Clip Timing**: {time_span}",
-            (
-                f"**🎯 Quality Highlights**: Opening Hook: {assessment.hook_strength * 100:.0f}% · "
-                f"Completeness: {assessment.completeness * 100:.0f}% · "
-                f"Shareability: {assessment.shareability * 100:.0f}%"
-            ),
+            f"**🎯 LLM Overall Quality**: {assessment.semantic_quality() * 100:.0f}%",
         ]
         return "\n\n".join(lines)
 

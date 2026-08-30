@@ -130,8 +130,10 @@ def test_prepare_tvsum_replaces_video_without_transcript(tmp_path: Path, monkeyp
 
     assert report["ready"]
     assert report["prepared_count"] == 2
-    assert any(result["status"] == "skipped_no_transcript" for result in report["results"])
+    assert any(result["status"] == "prepared_no_transcript" for result in report["results"])
     assert len(manifest.read_text(encoding="utf-8").splitlines()) == 2
+    records = [json.loads(line) for line in manifest.read_text(encoding="utf-8").splitlines()]
+    assert any(not record["transcript_available"] for record in records)
 
 
 def test_validator_accepts_tvsum_category_without_app_domain(tmp_path: Path, monkeypatch) -> None:

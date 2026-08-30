@@ -278,6 +278,152 @@ data/features_cache/VIDEO_ID/
 └── metadata.json        # schema_version, video_id, sample_rate, channel_order, shape, dtype
 ```
 
+Kế hoạch đầy đủ nằm trong `TRAINING_PLAN.md`. Các bước không phụ thuộc custom label đã có CLI
+hoàn chỉnh như sau.
+
+#### Pretrain TVSum + SumMe
+
+Chuẩn bị TVSum theo split 40/5/5:
+
+```bash
+python -m scripts.prepare_tvsum \
+  --annotations data/raw/ydata-tvsum50-matlab/matlab/ydata-tvsum50.mat \
+  --video-dir data/raw/ydata-tvsum50-video/video \
+  --processed-dir data/raw/tvsum/processed \
+  --manifest data/manifests/tvsum_full.jsonl \
+  --limit 50 --train-count 40 --val-count 5 --test-count 5 --seed 42
+```
+
+Chuẩn bị SumMe theo split 15/5/5. SumMe luôn là `domain=benchmark`, không phải `standup`:
+
+```bash
+python -m scripts.prepare_summe \
+  --annotations-dir data/raw/summe/GT \
+  --video-dir data/raw/summe/videos \
+  --processed-dir data/raw/summe/processed \
+  --manifest data/manifests/summe.jsonl \
+  --limit 25 --train-count 15 --val-count 5 --test-count 5 --seed 42
+```
+
+Ghép manifest, validate và build cache:
+
+```bash
+python -m scripts.compose_training_manifests \
+  --input data/manifests/tvsum_full.jsonl \
+  --input data/manifests/summe.jsonl \
+  --output data/manifests/tvsum_summe.jsonl
+
+python -m scripts.validate_training_data \
+  --manifest data/manifests/tvsum_summe.jsonl \
+  --require-domain benchmark \
+  --report data/reports/tvsum_summe_validation.json
+
+python -m scripts.build_feature_cache \
+  --manifest data/manifests/tvsum_summe.jsonl \
+  --output-dir data/features_cache --device cuda \
+  --report data/reports/tvsum_summe_cache.json
+```
+
+Pretrain bằng sampler cân bằng source và giới hạn số pair mỗi video:
+
+```bash
+python -m highlight_agent.models.train_offline \
+  --manifest data/manifests/tvsum_summe.jsonl \
+  --train-split train --val-split val \
+  --cache-dir data/features_cache \
+  --source-weight tvsum=0.60 --source-weight summe=0.40 \
+  --max-pairs-per-video 2048 \
+  --output data/models/ltr_pretrained_tvsum_summe.pt \
+  --last-output data/models/ltr_pretrained_tvsum_summe_last.pt \
+  --training-log data/models/pretraining_log.json \
+  --training-history-csv data/reports/pretraining_history.csv \
+  --training-plot data/reports/pretraining_curves.svg \
+  --training-config data/models/pretraining_config.json \
+  --evaluation-snapshot data/models/pretraining_evaluation.json --seed 42
+```
+
+`60/40` là source sampling baseline, không phải split. So sánh `67/33`, `60/40` và `50/50`
+bằng macro validation metric trước khi khóa checkpoint. Dùng `--device cpu` khi build cache nếu máy
+không có CUDA.
+
+#### Khi custom lecture/podcast hoàn thành
+
+Script từ chối CSV chưa điền đủ importance và chỉ tạo manifest khi mỗi domain có đủ năm video.
+Mỗi fold chứa 3/1/1 video train/validation/test cho từng domain:
+
+```bash
+python -m scripts.prepare_custom_manifest \
+  --annotations-dir data/annotations/raw --media-root output \
+  --manifest data/manifests/custom_fold0.jsonl \
+  --fold 0 --folds 5 --seed 42
+
+python -m scripts.validate_training_data \
+  --manifest data/manifests/custom_fold0.jsonl \
+  --require-domain lecture --require-domain podcast \
+  --report data/reports/custom_fold0_validation.json
+
+python -m scripts.build_feature_cache \
+  --manifest data/manifests/custom_fold0.jsonl \
+  --output-dir data/features_cache --device cuda \
+  --report data/reports/custom_fold0_cache.json
+```
+
+Fine-tune fold từ checkpoint benchmark:
+
+```bash
+python -m highlight_agent.models.train_offline \
+  --manifest data/manifests/custom_fold0.jsonl \
+  --train-split train --val-split val \
+  --cache-dir data/features_cache \
+  --source-weight custom_scores=1.0 \
+  --max-pairs-per-video 2048 \
+  --init-checkpoint data/models/ltr_pretrained_tvsum_summe.pt \
+  --output data/models/ltr_custom_fold0.pt \
+  --last-output data/models/ltr_custom_fold0_last.pt \
+  --training-log data/models/custom_fold0_training_log.json \
+  --training-history-csv data/reports/custom_fold0_history.csv \
+  --training-plot data/reports/custom_fold0_curves.svg --seed 42
+```
+
+#### Fit percentile-rank LTR–LLM fusion
+
+Các OpenAI run mới ghi toàn bộ candidate score cần thiết vào `pipeline.fusion_candidates`. Sau khi
+có validation run của một lecture và một podcast trong fold:
+
+```bash
+python -m scripts.build_fusion_dataset \
+  --manifest data/manifests/custom_fold0.jsonl \
+  --run-metadata output/LECTURE_ID/variants/OPENAI_VARIANT/metadata.json \
+  --run-metadata output/PODCAST_ID/variants/OPENAI_VARIANT/metadata.json \
+  --output data/reports/fusion_candidates_fold0.jsonl
+
+python -m evaluation.train_fusion \
+  --input data/reports/fusion_candidates_fold0.jsonl \
+  --output data/models/fusion_calibrator_fold0.json \
+  --report data/reports/fusion_grid_fold0.json \
+  --split val --step 0.05 --k 3
+```
+
+Fusion percentile-rank chọn global `alpha` bằng `macro_nDCG@3`. UI không có slider weight; nó đọc
+alpha từ calibrator. Nếu chưa có calibrator, runtime ghi rõ và dùng equal-rank 0.5/0.5 làm baseline
+tạm thời.
+
+Sau khi hoàn thành cả năm fold, fit calibrator release bằng cách truyền lặp lại `--input` cho năm
+file out-of-fold validation. Không chọn alpha chỉ từ một fold:
+
+```bash
+python -m evaluation.train_fusion \
+  --input data/reports/fusion_candidates_fold0.jsonl \
+  --input data/reports/fusion_candidates_fold1.jsonl \
+  --input data/reports/fusion_candidates_fold2.jsonl \
+  --input data/reports/fusion_candidates_fold3.jsonl \
+  --input data/reports/fusion_candidates_fold4.jsonl \
+  --bind-checkpoint data/models/ltr_target_lecture_podcast.pt \
+  --output data/models/fusion_calibrator.json \
+  --report data/reports/fusion_grid_all_folds.json \
+  --split val --step 0.05 --k 3
+```
+
 Chạy training với QVHighlights train/validation annotations:
 
 ```bash
@@ -293,6 +439,16 @@ python -m highlight_agent.models.train_offline \
 Checkpoint được chọn theo Average Precision trên validation windows và chứa feature schema,
 `L_ref`, epoch, AP, dataset fingerprint và training config. `training_log.json` ghi riêng
 margin loss, temporal smoothness loss và total loss theo epoch.
+
+Mỗi lần training còn tự lưu hai artifact phục vụ báo cáo ngay sau từng epoch:
+
+- `*_history.csv`: loss, selection AP, AP theo source/domain/video, learning rate và số pair;
+- `*_curves.svg`: biểu đồ vector loss, AP và learning-rate schedule, có đường đánh dấu best epoch.
+
+Nếu không truyền `--training-history-csv` và `--training-plot`, hai file được đặt cạnh
+`--training-log` với hậu tố `_history.csv` và `_curves.svg`. Vì `data/models/` và
+`data/reports/` bị Git ignore, cần giữ các artifact này cùng checkpoint trên Kaggle hoặc sao lưu
+riêng trước khi giải phóng bộ nhớ máy.
 
 ### Đánh giá Full LTR, channel ablation và LLM
 

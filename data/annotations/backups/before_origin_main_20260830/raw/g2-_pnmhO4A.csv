@@ -1,0 +1,763 @@
+﻿video_id,start_sec,end_sec,annotator_id,importance,domain,reason_tag,transcript_hint,needs_review,label_protocol
+g2-_pnmhO4A,0.0,2.0,annotator_1,,lecture,,Harvard CS50 is the most popular,false,multimodal_tvsum_style
+g2-_pnmhO4A,2.0,4.0,annotator_1,,lecture,,Harvard CS50 is the most popular computer science course in the world. If,false,multimodal_tvsum_style
+g2-_pnmhO4A,4.0,6.0,annotator_1,,lecture,,"Harvard CS50 is the most popular computer science course in the world. If you're a beginner learning to code, it's",false,multimodal_tvsum_style
+g2-_pnmhO4A,6.0,8.0,annotator_1,,lecture,,"computer science course in the world. If you're a beginner learning to code, it's pretty much your gold standard. But wh",false,multimodal_tvsum_style
+g2-_pnmhO4A,8.0,10.0,annotator_1,,lecture,,"you're a beginner learning to code, it's pretty much your gold standard. But when I was taking the course back in school",false,multimodal_tvsum_style
+g2-_pnmhO4A,10.0,12.0,annotator_1,,lecture,,"pretty much your gold standard. But when I was taking the course back in school, it was pretty hard for me. It was just ",false,multimodal_tvsum_style
+g2-_pnmhO4A,12.0,14.0,annotator_1,,lecture,,it was pretty hard for me. It was just so much computer science information all,false,multimodal_tvsum_style
+g2-_pnmhO4A,14.0,16.0,annotator_1,,lecture,,it was pretty hard for me. It was just so much computer science information all at once. I would get really overwhelmed.,false,multimodal_tvsum_style
+g2-_pnmhO4A,16.0,18.0,annotator_1,,lecture,,so much computer science information all at once. I would get really overwhelmed. And I don't want any of you to go,false,multimodal_tvsum_style
+g2-_pnmhO4A,18.0,20.0,annotator_1,,lecture,,"And I don't want any of you to go through that struggle, which is why I made this video. In this video, I'll be",false,multimodal_tvsum_style
+g2-_pnmhO4A,20.0,22.0,annotator_1,,lecture,,"through that struggle, which is why I made this video. In this video, I'll be going through every single week of",false,multimodal_tvsum_style
+g2-_pnmhO4A,22.0,24.0,annotator_1,,lecture,,"made this video. In this video, I'll be going through every single week of Harvard CS50. [music] Break down each",false,multimodal_tvsum_style
+g2-_pnmhO4A,24.0,26.0,annotator_1,,lecture,,going through every single week of Harvard CS50. [music] Break down each module in a simple beginner friendly way,false,multimodal_tvsum_style
+g2-_pnmhO4A,26.0,28.0,annotator_1,,lecture,,Harvard CS50. [music] Break down each module in a simple beginner friendly way with lots of visuals. I'll explain what,false,multimodal_tvsum_style
+g2-_pnmhO4A,28.0,30.0,annotator_1,,lecture,,"module in a simple beginner friendly way with lots of visuals. I'll explain what each week teaches you, why it matters,",false,multimodal_tvsum_style
+g2-_pnmhO4A,30.0,32.0,annotator_1,,lecture,,"with lots of visuals. I'll explain what each week teaches you, why it matters, and [music] how it fits into the bigger",false,multimodal_tvsum_style
+g2-_pnmhO4A,32.0,34.0,annotator_1,,lecture,,"each week teaches you, why it matters, and [music] how it fits into the bigger picture of computer science. Even if you",false,multimodal_tvsum_style
+g2-_pnmhO4A,34.0,36.0,annotator_1,,lecture,,and [music] how it fits into the bigger picture of computer science. Even if you have absolutely no experience with,false,multimodal_tvsum_style
+g2-_pnmhO4A,36.0,38.0,annotator_1,,lecture,,"picture of computer science. Even if you have absolutely no experience with coding, that's completely fine because",false,multimodal_tvsum_style
+g2-_pnmhO4A,38.0,40.0,annotator_1,,lecture,,"have absolutely no experience with coding, that's completely fine because in this video, we're going to take you from ze",false,multimodal_tvsum_style
+g2-_pnmhO4A,40.0,42.0,annotator_1,,lecture,,"in this video, we're going to take you from zero to a solid computer science",false,multimodal_tvsum_style
+g2-_pnmhO4A,42.0,44.0,annotator_1,,lecture,,"in this video, we're going to take you from zero to a solid computer science foundation. Plus, there are timestamps down",false,multimodal_tvsum_style
+g2-_pnmhO4A,44.0,46.0,annotator_1,,lecture,,"foundation. Plus, there are timestamps down below so you can skip to any topics you want to focus on. And with that",false,multimodal_tvsum_style
+g2-_pnmhO4A,46.0,48.0,annotator_1,,lecture,,"down below so you can skip to any topics you want to focus on. And with that being said, sit back, [music] relax, and",false,multimodal_tvsum_style
+g2-_pnmhO4A,48.0,50.0,annotator_1,,lecture,,"you want to focus on. And with that being said, sit back, [music] relax, and let's get started. Week zero at CS50 is",false,multimodal_tvsum_style
+g2-_pnmhO4A,50.0,52.0,annotator_1,,lecture,,"being said, sit back, [music] relax, and let's get started. Week zero at CS50 is where you learn Scratch, which is a",false,multimodal_tvsum_style
+g2-_pnmhO4A,52.0,54.0,annotator_1,,lecture,,"let's get started. Week zero at CS50 is where you learn Scratch, which is a beginner-friendly programming",false,multimodal_tvsum_style
+g2-_pnmhO4A,54.0,56.0,annotator_1,,lecture,,"where you learn Scratch, which is a beginner-friendly programming environment designed to teach core",false,multimodal_tvsum_style
+g2-_pnmhO4A,56.0,58.0,annotator_1,,lecture,,beginner-friendly programming environment designed to teach core computer science concepts without typing,false,multimodal_tvsum_style
+g2-_pnmhO4A,58.0,60.0,annotator_1,,lecture,,"environment designed to teach core computer science concepts without typing code. So instead of writing text, you",false,multimodal_tvsum_style
+g2-_pnmhO4A,60.0,62.0,annotator_1,,lecture,,"computer science concepts without typing code. So instead of writing text, you build programs by snapping together",false,multimodal_tvsum_style
+g2-_pnmhO4A,62.0,64.0,annotator_1,,lecture,,"code. So instead of writing text, you build programs by snapping together visual blocks. This makes programming",false,multimodal_tvsum_style
+g2-_pnmhO4A,64.0,66.0,annotator_1,,lecture,,build programs by snapping together visual blocks. This makes programming way less intimidating. So you open up,false,multimodal_tvsum_style
+g2-_pnmhO4A,66.0,68.0,annotator_1,,lecture,,visual blocks. This makes programming way less intimidating. So you open up Scratch by going to scratch.mmit.edu,false,multimodal_tvsum_style
+g2-_pnmhO4A,68.0,70.0,annotator_1,,lecture,,way less intimidating. So you open up Scratch by going to scratch.mmit.edu and start creating. You'll see a,false,multimodal_tvsum_style
+g2-_pnmhO4A,70.0,72.0,annotator_1,,lecture,,Scratch by going to scratch.mmit.edu and start creating. You'll see a character on the screen and a set of,false,multimodal_tvsum_style
+g2-_pnmhO4A,72.0,74.0,annotator_1,,lecture,,and start creating. You'll see a character on the screen and a set of blocks you can drag in. You do not need,false,multimodal_tvsum_style
+g2-_pnmhO4A,74.0,76.0,annotator_1,,lecture,,character on the screen and a set of blocks you can drag in. You do not need to install [music] anything. Everything,false,multimodal_tvsum_style
+g2-_pnmhO4A,76.0,78.0,annotator_1,,lecture,,blocks you can drag in. You do not need to install [music] anything. Everything runs in your browser and your goal is to,false,multimodal_tvsum_style
+g2-_pnmhO4A,78.0,80.0,annotator_1,,lecture,,to install [music] anything. Everything runs in your browser and your goal is to tell the character what to do by,false,multimodal_tvsum_style
+g2-_pnmhO4A,80.0,82.0,annotator_1,,lecture,,runs in your browser and your goal is to tell the character what to do by snapping blocks together. [music] And,false,multimodal_tvsum_style
+g2-_pnmhO4A,82.0,84.0,annotator_1,,lecture,,"tell the character what to do by snapping blocks together. [music] And specifically in Scratch, there are four",false,multimodal_tvsum_style
+g2-_pnmhO4A,84.0,86.0,annotator_1,,lecture,,"snapping blocks together. [music] And specifically in Scratch, there are four main programming concepts I want you to",false,multimodal_tvsum_style
+g2-_pnmhO4A,86.0,88.0,annotator_1,,lecture,,"specifically in Scratch, there are four main programming concepts I want you to learn. First is sequencing. Programmers",false,multimodal_tvsum_style
+g2-_pnmhO4A,88.0,90.0,annotator_1,,lecture,,main programming concepts I want you to learn. First is sequencing. Programmers must give instructions in the exact,false,multimodal_tvsum_style
+g2-_pnmhO4A,90.0,92.0,annotator_1,,lecture,,"learn. First is sequencing. Programmers must give instructions in the exact order they should run. For example, you",false,multimodal_tvsum_style
+g2-_pnmhO4A,92.0,94.0,annotator_1,,lecture,,"must give instructions in the exact order they should run. For example, you can tell the character to say hello for",false,multimodal_tvsum_style
+g2-_pnmhO4A,94.0,96.0,annotator_1,,lecture,,"order they should run. For example, you can tell the character to say hello for",false,multimodal_tvsum_style
+g2-_pnmhO4A,96.0,98.0,annotator_1,,lecture,,"order they should run. For example, you can tell the character to say hello for 2 seconds and then move forward then",false,multimodal_tvsum_style
+g2-_pnmhO4A,98.0,100.0,annotator_1,,lecture,,can tell the character to say hello for 2 seconds and then move forward then let's start. Based on the way you orient,false,multimodal_tvsum_style
+g2-_pnmhO4A,100.0,102.0,annotator_1,,lecture,,"2 seconds and then move forward then let's start. Based on the way you orient the blocks, it will execute in [music]",false,multimodal_tvsum_style
+g2-_pnmhO4A,102.0,104.0,annotator_1,,lecture,,"let's start. Based on the way you orient the blocks, it will execute in [music] that manner. It's the same thing when",false,multimodal_tvsum_style
+g2-_pnmhO4A,104.0,106.0,annotator_1,,lecture,,"the blocks, it will execute in [music] that manner. It's the same thing when you deal with actual programming languages ",false,multimodal_tvsum_style
+g2-_pnmhO4A,106.0,108.0,annotator_1,,lecture,,you deal with actual programming languages like Python or Java. Your lines of code will execute in the order,false,multimodal_tvsum_style
+g2-_pnmhO4A,108.0,110.0,annotator_1,,lecture,,languages like Python or Java. Your lines of code will execute in the order you write them in. The second concept is,false,multimodal_tvsum_style
+g2-_pnmhO4A,110.0,112.0,annotator_1,,lecture,,lines of code will execute in the order you write them in. The second concept is loops. Programmers use loops to repeat,false,multimodal_tvsum_style
+g2-_pnmhO4A,112.0,114.0,annotator_1,,lecture,,you write them in. The second concept is loops. Programmers use loops to repeat,false,multimodal_tvsum_style
+g2-_pnmhO4A,114.0,116.0,annotator_1,,lecture,,you write them in. The second concept is loops. Programmers use loops to repeat actions without rewriting them. For,false,multimodal_tvsum_style
+g2-_pnmhO4A,116.0,118.0,annotator_1,,lecture,,"loops. Programmers use loops to repeat actions without rewriting them. For example, instead of saying move forward,",false,multimodal_tvsum_style
+g2-_pnmhO4A,118.0,120.0,annotator_1,,lecture,,"actions without rewriting them. For example, instead of saying move forward, move forward, move forward, move",false,multimodal_tvsum_style
+g2-_pnmhO4A,120.0,122.0,annotator_1,,lecture,,"example, instead of saying move forward, move forward, move forward, move forward. You can just set up a loop for",false,multimodal_tvsum_style
+g2-_pnmhO4A,122.0,124.0,annotator_1,,lecture,,"move forward, move forward, move forward. You can just set up a loop for the character to move forward a certain",false,multimodal_tvsum_style
+g2-_pnmhO4A,124.0,126.0,annotator_1,,lecture,,forward. You can just set up a loop for the character to move forward a certain number of times. This is how you will be,false,multimodal_tvsum_style
+g2-_pnmhO4A,126.0,128.0,annotator_1,,lecture,,the character to move forward a certain number of times. This is how you will be able to write more efficient code rathe,false,multimodal_tvsum_style
+g2-_pnmhO4A,128.0,130.0,annotator_1,,lecture,,number of times. This is how you will be able to write more efficient code rather than repetitive redundant code. The,false,multimodal_tvsum_style
+g2-_pnmhO4A,130.0,132.0,annotator_1,,lecture,,"able to write more efficient code rather than repetitive redundant code. The third concept is conditionals, which is",false,multimodal_tvsum_style
+g2-_pnmhO4A,132.0,134.0,annotator_1,,lecture,,"than repetitive redundant code. The third concept is conditionals, which is when programs make decisions by checking",false,multimodal_tvsum_style
+g2-_pnmhO4A,134.0,136.0,annotator_1,,lecture,,"third concept is conditionals, which is when programs make decisions by checking if something is true. For example, you",false,multimodal_tvsum_style
+g2-_pnmhO4A,136.0,138.0,annotator_1,,lecture,,"when programs make decisions by checking if something is true. For example, you can tell the character to move if you're",false,multimodal_tvsum_style
+g2-_pnmhO4A,138.0,140.0,annotator_1,,lecture,,"if something is true. For example, you can tell the character to move if you're pressing down a certain key. And that",false,multimodal_tvsum_style
+g2-_pnmhO4A,140.0,142.0,annotator_1,,lecture,,can tell the character to move if you're pressing down a certain key. And that code block will only execute if that,false,multimodal_tvsum_style
+g2-_pnmhO4A,142.0,144.0,annotator_1,,lecture,,pressing down a certain key. And that code block will only execute if that condition of you pressing that key,false,multimodal_tvsum_style
+g2-_pnmhO4A,144.0,146.0,annotator_1,,lecture,,code block will only execute if that condition of you pressing that key [music] is true. In actual programming,false,multimodal_tvsum_style
+g2-_pnmhO4A,146.0,148.0,annotator_1,,lecture,,"condition of you pressing that key [music] is true. In actual programming languages, you'll deal with if, else,",false,multimodal_tvsum_style
+g2-_pnmhO4A,148.0,150.0,annotator_1,,lecture,,"[music] is true. In actual programming languages, you'll deal with if, else, else, blocks, but more on those",false,multimodal_tvsum_style
+g2-_pnmhO4A,150.0,152.0,annotator_1,,lecture,,"languages, you'll deal with if, else, else, blocks, but more on those languages later. The fourth concept is",false,multimodal_tvsum_style
+g2-_pnmhO4A,152.0,154.0,annotator_1,,lecture,,"else, blocks, but more on those languages later. The fourth concept is variables. So, programs store",false,multimodal_tvsum_style
+g2-_pnmhO4A,154.0,156.0,annotator_1,,lecture,,"languages later. The fourth concept is variables. So, programs store information using variables that can",false,multimodal_tvsum_style
+g2-_pnmhO4A,156.0,158.0,annotator_1,,lecture,,"variables. So, programs store information using variables that can change over time. For example, you can",false,multimodal_tvsum_style
+g2-_pnmhO4A,158.0,160.0,annotator_1,,lecture,,"information using variables that can change over time. For example, you can create a variable called score and",false,multimodal_tvsum_style
+g2-_pnmhO4A,160.0,162.0,annotator_1,,lecture,,"change over time. For example, you can create a variable called score and increase it every time the character",false,multimodal_tvsum_style
+g2-_pnmhO4A,162.0,164.0,annotator_1,,lecture,,create a variable called score and increase it every time the character does an action. Think of variables like,false,multimodal_tvsum_style
+g2-_pnmhO4A,164.0,166.0,annotator_1,,lecture,,increase it every time the character does an action. Think of variables like placeholders. [music],false,multimodal_tvsum_style
+g2-_pnmhO4A,166.0,168.0,annotator_1,,lecture,,does an action. Think of variables like placeholders. [music] So instead of repeating a number or a,false,multimodal_tvsum_style
+g2-_pnmhO4A,168.0,170.0,annotator_1,,lecture,,"placeholders. [music] So instead of repeating a number or a word every time in code, you just have",false,multimodal_tvsum_style
+g2-_pnmhO4A,170.0,172.0,annotator_1,,lecture,,"So instead of repeating a number or a word every time in code, you just have to set the variable once and place it",false,multimodal_tvsum_style
+g2-_pnmhO4A,172.0,174.0,annotator_1,,lecture,,"word every time in code, you just have to set the variable once and place it everywhere you need it, which makes",false,multimodal_tvsum_style
+g2-_pnmhO4A,174.0,176.0,annotator_1,,lecture,,"to set the variable once and place it everywhere you need it, which makes things look a whole lot neater. But either way",false,multimodal_tvsum_style
+g2-_pnmhO4A,176.0,178.0,annotator_1,,lecture,,"things look a whole lot neater. But either way, Scratch is just a way for you to learn the basics of programming",false,multimodal_tvsum_style
+g2-_pnmhO4A,178.0,180.0,annotator_1,,lecture,,"either way, Scratch is just a way for you to learn the basics of programming and computing. [music] It helps you",false,multimodal_tvsum_style
+g2-_pnmhO4A,180.0,182.0,annotator_1,,lecture,,"you to learn the basics of programming and computing. [music] It helps you think like a programmer, but no one in",false,multimodal_tvsum_style
+g2-_pnmhO4A,182.0,184.0,annotator_1,,lecture,,"and computing. [music] It helps you think like a programmer, but no one in actual industry ever [clears throat]",false,multimodal_tvsum_style
+g2-_pnmhO4A,184.0,186.0,annotator_1,,lecture,,"think like a programmer, but no one in actual industry ever [clears throat] uses Scratch, so we must move on. The",false,multimodal_tvsum_style
+g2-_pnmhO4A,186.0,188.0,annotator_1,,lecture,,"actual industry ever [clears throat] uses Scratch, so we must move on. The next week is week one of CS50. [music]",false,multimodal_tvsum_style
+g2-_pnmhO4A,188.0,190.0,annotator_1,,lecture,,"uses Scratch, so we must move on. The next week is week one of CS50. [music] And here you will learn C, which is a",false,multimodal_tvsum_style
+g2-_pnmhO4A,190.0,192.0,annotator_1,,lecture,,"next week is week one of CS50. [music] And here you will learn C, which is a",false,multimodal_tvsum_style
+g2-_pnmhO4A,192.0,194.0,annotator_1,,lecture,,"next week is week one of CS50. [music] And here you will learn C, which is a textbased programming language that",false,multimodal_tvsum_style
+g2-_pnmhO4A,194.0,196.0,annotator_1,,lecture,,"And here you will learn C, which is a textbased programming language that exposes [music] how computers actually work. U",false,multimodal_tvsum_style
+g2-_pnmhO4A,196.0,198.0,annotator_1,,lecture,,"exposes [music] how computers actually work. Unlike Scratch, where code blocks protect your computers from dealing with",false,multimodal_tvsum_style
+g2-_pnmhO4A,198.0,200.0,annotator_1,,lecture,,"work. Unlike Scratch, where code blocks protect your computers from dealing with any errors, C requires you to be",false,multimodal_tvsum_style
+g2-_pnmhO4A,200.0,202.0,annotator_1,,lecture,,"protect your computers from dealing with any errors, C requires you to be",false,multimodal_tvsum_style
+g2-_pnmhO4A,202.0,204.0,annotator_1,,lecture,,"protect your computers from dealing with any errors, C requires you to be precise. Something important about C is",false,multimodal_tvsum_style
+g2-_pnmhO4A,204.0,206.0,annotator_1,,lecture,,"any errors, C requires you to be precise. Something important about C is that your code must be compiled before",false,multimodal_tvsum_style
+g2-_pnmhO4A,206.0,208.0,annotator_1,,lecture,,"precise. Something important about C is that your code must be compiled before it can run. When you write C code,",false,multimodal_tvsum_style
+g2-_pnmhO4A,208.0,210.0,annotator_1,,lecture,,"that your code must be compiled before it can run. When you write C code, you're writing source code, which is",false,multimodal_tvsum_style
+g2-_pnmhO4A,210.0,212.0,annotator_1,,lecture,,"it can run. When you write C code, you're writing source code, which is designed for humans to read. The",false,multimodal_tvsum_style
+g2-_pnmhO4A,212.0,214.0,annotator_1,,lecture,,"you're writing source code, which is designed for humans to read. The computer itself does not understand this",false,multimodal_tvsum_style
+g2-_pnmhO4A,214.0,216.0,annotator_1,,lecture,,"designed for humans to read. The computer itself does not understand this code. Instead, a compiler translates",false,multimodal_tvsum_style
+g2-_pnmhO4A,216.0,218.0,annotator_1,,lecture,,"computer itself does not understand this code. Instead, a compiler translates your source code into machine code,",false,multimodal_tvsum_style
+g2-_pnmhO4A,218.0,220.0,annotator_1,,lecture,,"code. Instead, a compiler translates your source code into machine code, which is a series of binary instructions",false,multimodal_tvsum_style
+g2-_pnmhO4A,220.0,222.0,annotator_1,,lecture,,"your source code into machine code, which is a series of binary instructions the computer can execute. If the",false,multimodal_tvsum_style
+g2-_pnmhO4A,222.0,224.0,annotator_1,,lecture,,"which is a series of binary instructions the computer can execute. If the compiler finds mistakes, [music]",false,multimodal_tvsum_style
+g2-_pnmhO4A,224.0,226.0,annotator_1,,lecture,,"the computer can execute. If the compiler finds mistakes, [music] it stops and reports errors before the",false,multimodal_tvsum_style
+g2-_pnmhO4A,226.0,228.0,annotator_1,,lecture,,"compiler finds mistakes, [music] it stops and reports errors before the program can ever run. This forces you to",false,multimodal_tvsum_style
+g2-_pnmhO4A,228.0,230.0,annotator_1,,lecture,,it stops and reports errors before the program can ever run. This forces you to fix problems early and teaches you,false,multimodal_tvsum_style
+g2-_pnmhO4A,230.0,232.0,annotator_1,,lecture,,program can ever run. This forces you to fix problems early and teaches you discipline in how you write programs.,false,multimodal_tvsum_style
+g2-_pnmhO4A,232.0,234.0,annotator_1,,lecture,,fix problems early and teaches you discipline in how you write programs. Every C program starts execution in a,false,multimodal_tvsum_style
+g2-_pnmhO4A,234.0,236.0,annotator_1,,lecture,,discipline in how you write programs. Every C program starts execution in a function called main. This is very,false,multimodal_tvsum_style
+g2-_pnmhO4A,236.0,238.0,annotator_1,,lecture,,Every C program starts execution in a function called main. This is very important. This is the entry point of,false,multimodal_tvsum_style
+g2-_pnmhO4A,238.0,240.0,annotator_1,,lecture,,function called main. This is very important. This is the entry point of the program. And when the compiled,false,multimodal_tvsum_style
+g2-_pnmhO4A,240.0,242.0,annotator_1,,lecture,,"important. This is the entry point of the program. And when the compiled program runs, the computer jumps directly into ",false,multimodal_tvsum_style
+g2-_pnmhO4A,242.0,244.0,annotator_1,,lecture,,"program runs, the computer jumps directly into the main function and [music] begins executing instructions",false,multimodal_tvsum_style
+g2-_pnmhO4A,244.0,246.0,annotator_1,,lecture,,"directly into the main function and [music] begins executing instructions line by line, top to bottom. There's no",false,multimodal_tvsum_style
+g2-_pnmhO4A,246.0,248.0,annotator_1,,lecture,,"[music] begins executing instructions line by line, top to bottom. There's no hidden behavior or automatic logic. If a",false,multimodal_tvsum_style
+g2-_pnmhO4A,248.0,250.0,annotator_1,,lecture,,"line by line, top to bottom. There's no hidden behavior or automatic logic. If a",false,multimodal_tvsum_style
+g2-_pnmhO4A,250.0,252.0,annotator_1,,lecture,,"line by line, top to bottom. There's no hidden behavior or automatic logic. If a line of code is not written, it will no",false,multimodal_tvsum_style
+g2-_pnmhO4A,252.0,254.0,annotator_1,,lecture,,"hidden behavior or automatic logic. If a line of code is not written, it will not happen. One of the first programs peop",false,multimodal_tvsum_style
+g2-_pnmhO4A,254.0,256.0,annotator_1,,lecture,,"line of code is not written, it will not happen. One of the first programs people often write is this thing called hello",false,multimodal_tvsum_style
+g2-_pnmhO4A,256.0,258.0,annotator_1,,lecture,,happen. One of the first programs people often write is this thing called hello world. You've probably heard of it,false,multimodal_tvsum_style
+g2-_pnmhO4A,258.0,260.0,annotator_1,,lecture,,often write is this thing called hello world. You've probably heard of it before. It's basically taking the words,false,multimodal_tvsum_style
+g2-_pnmhO4A,260.0,262.0,annotator_1,,lecture,,before. It's basically taking the words hello world and displaying [music] it on,false,multimodal_tvsum_style
+g2-_pnmhO4A,262.0,264.0,annotator_1,,lecture,,"hello world and displaying [music] it on your screen. It's a very simple program. And to do that in C, you basically hav",false,multimodal_tvsum_style
+g2-_pnmhO4A,264.0,266.0,annotator_1,,lecture,,"your screen. It's a very simple program. And to do that in C, you basically have to write it out like this. [music] prin",false,multimodal_tvsum_style
+g2-_pnmhO4A,266.0,268.0,annotator_1,,lecture,,"And to do that in C, you basically have to write it out like this. [music] print f hello world backslash and semicolon.",false,multimodal_tvsum_style
+g2-_pnmhO4A,268.0,270.0,annotator_1,,lecture,,to write it out like this. [music] print f hello world backslash and semicolon.,false,multimodal_tvsum_style
+g2-_pnmhO4A,270.0,272.0,annotator_1,,lecture,,to write it out like this. [music] print f hello world backslash and semicolon. This line tells the program to print the,false,multimodal_tvsum_style
+g2-_pnmhO4A,272.0,274.0,annotator_1,,lecture,,f hello world backslash and semicolon. This line tells the program to print the text hello world exclamation point to,false,multimodal_tvsum_style
+g2-_pnmhO4A,274.0,276.0,annotator_1,,lecture,,This line tells the program to print the text hello world exclamation point to the screen. Something important to note,false,multimodal_tvsum_style
+g2-_pnmhO4A,276.0,278.0,annotator_1,,lecture,,text hello world exclamation point to the screen. Something important to note is the print f function doesn't exist,false,multimodal_tvsum_style
+g2-_pnmhO4A,278.0,280.0,annotator_1,,lecture,,the screen. Something important to note is the print f function doesn't exist automatically in C. It comes from a,false,multimodal_tvsum_style
+g2-_pnmhO4A,280.0,282.0,annotator_1,,lecture,,is the print f function doesn't exist automatically in C. It comes from a standard library which is a collection,false,multimodal_tvsum_style
+g2-_pnmhO4A,282.0,284.0,annotator_1,,lecture,,automatically in C. It comes from a standard library which is a collection of pre-written code which we include and,false,multimodal_tvsum_style
+g2-_pnmhO4A,284.0,286.0,annotator_1,,lecture,,standard library which is a collection of pre-written code which we include and,false,multimodal_tvsum_style
+g2-_pnmhO4A,286.0,288.0,annotator_1,,lecture,,standard library which is a collection of pre-written code which we include and bring in through the line at the top of,false,multimodal_tvsum_style
+g2-_pnmhO4A,288.0,290.0,annotator_1,,lecture,,of pre-written code which we include and bring in through the line at the top of the file. You must explicitly include,false,multimodal_tvsum_style
+g2-_pnmhO4A,290.0,292.0,annotator_1,,lecture,,bring in through the line at the top of the file. You must explicitly include this library that defines the print f.,false,multimodal_tvsum_style
+g2-_pnmhO4A,292.0,294.0,annotator_1,,lecture,,"the file. You must explicitly include this library that defines the print f. If you forget this step, the compiler",false,multimodal_tvsum_style
+g2-_pnmhO4A,294.0,296.0,annotator_1,,lecture,,"this library that defines the print f. If you forget this step, the compiler will throw an error and the program will",false,multimodal_tvsum_style
+g2-_pnmhO4A,296.0,298.0,annotator_1,,lecture,,"If you forget this step, the compiler will throw an error and the program will not compile. C is strict about syntax.",false,multimodal_tvsum_style
+g2-_pnmhO4A,298.0,300.0,annotator_1,,lecture,,will throw an error and the program will not compile. C is strict about syntax. Statements must end with semicolons.,false,multimodal_tvsum_style
+g2-_pnmhO4A,300.0,302.0,annotator_1,,lecture,,not compile. C is strict about syntax. Statements must end with semicolons. Text must [music] be wrapped in double,false,multimodal_tvsum_style
+g2-_pnmhO4A,302.0,304.0,annotator_1,,lecture,,Statements must end with semicolons. Text must [music] be wrapped in double quotes. Special characters like back slashn ,false,multimodal_tvsum_style
+g2-_pnmhO4A,304.0,306.0,annotator_1,,lecture,,quotes. Special characters like back slashn are used to move to a new line.,false,multimodal_tvsum_style
+g2-_pnmhO4A,306.0,308.0,annotator_1,,lecture,,quotes. Special characters like back slashn are used to move to a new line. These rules [music] exist because the compil,false,multimodal_tvsum_style
+g2-_pnmhO4A,308.0,310.0,annotator_1,,lecture,,These rules [music] exist because the compiler needs clear instructions. If,false,multimodal_tvsum_style
+g2-_pnmhO4A,310.0,312.0,annotator_1,,lecture,,"compiler needs clear instructions. If you miss a single character, it can",false,multimodal_tvsum_style
+g2-_pnmhO4A,312.0,314.0,annotator_1,,lecture,,"compiler needs clear instructions. If you miss a single character, it can cause errors and your compiler will be",false,multimodal_tvsum_style
+g2-_pnmhO4A,314.0,316.0,annotator_1,,lecture,,"you miss a single character, it can cause errors and your compiler will be very upset with you. Variables in C",false,multimodal_tvsum_style
+g2-_pnmhO4A,316.0,318.0,annotator_1,,lecture,,cause errors and your compiler will be very upset with you. Variables in C store data just like variables in,false,multimodal_tvsum_style
+g2-_pnmhO4A,318.0,320.0,annotator_1,,lecture,,"very upset with you. Variables in C store data just like variables in Scratch, but each variable must have a",false,multimodal_tvsum_style
+g2-_pnmhO4A,320.0,322.0,annotator_1,,lecture,,"store data just like variables in Scratch, but each variable must have a type. A string stores [music] text like",false,multimodal_tvsum_style
+g2-_pnmhO4A,322.0,324.0,annotator_1,,lecture,,"Scratch, but each variable must have a type. A string stores [music] text like hello world. An int stores whole",false,multimodal_tvsum_style
+g2-_pnmhO4A,324.0,326.0,annotator_1,,lecture,,type. A string stores [music] text like hello world. An int stores whole numbers. A float or double stores,false,multimodal_tvsum_style
+g2-_pnmhO4A,326.0,328.0,annotator_1,,lecture,,hello world. An int stores whole numbers. A float or double stores decimal numbers. You declare a variable,false,multimodal_tvsum_style
+g2-_pnmhO4A,328.0,330.0,annotator_1,,lecture,,numbers. A float or double stores decimal numbers. You declare a variable by specifying its type and name and then,false,multimodal_tvsum_style
+g2-_pnmhO4A,330.0,332.0,annotator_1,,lecture,,decimal numbers. You declare a variable by specifying its type and name and then assign a value to it. Whenever you're,false,multimodal_tvsum_style
+g2-_pnmhO4A,332.0,334.0,annotator_1,,lecture,,"by specifying its type and name and then assign a value to it. Whenever you're finished writing your code in C, all you",false,multimodal_tvsum_style
+g2-_pnmhO4A,334.0,336.0,annotator_1,,lecture,,"assign a value to it. Whenever you're finished writing your code in C, all you have to do is compile it by going to the",false,multimodal_tvsum_style
+g2-_pnmhO4A,336.0,338.0,annotator_1,,lecture,,"finished writing your code in C, all you have to do is compile it by going to the terminal and writing make file [music]",false,multimodal_tvsum_style
+g2-_pnmhO4A,338.0,340.0,annotator_1,,lecture,,"have to do is compile it by going to the terminal and writing make file [music] name. But depending on your file system,",false,multimodal_tvsum_style
+g2-_pnmhO4A,340.0,342.0,annotator_1,,lecture,,"terminal and writing make file [music] name. But depending on your file system, this command could look a little differe",false,multimodal_tvsum_style
+g2-_pnmhO4A,342.0,344.0,annotator_1,,lecture,,this command could look a little different. Then you can run the code by typing dot /file name in the terminal.,false,multimodal_tvsum_style
+g2-_pnmhO4A,344.0,346.0,annotator_1,,lecture,,different. Then you can run the code by typing dot /file name in the terminal.,false,multimodal_tvsum_style
+g2-_pnmhO4A,346.0,348.0,annotator_1,,lecture,,"different. Then you can run the code by typing dot /file name in the terminal. And just like that, you wrote and ran",false,multimodal_tvsum_style
+g2-_pnmhO4A,348.0,350.0,annotator_1,,lecture,,"typing dot /file name in the terminal. And just like that, you wrote and ran your first C program. So congratulations. T",false,multimodal_tvsum_style
+g2-_pnmhO4A,350.0,352.0,annotator_1,,lecture,,your first C program. So congratulations. The following week is week two where you stop thinking about,false,multimodal_tvsum_style
+g2-_pnmhO4A,352.0,354.0,annotator_1,,lecture,,congratulations. The following week is week two where you stop thinking about individual lines of code and start,false,multimodal_tvsum_style
+g2-_pnmhO4A,354.0,356.0,annotator_1,,lecture,,"week two where you stop thinking about individual lines of code and start thinking about data, memory, and arrays.",false,multimodal_tvsum_style
+g2-_pnmhO4A,356.0,358.0,annotator_1,,lecture,,"individual lines of code and start thinking about data, memory, and arrays. When a program runs, it stores data in",false,multimodal_tvsum_style
+g2-_pnmhO4A,358.0,360.0,annotator_1,,lecture,,"thinking about data, memory, and arrays. When a program runs, it stores data in memory so it can be accessed [music]",false,multimodal_tvsum_style
+g2-_pnmhO4A,360.0,362.0,annotator_1,,lecture,,"When a program runs, it stores data in memory so it can be accessed [music] later. Different types of data take up",false,multimodal_tvsum_style
+g2-_pnmhO4A,362.0,364.0,annotator_1,,lecture,,"memory so it can be accessed [music] later. Different types of data take up different amounts of space, which is why",false,multimodal_tvsum_style
+g2-_pnmhO4A,364.0,366.0,annotator_1,,lecture,,"later. Different types of data take up different amounts of space, which is why I mentioned programming languages care",false,multimodal_tvsum_style
+g2-_pnmhO4A,366.0,368.0,annotator_1,,lecture,,"different amounts of space, which is why I mentioned programming languages care about data types. An integer, a decimal",false,multimodal_tvsum_style
+g2-_pnmhO4A,368.0,370.0,annotator_1,,lecture,,"I mentioned programming languages care about data types. An integer, a decimal number, a character of a word are all",false,multimodal_tvsum_style
+g2-_pnmhO4A,370.0,372.0,annotator_1,,lecture,,"about data types. An integer, a decimal number, a character of a word are all stored differently, even if they look",false,multimodal_tvsum_style
+g2-_pnmhO4A,372.0,374.0,annotator_1,,lecture,,"number, a character of a word are all stored differently, even if they look similar on screen. Strings, [music]",false,multimodal_tvsum_style
+g2-_pnmhO4A,374.0,376.0,annotator_1,,lecture,,"stored differently, even if they look similar on screen. Strings, [music] text, like I mentioned before, are",false,multimodal_tvsum_style
+g2-_pnmhO4A,376.0,378.0,annotator_1,,lecture,,"similar on screen. Strings, [music] text, like I mentioned before, are special because their size can change.",false,multimodal_tvsum_style
+g2-_pnmhO4A,378.0,380.0,annotator_1,,lecture,,"text, like I mentioned before, are special because their size can change. [music] For example, an integer number",false,multimodal_tvsum_style
+g2-_pnmhO4A,380.0,382.0,annotator_1,,lecture,,"special because their size can change. [music] For example, an integer number zero and an integer number 1,00 takes",false,multimodal_tvsum_style
+g2-_pnmhO4A,382.0,384.0,annotator_1,,lecture,,"[music] For example, an integer number zero and an integer number 1,00 takes",false,multimodal_tvsum_style
+g2-_pnmhO4A,384.0,386.0,annotator_1,,lecture,,"[music] For example, an integer number zero and an integer number 1,00 takes the same amount of memory. But the word",false,multimodal_tvsum_style
+g2-_pnmhO4A,386.0,388.0,annotator_1,,lecture,,"zero and an integer number 1,00 takes the same amount of memory. But the word sum and the word summer do not take the",false,multimodal_tvsum_style
+g2-_pnmhO4A,388.0,390.0,annotator_1,,lecture,,"the same amount of memory. But the word sum and the word summer do not take the same amount of memory. Because of this,",false,multimodal_tvsum_style
+g2-_pnmhO4A,390.0,392.0,annotator_1,,lecture,,"sum and the word summer do not take the same amount of memory. Because of this, strings are treated as collections of",false,multimodal_tvsum_style
+g2-_pnmhO4A,392.0,394.0,annotator_1,,lecture,,"same amount of memory. Because of this, strings are treated as collections of characters rather than single fixed",false,multimodal_tvsum_style
+g2-_pnmhO4A,394.0,396.0,annotator_1,,lecture,,"strings are treated as collections of characters rather than single fixed values. And on this point, another",false,multimodal_tvsum_style
+g2-_pnmhO4A,396.0,398.0,annotator_1,,lecture,,"characters rather than single fixed values. And on this point, another important type of data for you to know",false,multimodal_tvsum_style
+g2-_pnmhO4A,398.0,400.0,annotator_1,,lecture,,"important type of data for you to know are arrays, which are essential for",false,multimodal_tvsum_style
+g2-_pnmhO4A,400.0,402.0,annotator_1,,lecture,,"important type of data for you to know are arrays, which are essential for large programs. [music] Arrays let you",false,multimodal_tvsum_style
+g2-_pnmhO4A,402.0,404.0,annotator_1,,lecture,,large programs. [music] Arrays let you store multiple values of the same type,false,multimodal_tvsum_style
+g2-_pnmhO4A,404.0,406.0,annotator_1,,lecture,,large programs. [music] Arrays let you store multiple values of the same type together in memory. You can have an,false,multimodal_tvsum_style
+g2-_pnmhO4A,406.0,408.0,annotator_1,,lecture,,"store multiple values of the same type together in memory. You can have an array of numbers, an array of strings,",false,multimodal_tvsum_style
+g2-_pnmhO4A,408.0,410.0,annotator_1,,lecture,,"together in memory. You can have an array of numbers, an array of strings, an array of anything, an array of U. And",false,multimodal_tvsum_style
+g2-_pnmhO4A,410.0,412.0,annotator_1,,lecture,,"array of numbers, an array of strings, an array of anything, an array of U. And I'll cover this a little bit more when",false,multimodal_tvsum_style
+g2-_pnmhO4A,412.0,414.0,annotator_1,,lecture,,"an array of anything, an array of U. And I'll cover this a little bit more when we get into the topic of data structures",false,multimodal_tvsum_style
+g2-_pnmhO4A,414.0,416.0,annotator_1,,lecture,,"we get into the topic of data structures. [music] So now that we understand basic data and arrays, we are",false,multimodal_tvsum_style
+g2-_pnmhO4A,416.0,418.0,annotator_1,,lecture,,"structures. [music] So now that we understand basic data and arrays, we are ready to move on to week three, which",false,multimodal_tvsum_style
+g2-_pnmhO4A,418.0,420.0,annotator_1,,lecture,,"understand basic data and arrays, we are ready to move on to week three, which covers searching and sorting. So",false,multimodal_tvsum_style
+g2-_pnmhO4A,420.0,422.0,annotator_1,,lecture,,"ready to move on to week three, which covers searching and sorting. So sometimes you can have arrays that are",false,multimodal_tvsum_style
+g2-_pnmhO4A,422.0,424.0,annotator_1,,lecture,,"covers searching and sorting. So sometimes you can have arrays that are really, really long, like hundreds,",false,multimodal_tvsum_style
+g2-_pnmhO4A,424.0,426.0,annotator_1,,lecture,,"sometimes you can have arrays that are really, really long, like hundreds, thousands of items. But what if you want",false,multimodal_tvsum_style
+g2-_pnmhO4A,426.0,428.0,annotator_1,,lecture,,"really, really long, like hundreds, thousands of items. But what if you want to access a particular item within that",false,multimodal_tvsum_style
+g2-_pnmhO4A,428.0,430.0,annotator_1,,lecture,,"thousands of items. But what if you want to access a particular item within that array? Well, we need to search for that",false,multimodal_tvsum_style
+g2-_pnmhO4A,430.0,432.0,annotator_1,,lecture,,"to access a particular item within that array? Well, we need to search for that item in order to access it. And that's",false,multimodal_tvsum_style
+g2-_pnmhO4A,432.0,434.0,annotator_1,,lecture,,"array? Well, we need to search for that item in order to access it. And that's where searching algorithms come in. And",false,multimodal_tvsum_style
+g2-_pnmhO4A,434.0,436.0,annotator_1,,lecture,,"item in order to access it. And that's where searching algorithms come in. And specifically, I'll be covering two",false,multimodal_tvsum_style
+g2-_pnmhO4A,436.0,438.0,annotator_1,,lecture,,"where searching algorithms come in. And specifically, I'll be covering two searching algorithms. So, first we got",false,multimodal_tvsum_style
+g2-_pnmhO4A,438.0,440.0,annotator_1,,lecture,,"specifically, I'll be covering two searching algorithms. So, first we got linear search, [music] which is pretty",false,multimodal_tvsum_style
+g2-_pnmhO4A,440.0,442.0,annotator_1,,lecture,,"searching algorithms. So, first we got linear search, [music] which is pretty basic. This algorithm just checks each",false,multimodal_tvsum_style
+g2-_pnmhO4A,442.0,444.0,annotator_1,,lecture,,"linear search, [music] which is pretty basic. This algorithm just checks each element in a list one at a time until",false,multimodal_tvsum_style
+g2-_pnmhO4A,444.0,446.0,annotator_1,,lecture,,basic. This algorithm just checks each element in a list one at a time until [music] a target is found. It works on,false,multimodal_tvsum_style
+g2-_pnmhO4A,446.0,448.0,annotator_1,,lecture,,"element in a list one at a time until [music] a target is found. It works on any list, any array, regardless of",false,multimodal_tvsum_style
+g2-_pnmhO4A,448.0,450.0,annotator_1,,lecture,,"[music] a target is found. It works on any list, any array, regardless of order. For example, say you're searching for t",false,multimodal_tvsum_style
+g2-_pnmhO4A,450.0,452.0,annotator_1,,lecture,,"order. For example, say you're searching for the number seven in an array of",false,multimodal_tvsum_style
+g2-_pnmhO4A,452.0,454.0,annotator_1,,lecture,,"order. For example, say you're searching for the number seven in an array of 49173.",false,multimodal_tvsum_style
+g2-_pnmhO4A,454.0,456.0,annotator_1,,lecture,,"for the number seven in an array of 49173. Meaning, linear search will first check",false,multimodal_tvsum_style
+g2-_pnmhO4A,456.0,458.0,annotator_1,,lecture,,"49173. Meaning, linear search will first check four, then 9, then 1, and then it'll",false,multimodal_tvsum_style
+g2-_pnmhO4A,458.0,460.0,annotator_1,,lecture,,"Meaning, linear search will first check four, then 9, then 1, and then it'll finally find seven and say, ""Hey, the",false,multimodal_tvsum_style
+g2-_pnmhO4A,460.0,462.0,annotator_1,,lecture,,"four, then 9, then 1, and then it'll finally find seven and say, ""Hey, the element was found."" And while this does",false,multimodal_tvsum_style
+g2-_pnmhO4A,462.0,464.0,annotator_1,,lecture,,"finally find seven and say, ""Hey, the element was found."" And while this does work, obviously [music] this could take",false,multimodal_tvsum_style
+g2-_pnmhO4A,464.0,466.0,annotator_1,,lecture,,"element was found."" And while this does work, obviously [music] this could take a really long time, especially if the",false,multimodal_tvsum_style
+g2-_pnmhO4A,466.0,468.0,annotator_1,,lecture,,"work, obviously [music] this could take a really long time, especially if the list is long itself. So a quicker",false,multimodal_tvsum_style
+g2-_pnmhO4A,468.0,470.0,annotator_1,,lecture,,"a really long time, especially if the list is long itself. So a quicker algorithm will be our next searching",false,multimodal_tvsum_style
+g2-_pnmhO4A,470.0,472.0,annotator_1,,lecture,,list is long itself. So a quicker algorithm will be our next searching algorithm called binary search. Binary,false,multimodal_tvsum_style
+g2-_pnmhO4A,472.0,474.0,annotator_1,,lecture,,algorithm will be our next searching algorithm called binary search. Binary search only works if the data is sorted.,false,multimodal_tvsum_style
+g2-_pnmhO4A,474.0,476.0,annotator_1,,lecture,,algorithm called binary search. Binary search only works if the data is sorted. And the way this operates is by,false,multimodal_tvsum_style
+g2-_pnmhO4A,476.0,478.0,annotator_1,,lecture,,search only works if the data is sorted. And the way this operates is by repeatedly cutting [music] the search,false,multimodal_tvsum_style
+g2-_pnmhO4A,478.0,480.0,annotator_1,,lecture,,And the way this operates is by repeatedly cutting [music] the search space in half till you're left with your,false,multimodal_tvsum_style
+g2-_pnmhO4A,480.0,482.0,annotator_1,,lecture,,"repeatedly cutting [music] the search space in half till you're left with your target element. For example, say we're",false,multimodal_tvsum_style
+g2-_pnmhO4A,482.0,484.0,annotator_1,,lecture,,"space in half till you're left with your target element. For example, say we're searching for the number 30 in this",false,multimodal_tvsum_style
+g2-_pnmhO4A,484.0,486.0,annotator_1,,lecture,,"target element. For example, say we're searching for the number 30 in this array. First, it'll start from the",false,multimodal_tvsum_style
+g2-_pnmhO4A,486.0,488.0,annotator_1,,lecture,,"searching for the number 30 in this array. First, it'll start from the middle and ask if 30 is less than, equal",false,multimodal_tvsum_style
+g2-_pnmhO4A,488.0,490.0,annotator_1,,lecture,,"array. First, it'll start from the middle and ask if 30 is less than, equal to, or greater than 18. [music] Since",false,multimodal_tvsum_style
+g2-_pnmhO4A,490.0,492.0,annotator_1,,lecture,,"middle and ask if 30 is less than, equal to, or greater than 18. [music] Since it's greater than, it'll break the array",false,multimodal_tvsum_style
+g2-_pnmhO4A,492.0,494.0,annotator_1,,lecture,,"to, or greater than 18. [music] Since it's greater than, it'll break the array in half and look at the top half. Then",false,multimodal_tvsum_style
+g2-_pnmhO4A,494.0,496.0,annotator_1,,lecture,,"it's greater than, it'll break the array in half and look at the top half. Then it'll find the middle element and",false,multimodal_tvsum_style
+g2-_pnmhO4A,496.0,498.0,annotator_1,,lecture,,"in half and look at the top half. Then it'll find the middle element and [music] ask if 30 is less than, equal",false,multimodal_tvsum_style
+g2-_pnmhO4A,498.0,500.0,annotator_1,,lecture,,"it'll find the middle element and [music] ask if 30 is less than, equal to, or greater than 30. In this case,",false,multimodal_tvsum_style
+g2-_pnmhO4A,500.0,502.0,annotator_1,,lecture,,"[music] ask if 30 is less than, equal to, or greater than 30. In this case, since it's equal to, the algorithm will",false,multimodal_tvsum_style
+g2-_pnmhO4A,502.0,504.0,annotator_1,,lecture,,"to, or greater than 30. In this case, since it's equal to, the algorithm will end right there and return that it found",false,multimodal_tvsum_style
+g2-_pnmhO4A,504.0,506.0,annotator_1,,lecture,,"since it's equal to, the algorithm will end right there and return that it found that element. So in a linear search, we",false,multimodal_tvsum_style
+g2-_pnmhO4A,506.0,508.0,annotator_1,,lecture,,"end right there and return that it found that element. So in a linear search, we would have gone through nine whole",false,multimodal_tvsum_style
+g2-_pnmhO4A,508.0,510.0,annotator_1,,lecture,,"that element. So in a linear search, we would have gone through nine whole iterations to find the target. In this",false,multimodal_tvsum_style
+g2-_pnmhO4A,510.0,512.0,annotator_1,,lecture,,"would have gone through nine whole iterations to find the target. In this case, with binary, we just went through",false,multimodal_tvsum_style
+g2-_pnmhO4A,512.0,514.0,annotator_1,,lecture,,"iterations to find the target. In this case, with binary, we just went through two iterations. And like I said, binary",false,multimodal_tvsum_style
+g2-_pnmhO4A,514.0,516.0,annotator_1,,lecture,,"case, with binary, we just went through two iterations. And like I said, binary search requires the array to be sorted.",false,multimodal_tvsum_style
+g2-_pnmhO4A,516.0,518.0,annotator_1,,lecture,,"two iterations. And like I said, binary search requires the array to be sorted. So, if our array is messy and out of",false,multimodal_tvsum_style
+g2-_pnmhO4A,518.0,520.0,annotator_1,,lecture,,"search requires the array to be sorted. So, if our array is messy and out of order, we must do some sorting, which is",false,multimodal_tvsum_style
+g2-_pnmhO4A,520.0,522.0,annotator_1,,lecture,,"So, if our array is messy and out of order, we must do some sorting, which is where sorting algorithms come into the",false,multimodal_tvsum_style
+g2-_pnmhO4A,522.0,524.0,annotator_1,,lecture,,"order, we must do some sorting, which is where sorting algorithms come into the mix. And I'll cover three main sorting",false,multimodal_tvsum_style
+g2-_pnmhO4A,524.0,526.0,annotator_1,,lecture,,where sorting algorithms come into the mix. And I'll cover three main sorting algorithms here. The first is called,false,multimodal_tvsum_style
+g2-_pnmhO4A,526.0,528.0,annotator_1,,lecture,,mix. And I'll cover three main sorting algorithms here. The first is called bubble sort. This algorithm repeatedly,false,multimodal_tvsum_style
+g2-_pnmhO4A,528.0,530.0,annotator_1,,lecture,,algorithms here. The first is called bubble sort. This algorithm repeatedly compares adjacent elements and swaps,false,multimodal_tvsum_style
+g2-_pnmhO4A,530.0,532.0,annotator_1,,lecture,,bubble sort. This algorithm repeatedly compares adjacent elements and swaps them if they're in the wrong order.,false,multimodal_tvsum_style
+g2-_pnmhO4A,532.0,534.0,annotator_1,,lecture,,compares adjacent elements and swaps them if they're in the wrong order. Larger values gradually move to the end,false,multimodal_tvsum_style
+g2-_pnmhO4A,534.0,536.0,annotator_1,,lecture,,"them if they're in the wrong order. Larger values gradually move to the end of the list. For example, if you're",false,multimodal_tvsum_style
+g2-_pnmhO4A,536.0,538.0,annotator_1,,lecture,,"Larger values gradually move to the end of the list. For example, if you're sorting the array 5 3 4 1. First, it",false,multimodal_tvsum_style
+g2-_pnmhO4A,538.0,540.0,annotator_1,,lecture,,"of the list. For example, if you're sorting the array 5 3 4 1. First, it swaps five and three, then five and",false,multimodal_tvsum_style
+g2-_pnmhO4A,540.0,542.0,annotator_1,,lecture,,"sorting the array 5 3 4 1. First, it swaps five and three, then five and four, then five and one, pushing five to",false,multimodal_tvsum_style
+g2-_pnmhO4A,542.0,544.0,annotator_1,,lecture,,"swaps five and three, then five and four, then five and one, pushing five to the end after one full pass. This",false,multimodal_tvsum_style
+g2-_pnmhO4A,544.0,546.0,annotator_1,,lecture,,"four, then five and one, pushing five to the end after one full pass. This",false,multimodal_tvsum_style
+g2-_pnmhO4A,546.0,548.0,annotator_1,,lecture,,"four, then five and one, pushing five to the end after one full pass. This process is repeated until the list is",false,multimodal_tvsum_style
+g2-_pnmhO4A,548.0,550.0,annotator_1,,lecture,,"process is repeated until the list is sorted. And the nice thing is you'll get the right answer, but the bad thing is",false,multimodal_tvsum_style
+g2-_pnmhO4A,550.0,552.0,annotator_1,,lecture,,"sorted. And the nice thing is you'll get the right answer, but the bad thing is",false,multimodal_tvsum_style
+g2-_pnmhO4A,552.0,554.0,annotator_1,,lecture,,"the right answer, but the bad thing is if the list is long, this could be pretty slow. So the next algorithm we'll",false,multimodal_tvsum_style
+g2-_pnmhO4A,554.0,556.0,annotator_1,,lecture,,"if the list is long, this could be pretty slow. So the next algorithm we'll talk about is selection sort. This",false,multimodal_tvsum_style
+g2-_pnmhO4A,556.0,558.0,annotator_1,,lecture,,pretty slow. So the next algorithm we'll talk about is selection sort. This sorting algorithm sorts the array by,false,multimodal_tvsum_style
+g2-_pnmhO4A,558.0,560.0,annotator_1,,lecture,,talk about is selection sort. This sorting algorithm sorts the array by repeatedly selecting the smallest,false,multimodal_tvsum_style
+g2-_pnmhO4A,560.0,562.0,annotator_1,,lecture,,sorting algorithm sorts the array by repeatedly selecting the smallest element and placing it at the front. For,false,multimodal_tvsum_style
+g2-_pnmhO4A,562.0,564.0,annotator_1,,lecture,,"repeatedly selecting the smallest element and placing it at the front. For example, sorting the array 6 2 41 first",false,multimodal_tvsum_style
+g2-_pnmhO4A,564.0,566.0,annotator_1,,lecture,,"element and placing it at the front. For example, sorting the array 6 2 41 first",false,multimodal_tvsum_style
+g2-_pnmhO4A,566.0,568.0,annotator_1,,lecture,,"element and placing it at the front. For example, sorting the array 6 2 41 first finds one, moves that to the front, the",false,multimodal_tvsum_style
+g2-_pnmhO4A,568.0,570.0,annotator_1,,lecture,,"example, sorting the array 6 2 41 first finds one, moves that to the front, then finds two, but then position, then four",false,multimodal_tvsum_style
+g2-_pnmhO4A,570.0,572.0,annotator_1,,lecture,,"finds one, moves that to the front, then finds two, but then position, then four, then it finally leaves the list [music",false,multimodal_tvsum_style
+g2-_pnmhO4A,572.0,574.0,annotator_1,,lecture,,"finds two, but then position, then four, then it finally leaves the list [music] sorted. And although this is less",false,multimodal_tvsum_style
+g2-_pnmhO4A,574.0,576.0,annotator_1,,lecture,,"then it finally leaves the list [music] sorted. And although this is less swapping compared to bubble sort, still",false,multimodal_tvsum_style
+g2-_pnmhO4A,576.0,578.0,annotator_1,,lecture,,"sorted. And although this is less swapping compared to bubble sort, still overall if the list is really long, this",false,multimodal_tvsum_style
+g2-_pnmhO4A,578.0,580.0,annotator_1,,lecture,,"swapping compared to bubble sort, still overall if the list is really long, this could take a really [music] long time.",false,multimodal_tvsum_style
+g2-_pnmhO4A,580.0,582.0,annotator_1,,lecture,,"overall if the list is really long, this could take a really [music] long time. So if you actually want a fast sorting",false,multimodal_tvsum_style
+g2-_pnmhO4A,582.0,584.0,annotator_1,,lecture,,"could take a really [music] long time. So if you actually want a fast sorting algorithm, we got merge sort. So merge",false,multimodal_tvsum_style
+g2-_pnmhO4A,584.0,586.0,annotator_1,,lecture,,"So if you actually want a fast sorting algorithm, we got merge sort. So merge sort splits a list into half, sorting",false,multimodal_tvsum_style
+g2-_pnmhO4A,586.0,588.0,annotator_1,,lecture,,"algorithm, we got merge sort. So merge sort splits a list into half, sorting each half and then merging them back",false,multimodal_tvsum_style
+g2-_pnmhO4A,588.0,590.0,annotator_1,,lecture,,"sort splits a list into half, sorting each half and then merging them back together in order. For example, if",false,multimodal_tvsum_style
+g2-_pnmhO4A,590.0,592.0,annotator_1,,lecture,,"each half and then merging them back together in order. For example, if you're sorting the array 8352. [music]",false,multimodal_tvsum_style
+g2-_pnmhO4A,592.0,594.0,annotator_1,,lecture,,"together in order. For example, if you're sorting the array 8352. [music] First, it'll split it into 83 and 52,",false,multimodal_tvsum_style
+g2-_pnmhO4A,594.0,596.0,annotator_1,,lecture,,"you're sorting the array 8352. [music] First, it'll split it into 83 and 52, then into single elements, and then",false,multimodal_tvsum_style
+g2-_pnmhO4A,596.0,598.0,annotator_1,,lecture,,"First, it'll split it into 83 and 52, then into single elements, and then finally merging them into 2358. [music]",false,multimodal_tvsum_style
+g2-_pnmhO4A,598.0,600.0,annotator_1,,lecture,,"then into single elements, and then finally merging them into 2358. [music]",false,multimodal_tvsum_style
+g2-_pnmhO4A,600.0,602.0,annotator_1,,lecture,,finally merging them into 2358. [music] This approach guarantees fast and consistent performance even for larger,false,multimodal_tvsum_style
+g2-_pnmhO4A,602.0,604.0,annotator_1,,lecture,,This approach guarantees fast and consistent performance even for larger data sets. And now personally when I was,false,multimodal_tvsum_style
+g2-_pnmhO4A,604.0,606.0,annotator_1,,lecture,,consistent performance even for larger data sets. And now personally when I was learning data structures and algorithms,false,multimodal_tvsum_style
+g2-_pnmhO4A,606.0,608.0,annotator_1,,lecture,,"data sets. And now personally when I was learning data structures and algorithms in university, I use this tool called",false,multimodal_tvsum_style
+g2-_pnmhO4A,608.0,610.0,annotator_1,,lecture,,"learning data structures and algorithms in university, I use this tool called csvisttool.com. It's a free website that",false,multimodal_tvsum_style
+g2-_pnmhO4A,610.0,612.0,annotator_1,,lecture,,"in university, I use this tool called csvisttool.com. It's a free website that helps you visualize data structures",false,multimodal_tvsum_style
+g2-_pnmhO4A,612.0,614.0,annotator_1,,lecture,,csvisttool.com. It's a free website that helps you visualize data structures algorithms as well as the code that goes,false,multimodal_tvsum_style
+g2-_pnmhO4A,614.0,616.0,annotator_1,,lecture,,helps you visualize data structures algorithms as well as the code that goes along with it. It made it super easy for,false,multimodal_tvsum_style
+g2-_pnmhO4A,616.0,618.0,annotator_1,,lecture,,algorithms as well as the code that goes along with it. It made it super easy for me to understand because it would give,false,multimodal_tvsum_style
+g2-_pnmhO4A,618.0,620.0,annotator_1,,lecture,,along with it. It made it super easy for me to understand because it would give such good diagram walkthroughs. [music] ,false,multimodal_tvsum_style
+g2-_pnmhO4A,620.0,622.0,annotator_1,,lecture,,"such good diagram walkthroughs. [music] And if you're interested, I'll link it down below in the description. Week four",false,multimodal_tvsum_style
+g2-_pnmhO4A,622.0,624.0,annotator_1,,lecture,,"And if you're interested, I'll link it down below in the description. Week four is when we get deeper into memory. And",false,multimodal_tvsum_style
+g2-_pnmhO4A,624.0,626.0,annotator_1,,lecture,,down below in the description. Week four is when we get deeper into memory. And now I'm not going to go into too many,false,multimodal_tvsum_style
+g2-_pnmhO4A,626.0,628.0,annotator_1,,lecture,,is when we get deeper into memory. And now I'm not going to go into too many details in this section because it could,false,multimodal_tvsum_style
+g2-_pnmhO4A,628.0,630.0,annotator_1,,lecture,,now I'm not going to go into too many details in this section because it could feel overwhelming especially if you're a,false,multimodal_tvsum_style
+g2-_pnmhO4A,630.0,632.0,annotator_1,,lecture,,details in this section because it could feel overwhelming especially if you're a beginner. So we'll operate at a high,false,multimodal_tvsum_style
+g2-_pnmhO4A,632.0,634.0,annotator_1,,lecture,,feel overwhelming especially if you're a beginner. So we'll operate at a high level and you let me know down below if,false,multimodal_tvsum_style
+g2-_pnmhO4A,634.0,636.0,annotator_1,,lecture,,beginner. So we'll operate at a high level and you let me know down below if you have any questions in the comments. So ,false,multimodal_tvsum_style
+g2-_pnmhO4A,636.0,638.0,annotator_1,,lecture,,you have any questions in the comments. So every variable or value that a program uses lives somewhere in the,false,multimodal_tvsum_style
+g2-_pnmhO4A,638.0,640.0,annotator_1,,lecture,,So every variable or value that a program uses lives somewhere in the computer's memory and each memory,false,multimodal_tvsum_style
+g2-_pnmhO4A,640.0,642.0,annotator_1,,lecture,,program uses lives somewhere in the computer's memory and each memory location has [music] an address just,false,multimodal_tvsum_style
+g2-_pnmhO4A,642.0,644.0,annotator_1,,lecture,,computer's memory and each memory location has [music] an address just like each of you has a home address.,false,multimodal_tvsum_style
+g2-_pnmhO4A,644.0,646.0,annotator_1,,lecture,,location has [music] an address just like each of you has a home address. Each variable has a memory address. Now,false,multimodal_tvsum_style
+g2-_pnmhO4A,646.0,648.0,annotator_1,,lecture,,like each of you has a home address. Each variable has a memory address. Now the thing is in the computer world the,false,multimodal_tvsum_style
+g2-_pnmhO4A,648.0,650.0,annotator_1,,lecture,,Each variable has a memory address. Now the thing is in the computer world the way the address is [music] noted is by,false,multimodal_tvsum_style
+g2-_pnmhO4A,650.0,652.0,annotator_1,,lecture,,the thing is in the computer world the way the address is [music] noted is by using a certain type of number called,false,multimodal_tvsum_style
+g2-_pnmhO4A,652.0,654.0,annotator_1,,lecture,,way the address is [music] noted is by using a certain type of number called hexadimal. So regular numbers are,false,multimodal_tvsum_style
+g2-_pnmhO4A,654.0,656.0,annotator_1,,lecture,,using a certain type of number called hexadimal. So regular numbers are decimal. This is 1. This is [music] 10.,false,multimodal_tvsum_style
+g2-_pnmhO4A,656.0,658.0,annotator_1,,lecture,,hexadimal. So regular numbers are decimal. This is 1. This is [music] 10.,false,multimodal_tvsum_style
+g2-_pnmhO4A,658.0,660.0,annotator_1,,lecture,,hexadimal. So regular numbers are decimal. This is 1. This is [music] 10. This is 100. But hexadimals actually use,false,multimodal_tvsum_style
+g2-_pnmhO4A,660.0,662.0,annotator_1,,lecture,,decimal. This is 1. This is [music] 10. This is 100. But hexadimals actually use regular digits 0 through 9. But for,false,multimodal_tvsum_style
+g2-_pnmhO4A,662.0,664.0,annotator_1,,lecture,,"This is 100. But hexadimals actually use regular digits 0 through 9. But for numbers 10 through 15, it [music] uses A",false,multimodal_tvsum_style
+g2-_pnmhO4A,664.0,666.0,annotator_1,,lecture,,"regular digits 0 through 9. But for numbers 10 through 15, it [music] uses A",false,multimodal_tvsum_style
+g2-_pnmhO4A,666.0,668.0,annotator_1,,lecture,,"regular digits 0 through 9. But for numbers 10 through 15, it [music] uses A through F. So if I wanted to write out",false,multimodal_tvsum_style
+g2-_pnmhO4A,668.0,670.0,annotator_1,,lecture,,"numbers 10 through 15, it [music] uses A through F. So if I wanted to write out the number 14, I wouldn't write out 14.",false,multimodal_tvsum_style
+g2-_pnmhO4A,670.0,672.0,annotator_1,,lecture,,"through F. So if I wanted to write out the number 14, I wouldn't write out 14. I would just write out E. If I wanted to",false,multimodal_tvsum_style
+g2-_pnmhO4A,672.0,674.0,annotator_1,,lecture,,"the number 14, I wouldn't write out 14. I would just write out E. If I wanted to write out 26, I would write 1 A. The 1",false,multimodal_tvsum_style
+g2-_pnmhO4A,674.0,676.0,annotator_1,,lecture,,"I would just write out E. If I wanted to write out 26, I would write 1 A. The 1",false,multimodal_tvsum_style
+g2-_pnmhO4A,676.0,678.0,annotator_1,,lecture,,"I would just write out E. If I wanted to write out 26, I would write 1 A. The 1 is for 16. [music] The A is for 10. Add",false,multimodal_tvsum_style
+g2-_pnmhO4A,678.0,680.0,annotator_1,,lecture,,"write out 26, I would write 1 A. The 1 is for 16. [music] The A is for 10. Add them together for 26. And this can",false,multimodal_tvsum_style
+g2-_pnmhO4A,680.0,682.0,annotator_1,,lecture,,is for 16. [music] The A is for 10. Add them together for 26. And this can actually get very complicated very,false,multimodal_tvsum_style
+g2-_pnmhO4A,682.0,684.0,annotator_1,,lecture,,them together for 26. And this can actually get very complicated very quickly. So I'm going to spare you guys,false,multimodal_tvsum_style
+g2-_pnmhO4A,684.0,686.0,annotator_1,,lecture,,actually get very complicated very quickly. So I'm going to spare you guys the headache. But if you do understand,false,multimodal_tvsum_style
+g2-_pnmhO4A,686.0,688.0,annotator_1,,lecture,,"quickly. So I'm going to spare you guys the headache. But if you do understand hexodimal, the next thing for you to do",false,multimodal_tvsum_style
+g2-_pnmhO4A,688.0,690.0,annotator_1,,lecture,,"the headache. But if you do understand hexodimal, the next thing for you to do would be to learn about pointers and",false,multimodal_tvsum_style
+g2-_pnmhO4A,690.0,692.0,annotator_1,,lecture,,"hexodimal, the next thing for you to do would be to learn about pointers and string comparisons. But for the sake of",false,multimodal_tvsum_style
+g2-_pnmhO4A,692.0,694.0,annotator_1,,lecture,,"would be to learn about pointers and string comparisons. But for the sake of this video, I won't go into all those",false,multimodal_tvsum_style
+g2-_pnmhO4A,694.0,696.0,annotator_1,,lecture,,"string comparisons. But for the sake of this video, I won't go into all those nitty-gritty details. So the next week",false,multimodal_tvsum_style
+g2-_pnmhO4A,696.0,698.0,annotator_1,,lecture,,nitty-gritty details. So the next week is week five of CS50. And this gets deep,false,multimodal_tvsum_style
+g2-_pnmhO4A,698.0,700.0,annotator_1,,lecture,,nitty-gritty details. So the next week is week five of CS50. And this gets deep [music] into data structures. My,false,multimodal_tvsum_style
+g2-_pnmhO4A,700.0,702.0,annotator_1,,lecture,,is week five of CS50. And this gets deep [music] into data structures. My favorite. So I already introduced arrays,false,multimodal_tvsum_style
+g2-_pnmhO4A,702.0,704.0,annotator_1,,lecture,,"[music] into data structures. My favorite. So I already introduced arrays to you guys, which is a structure that",false,multimodal_tvsum_style
+g2-_pnmhO4A,704.0,706.0,annotator_1,,lecture,,"favorite. So I already introduced arrays to you guys, which is a structure that stores data in a contiguous manner.",false,multimodal_tvsum_style
+g2-_pnmhO4A,706.0,708.0,annotator_1,,lecture,,"to you guys, which is a structure that stores data in a contiguous manner. Meaning each elements are side by side",false,multimodal_tvsum_style
+g2-_pnmhO4A,708.0,710.0,annotator_1,,lecture,,stores data in a contiguous manner. Meaning each elements are side by side in memory. Each item in the array has a,false,multimodal_tvsum_style
+g2-_pnmhO4A,710.0,712.0,annotator_1,,lecture,,Meaning each elements are side by side in memory. Each item in the array has a fixed position and you can go to any,false,multimodal_tvsum_style
+g2-_pnmhO4A,712.0,714.0,annotator_1,,lecture,,in memory. Each item in the array has a fixed position and you can go to any item by accessing [music] its index. Kind o,false,multimodal_tvsum_style
+g2-_pnmhO4A,714.0,716.0,annotator_1,,lecture,,item by accessing [music] its index. Kind of like middle school lockers. You go to any locker by knowing,false,multimodal_tvsum_style
+g2-_pnmhO4A,716.0,718.0,annotator_1,,lecture,,its index. Kind of like middle school lockers. You go to any locker by knowing its number. That's what we got for,false,multimodal_tvsum_style
+g2-_pnmhO4A,718.0,720.0,annotator_1,,lecture,,lockers. You go to any locker by knowing its number. That's what we got for arrays. Another popular data structure,false,multimodal_tvsum_style
+g2-_pnmhO4A,720.0,722.0,annotator_1,,lecture,,its number. That's what we got for arrays. Another popular data structure is called a stack. [music] And this one,false,multimodal_tvsum_style
+g2-_pnmhO4A,722.0,724.0,annotator_1,,lecture,,arrays. Another popular data structure is called a stack. [music] And this one follows the ordering rule of last in,false,multimodal_tvsum_style
+g2-_pnmhO4A,724.0,726.0,annotator_1,,lecture,,is called a stack. [music] And this one follows the ordering rule of last in first out. Think of it like a stack of,false,multimodal_tvsum_style
+g2-_pnmhO4A,726.0,728.0,annotator_1,,lecture,,follows the ordering rule of last in first out. Think of it like a stack of plates. You [music] place plates on the,false,multimodal_tvsum_style
+g2-_pnmhO4A,728.0,730.0,annotator_1,,lecture,,first out. Think of it like a stack of plates. You [music] place plates on the top and remove the top plate first. In,false,multimodal_tvsum_style
+g2-_pnmhO4A,730.0,732.0,annotator_1,,lecture,,"plates. You [music] place plates on the top and remove the top plate first. In programming, adding to a stack is called",false,multimodal_tvsum_style
+g2-_pnmhO4A,732.0,734.0,annotator_1,,lecture,,"top and remove the top plate first. In programming, adding to a stack is called push and removing is called pop. And",false,multimodal_tvsum_style
+g2-_pnmhO4A,734.0,736.0,annotator_1,,lecture,,"programming, adding to a stack is called push and removing is called pop. And",false,multimodal_tvsum_style
+g2-_pnmhO4A,736.0,738.0,annotator_1,,lecture,,push and removing is called pop. And stacks are useful in depth research,false,multimodal_tvsum_style
+g2-_pnmhO4A,738.0,740.0,annotator_1,,lecture,,stacks are useful in depth research algorithms. The next data structure is a,false,multimodal_tvsum_style
+g2-_pnmhO4A,740.0,742.0,annotator_1,,lecture,,stacks are useful in depth research algorithms. The next data structure is a Q which unlike a stack is a first in,false,multimodal_tvsum_style
+g2-_pnmhO4A,742.0,744.0,annotator_1,,lecture,,algorithms. The next data structure is a Q which unlike a stack is a first in first out [music] structure. Think of a,false,multimodal_tvsum_style
+g2-_pnmhO4A,744.0,746.0,annotator_1,,lecture,,Q which unlike a stack is a first in first out [music] structure. Think of a line at a store. The person in the front,false,multimodal_tvsum_style
+g2-_pnmhO4A,746.0,748.0,annotator_1,,lecture,,first out [music] structure. Think of a line at a store. The person in the front of the line is serve first. It's a firs,false,multimodal_tvsum_style
+g2-_pnmhO4A,748.0,750.0,annotator_1,,lecture,,line at a store. The person in the front of the line is serve first. It's a first come first-s serve basis. And the line,false,multimodal_tvsum_style
+g2-_pnmhO4A,750.0,752.0,annotator_1,,lecture,,of the line is serve first. It's a first come first-s serve basis. And the lines another word for it is actually a Q.,false,multimodal_tvsum_style
+g2-_pnmhO4A,752.0,754.0,annotator_1,,lecture,,come first-s serve basis. And the lines another word for it is actually a Q. Specifically in computer science Q's are,false,multimodal_tvsum_style
+g2-_pnmhO4A,754.0,756.0,annotator_1,,lecture,,another word for it is actually a Q. Specifically in computer science Q's are used in bread for search algorithms. [musi,false,multimodal_tvsum_style
+g2-_pnmhO4A,756.0,758.0,annotator_1,,lecture,,used in bread for search algorithms. [music] The next data structure is a dictionary,false,multimodal_tvsum_style
+g2-_pnmhO4A,758.0,760.0,annotator_1,,lecture,,[music] The next data structure is a dictionary hashmap and this stores pairs of,false,multimodal_tvsum_style
+g2-_pnmhO4A,760.0,762.0,annotator_1,,lecture,,The next data structure is a dictionary hashmap and this stores pairs of information using a [music] key and a,false,multimodal_tvsum_style
+g2-_pnmhO4A,762.0,764.0,annotator_1,,lecture,,hashmap and this stores pairs of information using a [music] key and a value. A real dictionary maps words to,false,multimodal_tvsum_style
+g2-_pnmhO4A,764.0,766.0,annotator_1,,lecture,,information using a [music] key and a value. A real dictionary maps words to definitions. A phone book maps names,false,multimodal_tvsum_style
+g2-_pnmhO4A,766.0,768.0,annotator_1,,lecture,,"value. A real dictionary maps words to definitions. A phone book maps names [music] to phone numbers. Dictionaries,",false,multimodal_tvsum_style
+g2-_pnmhO4A,768.0,770.0,annotator_1,,lecture,,"definitions. A phone book maps names [music] to phone numbers. Dictionaries, hashmaps let you quickly find a value if",false,multimodal_tvsum_style
+g2-_pnmhO4A,770.0,772.0,annotator_1,,lecture,,"[music] to phone numbers. Dictionaries, hashmaps let you quickly find a value if you know it's key. They're used heavily",false,multimodal_tvsum_style
+g2-_pnmhO4A,772.0,774.0,annotator_1,,lecture,,"hashmaps let you quickly find a value if you know it's key. They're used heavily in databases. And if you're interested,",false,multimodal_tvsum_style
+g2-_pnmhO4A,774.0,776.0,annotator_1,,lecture,,"you know it's key. They're used heavily in databases. And if you're interested, I have a complete in-depth video on my",false,multimodal_tvsum_style
+g2-_pnmhO4A,776.0,778.0,annotator_1,,lecture,,"in databases. And if you're interested, I have a complete in-depth video on my YouTube channel about data structures",false,multimodal_tvsum_style
+g2-_pnmhO4A,778.0,780.0,annotator_1,,lecture,,I have a complete in-depth video on my YouTube channel about data structures where I cover many data structures in,false,multimodal_tvsum_style
+g2-_pnmhO4A,780.0,782.0,annotator_1,,lecture,,YouTube channel about data structures where I cover many data structures in depth and also talk about time,false,multimodal_tvsum_style
+g2-_pnmhO4A,782.0,784.0,annotator_1,,lecture,,"where I cover many data structures in depth and also talk about time complexities. [music] If you're interested, I'll al",false,multimodal_tvsum_style
+g2-_pnmhO4A,784.0,786.0,annotator_1,,lecture,,"complexities. [music] If you're interested, I'll also link that down below. All right. Now, we're halfway",false,multimodal_tvsum_style
+g2-_pnmhO4A,786.0,788.0,annotator_1,,lecture,,"interested, I'll also link that down below. All right. Now, we're halfway through CS50 and week six is where we",false,multimodal_tvsum_style
+g2-_pnmhO4A,788.0,790.0,annotator_1,,lecture,,"below. All right. Now, we're halfway through CS50 and week six is where we get into Python. Python is a highle",false,multimodal_tvsum_style
+g2-_pnmhO4A,790.0,792.0,annotator_1,,lecture,,through CS50 and week six is where we get into Python. Python is a highle programming language that is [music],false,multimodal_tvsum_style
+g2-_pnmhO4A,792.0,794.0,annotator_1,,lecture,,"programming language that is [music] designed to make coding faster, readable, and more accessible. It's",false,multimodal_tvsum_style
+g2-_pnmhO4A,794.0,796.0,annotator_1,,lecture,,"designed to make coding faster, readable, and more accessible. It's super simple to run. No header files, no",false,multimodal_tvsum_style
+g2-_pnmhO4A,796.0,798.0,annotator_1,,lecture,,"readable, and more accessible. It's super simple to run. No header files, no semicolons, no main function. For",false,multimodal_tvsum_style
+g2-_pnmhO4A,798.0,800.0,annotator_1,,lecture,,"super simple to run. No header files, no semicolons, no main function. For example, print hello world is all you",false,multimodal_tvsum_style
+g2-_pnmhO4A,800.0,802.0,annotator_1,,lecture,,"semicolons, no main function. For example, print hello world is all you do. Unlike a whole file you would have",false,multimodal_tvsum_style
+g2-_pnmhO4A,802.0,804.0,annotator_1,,lecture,,"example, print hello world is all you do. Unlike a whole file you would have to write for C, in Python, it's",false,multimodal_tvsum_style
+g2-_pnmhO4A,804.0,806.0,annotator_1,,lecture,,"do. Unlike a whole file you would have to write for C, in Python, it's literally just one line. In fact,",false,multimodal_tvsum_style
+g2-_pnmhO4A,806.0,808.0,annotator_1,,lecture,,"to write for C, in Python, it's literally just one line. In fact, there's a term known as coding [music]",false,multimodal_tvsum_style
+g2-_pnmhO4A,808.0,810.0,annotator_1,,lecture,,"literally just one line. In fact, there's a term known as coding [music] in a Pythonic fashion, which means",false,multimodal_tvsum_style
+g2-_pnmhO4A,810.0,812.0,annotator_1,,lecture,,"there's a term known as coding [music] in a Pythonic fashion, which means coding in as few lines as possible. But",false,multimodal_tvsum_style
+g2-_pnmhO4A,812.0,814.0,annotator_1,,lecture,,"in a Pythonic fashion, which means coding in as few lines as possible. But one of my favorite parts about Python is",false,multimodal_tvsum_style
+g2-_pnmhO4A,814.0,816.0,annotator_1,,lecture,,coding in as few lines as possible. But one of my favorite parts about Python is it supports object-oriented programming,false,multimodal_tvsum_style
+g2-_pnmhO4A,816.0,818.0,annotator_1,,lecture,,"one of my favorite parts about Python is it supports object-oriented programming. So, object-oriented programming is a w",false,multimodal_tvsum_style
+g2-_pnmhO4A,818.0,820.0,annotator_1,,lecture,,"it supports object-oriented programming. So, object-oriented programming is a way of organizing code around objects. An",false,multimodal_tvsum_style
+g2-_pnmhO4A,820.0,822.0,annotator_1,,lecture,,"So, object-oriented programming is a way of organizing code around objects. An",false,multimodal_tvsum_style
+g2-_pnmhO4A,822.0,824.0,annotator_1,,lecture,,of organizing code around objects. An object is a bundle of data attributes and behavior grouped together. You can,false,multimodal_tvsum_style
+g2-_pnmhO4A,824.0,826.0,annotator_1,,lecture,,object is a bundle of data attributes and behavior grouped together. You can think of an object like a real world,false,multimodal_tvsum_style
+g2-_pnmhO4A,826.0,828.0,annotator_1,,lecture,,"and behavior grouped together. You can think of an object like a real world item. For example, a car has data",false,multimodal_tvsum_style
+g2-_pnmhO4A,828.0,830.0,annotator_1,,lecture,,"think of an object like a real world item. For example, a car has data attributes such as [music] color and",false,multimodal_tvsum_style
+g2-_pnmhO4A,830.0,832.0,annotator_1,,lecture,,"item. For example, a car has data attributes such as [music] color and speed, and it has behaviors such as",false,multimodal_tvsum_style
+g2-_pnmhO4A,832.0,834.0,annotator_1,,lecture,,"attributes such as [music] color and speed, and it has behaviors such as accelerating and braking. In",false,multimodal_tvsum_style
+g2-_pnmhO4A,834.0,836.0,annotator_1,,lecture,,"speed, and it has behaviors such as accelerating and braking. In programming, data is stored as",false,multimodal_tvsum_style
+g2-_pnmhO4A,836.0,838.0,annotator_1,,lecture,,"accelerating and braking. In programming, data is stored as variables, and behaviors are defined as",false,multimodal_tvsum_style
+g2-_pnmhO4A,838.0,840.0,annotator_1,,lecture,,"programming, data is stored as variables, and behaviors are defined as functions. [music] In object-oriented",false,multimodal_tvsum_style
+g2-_pnmhO4A,840.0,842.0,annotator_1,,lecture,,"variables, and behaviors are defined as functions. [music] In object-oriented programming, we define a blueprint for",false,multimodal_tvsum_style
+g2-_pnmhO4A,842.0,844.0,annotator_1,,lecture,,"programming, we define a blueprint for objects using something called a class.",false,multimodal_tvsum_style
+g2-_pnmhO4A,844.0,846.0,annotator_1,,lecture,,objects using something called a class. A class describes what data an object,false,multimodal_tvsum_style
+g2-_pnmhO4A,846.0,848.0,annotator_1,,lecture,,objects using something called a class. A class describes what data an object will have and what actions it [music],false,multimodal_tvsum_style
+g2-_pnmhO4A,848.0,850.0,annotator_1,,lecture,,A class describes what data an object will have and what actions it [music] can perform. When you create a specific obje,false,multimodal_tvsum_style
+g2-_pnmhO4A,850.0,852.0,annotator_1,,lecture,,"can perform. When you create a specific object from a class, that object is called an instance of that class. And",false,multimodal_tvsum_style
+g2-_pnmhO4A,852.0,854.0,annotator_1,,lecture,,"object from a class, that object is called an instance of that class. And you can create objects in literally",false,multimodal_tvsum_style
+g2-_pnmhO4A,854.0,856.0,annotator_1,,lecture,,"called an instance of that class. And you can create objects in literally anything. [music] For example, you might",false,multimodal_tvsum_style
+g2-_pnmhO4A,856.0,858.0,annotator_1,,lecture,,"you can create objects in literally anything. [music] For example, you might create a student class with attributes",false,multimodal_tvsum_style
+g2-_pnmhO4A,858.0,860.0,annotator_1,,lecture,,"anything. [music] For example, you might create a student class with attributes like name and grade and methods like",false,multimodal_tvsum_style
+g2-_pnmhO4A,860.0,862.0,annotator_1,,lecture,,create a student class with attributes like name and grade and methods like study or take exam. Each student in your,false,multimodal_tvsum_style
+g2-_pnmhO4A,862.0,864.0,annotator_1,,lecture,,like name and grade and methods like study or take exam. Each student in your program would be an object created from,false,multimodal_tvsum_style
+g2-_pnmhO4A,864.0,866.0,annotator_1,,lecture,,"study or take exam. Each student in your program would be an object created from that class. And overall, this is a huge",false,multimodal_tvsum_style
+g2-_pnmhO4A,866.0,868.0,annotator_1,,lecture,,"program would be an object created from that class. And overall, this is a huge",false,multimodal_tvsum_style
+g2-_pnmhO4A,868.0,870.0,annotator_1,,lecture,,"that class. And overall, this is a huge advantage in the real world and personally a reason I love Python way,",false,multimodal_tvsum_style
+g2-_pnmhO4A,870.0,872.0,annotator_1,,lecture,,"advantage in the real world and personally a reason I love Python way,",false,multimodal_tvsum_style
+g2-_pnmhO4A,872.0,874.0,annotator_1,,lecture,,"advantage in the real world and personally a reason I love Python way, way more compared to C. The following",false,multimodal_tvsum_style
+g2-_pnmhO4A,874.0,876.0,annotator_1,,lecture,,"personally a reason I love Python way, way more compared to C. The following week, week seven of CS50 covers SQL, SQL",false,multimodal_tvsum_style
+g2-_pnmhO4A,876.0,878.0,annotator_1,,lecture,,"way more compared to C. The following week, week seven of CS50 covers SQL, SQL",false,multimodal_tvsum_style
+g2-_pnmhO4A,878.0,880.0,annotator_1,,lecture,,"way more compared to C. The following week, week seven of CS50 covers SQL, SQL or structured query language, which is a",false,multimodal_tvsum_style
+g2-_pnmhO4A,880.0,882.0,annotator_1,,lecture,,"week, week seven of CS50 covers SQL, SQL or structured query language, which is a",false,multimodal_tvsum_style
+g2-_pnmhO4A,882.0,884.0,annotator_1,,lecture,,"week, week seven of CS50 covers SQL, SQL or structured query language, which is a programming language designed for",false,multimodal_tvsum_style
+g2-_pnmhO4A,884.0,886.0,annotator_1,,lecture,,programming language designed for working with data. Unlike languages such,false,multimodal_tvsum_style
+g2-_pnmhO4A,886.0,888.0,annotator_1,,lecture,,"programming language designed for working with data. Unlike languages such as C or Python, which are procedural and",false,multimodal_tvsum_style
+g2-_pnmhO4A,888.0,890.0,annotator_1,,lecture,,"working with data. Unlike languages such as C or Python, which are procedural and follow instructions to execute [music]",false,multimodal_tvsum_style
+g2-_pnmhO4A,890.0,892.0,annotator_1,,lecture,,"as C or Python, which are procedural and follow instructions to execute [music] something, SQL is declarative. You",false,multimodal_tvsum_style
+g2-_pnmhO4A,892.0,894.0,annotator_1,,lecture,,"follow instructions to execute [music] something, SQL is declarative. You describe what data you want, and the",false,multimodal_tvsum_style
+g2-_pnmhO4A,894.0,896.0,annotator_1,,lecture,,"something, SQL is declarative. You describe what data you want, and the database figures out how to retrieve it.",false,multimodal_tvsum_style
+g2-_pnmhO4A,896.0,898.0,annotator_1,,lecture,,"describe what data you want, and the database figures out how to retrieve it. This makes SQL especially powerful for",false,multimodal_tvsum_style
+g2-_pnmhO4A,898.0,900.0,annotator_1,,lecture,,database figures out how to retrieve it. This makes SQL especially powerful for analyzing and managing large collections,false,multimodal_tvsum_style
+g2-_pnmhO4A,900.0,902.0,annotator_1,,lecture,,This makes SQL especially powerful for analyzing and managing large collections of data. Let's imagine we're working,false,multimodal_tvsum_style
+g2-_pnmhO4A,902.0,904.0,annotator_1,,lecture,,analyzing and managing large collections of data. Let's imagine we're working with a small database called,false,multimodal_tvsum_style
+g2-_pnmhO4A,904.0,906.0,annotator_1,,lecture,,"of data. Let's imagine we're working with a small database called students.db. Inside this database, there",false,multimodal_tvsum_style
+g2-_pnmhO4A,906.0,908.0,annotator_1,,lecture,,"with a small database called students.db. Inside this database, there are three [music] tables: students,",false,multimodal_tvsum_style
+g2-_pnmhO4A,908.0,910.0,annotator_1,,lecture,,"students.db. Inside this database, there are three [music] tables: students, courses, and enrollments. The student",false,multimodal_tvsum_style
+g2-_pnmhO4A,910.0,912.0,annotator_1,,lecture,,"are three [music] tables: students, courses, and enrollments. The student table stores each students ID, name, and",false,multimodal_tvsum_style
+g2-_pnmhO4A,912.0,914.0,annotator_1,,lecture,,"courses, and enrollments. The student table stores each students ID, name, and graduation year. Courses table stores",false,multimodal_tvsum_style
+g2-_pnmhO4A,914.0,916.0,annotator_1,,lecture,,"table stores each students ID, name, and graduation year. Courses table stores courses IDs and titles. Enrollments",false,multimodal_tvsum_style
+g2-_pnmhO4A,916.0,918.0,annotator_1,,lecture,,graduation year. Courses table stores courses IDs and titles. Enrollments table links students to the courses they,false,multimodal_tvsum_style
+g2-_pnmhO4A,918.0,920.0,annotator_1,,lecture,,courses IDs and titles. Enrollments table links students to the courses they are taking using those IDs. The most,false,multimodal_tvsum_style
+g2-_pnmhO4A,920.0,922.0,annotator_1,,lecture,,table links students to the courses they are taking using those IDs. The most important SQL keyword to understand is,false,multimodal_tvsum_style
+g2-_pnmhO4A,922.0,924.0,annotator_1,,lecture,,are taking using those IDs. The most important SQL keyword to understand is select. [music],false,multimodal_tvsum_style
+g2-_pnmhO4A,924.0,926.0,annotator_1,,lecture,,important SQL keyword to understand is select. [music] Select literally means show me data. For,false,multimodal_tvsum_style
+g2-_pnmhO4A,926.0,928.0,annotator_1,,lecture,,"select. [music] Select literally means show me data. For example, if we write the command select",false,multimodal_tvsum_style
+g2-_pnmhO4A,928.0,930.0,annotator_1,,lecture,,"Select literally means show me data. For example, if we write the command select star from [music] students. We are",false,multimodal_tvsum_style
+g2-_pnmhO4A,930.0,932.0,annotator_1,,lecture,,"example, if we write the command select star from [music] students. We are asking the database to return every row",false,multimodal_tvsum_style
+g2-_pnmhO4A,932.0,934.0,annotator_1,,lecture,,star from [music] students. We are asking the database to return every row and every column from the students,false,multimodal_tvsum_style
+g2-_pnmhO4A,934.0,936.0,annotator_1,,lecture,,asking the database to return every row and every column from the students table. Select star basically means get,false,multimodal_tvsum_style
+g2-_pnmhO4A,936.0,938.0,annotator_1,,lecture,,and every column from the students table. Select star basically means get [music] everything. But if you don't,false,multimodal_tvsum_style
+g2-_pnmhO4A,938.0,940.0,annotator_1,,lecture,,"table. Select star basically means get [music] everything. But if you don't want to select everything, SQL lets you",false,multimodal_tvsum_style
+g2-_pnmhO4A,940.0,942.0,annotator_1,,lecture,,"[music] everything. But if you don't want to select everything, SQL lets you choose specific attributes. If you only",false,multimodal_tvsum_style
+g2-_pnmhO4A,942.0,944.0,annotator_1,,lecture,,"want to select everything, SQL lets you choose specific attributes. If you only want student names, [music] you can",false,multimodal_tvsum_style
+g2-_pnmhO4A,944.0,946.0,annotator_1,,lecture,,"choose specific attributes. If you only want student names, [music] you can write select name from students. This",false,multimodal_tvsum_style
+g2-_pnmhO4A,946.0,948.0,annotator_1,,lecture,,"want student names, [music] you can write select name from students. This command returns just the name column and",false,multimodal_tvsum_style
+g2-_pnmhO4A,948.0,950.0,annotator_1,,lecture,,write select name from students. This command returns just the name column and hides everything else. Another command,false,multimodal_tvsum_style
+g2-_pnmhO4A,950.0,952.0,annotator_1,,lecture,,command returns just the name column and hides everything else. Another command you should know when dealing with data,false,multimodal_tvsum_style
+g2-_pnmhO4A,952.0,954.0,annotator_1,,lecture,,hides everything else. Another command you should know when dealing with data is where. Sometimes you might want to,false,multimodal_tvsum_style
+g2-_pnmhO4A,954.0,956.0,annotator_1,,lecture,,you should know when dealing with data is where. Sometimes you might want to filter which rows appear in the result.,false,multimodal_tvsum_style
+g2-_pnmhO4A,956.0,958.0,annotator_1,,lecture,,is where. Sometimes you might want to filter which rows appear in the result.,false,multimodal_tvsum_style
+g2-_pnmhO4A,958.0,960.0,annotator_1,,lecture,,is where. Sometimes you might want to filter which rows appear in the result. That's [music] where where comes in. For,false,multimodal_tvsum_style
+g2-_pnmhO4A,960.0,962.0,annotator_1,,lecture,,"filter which rows appear in the result. That's [music] where where comes in. For example, the command select name from",false,multimodal_tvsum_style
+g2-_pnmhO4A,962.0,964.0,annotator_1,,lecture,,"That's [music] where where comes in. For example, the command select name from students where year equals 2026 [music]",false,multimodal_tvsum_style
+g2-_pnmhO4A,964.0,966.0,annotator_1,,lecture,,"example, the command select name from students where year equals 2026 [music] tells the database to return only the",false,multimodal_tvsum_style
+g2-_pnmhO4A,966.0,968.0,annotator_1,,lecture,,students where year equals 2026 [music] tells the database to return only the student names whose graduation year is,false,multimodal_tvsum_style
+g2-_pnmhO4A,968.0,970.0,annotator_1,,lecture,,tells the database to return only the student names whose graduation year is [music] 2026. Where is the conditional,false,multimodal_tvsum_style
+g2-_pnmhO4A,970.0,972.0,annotator_1,,lecture,,student names whose graduation year is [music] 2026. Where is the conditional,false,multimodal_tvsum_style
+g2-_pnmhO4A,972.0,974.0,annotator_1,,lecture,,[music] 2026. Where is the conditional where it has to meet that condition in,false,multimodal_tvsum_style
+g2-_pnmhO4A,974.0,976.0,annotator_1,,lecture,,[music] 2026. Where is the conditional where it has to meet that condition in order for it to be true to get the data,false,multimodal_tvsum_style
+g2-_pnmhO4A,976.0,978.0,annotator_1,,lecture,,where it has to meet that condition in order for it to be true to get the data where where meets the condition where,false,multimodal_tvsum_style
+g2-_pnmhO4A,978.0,980.0,annotator_1,,lecture,,order for it to be true to get the data where where meets the condition where where shall operate. SQL also includes,false,multimodal_tvsum_style
+g2-_pnmhO4A,980.0,982.0,annotator_1,,lecture,,where where meets the condition where where shall operate. SQL also includes built-in functions for analyzing data.,false,multimodal_tvsum_style
+g2-_pnmhO4A,982.0,984.0,annotator_1,,lecture,,where shall operate. SQL also includes built-in functions for analyzing data.,false,multimodal_tvsum_style
+g2-_pnmhO4A,984.0,986.0,annotator_1,,lecture,,where shall operate. SQL also includes built-in functions for analyzing data. Count allows [music] you to count how,false,multimodal_tvsum_style
+g2-_pnmhO4A,986.0,988.0,annotator_1,,lecture,,"built-in functions for analyzing data. Count allows [music] you to count how many rows match a query. For example,",false,multimodal_tvsum_style
+g2-_pnmhO4A,988.0,990.0,annotator_1,,lecture,,"Count allows [music] you to count how many rows match a query. For example, select count star from students returns",false,multimodal_tvsum_style
+g2-_pnmhO4A,990.0,992.0,annotator_1,,lecture,,"many rows match a query. For example, select count star from students returns the total number of students [music] in th",false,multimodal_tvsum_style
+g2-_pnmhO4A,992.0,994.0,annotator_1,,lecture,,"the total number of students [music] in the table. Overall, there are a bunch of powerful commands such as group by,",false,multimodal_tvsum_style
+g2-_pnmhO4A,994.0,996.0,annotator_1,,lecture,,"the table. Overall, there are a bunch of powerful commands such as group by, order by, limit, and join. In fact,",false,multimodal_tvsum_style
+g2-_pnmhO4A,996.0,998.0,annotator_1,,lecture,,"powerful commands such as group by, order by, limit, and join. In fact, there are so many different types of",false,multimodal_tvsum_style
+g2-_pnmhO4A,998.0,1000.0,annotator_1,,lecture,,"order by, limit, and join. In fact, there are so many different types of joins that I could honestly make a SQL",false,multimodal_tvsum_style
+g2-_pnmhO4A,1000.0,1002.0,annotator_1,,lecture,,there are so many different types of joins that I could honestly make a SQL master class [music] just on the join,false,multimodal_tvsum_style
+g2-_pnmhO4A,1002.0,1004.0,annotator_1,,lecture,,"joins that I could honestly make a SQL master class [music] just on the join command. But for the sake of the video,",false,multimodal_tvsum_style
+g2-_pnmhO4A,1004.0,1006.0,annotator_1,,lecture,,"master class [music] just on the join command. But for the sake of the video, we'll keep it brief. So, week seven and",false,multimodal_tvsum_style
+g2-_pnmhO4A,1006.0,1008.0,annotator_1,,lecture,,"command. But for the sake of the video, we'll keep it brief. So, week seven and a half is where things start to get",false,multimodal_tvsum_style
+g2-_pnmhO4A,1008.0,1010.0,annotator_1,,lecture,,"we'll keep it brief. So, week seven and a half is where things start to get spicy because this is where CS50",false,multimodal_tvsum_style
+g2-_pnmhO4A,1010.0,1012.0,annotator_1,,lecture,,a half is where things start to get spicy because this is where CS50 introduces [music] artificial intelligence. Artific,false,multimodal_tvsum_style
+g2-_pnmhO4A,1012.0,1014.0,annotator_1,,lecture,,introduces [music] artificial intelligence. Artificial intelligence or AI refers to computer,false,multimodal_tvsum_style
+g2-_pnmhO4A,1014.0,1016.0,annotator_1,,lecture,,artificial intelligence. Artificial intelligence or AI refers to computer systems designed to perform tasks that,false,multimodal_tvsum_style
+g2-_pnmhO4A,1016.0,1018.0,annotator_1,,lecture,,intelligence or AI refers to computer systems designed to perform tasks that,false,multimodal_tvsum_style
+g2-_pnmhO4A,1018.0,1020.0,annotator_1,,lecture,,intelligence or AI refers to computer systems designed to perform tasks that normally require human intelligence like,false,multimodal_tvsum_style
+g2-_pnmhO4A,1020.0,1022.0,annotator_1,,lecture,,"systems designed to perform tasks that normally require human intelligence like recognizing patterns, making decisions,",false,multimodal_tvsum_style
+g2-_pnmhO4A,1022.0,1024.0,annotator_1,,lecture,,"recognizing patterns, making decisions, or generating language. Even though it",false,multimodal_tvsum_style
+g2-_pnmhO4A,1024.0,1026.0,annotator_1,,lecture,,"or generating language. Even though it feels like AI is this new hot thing, the",false,multimodal_tvsum_style
+g2-_pnmhO4A,1026.0,1028.0,annotator_1,,lecture,,"or generating language. Even though it feels like AI is this new hot thing, the foundations of it have existed for",false,multimodal_tvsum_style
+g2-_pnmhO4A,1028.0,1030.0,annotator_1,,lecture,,"feels like AI is this new hot thing, the foundations of it have existed for decades. Some of the earliest forms of",false,multimodal_tvsum_style
+g2-_pnmhO4A,1030.0,1032.0,annotator_1,,lecture,,foundations of it have existed for decades. Some of the earliest forms of AI came from simple games like a basic,false,multimodal_tvsum_style
+g2-_pnmhO4A,1032.0,1034.0,annotator_1,,lecture,,decades. Some of the earliest forms of AI came from simple games like a basic paddle ball game. Like if the ball is,false,multimodal_tvsum_style
+g2-_pnmhO4A,1034.0,1036.0,annotator_1,,lecture,,"AI came from simple games like a basic paddle ball game. Like if the ball is going to the left, move the paddle left.",false,multimodal_tvsum_style
+g2-_pnmhO4A,1036.0,1038.0,annotator_1,,lecture,,"paddle ball game. Like if the ball is going to the left, move the paddle left. If the ball is to the right, move the pad",false,multimodal_tvsum_style
+g2-_pnmhO4A,1038.0,1040.0,annotator_1,,lecture,,"If the ball is to the right, move the paddle to the right. Otherwise, stay still. This is what we call a",false,multimodal_tvsum_style
+g2-_pnmhO4A,1040.0,1042.0,annotator_1,,lecture,,"paddle to the right. Otherwise, stay still. This is what we call a deterministic system. Meaning the",false,multimodal_tvsum_style
+g2-_pnmhO4A,1042.0,1044.0,annotator_1,,lecture,,still. This is what we call a deterministic system. Meaning the behavior is predefined and will always,false,multimodal_tvsum_style
+g2-_pnmhO4A,1044.0,1046.0,annotator_1,,lecture,,deterministic system. Meaning the behavior is predefined and will always be the same given the [music] same,false,multimodal_tvsum_style
+g2-_pnmhO4A,1046.0,1048.0,annotator_1,,lecture,,behavior is predefined and will always be the same given the [music] same input. And as AI continued to grow and,false,multimodal_tvsum_style
+g2-_pnmhO4A,1048.0,1050.0,annotator_1,,lecture,,"be the same given the [music] same input. And as AI continued to grow and more people researched it, one of its",false,multimodal_tvsum_style
+g2-_pnmhO4A,1050.0,1052.0,annotator_1,,lecture,,"input. And as AI continued to grow and more people researched it, one of its most prominent branches was machine",false,multimodal_tvsum_style
+g2-_pnmhO4A,1052.0,1054.0,annotator_1,,lecture,,"more people researched it, one of its most prominent branches was machine learning. So instead of explicitly",false,multimodal_tvsum_style
+g2-_pnmhO4A,1054.0,1056.0,annotator_1,,lecture,,"learning. So instead of explicitly telling the computer every rule, machine learning allows a system to learn",false,multimodal_tvsum_style
+g2-_pnmhO4A,1056.0,1058.0,annotator_1,,lecture,,"telling the computer every rule, machine learning allows a system to learn",false,multimodal_tvsum_style
+g2-_pnmhO4A,1058.0,1060.0,annotator_1,,lecture,,"learning allows a system to learn patterns from data. For example, instead",false,multimodal_tvsum_style
+g2-_pnmhO4A,1060.0,1062.0,annotator_1,,lecture,,"patterns from data. For example, instead of traditionally programming a computer to detect spam emails, you can give a",false,multimodal_tvsum_style
+g2-_pnmhO4A,1062.0,1064.0,annotator_1,,lecture,,"of traditionally programming a computer to detect spam emails, you can give a",false,multimodal_tvsum_style
+g2-_pnmhO4A,1064.0,1066.0,annotator_1,,lecture,,"of traditionally programming a computer to detect spam emails, you can give a machine learning model thousands of",false,multimodal_tvsum_style
+g2-_pnmhO4A,1066.0,1068.0,annotator_1,,lecture,,machine learning model thousands of emails labeled as spam or not spam and,false,multimodal_tvsum_style
+g2-_pnmhO4A,1068.0,1070.0,annotator_1,,lecture,,machine learning model thousands of emails labeled as spam or not spam and it will learn the patterns that will [music] ,false,multimodal_tvsum_style
+g2-_pnmhO4A,1070.0,1072.0,annotator_1,,lecture,,"it will learn the patterns that will [music] separate the two. And specifically within machine learning,",false,multimodal_tvsum_style
+g2-_pnmhO4A,1072.0,1074.0,annotator_1,,lecture,,"[music] separate the two. And specifically within machine learning, there are two major categories,",false,multimodal_tvsum_style
+g2-_pnmhO4A,1074.0,1076.0,annotator_1,,lecture,,"specifically within machine learning, there are two major categories, supervised learning and unsupervised",false,multimodal_tvsum_style
+g2-_pnmhO4A,1076.0,1078.0,annotator_1,,lecture,,"supervised learning and unsupervised learning. In supervised learning, the data comes with labels, meaning you",false,multimodal_tvsum_style
+g2-_pnmhO4A,1078.0,1080.0,annotator_1,,lecture,,"learning. In supervised learning, the data comes with labels, meaning you already know the correct answers. So the",false,multimodal_tvsum_style
+g2-_pnmhO4A,1080.0,1082.0,annotator_1,,lecture,,"data comes with labels, meaning you already know the correct answers. So the example I gave with the emails is",false,multimodal_tvsum_style
+g2-_pnmhO4A,1082.0,1084.0,annotator_1,,lecture,,already know the correct answers. So the example I gave with the emails is supervised learning because we had the,false,multimodal_tvsum_style
+g2-_pnmhO4A,1084.0,1086.0,annotator_1,,lecture,,example I gave with the emails is supervised learning because we had the label of the email being spam or not,false,multimodal_tvsum_style
+g2-_pnmhO4A,1086.0,1088.0,annotator_1,,lecture,,supervised learning because we had the label of the email being spam or not spam. And now if you take that same,false,multimodal_tvsum_style
+g2-_pnmhO4A,1088.0,1090.0,annotator_1,,lecture,,label of the email being spam or not spam. And now if you take that same email data set and remove the spam or,false,multimodal_tvsum_style
+g2-_pnmhO4A,1090.0,1092.0,annotator_1,,lecture,,"spam. And now if you take that same email data set and remove the spam or not spam labels, the problem changes",false,multimodal_tvsum_style
+g2-_pnmhO4A,1092.0,1094.0,annotator_1,,lecture,,"email data set and remove the spam or not spam labels, the problem changes completely. Now the computer is no",false,multimodal_tvsum_style
+g2-_pnmhO4A,1094.0,1096.0,annotator_1,,lecture,,"not spam labels, the problem changes completely. Now the computer is no longer being told what the right answer",false,multimodal_tvsum_style
+g2-_pnmhO4A,1096.0,1098.0,annotator_1,,lecture,,completely. Now the computer is no longer being told what the right answer is. And this is where unsupervised,false,multimodal_tvsum_style
+g2-_pnmhO4A,1098.0,1100.0,annotator_1,,lecture,,longer being told what the right answer is. And this is where unsupervised learning comes in. Now instead of the,false,multimodal_tvsum_style
+g2-_pnmhO4A,1100.0,1102.0,annotator_1,,lecture,,is. And this is where unsupervised learning comes in. Now instead of the computer trying to predict if the emails,false,multimodal_tvsum_style
+g2-_pnmhO4A,1102.0,1104.0,annotator_1,,lecture,,"learning comes in. Now instead of the computer trying to predict if the emails are spam or not, the computer will try",false,multimodal_tvsum_style
+g2-_pnmhO4A,1104.0,1106.0,annotator_1,,lecture,,"computer trying to predict if the emails are spam or not, the computer will try to analyze [music] the data deeply. The",false,multimodal_tvsum_style
+g2-_pnmhO4A,1106.0,1108.0,annotator_1,,lecture,,"are spam or not, the computer will try to analyze [music] the data deeply. The system might start grouping emails based",false,multimodal_tvsum_style
+g2-_pnmhO4A,1108.0,1110.0,annotator_1,,lecture,,to analyze [music] the data deeply. The system might start grouping emails based on similarities and notices. It might,false,multimodal_tvsum_style
+g2-_pnmhO4A,1110.0,1112.0,annotator_1,,lecture,,system might start grouping emails based on similarities and notices. It might cluster emails with lots of links and,false,multimodal_tvsum_style
+g2-_pnmhO4A,1112.0,1114.0,annotator_1,,lecture,,"on similarities and notices. It might cluster emails with lots of links and promotional language together, group",false,multimodal_tvsum_style
+g2-_pnmhO4A,1114.0,1116.0,annotator_1,,lecture,,"cluster emails with lots of links and promotional language together, group sort personal messages into another",false,multimodal_tvsum_style
+g2-_pnmhO4A,1116.0,1118.0,annotator_1,,lecture,,sort personal messages into another cluster and separate newsletters into their own group. Right now the goal,false,multimodal_tvsum_style
+g2-_pnmhO4A,1118.0,1120.0,annotator_1,,lecture,,"cluster and separate newsletters into their own group. Right now the goal isn't to predict certain emails, but it",false,multimodal_tvsum_style
+g2-_pnmhO4A,1120.0,1122.0,annotator_1,,lecture,,"their own group. Right now the goal isn't to predict certain emails, but it is to cluster the existing data and",false,multimodal_tvsum_style
+g2-_pnmhO4A,1122.0,1124.0,annotator_1,,lecture,,"isn't to predict certain emails, but it is to cluster the existing data and derive insights [music] from it.",false,multimodal_tvsum_style
+g2-_pnmhO4A,1124.0,1126.0,annotator_1,,lecture,,is to cluster the existing data and derive insights [music] from it. Supervised learning answers the,false,multimodal_tvsum_style
+g2-_pnmhO4A,1126.0,1128.0,annotator_1,,lecture,,"derive insights [music] from it. Supervised learning answers the question, what will happen next?",false,multimodal_tvsum_style
+g2-_pnmhO4A,1128.0,1130.0,annotator_1,,lecture,,"Supervised learning answers the question, what will happen next? Unsupervised learning answers the question, what patter",false,multimodal_tvsum_style
+g2-_pnmhO4A,1130.0,1132.0,annotator_1,,lecture,,"Unsupervised learning answers the question, what patterns exist now? And",false,multimodal_tvsum_style
+g2-_pnmhO4A,1132.0,1134.0,annotator_1,,lecture,,"Unsupervised learning answers the question, what patterns exist now? And in CS50, they go on to talk about way",false,multimodal_tvsum_style
+g2-_pnmhO4A,1134.0,1136.0,annotator_1,,lecture,,"question, what patterns exist now? And in CS50, they go on to talk about way bigger things like neural networks and",false,multimodal_tvsum_style
+g2-_pnmhO4A,1136.0,1138.0,annotator_1,,lecture,,"in CS50, they go on to talk about way bigger things like neural networks and how those are mapping to large language",false,multimodal_tvsum_style
+g2-_pnmhO4A,1138.0,1140.0,annotator_1,,lecture,,bigger things like neural networks and how those are mapping to large language models like the ones you see in ChatGpt.,false,multimodal_tvsum_style
+g2-_pnmhO4A,1140.0,1142.0,annotator_1,,lecture,,"how those are mapping to large language models like the ones you see in ChatGpt. So, [music] it gets pretty exciting. Th",false,multimodal_tvsum_style
+g2-_pnmhO4A,1142.0,1144.0,annotator_1,,lecture,,"models like the ones you see in ChatGpt. So, [music] it gets pretty exciting. The next two weeks of CS50 shift topics to",false,multimodal_tvsum_style
+g2-_pnmhO4A,1144.0,1146.0,annotator_1,,lecture,,"So, [music] it gets pretty exciting. The next two weeks of CS50 shift topics to talk more about the web, and I love this",false,multimodal_tvsum_style
+g2-_pnmhO4A,1146.0,1148.0,annotator_1,,lecture,,"next two weeks of CS50 shift topics to talk more about the web, and I love this",false,multimodal_tvsum_style
+g2-_pnmhO4A,1148.0,1150.0,annotator_1,,lecture,,"next two weeks of CS50 shift topics to talk more about the web, and I love this stuff. Week 8 of CS50 is all about the",false,multimodal_tvsum_style
+g2-_pnmhO4A,1150.0,1152.0,annotator_1,,lecture,,"talk more about the web, and I love this stuff. Week 8 of CS50 is all about the internet. The internet is just a massive",false,multimodal_tvsum_style
+g2-_pnmhO4A,1152.0,1154.0,annotator_1,,lecture,,stuff. Week 8 of CS50 is all about the internet. The internet is just a massive system that [music] lets computers talk,false,multimodal_tvsum_style
+g2-_pnmhO4A,1154.0,1156.0,annotator_1,,lecture,,"internet. The internet is just a massive system that [music] lets computers talk to each other. Your phone, laptop,",false,multimodal_tvsum_style
+g2-_pnmhO4A,1156.0,1158.0,annotator_1,,lecture,,"system that [music] lets computers talk to each other. Your phone, laptop, tablet don't actually connect to the",false,multimodal_tvsum_style
+g2-_pnmhO4A,1158.0,1160.0,annotator_1,,lecture,,"to each other. Your phone, laptop, tablet don't actually connect to the internet [music] at once. Instead, they",false,multimodal_tvsum_style
+g2-_pnmhO4A,1160.0,1162.0,annotator_1,,lecture,,"tablet don't actually connect to the internet [music] at once. Instead, they connect to nearby networks which connect",false,multimodal_tvsum_style
+g2-_pnmhO4A,1162.0,1164.0,annotator_1,,lecture,,"internet [music] at once. Instead, they connect to nearby networks which connect to bigger networks which all link",false,multimodal_tvsum_style
+g2-_pnmhO4A,1164.0,1166.0,annotator_1,,lecture,,connect to nearby networks which connect to bigger networks which all link together. That's why the internet is often de,false,multimodal_tvsum_style
+g2-_pnmhO4A,1166.0,1168.0,annotator_1,,lecture,,together. That's why the internet is often described as a network of networks. But how does it actually work?,false,multimodal_tvsum_style
+g2-_pnmhO4A,1168.0,1170.0,annotator_1,,lecture,,"often described as a network of networks. But how does it actually work? Well, when you send something online",false,multimodal_tvsum_style
+g2-_pnmhO4A,1170.0,1172.0,annotator_1,,lecture,,"networks. But how does it actually work? Well, when you send something online like a photo, the photo doesn't actually",false,multimodal_tvsum_style
+g2-_pnmhO4A,1172.0,1174.0,annotator_1,,lecture,,"Well, when you send something online like a photo, the photo doesn't actually travel all together as one piece.",false,multimodal_tvsum_style
+g2-_pnmhO4A,1174.0,1176.0,annotator_1,,lecture,,"like a photo, the photo doesn't actually travel all together as one piece. Instead, it gets split into small pieces",false,multimodal_tvsum_style
+g2-_pnmhO4A,1176.0,1178.0,annotator_1,,lecture,,"travel all together as one piece. Instead, it gets split into small pieces so it can move faster, more efficiently.",false,multimodal_tvsum_style
+g2-_pnmhO4A,1178.0,1180.0,annotator_1,,lecture,,"Instead, it gets split into small pieces so it can move faster, more efficiently. Then these pieces travel independently",false,multimodal_tvsum_style
+g2-_pnmhO4A,1180.0,1182.0,annotator_1,,lecture,,"so it can move faster, more efficiently. Then these pieces travel independently",false,multimodal_tvsum_style
+g2-_pnmhO4A,1182.0,1184.0,annotator_1,,lecture,,"so it can move faster, more efficiently. Then these pieces travel independently across the internet, sometimes taking di",false,multimodal_tvsum_style
+g2-_pnmhO4A,1184.0,1186.0,annotator_1,,lecture,,"across the internet, sometimes taking different paths to reach the [music] same destination. Once they arrive, the",false,multimodal_tvsum_style
+g2-_pnmhO4A,1186.0,1188.0,annotator_1,,lecture,,"different paths to reach the [music] same destination. Once they arrive, the receiving computer puts them back",false,multimodal_tvsum_style
+g2-_pnmhO4A,1188.0,1190.0,annotator_1,,lecture,,"same destination. Once they arrive, the receiving computer puts them back together in the correct order. Now, you",false,multimodal_tvsum_style
+g2-_pnmhO4A,1190.0,1192.0,annotator_1,,lecture,,"receiving computer puts them back together in the correct order. Now, you might ask, how does the computer know how to p",false,multimodal_tvsum_style
+g2-_pnmhO4A,1192.0,1194.0,annotator_1,,lecture,,"might ask, how does the computer know how to put things back in the correct order? Well, that's where TCP [music]",false,multimodal_tvsum_style
+g2-_pnmhO4A,1194.0,1196.0,annotator_1,,lecture,,"how to put things back in the correct order? Well, that's where TCP [music] comes in. TCP is transmission control",false,multimodal_tvsum_style
+g2-_pnmhO4A,1196.0,1198.0,annotator_1,,lecture,,"order? Well, that's where TCP [music] comes in. TCP is transmission control protocol, and it helps keep track of",false,multimodal_tvsum_style
+g2-_pnmhO4A,1198.0,1200.0,annotator_1,,lecture,,"comes in. TCP is transmission control protocol, and it helps keep track of pieces to put them back in order, and if",false,multimodal_tvsum_style
+g2-_pnmhO4A,1200.0,1202.0,annotator_1,,lecture,,"protocol, and it helps keep track of pieces to put them back in order, and if anything goes missing, it [music] asks",false,multimodal_tvsum_style
+g2-_pnmhO4A,1202.0,1204.0,annotator_1,,lecture,,"pieces to put them back in order, and if anything goes missing, it [music] asks for it again. That's why loading a web",false,multimodal_tvsum_style
+g2-_pnmhO4A,1204.0,1206.0,annotator_1,,lecture,,"anything goes missing, it [music] asks for it again. That's why loading a web page usually feels reliable because of",false,multimodal_tvsum_style
+g2-_pnmhO4A,1206.0,1208.0,annotator_1,,lecture,,for it again. That's why loading a web page usually feels reliable because of TCP. [music] And even if it might be,false,multimodal_tvsum_style
+g2-_pnmhO4A,1208.0,1210.0,annotator_1,,lecture,,"page usually feels reliable because of TCP. [music] And even if it might be slow from time to time, it still works",false,multimodal_tvsum_style
+g2-_pnmhO4A,1210.0,1212.0,annotator_1,,lecture,,"TCP. [music] And even if it might be slow from time to time, it still works and you get the full website. But then",false,multimodal_tvsum_style
+g2-_pnmhO4A,1212.0,1214.0,annotator_1,,lecture,,"slow from time to time, it still works and you get the full website. But then you have a different bucket of things on",false,multimodal_tvsum_style
+g2-_pnmhO4A,1214.0,1216.0,annotator_1,,lecture,,and you get the full website. But then you have a different bucket of things on the internet like video calling or,false,multimodal_tvsum_style
+g2-_pnmhO4A,1216.0,1218.0,annotator_1,,lecture,,you have a different bucket of things on the internet like video calling or,false,multimodal_tvsum_style
+g2-_pnmhO4A,1218.0,1220.0,annotator_1,,lecture,,the internet like video calling or online games which are intensive and,false,multimodal_tvsum_style
+g2-_pnmhO4A,1220.0,1222.0,annotator_1,,lecture,,the internet like video calling or online games which are intensive and require a lot of speed. Cuz imagine you're on a ,false,multimodal_tvsum_style
+g2-_pnmhO4A,1222.0,1224.0,annotator_1,,lecture,,require a lot of speed. Cuz imagine you're on a video call with someone and every time you ask a question there's so,false,multimodal_tvsum_style
+g2-_pnmhO4A,1224.0,1226.0,annotator_1,,lecture,,you're on a video call with someone and every time you ask a question there's so much lag like it feels like they're,false,multimodal_tvsum_style
+g2-_pnmhO4A,1226.0,1228.0,annotator_1,,lecture,,every time you ask a question there's so much lag like it feels like they're responding 5 minutes later after you ask,false,multimodal_tvsum_style
+g2-_pnmhO4A,1228.0,1230.0,annotator_1,,lecture,,much lag like it feels like they're responding 5 minutes later after you ask a question. That would be a horrible,false,multimodal_tvsum_style
+g2-_pnmhO4A,1230.0,1232.0,annotator_1,,lecture,,responding 5 minutes later after you ask a question. That would be a horrible experience. And that's exactly why there,false,multimodal_tvsum_style
+g2-_pnmhO4A,1232.0,1234.0,annotator_1,,lecture,,"a question. That would be a horrible experience. And that's exactly why there is a different protocol called UDP, user",false,multimodal_tvsum_style
+g2-_pnmhO4A,1234.0,1236.0,annotator_1,,lecture,,"experience. And that's exactly why there is a different protocol called UDP, user datagramgram protocol, which prioritiz",false,multimodal_tvsum_style
+g2-_pnmhO4A,1236.0,1238.0,annotator_1,,lecture,,"is a different protocol called UDP, user datagramgram protocol, which prioritizes speed overall. This protocol optimizes",false,multimodal_tvsum_style
+g2-_pnmhO4A,1238.0,1240.0,annotator_1,,lecture,,"datagramgram protocol, which prioritizes speed overall. This protocol optimizes for sending data [music] and will keep",false,multimodal_tvsum_style
+g2-_pnmhO4A,1240.0,1242.0,annotator_1,,lecture,,speed overall. This protocol optimizes for sending data [music] and will keep going even if a tiny piece of the data,false,multimodal_tvsum_style
+g2-_pnmhO4A,1242.0,1244.0,annotator_1,,lecture,,for sending data [music] and will keep going even if a tiny piece of the data gets lost because a small glitch in your,false,multimodal_tvsum_style
+g2-_pnmhO4A,1244.0,1246.0,annotator_1,,lecture,,going even if a tiny piece of the data gets lost because a small glitch in your,false,multimodal_tvsum_style
+g2-_pnmhO4A,1246.0,1248.0,annotator_1,,lecture,,going even if a tiny piece of the data gets lost because a small glitch in your video call is way better than the whole,false,multimodal_tvsum_style
+g2-_pnmhO4A,1248.0,1250.0,annotator_1,,lecture,,gets lost because a small glitch in your video call is way better than the whole thing freezing. And another important,false,multimodal_tvsum_style
+g2-_pnmhO4A,1250.0,1252.0,annotator_1,,lecture,,video call is way better than the whole thing freezing. And another important concept to know about the internet is,false,multimodal_tvsum_style
+g2-_pnmhO4A,1252.0,1254.0,annotator_1,,lecture,,thing freezing. And another important concept to know about the internet is that websites are built using HTML.,false,multimodal_tvsum_style
+g2-_pnmhO4A,1254.0,1256.0,annotator_1,,lecture,,concept to know about the internet is that websites are built using HTML. [music] HTML tells the browser what content,false,multimodal_tvsum_style
+g2-_pnmhO4A,1256.0,1258.0,annotator_1,,lecture,,[music] HTML tells the browser what content exists and how it's organized. It,false,multimodal_tvsum_style
+g2-_pnmhO4A,1258.0,1260.0,annotator_1,,lecture,,"HTML tells the browser what content exists and how it's organized. It defines things like headings,",false,multimodal_tvsum_style
+g2-_pnmhO4A,1260.0,1262.0,annotator_1,,lecture,,"exists and how it's organized. It defines things like headings, paragraphs, images, lists, [music] and",false,multimodal_tvsum_style
+g2-_pnmhO4A,1262.0,1264.0,annotator_1,,lecture,,"defines things like headings, paragraphs, images, lists, [music] and tables. The browser reads this file,",false,multimodal_tvsum_style
+g2-_pnmhO4A,1264.0,1266.0,annotator_1,,lecture,,"paragraphs, images, lists, [music] and tables. The browser reads this file, organizes it internally, and turns it",false,multimodal_tvsum_style
+g2-_pnmhO4A,1266.0,1268.0,annotator_1,,lecture,,"tables. The browser reads this file, organizes it internally, and turns it into the web page you see on your",false,multimodal_tvsum_style
+g2-_pnmhO4A,1268.0,1270.0,annotator_1,,lecture,,"organizes it internally, and turns it into the web page you see on your screen. Week nine of CS50 continues on",false,multimodal_tvsum_style
+g2-_pnmhO4A,1270.0,1272.0,annotator_1,,lecture,,"into the web page you see on your screen. Week nine of CS50 continues on the internet, but focuses on the",false,multimodal_tvsum_style
+g2-_pnmhO4A,1272.0,1274.0,annotator_1,,lecture,,"screen. Week nine of CS50 continues on the internet, but focuses on the fundamentals of serverside web",false,multimodal_tvsum_style
+g2-_pnmhO4A,1274.0,1276.0,annotator_1,,lecture,,"the internet, but focuses on the fundamentals of serverside web programming using Python and Flask. The",false,multimodal_tvsum_style
+g2-_pnmhO4A,1276.0,1278.0,annotator_1,,lecture,,fundamentals of serverside web programming using Python and Flask. The core idea is simple. Python is no longer,false,multimodal_tvsum_style
+g2-_pnmhO4A,1278.0,1280.0,annotator_1,,lecture,,programming using Python and Flask. The core idea is simple. Python is no longer just running programs on your computer.,false,multimodal_tvsum_style
+g2-_pnmhO4A,1280.0,1282.0,annotator_1,,lecture,,core idea is simple. Python is no longer just running programs on your computer. [music] It is now running a server and,false,multimodal_tvsum_style
+g2-_pnmhO4A,1282.0,1284.0,annotator_1,,lecture,,just running programs on your computer. [music] It is now running a server and sending responses to a web browser.,false,multimodal_tvsum_style
+g2-_pnmhO4A,1284.0,1286.0,annotator_1,,lecture,,[music] It is now running a server and sending responses to a web browser. Every time someone types a website,false,multimodal_tvsum_style
+g2-_pnmhO4A,1286.0,1288.0,annotator_1,,lecture,,"sending responses to a web browser. Every time someone types a website address and presses enter, the browser",false,multimodal_tvsum_style
+g2-_pnmhO4A,1288.0,1290.0,annotator_1,,lecture,,"Every time someone types a website address and presses enter, the browser asks a server for information. Flask is",false,multimodal_tvsum_style
+g2-_pnmhO4A,1290.0,1292.0,annotator_1,,lecture,,"address and presses enter, the browser asks a server for information. Flask is that communication tool. [music] It",false,multimodal_tvsum_style
+g2-_pnmhO4A,1292.0,1294.0,annotator_1,,lecture,,"asks a server for information. Flask is that communication tool. [music] It allows Python to receive that request,",false,multimodal_tvsum_style
+g2-_pnmhO4A,1294.0,1296.0,annotator_1,,lecture,,"that communication tool. [music] It allows Python to receive that request, run code, and send something back to the",false,multimodal_tvsum_style
+g2-_pnmhO4A,1296.0,1298.0,annotator_1,,lecture,,"allows Python to receive that request, run code, and send something back to the browser. And there are specifically two",false,multimodal_tvsum_style
+g2-_pnmhO4A,1298.0,1300.0,annotator_1,,lecture,,"run code, and send something back to the browser. And there are specifically two major concepts I want to focus on withi",false,multimodal_tvsum_style
+g2-_pnmhO4A,1300.0,1302.0,annotator_1,,lecture,,browser. And there are specifically two major concepts I want to focus on within Flask called routes and [music],false,multimodal_tvsum_style
+g2-_pnmhO4A,1302.0,1304.0,annotator_1,,lecture,,"major concepts I want to focus on within Flask called routes and [music] templates. So first, routes. A route",false,multimodal_tvsum_style
+g2-_pnmhO4A,1304.0,1306.0,annotator_1,,lecture,,"Flask called routes and [music] templates. So first, routes. A route connects a URL to a Python function. So",false,multimodal_tvsum_style
+g2-_pnmhO4A,1306.0,1308.0,annotator_1,,lecture,,"templates. So first, routes. A route connects a URL to a Python function. So when a specific URL is visited, Flask",false,multimodal_tvsum_style
+g2-_pnmhO4A,1308.0,1310.0,annotator_1,,lecture,,"connects a URL to a Python function. So when a specific URL is visited, Flask will run a function. For example,",false,multimodal_tvsum_style
+g2-_pnmhO4A,1310.0,1312.0,annotator_1,,lecture,,"when a specific URL is visited, Flask will run a function. For example, whenever someone visits the homepage of",false,multimodal_tvsum_style
+g2-_pnmhO4A,1312.0,1314.0,annotator_1,,lecture,,"will run a function. For example, whenever someone visits the homepage of your website, you might want to run a",false,multimodal_tvsum_style
+g2-_pnmhO4A,1314.0,1316.0,annotator_1,,lecture,,"whenever someone visits the homepage of your website, you might want to run a function that stores their information.",false,multimodal_tvsum_style
+g2-_pnmhO4A,1316.0,1318.0,annotator_1,,lecture,,"your website, you might want to run a function that stores their information. Or if they're on the about page, you might",false,multimodal_tvsum_style
+g2-_pnmhO4A,1318.0,1320.0,annotator_1,,lecture,,"Or if they're on the about page, you might want to run a different function. [music] It's basically the connection",false,multimodal_tvsum_style
+g2-_pnmhO4A,1320.0,1322.0,annotator_1,,lecture,,might want to run a different function. [music] It's basically the connection between the website to the code,false,multimodal_tvsum_style
+g2-_pnmhO4A,1322.0,1324.0,annotator_1,,lecture,,[music] It's basically the connection between the website to the code execution dynamically. The next concept,false,multimodal_tvsum_style
+g2-_pnmhO4A,1324.0,1326.0,annotator_1,,lecture,,between the website to the code execution dynamically. The next concept is templates. And templates control what,false,multimodal_tvsum_style
+g2-_pnmhO4A,1326.0,1328.0,annotator_1,,lecture,,execution dynamically. The next concept is templates. And templates control what the page actually looks like. A templat,false,multimodal_tvsum_style
+g2-_pnmhO4A,1328.0,1330.0,annotator_1,,lecture,,"is templates. And templates control what the page actually looks like. A template is just an HTML file, but this can",false,multimodal_tvsum_style
+g2-_pnmhO4A,1330.0,1332.0,annotator_1,,lecture,,"the page actually looks like. A template is just an HTML file, but this can receive data from Python. So, Python",false,multimodal_tvsum_style
+g2-_pnmhO4A,1332.0,1334.0,annotator_1,,lecture,,"is just an HTML file, but this can receive data from Python. So, Python",false,multimodal_tvsum_style
+g2-_pnmhO4A,1334.0,1336.0,annotator_1,,lecture,,"is just an HTML file, but this can receive data from Python. So, Python sends values to the template and the",false,multimodal_tvsum_style
+g2-_pnmhO4A,1336.0,1338.0,annotator_1,,lecture,,"receive data from Python. So, Python sends values to the template and the template inserts them into the [music] page au",false,multimodal_tvsum_style
+g2-_pnmhO4A,1338.0,1340.0,annotator_1,,lecture,,"template inserts them into the [music] page automatically. For example, say you're building a website that displays",false,multimodal_tvsum_style
+g2-_pnmhO4A,1340.0,1342.0,annotator_1,,lecture,,"page automatically. For example, say you're building a website that displays Stephen Curry's latest basketball",false,multimodal_tvsum_style
+g2-_pnmhO4A,1342.0,1344.0,annotator_1,,lecture,,"you're building a website that displays Stephen Curry's latest basketball [music] stats. Inside the HTML template,",false,multimodal_tvsum_style
+g2-_pnmhO4A,1344.0,1346.0,annotator_1,,lecture,,"Stephen Curry's latest basketball [music] stats. Inside the HTML template, instead of hard coding, you might use",false,multimodal_tvsum_style
+g2-_pnmhO4A,1346.0,1348.0,annotator_1,,lecture,,"[music] stats. Inside the HTML template, instead of hard coding, you might use placeholders like points made and shots",false,multimodal_tvsum_style
+g2-_pnmhO4A,1348.0,1350.0,annotator_1,,lecture,,"instead of hard coding, you might use placeholders like points made and shots attempted. Then you have Python code",false,multimodal_tvsum_style
+g2-_pnmhO4A,1350.0,1352.0,annotator_1,,lecture,,placeholders like points made and shots attempted. Then you have Python code that updates the stats to the latest,false,multimodal_tvsum_style
+g2-_pnmhO4A,1352.0,1354.0,annotator_1,,lecture,,attempted. Then you have Python code that updates the stats to the latest scores anytime someone visits [music],false,multimodal_tvsum_style
+g2-_pnmhO4A,1354.0,1356.0,annotator_1,,lecture,,"that updates the stats to the latest scores anytime someone visits [music] that website. That way, you'll always",false,multimodal_tvsum_style
+g2-_pnmhO4A,1356.0,1358.0,annotator_1,,lecture,,"scores anytime someone visits [music] that website. That way, you'll always have the latest information. And now for",false,multimodal_tvsum_style
+g2-_pnmhO4A,1358.0,1360.0,annotator_1,,lecture,,"that website. That way, you'll always have the latest information. And now for the final week 10 of CS50. This is the",false,multimodal_tvsum_style
+g2-_pnmhO4A,1360.0,1362.0,annotator_1,,lecture,,have the latest information. And now for the final week 10 of CS50. This is the,false,multimodal_tvsum_style
+g2-_pnmhO4A,1362.0,1364.0,annotator_1,,lecture,,"have the latest information. And now for the final week 10 of CS50. This is the closing week. And this week, they pretty",false,multimodal_tvsum_style
+g2-_pnmhO4A,1364.0,1366.0,annotator_1,,lecture,,"closing week. And this week, they pretty much offer general advice for students",false,multimodal_tvsum_style
+g2-_pnmhO4A,1366.0,1368.0,annotator_1,,lecture,,"much offer general advice for students who have taken the course. And so for this part, I'm not going to summarize",false,multimodal_tvsum_style
+g2-_pnmhO4A,1368.0,1370.0,annotator_1,,lecture,,"who have taken the course. And so for this part, I'm not going to summarize what CS50 said, but for everyone who's",false,multimodal_tvsum_style
+g2-_pnmhO4A,1370.0,1372.0,annotator_1,,lecture,,"this part, I'm not going to summarize what CS50 said, but for everyone who's watched this video up until this point,",false,multimodal_tvsum_style
+g2-_pnmhO4A,1372.0,1374.0,annotator_1,,lecture,,"what CS50 said, but for everyone who's watched this video up until this point, first of all, [music] thank you. I",false,multimodal_tvsum_style
+g2-_pnmhO4A,1374.0,1376.0,annotator_1,,lecture,,"watched this video up until this point, first of all, [music] thank you. I really hope that you got a lot of value out o",false,multimodal_tvsum_style
+g2-_pnmhO4A,1376.0,1378.0,annotator_1,,lecture,,"really hope that you got a lot of value out of this. And here is my final piece of heartfelt advice to you guys. So, we",false,multimodal_tvsum_style
+g2-_pnmhO4A,1378.0,1380.0,annotator_1,,lecture,,"out of this. And here is my final piece of heartfelt advice to you guys. So, we covered a lot of information in this",false,multimodal_tvsum_style
+g2-_pnmhO4A,1380.0,1382.0,annotator_1,,lecture,,"of heartfelt advice to you guys. So, we covered a lot of information in this video. And for some people, they can",false,multimodal_tvsum_style
+g2-_pnmhO4A,1382.0,1384.0,annotator_1,,lecture,,"covered a lot of information in this video. And for some people, they can watch this video and feel overwhelmed.",false,multimodal_tvsum_style
+g2-_pnmhO4A,1384.0,1386.0,annotator_1,,lecture,,"video. And for some people, they can watch this video and feel overwhelmed. [music] They'll think, ""Oh, there's so much ",false,multimodal_tvsum_style
+g2-_pnmhO4A,1386.0,1388.0,annotator_1,,lecture,,"[music] They'll think, ""Oh, there's so much to learn. I don't know if I can handle it.",false,multimodal_tvsum_style
+g2-_pnmhO4A,1388.0,1390.0,annotator_1,,lecture,,"They'll think, ""Oh, there's so much to learn. I don't know if I can handle it. This is so complicated."" Or even worse,",false,multimodal_tvsum_style
+g2-_pnmhO4A,1390.0,1392.0,annotator_1,,lecture,,"learn. I don't know if I can handle it. This is so complicated."" Or even worse, they'll see other people who are succeed",false,multimodal_tvsum_style
+g2-_pnmhO4A,1392.0,1394.0,annotator_1,,lecture,,they'll see other people who are succeeding and they'll feel left behind. And [music] so speaking to you,false,multimodal_tvsum_style
+g2-_pnmhO4A,1394.0,1396.0,annotator_1,,lecture,,"succeeding and they'll feel left behind. And [music] so speaking to you sincerely, I want to be straight up with",false,multimodal_tvsum_style
+g2-_pnmhO4A,1396.0,1398.0,annotator_1,,lecture,,"And [music] so speaking to you sincerely, I want to be straight up with you. You do not need to master [music]",false,multimodal_tvsum_style
+g2-_pnmhO4A,1398.0,1400.0,annotator_1,,lecture,,"sincerely, I want to be straight up with you. You do not need to master [music] everything I covered in this video in",false,multimodal_tvsum_style
+g2-_pnmhO4A,1400.0,1402.0,annotator_1,,lecture,,"you. You do not need to master [music] everything I covered in this video in order to be successful. In fact, you",false,multimodal_tvsum_style
+g2-_pnmhO4A,1402.0,1404.0,annotator_1,,lecture,,"everything I covered in this video in order to be successful. In fact, you don't even need to master half the",false,multimodal_tvsum_style
+g2-_pnmhO4A,1404.0,1406.0,annotator_1,,lecture,,"order to be successful. In fact, you don't even need to master half the things I covered. In fact, if you could",false,multimodal_tvsum_style
+g2-_pnmhO4A,1406.0,1408.0,annotator_1,,lecture,,"don't even need to master half the things I covered. In fact, if you could just master one of the things I talked",false,multimodal_tvsum_style
+g2-_pnmhO4A,1408.0,1410.0,annotator_1,,lecture,,"things I covered. In fact, if you could just master one of the things I talked about really, really well, you will beat",false,multimodal_tvsum_style
+g2-_pnmhO4A,1410.0,1412.0,annotator_1,,lecture,,"just master one of the things I talked about really, really well, you will beat 99% of [music] people. And I know I",false,multimodal_tvsum_style
+g2-_pnmhO4A,1412.0,1414.0,annotator_1,,lecture,,"about really, really well, you will beat 99% of [music] people. And I know I",false,multimodal_tvsum_style
+g2-_pnmhO4A,1414.0,1416.0,annotator_1,,lecture,,"about really, really well, you will beat 99% of [music] people. And I know I might appear smart in front of you guys",false,multimodal_tvsum_style
+g2-_pnmhO4A,1416.0,1418.0,annotator_1,,lecture,,99% of [music] people. And I know I might appear smart in front of you guys because I'm like talking [music] to you guys,false,multimodal_tvsum_style
+g2-_pnmhO4A,1418.0,1420.0,annotator_1,,lecture,,"because I'm like talking [music] to you guys on a camera, but truth be told,",false,multimodal_tvsum_style
+g2-_pnmhO4A,1420.0,1422.0,annotator_1,,lecture,,"because I'm like talking [music] to you guys on a camera, but truth be told, there is so much I don't know about the",false,multimodal_tvsum_style
+g2-_pnmhO4A,1422.0,1424.0,annotator_1,,lecture,,"guys on a camera, but truth be told, there is so much I don't know about the world of technology. There's so many",false,multimodal_tvsum_style
+g2-_pnmhO4A,1424.0,1426.0,annotator_1,,lecture,,there is so much I don't know about the world of technology. There's so many things I'm constantly learning. And the,false,multimodal_tvsum_style
+g2-_pnmhO4A,1426.0,1428.0,annotator_1,,lecture,,things I'm constantly learning. And the way that I approach learning is to try to focus on one subject in depth. So if,false,multimodal_tvsum_style
+g2-_pnmhO4A,1428.0,1430.0,annotator_1,,lecture,,way that I approach learning is to try to focus on one subject in depth. So if,false,multimodal_tvsum_style
+g2-_pnmhO4A,1430.0,1432.0,annotator_1,,lecture,,"way that I approach learning is to try to focus on one subject in depth. So if you're watching this video, maybe you",false,multimodal_tvsum_style
+g2-_pnmhO4A,1432.0,1434.0,annotator_1,,lecture,,"to focus on one subject in depth. So if you're watching this video, maybe you focus on Python super [music] in-depth.",false,multimodal_tvsum_style
+g2-_pnmhO4A,1434.0,1436.0,annotator_1,,lecture,,"you're watching this video, maybe you focus on Python super [music] in-depth. You do a deep dive into it, do coding",false,multimodal_tvsum_style
+g2-_pnmhO4A,1436.0,1438.0,annotator_1,,lecture,,"focus on Python super [music] in-depth. You do a deep dive into it, do coding projects into it, and try to become a mast",false,multimodal_tvsum_style
+g2-_pnmhO4A,1438.0,1440.0,annotator_1,,lecture,,"projects into it, and try to become a master in [music] Python because the world of technology is extremely vast.",false,multimodal_tvsum_style
+g2-_pnmhO4A,1440.0,1442.0,annotator_1,,lecture,,master in [music] Python because the world of technology is extremely vast. So you can learn anything. [music] You,false,multimodal_tvsum_style
+g2-_pnmhO4A,1442.0,1444.0,annotator_1,,lecture,,world of technology is extremely vast. So you can learn anything. [music] You,false,multimodal_tvsum_style
+g2-_pnmhO4A,1444.0,1446.0,annotator_1,,lecture,,"world of technology is extremely vast. So you can learn anything. [music] You just can't learn everything, especially",false,multimodal_tvsum_style
+g2-_pnmhO4A,1446.0,1448.0,annotator_1,,lecture,,"So you can learn anything. [music] You just can't learn everything, especially all at once. If you're a beginner learnin",false,multimodal_tvsum_style
+g2-_pnmhO4A,1448.0,1450.0,annotator_1,,lecture,,"all at once. If you're a beginner learning to code, I would encourage you to focus super well on learning one",false,multimodal_tvsum_style
+g2-_pnmhO4A,1450.0,1452.0,annotator_1,,lecture,,"learning to code, I would encourage you to focus super well on learning one language the best. Become an expert in",false,multimodal_tvsum_style
+g2-_pnmhO4A,1452.0,1454.0,annotator_1,,lecture,,to focus super well on learning one language the best. Become an expert in,false,multimodal_tvsum_style
+g2-_pnmhO4A,1454.0,1456.0,annotator_1,,lecture,,to focus super well on learning one language the best. Become an expert in it such that you become known for knowing tha,false,multimodal_tvsum_style
+g2-_pnmhO4A,1456.0,1458.0,annotator_1,,lecture,,"it such that you become known for knowing that language and can do [music] cool things with it. In fact, when I was",false,multimodal_tvsum_style
+g2-_pnmhO4A,1458.0,1460.0,annotator_1,,lecture,,"knowing that language and can do [music] cool things with it. In fact, when I was in college, there would be so many",false,multimodal_tvsum_style
+g2-_pnmhO4A,1460.0,1462.0,annotator_1,,lecture,,"cool things with it. In fact, when I was in college, there would be so many people who would claim they know this langua",false,multimodal_tvsum_style
+g2-_pnmhO4A,1462.0,1464.0,annotator_1,,lecture,,"people who would claim they know this language, this language, like 15 different languages. But at the end of",false,multimodal_tvsum_style
+g2-_pnmhO4A,1464.0,1466.0,annotator_1,,lecture,,"language, this language, like 15 different languages. But at the end of the day, it was shallow knowledge. They",false,multimodal_tvsum_style
+g2-_pnmhO4A,1466.0,1468.0,annotator_1,,lecture,,"different languages. But at the end of the day, it was shallow knowledge. They only knew how to print hello world in tho",false,multimodal_tvsum_style
+g2-_pnmhO4A,1468.0,1470.0,annotator_1,,lecture,,"only knew how to print hello world in those languages. And trust me, that won't get you very far. [music] Instead,",false,multimodal_tvsum_style
+g2-_pnmhO4A,1470.0,1472.0,annotator_1,,lecture,,"those languages. And trust me, that won't get you very far. [music] Instead, stay focused, stay disciplined. Don't",false,multimodal_tvsum_style
+g2-_pnmhO4A,1472.0,1474.0,annotator_1,,lecture,,"won't get you very far. [music] Instead, stay focused, stay disciplined. Don't compare yourselves to others, especially",false,multimodal_tvsum_style
+g2-_pnmhO4A,1474.0,1476.0,annotator_1,,lecture,,"stay focused, stay disciplined. Don't compare yourselves to others, especially since you're doing pretty well yourself.",false,multimodal_tvsum_style
+g2-_pnmhO4A,1476.0,1478.0,annotator_1,,lecture,,"compare yourselves to others, especially since you're doing pretty well yourself. I mean, think about it. This video has",false,multimodal_tvsum_style
+g2-_pnmhO4A,1478.0,1480.0,annotator_1,,lecture,,"since you're doing pretty well yourself. I mean, think about it. This video has been pretty long, and not a lot of",false,multimodal_tvsum_style
+g2-_pnmhO4A,1480.0,1482.0,annotator_1,,lecture,,"I mean, think about it. This video has been pretty long, and not a lot of people would have had the discipline to",false,multimodal_tvsum_style
+g2-_pnmhO4A,1482.0,1484.0,annotator_1,,lecture,,"been pretty long, and not a lot of people would have had the discipline to even stay this far. But I'm proud of",false,multimodal_tvsum_style
+g2-_pnmhO4A,1484.0,1486.0,annotator_1,,lecture,,people would have had the discipline to even stay this far. But I'm proud of you. You're doing really good. You are,false,multimodal_tvsum_style
+g2-_pnmhO4A,1486.0,1488.0,annotator_1,,lecture,,even stay this far. But I'm proud of you. You're doing really good. You are truly taking this commitment to your,false,multimodal_tvsum_style
+g2-_pnmhO4A,1488.0,1490.0,annotator_1,,lecture,,you. You're doing really good. You are truly taking this commitment to your education [music] seriously. And because of ,false,multimodal_tvsum_style
+g2-_pnmhO4A,1490.0,1492.0,annotator_1,,lecture,,"education [music] seriously. And because of that, I have full confidence that you will be",false,multimodal_tvsum_style
+g2-_pnmhO4A,1492.0,1494.0,annotator_1,,lecture,,"seriously. And because of that, I have full confidence that you will be successful going into your [music]",false,multimodal_tvsum_style
+g2-_pnmhO4A,1494.0,1496.0,annotator_1,,lecture,,"full confidence that you will be successful going into your [music] coding and tech future. Well, I really",false,multimodal_tvsum_style
+g2-_pnmhO4A,1496.0,1498.0,annotator_1,,lecture,,"successful going into your [music] coding and tech future. Well, I really hope that you guys enjoyed this video and got ",false,multimodal_tvsum_style
+g2-_pnmhO4A,1498.0,1500.0,annotator_1,,lecture,,"hope that you guys enjoyed this video and got a lot of value out of it. It took me a long time to research,",false,multimodal_tvsum_style
+g2-_pnmhO4A,1500.0,1502.0,annotator_1,,lecture,,"and got a lot of value out of it. It took me a long time to research, synthesize, and break down all this",false,multimodal_tvsum_style
+g2-_pnmhO4A,1502.0,1504.0,annotator_1,,lecture,,"took me a long time to research, synthesize, and break down all this information to present it to you guys.",false,multimodal_tvsum_style
+g2-_pnmhO4A,1504.0,1506.0,annotator_1,,lecture,,"synthesize, and break down all this information to present it to you guys. And so, if you guys do like videos like",false,multimodal_tvsum_style
+g2-_pnmhO4A,1506.0,1508.0,annotator_1,,lecture,,"information to present it to you guys. And so, if you guys do like videos like this, I would really appreciate it if you",false,multimodal_tvsum_style
+g2-_pnmhO4A,1508.0,1510.0,annotator_1,,lecture,,"this, I would really appreciate it if you let me know what your thoughts are down below in the comments. And if you",false,multimodal_tvsum_style
+g2-_pnmhO4A,1510.0,1512.0,annotator_1,,lecture,,you let me know what your thoughts are down below in the comments. And if you could hit the like button and subscribe,false,multimodal_tvsum_style
+g2-_pnmhO4A,1512.0,1514.0,annotator_1,,lecture,,down below in the comments. And if you could hit the like button and subscribe if you haven't already. I also have an ab,false,multimodal_tvsum_style
+g2-_pnmhO4A,1514.0,1516.0,annotator_1,,lecture,,if you haven't already. I also have an absolutely free tech newsletter [music] down below in the description below if,false,multimodal_tvsum_style
+g2-_pnmhO4A,1516.0,1518.0,annotator_1,,lecture,,absolutely free tech newsletter [music] down below in the description below if you're interested. And now that you have,false,multimodal_tvsum_style
+g2-_pnmhO4A,1518.0,1520.0,annotator_1,,lecture,,"down below in the description below if you're interested. And now that you have seen this video, if you're interested in",false,multimodal_tvsum_style
+g2-_pnmhO4A,1520.0,1522.0,annotator_1,,lecture,,"you're interested. And now that you have seen this video, if you're interested in learning about some of the mistakes I",false,multimodal_tvsum_style
+g2-_pnmhO4A,1522.0,1524.0,annotator_1,,lecture,,"seen this video, if you're interested in learning about some of the mistakes I made along the way while learning to code",false,multimodal_tvsum_style

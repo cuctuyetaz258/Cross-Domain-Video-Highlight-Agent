@@ -27,6 +27,7 @@ from highlight_agent.features.ltr_contract import (
 )
 
 from .ltr_scorer import AdditiveAttentionScorer
+from .training_artifacts import write_training_curves_svg, write_training_history_csv
 
 FEATURE_SCHEMA_VERSION = LTR_FEATURE_SCHEMA_VERSION
 FEATURE_SAMPLE_RATE = LTR_SAMPLE_RATE
@@ -46,6 +47,7 @@ class WindowExample:
     feature: np.ndarray
     label: int
     score: float
+    source: str = "unknown"
 
 
 def _tvsum_record(
@@ -139,7 +141,8 @@ def load_summe(gt_dir: str | Path) -> list[dict[str, Any]]:
         records.append(
             {
                 "video_id": path.stem,
-                "domain": "standup",
+                "dataset": "summe",
+                "domain": "benchmark",
                 "source": "summe",
                 "frame_scores": mat["gt_score"].squeeze().astype(np.float32),
                 "fps": float(mat["fps"][0][0]) if "fps" in mat else 25.0,
@@ -214,7 +217,10 @@ def create_window_labels(
         fps = float(record["fps"])
         if fps <= 0:
             raise ValueError("record fps must be positive")
-        target_len = int(len(frame_scores) / fps * FEATURE_SAMPLE_RATE)
+        annotation_len = int(len(frame_scores) / fps * FEATURE_SAMPLE_RATE)
+        duration = float(record.get("duration") or 0.0)
+        media_len = int(duration * FEATURE_SAMPLE_RATE) if duration > 0 else annotation_len
+        target_len = min(annotation_len, media_len)
         if target_len == 0:
             return []
 
@@ -238,6 +244,41 @@ def create_window_labels(
                     "end": (start_frame + window_frames) / FEATURE_SAMPLE_RATE,
                     "label": label,
                     "score": window_score,
+                }
+            )
+        return labels
+
+    if source == "custom_scores":
+        segments = record.get("importance_segments", [])
+        duration = float(record.get("duration") or 0.0)
+        if duration <= 0:
+            return []
+        for start_sec in np.arange(0, duration, hop_sec):
+            end_sec = float(start_sec + window_sec)
+            if end_sec > duration:
+                break
+            weighted_score = 0.0
+            covered = 0.0
+            for segment_start, segment_end, importance in segments:
+                overlap = max(
+                    0.0,
+                    min(end_sec, float(segment_end)) - max(float(start_sec), float(segment_start)),
+                )
+                if overlap > 0:
+                    weighted_score += overlap * float(importance)
+                    covered += overlap
+            if covered < window_sec - 1e-6:
+                label = "ignored"
+                score = weighted_score / covered if covered else 0.0
+            else:
+                score = weighted_score / covered
+                label = "positive" if score >= 4.0 else "negative" if score <= 2.0 else "ignored"
+            labels.append(
+                {
+                    "start": float(start_sec),
+                    "end": end_sec,
+                    "label": label,
+                    "score": float(score),
                 }
             )
         return labels
@@ -326,6 +367,22 @@ def compute_lref(records: Iterable[dict[str, Any]]) -> float:
 
     durations: list[float] = []
     for record in records:
+        if record["source"] == "custom_scores":
+            positive_segments = [
+                (float(start), float(end))
+                for start, end, score in record.get("importance_segments", [])
+                if float(score) >= 4.0
+            ]
+            if positive_segments:
+                run_start, run_end = positive_segments[0]
+                for start, end in positive_segments[1:]:
+                    if abs(start - run_end) <= 1e-6:
+                        run_end = end
+                    else:
+                        durations.append(run_end - run_start)
+                        run_start, run_end = start, end
+                durations.append(run_end - run_start)
+            continue
         if record["source"] in {"qvhighlights", "custom", "custom_pseudo"}:
             durations.extend(float(end - start) for start, end in record.get("relevant_windows", []))
             continue
@@ -422,6 +479,7 @@ def build_window_examples(
                     feature=feature,
                     label=LABEL_TO_INT[label_record["label"]],
                     score=float(label_record["score"]),
+                    source=str(record.get("source", "unknown")),
                 )
             )
     return examples
@@ -437,6 +495,90 @@ def _pair_examples(examples: Iterable[WindowExample]) -> list[tuple[WindowExampl
         negatives = [example for example in video_examples if example.label == 0]
         pairs.extend((positive, negative) for positive in positives for negative in negatives)
     return pairs
+
+
+def build_balanced_epoch_pairs(
+    examples: Iterable[WindowExample],
+    *,
+    source_weights: dict[str, float] | None = None,
+    max_pairs_per_video: int = 2048,
+    seed: int = 42,
+) -> tuple[list[tuple[WindowExample, WindowExample]], dict[str, Any]]:
+    """Sample a reproducible epoch without letting long videos dominate.
+
+    Pairs remain within a video. Each video contributes at most
+    ``max_pairs_per_video`` unique positive-negative pairs. Source weights are
+    then applied to the capped source pools, with replacement only when a
+    source needs to be upsampled.
+    """
+
+    if max_pairs_per_video <= 0:
+        raise ValueError("max_pairs_per_video must be positive")
+    generator = random.Random(seed)
+    by_video: dict[str, list[WindowExample]] = defaultdict(list)
+    for example in examples:
+        by_video[example.video_id].append(example)
+
+    pools: dict[str, list[tuple[WindowExample, WindowExample]]] = defaultdict(list)
+    video_pair_counts: dict[str, int] = {}
+    for video_id, video_examples in sorted(by_video.items()):
+        positives = [example for example in video_examples if example.label == 1]
+        negatives = [example for example in video_examples if example.label == 0]
+        possible = len(positives) * len(negatives)
+        if possible == 0:
+            continue
+        sample_count = min(possible, max_pairs_per_video)
+        flat_indices = generator.sample(range(possible), sample_count)
+        source = video_examples[0].source
+        pools[source].extend(
+            (positives[index // len(negatives)], negatives[index % len(negatives)])
+            for index in flat_indices
+        )
+        video_pair_counts[video_id] = sample_count
+
+    if not pools:
+        return [], {"source_pair_counts": {}, "video_pair_counts": {}}
+
+    if source_weights:
+        unknown = sorted(set(source_weights).difference(pools))
+        if unknown:
+            raise ValueError(f"source weights reference absent sources: {', '.join(unknown)}")
+        if any(weight <= 0 for weight in source_weights.values()):
+            raise ValueError("source weights must be positive")
+        missing = sorted(set(pools).difference(source_weights))
+        if missing:
+            raise ValueError(f"source weights are missing sources: {', '.join(missing)}")
+        total_weight = sum(source_weights.values())
+        resolved_weights = {
+            source: source_weights[source] / total_weight for source in sorted(pools)
+        }
+    else:
+        resolved_weights = {source: 1.0 / len(pools) for source in sorted(pools)}
+
+    epoch_size = sum(len(pool) for pool in pools.values())
+    requested = {
+        source: int(round(epoch_size * weight)) for source, weight in resolved_weights.items()
+    }
+    difference = epoch_size - sum(requested.values())
+    if difference:
+        first_source = next(iter(requested))
+        requested[first_source] += difference
+
+    epoch_pairs: list[tuple[WindowExample, WindowExample]] = []
+    for source, count in requested.items():
+        pool = pools[source]
+        if count <= len(pool):
+            epoch_pairs.extend(generator.sample(pool, count))
+        else:
+            epoch_pairs.extend(pool)
+            epoch_pairs.extend(generator.choice(pool) for _ in range(count - len(pool)))
+    generator.shuffle(epoch_pairs)
+    return epoch_pairs, {
+        "source_weights": resolved_weights,
+        "source_pair_counts": dict(sorted(requested.items())),
+        "video_pair_counts": dict(sorted(video_pair_counts.items())),
+        "epoch_pair_count": len(epoch_pairs),
+    }
 
 
 def create_pairwise_dataset(
@@ -499,6 +641,35 @@ def evaluate_average_precision(
     return float(average_precision_score(labels, scores))
 
 
+def evaluate_average_precision_by_group(
+    model: torch.nn.Module,
+    examples: Iterable[WindowExample],
+    *,
+    group_by: str,
+    device: str | torch.device = "cpu",
+) -> dict[str, float]:
+    """Compute macro-ready AP values without pooling long videos or sources."""
+
+    if group_by not in {"source", "domain", "video"}:
+        raise ValueError("group_by must be source, domain, or video")
+    grouped: dict[str, list[WindowExample]] = defaultdict(list)
+    for example in examples:
+        key = (
+            example.source
+            if group_by == "source"
+            else example.domain
+            if group_by == "domain"
+            else example.video_id
+        )
+        grouped[key].append(example)
+    metrics: dict[str, float] = {}
+    for key, group_examples in sorted(grouped.items()):
+        labels = {example.label for example in group_examples if example.label in {0, 1}}
+        if labels == {0, 1}:
+            metrics[key] = evaluate_average_precision(model, group_examples, device=device)
+    return metrics
+
+
 def _set_seed(seed: int) -> None:
     random.seed(seed)
     np.random.seed(seed)
@@ -520,6 +691,7 @@ def _records_fingerprint(records: Iterable[dict[str, Any]]) -> str:
             "duration": record.get("duration"),
             "fps": record.get("fps"),
             "relevant_windows": record.get("relevant_windows"),
+            "importance_segments": record.get("importance_segments"),
         }
         hasher.update(json.dumps(summary, sort_keys=True, default=str).encode("utf-8"))
         if "frame_scores" in record:
@@ -552,6 +724,11 @@ def train(
     seed: int = 42,
     training_log_path: str | Path | None = None,
     last_checkpoint_path: str | Path | None = None,
+    source_weights: dict[str, float] | None = None,
+    max_pairs_per_video: int = 2048,
+    init_checkpoint: str | Path | None = None,
+    training_plot_path: str | Path | None = None,
+    training_history_csv_path: str | Path | None = None,
 ) -> AdditiveAttentionScorer:
     """Train the scorer with ranking and temporal smoothness objectives."""
 
@@ -569,10 +746,25 @@ def train(
     _set_seed(seed)
     output = Path(output_path)
     log_path = Path(training_log_path) if training_log_path else output.with_name("training_log.json")
+    plot_path = (
+        Path(training_plot_path)
+        if training_plot_path
+        else log_path.with_name(f"{log_path.stem}_curves.svg")
+    )
+    history_csv_path = (
+        Path(training_history_csv_path)
+        if training_history_csv_path
+        else log_path.with_name(f"{log_path.stem}_history.csv")
+    )
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     train_examples = build_window_examples(feature_cache_dir, records, window_sec, hop_sec)
-    train_pairs = _pair_examples(train_examples)
-    if not train_pairs:
+    initial_pairs, initial_balance = build_balanced_epoch_pairs(
+        train_examples,
+        source_weights=source_weights,
+        max_pairs_per_video=max_pairs_per_video,
+        seed=seed,
+    )
+    if not initial_pairs:
         raise ValueError("training data must contain positive and negative windows in the same video")
 
     validation_examples = (
@@ -590,10 +782,24 @@ def train(
     for video_id in chronological:
         chronological[video_id].sort(key=lambda example: example.window_index)
 
-    model = AdditiveAttentionScorer(in_features=len(FEATURE_CHANNELS), hidden_dim=hidden_dim).to(device)
+    parent_checkpoint: dict[str, Any] | None = None
+    if init_checkpoint:
+        model, _parent_metadata = AdditiveAttentionScorer.load_checkpoint(
+            init_checkpoint,
+            device=device,
+            expected_in_features=len(FEATURE_CHANNELS),
+        )
+        if model.hidden_dim != hidden_dim:
+            raise ValueError(
+                f"init checkpoint hidden_dim={model.hidden_dim}, requested hidden_dim={hidden_dim}"
+            )
+        parent_checkpoint = AdditiveAttentionScorer.preflight(init_checkpoint, device=device)
+    else:
+        model = AdditiveAttentionScorer(
+            in_features=len(FEATURE_CHANNELS), hidden_dim=hidden_dim
+        ).to(device)
     optimizer = AdamW(model.parameters(), lr=lr, weight_decay=weight_decay)
     scheduler = CosineAnnealingLR(optimizer, T_max=max_epochs)
-    random_generator = random.Random(seed)
     l_ref = compute_lref(records)
     best_ap = -1.0
     best_epoch = 0
@@ -612,12 +818,26 @@ def train(
         "hop_sec": hop_sec,
         "seed": seed,
         "device": device.type,
+        "source_weights": initial_balance.get("source_weights", {}),
+        "max_pairs_per_video": max_pairs_per_video,
+        "epoch_pair_count": initial_balance.get("epoch_pair_count", 0),
+        "video_pair_counts": initial_balance.get("video_pair_counts", {}),
+        "init_checkpoint": str(Path(init_checkpoint).resolve()) if init_checkpoint else None,
+        "parent_checkpoint_fingerprint": (
+            parent_checkpoint.get("fingerprint") if parent_checkpoint else None
+        ),
+        "training_plot": str(plot_path),
+        "training_history_csv": str(history_csv_path),
     }
 
     for epoch in range(1, max_epochs + 1):
         model.train()
-        shuffled_pairs = list(train_pairs)
-        random_generator.shuffle(shuffled_pairs)
+        shuffled_pairs, epoch_balance = build_balanced_epoch_pairs(
+            train_examples,
+            source_weights=source_weights,
+            max_pairs_per_video=max_pairs_per_video,
+            seed=seed + epoch,
+        )
         margin_total = 0.0
         margin_items = 0
         for offset in range(0, len(shuffled_pairs), batch_size):
@@ -655,7 +875,26 @@ def train(
         margin_mean = margin_total / max(margin_items, 1)
         smooth_mean = float(np.mean(smooth_values)) if smooth_values else 0.0
         train_total = margin_mean + lambda_smooth * smooth_mean
-        selection_ap = evaluate_average_precision(model, selection_examples, device=device)
+        source_ap = evaluate_average_precision_by_group(
+            model, selection_examples, group_by="source", device=device
+        )
+        domain_ap = evaluate_average_precision_by_group(
+            model, selection_examples, group_by="domain", device=device
+        )
+        video_ap = evaluate_average_precision_by_group(
+            model, selection_examples, group_by="video", device=device
+        )
+        if len(source_ap) > 1:
+            selection_ap = float(np.mean(list(source_ap.values())))
+            selection_metric = "macro_source_average_precision"
+        elif len(domain_ap) > 1:
+            selection_ap = float(np.mean(list(domain_ap.values())))
+            selection_metric = "macro_domain_average_precision"
+        else:
+            selection_ap = evaluate_average_precision(
+                model, selection_examples, device=device
+            )
+            selection_metric = "average_precision"
         epoch_log: dict[str, Any] = {
             "epoch": epoch,
             "train_margin_loss": margin_mean,
@@ -663,7 +902,12 @@ def train(
             "train_total_loss": train_total,
             "selection_ap": selection_ap,
             "selection_split": selection_split,
+            "selection_metric": selection_metric,
             "learning_rate": scheduler.get_last_lr()[0],
+            "source_pair_counts": epoch_balance["source_pair_counts"],
+            "ap_by_source": source_ap,
+            "ap_by_domain": domain_ap,
+            "ap_by_video": video_ap,
         }
         epoch_log["val_ap" if selection_split == "validation" else "train_ap"] = selection_ap
         epoch_logs.append(epoch_log)
@@ -680,6 +924,7 @@ def train(
                     "L_ref": l_ref,
                     "epoch": best_epoch,
                     "selection_ap": best_ap,
+                    "selection_metric": selection_metric,
                     "selection_split": selection_split,
                     "val_ap": best_ap if selection_split == "validation" else None,
                     "train_ap": best_ap if selection_split == "training" else None,
@@ -688,6 +933,7 @@ def train(
                         _records_fingerprint(val_records) if val_records else None
                     ),
                     "config": config,
+                    "parent_checkpoint": parent_checkpoint,
                 },
             )
         else:
@@ -702,6 +948,7 @@ def train(
                     "L_ref": l_ref,
                     "epoch": epoch,
                     "selection_ap": selection_ap,
+                    "selection_metric": selection_metric,
                     "selection_split": selection_split,
                     "val_ap": selection_ap if selection_split == "validation" else None,
                     "train_ap": selection_ap if selection_split == "training" else None,
@@ -711,6 +958,7 @@ def train(
                     ),
                     "config": config,
                     "checkpoint_role": "last",
+                    "parent_checkpoint": parent_checkpoint,
                 },
             )
 
@@ -724,10 +972,20 @@ def train(
                 },
                 "config": config,
                 "selection_split": selection_split,
+                "selection_metric": (
+                    epoch_logs[-1]["selection_metric"] if epoch_logs else "average_precision"
+                ),
                 "best_epoch": best_epoch,
                 "best_ap": best_ap,
                 "epochs": epoch_logs,
             },
+        )
+        write_training_history_csv(history_csv_path, epoch_logs)
+        write_training_curves_svg(
+            plot_path,
+            epoch_logs,
+            best_epoch=best_epoch,
+            run_title=f"LTR training · {output.stem}",
         )
         if epochs_without_improvement >= patience:
             break
@@ -747,6 +1005,16 @@ def _parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--cache-dir", required=True, help="Canonical feature cache directory")
     parser.add_argument("--output", required=True, help="Output checkpoint path")
     parser.add_argument("--training-log", default=None, help="Optional training log JSON path")
+    parser.add_argument(
+        "--training-plot",
+        default=None,
+        help="SVG training-curve path; defaults next to the training log.",
+    )
+    parser.add_argument(
+        "--training-history-csv",
+        default=None,
+        help="Flat epoch-history CSV path; defaults next to the training log.",
+    )
     parser.add_argument("--last-output", default=None, help="Optional last-epoch checkpoint path")
     parser.add_argument("--training-config", default=None, help="Optional resolved config JSON path")
     parser.add_argument("--evaluation-snapshot", default=None, help="Optional metric snapshot JSON path")
@@ -761,11 +1029,44 @@ def _parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--window-sec", type=float, default=5.0)
     parser.add_argument("--hop-sec", type=float, default=1.0)
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument(
+        "--source-weight",
+        action="append",
+        default=[],
+        metavar="SOURCE=WEIGHT",
+        help="Repeat to balance epoch pairs by source, e.g. tvsum=0.6 and summe=0.4.",
+    )
+    parser.add_argument("--max-pairs-per-video", type=int, default=2048)
+    parser.add_argument(
+        "--init-checkpoint",
+        default=None,
+        help="Validated LTR checkpoint used to initialize fine-tuning.",
+    )
     return parser.parse_args(argv)
+
+
+def _parse_source_weights(values: Iterable[str]) -> dict[str, float] | None:
+    weights: dict[str, float] = {}
+    for value in values:
+        source, separator, raw_weight = value.partition("=")
+        source = source.strip()
+        if not separator or not source:
+            raise ValueError(f"invalid source weight {value!r}; expected SOURCE=WEIGHT")
+        if source in weights:
+            raise ValueError(f"duplicate source weight: {source}")
+        try:
+            weight = float(raw_weight)
+        except ValueError as exc:
+            raise ValueError(f"invalid source weight {value!r}") from exc
+        if weight <= 0 or not np.isfinite(weight):
+            raise ValueError(f"source weight must be finite and positive: {value!r}")
+        weights[source] = weight
+    return weights or None
 
 
 def main(argv: list[str] | None = None) -> None:
     args = _parse_args(argv)
+    source_weights = _parse_source_weights(args.source_weight)
     records: list[dict[str, Any]] = []
     if args.tvsum:
         records.extend(load_tvsum(args.tvsum))
@@ -796,6 +1097,11 @@ def main(argv: list[str] | None = None) -> None:
         seed=args.seed,
         training_log_path=args.training_log,
         last_checkpoint_path=args.last_output,
+        source_weights=source_weights,
+        max_pairs_per_video=args.max_pairs_per_video,
+        init_checkpoint=args.init_checkpoint,
+        training_plot_path=args.training_plot,
+        training_history_csv_path=args.training_history_csv,
     )
     resolved_config = {
         "manifest": args.manifest,
@@ -815,6 +1121,11 @@ def main(argv: list[str] | None = None) -> None:
         "window_sec": args.window_sec,
         "hop_sec": args.hop_sec,
         "seed": args.seed,
+        "source_weights": source_weights,
+        "max_pairs_per_video": args.max_pairs_per_video,
+        "init_checkpoint": args.init_checkpoint,
+        "training_plot": args.training_plot,
+        "training_history_csv": args.training_history_csv,
     }
     if args.training_config:
         _write_training_log(Path(args.training_config), resolved_config)

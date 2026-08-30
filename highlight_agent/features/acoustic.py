@@ -96,6 +96,7 @@ def _extract_from_samples(
     fmax_hz: float,
     silence_threshold_db: float,
     min_silence_duration: float,
+    include_pitch: bool = True,
 ) -> AcousticFeatures:
     if sample_rate <= 0 or samples.size == 0:
         raise ValueError("audio must contain at least one sample")
@@ -131,14 +132,24 @@ def _extract_from_samples(
             min_duration=min_silence_duration,
         )
         silence_duration = float(sum(interval.end - interval.start for interval in silence_intervals))
-        pitch, voiced_ratio = _pitch_statistics(
-            samples,
-            sample_rate=sample_rate,
-            frame_length=frame_length,
-            hop_length=hop_length,
-            fmin_hz=fmin_hz,
-            fmax_hz=fmax_hz,
-        )
+        if include_pitch:
+            pitch, voiced_ratio = _pitch_statistics(
+                samples,
+                sample_rate=sample_rate,
+                frame_length=frame_length,
+                hop_length=hop_length,
+                fmin_hz=fmin_hz,
+                fmax_hz=fmax_hz,
+            )
+        else:
+            pitch = {
+                "pitch_mean_hz": None,
+                "pitch_median_hz": None,
+                "pitch_std_hz": None,
+                "pitch_min_hz": None,
+                "pitch_max_hz": None,
+            }
+            voiced_ratio = 0.0
 
     return AcousticFeatures(
         duration=duration,
@@ -220,6 +231,9 @@ def extract_windowed_acoustic_features(
         fmax_hz=fmax_hz,
         silence_threshold_db=silence_threshold_db,
         min_silence_duration=min_silence_duration,
+        # Window-level pitch below is the signal consumed by the LTR matrix.
+        # Skipping full-file pitch prevents duplicate work and high peak memory.
+        include_pitch=False,
     )
 
     windows: list[FeatureWindow] = []

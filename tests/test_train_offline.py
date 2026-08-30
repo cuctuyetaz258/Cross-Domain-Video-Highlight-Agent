@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import xml.etree.ElementTree as ET
 
 import numpy as np
 import pytest
@@ -9,6 +10,7 @@ import torch
 from highlight_agent.models.train_offline import (
     FEATURE_CHANNELS,
     WindowExample,
+    build_balanced_epoch_pairs,
     create_pairwise_dataset,
     create_window_labels,
     evaluate_average_precision,
@@ -152,6 +154,53 @@ def test_custom_long_highlight_uses_window_coverage_not_symmetric_iou():
     assert next(item for item in labels if item["start"] == 20.0)["label"] == "positive"
 
 
+def test_custom_scores_preserve_graded_window_supervision():
+    record = {
+        "source": "custom_scores",
+        "duration": 10.0,
+        "importance_segments": [
+            [0.0, 2.0, 1.0],
+            [2.0, 4.0, 2.0],
+            [4.0, 6.0, 3.0],
+            [6.0, 8.0, 4.0],
+            [8.0, 10.0, 5.0],
+        ],
+    }
+
+    labels = create_window_labels(record, window_sec=2.0, hop_sec=2.0)
+
+    assert [label["label"] for label in labels] == [
+        "negative",
+        "negative",
+        "ignored",
+        "positive",
+        "positive",
+    ]
+    assert [label["score"] for label in labels] == [1, 2, 3, 4, 5]
+
+
+def test_balanced_epoch_pairs_caps_video_and_applies_source_weights():
+    examples = []
+    for source, video_id in (("tvsum", "tv"), ("summe", "sm")):
+        for index in range(4):
+            example = _example(video_id, index, float(index), int(index >= 2))
+            examples.append(
+                WindowExample(**{**example.__dict__, "source": source})
+            )
+
+    pairs, report = build_balanced_epoch_pairs(
+        examples,
+        source_weights={"tvsum": 0.75, "summe": 0.25},
+        max_pairs_per_video=4,
+        seed=7,
+    )
+
+    assert len(pairs) == 8
+    assert report["video_pair_counts"] == {"sm": 4, "tv": 4}
+    assert report["source_pair_counts"] == {"summe": 2, "tvsum": 6}
+    assert all(positive.video_id == negative.video_id for positive, negative in pairs)
+
+
 def test_create_window_labels_summe_has_both_classes():
     record = {
         "source": "summe",
@@ -163,6 +212,19 @@ def test_create_window_labels_summe_has_both_classes():
 
     assert any(label["label"] == "positive" for label in labels)
     assert any(label["label"] == "negative" for label in labels)
+
+
+def test_benchmark_labels_do_not_extend_past_media_duration():
+    record = {
+        "source": "summe",
+        "fps": 30.0,
+        "duration": 103.966667,
+        "frame_scores": np.linspace(0, 1, 3120, dtype=np.float32),
+    }
+
+    labels = create_window_labels(record, window_sec=5.0, hop_sec=1.0)
+
+    assert max(label["end"] for label in labels) <= 103.9
 
 
 def test_feature_cache_requires_canonical_shape_dtype_and_metadata(tmp_path):
@@ -288,3 +350,15 @@ def test_train_writes_real_ap_checkpoint_and_log(tmp_path):
     assert training_log["epochs"]
     assert all("train_smooth_loss" in epoch for epoch in training_log["epochs"])
     assert all("val_ap" in epoch for epoch in training_log["epochs"])
+    history_csv = log_path.with_name("training_history.csv")
+    curves_svg = log_path.with_name("training_curves.svg")
+    assert history_csv.is_file()
+    assert curves_svg.is_file()
+    history_text = history_csv.read_text(encoding="utf-8")
+    assert "train_total_loss" in history_text
+    assert "selection_ap" in history_text
+    svg_text = curves_svg.read_text(encoding="utf-8")
+    assert svg_text.startswith("<svg")
+    ET.fromstring(svg_text)
+    assert "Training losses" in svg_text
+    assert f"Best epoch: {training_log['best_epoch']}" in svg_text

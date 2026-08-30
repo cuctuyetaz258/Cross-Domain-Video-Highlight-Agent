@@ -36,13 +36,21 @@ def _serializable_summary(state: dict) -> dict:
 
 
 def _variant_id(state: dict) -> str:
+    calibrator_path = state.get("fusion_calibrator_path")
+    calibrator_fingerprint = "equal-rank-baseline"
+    if calibrator_path and os.path.isfile(calibrator_path):
+        digest = hashlib.sha256()
+        with open(calibrator_path, "rb") as handle:
+            for block in iter(lambda: handle.read(1024 * 1024), b""):
+                digest.update(block)
+        calibrator_fingerprint = digest.hexdigest()
     config = {
         "analysis_id": state["analysis_id"],
         "provider": state["llm_provider"],
         "model": state.get("llm_model"),
         "base_url": state.get("llm_base_url"),
         "top_m": state["llm_top_m"],
-        "ltr_weight": state["llm_ltr_weight"],
+        "fusion_calibrator_fingerprint": calibrator_fingerprint,
         "aspect_ratio": state.get("aspect_ratio", "9:16"),
         "burn_subtitles": state.get("burn_subtitles", False),
     }
@@ -175,7 +183,9 @@ def run_live_rerank(snapshot_path: str, stepper_placeholder):
                 ),
                 "llm_base_url": None,
                 "llm_top_m": st.session_state.get("llm_top_m", 10),
-                "llm_ltr_weight": st.session_state.get("llm_ltr_weight", 0.60),
+                "fusion_calibrator_path": (
+                    st.session_state.get("fusion_calibrator_path") or None
+                ),
                 "burn_subtitles": st.session_state.get("burn_subtitles", False),
                 "emit": emit,
             }

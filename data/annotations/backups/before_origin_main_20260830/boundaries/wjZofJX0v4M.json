@@ -1,0 +1,51 @@
+{
+  "video_id": "wjZofJX0v4M",
+  "annotator_id": "annotator_1",
+  "highlights": [
+    {
+      "highlight_id": "hl_01",
+      "start_time": 105.04,
+      "end_time": 179.22,
+      "importance": 5,
+      "complete_thought": true,
+      "natural_start": true,
+      "natural_end": true
+    },
+    {
+      "highlight_id": "hl_02",
+      "start_time": 856.75,
+      "end_time": 925.46,
+      "importance": 5,
+      "complete_thought": true,
+      "natural_start": true,
+      "natural_end": true
+    },
+    {
+      "highlight_id": "hl_03",
+      "start_time": 939.96,
+      "end_time": 993.85,
+      "importance": 5,
+      "complete_thought": true,
+      "natural_start": true,
+      "natural_end": true
+    },
+    {
+      "highlight_id": "hl_04",
+      "start_time": 1342.55,
+      "end_time": 1409.47,
+      "importance": 5,
+      "complete_thought": true,
+      "natural_start": true,
+      "natural_end": true
+    },
+    {
+      "highlight_id": "hl_05",
+      "start_time": 1439.98,
+      "end_time": 1510.83,
+      "importance": 5,
+      "complete_thought": true,
+      "natural_start": true,
+      "natural_end": true
+    }
+  ]
+}

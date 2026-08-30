@@ -1,0 +1,42 @@
+{
+  "video_id": "g2-_pnmhO4A",
+  "annotator_id": "annotator_1",
+  "highlights": [
+    {
+      "highlight_id": "hl_01",
+      "start_time": 444.75,
+      "end_time": 525.2,
+      "importance": 5,
+      "complete_thought": true,
+      "natural_start": true,
+      "natural_end": true
+    },
+    {
+      "highlight_id": "hl_02",
+      "start_time": 1044.88,
+      "end_time": 1128.08,
+      "importance": 5,
+      "complete_thought": true,
+      "natural_start": true,
+      "natural_end": true
+    },
+    {
+      "highlight_id": "hl_03",
+      "start_time": 1169.2,
+      "end_time": 1252.08,
+      "importance": 5,
+      "complete_thought": true,
+      "natural_start": true,
+      "natural_end": true
+    },
+    {
+      "highlight_id": "hl_04",
+      "start_time": 1393.84,
+      "end_time": 1478.72,
+      "importance": 5,
+      "complete_thought": true,
+      "natural_start": true,
+      "natural_end": true
+    }
+  ]
+}

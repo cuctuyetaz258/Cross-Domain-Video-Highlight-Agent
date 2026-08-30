@@ -123,8 +123,8 @@ def validate_manifest(
             errors.append(f"{prefix} {video_id}: source is empty")
         if source == "tvsum" and not str(record.get("category", "")).strip():
             errors.append(f"{prefix} {video_id}: TVSum record is missing category")
-        if source == "tvsum" and domain != "benchmark":
-            errors.append(f"{prefix} {video_id}: TVSum domain must be 'benchmark'")
+        if source in {"tvsum", "summe"} and domain != "benchmark":
+            errors.append(f"{prefix} {video_id}: {source} domain must be 'benchmark'")
 
         resolved: dict[str, Path] = {}
         for field in PATH_FIELDS:
@@ -198,6 +198,32 @@ def validate_manifest(
                 errors.append(
                     f"{prefix} {video_id}: annotation {window_index} is outside [0, {duration:.3f}]"
                 )
+
+        importance_segments = record.get("importance_segments", [])
+        if source == "custom_scores" and not importance_segments:
+            errors.append(f"{prefix} {video_id}: custom_scores requires importance_segments")
+        expected_start = 0.0
+        for segment_index, segment in enumerate(importance_segments):
+            if not isinstance(segment, list) or len(segment) != 3:
+                errors.append(
+                    f"{prefix} {video_id}: importance segment {segment_index} must be [start, end, score]"
+                )
+                continue
+            start, end, score = map(float, segment)
+            if abs(start - expected_start) > 0.15 or end <= start:
+                errors.append(
+                    f"{prefix} {video_id}: importance segment {segment_index} has a gap/overlap"
+                )
+            if score not in {1.0, 2.0, 3.0, 4.0, 5.0}:
+                errors.append(
+                    f"{prefix} {video_id}: importance segment {segment_index} score must be 1..5"
+                )
+            expected_start = end
+        if source == "custom_scores" and duration > 0 and abs(expected_start - duration) > 0.15:
+            errors.append(
+                f"{prefix} {video_id}: importance timeline ends at {expected_start:.3f}s, "
+                f"expected {duration:.3f}s"
+            )
 
         try:
             labels = create_window_labels(record, window_sec=window_sec, hop_sec=hop_sec)
