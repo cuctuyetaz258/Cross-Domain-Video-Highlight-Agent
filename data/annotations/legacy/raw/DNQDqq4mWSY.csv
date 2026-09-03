@@ -1,0 +1,346 @@
+﻿video_id,start_sec,end_sec,annotator_id,importance,domain,reason_tag,transcript_hint,needs_review,label_protocol
+DNQDqq4mWSY,0.0,2.0,annotator_1,1,podcast,,,false,multimodal_tvsum_style
+DNQDqq4mWSY,2.0,4.0,annotator_1,2,podcast,,Let me ask you about GPT-4.,false,multimodal_tvsum_style
+DNQDqq4mWSY,4.0,6.0,annotator_1,2,podcast,,"Let me ask you about GPT-4. This is so many questions. Uh, first of",false,multimodal_tvsum_style
+DNQDqq4mWSY,6.0,8.0,annotator_1,2,podcast,,"Let me ask you about GPT-4. This is so many questions. Uh, first of all, also",false,multimodal_tvsum_style
+DNQDqq4mWSY,8.0,10.0,annotator_1,2,podcast,,"This is so many questions. Uh, first of all, also amazing.",false,multimodal_tvsum_style
+DNQDqq4mWSY,10.0,12.0,annotator_1,3,podcast,,"all, also amazing. It's looking back, it'll probably be",false,multimodal_tvsum_style
+DNQDqq4mWSY,12.0,14.0,annotator_1,3,podcast,,"amazing. It's looking back, it'll probably be this kind of historic pivotal moment",false,multimodal_tvsum_style
+DNQDqq4mWSY,14.0,16.0,annotator_1,3,podcast,,"It's looking back, it'll probably be this kind of historic pivotal moment",false,multimodal_tvsum_style
+DNQDqq4mWSY,16.0,18.0,annotator_1,3,podcast,,"It's looking back, it'll probably be this kind of historic pivotal moment with 3.5 and 4, which has GPT. Maybe 5",false,multimodal_tvsum_style
+DNQDqq4mWSY,18.0,20.0,annotator_1,3,podcast,,"this kind of historic pivotal moment with 3.5 and 4, which has GPT. Maybe 5 will be the pivotal moment, I don't",false,multimodal_tvsum_style
+DNQDqq4mWSY,20.0,22.0,annotator_1,3,podcast,,"with 3.5 and 4, which has GPT. Maybe 5 will be the pivotal moment, I don't know. Hard to say that looking forwards. We",false,multimodal_tvsum_style
+DNQDqq4mWSY,22.0,24.0,annotator_1,3,podcast,,know. Hard to say that looking forwards. We never know. That's the annoying thing,false,multimodal_tvsum_style
+DNQDqq4mWSY,24.0,26.0,annotator_1,3,podcast,,Hard to say that looking forwards. We never know. That's the annoying thing about the future. It's hard to predict.,false,multimodal_tvsum_style
+DNQDqq4mWSY,26.0,28.0,annotator_1,3,podcast,,"never know. That's the annoying thing about the future. It's hard to predict. But for me, looking back, GPT-4 ChatGPT",false,multimodal_tvsum_style
+DNQDqq4mWSY,28.0,30.0,annotator_1,3,podcast,,"about the future. It's hard to predict. But for me, looking back, GPT-4 ChatGPT",false,multimodal_tvsum_style
+DNQDqq4mWSY,30.0,32.0,annotator_1,3,podcast,,"about the future. It's hard to predict. But for me, looking back, GPT-4 ChatGPT is pretty damn impressive. Like historic",false,multimodal_tvsum_style
+DNQDqq4mWSY,32.0,34.0,annotator_1,3,podcast,,"is pretty damn impressive. Like historically impressive. So, allow me uh",false,multimodal_tvsum_style
+DNQDqq4mWSY,34.0,36.0,annotator_1,3,podcast,,"is pretty damn impressive. Like historically impressive. So, allow me uh to ask what's been the most impressive",false,multimodal_tvsum_style
+DNQDqq4mWSY,36.0,38.0,annotator_1,3,podcast,,"historically impressive. So, allow me uh to ask what's been the most impressive capabilities of GPT-4 to you and GPT-4",false,multimodal_tvsum_style
+DNQDqq4mWSY,38.0,40.0,annotator_1,3,podcast,,to ask what's been the most impressive capabilities of GPT-4 to you and GPT-4,false,multimodal_tvsum_style
+DNQDqq4mWSY,40.0,42.0,annotator_1,2,podcast,,capabilities of GPT-4 to you and GPT-4 Turbo.,false,multimodal_tvsum_style
+DNQDqq4mWSY,42.0,44.0,annotator_1,2,podcast,,capabilities of GPT-4 to you and GPT-4 Turbo.,false,multimodal_tvsum_style
+DNQDqq4mWSY,44.0,46.0,annotator_1,5,podcast,,I think it kind of sucks.,false,multimodal_tvsum_style
+DNQDqq4mWSY,46.0,48.0,annotator_1,4,podcast,,I think it kind of sucks. Hm. Typical human also. Got used to an,false,multimodal_tvsum_style
+DNQDqq4mWSY,48.0,50.0,annotator_1,4,podcast,,"I think it kind of sucks. Hm. Typical human also. Got used to an awesome thing. No, I think it is an",false,multimodal_tvsum_style
+DNQDqq4mWSY,50.0,52.0,annotator_1,4,podcast,,"Hm. Typical human also. Got used to an awesome thing. No, I think it is an amazing thing. Um, but",false,multimodal_tvsum_style
+DNQDqq4mWSY,52.0,54.0,annotator_1,4,podcast,,"awesome thing. No, I think it is an amazing thing. Um, but",false,multimodal_tvsum_style
+DNQDqq4mWSY,54.0,56.0,annotator_1,4,podcast,,"awesome thing. No, I think it is an amazing thing. Um, but relative to where we need to get to and",false,multimodal_tvsum_style
+DNQDqq4mWSY,56.0,58.0,annotator_1,4,podcast,,"relative to where we need to get to and where I believe we will get to,",false,multimodal_tvsum_style
+DNQDqq4mWSY,58.0,60.0,annotator_1,4,podcast,,"relative to where we need to get to and where I believe we will get to, uh",false,multimodal_tvsum_style
+DNQDqq4mWSY,60.0,62.0,annotator_1,4,podcast,,"where I believe we will get to, uh you know, at the time of like GPT-3,",false,multimodal_tvsum_style
+DNQDqq4mWSY,62.0,64.0,annotator_1,4,podcast,,"uh you know, at the time of like GPT-3,",false,multimodal_tvsum_style
+DNQDqq4mWSY,64.0,66.0,annotator_1,4,podcast,,"uh you know, at the time of like GPT-3, people were like, ""Oh, this is amazing. This is this like marvel of technology.""",false,multimodal_tvsum_style
+DNQDqq4mWSY,66.0,68.0,annotator_1,4,podcast,,"people were like, ""Oh, this is amazing. This is this like marvel of technology."" And it is. It was. Uh",false,multimodal_tvsum_style
+DNQDqq4mWSY,68.0,70.0,annotator_1,4,podcast,,"This is this like marvel of technology."" And it is. It was. Uh",false,multimodal_tvsum_style
+DNQDqq4mWSY,70.0,72.0,annotator_1,4,podcast,,"This is this like marvel of technology."" And it is. It was. Uh but you know, now we have GPT-4 and",false,multimodal_tvsum_style
+DNQDqq4mWSY,72.0,74.0,annotator_1,4,podcast,,"but you know, now we have GPT-4 and you look at GPT-3 and you're like,",false,multimodal_tvsum_style
+DNQDqq4mWSY,74.0,76.0,annotator_1,4,podcast,,"you know, now we have GPT-4 and you look at GPT-3 and you're like, ""That's unimaginably horrible.""",false,multimodal_tvsum_style
+DNQDqq4mWSY,76.0,78.0,annotator_1,3,podcast,,"you look at GPT-3 and you're like, ""That's unimaginably horrible."" Um I expect that the delta between 5 and",false,multimodal_tvsum_style
+DNQDqq4mWSY,78.0,80.0,annotator_1,3,podcast,,"""That's unimaginably horrible."" Um I expect that the delta between 5 and",false,multimodal_tvsum_style
+DNQDqq4mWSY,80.0,82.0,annotator_1,3,podcast,,Um I expect that the delta between 5 and 4 will be same as between 4 and 3.,false,multimodal_tvsum_style
+DNQDqq4mWSY,82.0,84.0,annotator_1,3,podcast,,Um I expect that the delta between 5 and 4 will be same as between 4 and 3. And I think it is our job to,false,multimodal_tvsum_style
+DNQDqq4mWSY,84.0,86.0,annotator_1,3,podcast,,4 will be same as between 4 and 3. And I think it is our job to live a few years in the future and,false,multimodal_tvsum_style
+DNQDqq4mWSY,86.0,88.0,annotator_1,3,podcast,,And I think it is our job to live a few years in the future and remember that the tools we have now are,false,multimodal_tvsum_style
+DNQDqq4mWSY,88.0,90.0,annotator_1,3,podcast,,live a few years in the future and remember that the tools we have now are,false,multimodal_tvsum_style
+DNQDqq4mWSY,90.0,92.0,annotator_1,3,podcast,,live a few years in the future and remember that the tools we have now are going to kind of suck looking backwards,false,multimodal_tvsum_style
+DNQDqq4mWSY,92.0,94.0,annotator_1,3,podcast,,remember that the tools we have now are going to kind of suck looking backwards at them. And,false,multimodal_tvsum_style
+DNQDqq4mWSY,94.0,96.0,annotator_1,3,podcast,,at them. And that's how we make sure the future is,false,multimodal_tvsum_style
+DNQDqq4mWSY,96.0,98.0,annotator_1,3,podcast,,And that's how we make sure the future is better.,false,multimodal_tvsum_style
+DNQDqq4mWSY,98.0,100.0,annotator_1,3,podcast,,that's how we make sure the future is better. What are the most glorious ways in that,false,multimodal_tvsum_style
+DNQDqq4mWSY,100.0,102.0,annotator_1,3,podcast,,better. What are the most glorious ways in that GPT-4 sucks?,false,multimodal_tvsum_style
+DNQDqq4mWSY,102.0,104.0,annotator_1,3,podcast,,What are the most glorious ways in that GPT-4 sucks? Meaning uh What are the best things it,false,multimodal_tvsum_style
+DNQDqq4mWSY,104.0,106.0,annotator_1,3,podcast,,GPT-4 sucks? Meaning uh What are the best things it can do? What are the best things it can,false,multimodal_tvsum_style
+DNQDqq4mWSY,106.0,108.0,annotator_1,3,podcast,,Meaning uh What are the best things it can do? What are the best things it can do and the the limits of those best thing,false,multimodal_tvsum_style
+DNQDqq4mWSY,108.0,110.0,annotator_1,3,podcast,,"do and the the limits of those best things that allow you to say it sucks, therefore",false,multimodal_tvsum_style
+DNQDqq4mWSY,110.0,112.0,annotator_1,3,podcast,,"the limits of those best things that allow you to say it sucks, therefore gives you an inspiration and hope for",false,multimodal_tvsum_style
+DNQDqq4mWSY,112.0,114.0,annotator_1,3,podcast,,"allow you to say it sucks, therefore gives you an inspiration and hope for the future?",false,multimodal_tvsum_style
+DNQDqq4mWSY,114.0,116.0,annotator_1,3,podcast,,"gives you an inspiration and hope for the future? You know, one thing I've been using it",false,multimodal_tvsum_style
+DNQDqq4mWSY,116.0,118.0,annotator_1,3,podcast,,"You know, one thing I've been using it for more recently is sort of uh",false,multimodal_tvsum_style
+DNQDqq4mWSY,118.0,120.0,annotator_1,3,podcast,,"You know, one thing I've been using it for more recently is sort of uh like brainstorming partner. Yeah.",false,multimodal_tvsum_style
+DNQDqq4mWSY,120.0,122.0,annotator_1,3,podcast,,for more recently is sort of uh like brainstorming partner. Yeah.,false,multimodal_tvsum_style
+DNQDqq4mWSY,122.0,124.0,annotator_1,3,podcast,,for more recently is sort of uh like brainstorming partner. Yeah. What works for that? There's a glimmer,false,multimodal_tvsum_style
+DNQDqq4mWSY,124.0,126.0,annotator_1,3,podcast,,like brainstorming partner. Yeah. What works for that? There's a glimmer of,false,multimodal_tvsum_style
+DNQDqq4mWSY,126.0,128.0,annotator_1,3,podcast,,What works for that? There's a glimmer of something amazing in there. I don't,false,multimodal_tvsum_style
+DNQDqq4mWSY,128.0,130.0,annotator_1,3,podcast,,"of something amazing in there. I don't think it gets, you know, when people",false,multimodal_tvsum_style
+DNQDqq4mWSY,130.0,132.0,annotator_1,3,podcast,,"something amazing in there. I don't think it gets, you know, when people talk about it it what it does, they're",false,multimodal_tvsum_style
+DNQDqq4mWSY,132.0,134.0,annotator_1,3,podcast,,"think it gets, you know, when people talk about it it what it does, they're like, ""Ah, helps me code more",false,multimodal_tvsum_style
+DNQDqq4mWSY,134.0,136.0,annotator_1,3,podcast,,"talk about it it what it does, they're like, ""Ah, helps me code more productively. Helps me write more faster",false,multimodal_tvsum_style
+DNQDqq4mWSY,136.0,138.0,annotator_1,3,podcast,,"like, ""Ah, helps me code more productively. Helps me write more faster and better. It helps me, you know,",false,multimodal_tvsum_style
+DNQDqq4mWSY,138.0,140.0,annotator_1,3,podcast,,"productively. Helps me write more faster and better. It helps me, you know, translate from this language to another."" Al",false,multimodal_tvsum_style
+DNQDqq4mWSY,140.0,142.0,annotator_1,3,podcast,,"translate from this language to another."" All these like amazing things,",false,multimodal_tvsum_style
+DNQDqq4mWSY,142.0,144.0,annotator_1,3,podcast,,"another."" All these like amazing things, but",false,multimodal_tvsum_style
+DNQDqq4mWSY,144.0,146.0,annotator_1,3,podcast,,"another."" All these like amazing things, but",false,multimodal_tvsum_style
+DNQDqq4mWSY,146.0,148.0,annotator_1,3,podcast,,there's something about the like kind of,false,multimodal_tvsum_style
+DNQDqq4mWSY,148.0,150.0,annotator_1,3,podcast,,there's something about the like kind of creative brainstorming partner.,false,multimodal_tvsum_style
+DNQDqq4mWSY,150.0,152.0,annotator_1,3,podcast,,there's something about the like kind of creative brainstorming partner. I need to come up with a name for this,false,multimodal_tvsum_style
+DNQDqq4mWSY,152.0,154.0,annotator_1,3,podcast,,creative brainstorming partner. I need to come up with a name for this thing. I need to like think about this problem in,false,multimodal_tvsum_style
+DNQDqq4mWSY,154.0,156.0,annotator_1,3,podcast,,thing. I need to like think about this problem in a different way. I'm not sure what to do here.,false,multimodal_tvsum_style
+DNQDqq4mWSY,156.0,158.0,annotator_1,3,podcast,,problem in a different way. I'm not sure what to do here. Uh that I think like gives a glimpse of,false,multimodal_tvsum_style
+DNQDqq4mWSY,158.0,160.0,annotator_1,3,podcast,,Uh that I think like gives a glimpse of something I hope to see more of.,false,multimodal_tvsum_style
+DNQDqq4mWSY,160.0,162.0,annotator_1,3,podcast,,that I think like gives a glimpse of something I hope to see more of. Um one of the other things that you can,false,multimodal_tvsum_style
+DNQDqq4mWSY,162.0,164.0,annotator_1,3,podcast,,something I hope to see more of. Um one of the other things that you can see like a very small,false,multimodal_tvsum_style
+DNQDqq4mWSY,164.0,166.0,annotator_1,3,podcast,,Um one of the other things that you can see like a very small,false,multimodal_tvsum_style
+DNQDqq4mWSY,166.0,168.0,annotator_1,3,podcast,,Um one of the other things that you can see like a very small glimpse of is,false,multimodal_tvsum_style
+DNQDqq4mWSY,168.0,170.0,annotator_1,3,podcast,,see like a very small glimpse of is when it can help on longer horizon,false,multimodal_tvsum_style
+DNQDqq4mWSY,170.0,172.0,annotator_1,3,podcast,,"glimpse of is when it can help on longer horizon tasks. You know, break down something into",false,multimodal_tvsum_style
+DNQDqq4mWSY,172.0,174.0,annotator_1,3,podcast,,"tasks. You know, break down something into multiple steps, maybe like execute some",false,multimodal_tvsum_style
+DNQDqq4mWSY,174.0,176.0,annotator_1,3,podcast,,"You know, break down something into multiple steps, maybe like execute some of those steps, search the internet, write c",false,multimodal_tvsum_style
+DNQDqq4mWSY,176.0,178.0,annotator_1,3,podcast,,"of those steps, search the internet, write code, whatever. Put that together.",false,multimodal_tvsum_style
+DNQDqq4mWSY,178.0,180.0,annotator_1,3,podcast,,"of those steps, search the internet, write code, whatever. Put that together. Uh when that works, which is not very",false,multimodal_tvsum_style
+DNQDqq4mWSY,180.0,182.0,annotator_1,3,podcast,,"Uh when that works, which is not very often, it's like very magical.",false,multimodal_tvsum_style
+DNQDqq4mWSY,182.0,184.0,annotator_1,3,podcast,,"when that works, which is not very often, it's like very magical. The iterative back and forth with a",false,multimodal_tvsum_style
+DNQDqq4mWSY,184.0,186.0,annotator_1,3,podcast,,"often, it's like very magical. The iterative back and forth with a human. Well, it works a lot for me. What",false,multimodal_tvsum_style
+DNQDqq4mWSY,186.0,188.0,annotator_1,3,podcast,,"The iterative back and forth with a human. Well, it works a lot for me. What do you mean it doesn't",false,multimodal_tvsum_style
+DNQDqq4mWSY,188.0,190.0,annotator_1,3,podcast,,"human. Well, it works a lot for me. What do you mean it doesn't iterative back and forth with a human it can get more of",false,multimodal_tvsum_style
+DNQDqq4mWSY,190.0,192.0,annotator_1,3,podcast,,iterative back and forth with a human it can get more often. When it can go do like a 10-step problem on its own. Oh.,false,multimodal_tvsum_style
+DNQDqq4mWSY,192.0,194.0,annotator_1,3,podcast,,can get more often. When it can go do like a 10-step problem on its own. Oh. Doesn't work for that too often.,false,multimodal_tvsum_style
+DNQDqq4mWSY,194.0,196.0,annotator_1,3,podcast,,like a 10-step problem on its own. Oh. Doesn't work for that too often. Sometimes. At multiple layers of abstraction or ,false,multimodal_tvsum_style
+DNQDqq4mWSY,196.0,198.0,annotator_1,3,podcast,,Sometimes. At multiple layers of abstraction or do you mean just sequential?,false,multimodal_tvsum_style
+DNQDqq4mWSY,198.0,200.0,annotator_1,3,podcast,,"At multiple layers of abstraction or do you mean just sequential? The both. Like, you know, to break it",false,multimodal_tvsum_style
+DNQDqq4mWSY,200.0,202.0,annotator_1,3,podcast,,"you mean just sequential? The both. Like, you know, to break it down and then do things at different",false,multimodal_tvsum_style
+DNQDqq4mWSY,202.0,204.0,annotator_1,3,podcast,,"The both. Like, you know, to break it down and then do things at different layers of abstraction and put them",false,multimodal_tvsum_style
+DNQDqq4mWSY,204.0,206.0,annotator_1,3,podcast,,down and then do things at different layers of abstraction and put them together.,false,multimodal_tvsum_style
+DNQDqq4mWSY,206.0,208.0,annotator_1,3,podcast,,"together. Look, I don't want to I don't want to like downplay the accomplishment of",false,multimodal_tvsum_style
+DNQDqq4mWSY,208.0,210.0,annotator_1,3,podcast,,"Look, I don't want to I don't want to like downplay the accomplishment of GPT-4. Hm. Um",false,multimodal_tvsum_style
+DNQDqq4mWSY,210.0,212.0,annotator_1,3,podcast,,like downplay the accomplishment of GPT-4. Hm. Um,false,multimodal_tvsum_style
+DNQDqq4mWSY,212.0,214.0,annotator_1,3,podcast,,like downplay the accomplishment of GPT-4. Hm. Um but I don't want to overstate it either. And I think this point that w,false,multimodal_tvsum_style
+DNQDqq4mWSY,214.0,216.0,annotator_1,3,podcast,,"but I don't want to overstate it either. And I think this point that we are on an exponential curve,",false,multimodal_tvsum_style
+DNQDqq4mWSY,216.0,218.0,annotator_1,3,podcast,,"And I think this point that we are on an exponential curve, we will look back relatively soon at",false,multimodal_tvsum_style
+DNQDqq4mWSY,218.0,220.0,annotator_1,3,podcast,,"exponential curve, we will look back relatively soon at GPT-4 like we look back at GPT-3 now.",false,multimodal_tvsum_style
+DNQDqq4mWSY,220.0,222.0,annotator_1,3,podcast,,we will look back relatively soon at GPT-4 like we look back at GPT-3 now.,false,multimodal_tvsum_style
+DNQDqq4mWSY,222.0,224.0,annotator_1,4,podcast,,"we will look back relatively soon at GPT-4 like we look back at GPT-3 now. That said, I mean ChatGPT",false,multimodal_tvsum_style
+DNQDqq4mWSY,224.0,226.0,annotator_1,4,podcast,,"GPT-4 like we look back at GPT-3 now. That said, I mean ChatGPT was a transition to where people like",false,multimodal_tvsum_style
+DNQDqq4mWSY,226.0,228.0,annotator_1,4,podcast,,"That said, I mean ChatGPT was a transition to where people like",false,multimodal_tvsum_style
+DNQDqq4mWSY,228.0,230.0,annotator_1,4,podcast,,"That said, I mean ChatGPT was a transition to where people like started to believe in it there was a",false,multimodal_tvsum_style
+DNQDqq4mWSY,230.0,232.0,annotator_1,4,podcast,,was a transition to where people like started to believe in it there was a kind of there is an uptick of believing. Not,false,multimodal_tvsum_style
+DNQDqq4mWSY,232.0,234.0,annotator_1,4,podcast,,kind of there is an uptick of believing. Not internally at OpenAI perhaps. There's,false,multimodal_tvsum_style
+DNQDqq4mWSY,234.0,236.0,annotator_1,4,podcast,,"there is an uptick of believing. Not internally at OpenAI perhaps. There's believers here, but when you think And",false,multimodal_tvsum_style
+DNQDqq4mWSY,236.0,238.0,annotator_1,4,podcast,,"internally at OpenAI perhaps. There's believers here, but when you think And",false,multimodal_tvsum_style
+DNQDqq4mWSY,238.0,240.0,annotator_1,4,podcast,,"internally at OpenAI perhaps. There's believers here, but when you think And in that sense, I do think it'll be a moment",false,multimodal_tvsum_style
+DNQDqq4mWSY,240.0,242.0,annotator_1,4,podcast,,"in that sense, I do think it'll be a moment where a lot of the world went from not believing to believing.",false,multimodal_tvsum_style
+DNQDqq4mWSY,242.0,244.0,annotator_1,4,podcast,,moment where a lot of the world went from not believing to believing. That was more about the ChatGPT,false,multimodal_tvsum_style
+DNQDqq4mWSY,244.0,246.0,annotator_1,4,podcast,,from not believing to believing. That was more about the ChatGPT,false,multimodal_tvsum_style
+DNQDqq4mWSY,246.0,248.0,annotator_1,4,podcast,,from not believing to believing. That was more about the ChatGPT interface than the and and and by the interface and,false,multimodal_tvsum_style
+DNQDqq4mWSY,248.0,250.0,annotator_1,4,podcast,,"interface than the and and and by the interface and product, I also mean the post-training",false,multimodal_tvsum_style
+DNQDqq4mWSY,250.0,252.0,annotator_1,4,podcast,,"and and and by the interface and product, I also mean the post-training of the model and how we tune it to be",false,multimodal_tvsum_style
+DNQDqq4mWSY,252.0,254.0,annotator_1,4,podcast,,"product, I also mean the post-training of the model and how we tune it to be helpful to you and",false,multimodal_tvsum_style
+DNQDqq4mWSY,254.0,256.0,annotator_1,4,podcast,,of the model and how we tune it to be helpful to you and how to use it than the underlying model itself. How much of,false,multimodal_tvsum_style
+DNQDqq4mWSY,256.0,258.0,annotator_1,3,podcast,,how to use it than the underlying model itself. How much of,false,multimodal_tvsum_style
+DNQDqq4mWSY,258.0,260.0,annotator_1,3,podcast,,how to use it than the underlying model itself. How much of of those two uh each of those things are,false,multimodal_tvsum_style
+DNQDqq4mWSY,260.0,262.0,annotator_1,3,podcast,,"itself. How much of of those two uh each of those things are important, the underlying model",false,multimodal_tvsum_style
+DNQDqq4mWSY,262.0,264.0,annotator_1,3,podcast,,"of those two uh each of those things are important, the underlying model",false,multimodal_tvsum_style
+DNQDqq4mWSY,264.0,266.0,annotator_1,3,podcast,,"of those two uh each of those things are important, the underlying model and the RLHF or something of that nature that",false,multimodal_tvsum_style
+DNQDqq4mWSY,266.0,268.0,annotator_1,3,podcast,,and the RLHF or something of that nature that tunes it,false,multimodal_tvsum_style
+DNQDqq4mWSY,268.0,270.0,annotator_1,3,podcast,,"RLHF or something of that nature that tunes it to be more complying to the human, more",false,multimodal_tvsum_style
+DNQDqq4mWSY,270.0,272.0,annotator_1,3,podcast,,"tunes it to be more complying to the human, more",false,multimodal_tvsum_style
+DNQDqq4mWSY,272.0,274.0,annotator_1,3,podcast,,"tunes it to be more complying to the human, more effective and productive for the human?",false,multimodal_tvsum_style
+DNQDqq4mWSY,274.0,276.0,annotator_1,3,podcast,,"to be more complying to the human, more effective and productive for the human? I mean, they're they're both super impor",false,multimodal_tvsum_style
+DNQDqq4mWSY,276.0,278.0,annotator_1,3,podcast,,"I mean, they're they're both super important, but the the the RLHF,",false,multimodal_tvsum_style
+DNQDqq4mWSY,278.0,280.0,annotator_1,3,podcast,,"I mean, they're they're both super important, but the the the RLHF, the post-training step, the you know, little wrapper",false,multimodal_tvsum_style
+DNQDqq4mWSY,280.0,282.0,annotator_1,3,podcast,,"the post-training step, the you know, little wrapper of things that",false,multimodal_tvsum_style
+DNQDqq4mWSY,282.0,284.0,annotator_1,3,podcast,,"little wrapper of things that from a compute perspective, little wrapper of things that we do on top of",false,multimodal_tvsum_style
+DNQDqq4mWSY,284.0,286.0,annotator_1,3,podcast,,"from a compute perspective, little wrapper of things that we do on top of the base model, even though it's a huge",false,multimodal_tvsum_style
+DNQDqq4mWSY,286.0,288.0,annotator_1,3,podcast,,"wrapper of things that we do on top of the base model, even though it's a huge amount of work. That's really important,",false,multimodal_tvsum_style
+DNQDqq4mWSY,288.0,290.0,annotator_1,3,podcast,,"the base model, even though it's a huge amount of work. That's really important, to say nothing of the product that we b",false,multimodal_tvsum_style
+DNQDqq4mWSY,290.0,292.0,annotator_1,3,podcast,,to say nothing of the product that we build around it. Um,false,multimodal_tvsum_style
+DNQDqq4mWSY,292.0,294.0,annotator_1,3,podcast,,build around it. Um,false,multimodal_tvsum_style
+DNQDqq4mWSY,294.0,296.0,annotator_1,3,podcast,,"you know, in some sense like",false,multimodal_tvsum_style
+DNQDqq4mWSY,296.0,298.0,annotator_1,3,podcast,,"you know, in some sense like we did have to do two things. We had to invent",false,multimodal_tvsum_style
+DNQDqq4mWSY,298.0,300.0,annotator_1,3,podcast,,we did have to do two things. We had to invent the underlying technology.,false,multimodal_tvsum_style
+DNQDqq4mWSY,300.0,302.0,annotator_1,3,podcast,,invent the underlying technology. And then we had to figure out,false,multimodal_tvsum_style
+DNQDqq4mWSY,302.0,304.0,annotator_1,3,podcast,,the underlying technology. And then we had to figure out,false,multimodal_tvsum_style
+DNQDqq4mWSY,304.0,306.0,annotator_1,3,podcast,,the underlying technology. And then we had to figure out,false,multimodal_tvsum_style
+DNQDqq4mWSY,306.0,308.0,annotator_1,3,podcast,,how to make it into a product people would love.,false,multimodal_tvsum_style
+DNQDqq4mWSY,308.0,310.0,annotator_1,3,podcast,,how to make it into a product people would love. Which is not just about the actual,false,multimodal_tvsum_style
+DNQDqq4mWSY,310.0,312.0,annotator_1,3,podcast,,"would love. Which is not just about the actual product work itself, but this whole",false,multimodal_tvsum_style
+DNQDqq4mWSY,312.0,314.0,annotator_1,3,podcast,,"Which is not just about the actual product work itself, but this whole other step of how you align and make it",false,multimodal_tvsum_style
+DNQDqq4mWSY,314.0,316.0,annotator_1,3,podcast,,other step of how you align and make it useful.,false,multimodal_tvsum_style
+DNQDqq4mWSY,316.0,318.0,annotator_1,3,podcast,,step of how you align and make it useful. And how you make,false,multimodal_tvsum_style
+DNQDqq4mWSY,318.0,320.0,annotator_1,3,podcast,,useful. And how you make the scale work where a lot of people can use it at the same time. All that kind,false,multimodal_tvsum_style
+DNQDqq4mWSY,320.0,322.0,annotator_1,3,podcast,,the scale work where a lot of people can use it at the same time. All that kind of stuff. And that.,false,multimodal_tvsum_style
+DNQDqq4mWSY,322.0,324.0,annotator_1,3,podcast,,"use it at the same time. All that kind of stuff. And that. But you know, that was like an known",false,multimodal_tvsum_style
+DNQDqq4mWSY,324.0,326.0,annotator_1,3,podcast,,"But you know, that was like an known difficult thing. Like, we knew we were",false,multimodal_tvsum_style
+DNQDqq4mWSY,326.0,328.0,annotator_1,3,podcast,,"you know, that was like an known difficult thing. Like, we knew we were going to have to scale it up. We had to",false,multimodal_tvsum_style
+DNQDqq4mWSY,328.0,330.0,annotator_1,3,podcast,,"difficult thing. Like, we knew we were going to have to scale it up. We had to go do two things that had like never been",false,multimodal_tvsum_style
+DNQDqq4mWSY,330.0,332.0,annotator_1,3,podcast,,go do two things that had like never been done before. Uh they were both like I would say quite,false,multimodal_tvsum_style
+DNQDqq4mWSY,332.0,334.0,annotator_1,3,podcast,,been done before. Uh they were both like I would say quite significant achievements.,false,multimodal_tvsum_style
+DNQDqq4mWSY,334.0,336.0,annotator_1,3,podcast,,Uh they were both like I would say quite significant achievements. And then a lot of things like scaling it,false,multimodal_tvsum_style
+DNQDqq4mWSY,336.0,338.0,annotator_1,3,podcast,,significant achievements. And then a lot of things like scaling it up that other companies have had to do,false,multimodal_tvsum_style
+DNQDqq4mWSY,338.0,340.0,annotator_1,3,podcast,,And then a lot of things like scaling it up that other companies have had to do before.,false,multimodal_tvsum_style
+DNQDqq4mWSY,340.0,342.0,annotator_1,3,podcast,,up that other companies have had to do before. How does the the context window,false,multimodal_tvsum_style
+DNQDqq4mWSY,342.0,344.0,annotator_1,3,podcast,,before. How does the the context window of going from 8K to 128K tokens compare,false,multimodal_tvsum_style
+DNQDqq4mWSY,344.0,346.0,annotator_1,3,podcast,,How does the the context window of going from 8K to 128K tokens compare,false,multimodal_tvsum_style
+DNQDqq4mWSY,346.0,348.0,annotator_1,3,podcast,,How does the the context window of going from 8K to 128K tokens compare from the,false,multimodal_tvsum_style
+DNQDqq4mWSY,348.0,350.0,annotator_1,3,podcast,,of going from 8K to 128K tokens compare from the from GPT-4 to to GPT-4 Turbo? People,false,multimodal_tvsum_style
+DNQDqq4mWSY,350.0,352.0,annotator_1,3,podcast,,from the from GPT-4 to to GPT-4 Turbo? People like long Most people don't need all the,false,multimodal_tvsum_style
+DNQDqq4mWSY,352.0,354.0,annotator_1,3,podcast,,"from GPT-4 to to GPT-4 Turbo? People like long Most people don't need all the way to 128 most of the time, although",false,multimodal_tvsum_style
+DNQDqq4mWSY,354.0,356.0,annotator_1,3,podcast,,"like long Most people don't need all the way to 128 most of the time, although",false,multimodal_tvsum_style
+DNQDqq4mWSY,356.0,358.0,annotator_1,3,podcast,,"like long Most people don't need all the way to 128 most of the time, although you know, if we dream into the distant fu",false,multimodal_tvsum_style
+DNQDqq4mWSY,358.0,360.0,annotator_1,3,podcast,,"you know, if we dream into the distant future, we'll have like like way distant future, we'll have like context length",false,multimodal_tvsum_style
+DNQDqq4mWSY,360.0,362.0,annotator_1,3,podcast,,"future, we'll have like like way distant future, we'll have like context length of several billion. You will feed in all",false,multimodal_tvsum_style
+DNQDqq4mWSY,362.0,364.0,annotator_1,3,podcast,,"future, we'll have like context length of several billion. You will feed in all",false,multimodal_tvsum_style
+DNQDqq4mWSY,364.0,366.0,annotator_1,3,podcast,,"future, we'll have like context length of several billion. You will feed in all of your information, all of your history",false,multimodal_tvsum_style
+DNQDqq4mWSY,366.0,368.0,annotator_1,3,podcast,,"of your information, all of your history over time and it'll just get to know you",false,multimodal_tvsum_style
+DNQDqq4mWSY,368.0,370.0,annotator_1,3,podcast,,"of your information, all of your history over time and it'll just get to know you better and better and that'll be great",false,multimodal_tvsum_style
+DNQDqq4mWSY,370.0,372.0,annotator_1,3,podcast,,"over time and it'll just get to know you better and better and that'll be great. For now, uh the way people use these",false,multimodal_tvsum_style
+DNQDqq4mWSY,372.0,374.0,annotator_1,3,podcast,,"better and better and that'll be great. For now, uh the way people use these models, they're not doing that. And",false,multimodal_tvsum_style
+DNQDqq4mWSY,374.0,376.0,annotator_1,3,podcast,,"For now, uh the way people use these models, they're not doing that. And you know, people sometimes post in a",false,multimodal_tvsum_style
+DNQDqq4mWSY,376.0,378.0,annotator_1,3,podcast,,"models, they're not doing that. And you know, people sometimes post in a paper or",false,multimodal_tvsum_style
+DNQDqq4mWSY,378.0,380.0,annotator_1,3,podcast,,"you know, people sometimes post in a paper or you know, a significant fraction of a",false,multimodal_tvsum_style
+DNQDqq4mWSY,380.0,382.0,annotator_1,3,podcast,,"paper or you know, a significant fraction of a code repository or whatever. Um",false,multimodal_tvsum_style
+DNQDqq4mWSY,382.0,384.0,annotator_1,3,podcast,,"you know, a significant fraction of a code repository or whatever. Um",false,multimodal_tvsum_style
+DNQDqq4mWSY,384.0,386.0,annotator_1,3,podcast,,but most usage of the models is not,false,multimodal_tvsum_style
+DNQDqq4mWSY,386.0,388.0,annotator_1,3,podcast,,but most usage of the models is not using the long context most of the time.,false,multimodal_tvsum_style
+DNQDqq4mWSY,388.0,390.0,annotator_1,3,podcast,,but most usage of the models is not using the long context most of the time. I like that this is your I have a dream,false,multimodal_tvsum_style
+DNQDqq4mWSY,390.0,392.0,annotator_1,3,podcast,,using the long context most of the time. I like that this is your I have a dream speech.,false,multimodal_tvsum_style
+DNQDqq4mWSY,392.0,394.0,annotator_1,3,podcast,,I like that this is your I have a dream speech. One day you'll be judged by the full,false,multimodal_tvsum_style
+DNQDqq4mWSY,394.0,396.0,annotator_1,3,podcast,,speech. One day you'll be judged by the full context of your character.,false,multimodal_tvsum_style
+DNQDqq4mWSY,396.0,398.0,annotator_1,3,podcast,,One day you'll be judged by the full context of your character. Or of your whole lifetime. That's,false,multimodal_tvsum_style
+DNQDqq4mWSY,398.0,400.0,annotator_1,3,podcast,,"context of your character. Or of your whole lifetime. That's interesting. So, like that's part of the",false,multimodal_tvsum_style
+DNQDqq4mWSY,400.0,402.0,annotator_1,3,podcast,,"Or of your whole lifetime. That's interesting. So, like that's part of the expansion that you're hoping for is a",false,multimodal_tvsum_style
+DNQDqq4mWSY,402.0,404.0,annotator_1,3,podcast,,"interesting. So, like that's part of the expansion that you're hoping for is a greater and greater context.",false,multimodal_tvsum_style
+DNQDqq4mWSY,404.0,406.0,annotator_1,3,podcast,,expansion that you're hoping for is a greater and greater context. There was this I saw this internet clip once. I'm goi,false,multimodal_tvsum_style
+DNQDqq4mWSY,406.0,408.0,annotator_1,3,podcast,,"There was this I saw this internet clip once. I'm going to get the numbers wrong, but it was",false,multimodal_tvsum_style
+DNQDqq4mWSY,408.0,410.0,annotator_1,3,podcast,,"I saw this internet clip once. I'm going to get the numbers wrong, but it was like Bill Gates talking about the amount o",false,multimodal_tvsum_style
+DNQDqq4mWSY,410.0,412.0,annotator_1,3,podcast,,like Bill Gates talking about the amount of memory on some early computer.,false,multimodal_tvsum_style
+DNQDqq4mWSY,412.0,414.0,annotator_1,3,podcast,,"like Bill Gates talking about the amount of memory on some early computer. Maybe it was 64K, maybe 640K, something",false,multimodal_tvsum_style
+DNQDqq4mWSY,414.0,416.0,annotator_1,3,podcast,,"of memory on some early computer. Maybe it was 64K, maybe 640K, something like that. And most of it was used for the scr",false,multimodal_tvsum_style
+DNQDqq4mWSY,416.0,418.0,annotator_1,3,podcast,,like that. And most of it was used for the screen buffer. Hm.,false,multimodal_tvsum_style
+DNQDqq4mWSY,418.0,420.0,annotator_1,3,podcast,,the screen buffer. Hm. And he just couldn't seem genuine. Just,false,multimodal_tvsum_style
+DNQDqq4mWSY,420.0,422.0,annotator_1,3,podcast,,the screen buffer. Hm. And he just couldn't seem genuine. Just couldn't imagine that the world would,false,multimodal_tvsum_style
+DNQDqq4mWSY,422.0,424.0,annotator_1,3,podcast,,And he just couldn't seem genuine. Just couldn't imagine that the world would eventually need,false,multimodal_tvsum_style
+DNQDqq4mWSY,424.0,426.0,annotator_1,3,podcast,,couldn't imagine that the world would eventually need gigabytes of memory in a computer or,false,multimodal_tvsum_style
+DNQDqq4mWSY,426.0,428.0,annotator_1,3,podcast,,eventually need gigabytes of memory in a computer or terabytes of memory in a computer.,false,multimodal_tvsum_style
+DNQDqq4mWSY,428.0,430.0,annotator_1,3,podcast,,gigabytes of memory in a computer or terabytes of memory in a computer. Um,false,multimodal_tvsum_style
+DNQDqq4mWSY,430.0,432.0,annotator_1,3,podcast,,terabytes of memory in a computer. Um and you always do.,false,multimodal_tvsum_style
+DNQDqq4mWSY,432.0,434.0,annotator_1,3,podcast,,and you always do. Or you always do just need to like,false,multimodal_tvsum_style
+DNQDqq4mWSY,434.0,436.0,annotator_1,3,podcast,,you always do. Or you always do just need to like follow the exponential of technology. And And we're going to like we w,false,multimodal_tvsum_style
+DNQDqq4mWSY,436.0,438.0,annotator_1,3,podcast,,follow the exponential of technology. And And we're going to like we will find,false,multimodal_tvsum_style
+DNQDqq4mWSY,438.0,440.0,annotator_1,3,podcast,,"And And we're going to like we will find out how to use better technology. So, I",false,multimodal_tvsum_style
+DNQDqq4mWSY,440.0,442.0,annotator_1,3,podcast,,"And And we're going to like we will find out how to use better technology. So, I can't really imagine what it's like rig",false,multimodal_tvsum_style
+DNQDqq4mWSY,442.0,444.0,annotator_1,3,podcast,,can't really imagine what it's like right now for context lengths to go out to the billion someday.,false,multimodal_tvsum_style
+DNQDqq4mWSY,444.0,446.0,annotator_1,3,podcast,,"right now for context lengths to go out to the billion someday. And they might not literally go there,",false,multimodal_tvsum_style
+DNQDqq4mWSY,446.0,448.0,annotator_1,3,podcast,,"to the billion someday. And they might not literally go there, but effectively it'll feel like that. Um",false,multimodal_tvsum_style
+DNQDqq4mWSY,448.0,450.0,annotator_1,3,podcast,,"And they might not literally go there, but effectively it'll feel like that. Um",false,multimodal_tvsum_style
+DNQDqq4mWSY,450.0,452.0,annotator_1,3,podcast,,"And they might not literally go there, but effectively it'll feel like that. Um but I know we'll use it",false,multimodal_tvsum_style
+DNQDqq4mWSY,452.0,454.0,annotator_1,3,podcast,,but effectively it'll feel like that. Um but I know we'll use it and really not want to go back once we have it.,false,multimodal_tvsum_style
+DNQDqq4mWSY,454.0,456.0,annotator_1,3,podcast,,"and really not want to go back once we have it. Yeah, even saying billions 10 years from",false,multimodal_tvsum_style
+DNQDqq4mWSY,456.0,458.0,annotator_1,3,podcast,,"have it. Yeah, even saying billions 10 years from now might seem dumb because it'll be",false,multimodal_tvsum_style
+DNQDqq4mWSY,458.0,460.0,annotator_1,3,podcast,,"Yeah, even saying billions 10 years from now might seem dumb because it'll be like",false,multimodal_tvsum_style
+DNQDqq4mWSY,460.0,462.0,annotator_1,3,podcast,,now might seem dumb because it'll be like trillions upon trillions.,false,multimodal_tvsum_style
+DNQDqq4mWSY,462.0,464.0,annotator_1,3,podcast,,like trillions upon trillions. Sure. There'll be some kind of,false,multimodal_tvsum_style
+DNQDqq4mWSY,464.0,466.0,annotator_1,3,podcast,,trillions upon trillions. Sure. There'll be some kind of breakthrough,false,multimodal_tvsum_style
+DNQDqq4mWSY,466.0,468.0,annotator_1,3,podcast,,Sure. There'll be some kind of breakthrough that will effectively feel like infinite,false,multimodal_tvsum_style
+DNQDqq4mWSY,468.0,470.0,annotator_1,3,podcast,,breakthrough that will effectively feel like infinite context. But even 120 I I have to be,false,multimodal_tvsum_style
+DNQDqq4mWSY,470.0,472.0,annotator_1,3,podcast,,"that will effectively feel like infinite context. But even 120 I I have to be honest, I haven't pushed it to that",false,multimodal_tvsum_style
+DNQDqq4mWSY,472.0,474.0,annotator_1,3,podcast,,"context. But even 120 I I have to be honest, I haven't pushed it to that degree. Maybe putting in entire books or",false,multimodal_tvsum_style
+DNQDqq4mWSY,474.0,476.0,annotator_1,3,podcast,,"honest, I haven't pushed it to that degree. Maybe putting in entire books or like parts of books and so on.",false,multimodal_tvsum_style
+DNQDqq4mWSY,476.0,478.0,annotator_1,3,podcast,,degree. Maybe putting in entire books or like parts of books and so on. Papers.,false,multimodal_tvsum_style
+DNQDqq4mWSY,478.0,480.0,annotator_1,3,podcast,,like parts of books and so on. Papers. What are some interesting use cases of,false,multimodal_tvsum_style
+DNQDqq4mWSY,480.0,482.0,annotator_1,3,podcast,,Papers. What are some interesting use cases of GPT-4 that you've seen? The thing that I,false,multimodal_tvsum_style
+DNQDqq4mWSY,482.0,484.0,annotator_1,3,podcast,,What are some interesting use cases of GPT-4 that you've seen? The thing that I find most interesting is not any,false,multimodal_tvsum_style
+DNQDqq4mWSY,484.0,486.0,annotator_1,3,podcast,,"GPT-4 that you've seen? The thing that I find most interesting is not any particular use case, though we can talk about ",false,multimodal_tvsum_style
+DNQDqq4mWSY,486.0,488.0,annotator_1,3,podcast,,"particular use case, though we can talk about those, but it's people who kind of like",false,multimodal_tvsum_style
+DNQDqq4mWSY,488.0,490.0,annotator_1,3,podcast,,"about those, but it's people who kind of like this is mostly younger people, but",false,multimodal_tvsum_style
+DNQDqq4mWSY,490.0,492.0,annotator_1,3,podcast,,"this is mostly younger people, but people who use it as like their default",false,multimodal_tvsum_style
+DNQDqq4mWSY,492.0,494.0,annotator_1,3,podcast,,"this is mostly younger people, but people who use it as like their default",false,multimodal_tvsum_style
+DNQDqq4mWSY,494.0,496.0,annotator_1,3,podcast,,"this is mostly younger people, but people who use it as like their default start for any kind of knowledge work task.",false,multimodal_tvsum_style
+DNQDqq4mWSY,496.0,498.0,annotator_1,3,podcast,,start for any kind of knowledge work task. Yeah. And it's the fact that it can do a,false,multimodal_tvsum_style
+DNQDqq4mWSY,498.0,500.0,annotator_1,3,podcast,,for any kind of knowledge work task. Yeah. And it's the fact that it can do a lot of things reasonably well. You can,false,multimodal_tvsum_style
+DNQDqq4mWSY,500.0,502.0,annotator_1,3,podcast,,"Yeah. And it's the fact that it can do a lot of things reasonably well. You can use GPT-V, you can use it to help you",false,multimodal_tvsum_style
+DNQDqq4mWSY,502.0,504.0,annotator_1,3,podcast,,"lot of things reasonably well. You can use GPT-V, you can use it to help you write code, you can use it to help you do s",false,multimodal_tvsum_style
+DNQDqq4mWSY,504.0,506.0,annotator_1,3,podcast,,"write code, you can use it to help you do search, you can uh use it to like edit a paper. The most interesting to me",false,multimodal_tvsum_style
+DNQDqq4mWSY,506.0,508.0,annotator_1,3,podcast,,"do search, you can uh use it to like edit a paper. The most interesting to me is the people who just use it as the",false,multimodal_tvsum_style
+DNQDqq4mWSY,508.0,510.0,annotator_1,3,podcast,,edit a paper. The most interesting to me is the people who just use it as the start of their work.,false,multimodal_tvsum_style
+DNQDqq4mWSY,510.0,512.0,annotator_1,2,podcast,,is the people who just use it as the start of their work. I do as well for for many things. Like I,false,multimodal_tvsum_style
+DNQDqq4mWSY,512.0,514.0,annotator_1,2,podcast,,start of their work. I do as well for for many things. Like I use it as a,false,multimodal_tvsum_style
+DNQDqq4mWSY,514.0,516.0,annotator_1,2,podcast,,I do as well for for many things. Like I use it as a uh a reading partner for reading books.,false,multimodal_tvsum_style
+DNQDqq4mWSY,516.0,518.0,annotator_1,2,podcast,,use it as a uh a reading partner for reading books.,false,multimodal_tvsum_style
+DNQDqq4mWSY,518.0,520.0,annotator_1,2,podcast,,"use it as a uh a reading partner for reading books. It helps me think. Help me think through ideas, especially when the ",false,multimodal_tvsum_style
+DNQDqq4mWSY,520.0,522.0,annotator_1,2,podcast,,"It helps me think. Help me think through ideas, especially when the book's a classic, so it's really well written",false,multimodal_tvsum_style
+DNQDqq4mWSY,522.0,524.0,annotator_1,2,podcast,,"ideas, especially when the book's a classic, so it's really well written about and it actually is is",false,multimodal_tvsum_style
+DNQDqq4mWSY,524.0,526.0,annotator_1,2,podcast,,about and it actually is is,false,multimodal_tvsum_style
+DNQDqq4mWSY,526.0,528.0,annotator_1,2,podcast,,about and it actually is is I I find it often to be significantly,false,multimodal_tvsum_style
+DNQDqq4mWSY,528.0,530.0,annotator_1,2,podcast,,it actually is is I I find it often to be significantly better than even like Wikipedia on,false,multimodal_tvsum_style
+DNQDqq4mWSY,530.0,532.0,annotator_1,2,podcast,,I I find it often to be significantly better than even like Wikipedia on well-covered topics. It's somehow more,false,multimodal_tvsum_style
+DNQDqq4mWSY,532.0,534.0,annotator_1,2,podcast,,better than even like Wikipedia on well-covered topics. It's somehow more balanced and more nuanced. Or maybe it's,false,multimodal_tvsum_style
+DNQDqq4mWSY,534.0,536.0,annotator_1,2,podcast,,well-covered topics. It's somehow more balanced and more nuanced. Or maybe it's me. But it inspires me to think deeper,false,multimodal_tvsum_style
+DNQDqq4mWSY,536.0,538.0,annotator_1,2,podcast,,balanced and more nuanced. Or maybe it's me. But it inspires me to think deeper,false,multimodal_tvsum_style
+DNQDqq4mWSY,538.0,540.0,annotator_1,2,podcast,,balanced and more nuanced. Or maybe it's me. But it inspires me to think deeper than a Wikipedia article does. I'm not,false,multimodal_tvsum_style
+DNQDqq4mWSY,540.0,542.0,annotator_1,3,podcast,,me. But it inspires me to think deeper than a Wikipedia article does. I'm not exactly sure what that is. You mentioned l,false,multimodal_tvsum_style
+DNQDqq4mWSY,542.0,544.0,annotator_1,3,podcast,,exactly sure what that is. You mentioned like this collaboration. I'm not sure where the magic is. If it's in here or,false,multimodal_tvsum_style
+DNQDqq4mWSY,544.0,546.0,annotator_1,3,podcast,,like this collaboration. I'm not sure where the magic is. If it's in here or if it's in there. Or if it's somewhere,false,multimodal_tvsum_style
+DNQDqq4mWSY,546.0,548.0,annotator_1,3,podcast,,where the magic is. If it's in here or if it's in there. Or if it's somewhere in between. I'm not sure.,false,multimodal_tvsum_style
+DNQDqq4mWSY,548.0,550.0,annotator_1,3,podcast,,if it's in there. Or if it's somewhere in between. I'm not sure. Uh but one of the things that concerns,false,multimodal_tvsum_style
+DNQDqq4mWSY,550.0,552.0,annotator_1,3,podcast,,in between. I'm not sure. Uh but one of the things that concerns me for knowledge task when I start with,false,multimodal_tvsum_style
+DNQDqq4mWSY,552.0,554.0,annotator_1,3,podcast,,Uh but one of the things that concerns me for knowledge task when I start with GPT is,false,multimodal_tvsum_style
+DNQDqq4mWSY,554.0,556.0,annotator_1,3,podcast,,me for knowledge task when I start with GPT is I'll usually have to do fact-checking,false,multimodal_tvsum_style
+DNQDqq4mWSY,556.0,558.0,annotator_1,3,podcast,,GPT is I'll usually have to do fact-checking after.,false,multimodal_tvsum_style
+DNQDqq4mWSY,558.0,560.0,annotator_1,3,podcast,,I'll usually have to do fact-checking after. Like check,false,multimodal_tvsum_style
+DNQDqq4mWSY,560.0,562.0,annotator_1,3,podcast,,after. Like check that it didn't come up with fake stuff.,false,multimodal_tvsum_style
+DNQDqq4mWSY,562.0,564.0,annotator_1,3,podcast,,"Like check that it didn't come up with fake stuff. How How do you figure that out? That,",false,multimodal_tvsum_style
+DNQDqq4mWSY,564.0,566.0,annotator_1,3,podcast,,"that it didn't come up with fake stuff. How How do you figure that out? That, you know, GPT can",false,multimodal_tvsum_style
+DNQDqq4mWSY,566.0,568.0,annotator_1,3,podcast,,"How How do you figure that out? That, you know, GPT can",false,multimodal_tvsum_style
+DNQDqq4mWSY,568.0,570.0,annotator_1,3,podcast,,"How How do you figure that out? That, you know, GPT can come up with fake stuff that sounds",false,multimodal_tvsum_style
+DNQDqq4mWSY,570.0,572.0,annotator_1,3,podcast,,"you know, GPT can come up with fake stuff that sounds really convincing. So, how do you ground it in truth?",false,multimodal_tvsum_style
+DNQDqq4mWSY,572.0,574.0,annotator_1,3,podcast,,"really convincing. So, how do you ground it in truth?",false,multimodal_tvsum_style
+DNQDqq4mWSY,574.0,576.0,annotator_1,3,podcast,,"really convincing. So, how do you ground it in truth? That's obviously an area of intense interest for us. Uh",false,multimodal_tvsum_style
+DNQDqq4mWSY,576.0,578.0,annotator_1,3,podcast,,That's obviously an area of intense interest for us. Uh I think it's going to get,false,multimodal_tvsum_style
+DNQDqq4mWSY,578.0,580.0,annotator_1,3,podcast,,"interest for us. Uh I think it's going to get a lot better with upcoming versions, but",false,multimodal_tvsum_style
+DNQDqq4mWSY,580.0,582.0,annotator_1,3,podcast,,"I think it's going to get a lot better with upcoming versions, but",false,multimodal_tvsum_style
+DNQDqq4mWSY,582.0,584.0,annotator_1,3,podcast,,"I think it's going to get a lot better with upcoming versions, but we'll have to continue to work on it and we're not go",false,multimodal_tvsum_style
+DNQDqq4mWSY,584.0,586.0,annotator_1,3,podcast,,"we'll have to continue to work on it and we're not going to have it like all solved this year. Well, the scary thing is ",false,multimodal_tvsum_style
+DNQDqq4mWSY,586.0,588.0,annotator_1,3,podcast,,"solved this year. Well, the scary thing is like as it gets better,",false,multimodal_tvsum_style
+DNQDqq4mWSY,588.0,590.0,annotator_1,3,podcast,,"Well, the scary thing is like as it gets better, you start not doing the fact-checking",false,multimodal_tvsum_style
+DNQDqq4mWSY,590.0,592.0,annotator_1,3,podcast,,"better, you start not doing the fact-checking more and more, right? I",false,multimodal_tvsum_style
+DNQDqq4mWSY,592.0,594.0,annotator_1,3,podcast,,"you start not doing the fact-checking more and more, right? I I'm of two minds about that. I think",false,multimodal_tvsum_style
+DNQDqq4mWSY,594.0,596.0,annotator_1,3,podcast,,"more and more, right? I I'm of two minds about that. I think people are like much more sophisticated",false,multimodal_tvsum_style
+DNQDqq4mWSY,596.0,598.0,annotator_1,3,podcast,,I'm of two minds about that. I think people are like much more sophisticated users of technology than we often give,false,multimodal_tvsum_style
+DNQDqq4mWSY,598.0,600.0,annotator_1,3,podcast,,people are like much more sophisticated users of technology than we often give them credit for. And people seem to,false,multimodal_tvsum_style
+DNQDqq4mWSY,600.0,602.0,annotator_1,3,podcast,,users of technology than we often give them credit for. And people seem to really understand that GPT any of these,false,multimodal_tvsum_style
+DNQDqq4mWSY,602.0,604.0,annotator_1,3,podcast,,them credit for. And people seem to really understand that GPT any of these models hallucinate some of the time and,false,multimodal_tvsum_style
+DNQDqq4mWSY,604.0,606.0,annotator_1,3,podcast,,"really understand that GPT any of these models hallucinate some of the time and if it's mission critical, you got to che",false,multimodal_tvsum_style
+DNQDqq4mWSY,606.0,608.0,annotator_1,3,podcast,,"if it's mission critical, you got to check it. Except journalists don't seem to understand that. I've seen",false,multimodal_tvsum_style
+DNQDqq4mWSY,608.0,610.0,annotator_1,4,podcast,,check it. Except journalists don't seem to understand that. I've seen journalists half-assedly just using,false,multimodal_tvsum_style
+DNQDqq4mWSY,610.0,612.0,annotator_1,4,podcast,,to understand that. I've seen journalists half-assedly just using GPT-4.,false,multimodal_tvsum_style
+DNQDqq4mWSY,612.0,614.0,annotator_1,4,podcast,,journalists half-assedly just using GPT-4. It's It's Of the long list of things I'd like to,false,multimodal_tvsum_style
+DNQDqq4mWSY,614.0,616.0,annotator_1,4,podcast,,"It's It's Of the long list of things I'd like to dunk on journalists for, this is not my",false,multimodal_tvsum_style
+DNQDqq4mWSY,616.0,618.0,annotator_1,4,podcast,,"Of the long list of things I'd like to dunk on journalists for, this is not my top criticism of them.",false,multimodal_tvsum_style
+DNQDqq4mWSY,618.0,620.0,annotator_1,4,podcast,,"dunk on journalists for, this is not my top criticism of them. Well, I think the bigger",false,multimodal_tvsum_style
+DNQDqq4mWSY,620.0,622.0,annotator_1,4,podcast,,"top criticism of them. Well, I think the bigger criticism is perhaps the pressures and",false,multimodal_tvsum_style
+DNQDqq4mWSY,622.0,624.0,annotator_1,4,podcast,,"Well, I think the bigger criticism is perhaps the pressures and the incentives of being a journalist",false,multimodal_tvsum_style
+DNQDqq4mWSY,624.0,626.0,annotator_1,4,podcast,,criticism is perhaps the pressures and the incentives of being a journalist is that you have to work really quickly,false,multimodal_tvsum_style
+DNQDqq4mWSY,626.0,628.0,annotator_1,4,podcast,,the incentives of being a journalist is that you have to work really quickly and this is a shortcut.,false,multimodal_tvsum_style
+DNQDqq4mWSY,628.0,630.0,annotator_1,4,podcast,,is that you have to work really quickly and this is a shortcut. I I would love our society to incentivize like,false,multimodal_tvsum_style
+DNQDqq4mWSY,630.0,632.0,annotator_1,4,podcast,,I I would love our society to incentivize like,false,multimodal_tvsum_style
+DNQDqq4mWSY,632.0,634.0,annotator_1,4,podcast,,"I I would love our society to incentivize like I would, too. long like a journalist",false,multimodal_tvsum_style
+DNQDqq4mWSY,634.0,636.0,annotator_1,4,podcast,,"our society to incentivize like I would, too. long like a journalist journalistic efforts that take days and",false,multimodal_tvsum_style
+DNQDqq4mWSY,636.0,638.0,annotator_1,4,podcast,,"I would, too. long like a journalist journalistic efforts that take days and weeks and and rewards great in-depth",false,multimodal_tvsum_style
+DNQDqq4mWSY,638.0,640.0,annotator_1,4,podcast,,journalistic efforts that take days and weeks and and rewards great in-depth,false,multimodal_tvsum_style
+DNQDqq4mWSY,640.0,642.0,annotator_1,4,podcast,,"journalistic efforts that take days and weeks and and rewards great in-depth journalism. Also, journalism that",false,multimodal_tvsum_style
+DNQDqq4mWSY,642.0,644.0,annotator_1,4,podcast,,"weeks and and rewards great in-depth journalism. Also, journalism that presents stuff in a balanced way where",false,multimodal_tvsum_style
+DNQDqq4mWSY,644.0,646.0,annotator_1,4,podcast,,"journalism. Also, journalism that presents stuff in a balanced way where it's like celebrates people while",false,multimodal_tvsum_style
+DNQDqq4mWSY,646.0,648.0,annotator_1,4,podcast,,presents stuff in a balanced way where it's like celebrates people while criticizing them even though the criticism is t,false,multimodal_tvsum_style
+DNQDqq4mWSY,648.0,650.0,annotator_1,4,podcast,,criticizing them even though the criticism is the thing that gets clicks.,false,multimodal_tvsum_style
+DNQDqq4mWSY,650.0,652.0,annotator_1,4,podcast,,criticizing them even though the criticism is the thing that gets clicks. And making up also gets clicks. And,false,multimodal_tvsum_style
+DNQDqq4mWSY,652.0,654.0,annotator_1,4,podcast,,criticism is the thing that gets clicks. And making up also gets clicks. And headlines that mischaracterize,false,multimodal_tvsum_style
+DNQDqq4mWSY,654.0,656.0,annotator_1,4,podcast,,And making up also gets clicks. And headlines that mischaracterize completely. I'm sure you have a lot of people dunking,false,multimodal_tvsum_style
+DNQDqq4mWSY,656.0,658.0,annotator_1,4,podcast,,"completely. I'm sure you have a lot of people dunking on Well, all that drama probably got a lot",false,multimodal_tvsum_style
+DNQDqq4mWSY,658.0,660.0,annotator_1,4,podcast,,"people dunking on Well, all that drama probably got a lot of clicks.",false,multimodal_tvsum_style
+DNQDqq4mWSY,660.0,662.0,annotator_1,4,podcast,,"Well, all that drama probably got a lot of clicks. Probably did.",false,multimodal_tvsum_style
+DNQDqq4mWSY,662.0,664.0,annotator_1,4,podcast,,"of clicks. Probably did. Uh and that that's the you know, that's",false,multimodal_tvsum_style
+DNQDqq4mWSY,664.0,666.0,annotator_1,2,podcast,,"Uh and that that's the you know, that's a",false,multimodal_tvsum_style
+DNQDqq4mWSY,666.0,668.0,annotator_1,2,podcast,,"Uh and that that's the you know, that's a bigger problem about human civilization. I'd love to see solved is where we",false,multimodal_tvsum_style
+DNQDqq4mWSY,668.0,670.0,annotator_1,1,podcast,,bigger problem about human civilization. I'd love to see solved is where we celebrate a bit more.,false,multimodal_tvsum_style
+DNQDqq4mWSY,670.0,672.0,annotator_1,1,podcast,,I'd love to see solved is where we celebrate a bit more.,false,multimodal_tvsum_style
+DNQDqq4mWSY,672.0,674.0,annotator_1,1,podcast,,I'd love to see solved is where we celebrate a bit more.,false,multimodal_tvsum_style
+DNQDqq4mWSY,674.0,676.0,annotator_1,1,podcast,,,false,multimodal_tvsum_style
+DNQDqq4mWSY,676.0,678.0,annotator_1,1,podcast,,,false,multimodal_tvsum_style
+DNQDqq4mWSY,678.0,680.0,annotator_1,1,podcast,,,false,multimodal_tvsum_style
+DNQDqq4mWSY,680.0,682.0,annotator_1,1,podcast,,,false,multimodal_tvsum_style
+DNQDqq4mWSY,682.0,684.0,annotator_1,1,podcast,,,false,multimodal_tvsum_style
+DNQDqq4mWSY,684.0,686.0,annotator_1,1,podcast,,,false,multimodal_tvsum_style
+DNQDqq4mWSY,686.0,688.0,annotator_1,1,podcast,,,false,multimodal_tvsum_style
+DNQDqq4mWSY,688.0,690.0,annotator_1,1,podcast,,,false,multimodal_tvsum_style

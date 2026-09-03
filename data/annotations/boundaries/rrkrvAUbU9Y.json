@@ -1,13 +1,13 @@
 {
-  "video_id": "-cRswJf8OnI",
+  "video_id": "rrkrvAUbU9Y",
   "annotator_id": "youtube_most_replayed_consensus",
-  "domain": "podcast",
-  "title": "Billionaire Reveals BRUTAL Truth About Money",
+  "domain": "lecture",
+  "title": "The puzzle of motivation | Dan Pink | TED",
   "highlights": [
     {
       "highlight_id": "hl_01",
-      "start_time": 244.44,
-      "end_time": 333.6,
+      "start_time": 103.36,
+      "end_time": 157.66,
       "importance": 5,
       "complete_thought": true,
       "natural_start": true,
@@ -15,8 +15,8 @@
     },
     {
       "highlight_id": "hl_02",
-      "start_time": 436.64,
-      "end_time": 526.48,
+      "start_time": 347.38,
+      "end_time": 401.14,
       "importance": 5,
       "complete_thought": true,
       "natural_start": true,
@@ -24,8 +24,8 @@
     },
     {
       "highlight_id": "hl_03",
-      "start_time": 677.92,
-      "end_time": 724.88,
+      "start_time": 714.92,
+      "end_time": 781.72,
       "importance": 5,
       "complete_thought": true,
       "natural_start": true,

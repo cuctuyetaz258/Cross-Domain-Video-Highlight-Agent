@@ -1,499 +1,500 @@
 ﻿video_id,start_sec,end_sec,annotator_id,importance,domain,reason_tag,transcript_hint,needs_review,label_protocol
-waLjtcUq5Mc,0.0,2.0,annotator_1,1,podcast,,,false,multimodal_tvsum_style
-waLjtcUq5Mc,2.0,4.0,annotator_1,2,podcast,,What was your first impression,false,multimodal_tvsum_style
-waLjtcUq5Mc,4.0,6.0,annotator_1,2,podcast,,What was your first impression when you met Vladimir Putin for the interview?,false,multimodal_tvsum_style
-waLjtcUq5Mc,6.0,8.0,annotator_1,2,podcast,,when you met Vladimir Putin for the interview? - I thought he seemed nervous,false,multimodal_tvsum_style
-waLjtcUq5Mc,8.0,10.0,annotator_1,3,podcast,,- I thought he seemed nervous,false,multimodal_tvsum_style
-waLjtcUq5Mc,10.0,12.0,annotator_1,3,podcast,,and I was very surprised by that.,false,multimodal_tvsum_style
-waLjtcUq5Mc,12.0,14.0,annotator_1,3,podcast,,and I was very surprised by that. And I thought he seemed like someone,false,multimodal_tvsum_style
-waLjtcUq5Mc,14.0,16.0,annotator_1,3,podcast,,And I thought he seemed like someone,false,multimodal_tvsum_style
-waLjtcUq5Mc,16.0,18.0,annotator_1,3,podcast,,"And I thought he seemed like someone who'd overthought it a little bit, who had a plan.",false,multimodal_tvsum_style
-waLjtcUq5Mc,18.0,20.0,annotator_1,3,podcast,,"who'd overthought it a little bit, who had a plan. And I don't think that's the right way",false,multimodal_tvsum_style
-waLjtcUq5Mc,20.0,22.0,annotator_1,3,podcast,,"And I don't think that's the right way to go into any interview. My strong sense, having done a lot of them for a long t",false,multimodal_tvsum_style
-waLjtcUq5Mc,22.0,24.0,annotator_1,3,podcast,,"My strong sense, having done a lot of them for a long time,",false,multimodal_tvsum_style
-waLjtcUq5Mc,24.0,26.0,annotator_1,3,podcast,,"My strong sense, having done a lot of them for a long time, is that it's better to know what you think,",false,multimodal_tvsum_style
-waLjtcUq5Mc,26.0,28.0,annotator_1,3,podcast,,"is that it's better to know what you think, to say as much as you can honestly,",false,multimodal_tvsum_style
-waLjtcUq5Mc,28.0,30.0,annotator_1,3,podcast,,"to say as much as you can honestly,",false,multimodal_tvsum_style
-waLjtcUq5Mc,30.0,32.0,annotator_1,3,podcast,,"to say as much as you can honestly, so you don't get confused by your own lies",false,multimodal_tvsum_style
-waLjtcUq5Mc,32.0,34.0,annotator_1,3,podcast,,so you don't get confused by your own lies,false,multimodal_tvsum_style
-waLjtcUq5Mc,34.0,36.0,annotator_1,3,podcast,,so you don't get confused by your own lies and just to be yourself. And I thought that he went into it,false,multimodal_tvsum_style
-waLjtcUq5Mc,36.0,38.0,annotator_1,3,podcast,,And I thought that he went into it,false,multimodal_tvsum_style
-waLjtcUq5Mc,38.0,40.0,annotator_1,3,podcast,,And I thought that he went into it like an over-prepared student.,false,multimodal_tvsum_style
-waLjtcUq5Mc,40.0,42.0,annotator_1,3,podcast,,like an over-prepared student.,false,multimodal_tvsum_style
-waLjtcUq5Mc,42.0,44.0,annotator_1,4,podcast,,"like an over-prepared student. And I kept thinking, ""Why is he nervous?""",false,multimodal_tvsum_style
-waLjtcUq5Mc,44.0,46.0,annotator_1,4,podcast,,"And I kept thinking, ""Why is he nervous?"" But I guess because he thought",false,multimodal_tvsum_style
-waLjtcUq5Mc,46.0,48.0,annotator_1,4,podcast,,But I guess because he thought a lot of people were gonna see it.,false,multimodal_tvsum_style
-waLjtcUq5Mc,48.0,50.0,annotator_1,4,podcast,,a lot of people were gonna see it. - But he was also probably prepared,false,multimodal_tvsum_style
-waLjtcUq5Mc,50.0,52.0,annotator_1,4,podcast,,- But he was also probably prepared to give you a full lesson in history as he did.,false,multimodal_tvsum_style
-waLjtcUq5Mc,52.0,54.0,annotator_1,4,podcast,,to give you a full lesson in history as he did.,false,multimodal_tvsum_style
-waLjtcUq5Mc,54.0,56.0,annotator_1,5,podcast,,to give you a full lesson in history as he did.,false,multimodal_tvsum_style
-waLjtcUq5Mc,56.0,58.0,annotator_1,5,podcast,,"to give you a full lesson in history as he did. - (chuckles) Well, I was totally shocked by that",false,multimodal_tvsum_style
-waLjtcUq5Mc,58.0,60.0,annotator_1,5,podcast,,"- (chuckles) Well, I was totally shocked by that and very annoyed because I thought he was filibustering.",false,multimodal_tvsum_style
-waLjtcUq5Mc,60.0,62.0,annotator_1,5,podcast,,and very annoyed because I thought he was filibustering.,false,multimodal_tvsum_style
-waLjtcUq5Mc,62.0,64.0,annotator_1,5,podcast,,"and very annoyed because I thought he was filibustering. I thought he would, I mean, I asked him as I usually do,",false,multimodal_tvsum_style
-waLjtcUq5Mc,64.0,66.0,annotator_1,5,podcast,,"I thought he would, I mean, I asked him as I usually do, the most obvious dumbest question ever,",false,multimodal_tvsum_style
-waLjtcUq5Mc,66.0,68.0,annotator_1,5,podcast,,"the most obvious dumbest question ever, which is, why'd you do this?",false,multimodal_tvsum_style
-waLjtcUq5Mc,68.0,70.0,annotator_1,5,podcast,,"which is, why'd you do this?",false,multimodal_tvsum_style
-waLjtcUq5Mc,70.0,72.0,annotator_1,5,podcast,,And he had said in a speech that I think is worth reading.,false,multimodal_tvsum_style
-waLjtcUq5Mc,72.0,74.0,annotator_1,5,podcast,,And he had said in a speech that I think is worth reading.,false,multimodal_tvsum_style
-waLjtcUq5Mc,74.0,76.0,annotator_1,5,podcast,,"And he had said in a speech that I think is worth reading. I don't speak Russian,",false,multimodal_tvsum_style
-waLjtcUq5Mc,76.0,78.0,annotator_1,5,podcast,,"I don't speak Russian, so I haven't heard it in the original, but he had said at the moment of the beginning of the war,",false,multimodal_tvsum_style
-waLjtcUq5Mc,78.0,80.0,annotator_1,5,podcast,,"but he had said at the moment of the beginning of the war,",false,multimodal_tvsum_style
-waLjtcUq5Mc,80.0,82.0,annotator_1,5,podcast,,"but he had said at the moment of the beginning of the war,",false,multimodal_tvsum_style
-waLjtcUq5Mc,82.0,84.0,annotator_1,5,podcast,,"he had given this address to Russians,",false,multimodal_tvsum_style
-waLjtcUq5Mc,84.0,86.0,annotator_1,5,podcast,,"he had given this address to Russians, in which he explained to the fullest extent",false,multimodal_tvsum_style
-waLjtcUq5Mc,86.0,88.0,annotator_1,5,podcast,,in which he explained to the fullest extent,false,multimodal_tvsum_style
-waLjtcUq5Mc,88.0,90.0,annotator_1,5,podcast,,in which he explained to the fullest extent we have seen so far why he was doing this.,false,multimodal_tvsum_style
-waLjtcUq5Mc,90.0,92.0,annotator_1,4,podcast,,"we have seen so far why he was doing this. And he said in that speech, I fear that NATO, the West,",false,multimodal_tvsum_style
-waLjtcUq5Mc,92.0,94.0,annotator_1,4,podcast,,"And he said in that speech, I fear that NATO, the West,",false,multimodal_tvsum_style
-waLjtcUq5Mc,94.0,96.0,annotator_1,4,podcast,,"And he said in that speech, I fear that NATO, the West, the United States, the Biden administration",false,multimodal_tvsum_style
-waLjtcUq5Mc,96.0,98.0,annotator_1,4,podcast,,"the United States, the Biden administration will preemptively attack us.",false,multimodal_tvsum_style
-waLjtcUq5Mc,98.0,100.0,annotator_1,4,podcast,,will preemptively attack us.,false,multimodal_tvsum_style
-waLjtcUq5Mc,100.0,102.0,annotator_1,4,podcast,,"will preemptively attack us. And I thought, ""Well, that's interesting."" I mean, I can't evaluate whether that's a fear",false,multimodal_tvsum_style
-waLjtcUq5Mc,102.0,104.0,annotator_1,4,podcast,,"I mean, I can't evaluate whether that's a fear",false,multimodal_tvsum_style
-waLjtcUq5Mc,104.0,106.0,annotator_1,4,podcast,,"I mean, I can't evaluate whether that's a fear rooted in reality or one rooted in paranoia.",false,multimodal_tvsum_style
-waLjtcUq5Mc,106.0,108.0,annotator_1,4,podcast,,"rooted in reality or one rooted in paranoia. But I thought, ""Well, that's an answer right there.""",false,multimodal_tvsum_style
-waLjtcUq5Mc,108.0,110.0,annotator_1,4,podcast,,"But I thought, ""Well, that's an answer right there."" And so I alluded to that in my question",false,multimodal_tvsum_style
-waLjtcUq5Mc,110.0,112.0,annotator_1,3,podcast,,"And so I alluded to that in my question and rather than answering it, he went off on this long,",false,multimodal_tvsum_style
-waLjtcUq5Mc,112.0,114.0,annotator_1,3,podcast,,"and rather than answering it, he went off on this long,",false,multimodal_tvsum_style
-waLjtcUq5Mc,114.0,116.0,annotator_1,3,podcast,,"and rather than answering it, he went off on this long, from my perspective, kind of tiresome,",false,multimodal_tvsum_style
-waLjtcUq5Mc,116.0,118.0,annotator_1,3,podcast,,"from my perspective, kind of tiresome,",false,multimodal_tvsum_style
-waLjtcUq5Mc,118.0,120.0,annotator_1,3,podcast,,sort of greatest hits of Russian history.,false,multimodal_tvsum_style
-waLjtcUq5Mc,120.0,122.0,annotator_1,3,podcast,,"sort of greatest hits of Russian history. And the implication I thought was, ""Well,",false,multimodal_tvsum_style
-waLjtcUq5Mc,122.0,124.0,annotator_1,3,podcast,,"And the implication I thought was, ""Well,",false,multimodal_tvsum_style
-waLjtcUq5Mc,124.0,126.0,annotator_1,3,podcast,,"And the implication I thought was, ""Well, Ukraine is ours, or Eastern Ukraine is ours already.""",false,multimodal_tvsum_style
-waLjtcUq5Mc,126.0,128.0,annotator_1,3,podcast,,"Ukraine is ours, or Eastern Ukraine is ours already."" And I thought he was doing that",false,multimodal_tvsum_style
-waLjtcUq5Mc,128.0,130.0,annotator_1,3,podcast,,And I thought he was doing that to avoid answering the question.,false,multimodal_tvsum_style
-waLjtcUq5Mc,130.0,132.0,annotator_1,3,podcast,,"to avoid answering the question. So, the last thing you want",false,multimodal_tvsum_style
-waLjtcUq5Mc,132.0,134.0,annotator_1,3,podcast,,"So, the last thing you want when you're interviewing someone is to get rolled.",false,multimodal_tvsum_style
-waLjtcUq5Mc,134.0,136.0,annotator_1,3,podcast,,when you're interviewing someone is to get rolled. And I didn't wanna be rolled.,false,multimodal_tvsum_style
-waLjtcUq5Mc,136.0,138.0,annotator_1,3,podcast,,"And I didn't wanna be rolled. So, a couple of times interrupted him, politely I thought,",false,multimodal_tvsum_style
-waLjtcUq5Mc,138.0,140.0,annotator_1,3,podcast,,"So, a couple of times interrupted him, politely I thought,",false,multimodal_tvsum_style
-waLjtcUq5Mc,140.0,142.0,annotator_1,3,podcast,,"So, a couple of times interrupted him, politely I thought, but he wasn't having it.",false,multimodal_tvsum_style
-waLjtcUq5Mc,142.0,144.0,annotator_1,3,podcast,,"but he wasn't having it. And then I thought, ""You know what? I'm not here to prove that I'm a great interviewer.""",false,multimodal_tvsum_style
-waLjtcUq5Mc,144.0,146.0,annotator_1,2,podcast,,"I'm not here to prove that I'm a great interviewer.""",false,multimodal_tvsum_style
-waLjtcUq5Mc,146.0,148.0,annotator_1,2,podcast,,"I'm not here to prove that I'm a great interviewer."" It's kind of not about me, I want to know who this guy is.",false,multimodal_tvsum_style
-waLjtcUq5Mc,148.0,150.0,annotator_1,2,podcast,,"It's kind of not about me, I want to know who this guy is.",false,multimodal_tvsum_style
-waLjtcUq5Mc,150.0,152.0,annotator_1,2,podcast,,"It's kind of not about me, I want to know who this guy is. I think a Western audience, a global audience,",false,multimodal_tvsum_style
-waLjtcUq5Mc,152.0,154.0,annotator_1,2,podcast,,"I think a Western audience, a global audience, has a right to know more about the guy,",false,multimodal_tvsum_style
-waLjtcUq5Mc,154.0,156.0,annotator_1,2,podcast,,"has a right to know more about the guy, and so just let him talk.",false,multimodal_tvsum_style
-waLjtcUq5Mc,156.0,158.0,annotator_1,2,podcast,,"and so just let him talk. 'Cause it's not, you know, I don't feel",false,multimodal_tvsum_style
-waLjtcUq5Mc,158.0,160.0,annotator_1,2,podcast,,"'Cause it's not, you know, I don't feel like my reputation's on the line.",false,multimodal_tvsum_style
-waLjtcUq5Mc,160.0,162.0,annotator_1,2,podcast,,"like my reputation's on the line. People have already drawn conclusions about me,",false,multimodal_tvsum_style
-waLjtcUq5Mc,162.0,164.0,annotator_1,2,podcast,,"People have already drawn conclusions about me, I suppose to the extent they have.",false,multimodal_tvsum_style
-waLjtcUq5Mc,164.0,166.0,annotator_1,2,podcast,,"I suppose to the extent they have. I'm not interested really in those conclusions anyway,",false,multimodal_tvsum_style
-waLjtcUq5Mc,166.0,168.0,annotator_1,2,podcast,,"I'm not interested really in those conclusions anyway,",false,multimodal_tvsum_style
-waLjtcUq5Mc,168.0,170.0,annotator_1,2,podcast,,"I'm not interested really in those conclusions anyway, so just let him talk. And so I calmed down and just let him talk.",false,multimodal_tvsum_style
-waLjtcUq5Mc,170.0,172.0,annotator_1,2,podcast,,"And so I calmed down and just let him talk. And in retrospect,",false,multimodal_tvsum_style
-waLjtcUq5Mc,172.0,174.0,annotator_1,3,podcast,,"And in retrospect, I thought that was really, really interesting.",false,multimodal_tvsum_style
-waLjtcUq5Mc,174.0,176.0,annotator_1,3,podcast,,"I thought that was really, really interesting. Whether you agree with it or not, or whether you think it's relevant",false,multimodal_tvsum_style
-waLjtcUq5Mc,176.0,178.0,annotator_1,3,podcast,,"or whether you think it's relevant to the war in Ukraine or not, that was his answer,",false,multimodal_tvsum_style
-waLjtcUq5Mc,178.0,180.0,annotator_1,3,podcast,,"to the war in Ukraine or not, that was his answer,",false,multimodal_tvsum_style
-waLjtcUq5Mc,180.0,182.0,annotator_1,3,podcast,,"to the war in Ukraine or not, that was his answer, and so it's inherently significant.",false,multimodal_tvsum_style
-waLjtcUq5Mc,182.0,184.0,annotator_1,2,podcast,,"and so it's inherently significant. - Well, you said he was nervous. Were you nervous?",false,multimodal_tvsum_style
-waLjtcUq5Mc,184.0,186.0,annotator_1,2,podcast,,Were you nervous? Were you afraid that says Vladimir Putin?,false,multimodal_tvsum_style
-waLjtcUq5Mc,186.0,188.0,annotator_1,2,podcast,,"Were you afraid that says Vladimir Putin? - I wasn't afraid at all, and I wasn't nervous at all.",false,multimodal_tvsum_style
-waLjtcUq5Mc,188.0,190.0,annotator_1,2,podcast,,"- I wasn't afraid at all, and I wasn't nervous at all.",false,multimodal_tvsum_style
-waLjtcUq5Mc,190.0,192.0,annotator_1,1,podcast,,"- I wasn't afraid at all, and I wasn't nervous at all. - Did you drink tea beforehand?",false,multimodal_tvsum_style
-waLjtcUq5Mc,192.0,194.0,annotator_1,1,podcast,,"- Did you drink tea beforehand? - (chuckles) No, I did my normal regimen",false,multimodal_tvsum_style
-waLjtcUq5Mc,194.0,196.0,annotator_1,1,podcast,,"- (chuckles) No, I did my normal regimen",false,multimodal_tvsum_style
-waLjtcUq5Mc,196.0,198.0,annotator_1,1,podcast,,"- (chuckles) No, I did my normal regimen of nicotine pouches and coffee.",false,multimodal_tvsum_style
-waLjtcUq5Mc,198.0,200.0,annotator_1,1,podcast,,"of nicotine pouches and coffee. No, I'm not a tea drinker.",false,multimodal_tvsum_style
-waLjtcUq5Mc,200.0,202.0,annotator_1,1,podcast,,"No, I'm not a tea drinker. I try not to eat all the sweets they put in front of us,",false,multimodal_tvsum_style
-waLjtcUq5Mc,202.0,204.0,annotator_1,1,podcast,,"I try not to eat all the sweets they put in front of us,",false,multimodal_tvsum_style
-waLjtcUq5Mc,204.0,206.0,annotator_1,1,podcast,,"I try not to eat all the sweets they put in front of us, which is that is my weakness is eating crap.",false,multimodal_tvsum_style
-waLjtcUq5Mc,206.0,208.0,annotator_1,1,podcast,,"which is that is my weakness is eating crap. But you eat a lot of sugar,",false,multimodal_tvsum_style
-waLjtcUq5Mc,208.0,210.0,annotator_1,1,podcast,,"But you eat a lot of sugar, as you know before an interview, and it does dull you,",false,multimodal_tvsum_style
-waLjtcUq5Mc,210.0,212.0,annotator_1,1,podcast,,"as you know before an interview, and it does dull you, so I successfully resisted that.",false,multimodal_tvsum_style
-waLjtcUq5Mc,212.0,214.0,annotator_1,2,podcast,,"so I successfully resisted that. But no, I wasn't nervous.",false,multimodal_tvsum_style
-waLjtcUq5Mc,214.0,216.0,annotator_1,2,podcast,,"But no, I wasn't nervous. I wasn't nervous the whole time I was there. Why would I be?",false,multimodal_tvsum_style
-waLjtcUq5Mc,216.0,218.0,annotator_1,2,podcast,,"Why would I be? I'm 54, my kids are grown, I believe in God.",false,multimodal_tvsum_style
-waLjtcUq5Mc,218.0,220.0,annotator_1,3,podcast,,"I'm 54, my kids are grown, I believe in God.",false,multimodal_tvsum_style
-waLjtcUq5Mc,220.0,222.0,annotator_1,3,podcast,,"I'm 54, my kids are grown, I believe in God. I'm almost never nervous.",false,multimodal_tvsum_style
-waLjtcUq5Mc,222.0,224.0,annotator_1,3,podcast,,"I'm almost never nervous. But no, I wasn't nervous, I was just interested.",false,multimodal_tvsum_style
-waLjtcUq5Mc,224.0,226.0,annotator_1,3,podcast,,"But no, I wasn't nervous, I was just interested. I mean, I couldn't.",false,multimodal_tvsum_style
-waLjtcUq5Mc,226.0,228.0,annotator_1,3,podcast,,"I mean, I couldn't. I'm interested in Soviet history, I studied it in college.",false,multimodal_tvsum_style
-waLjtcUq5Mc,228.0,230.0,annotator_1,3,podcast,,"I'm interested in Soviet history, I studied it in college. I've read about it my entire life. My dad worked in the Cold ",false,multimodal_tvsum_style
-waLjtcUq5Mc,230.0,232.0,annotator_1,3,podcast,,My dad worked in the Cold War. It was a constant topic of conversation.,false,multimodal_tvsum_style
-waLjtcUq5Mc,232.0,234.0,annotator_1,3,podcast,,It was a constant topic of conversation. And so to be in the Kremlin in a room,false,multimodal_tvsum_style
-waLjtcUq5Mc,234.0,236.0,annotator_1,3,podcast,,"And so to be in the Kremlin in a room where Stalin made decisions, either wartime decisions",false,multimodal_tvsum_style
-waLjtcUq5Mc,236.0,238.0,annotator_1,3,podcast,,"where Stalin made decisions, either wartime decisions or decisions about murdering his own population,",false,multimodal_tvsum_style
-waLjtcUq5Mc,238.0,240.0,annotator_1,3,podcast,,"or decisions about murdering his own population,",false,multimodal_tvsum_style
-waLjtcUq5Mc,240.0,242.0,annotator_1,3,podcast,,"or decisions about murdering his own population, I just couldn't get over it.",false,multimodal_tvsum_style
-waLjtcUq5Mc,242.0,244.0,annotator_1,3,podcast,,I just couldn't get over it. We were in Molotov's old office.,false,multimodal_tvsum_style
-waLjtcUq5Mc,244.0,246.0,annotator_1,3,podcast,,"We were in Molotov's old office. So for me that was, I was just blown away by that.",false,multimodal_tvsum_style
-waLjtcUq5Mc,246.0,248.0,annotator_1,3,podcast,,"So for me that was, I was just blown away by that. I thought I knew a lot about Russia.",false,multimodal_tvsum_style
-waLjtcUq5Mc,248.0,250.0,annotator_1,2,podcast,,I thought I knew a lot about Russia.,false,multimodal_tvsum_style
-waLjtcUq5Mc,250.0,252.0,annotator_1,2,podcast,,"I thought I knew a lot about Russia. It turns out I knew a lot about the Soviet period,",false,multimodal_tvsum_style
-waLjtcUq5Mc,252.0,254.0,annotator_1,2,podcast,,"It turns out I knew a lot about the Soviet period,",false,multimodal_tvsum_style
-waLjtcUq5Mc,254.0,256.0,annotator_1,2,podcast,,"the 1937 purge trials, the famine in Ukraine.",false,multimodal_tvsum_style
-waLjtcUq5Mc,256.0,258.0,annotator_1,2,podcast,,"the 1937 purge trials, the famine in Ukraine. Like I knew a fair amount about that,",false,multimodal_tvsum_style
-waLjtcUq5Mc,258.0,260.0,annotator_1,2,podcast,,"Like I knew a fair amount about that, but I really knew nothing about contemporary Russia,",false,multimodal_tvsum_style
-waLjtcUq5Mc,260.0,262.0,annotator_1,2,podcast,,"but I really knew nothing about contemporary Russia, less than I thought I did it turned out.",false,multimodal_tvsum_style
-waLjtcUq5Mc,262.0,264.0,annotator_1,2,podcast,,"less than I thought I did it turned out. But yeah, I was just blown away by where we were.",false,multimodal_tvsum_style
-waLjtcUq5Mc,264.0,266.0,annotator_1,2,podcast,,"But yeah, I was just blown away by where we were.",false,multimodal_tvsum_style
-waLjtcUq5Mc,266.0,268.0,annotator_1,2,podcast,,"But yeah, I was just blown away by where we were. And that's kind of one of the main drivers",false,multimodal_tvsum_style
-waLjtcUq5Mc,268.0,270.0,annotator_1,2,podcast,,"And that's kind of one of the main drivers at this stage in my life of, you know,",false,multimodal_tvsum_style
-waLjtcUq5Mc,270.0,272.0,annotator_1,2,podcast,,"at this stage in my life of, you know,",false,multimodal_tvsum_style
-waLjtcUq5Mc,272.0,274.0,annotator_1,2,podcast,,"at this stage in my life of, you know, that that's why I do what I do",false,multimodal_tvsum_style
-waLjtcUq5Mc,274.0,276.0,annotator_1,2,podcast,,that that's why I do what I do is 'cause I'm interested in stuff and I wanna see as much as I can and try,false,multimodal_tvsum_style
-waLjtcUq5Mc,276.0,278.0,annotator_1,2,podcast,,and I wanna see as much as I can and try,false,multimodal_tvsum_style
-waLjtcUq5Mc,278.0,280.0,annotator_1,2,podcast,,"and draw conclusions from it to the extent I can,",false,multimodal_tvsum_style
-waLjtcUq5Mc,280.0,282.0,annotator_1,2,podcast,,"and draw conclusions from it to the extent I can, so I was very much caught up in that.",false,multimodal_tvsum_style
-waLjtcUq5Mc,282.0,284.0,annotator_1,2,podcast,,"so I was very much caught up in that. But no, I wasn't nervous. I didn't think he was gonna like, kill me or something.",false,multimodal_tvsum_style
-waLjtcUq5Mc,284.0,286.0,annotator_1,2,podcast,,"I didn't think he was gonna like, kill me or something. And I'm not particularly afraid of that anyway.",false,multimodal_tvsum_style
-waLjtcUq5Mc,286.0,288.0,annotator_1,2,podcast,,And I'm not particularly afraid of that anyway. - Not afraid of dying?,false,multimodal_tvsum_style
-waLjtcUq5Mc,288.0,290.0,annotator_1,1,podcast,,"- Not afraid of dying? - Not really, no.",false,multimodal_tvsum_style
-waLjtcUq5Mc,290.0,292.0,annotator_1,1,podcast,,"- Not really, no. I mean, again, it's an age and stage in life thing.",false,multimodal_tvsum_style
-waLjtcUq5Mc,292.0,294.0,annotator_1,1,podcast,,"I mean, again, it's an age and stage in life thing.",false,multimodal_tvsum_style
-waLjtcUq5Mc,294.0,296.0,annotator_1,1,podcast,,"I mean, again, it's an age and stage in life thing.",false,multimodal_tvsum_style
-waLjtcUq5Mc,296.0,298.0,annotator_1,1,podcast,,"I mean, again, it's an age and stage in life thing. I mean, I have four children,",false,multimodal_tvsum_style
-waLjtcUq5Mc,298.0,300.0,annotator_1,1,podcast,,"I mean, I have four children, so there were times when they were little",false,multimodal_tvsum_style
-waLjtcUq5Mc,300.0,302.0,annotator_1,1,podcast,,"so there were times when they were little where I was terrified of dying, 'cause if I died it would have huge consequenc",false,multimodal_tvsum_style
-waLjtcUq5Mc,302.0,304.0,annotator_1,1,podcast,,'cause if I died it would have huge consequences.,false,multimodal_tvsum_style
-waLjtcUq5Mc,304.0,306.0,annotator_1,1,podcast,,"'cause if I died it would have huge consequences. But no, I mean, at this point, I don't want to die,",false,multimodal_tvsum_style
-waLjtcUq5Mc,306.0,308.0,annotator_1,1,podcast,,"But no, I mean, at this point, I don't want to die,",false,multimodal_tvsum_style
-waLjtcUq5Mc,308.0,310.0,annotator_1,1,podcast,,"But no, I mean, at this point, I don't want to die, I'm really enjoying my life.",false,multimodal_tvsum_style
-waLjtcUq5Mc,310.0,312.0,annotator_1,1,podcast,,I'm really enjoying my life. But I've been with the same girl for 40 years,false,multimodal_tvsum_style
-waLjtcUq5Mc,312.0,314.0,annotator_1,1,podcast,,But I've been with the same girl for 40 years and I have four children who I'm extremely close to.,false,multimodal_tvsum_style
-waLjtcUq5Mc,314.0,316.0,annotator_1,1,podcast,,"and I have four children who I'm extremely close to. Well now five, a daughter-in-law.",false,multimodal_tvsum_style
-waLjtcUq5Mc,316.0,318.0,annotator_1,1,podcast,,"Well now five, a daughter-in-law.",false,multimodal_tvsum_style
-waLjtcUq5Mc,318.0,320.0,annotator_1,1,podcast,,"Well now five, a daughter-in-law. And I love them all, I'm really close to them.",false,multimodal_tvsum_style
-waLjtcUq5Mc,320.0,322.0,annotator_1,1,podcast,,"And I love them all, I'm really close to them. I tell 'em I love them every day.",false,multimodal_tvsum_style
-waLjtcUq5Mc,322.0,324.0,annotator_1,1,podcast,,I tell 'em I love them every day. I've had a really interesting life.,false,multimodal_tvsum_style
-waLjtcUq5Mc,324.0,326.0,annotator_1,3,podcast,,I've had a really interesting life. - What was the goal?,false,multimodal_tvsum_style
-waLjtcUq5Mc,326.0,328.0,annotator_1,3,podcast,,- What was the goal? Just linger on that. What was the goal for the interview?,false,multimodal_tvsum_style
-waLjtcUq5Mc,328.0,330.0,annotator_1,3,podcast,,"What was the goal for the interview? Like, how were you thinking about it? What would success be like in your head leadi",false,multimodal_tvsum_style
-waLjtcUq5Mc,330.0,332.0,annotator_1,3,podcast,,What would success be like in your head leading into it.,false,multimodal_tvsum_style
-waLjtcUq5Mc,332.0,334.0,annotator_1,3,podcast,,What would success be like in your head leading into it. - To bring more information. - [Lex] Just information? - To the,false,multimodal_tvsum_style
-waLjtcUq5Mc,334.0,336.0,annotator_1,3,podcast,,"- To the public, yeah, that's it. I mean, I have really strong feelings about",false,multimodal_tvsum_style
-waLjtcUq5Mc,336.0,338.0,annotator_1,3,podcast,,"I mean, I have really strong feelings about",false,multimodal_tvsum_style
-waLjtcUq5Mc,338.0,340.0,annotator_1,3,podcast,,"I mean, I have really strong feelings about what's happening not just in Ukraine or Russia,",false,multimodal_tvsum_style
-waLjtcUq5Mc,340.0,342.0,annotator_1,3,podcast,,"what's happening not just in Ukraine or Russia,",false,multimodal_tvsum_style
-waLjtcUq5Mc,342.0,344.0,annotator_1,3,podcast,,"what's happening not just in Ukraine or Russia, but around the world.",false,multimodal_tvsum_style
-waLjtcUq5Mc,344.0,346.0,annotator_1,3,podcast,,but around the world. I think the world is resetting to the grave disadvantage of the United States.,false,multimodal_tvsum_style
-waLjtcUq5Mc,346.0,348.0,annotator_1,3,podcast,,to the grave disadvantage of the United States.,false,multimodal_tvsum_style
-waLjtcUq5Mc,348.0,350.0,annotator_1,3,podcast,,to the grave disadvantage of the United States. I don't think most Americans are aware of that at all.,false,multimodal_tvsum_style
-waLjtcUq5Mc,350.0,352.0,annotator_1,3,podcast,,"I don't think most Americans are aware of that at all. And so, that's my view.",false,multimodal_tvsum_style
-waLjtcUq5Mc,352.0,354.0,annotator_1,3,podcast,,"And so, that's my view. And I've stated it many times because it's sincere,",false,multimodal_tvsum_style
-waLjtcUq5Mc,354.0,356.0,annotator_1,3,podcast,,"And I've stated it many times because it's sincere,",false,multimodal_tvsum_style
-waLjtcUq5Mc,356.0,358.0,annotator_1,3,podcast,,"And I've stated it many times because it's sincere, but my goal was to have more information brought to the West",false,multimodal_tvsum_style
-waLjtcUq5Mc,358.0,360.0,annotator_1,3,podcast,,but my goal was to have more information brought to the West,false,multimodal_tvsum_style
-waLjtcUq5Mc,360.0,362.0,annotator_1,3,podcast,,but my goal was to have more information brought to the West,false,multimodal_tvsum_style
-waLjtcUq5Mc,362.0,364.0,annotator_1,3,podcast,,,false,multimodal_tvsum_style
-waLjtcUq5Mc,364.0,366.0,annotator_1,3,podcast,,so people could make their own decisions,false,multimodal_tvsum_style
-waLjtcUq5Mc,366.0,368.0,annotator_1,3,podcast,,so people could make their own decisions about whether this is a good idea.,false,multimodal_tvsum_style
-waLjtcUq5Mc,368.0,370.0,annotator_1,3,podcast,,"about whether this is a good idea. I mean, I guess I reject the whole premise",false,multimodal_tvsum_style
-waLjtcUq5Mc,370.0,372.0,annotator_1,3,podcast,,"I mean, I guess I reject the whole premise of the war in Ukraine from the American perspective,",false,multimodal_tvsum_style
-waLjtcUq5Mc,372.0,374.0,annotator_1,3,podcast,,"of the war in Ukraine from the American perspective, which is a tiny group of dumb people in Washington",false,multimodal_tvsum_style
-waLjtcUq5Mc,374.0,376.0,annotator_1,3,podcast,,which is a tiny group of dumb people in Washington,false,multimodal_tvsum_style
-waLjtcUq5Mc,376.0,378.0,annotator_1,3,podcast,,which is a tiny group of dumb people in Washington has decided to do this for reasons they won't really explain.,false,multimodal_tvsum_style
-waLjtcUq5Mc,378.0,380.0,annotator_1,3,podcast,,for reasons they won't really explain.,false,multimodal_tvsum_style
-waLjtcUq5Mc,380.0,382.0,annotator_1,3,podcast,,for reasons they won't really explain. And you don't have a role in it at all,false,multimodal_tvsum_style
-waLjtcUq5Mc,382.0,384.0,annotator_1,3,podcast,,"And you don't have a role in it at all as an American citizen, as the person who's paying for it,",false,multimodal_tvsum_style
-waLjtcUq5Mc,384.0,386.0,annotator_1,3,podcast,,"as an American citizen, as the person who's paying for it, whose children might be drafted to fight it,",false,multimodal_tvsum_style
-waLjtcUq5Mc,386.0,388.0,annotator_1,3,podcast,,"whose children might be drafted to fight it,",false,multimodal_tvsum_style
-waLjtcUq5Mc,388.0,390.0,annotator_1,3,podcast,,"whose children might be drafted to fight it, to shut up and obey. I just reject that completely.",false,multimodal_tvsum_style
-waLjtcUq5Mc,390.0,392.0,annotator_1,3,podcast,,"I just reject that completely. I think, I guess I'm a child of a different era.",false,multimodal_tvsum_style
-waLjtcUq5Mc,392.0,394.0,annotator_1,3,podcast,,"I think, I guess I'm a child of a different era. I'm a child of participatory democracy to some extent,",false,multimodal_tvsum_style
-waLjtcUq5Mc,394.0,396.0,annotator_1,3,podcast,,"I'm a child of participatory democracy to some extent,",false,multimodal_tvsum_style
-waLjtcUq5Mc,396.0,398.0,annotator_1,3,podcast,,"I'm a child of participatory democracy to some extent, where your opinion as a citizen is not irrelevant.",false,multimodal_tvsum_style
-waLjtcUq5Mc,398.0,400.0,annotator_1,3,podcast,,where your opinion as a citizen is not irrelevant.,false,multimodal_tvsum_style
-waLjtcUq5Mc,400.0,402.0,annotator_1,3,podcast,,,false,multimodal_tvsum_style
-waLjtcUq5Mc,402.0,404.0,annotator_1,3,podcast,,And I guess the level of lying about it,false,multimodal_tvsum_style
-waLjtcUq5Mc,404.0,406.0,annotator_1,3,podcast,,And I guess the level of lying about it,false,multimodal_tvsum_style
-waLjtcUq5Mc,406.0,408.0,annotator_1,3,podcast,,"And I guess the level of lying about it was starting to drive me crazy. And I've said, and I will say again,",false,multimodal_tvsum_style
-waLjtcUq5Mc,408.0,410.0,annotator_1,3,podcast,,"And I've said, and I will say again, I'm not an expert on the regional,",false,multimodal_tvsum_style
-waLjtcUq5Mc,410.0,412.0,annotator_1,3,podcast,,"I'm not an expert on the regional, really any region other than say Western Maine.",false,multimodal_tvsum_style
-waLjtcUq5Mc,412.0,414.0,annotator_1,3,podcast,,"really any region other than say Western Maine. I just don't, you know, I'm not Russian.",false,multimodal_tvsum_style
-waLjtcUq5Mc,414.0,416.0,annotator_1,3,podcast,,"I just don't, you know, I'm not Russian.",false,multimodal_tvsum_style
-waLjtcUq5Mc,416.0,418.0,annotator_1,3,podcast,,"I just don't, you know, I'm not Russian.",false,multimodal_tvsum_style
-waLjtcUq5Mc,418.0,420.0,annotator_1,3,podcast,,But it was obvious to me that we were being lied to,false,multimodal_tvsum_style
-waLjtcUq5Mc,420.0,422.0,annotator_1,3,podcast,,"But it was obvious to me that we were being lied to in ways that were just, it was crazy the scale of lies.",false,multimodal_tvsum_style
-waLjtcUq5Mc,422.0,424.0,annotator_1,3,podcast,,"in ways that were just, it was crazy the scale of lies.",false,multimodal_tvsum_style
-waLjtcUq5Mc,424.0,426.0,annotator_1,3,podcast,,"in ways that were just, it was crazy the scale of lies. And I'll just give you one example.",false,multimodal_tvsum_style
-waLjtcUq5Mc,426.0,428.0,annotator_1,3,podcast,,And I'll just give you one example. The idea that Ukraine would inevitably win this war.,false,multimodal_tvsum_style
-waLjtcUq5Mc,428.0,430.0,annotator_1,3,podcast,,The idea that Ukraine would inevitably win this war.,false,multimodal_tvsum_style
-waLjtcUq5Mc,430.0,432.0,annotator_1,3,podcast,,"The idea that Ukraine would inevitably win this war. Now victory was never, as it never is defined precisely,",false,multimodal_tvsum_style
-waLjtcUq5Mc,432.0,434.0,annotator_1,3,podcast,,"Now victory was never, as it never is defined precisely,",false,multimodal_tvsum_style
-waLjtcUq5Mc,434.0,436.0,annotator_1,3,podcast,,"Now victory was never, as it never is defined precisely, nothing's ever defined precisely, which is always to tell",false,multimodal_tvsum_style
-waLjtcUq5Mc,436.0,438.0,annotator_1,3,podcast,,"nothing's ever defined precisely, which is always to tell that there's deception at the heart of the claim.",false,multimodal_tvsum_style
-waLjtcUq5Mc,438.0,440.0,annotator_1,3,podcast,,"that there's deception at the heart of the claim. But Ukraine's on the verge of winning, well, I don't know.",false,multimodal_tvsum_style
-waLjtcUq5Mc,440.0,442.0,annotator_1,4,podcast,,"But Ukraine's on the verge of winning, well, I don't know. I mean, I'm hardly a tactician or a military expert.",false,multimodal_tvsum_style
-waLjtcUq5Mc,442.0,444.0,annotator_1,4,podcast,,"I mean, I'm hardly a tactician or a military expert.",false,multimodal_tvsum_style
-waLjtcUq5Mc,444.0,446.0,annotator_1,4,podcast,,"I mean, I'm hardly a tactician or a military expert. For the fifth time, I'm not an expert on Russia or Ukraine.",false,multimodal_tvsum_style
-waLjtcUq5Mc,446.0,448.0,annotator_1,4,podcast,,"For the fifth time, I'm not an expert on Russia or Ukraine. I just look at Wikipedia.",false,multimodal_tvsum_style
-waLjtcUq5Mc,448.0,450.0,annotator_1,4,podcast,,I just look at Wikipedia. Russia has a hundred million more people than Ukraine.,false,multimodal_tvsum_style
-waLjtcUq5Mc,450.0,452.0,annotator_1,4,podcast,,Russia has a hundred million more people than Ukraine. A hundred million.,false,multimodal_tvsum_style
-waLjtcUq5Mc,452.0,454.0,annotator_1,4,podcast,,"A hundred million. It has much deeper industrial capacity,",false,multimodal_tvsum_style
-waLjtcUq5Mc,454.0,456.0,annotator_1,4,podcast,,"It has much deeper industrial capacity,",false,multimodal_tvsum_style
-waLjtcUq5Mc,456.0,458.0,annotator_1,4,podcast,,"It has much deeper industrial capacity, war material capacity than all of NATO combined.",false,multimodal_tvsum_style
-waLjtcUq5Mc,458.0,460.0,annotator_1,4,podcast,,war material capacity than all of NATO combined.,false,multimodal_tvsum_style
-waLjtcUq5Mc,460.0,462.0,annotator_1,4,podcast,,"war material capacity than all of NATO combined. For example, Russia is turning out artillery shells,",false,multimodal_tvsum_style
-waLjtcUq5Mc,462.0,464.0,annotator_1,5,podcast,,"For example, Russia is turning out artillery shells,",false,multimodal_tvsum_style
-waLjtcUq5Mc,464.0,466.0,annotator_1,5,podcast,,"For example, Russia is turning out artillery shells, which are significant in a ground war",false,multimodal_tvsum_style
-waLjtcUq5Mc,466.0,468.0,annotator_1,5,podcast,,which are significant in a ground war at a ratio of seven to one,false,multimodal_tvsum_style
-waLjtcUq5Mc,468.0,470.0,annotator_1,5,podcast,,at a ratio of seven to one,false,multimodal_tvsum_style
-waLjtcUq5Mc,470.0,472.0,annotator_1,5,podcast,,compared to all NATO countries combined.,false,multimodal_tvsum_style
-waLjtcUq5Mc,472.0,474.0,annotator_1,5,podcast,,compared to all NATO countries combined. That's all of Europe.,false,multimodal_tvsum_style
-waLjtcUq5Mc,474.0,476.0,annotator_1,5,podcast,,That's all of Europe.,false,multimodal_tvsum_style
-waLjtcUq5Mc,476.0,478.0,annotator_1,5,podcast,,Russia is producing seven times the artillery shells,false,multimodal_tvsum_style
-waLjtcUq5Mc,478.0,480.0,annotator_1,5,podcast,,Russia is producing seven times the artillery shells,false,multimodal_tvsum_style
-waLjtcUq5Mc,480.0,482.0,annotator_1,5,podcast,,Russia is producing seven times the artillery shells as all of Europe combined.,false,multimodal_tvsum_style
-waLjtcUq5Mc,482.0,484.0,annotator_1,5,podcast,,"as all of Europe combined. What, that's an amazing fact.",false,multimodal_tvsum_style
-waLjtcUq5Mc,484.0,486.0,annotator_1,5,podcast,,"What, that's an amazing fact. And it turns out to be a really significant fact.",false,multimodal_tvsum_style
-waLjtcUq5Mc,486.0,488.0,annotator_1,4,podcast,,"And it turns out to be a really significant fact. In fact, the significant fact.",false,multimodal_tvsum_style
-waLjtcUq5Mc,488.0,490.0,annotator_1,4,podcast,,"In fact, the significant fact. But if you ask your average person in this country,",false,multimodal_tvsum_style
-waLjtcUq5Mc,490.0,492.0,annotator_1,4,podcast,,"But if you ask your average person in this country, even a fairly well informed person of good faith",false,multimodal_tvsum_style
-waLjtcUq5Mc,492.0,494.0,annotator_1,4,podcast,,"even a fairly well informed person of good faith who's just trying to understand what's going on,",false,multimodal_tvsum_style
-waLjtcUq5Mc,494.0,496.0,annotator_1,4,podcast,,"who's just trying to understand what's going on, who's gonna win this war?",false,multimodal_tvsum_style
-waLjtcUq5Mc,496.0,498.0,annotator_1,4,podcast,,"who's gonna win this war? Well, Ukraine's gonna win. They're on the right side.",false,multimodal_tvsum_style
-waLjtcUq5Mc,498.0,500.0,annotator_1,3,podcast,,"They're on the right side. And they think that because our media,",false,multimodal_tvsum_style
-waLjtcUq5Mc,500.0,502.0,annotator_1,3,podcast,,"And they think that because our media, who really just do serve the interest of the US government,",false,multimodal_tvsum_style
-waLjtcUq5Mc,502.0,504.0,annotator_1,3,podcast,,"who really just do serve the interest of the US government, period, they are state media in that sense,",false,multimodal_tvsum_style
-waLjtcUq5Mc,504.0,506.0,annotator_1,3,podcast,,"period, they are state media in that sense, have told him that for over two years.",false,multimodal_tvsum_style
-waLjtcUq5Mc,506.0,508.0,annotator_1,3,podcast,,have told him that for over two years.,false,multimodal_tvsum_style
-waLjtcUq5Mc,508.0,510.0,annotator_1,3,podcast,,have told him that for over two years. And I was in Hungary last summer,false,multimodal_tvsum_style
-waLjtcUq5Mc,510.0,512.0,annotator_1,3,podcast,,"And I was in Hungary last summer talking to the prime minister, Viktor Orban,",false,multimodal_tvsum_style
-waLjtcUq5Mc,512.0,514.0,annotator_1,3,podcast,,"talking to the prime minister, Viktor Orban, who's a, you know, whatever you think of, he's a very smart guy, very smart",false,multimodal_tvsum_style
-waLjtcUq5Mc,514.0,516.0,annotator_1,3,podcast,,"he's a very smart guy, very smart guy.",false,multimodal_tvsum_style
-waLjtcUq5Mc,516.0,518.0,annotator_1,3,podcast,,"he's a very smart guy, very smart guy. Like smart on a scale that we're not used to in our leaders.",false,multimodal_tvsum_style
-waLjtcUq5Mc,518.0,520.0,annotator_1,3,podcast,,Like smart on a scale that we're not used to in our leaders.,false,multimodal_tvsum_style
-waLjtcUq5Mc,520.0,522.0,annotator_1,3,podcast,,"And I said to him off camera, so is Ukraine gonna win?",false,multimodal_tvsum_style
-waLjtcUq5Mc,522.0,524.0,annotator_1,3,podcast,,"And I said to him off camera, so is Ukraine gonna win? And he looked at me like I was deranged,",false,multimodal_tvsum_style
-waLjtcUq5Mc,524.0,526.0,annotator_1,3,podcast,,"And he looked at me like I was deranged, like, or I was congenitally, deficient, are they gonna win?",false,multimodal_tvsum_style
-waLjtcUq5Mc,526.0,528.0,annotator_1,3,podcast,,"like, or I was congenitally, deficient, are they gonna win?",false,multimodal_tvsum_style
-waLjtcUq5Mc,528.0,530.0,annotator_1,3,podcast,,"like, or I was congenitally, deficient, are they gonna win?",false,multimodal_tvsum_style
-waLjtcUq5Mc,530.0,532.0,annotator_1,3,podcast,,"like, or I was congenitally, deficient, are they gonna win? No, of course they can't win. It's tiny compared to Russia.",false,multimodal_tvsum_style
-waLjtcUq5Mc,532.0,534.0,annotator_1,3,podcast,,It's tiny compared to Russia. Russia has a wartime economy.,false,multimodal_tvsum_style
-waLjtcUq5Mc,534.0,536.0,annotator_1,3,podcast,,Russia has a wartime economy. Ukraine doesn't really have an economy.,false,multimodal_tvsum_style
-waLjtcUq5Mc,536.0,538.0,annotator_1,3,podcast,,Ukraine doesn't really have an economy.,false,multimodal_tvsum_style
-waLjtcUq5Mc,538.0,540.0,annotator_1,3,podcast,,"Ukraine doesn't really have an economy. No, look at the populations. He was like, looked at me like I was stupid.",false,multimodal_tvsum_style
-waLjtcUq5Mc,540.0,542.0,annotator_1,3,podcast,,"He was like, looked at me like I was stupid. And I said to him, I think most Americans believe",false,multimodal_tvsum_style
-waLjtcUq5Mc,542.0,544.0,annotator_1,3,podcast,,"And I said to him, I think most Americans believe that because NBC News and CNN and all the news channels,",false,multimodal_tvsum_style
-waLjtcUq5Mc,544.0,546.0,annotator_1,3,podcast,,"that because NBC News and CNN and all the news channels,",false,multimodal_tvsum_style
-waLjtcUq5Mc,546.0,548.0,annotator_1,3,podcast,,"that because NBC News and CNN and all the news channels, all of them tell them that because it's framed exclusively",false,multimodal_tvsum_style
-waLjtcUq5Mc,548.0,550.0,annotator_1,3,podcast,,all of them tell them that because it's framed exclusively in moral terms and it's Churchill versus Hitler.,false,multimodal_tvsum_style
-waLjtcUq5Mc,550.0,552.0,annotator_1,3,podcast,,in moral terms and it's Churchill versus Hitler.,false,multimodal_tvsum_style
-waLjtcUq5Mc,552.0,554.0,annotator_1,3,podcast,,in moral terms and it's Churchill versus Hitler. And of course Churchill's gonna prevail in the end.,false,multimodal_tvsum_style
-waLjtcUq5Mc,554.0,556.0,annotator_1,3,podcast,,"And of course Churchill's gonna prevail in the end. And it's just so dishonest that even, it doesn't even matter",false,multimodal_tvsum_style
-waLjtcUq5Mc,556.0,558.0,annotator_1,3,podcast,,"And it's just so dishonest that even, it doesn't even matter what I want to happen or what I think ought to happen.",false,multimodal_tvsum_style
-waLjtcUq5Mc,558.0,560.0,annotator_1,3,podcast,,what I want to happen or what I think ought to happen.,false,multimodal_tvsum_style
-waLjtcUq5Mc,560.0,562.0,annotator_1,3,podcast,,what I want to happen or what I think ought to happen. That's a distortion of what is happening.,false,multimodal_tvsum_style
-waLjtcUq5Mc,562.0,564.0,annotator_1,3,podcast,,"That's a distortion of what is happening. And if I have any job at all,",false,multimodal_tvsum_style
-waLjtcUq5Mc,564.0,566.0,annotator_1,3,podcast,,"And if I have any job at all, which I sort of don't actually at this point, but if I do have a job, it's to just try to ",false,multimodal_tvsum_style
-waLjtcUq5Mc,566.0,568.0,annotator_1,3,podcast,,"but if I do have a job, it's to just try to be honest.",false,multimodal_tvsum_style
-waLjtcUq5Mc,568.0,570.0,annotator_1,3,podcast,,"but if I do have a job, it's to just try to be honest. And that's a lie. - There is a more nuanced discussion",false,multimodal_tvsum_style
-waLjtcUq5Mc,570.0,572.0,annotator_1,3,podcast,,- There is a more nuanced discussion about what winning might look like.,false,multimodal_tvsum_style
-waLjtcUq5Mc,572.0,574.0,annotator_1,3,podcast,,about what winning might look like. - For sure.,false,multimodal_tvsum_style
-waLjtcUq5Mc,574.0,576.0,annotator_1,3,podcast,,"- For sure. - A nuanced discussion is not being had,",false,multimodal_tvsum_style
-waLjtcUq5Mc,576.0,578.0,annotator_1,3,podcast,,"- A nuanced discussion is not being had, but it is possible for Ukraine to, quote, unquote, ""win""",false,multimodal_tvsum_style
-waLjtcUq5Mc,578.0,580.0,annotator_1,3,podcast,,"but it is possible for Ukraine to, quote, unquote, ""win"" with the help of the United States.",false,multimodal_tvsum_style
-waLjtcUq5Mc,580.0,582.0,annotator_1,3,podcast,,with the help of the United States. - I guess that conversation needs,false,multimodal_tvsum_style
-waLjtcUq5Mc,582.0,584.0,annotator_1,3,podcast,,- I guess that conversation needs to begin by defining terms.,false,multimodal_tvsum_style
-waLjtcUq5Mc,584.0,586.0,annotator_1,3,podcast,,to begin by defining terms. And the key term is win.,false,multimodal_tvsum_style
-waLjtcUq5Mc,586.0,588.0,annotator_1,3,podcast,,And the key term is win. What does that mean?,false,multimodal_tvsum_style
-waLjtcUq5Mc,588.0,590.0,annotator_1,3,podcast,,"What does that mean? - Peace, a ceasefire, who owns which land.",false,multimodal_tvsum_style
-waLjtcUq5Mc,590.0,592.0,annotator_1,3,podcast,,"- Peace, a ceasefire, who owns which land.",false,multimodal_tvsum_style
-waLjtcUq5Mc,592.0,594.0,annotator_1,3,podcast,,"- Peace, a ceasefire, who owns which land. - Yes. - Coming to the table",false,multimodal_tvsum_style
-waLjtcUq5Mc,594.0,596.0,annotator_1,3,podcast,,"- Yes. - Coming to the table with as you call the parent, the United States.",false,multimodal_tvsum_style
-waLjtcUq5Mc,596.0,598.0,annotator_1,3,podcast,,"with as you call the parent, the United States.",false,multimodal_tvsum_style
-waLjtcUq5Mc,598.0,600.0,annotator_1,3,podcast,,"with as you call the parent, the United States. - Yes. - Putting leverage on the negotiation",false,multimodal_tvsum_style
-waLjtcUq5Mc,600.0,602.0,annotator_1,3,podcast,,- Putting leverage on the negotiation to make sure there's a fairness.,false,multimodal_tvsum_style
-waLjtcUq5Mc,602.0,604.0,annotator_1,3,podcast,,"to make sure there's a fairness. - Amen, well, of course, and I should just restate this,",false,multimodal_tvsum_style
-waLjtcUq5Mc,604.0,606.0,annotator_1,3,podcast,,"- Amen, well, of course, and I should just restate this,",false,multimodal_tvsum_style
-waLjtcUq5Mc,606.0,608.0,annotator_1,3,podcast,,"- Amen, well, of course, and I should just restate this, I am not emotionally involved in this.",false,multimodal_tvsum_style
-waLjtcUq5Mc,608.0,610.0,annotator_1,2,podcast,,I am not emotionally involved in this.,false,multimodal_tvsum_style
-waLjtcUq5Mc,610.0,612.0,annotator_1,2,podcast,,I am not emotionally involved in this. I'm American in every sense.,false,multimodal_tvsum_style
-waLjtcUq5Mc,612.0,614.0,annotator_1,2,podcast,,I'm American in every sense. And my only interest is in America.,false,multimodal_tvsum_style
-waLjtcUq5Mc,614.0,616.0,annotator_1,2,podcast,,And my only interest is in America. I'm not leaving ever.,false,multimodal_tvsum_style
-waLjtcUq5Mc,616.0,618.0,annotator_1,2,podcast,,I'm not leaving ever.,false,multimodal_tvsum_style
-waLjtcUq5Mc,618.0,620.0,annotator_1,2,podcast,,"I'm not leaving ever. And so I'm looking at this purely from our perspective,",false,multimodal_tvsum_style
-waLjtcUq5Mc,620.0,622.0,annotator_1,2,podcast,,"And so I'm looking at this purely from our perspective, what's good for us.",false,multimodal_tvsum_style
-waLjtcUq5Mc,622.0,624.0,annotator_1,2,podcast,,"what's good for us. But I also as a human being, as a Christian,",false,multimodal_tvsum_style
-waLjtcUq5Mc,624.0,626.0,annotator_1,2,podcast,,"But I also as a human being, as a Christian, I mean, I hate war.",false,multimodal_tvsum_style
-waLjtcUq5Mc,626.0,628.0,annotator_1,2,podcast,,"I mean, I hate war. And anybody who doesn't hate war",false,multimodal_tvsum_style
-waLjtcUq5Mc,628.0,630.0,annotator_1,2,podcast,,"And anybody who doesn't hate war shouldn't have power, in my opinion.",false,multimodal_tvsum_style
-waLjtcUq5Mc,630.0,632.0,annotator_1,2,podcast,,"shouldn't have power, in my opinion. So I agree with those, that definition vehemently.",false,multimodal_tvsum_style
-waLjtcUq5Mc,632.0,634.0,annotator_1,2,podcast,,"So I agree with those, that definition vehemently.",false,multimodal_tvsum_style
-waLjtcUq5Mc,634.0,636.0,annotator_1,2,podcast,,"So I agree with those, that definition vehemently.",false,multimodal_tvsum_style
-waLjtcUq5Mc,636.0,638.0,annotator_1,2,podcast,,A victory is like not killing an entire generation,false,multimodal_tvsum_style
-waLjtcUq5Mc,638.0,640.0,annotator_1,2,podcast,,A victory is like not killing an entire generation of your population.,false,multimodal_tvsum_style
-waLjtcUq5Mc,640.0,642.0,annotator_1,2,podcast,,of your population.,false,multimodal_tvsum_style
-waLjtcUq5Mc,642.0,644.0,annotator_1,2,podcast,,of your population. It's not being completely destroyed to be eaten up,false,multimodal_tvsum_style
-waLjtcUq5Mc,644.0,646.0,annotator_1,2,podcast,,It's not being completely destroyed to be eaten up by BlackRock or whatever comes next for them.,false,multimodal_tvsum_style
-waLjtcUq5Mc,646.0,648.0,annotator_1,3,podcast,,"by BlackRock or whatever comes next for them. So yeah, we were close to that a year and a half ago.",false,multimodal_tvsum_style
-waLjtcUq5Mc,648.0,650.0,annotator_1,3,podcast,,"So yeah, we were close to that a year and a half ago.",false,multimodal_tvsum_style
-waLjtcUq5Mc,650.0,652.0,annotator_1,4,podcast,,"So yeah, we were close to that a year and a half ago. And the Biden administration dispatched Boris Johnson,",false,multimodal_tvsum_style
-waLjtcUq5Mc,652.0,654.0,annotator_1,4,podcast,,"And the Biden administration dispatched Boris Johnson, the briefly prime minister of the UK to stop it",false,multimodal_tvsum_style
-waLjtcUq5Mc,654.0,656.0,annotator_1,4,podcast,,the briefly prime minister of the UK to stop it,false,multimodal_tvsum_style
-waLjtcUq5Mc,656.0,658.0,annotator_1,4,podcast,,"the briefly prime minister of the UK to stop it and to say to Zelensky, who I feel sorry for, by the way,",false,multimodal_tvsum_style
-waLjtcUq5Mc,658.0,660.0,annotator_1,4,podcast,,"and to say to Zelensky, who I feel sorry for, by the way,",false,multimodal_tvsum_style
-waLjtcUq5Mc,660.0,662.0,annotator_1,4,podcast,,"and to say to Zelensky, who I feel sorry for, by the way, 'cause he's caught between these forces that are bigger than h",false,multimodal_tvsum_style
-waLjtcUq5Mc,662.0,664.0,annotator_1,4,podcast,,"that are bigger than he is to say, no,",false,multimodal_tvsum_style
-waLjtcUq5Mc,664.0,666.0,annotator_1,4,podcast,,"that are bigger than he is to say, no, you cannot come to any terms with Russia.",false,multimodal_tvsum_style
-waLjtcUq5Mc,666.0,668.0,annotator_1,4,podcast,,you cannot come to any terms with Russia. And the result of that has not been a Ukrainian victory.,false,multimodal_tvsum_style
-waLjtcUq5Mc,668.0,670.0,annotator_1,4,podcast,,And the result of that has not been a Ukrainian victory.,false,multimodal_tvsum_style
-waLjtcUq5Mc,670.0,672.0,annotator_1,4,podcast,,And the result of that has not been a Ukrainian victory. It's just been more dead Ukrainians and a lot of profit for the,false,multimodal_tvsum_style
-waLjtcUq5Mc,672.0,674.0,annotator_1,5,podcast,,and a lot of profit for the West. It's a moral crime in my opinion.,false,multimodal_tvsum_style
-waLjtcUq5Mc,674.0,676.0,annotator_1,5,podcast,,It's a moral crime in my opinion.,false,multimodal_tvsum_style
-waLjtcUq5Mc,676.0,678.0,annotator_1,5,podcast,,It's a moral crime in my opinion. And I tried to ask Boris Johnson about it,false,multimodal_tvsum_style
-waLjtcUq5Mc,678.0,680.0,annotator_1,5,podcast,,"And I tried to ask Boris Johnson about it because why wouldn't I, after he denounced me",false,multimodal_tvsum_style
-waLjtcUq5Mc,680.0,682.0,annotator_1,5,podcast,,"because why wouldn't I, after he denounced me as a tool of the Kremlin or something,",false,multimodal_tvsum_style
-waLjtcUq5Mc,682.0,684.0,annotator_1,5,podcast,,"as a tool of the Kremlin or something, and he demanded a million dollars to talk to me.",false,multimodal_tvsum_style
-waLjtcUq5Mc,684.0,686.0,annotator_1,5,podcast,,and he demanded a million dollars to talk to me.,false,multimodal_tvsum_style
-waLjtcUq5Mc,686.0,688.0,annotator_1,5,podcast,,and he demanded a million dollars to talk to me. - [Lex] Oh wow. - And this just happened last week.,false,multimodal_tvsum_style
-waLjtcUq5Mc,688.0,690.0,annotator_1,5,podcast,,- And this just happened last week.,false,multimodal_tvsum_style
-waLjtcUq5Mc,690.0,692.0,annotator_1,5,podcast,,"- And this just happened last week. And by the way, in writing too, I'm not making this.",false,multimodal_tvsum_style
-waLjtcUq5Mc,692.0,694.0,annotator_1,5,podcast,,"I'm not making this. - Just for the record,",false,multimodal_tvsum_style
-waLjtcUq5Mc,694.0,696.0,annotator_1,5,podcast,,"- Just for the record, you demanded a million dollars from me to talk to me today. - (chuckles) I did.",false,multimodal_tvsum_style
-waLjtcUq5Mc,696.0,698.0,annotator_1,5,podcast,,to talk to me today. - (chuckles) I did. And you paid.,false,multimodal_tvsum_style
-waLjtcUq5Mc,698.0,700.0,annotator_1,5,podcast,,"And you paid. No, I'm of course kidding.",false,multimodal_tvsum_style
-waLjtcUq5Mc,700.0,702.0,annotator_1,5,podcast,,"No, I'm of course kidding. And I said to his guy, I said,",false,multimodal_tvsum_style
-waLjtcUq5Mc,702.0,704.0,annotator_1,5,podcast,,"And I said to his guy, I said, I just interviewed Putin who was widely recognized",false,multimodal_tvsum_style
-waLjtcUq5Mc,704.0,706.0,annotator_1,5,podcast,,"I just interviewed Putin who was widely recognized as a bad guy, and he did it for free.",false,multimodal_tvsum_style
-waLjtcUq5Mc,706.0,708.0,annotator_1,5,podcast,,"as a bad guy, and he did it for free.",false,multimodal_tvsum_style
-waLjtcUq5Mc,708.0,710.0,annotator_1,5,podcast,,"as a bad guy, and he did it for free. He didn't demand a million dollars,",false,multimodal_tvsum_style
-waLjtcUq5Mc,710.0,712.0,annotator_1,5,podcast,,"He didn't demand a million dollars, he wasn't in this for profit. Like, are you telling me that Boris Johnson",false,multimodal_tvsum_style
-waLjtcUq5Mc,712.0,714.0,annotator_1,5,podcast,,"Like, are you telling me that Boris Johnson is sleazier than Vladimir Putin?",false,multimodal_tvsum_style
-waLjtcUq5Mc,714.0,716.0,annotator_1,5,podcast,,is sleazier than Vladimir Putin? And of course that is the message.,false,multimodal_tvsum_style
-waLjtcUq5Mc,716.0,718.0,annotator_1,4,podcast,,"And of course that is the message. And so, I guess these are really,",false,multimodal_tvsum_style
-waLjtcUq5Mc,718.0,720.0,annotator_1,4,podcast,,"And so, I guess these are really, it's not just about Boris Johnson",false,multimodal_tvsum_style
-waLjtcUq5Mc,720.0,722.0,annotator_1,4,podcast,,"it's not just about Boris Johnson being a sad rapacious fraud, which he is obviously,",false,multimodal_tvsum_style
-waLjtcUq5Mc,722.0,724.0,annotator_1,4,podcast,,"being a sad rapacious fraud, which he is obviously,",false,multimodal_tvsum_style
-waLjtcUq5Mc,724.0,726.0,annotator_1,4,podcast,,"being a sad rapacious fraud, which he is obviously, but it's about like the future of the west",false,multimodal_tvsum_style
-waLjtcUq5Mc,726.0,728.0,annotator_1,4,podcast,,but it's about like the future of the west,false,multimodal_tvsum_style
-waLjtcUq5Mc,728.0,730.0,annotator_1,4,podcast,,"but it's about like the future of the west and the future of Ukraine, this country that purportedly",false,multimodal_tvsum_style
-waLjtcUq5Mc,730.0,732.0,annotator_1,4,podcast,,"and the future of Ukraine, this country that purportedly we care so much about all these people are dying",false,multimodal_tvsum_style
-waLjtcUq5Mc,732.0,734.0,annotator_1,4,podcast,,we care so much about all these people are dying and like what is the end game?,false,multimodal_tvsum_style
-waLjtcUq5Mc,734.0,736.0,annotator_1,4,podcast,,and like what is the end game? It's also deranged that I didn't imagine and don't imagine,false,multimodal_tvsum_style
-waLjtcUq5Mc,736.0,738.0,annotator_1,3,podcast,,It's also deranged that I didn't imagine and don't imagine,false,multimodal_tvsum_style
-waLjtcUq5Mc,738.0,740.0,annotator_1,3,podcast,,It's also deranged that I didn't imagine and don't imagine that I could like add anything very meaningful,false,multimodal_tvsum_style
-waLjtcUq5Mc,740.0,742.0,annotator_1,3,podcast,,that I could like add anything very meaningful,false,multimodal_tvsum_style
-waLjtcUq5Mc,742.0,744.0,annotator_1,3,podcast,,"that I could like add anything very meaningful to the conversation because I'm not a genius, okay?",false,multimodal_tvsum_style
-waLjtcUq5Mc,744.0,746.0,annotator_1,3,podcast,,"to the conversation because I'm not a genius, okay? But I felt like I could at the very least,",false,multimodal_tvsum_style
-waLjtcUq5Mc,746.0,748.0,annotator_1,3,podcast,,"But I felt like I could at the very least,",false,multimodal_tvsum_style
-waLjtcUq5Mc,748.0,750.0,annotator_1,3,podcast,,"But I felt like I could at the very least, puncture some of the lies.",false,multimodal_tvsum_style
-waLjtcUq5Mc,750.0,752.0,annotator_1,3,podcast,,puncture some of the lies. And that's an inherent good.,false,multimodal_tvsum_style
-waLjtcUq5Mc,752.0,754.0,annotator_1,3,podcast,,"And that's an inherent good. - Vladimir Putin, after the interview",false,multimodal_tvsum_style
-waLjtcUq5Mc,754.0,756.0,annotator_1,3,podcast,,"- Vladimir Putin, after the interview said that he wasn't fully satisfied",false,multimodal_tvsum_style
-waLjtcUq5Mc,756.0,758.0,annotator_1,3,podcast,,said that he wasn't fully satisfied because you weren't aggressive enough.,false,multimodal_tvsum_style
-waLjtcUq5Mc,758.0,760.0,annotator_1,3,podcast,,because you weren't aggressive enough. (Tucker laughing) You didn't ask sharp enough questions.,false,multimodal_tvsum_style
-waLjtcUq5Mc,760.0,762.0,annotator_1,3,podcast,,"You didn't ask sharp enough questions. First of all, what do you think about him saying that?",false,multimodal_tvsum_style
-waLjtcUq5Mc,762.0,764.0,annotator_1,3,podcast,,"First of all, what do you think about him saying that? - I don't even understand it.",false,multimodal_tvsum_style
-waLjtcUq5Mc,764.0,766.0,annotator_1,3,podcast,,- I don't even understand it.,false,multimodal_tvsum_style
-waLjtcUq5Mc,766.0,768.0,annotator_1,3,podcast,,I guess it does seem like the one Putin statement,false,multimodal_tvsum_style
-waLjtcUq5Mc,768.0,770.0,annotator_1,3,podcast,,"I guess it does seem like the one Putin statement that Western media ticket face value,",false,multimodal_tvsum_style
-waLjtcUq5Mc,770.0,772.0,annotator_1,3,podcast,,"that Western media ticket face value, everything else Putin says is a lie",false,multimodal_tvsum_style
-waLjtcUq5Mc,772.0,774.0,annotator_1,3,podcast,,"everything else Putin says is a lie except his criticism of me, which is true.",false,multimodal_tvsum_style
-waLjtcUq5Mc,774.0,776.0,annotator_1,3,podcast,,"except his criticism of me, which is true. But I mean, I have no idea what he meant by that.",false,multimodal_tvsum_style
-waLjtcUq5Mc,776.0,778.0,annotator_1,3,podcast,,"But I mean, I have no idea what he meant by that. I can only tell you what my goal was, as I've suggested,",false,multimodal_tvsum_style
-waLjtcUq5Mc,778.0,780.0,annotator_1,3,podcast,,"I can only tell you what my goal was, as I've suggested,",false,multimodal_tvsum_style
-waLjtcUq5Mc,780.0,782.0,annotator_1,3,podcast,,"I can only tell you what my goal was, as I've suggested,",false,multimodal_tvsum_style
-waLjtcUq5Mc,782.0,784.0,annotator_1,3,podcast,,"I can only tell you what my goal was, as I've suggested, was not to make it about me.",false,multimodal_tvsum_style
-waLjtcUq5Mc,784.0,786.0,annotator_1,3,podcast,,"was not to make it about me. I watched, you know, he hasn't done any interviews",false,multimodal_tvsum_style
-waLjtcUq5Mc,786.0,788.0,annotator_1,3,podcast,,"I watched, you know, he hasn't done any interviews of any kind for years, but the last interview he did",false,multimodal_tvsum_style
-waLjtcUq5Mc,788.0,790.0,annotator_1,3,podcast,,"of any kind for years, but the last interview he did",false,multimodal_tvsum_style
-waLjtcUq5Mc,790.0,792.0,annotator_1,3,podcast,,"of any kind for years, but the last interview he did with an English speaking reporter, Western media reporter,",false,multimodal_tvsum_style
-waLjtcUq5Mc,792.0,794.0,annotator_1,3,podcast,,"with an English speaking reporter, Western media reporter,",false,multimodal_tvsum_style
-waLjtcUq5Mc,794.0,796.0,annotator_1,3,podcast,,"with an English speaking reporter, Western media reporter, was like many of the other interviews",false,multimodal_tvsum_style
-waLjtcUq5Mc,796.0,798.0,annotator_1,3,podcast,,"was like many of the other interviews he'd done with Western media reporters,",false,multimodal_tvsum_style
-waLjtcUq5Mc,798.0,800.0,annotator_1,3,podcast,,"he'd done with Western media reporters, Mike Wallace's son did an interview with him",false,multimodal_tvsum_style
-waLjtcUq5Mc,800.0,802.0,annotator_1,3,podcast,,Mike Wallace's son did an interview with him that was of the same variety.,false,multimodal_tvsum_style
-waLjtcUq5Mc,802.0,804.0,annotator_1,3,podcast,,that was of the same variety. And it was all about him.,false,multimodal_tvsum_style
-waLjtcUq5Mc,804.0,806.0,annotator_1,3,podcast,,"And it was all about him. I'm a good person, you're a bad person.",false,multimodal_tvsum_style
-waLjtcUq5Mc,806.0,808.0,annotator_1,3,podcast,,"I'm a good person, you're a bad person. And I just feel like that's the most tiresome,",false,multimodal_tvsum_style
-waLjtcUq5Mc,808.0,810.0,annotator_1,3,podcast,,"And I just feel like that's the most tiresome,",false,multimodal_tvsum_style
-waLjtcUq5Mc,810.0,812.0,annotator_1,3,podcast,,"And I just feel like that's the most tiresome, fruitless kind of interview. It's not about me.",false,multimodal_tvsum_style
-waLjtcUq5Mc,812.0,814.0,annotator_1,2,podcast,,It's not about me. I don't think I'm an especially good person.,false,multimodal_tvsum_style
-waLjtcUq5Mc,814.0,816.0,annotator_1,2,podcast,,"I don't think I'm an especially good person. I've definitely never claimed to be, but people can make their own judgemen",false,multimodal_tvsum_style
-waLjtcUq5Mc,816.0,818.0,annotator_1,2,podcast,,"but people can make their own judgements. And again, the only judgements",false,multimodal_tvsum_style
-waLjtcUq5Mc,818.0,820.0,annotator_1,2,podcast,,"And again, the only judgements that I care about are my wife and children and God.",false,multimodal_tvsum_style
-waLjtcUq5Mc,820.0,822.0,annotator_1,2,podcast,,that I care about are my wife and children and God. So I'm just not interested in proving I'm a good person.,false,multimodal_tvsum_style
-waLjtcUq5Mc,822.0,824.0,annotator_1,2,podcast,,So I'm just not interested in proving I'm a good person.,false,multimodal_tvsum_style
-waLjtcUq5Mc,824.0,826.0,annotator_1,2,podcast,,So I'm just not interested in proving I'm a good person. And I just wanna hear from him.,false,multimodal_tvsum_style
-waLjtcUq5Mc,826.0,828.0,annotator_1,2,podcast,,"And I had a lot of... I mean, you should see.",false,multimodal_tvsum_style
-waLjtcUq5Mc,828.0,830.0,annotator_1,2,podcast,,"I mean, you should see. I almost never write questions down, but I did in this case",false,multimodal_tvsum_style
-waLjtcUq5Mc,830.0,832.0,annotator_1,2,podcast,,"I almost never write questions down, but I did in this case",false,multimodal_tvsum_style
-waLjtcUq5Mc,832.0,834.0,annotator_1,2,podcast,,"I almost never write questions down, but I did in this case because I had months to, well I had three years",false,multimodal_tvsum_style
-waLjtcUq5Mc,834.0,836.0,annotator_1,2,podcast,,"because I had months to, well I had three years to think about it as I was trying to book the interview,",false,multimodal_tvsum_style
-waLjtcUq5Mc,836.0,838.0,annotator_1,2,podcast,,"to think about it as I was trying to book the interview, which I did myself.",false,multimodal_tvsum_style
-waLjtcUq5Mc,838.0,840.0,annotator_1,3,podcast,,"which I did myself. But they were all, it was all about",false,multimodal_tvsum_style
-waLjtcUq5Mc,840.0,842.0,annotator_1,3,podcast,,"But they were all, it was all about internal Russian politics and Navalny.",false,multimodal_tvsum_style
-waLjtcUq5Mc,842.0,844.0,annotator_1,3,podcast,,"internal Russian politics and Navalny. And I had a lot of, I thought really good questions.",false,multimodal_tvsum_style
-waLjtcUq5Mc,844.0,846.0,annotator_1,3,podcast,,"And I had a lot of, I thought really good questions.",false,multimodal_tvsum_style
-waLjtcUq5Mc,846.0,848.0,annotator_1,3,podcast,,"And I had a lot of, I thought really good questions. And then at the last second, and you make these decisions,",false,multimodal_tvsum_style
-waLjtcUq5Mc,848.0,850.0,annotator_1,3,podcast,,"And then at the last second, and you make these decisions, as you know since you interview people a lot,",false,multimodal_tvsum_style
-waLjtcUq5Mc,850.0,852.0,annotator_1,3,podcast,,"as you know since you interview people a lot,",false,multimodal_tvsum_style
-waLjtcUq5Mc,852.0,854.0,annotator_1,3,podcast,,"as you know since you interview people a lot, often you make them on the fly. And I thought, no, I want to talk about th",false,multimodal_tvsum_style
-waLjtcUq5Mc,854.0,856.0,annotator_1,3,podcast,,"And I thought, no, I want to talk about the things",false,multimodal_tvsum_style
-waLjtcUq5Mc,856.0,858.0,annotator_1,3,podcast,,"And I thought, no, I want to talk about the things that haven't been talked about and that I think matter in a world his",false,multimodal_tvsum_style
-waLjtcUq5Mc,858.0,860.0,annotator_1,3,podcast,,and that I think matter in a world historic sense.,false,multimodal_tvsum_style
-waLjtcUq5Mc,860.0,862.0,annotator_1,4,podcast,,"And the number one among those, of course, is the war",false,multimodal_tvsum_style
-waLjtcUq5Mc,862.0,864.0,annotator_1,4,podcast,,"And the number one among those, of course, is the war and what it means for the world.",false,multimodal_tvsum_style
-waLjtcUq5Mc,864.0,866.0,annotator_1,4,podcast,,"and what it means for the world. And so, I stuck to that.",false,multimodal_tvsum_style
-waLjtcUq5Mc,866.0,868.0,annotator_1,4,podcast,,"And so, I stuck to that. I mean, I could have asked. I did ask about Gershkovich,",false,multimodal_tvsum_style
-waLjtcUq5Mc,868.0,870.0,annotator_1,4,podcast,,"I did ask about Gershkovich,",false,multimodal_tvsum_style
-waLjtcUq5Mc,870.0,872.0,annotator_1,4,podcast,,"I did ask about Gershkovich, who I felt sorry for, and I wanted Putin",false,multimodal_tvsum_style
-waLjtcUq5Mc,872.0,874.0,annotator_1,5,podcast,,"who I felt sorry for, and I wanted Putin to release him to me.",false,multimodal_tvsum_style
-waLjtcUq5Mc,874.0,876.0,annotator_1,5,podcast,,to release him to me. And I was offended that he didn't.,false,multimodal_tvsum_style
-waLjtcUq5Mc,876.0,878.0,annotator_1,5,podcast,,And I was offended that he didn't. I thought his rationale was absurd.,false,multimodal_tvsum_style
-waLjtcUq5Mc,878.0,880.0,annotator_1,5,podcast,,"I thought his rationale was absurd. Well, we wanna trade him for someone. I said, well that doesn't that make him a host",false,multimodal_tvsum_style
-waLjtcUq5Mc,880.0,882.0,annotator_1,5,podcast,,"I said, well that doesn't that make him a hostage?",false,multimodal_tvsum_style
-waLjtcUq5Mc,882.0,884.0,annotator_1,5,podcast,,"I said, well that doesn't that make him a hostage? You know, which of course it does.",false,multimodal_tvsum_style
-waLjtcUq5Mc,884.0,886.0,annotator_1,4,podcast,,"You know, which of course it does. But other than that, I really wanted to keep it",false,multimodal_tvsum_style
-waLjtcUq5Mc,886.0,888.0,annotator_1,4,podcast,,"But other than that, I really wanted to keep it to the things that I think matter most.",false,multimodal_tvsum_style
-waLjtcUq5Mc,888.0,890.0,annotator_1,4,podcast,,"to the things that I think matter most. People can judge whether I did a good job or not,",false,multimodal_tvsum_style
-waLjtcUq5Mc,890.0,892.0,annotator_1,4,podcast,,"People can judge whether I did a good job or not, but that was my decision.",false,multimodal_tvsum_style
-waLjtcUq5Mc,892.0,894.0,annotator_1,4,podcast,,but that was my decision.,false,multimodal_tvsum_style
-waLjtcUq5Mc,894.0,896.0,annotator_1,3,podcast,,"but that was my decision. - In the moment, what was your gut, did you wanna ask some tough questions",false,multimodal_tvsum_style
-waLjtcUq5Mc,896.0,898.0,annotator_1,3,podcast,,did you wanna ask some tough questions,false,multimodal_tvsum_style
-waLjtcUq5Mc,898.0,900.0,annotator_1,3,podcast,,did you wanna ask some tough questions as follow ups on certain topics?,false,multimodal_tvsum_style
-waLjtcUq5Mc,900.0,902.0,annotator_1,3,podcast,,as follow ups on certain topics? - I dunno what it would mean to ask a tough question.,false,multimodal_tvsum_style
-waLjtcUq5Mc,902.0,904.0,annotator_1,3,podcast,,"- I dunno what it would mean to ask a tough question. - Clarifying questions, I suppose they would-",false,multimodal_tvsum_style
-waLjtcUq5Mc,904.0,906.0,annotator_1,3,podcast,,"- Clarifying questions, I suppose they would-",false,multimodal_tvsum_style
-waLjtcUq5Mc,906.0,908.0,annotator_1,3,podcast,,"- Clarifying questions, I suppose they would- - I guess. I just wanted him to talk.",false,multimodal_tvsum_style
-waLjtcUq5Mc,908.0,910.0,annotator_1,3,podcast,,I just wanted him to talk. I just wanted to hear his perspective.,false,multimodal_tvsum_style
-waLjtcUq5Mc,910.0,912.0,annotator_1,3,podcast,,"I just wanted to hear his perspective. Again, I've probably asked more asshole questions",false,multimodal_tvsum_style
-waLjtcUq5Mc,912.0,914.0,annotator_1,3,podcast,,"Again, I've probably asked more asshole questions",false,multimodal_tvsum_style
-waLjtcUq5Mc,914.0,916.0,annotator_1,3,podcast,,"Again, I've probably asked more asshole questions than like any living American.",false,multimodal_tvsum_style
-waLjtcUq5Mc,916.0,918.0,annotator_1,3,podcast,,"than like any living American. - [Lex] Sure. - I'm has been noted correctly,",false,multimodal_tvsum_style
-waLjtcUq5Mc,918.0,920.0,annotator_1,3,podcast,,"- I'm has been noted correctly, I'm a dick by my nature.",false,multimodal_tvsum_style
-waLjtcUq5Mc,920.0,922.0,annotator_1,3,podcast,,I'm a dick by my nature.,false,multimodal_tvsum_style
-waLjtcUq5Mc,922.0,924.0,annotator_1,3,podcast,,"And so I don't, I just feel at this stage of my life,",false,multimodal_tvsum_style
-waLjtcUq5Mc,924.0,926.0,annotator_1,2,podcast,,"And so I don't, I just feel at this stage of my life, I didn't need to prove that I could,",false,multimodal_tvsum_style
-waLjtcUq5Mc,926.0,928.0,annotator_1,2,podcast,,"I didn't need to prove that I could, like, ""Vladimir Putin answer the question."" (laughs)",false,multimodal_tvsum_style
-waLjtcUq5Mc,928.0,930.0,annotator_1,2,podcast,,"like, ""Vladimir Putin answer the question."" (laughs) - Sure, for sure.",false,multimodal_tvsum_style
-waLjtcUq5Mc,930.0,932.0,annotator_1,2,podcast,,"- Sure, for sure. - You know, I think if I had been, 34 instead of 54,",false,multimodal_tvsum_style
-waLjtcUq5Mc,932.0,934.0,annotator_1,2,podcast,,"- You know, I think if I had been, 34 instead of 54,",false,multimodal_tvsum_style
-waLjtcUq5Mc,934.0,936.0,annotator_1,2,podcast,,"- You know, I think if I had been, 34 instead of 54, I definitely would've done that,",false,multimodal_tvsum_style
-waLjtcUq5Mc,936.0,938.0,annotator_1,2,podcast,,"I definitely would've done that, 'cause I would've thought, this is really about me",false,multimodal_tvsum_style
-waLjtcUq5Mc,938.0,940.0,annotator_1,2,podcast,,"'cause I would've thought, this is really about me and I need to prove myself and all stuff.",false,multimodal_tvsum_style
-waLjtcUq5Mc,940.0,942.0,annotator_1,3,podcast,,"and I need to prove myself and all stuff. No, there's a war going on that is wrecking the US economy in a way",false,multimodal_tvsum_style
-waLjtcUq5Mc,942.0,944.0,annotator_1,3,podcast,,that is wrecking the US economy in a way,false,multimodal_tvsum_style
-waLjtcUq5Mc,944.0,946.0,annotator_1,3,podcast,,that is wrecking the US economy in a way and at scale people do not understand.,false,multimodal_tvsum_style
-waLjtcUq5Mc,946.0,948.0,annotator_1,3,podcast,,and at scale people do not understand. The US dollars going away.,false,multimodal_tvsum_style
-waLjtcUq5Mc,948.0,950.0,annotator_1,3,podcast,,"The US dollars going away. That was of course, inevitable ultimately",false,multimodal_tvsum_style
-waLjtcUq5Mc,950.0,952.0,annotator_1,3,podcast,,"That was of course, inevitable ultimately because everything dies, including currencies.",false,multimodal_tvsum_style
-waLjtcUq5Mc,952.0,954.0,annotator_1,3,podcast,,"because everything dies, including currencies. But that death, that process of death",false,multimodal_tvsum_style
-waLjtcUq5Mc,954.0,956.0,annotator_1,3,podcast,,"But that death, that process of death",false,multimodal_tvsum_style
-waLjtcUq5Mc,956.0,958.0,annotator_1,3,podcast,,"But that death, that process of death has been accelerated exponentially by the behavior",false,multimodal_tvsum_style
-waLjtcUq5Mc,958.0,960.0,annotator_1,3,podcast,,"has been accelerated exponentially by the behavior of the Biden administration and the US Congress,",false,multimodal_tvsum_style
-waLjtcUq5Mc,960.0,962.0,annotator_1,3,podcast,,"of the Biden administration and the US Congress, particularly the sanctions.",false,multimodal_tvsum_style
-waLjtcUq5Mc,962.0,964.0,annotator_1,3,podcast,,particularly the sanctions. And peoples don't understand what the ramifications of that are.,false,multimodal_tvsum_style
-waLjtcUq5Mc,964.0,966.0,annotator_1,3,podcast,,"what the ramifications of that are. Ramifications are poverty in the United States, okay?",false,multimodal_tvsum_style
-waLjtcUq5Mc,966.0,968.0,annotator_1,3,podcast,,"Ramifications are poverty in the United States, okay?",false,multimodal_tvsum_style
-waLjtcUq5Mc,968.0,970.0,annotator_1,3,podcast,,"Ramifications are poverty in the United States, okay? So, I just wanted to get to that",false,multimodal_tvsum_style
-waLjtcUq5Mc,970.0,972.0,annotator_1,3,podcast,,"So, I just wanted to get to that",false,multimodal_tvsum_style
-waLjtcUq5Mc,972.0,974.0,annotator_1,3,podcast,,"So, I just wanted to get to that because I'm coming at this from not a global perspective,",false,multimodal_tvsum_style
-waLjtcUq5Mc,974.0,976.0,annotator_1,3,podcast,,"because I'm coming at this from not a global perspective, I'm coming at it from an American perspective.",false,multimodal_tvsum_style
-waLjtcUq5Mc,976.0,978.0,annotator_1,3,podcast,,I'm coming at it from an American perspective.,false,multimodal_tvsum_style
-waLjtcUq5Mc,978.0,980.0,annotator_1,1,podcast,,,false,multimodal_tvsum_style
-waLjtcUq5Mc,980.0,982.0,annotator_1,1,podcast,,,false,multimodal_tvsum_style
-waLjtcUq5Mc,982.0,984.0,annotator_1,1,podcast,,,false,multimodal_tvsum_style
-waLjtcUq5Mc,984.0,986.0,annotator_1,1,podcast,,,false,multimodal_tvsum_style
-waLjtcUq5Mc,986.0,988.0,annotator_1,1,podcast,,,false,multimodal_tvsum_style
-waLjtcUq5Mc,988.0,990.0,annotator_1,1,podcast,,,false,multimodal_tvsum_style
-waLjtcUq5Mc,990.0,992.0,annotator_1,1,podcast,,,false,multimodal_tvsum_style
-waLjtcUq5Mc,992.0,994.0,annotator_1,1,podcast,,,false,multimodal_tvsum_style
-waLjtcUq5Mc,994.0,996.0,annotator_1,1,podcast,,,false,multimodal_tvsum_style
+waLjtcUq5Mc,0.0,2.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,2.0,4.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,4.0,6.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,6.0,8.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,8.0,10.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,10.0,12.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,12.0,14.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,14.0,16.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,16.0,18.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,18.0,20.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,20.0,22.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,22.0,24.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,24.0,26.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,26.0,28.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,28.0,30.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,30.0,32.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,32.0,34.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,34.0,36.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,36.0,38.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,38.0,40.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,40.0,42.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,42.0,44.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,44.0,46.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,46.0,48.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,48.0,50.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,50.0,52.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,52.0,54.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,54.0,56.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,56.0,58.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,58.0,60.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,60.0,62.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,62.0,64.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,64.0,66.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,66.0,68.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,68.0,70.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,70.0,72.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,72.0,74.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,74.0,76.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,76.0,78.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,78.0,80.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,80.0,82.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,82.0,84.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,84.0,86.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,86.0,88.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,88.0,90.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,90.0,92.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,92.0,94.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,94.0,96.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,96.0,98.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,98.0,100.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,100.0,102.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,102.0,104.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,104.0,106.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,106.0,108.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,108.0,110.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,110.0,112.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,112.0,114.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,114.0,116.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,116.0,118.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,118.0,120.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,120.0,122.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,122.0,124.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,124.0,126.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,126.0,128.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,128.0,130.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,130.0,132.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,132.0,134.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,134.0,136.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,136.0,138.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,138.0,140.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,140.0,142.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,142.0,144.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,144.0,146.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,146.0,148.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,148.0,150.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,150.0,152.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,152.0,154.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,154.0,156.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,156.0,158.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,158.0,160.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,160.0,162.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,162.0,164.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,164.0,166.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,166.0,168.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,168.0,170.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,170.0,172.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,172.0,174.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,174.0,176.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,176.0,178.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,178.0,180.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,180.0,182.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,182.0,184.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,184.0,186.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,186.0,188.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,188.0,190.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,190.0,192.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,192.0,194.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,194.0,196.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,196.0,198.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,198.0,200.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,200.0,202.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,202.0,204.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,204.0,206.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,206.0,208.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,208.0,210.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,210.0,212.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,212.0,214.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,214.0,216.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,216.0,218.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,218.0,220.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,220.0,222.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,222.0,224.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,224.0,226.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,226.0,228.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,228.0,230.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,230.0,232.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,232.0,234.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,234.0,236.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,236.0,238.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,238.0,240.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,240.0,242.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,242.0,244.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,244.0,246.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,246.0,248.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,248.0,250.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,250.0,252.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,252.0,254.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,254.0,256.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,256.0,258.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,258.0,260.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,260.0,262.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,262.0,264.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,264.0,266.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,266.0,268.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,268.0,270.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,270.0,272.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,272.0,274.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,274.0,276.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,276.0,278.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,278.0,280.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,280.0,282.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,282.0,284.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,284.0,286.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,286.0,288.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,288.0,290.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,290.0,292.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,292.0,294.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,294.0,296.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,296.0,298.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,298.0,300.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,300.0,302.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,302.0,304.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,304.0,306.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,306.0,308.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,308.0,310.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,310.0,312.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,312.0,314.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,314.0,316.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,316.0,318.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,318.0,320.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,320.0,322.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,322.0,324.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,324.0,326.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,326.0,328.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,328.0,330.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,330.0,332.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,332.0,334.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,334.0,336.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,336.0,338.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,338.0,340.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,340.0,342.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,342.0,344.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,344.0,346.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,346.0,348.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,348.0,350.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,350.0,352.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,352.0,354.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,354.0,356.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,356.0,358.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,358.0,360.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,360.0,362.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,362.0,364.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,364.0,366.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,366.0,368.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,368.0,370.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,370.0,372.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,372.0,374.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,374.0,376.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,376.0,378.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,378.0,380.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,380.0,382.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,382.0,384.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,384.0,386.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,386.0,388.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,388.0,390.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,390.0,392.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,392.0,394.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,394.0,396.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,396.0,398.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,398.0,400.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,400.0,402.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,402.0,404.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,404.0,406.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,406.0,408.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,408.0,410.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,410.0,412.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,412.0,414.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,414.0,416.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,416.0,418.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,418.0,420.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,420.0,422.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,422.0,424.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,424.0,426.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,426.0,428.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,428.0,430.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,430.0,432.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,432.0,434.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,434.0,436.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,436.0,438.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,438.0,440.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,440.0,442.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,442.0,444.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,444.0,446.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,446.0,448.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,448.0,450.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,450.0,452.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,452.0,454.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,454.0,456.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,456.0,458.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,458.0,460.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,460.0,462.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,462.0,464.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,464.0,466.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,466.0,468.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,468.0,470.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,470.0,472.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,472.0,474.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,474.0,476.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,476.0,478.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,478.0,480.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,480.0,482.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,482.0,484.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,484.0,486.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,486.0,488.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,488.0,490.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,490.0,492.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,492.0,494.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,494.0,496.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,496.0,498.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,498.0,500.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,500.0,502.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,502.0,504.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,504.0,506.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,506.0,508.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,508.0,510.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,510.0,512.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,512.0,514.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,514.0,516.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,516.0,518.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,518.0,520.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,520.0,522.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,522.0,524.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,524.0,526.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,526.0,528.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,528.0,530.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,530.0,532.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,532.0,534.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,534.0,536.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,536.0,538.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,538.0,540.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,540.0,542.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,542.0,544.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,544.0,546.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,546.0,548.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,548.0,550.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,550.0,552.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,552.0,554.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,554.0,556.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,556.0,558.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,558.0,560.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,560.0,562.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,562.0,564.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,564.0,566.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,566.0,568.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,568.0,570.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,570.0,572.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,572.0,574.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,574.0,576.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,576.0,578.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,578.0,580.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,580.0,582.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,582.0,584.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,584.0,586.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,586.0,588.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,588.0,590.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,590.0,592.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,592.0,594.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,594.0,596.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,596.0,598.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,598.0,600.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,600.0,602.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,602.0,604.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,604.0,606.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,606.0,608.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,608.0,610.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,610.0,612.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,612.0,614.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,614.0,616.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,616.0,618.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,618.0,620.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,620.0,622.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,622.0,624.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,624.0,626.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,626.0,628.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,628.0,630.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,630.0,632.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,632.0,634.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,634.0,636.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,636.0,638.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,638.0,640.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,640.0,642.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,642.0,644.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,644.0,646.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,646.0,648.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,648.0,650.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,650.0,652.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,652.0,654.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,654.0,656.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,656.0,658.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,658.0,660.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,660.0,662.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,662.0,664.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,664.0,666.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,666.0,668.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,668.0,670.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,670.0,672.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,672.0,674.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,674.0,676.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,676.0,678.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,678.0,680.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,680.0,682.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,682.0,684.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,684.0,686.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,686.0,688.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,688.0,690.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,690.0,692.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,692.0,694.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,694.0,696.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,696.0,698.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,698.0,700.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,700.0,702.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,702.0,704.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,704.0,706.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,706.0,708.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,708.0,710.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,710.0,712.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,712.0,714.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,714.0,716.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,716.0,718.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,718.0,720.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,720.0,722.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,722.0,724.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,724.0,726.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,726.0,728.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,728.0,730.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,730.0,732.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,732.0,734.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,734.0,736.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,736.0,738.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,738.0,740.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,740.0,742.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,742.0,744.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,744.0,746.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,746.0,748.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,748.0,750.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,750.0,752.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,752.0,754.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,754.0,756.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,756.0,758.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,758.0,760.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,760.0,762.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,762.0,764.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,764.0,766.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,766.0,768.0,youtube_most_replayed_consensus,5,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,768.0,770.0,youtube_most_replayed_consensus,4,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,770.0,772.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,772.0,774.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,774.0,776.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,776.0,778.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,778.0,780.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,780.0,782.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,782.0,784.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,784.0,786.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,786.0,788.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,788.0,790.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,790.0,792.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,792.0,794.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,794.0,796.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,796.0,798.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,798.0,800.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,800.0,802.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,802.0,804.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,804.0,806.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,806.0,808.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,808.0,810.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,810.0,812.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,812.0,814.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,814.0,816.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,816.0,818.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,818.0,820.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,820.0,822.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,822.0,824.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,824.0,826.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,826.0,828.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,828.0,830.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,830.0,832.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,832.0,834.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,834.0,836.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,836.0,838.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,838.0,840.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,840.0,842.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,842.0,844.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,844.0,846.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,846.0,848.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,848.0,850.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,850.0,852.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,852.0,854.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,854.0,856.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,856.0,858.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,858.0,860.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,860.0,862.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,862.0,864.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,864.0,866.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,866.0,868.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,868.0,870.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,870.0,872.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,872.0,874.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,874.0,876.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,876.0,878.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,878.0,880.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,880.0,882.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,882.0,884.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,884.0,886.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,886.0,888.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,888.0,890.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,890.0,892.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,892.0,894.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,894.0,896.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,896.0,898.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,898.0,900.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,900.0,902.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,902.0,904.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,904.0,906.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,906.0,908.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,908.0,910.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,910.0,912.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,912.0,914.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,914.0,916.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,916.0,918.0,youtube_most_replayed_consensus,2,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,918.0,920.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,920.0,922.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,922.0,924.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,924.0,926.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,926.0,928.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,928.0,930.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,930.0,932.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,932.0,934.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,934.0,936.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,936.0,938.0,youtube_most_replayed_consensus,3,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,938.0,940.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,940.0,942.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,942.0,944.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,944.0,946.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,946.0,948.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,948.0,950.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,950.0,952.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,952.0,954.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,954.0,956.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,956.0,958.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,958.0,960.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,960.0,962.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,962.0,964.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,964.0,966.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,966.0,968.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,968.0,970.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,970.0,972.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,972.0,974.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,974.0,976.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,976.0,978.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,978.0,980.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,980.0,982.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,982.0,984.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,984.0,986.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,986.0,988.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,988.0,990.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,990.0,992.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,992.0,994.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,994.0,996.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style
+waLjtcUq5Mc,996.0,998.0,youtube_most_replayed_consensus,1,podcast,most_replayed_heatmap,Lex Fridman on Journalism & Putin Interview,false,multimodal_tvsum_style

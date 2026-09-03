@@ -1,13 +1,11 @@
 {
-  "video_id": "-cRswJf8OnI",
-  "annotator_id": "youtube_most_replayed_consensus",
-  "domain": "podcast",
-  "title": "Billionaire Reveals BRUTAL Truth About Money",
+  "video_id": "DNQDqq4mWSY",
+  "annotator_id": "annotator_1",
   "highlights": [
     {
       "highlight_id": "hl_01",
-      "start_time": 244.44,
-      "end_time": 333.6,
+      "start_time": 44.72,
+      "end_time": 80.0,
       "importance": 5,
       "complete_thought": true,
       "natural_start": true,
@@ -15,18 +13,18 @@
     },
     {
       "highlight_id": "hl_02",
-      "start_time": 436.64,
-      "end_time": 526.48,
-      "importance": 5,
+      "start_time": 217.0,
+      "end_time": 261.76,
+      "importance": 4,
       "complete_thought": true,
       "natural_start": true,
       "natural_end": true
     },
     {
       "highlight_id": "hl_03",
-      "start_time": 677.92,
-      "end_time": 724.88,
-      "importance": 5,
+      "start_time": 605.72,
+      "end_time": 666.16,
+      "importance": 4,
       "complete_thought": true,
       "natural_start": true,
       "natural_end": true

@@ -1,11 +1,13 @@
 {
   "video_id": "DNQDqq4mWSY",
-  "annotator_id": "annotator_1",
+  "annotator_id": "youtube_most_replayed_consensus",
+  "domain": "podcast",
+  "title": "Sam Altman on GPT-5 | Lex Fridman Podcast",
   "highlights": [
     {
       "highlight_id": "hl_01",
-      "start_time": 44.72,
-      "end_time": 80.0,
+      "start_time": 16.04,
+      "end_time": 54.88,
       "importance": 5,
       "complete_thought": true,
       "natural_start": true,
@@ -13,18 +15,18 @@
     },
     {
       "highlight_id": "hl_02",
-      "start_time": 217.0,
-      "end_time": 261.76,
-      "importance": 4,
+      "start_time": 146.68,
+      "end_time": 206.0,
+      "importance": 5,
       "complete_thought": true,
       "natural_start": true,
       "natural_end": true
     },
     {
       "highlight_id": "hl_03",
-      "start_time": 605.72,
-      "end_time": 666.16,
-      "importance": 4,
+      "start_time": 477.0,
+      "end_time": 518.16,
+      "importance": 5,
       "complete_thought": true,
       "natural_start": true,
       "natural_end": true

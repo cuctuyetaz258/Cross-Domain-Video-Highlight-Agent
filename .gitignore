@@ -30,6 +30,8 @@ data/raw/
 data/features_cache/
 data/models/
 data/reports/
+data/downloads/
+data/checkpoints/
 *.h5
 *.tar
 *.zip

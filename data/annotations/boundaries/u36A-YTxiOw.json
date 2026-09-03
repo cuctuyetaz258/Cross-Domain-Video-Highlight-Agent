@@ -1,11 +1,13 @@
 {
   "video_id": "u36A-YTxiOw",
-  "annotator_id": "annotator_1",
+  "annotator_id": "youtube_most_replayed_consensus",
+  "domain": "podcast",
+  "title": "The Best Way To Launch Your Startup | Startup School",
   "highlights": [
     {
       "highlight_id": "hl_01",
-      "start_time": 320.7,
-      "end_time": 396.9,
+      "start_time": 407.34,
+      "end_time": 468.48,
       "importance": 5,
       "complete_thought": true,
       "natural_start": true,
@@ -13,8 +15,8 @@
     },
     {
       "highlight_id": "hl_02",
-      "start_time": 820.92,
-      "end_time": 903.0,
+      "start_time": 714.0,
+      "end_time": 803.34,
       "importance": 5,
       "complete_thought": true,
       "natural_start": true,
@@ -22,8 +24,8 @@
     },
     {
       "highlight_id": "hl_03",
-      "start_time": 957.06,
-      "end_time": 1017.84,
+      "start_time": 825.24,
+      "end_time": 870.84,
       "importance": 5,
       "complete_thought": true,
       "natural_start": true,
@@ -31,17 +33,8 @@
     },
     {
       "highlight_id": "hl_04",
-      "start_time": 1044.6,
-      "end_time": 1097.28,
-      "importance": 5,
-      "complete_thought": true,
-      "natural_start": true,
-      "natural_end": true
-    },
-    {
-      "highlight_id": "hl_05",
-      "start_time": 1163.22,
-      "end_time": 1251.78,
+      "start_time": 870.84,
+      "end_time": 959.1,
       "importance": 5,
       "complete_thought": true,
       "natural_start": true,

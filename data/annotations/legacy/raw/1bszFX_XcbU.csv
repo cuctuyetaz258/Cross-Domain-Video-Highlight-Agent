@@ -1,0 +1,433 @@
+﻿video_id,start_sec,end_sec,annotator_id,importance,domain,reason_tag,transcript_hint,needs_review,label_protocol
+1bszFX_XcbU,0.0,2.0,annotator_1,1,podcast,,,False,multimodal_tvsum_style
+1bszFX_XcbU,2.0,4.0,annotator_1,3,podcast,,now let's talk about how the best,False,multimodal_tvsum_style
+1bszFX_XcbU,4.0,6.0,annotator_1,3,podcast,,now let's talk about how the best students structure their days turns out,False,multimodal_tvsum_style
+1bszFX_XcbU,6.0,8.0,annotator_1,3,podcast,,now let's talk about how the best students structure their days turns out there are great studies on this there is,False,multimodal_tvsum_style
+1bszFX_XcbU,8.0,10.0,annotator_1,3,podcast,,students structure their days turns out there are great studies on this there is a really nice paper in fact that,False,multimodal_tvsum_style
+1bszFX_XcbU,10.0,12.0,annotator_1,1,podcast,,there are great studies on this there is a really nice paper in fact that,False,multimodal_tvsum_style
+1bszFX_XcbU,12.0,14.0,annotator_1,2,podcast,,there are great studies on this there is a really nice paper in fact that surveyed close to 700 students these,False,multimodal_tvsum_style
+1bszFX_XcbU,14.0,16.0,annotator_1,3,podcast,,a really nice paper in fact that surveyed close to 700 students these,False,multimodal_tvsum_style
+1bszFX_XcbU,16.0,18.0,annotator_1,3,podcast,,a really nice paper in fact that surveyed close to 700 students these were medical students approximately,False,multimodal_tvsum_style
+1bszFX_XcbU,18.0,20.0,annotator_1,3,podcast,,surveyed close to 700 students these were medical students approximately equal number of male and female students,False,multimodal_tvsum_style
+1bszFX_XcbU,20.0,22.0,annotator_1,3,podcast,,were medical students approximately equal number of male and female students,False,multimodal_tvsum_style
+1bszFX_XcbU,22.0,24.0,annotator_1,3,podcast,,were medical students approximately equal number of male and female students and analyze the most useful learning,False,multimodal_tvsum_style
+1bszFX_XcbU,24.0,26.0,annotator_1,3,podcast,,equal number of male and female students and analyze the most useful learning habits that is the learning habits,False,multimodal_tvsum_style
+1bszFX_XcbU,26.0,28.0,annotator_1,3,podcast,,and analyze the most useful learning habits that is the learning habits associated with the most successful,False,multimodal_tvsum_style
+1bszFX_XcbU,28.0,30.0,annotator_1,3,podcast,,associated with the most successful students now anytime you do a study like,False,multimodal_tvsum_style
+1bszFX_XcbU,30.0,32.0,annotator_1,3,podcast,,associated with the most successful students now anytime you do a study like this where people take surveys there's,False,multimodal_tvsum_style
+1bszFX_XcbU,32.0,34.0,annotator_1,3,podcast,,this where people take surveys there's always the issue of causality in fact we,False,multimodal_tvsum_style
+1bszFX_XcbU,34.0,36.0,annotator_1,3,podcast,,this where people take surveys there's always the issue of causality in fact we can pretty much set aside any possible,False,multimodal_tvsum_style
+1bszFX_XcbU,36.0,38.0,annotator_1,3,podcast,,always the issue of causality in fact we can pretty much set aside any possible causality for instance I'm about to tell,False,multimodal_tvsum_style
+1bszFX_XcbU,38.0,40.0,annotator_1,3,podcast,,can pretty much set aside any possible causality for instance I'm about to tell you that the very best performing studen,False,multimodal_tvsum_style
+1bszFX_XcbU,40.0,42.0,annotator_1,3,podcast,,you that the very best performing students tend to study for about three or four hours per day but you could,False,multimodal_tvsum_style
+1bszFX_XcbU,42.0,44.0,annotator_1,3,podcast,,students tend to study for about three or four hours per day but you could easily say Well they're the best,False,multimodal_tvsum_style
+1bszFX_XcbU,44.0,46.0,annotator_1,3,podcast,,or four hours per day but you could easily say Well they're the best students because they study three or,False,multimodal_tvsum_style
+1bszFX_XcbU,46.0,48.0,annotator_1,3,podcast,,easily say Well they're the best students because they study three or four hours per day they don't study,False,multimodal_tvsum_style
+1bszFX_XcbU,48.0,50.0,annotator_1,3,podcast,,students because they study three or four hours per day they don't study three or four hours per day because,False,multimodal_tvsum_style
+1bszFX_XcbU,50.0,52.0,annotator_1,3,podcast,,four hours per day they don't study three or four hours per day because they're the best students and you'd be exactly r,False,multimodal_tvsum_style
+1bszFX_XcbU,52.0,54.0,annotator_1,3,podcast,,they're the best students and you'd be exactly right okay we can get into all,False,multimodal_tvsum_style
+1bszFX_XcbU,54.0,56.0,annotator_1,3,podcast,,they're the best students and you'd be exactly right okay we can get into all sorts of discussions about correlation ver,False,multimodal_tvsum_style
+1bszFX_XcbU,56.0,58.0,annotator_1,3,podcast,,sorts of discussions about correlation versus causation about reverse causality,False,multimodal_tvsum_style
+1bszFX_XcbU,58.0,60.0,annotator_1,3,podcast,,sorts of discussions about correlation versus causation about reverse causality and on and on however none of that is,False,multimodal_tvsum_style
+1bszFX_XcbU,60.0,62.0,annotator_1,2,podcast,,versus causation about reverse causality and on and on however none of that is the point here the point here is to,False,multimodal_tvsum_style
+1bszFX_XcbU,62.0,64.0,annotator_1,2,podcast,,and on and on however none of that is the point here the point here is to establish what are the habits that the,False,multimodal_tvsum_style
+1bszFX_XcbU,64.0,66.0,annotator_1,2,podcast,,the point here the point here is to establish what are the habits that the most successful students seem to,False,multimodal_tvsum_style
+1bszFX_XcbU,66.0,68.0,annotator_1,2,podcast,,establish what are the habits that the most successful students seem to incorporate over and over again,False,multimodal_tvsum_style
+1bszFX_XcbU,68.0,70.0,annotator_1,2,podcast,,most successful students seem to incorporate over and over again regardless of what classes they're,False,multimodal_tvsum_style
+1bszFX_XcbU,70.0,72.0,annotator_1,2,podcast,,incorporate over and over again regardless of what classes they're taking regardless of where they are in,False,multimodal_tvsum_style
+1bszFX_XcbU,72.0,74.0,annotator_1,2,podcast,,regardless of what classes they're taking regardless of where they are in their Arc of their learning trajectory,False,multimodal_tvsum_style
+1bszFX_XcbU,74.0,76.0,annotator_1,2,podcast,,taking regardless of where they are in their Arc of their learning trajectory and so what we know based on this study,False,multimodal_tvsum_style
+1bszFX_XcbU,76.0,78.0,annotator_1,2,podcast,,their Arc of their learning trajectory and so what we know based on this study and I'll provide a link to it in the show,False,multimodal_tvsum_style
+1bszFX_XcbU,78.0,80.0,annotator_1,2,podcast,,and I'll provide a link to it in the show note captions is that there are at,False,multimodal_tvsum_style
+1bszFX_XcbU,80.0,82.0,annotator_1,3,podcast,,and I'll provide a link to it in the show note captions is that there are at least 10 study habits that the highly,False,multimodal_tvsum_style
+1bszFX_XcbU,82.0,84.0,annotator_1,3,podcast,,show note captions is that there are at least 10 study habits that the highly effective students use I'm going to,False,multimodal_tvsum_style
+1bszFX_XcbU,84.0,86.0,annotator_1,3,podcast,,least 10 study habits that the highly effective students use I'm going to focus on the top five or six just for,False,multimodal_tvsum_style
+1bszFX_XcbU,86.0,88.0,annotator_1,3,podcast,,effective students use I'm going to focus on the top five or six just for sake of time because it turns out that,False,multimodal_tvsum_style
+1bszFX_XcbU,88.0,90.0,annotator_1,3,podcast,,focus on the top five or six just for sake of time because it turns out that most of the effect it appears of being a,False,multimodal_tvsum_style
+1bszFX_XcbU,90.0,92.0,annotator_1,3,podcast,,sake of time because it turns out that most of the effect it appears of being a,False,multimodal_tvsum_style
+1bszFX_XcbU,92.0,94.0,annotator_1,3,podcast,,sake of time because it turns out that most of the effect it appears of being a better student can be attributed to,False,multimodal_tvsum_style
+1bszFX_XcbU,94.0,96.0,annotator_1,3,podcast,,most of the effect it appears of being a better student can be attributed to these top five or six habits first of,False,multimodal_tvsum_style
+1bszFX_XcbU,96.0,98.0,annotator_1,3,podcast,,better student can be attributed to these top five or six habits first of all they set aside time to study they,False,multimodal_tvsum_style
+1bszFX_XcbU,98.0,100.0,annotator_1,3,podcast,,these top five or six habits first of all they set aside time to study they,False,multimodal_tvsum_style
+1bszFX_XcbU,100.0,102.0,annotator_1,4,podcast,,these top five or six habits first of all they set aside time to study they literally schedule time to study now,False,multimodal_tvsum_style
+1bszFX_XcbU,102.0,104.0,annotator_1,4,podcast,,all they set aside time to study they literally schedule time to study now this probably serves several roles the,False,multimodal_tvsum_style
+1bszFX_XcbU,104.0,106.0,annotator_1,4,podcast,,literally schedule time to study now this probably serves several roles the first one is that they are able to clear,False,multimodal_tvsum_style
+1bszFX_XcbU,106.0,108.0,annotator_1,4,podcast,,this probably serves several roles the first one is that they are able to clear out other distractions and in fact,False,multimodal_tvsum_style
+1bszFX_XcbU,108.0,110.0,annotator_1,4,podcast,,first one is that they are able to clear out other distractions and in fact that's the second thing that they do,False,multimodal_tvsum_style
+1bszFX_XcbU,110.0,112.0,annotator_1,4,podcast,,out other distractions and in fact that's the second thing that they do they are very effective where they make,False,multimodal_tvsum_style
+1bszFX_XcbU,112.0,114.0,annotator_1,4,podcast,,that's the second thing that they do they are very effective where they make it a point of putting their phone away,False,multimodal_tvsum_style
+1bszFX_XcbU,114.0,116.0,annotator_1,4,podcast,,they are very effective where they make it a point of putting their phone away and off of isolating themselves that's,False,multimodal_tvsum_style
+1bszFX_XcbU,116.0,118.0,annotator_1,4,podcast,,it a point of putting their phone away and off of isolating themselves that's right they're not studying with other,False,multimodal_tvsum_style
+1bszFX_XcbU,118.0,120.0,annotator_1,5,podcast,,and off of isolating themselves that's right they're not studying with other people they study alone which is not to,False,multimodal_tvsum_style
+1bszFX_XcbU,120.0,122.0,annotator_1,5,podcast,,right they're not studying with other people they study alone which is not to say that people who study with others,False,multimodal_tvsum_style
+1bszFX_XcbU,122.0,124.0,annotator_1,5,podcast,,people they study alone which is not to say that people who study with others cannot be effective in their studying,False,multimodal_tvsum_style
+1bszFX_XcbU,124.0,126.0,annotator_1,5,podcast,,say that people who study with others cannot be effective in their studying but the best performing students seem to,False,multimodal_tvsum_style
+1bszFX_XcbU,126.0,128.0,annotator_1,5,podcast,,cannot be effective in their studying but the best performing students seem to study alone they put their phone away,False,multimodal_tvsum_style
+1bszFX_XcbU,128.0,130.0,annotator_1,5,podcast,,but the best performing students seem to study alone they put their phone away,False,multimodal_tvsum_style
+1bszFX_XcbU,130.0,132.0,annotator_1,5,podcast,,but the best performing students seem to study alone they put their phone away they tell their friends and families,False,multimodal_tvsum_style
+1bszFX_XcbU,132.0,134.0,annotator_1,5,podcast,,study alone they put their phone away they tell their friends and families that they are not going to be able to be,False,multimodal_tvsum_style
+1bszFX_XcbU,134.0,136.0,annotator_1,5,podcast,,they tell their friends and families that they are not going to be able to be reached during that time and yes they,False,multimodal_tvsum_style
+1bszFX_XcbU,136.0,138.0,annotator_1,5,podcast,,that they are not going to be able to be reached during that time and yes they,False,multimodal_tvsum_style
+1bszFX_XcbU,138.0,140.0,annotator_1,5,podcast,,that they are not going to be able to be reached during that time and yes they study for three or four hours per day,False,multimodal_tvsum_style
+1bszFX_XcbU,140.0,142.0,annotator_1,5,podcast,,reached during that time and yes they study for three or four hours per day but they break that up into a couple of,False,multimodal_tvsum_style
+1bszFX_XcbU,142.0,144.0,annotator_1,5,podcast,,study for three or four hours per day but they break that up into a couple of different sessions typically two or three ,False,multimodal_tvsum_style
+1bszFX_XcbU,144.0,146.0,annotator_1,5,podcast,,different sessions typically two or three sessions so they're not doing a three or four hour studying about all in,False,multimodal_tvsum_style
+1bszFX_XcbU,146.0,148.0,annotator_1,5,podcast,,three sessions so they're not doing a three or four hour studying about all in one,False,multimodal_tvsum_style
+1bszFX_XcbU,148.0,150.0,annotator_1,5,podcast,,three or four hour studying about all in one shot so they're managing their time,False,multimodal_tvsum_style
+1bszFX_XcbU,150.0,152.0,annotator_1,5,podcast,,one shot so they're managing their time they're eliminating distractions and,False,multimodal_tvsum_style
+1bszFX_XcbU,152.0,154.0,annotator_1,5,podcast,,shot so they're managing their time they're eliminating distractions and they're studying for a consistent amount,False,multimodal_tvsum_style
+1bszFX_XcbU,154.0,156.0,annotator_1,5,podcast,,they're eliminating distractions and they're studying for a consistent amount,False,multimodal_tvsum_style
+1bszFX_XcbU,156.0,158.0,annotator_1,5,podcast,,they're eliminating distractions and they're studying for a consistent amount of time at least 5 days per week okay,False,multimodal_tvsum_style
+1bszFX_XcbU,158.0,160.0,annotator_1,5,podcast,,they're studying for a consistent amount of time at least 5 days per week okay presumably they're taking some weekends,False,multimodal_tvsum_style
+1bszFX_XcbU,160.0,162.0,annotator_1,4,podcast,,of time at least 5 days per week okay presumably they're taking some weekends off although that wasn't made clear from,False,multimodal_tvsum_style
+1bszFX_XcbU,162.0,164.0,annotator_1,4,podcast,,presumably they're taking some weekends off although that wasn't made clear from this paper the other thing that they do,False,multimodal_tvsum_style
+1bszFX_XcbU,164.0,166.0,annotator_1,4,podcast,,off although that wasn't made clear from this paper the other thing that they do and this is very important is that they,False,multimodal_tvsum_style
+1bszFX_XcbU,166.0,168.0,annotator_1,4,podcast,,and this is very important is that they make an effort to then teach their peers,False,multimodal_tvsum_style
+1bszFX_XcbU,168.0,170.0,annotator_1,4,podcast,,and this is very important is that they make an effort to then teach their peers to teach other students in the class no,False,multimodal_tvsum_style
+1bszFX_XcbU,170.0,172.0,annotator_1,4,podcast,,make an effort to then teach their peers to teach other students in the class now some of you may be thinking and I'm,False,multimodal_tvsum_style
+1bszFX_XcbU,172.0,174.0,annotator_1,4,podcast,,to teach other students in the class now some of you may be thinking and I'm thinking back to college here mostly,False,multimodal_tvsum_style
+1bszFX_XcbU,174.0,176.0,annotator_1,4,podcast,,some of you may be thinking and I'm thinking back to college here mostly that if you spend all this time learning the in,False,multimodal_tvsum_style
+1bszFX_XcbU,176.0,178.0,annotator_1,4,podcast,,that if you spend all this time learning the information and you are in a competitive scenario with the other,False,multimodal_tvsum_style
+1bszFX_XcbU,178.0,180.0,annotator_1,3,podcast,,the information and you are in a competitive scenario with the other students that teach teaching them the,False,multimodal_tvsum_style
+1bszFX_XcbU,180.0,182.0,annotator_1,3,podcast,,competitive scenario with the other students that teach teaching them the information is kind of a freebie for,False,multimodal_tvsum_style
+1bszFX_XcbU,182.0,184.0,annotator_1,5,podcast,,students that teach teaching them the information is kind of a freebie for them and it's harder for you meaning,False,multimodal_tvsum_style
+1bszFX_XcbU,184.0,186.0,annotator_1,5,podcast,,them and it's harder for you meaning you're putting yourself at a competitive disadvantage or you're giving them an,False,multimodal_tvsum_style
+1bszFX_XcbU,186.0,188.0,annotator_1,5,podcast,,you're putting yourself at a competitive disadvantage or you're giving them an unfair Advantage for not having done the,False,multimodal_tvsum_style
+1bszFX_XcbU,188.0,190.0,annotator_1,5,podcast,,disadvantage or you're giving them an unfair Advantage for not having done the work now while this paper didn't do an,False,multimodal_tvsum_style
+1bszFX_XcbU,190.0,192.0,annotator_1,5,podcast,,unfair Advantage for not having done the work now while this paper didn't do an analysis of whether or not these,False,multimodal_tvsum_style
+1bszFX_XcbU,192.0,194.0,annotator_1,5,podcast,,work now while this paper didn't do an analysis of whether or not these students that served as the Learners,False,multimodal_tvsum_style
+1bszFX_XcbU,194.0,196.0,annotator_1,5,podcast,,analysis of whether or not these students that served as the Learners from the other students got an unfair,False,multimodal_tvsum_style
+1bszFX_XcbU,196.0,198.0,annotator_1,5,podcast,,students that served as the Learners from the other students got an unfair Advantage it's very clear that students,False,multimodal_tvsum_style
+1bszFX_XcbU,198.0,200.0,annotator_1,5,podcast,,from the other students got an unfair Advantage it's very clear that students,False,multimodal_tvsum_style
+1bszFX_XcbU,200.0,202.0,annotator_1,5,podcast,,from the other students got an unfair Advantage it's very clear that students who make it a point to learn material in,False,multimodal_tvsum_style
+1bszFX_XcbU,202.0,204.0,annotator_1,5,podcast,,Advantage it's very clear that students who make it a point to learn material in isolation then bring that material to,False,multimodal_tvsum_style
+1bszFX_XcbU,204.0,206.0,annotator_1,5,podcast,,who make it a point to learn material in isolation then bring that material to other students in the same course and tea,False,multimodal_tvsum_style
+1bszFX_XcbU,206.0,208.0,annotator_1,5,podcast,,other students in the same course and teach them perform exceedingly well in,False,multimodal_tvsum_style
+1bszFX_XcbU,208.0,210.0,annotator_1,5,podcast,,other students in the same course and teach them perform exceedingly well in comparison to the other students so,False,multimodal_tvsum_style
+1bszFX_XcbU,210.0,212.0,annotator_1,5,podcast,,teach them perform exceedingly well in comparison to the other students so don't be afraid to be a teacher of your,False,multimodal_tvsum_style
+1bszFX_XcbU,212.0,214.0,annotator_1,5,podcast,,comparison to the other students so don't be afraid to be a teacher of your peers in order to test this is key to,False,multimodal_tvsum_style
+1bszFX_XcbU,214.0,216.0,annotator_1,5,podcast,,don't be afraid to be a teacher of your peers in order to test this is key to test and develop Mastery of the material,False,multimodal_tvsum_style
+1bszFX_XcbU,216.0,218.0,annotator_1,5,podcast,,peers in order to test this is key to test and develop Mastery of the material,False,multimodal_tvsum_style
+1bszFX_XcbU,218.0,220.0,annotator_1,5,podcast,,peers in order to test this is key to test and develop Mastery of the material now in my laboratory for years we used,False,multimodal_tvsum_style
+1bszFX_XcbU,220.0,222.0,annotator_1,5,podcast,,test and develop Mastery of the material now in my laboratory for years we used,False,multimodal_tvsum_style
+1bszFX_XcbU,222.0,224.0,annotator_1,5,podcast,,test and develop Mastery of the material now in my laboratory for years we used to have a saying which I simply picked,False,multimodal_tvsum_style
+1bszFX_XcbU,224.0,226.0,annotator_1,5,podcast,,now in my laboratory for years we used to have a saying which I simply picked up from the Laboratories I was trained in ,False,multimodal_tvsum_style
+1bszFX_XcbU,226.0,228.0,annotator_1,5,podcast,,up from the Laboratories I was trained in I didn't come up with the saying which was watch one do one teach one and,False,multimodal_tvsum_style
+1bszFX_XcbU,228.0,230.0,annotator_1,5,podcast,,in I didn't come up with the saying which was watch one do one teach one and that was referring to doing surgeries or,False,multimodal_tvsum_style
+1bszFX_XcbU,230.0,232.0,annotator_1,5,podcast,,which was watch one do one teach one and that was referring to doing surgeries or suturing or doing an antibody reaction,False,multimodal_tvsum_style
+1bszFX_XcbU,232.0,234.0,annotator_1,5,podcast,,that was referring to doing surgeries or suturing or doing an antibody reaction,False,multimodal_tvsum_style
+1bszFX_XcbU,234.0,236.0,annotator_1,5,podcast,,that was referring to doing surgeries or suturing or doing an antibody reaction or a western blot or things that you do ,False,multimodal_tvsum_style
+1bszFX_XcbU,236.0,238.0,annotator_1,5,podcast,,or a western blot or things that you do in Laboratories watch one do one teach one,False,multimodal_tvsum_style
+1bszFX_XcbU,238.0,240.0,annotator_1,5,podcast,,in Laboratories watch one do one teach one,False,multimodal_tvsum_style
+1bszFX_XcbU,240.0,242.0,annotator_1,4,podcast,,in Laboratories watch one do one teach one watch one do one teach one of course,False,multimodal_tvsum_style
+1bszFX_XcbU,242.0,244.0,annotator_1,4,podcast,,Laboratories watch one do one teach one watch one do one teach one of course should be reserved to anything where no one,False,multimodal_tvsum_style
+1bszFX_XcbU,244.0,246.0,annotator_1,4,podcast,,should be reserved to anything where no one's going to be put in danger by the watch one do one teach one procedure,False,multimodal_tvsum_style
+1bszFX_XcbU,246.0,248.0,annotator_1,4,podcast,,one's going to be put in danger by the watch one do one teach one procedure right some procedures especially in,False,multimodal_tvsum_style
+1bszFX_XcbU,248.0,250.0,annotator_1,4,podcast,,watch one do one teach one procedure right some procedures especially in Laboratories can be dangerous given the,False,multimodal_tvsum_style
+1bszFX_XcbU,250.0,252.0,annotator_1,4,podcast,,right some procedures especially in Laboratories can be dangerous given the materials you use Etc and of course,False,multimodal_tvsum_style
+1bszFX_XcbU,252.0,254.0,annotator_1,4,podcast,,Laboratories can be dangerous given the materials you use Etc and of course today we're talking about learning and,False,multimodal_tvsum_style
+1bszFX_XcbU,254.0,256.0,annotator_1,4,podcast,,materials you use Etc and of course today we're talking about learning and studying generally so provid it it's,False,multimodal_tvsum_style
+1bszFX_XcbU,256.0,258.0,annotator_1,4,podcast,,today we're talking about learning and studying generally so provid it it's safe watch one do one teach one is an,False,multimodal_tvsum_style
+1bszFX_XcbU,258.0,260.0,annotator_1,5,podcast,,studying generally so provid it it's safe watch one do one teach one is an excellent means to learn that is to,False,multimodal_tvsum_style
+1bszFX_XcbU,260.0,262.0,annotator_1,5,podcast,,safe watch one do one teach one is an excellent means to learn that is to,False,multimodal_tvsum_style
+1bszFX_XcbU,262.0,264.0,annotator_1,5,podcast,,safe watch one do one teach one is an excellent means to learn that is to study new material to develop,False,multimodal_tvsum_style
+1bszFX_XcbU,264.0,266.0,annotator_1,5,podcast,,excellent means to learn that is to study new material to develop proficiency and even Mastery and over,False,multimodal_tvsum_style
+1bszFX_XcbU,266.0,268.0,annotator_1,5,podcast,,study new material to develop proficiency and even Mastery and over time perhaps even virtuosity we'll,False,multimodal_tvsum_style
+1bszFX_XcbU,268.0,270.0,annotator_1,2,podcast,,proficiency and even Mastery and over time perhaps even virtuosity we'll return to that that later those,False,multimodal_tvsum_style
+1bszFX_XcbU,270.0,272.0,annotator_1,2,podcast,,time perhaps even virtuosity we'll return to that that later those distinctions so going back to this idea,False,multimodal_tvsum_style
+1bszFX_XcbU,272.0,274.0,annotator_1,2,podcast,,return to that that later those distinctions so going back to this idea that the best students set aside time,False,multimodal_tvsum_style
+1bszFX_XcbU,274.0,276.0,annotator_1,2,podcast,,distinctions so going back to this idea that the best students set aside time they designate time to study alone,False,multimodal_tvsum_style
+1bszFX_XcbU,276.0,278.0,annotator_1,2,podcast,,that the best students set aside time they designate time to study alone,False,multimodal_tvsum_style
+1bszFX_XcbU,278.0,280.0,annotator_1,2,podcast,,that the best students set aside time they designate time to study alone without distractions that is sure to,False,multimodal_tvsum_style
+1bszFX_XcbU,280.0,282.0,annotator_1,2,podcast,,they designate time to study alone without distractions that is sure to help them anchor their focus and,False,multimodal_tvsum_style
+1bszFX_XcbU,282.0,284.0,annotator_1,2,podcast,,without distractions that is sure to help them anchor their focus and attention they know that they're going,False,multimodal_tvsum_style
+1bszFX_XcbU,284.0,286.0,annotator_1,2,podcast,,help them anchor their focus and attention they know that they're going to need to use their focus and attention,False,multimodal_tvsum_style
+1bszFX_XcbU,286.0,288.0,annotator_1,2,podcast,,attention they know that they're going to need to use their focus and attention during that time and we know with,False,multimodal_tvsum_style
+1bszFX_XcbU,288.0,290.0,annotator_1,2,podcast,,to need to use their focus and attention during that time and we know with absolute certainty that focus and,False,multimodal_tvsum_style
+1bszFX_XcbU,290.0,292.0,annotator_1,3,podcast,,during that time and we know with absolute certainty that focus and attention are a limited but renewable,False,multimodal_tvsum_style
+1bszFX_XcbU,292.0,294.0,annotator_1,3,podcast,,absolute certainty that focus and attention are a limited but renewable,False,multimodal_tvsum_style
+1bszFX_XcbU,294.0,296.0,annotator_1,3,podcast,,absolute certainty that focus and attention are a limited but renewable resource in the human brain the longer,False,multimodal_tvsum_style
+1bszFX_XcbU,296.0,298.0,annotator_1,3,podcast,,attention are a limited but renewable resource in the human brain the longer you're awake the more is the buildup of,False,multimodal_tvsum_style
+1bszFX_XcbU,298.0,300.0,annotator_1,3,podcast,,resource in the human brain the longer you're awake the more is the buildup of a molecule called adenosine in your,False,multimodal_tvsum_style
+1bszFX_XcbU,300.0,302.0,annotator_1,3,podcast,,a molecule called adenosine in your brain and body it makes you sleepy makes it harder to focus when you sleep,False,multimodal_tvsum_style
+1bszFX_XcbU,302.0,304.0,annotator_1,3,podcast,,brain and body it makes you sleepy makes it harder to focus when you sleep adenosine levels are pushed down again,False,multimodal_tvsum_style
+1bszFX_XcbU,304.0,306.0,annotator_1,3,podcast,,it harder to focus when you sleep adenosine levels are pushed down again you're able to focus again you feel more,False,multimodal_tvsum_style
+1bszFX_XcbU,306.0,308.0,annotator_1,3,podcast,,adenosine levels are pushed down again you're able to focus again you feel more alert you can think of adenosine as,False,multimodal_tvsum_style
+1bszFX_XcbU,308.0,310.0,annotator_1,3,podcast,,you're able to focus again you feel more alert you can think of adenosine as limiting your attentional budget which,False,multimodal_tvsum_style
+1bszFX_XcbU,310.0,312.0,annotator_1,3,podcast,,alert you can think of adenosine as limiting your attentional budget which is not to say that some people don't,False,multimodal_tvsum_style
+1bszFX_XcbU,312.0,314.0,annotator_1,3,podcast,,limiting your attentional budget which is not to say that some people don't study best in the afternoon or in the,False,multimodal_tvsum_style
+1bszFX_XcbU,314.0,316.0,annotator_1,3,podcast,,is not to say that some people don't study best in the afternoon or in the evening or even late at night right I,False,multimodal_tvsum_style
+1bszFX_XcbU,316.0,318.0,annotator_1,3,podcast,,study best in the afternoon or in the evening or even late at night right I recall times during University when I'd,False,multimodal_tvsum_style
+1bszFX_XcbU,318.0,320.0,annotator_1,3,podcast,,evening or even late at night right I recall times during University when I'd study between the hours of 10: p.m. and,False,multimodal_tvsum_style
+1bszFX_XcbU,320.0,322.0,annotator_1,3,podcast,,recall times during University when I'd study between the hours of 10: p.m. and 2: am. I don't do that any longer,False,multimodal_tvsum_style
+1bszFX_XcbU,322.0,324.0,annotator_1,3,podcast,,study between the hours of 10: p.m. and 2: am. I don't do that any longer but scheduling time where you know,False,multimodal_tvsum_style
+1bszFX_XcbU,324.0,326.0,annotator_1,3,podcast,,2: am. I don't do that any longer but scheduling time where you know you're going to need to be focused and,False,multimodal_tvsum_style
+1bszFX_XcbU,326.0,328.0,annotator_1,3,podcast,,but scheduling time where you know you're going to need to be focused and attending is perhaps one one of the most,False,multimodal_tvsum_style
+1bszFX_XcbU,328.0,330.0,annotator_1,3,podcast,,you're going to need to be focused and attending is perhaps one one of the most,False,multimodal_tvsum_style
+1bszFX_XcbU,330.0,332.0,annotator_1,3,podcast,,you're going to need to be focused and attending is perhaps one one of the most important things toward being able to,False,multimodal_tvsum_style
+1bszFX_XcbU,332.0,334.0,annotator_1,3,podcast,,attending is perhaps one one of the most important things toward being able to focus and attend to the material now if,False,multimodal_tvsum_style
+1bszFX_XcbU,334.0,336.0,annotator_1,3,podcast,,important things toward being able to focus and attend to the material now if you're taking courses you probably are,False,multimodal_tvsum_style
+1bszFX_XcbU,336.0,338.0,annotator_1,3,podcast,,focus and attend to the material now if you're taking courses you probably are going to be a slave to the timing of the,False,multimodal_tvsum_style
+1bszFX_XcbU,338.0,340.0,annotator_1,3,podcast,,you're taking courses you probably are going to be a slave to the timing of the courses you aren't going to be able to,False,multimodal_tvsum_style
+1bszFX_XcbU,340.0,342.0,annotator_1,3,podcast,,courses you aren't going to be able to tell the instructor okay listen I want you to do this course at you know 3 p.m.,False,multimodal_tvsum_style
+1bszFX_XcbU,342.0,344.0,annotator_1,3,podcast,,tell the instructor okay listen I want you to do this course at you know 3 p.m. because that's when you learn best or 8:,False,multimodal_tvsum_style
+1bszFX_XcbU,344.0,346.0,annotator_1,3,podcast,,you to do this course at you know 3 p.m. because that's when you learn best or 8:,False,multimodal_tvsum_style
+1bszFX_XcbU,346.0,348.0,annotator_1,3,podcast,,because that's when you learn best or 8: a.m. because that's when you happen to be able to attend best however to the,False,multimodal_tvsum_style
+1bszFX_XcbU,348.0,350.0,annotator_1,3,podcast,,a.m. because that's when you happen to be able to attend best however to the extent that you have any control over,False,multimodal_tvsum_style
+1bszFX_XcbU,350.0,352.0,annotator_1,3,podcast,,be able to attend best however to the extent that you have any control over the time in which you're going to study,False,multimodal_tvsum_style
+1bszFX_XcbU,352.0,354.0,annotator_1,3,podcast,,extent that you have any control over the time in which you're going to study keeping that at a regular time or times,False,multimodal_tvsum_style
+1bszFX_XcbU,354.0,356.0,annotator_1,3,podcast,,the time in which you're going to study keeping that at a regular time or times perhaps one block early in the day one,False,multimodal_tvsum_style
+1bszFX_XcbU,356.0,358.0,annotator_1,3,podcast,,keeping that at a regular time or times perhaps one block early in the day one block later in the day perhaps two,False,multimodal_tvsum_style
+1bszFX_XcbU,358.0,360.0,annotator_1,3,podcast,,perhaps one block early in the day one block later in the day perhaps two blocks early in the day and and so on is,False,multimodal_tvsum_style
+1bszFX_XcbU,360.0,362.0,annotator_1,4,podcast,,block later in the day perhaps two blocks early in the day and and so on is going to be beneficial it turns out,False,multimodal_tvsum_style
+1bszFX_XcbU,362.0,364.0,annotator_1,4,podcast,,blocks early in the day and and so on is going to be beneficial it turns out that's also supported by the research,False,multimodal_tvsum_style
+1bszFX_XcbU,364.0,366.0,annotator_1,4,podcast,,going to be beneficial it turns out that's also supported by the research literature that the brain just like with,False,multimodal_tvsum_style
+1bszFX_XcbU,366.0,368.0,annotator_1,4,podcast,,that's also supported by the research literature that the brain just like with,False,multimodal_tvsum_style
+1bszFX_XcbU,368.0,370.0,annotator_1,4,podcast,,that's also supported by the research literature that the brain just like with its sleep wake cycles that entrain to a,False,multimodal_tvsum_style
+1bszFX_XcbU,370.0,372.0,annotator_1,4,podcast,,literature that the brain just like with its sleep wake cycles that entrain to a regular schedule that is your brain and,False,multimodal_tvsum_style
+1bszFX_XcbU,372.0,374.0,annotator_1,4,podcast,,its sleep wake cycles that entrain to a regular schedule that is your brain and body get used to being active and,False,multimodal_tvsum_style
+1bszFX_XcbU,374.0,376.0,annotator_1,4,podcast,,regular schedule that is your brain and body get used to being active and inactive at particular times based on,False,multimodal_tvsum_style
+1bszFX_XcbU,376.0,378.0,annotator_1,4,podcast,,body get used to being active and inactive at particular times based on your exposure to sunlight your exposure,False,multimodal_tvsum_style
+1bszFX_XcbU,378.0,380.0,annotator_1,4,podcast,,inactive at particular times based on your exposure to sunlight your exposure to activities your social rhythms Etc if,False,multimodal_tvsum_style
+1bszFX_XcbU,380.0,382.0,annotator_1,5,podcast,,your exposure to sunlight your exposure to activities your social rhythms Etc if,False,multimodal_tvsum_style
+1bszFX_XcbU,382.0,384.0,annotator_1,5,podcast,,your exposure to sunlight your exposure to activities your social rhythms Etc if you regularly meaning for the course of,False,multimodal_tvsum_style
+1bszFX_XcbU,384.0,386.0,annotator_1,5,podcast,,to activities your social rhythms Etc if you regularly meaning for the course of about 3 days make it a point to focus,False,multimodal_tvsum_style
+1bszFX_XcbU,386.0,388.0,annotator_1,5,podcast,,you regularly meaning for the course of about 3 days make it a point to focus and study at particular times again,False,multimodal_tvsum_style
+1bszFX_XcbU,388.0,390.0,annotator_1,5,podcast,,about 3 days make it a point to focus and study at particular times again pulling your attention back it's not an,False,multimodal_tvsum_style
+1bszFX_XcbU,390.0,392.0,annotator_1,5,podcast,,and study at particular times again pulling your attention back it's not an automatic process but pulling your,False,multimodal_tvsum_style
+1bszFX_XcbU,392.0,394.0,annotator_1,5,podcast,,pulling your attention back it's not an automatic process but pulling your attention back to a specific location,False,multimodal_tvsum_style
+1bszFX_XcbU,394.0,396.0,annotator_1,5,podcast,,automatic process but pulling your attention back to a specific location perhaps on a page or that you're,False,multimodal_tvsum_style
+1bszFX_XcbU,396.0,398.0,annotator_1,5,podcast,,attention back to a specific location perhaps on a page or that you're listening to in a lecture your body and,False,multimodal_tvsum_style
+1bszFX_XcbU,398.0,400.0,annotator_1,5,podcast,,perhaps on a page or that you're listening to in a lecture your body and brain will start to entrain to that,False,multimodal_tvsum_style
+1bszFX_XcbU,400.0,402.0,annotator_1,5,podcast,,listening to in a lecture your body and brain will start to entrain to that Rhythm such that you will be able to,False,multimodal_tvsum_style
+1bszFX_XcbU,402.0,404.0,annotator_1,5,podcast,,brain will start to entrain to that Rhythm such that you will be able to focus and attend better simply by virtue,False,multimodal_tvsum_style
+1bszFX_XcbU,404.0,406.0,annotator_1,5,podcast,,Rhythm such that you will be able to focus and attend better simply by virtue,False,multimodal_tvsum_style
+1bszFX_XcbU,406.0,408.0,annotator_1,5,podcast,,Rhythm such that you will be able to focus and attend better simply by virtue of the regularity of the timing of the,False,multimodal_tvsum_style
+1bszFX_XcbU,408.0,410.0,annotator_1,5,podcast,,focus and attend better simply by virtue of the regularity of the timing of the exposure to the material okay so you,False,multimodal_tvsum_style
+1bszFX_XcbU,410.0,412.0,annotator_1,5,podcast,,of the regularity of the timing of the exposure to the material okay so you,False,multimodal_tvsum_style
+1bszFX_XcbU,412.0,414.0,annotator_1,5,podcast,,of the regularity of the timing of the exposure to the material okay so you probably need about two or three days to bre,False,multimodal_tvsum_style
+1bszFX_XcbU,414.0,416.0,annotator_1,5,podcast,,probably need about two or three days to break into a regular schedule of focusing and attending and studying at a,False,multimodal_tvsum_style
+1bszFX_XcbU,416.0,418.0,annotator_1,5,podcast,,break into a regular schedule of focusing and attending and studying at a given time or times,False,multimodal_tvsum_style
+1bszFX_XcbU,418.0,420.0,annotator_1,5,podcast,,focusing and attending and studying at a given time or times,False,multimodal_tvsum_style
+1bszFX_XcbU,420.0,422.0,annotator_1,5,podcast,,focusing and attending and studying at a given time or times allow yourself that transition period,False,multimodal_tvsum_style
+1bszFX_XcbU,422.0,424.0,annotator_1,4,podcast,,given time or times allow yourself that transition period but then make it a point to schedule,False,multimodal_tvsum_style
+1bszFX_XcbU,424.0,426.0,annotator_1,4,podcast,,allow yourself that transition period but then make it a point to schedule those times to study set aside your,False,multimodal_tvsum_style
+1bszFX_XcbU,426.0,428.0,annotator_1,4,podcast,,but then make it a point to schedule those times to study set aside your phone tell people you're going offline,False,multimodal_tvsum_style
+1bszFX_XcbU,428.0,430.0,annotator_1,4,podcast,,those times to study set aside your phone tell people you're going offline turn off the Wi-Fi if you need to or,False,multimodal_tvsum_style
+1bszFX_XcbU,430.0,432.0,annotator_1,4,podcast,,phone tell people you're going offline turn off the Wi-Fi if you need to or have to you may need it for your,False,multimodal_tvsum_style
+1bszFX_XcbU,432.0,434.0,annotator_1,4,podcast,,turn off the Wi-Fi if you need to or have to you may need it for your studying I don't know depends on what,False,multimodal_tvsum_style
+1bszFX_XcbU,434.0,436.0,annotator_1,4,podcast,,have to you may need it for your studying I don't know depends on what you're studying but limit distractions,False,multimodal_tvsum_style
+1bszFX_XcbU,436.0,438.0,annotator_1,4,podcast,,studying I don't know depends on what you're studying but limit distractions at all costs and learn to just focus on,False,multimodal_tvsum_style
+1bszFX_XcbU,438.0,440.0,annotator_1,3,podcast,,you're studying but limit distractions at all costs and learn to just focus on the material and this is a skill this is,False,multimodal_tvsum_style
+1bszFX_XcbU,440.0,442.0,annotator_1,3,podcast,,at all costs and learn to just focus on the material and this is a skill this is,False,multimodal_tvsum_style
+1bszFX_XcbU,442.0,444.0,annotator_1,3,podcast,,at all costs and learn to just focus on the material and this is a skill this is the most important thing to understand ,False,multimodal_tvsum_style
+1bszFX_XcbU,444.0,446.0,annotator_1,3,podcast,,the most important thing to understand it's a skill to be able to focus and study and it's a skill that you can,False,multimodal_tvsum_style
+1bszFX_XcbU,446.0,448.0,annotator_1,3,podcast,,it's a skill to be able to focus and study and it's a skill that you can learn very quickly especially if you SK,False,multimodal_tvsum_style
+1bszFX_XcbU,448.0,450.0,annotator_1,3,podcast,,study and it's a skill that you can learn very quickly especially if you SK schedule it for regular times and you,False,multimodal_tvsum_style
+1bszFX_XcbU,450.0,452.0,annotator_1,3,podcast,,learn very quickly especially if you SK schedule it for regular times and you give yourself two or three days in which,False,multimodal_tvsum_style
+1bszFX_XcbU,452.0,454.0,annotator_1,3,podcast,,schedule it for regular times and you give yourself two or three days in which to adapt to those schedules and times,False,multimodal_tvsum_style
+1bszFX_XcbU,454.0,456.0,annotator_1,3,podcast,,give yourself two or three days in which to adapt to those schedules and times and then try and stick to them as,False,multimodal_tvsum_style
+1bszFX_XcbU,456.0,458.0,annotator_1,3,podcast,,to adapt to those schedules and times and then try and stick to them as regularly as possible perhaps even on,False,multimodal_tvsum_style
+1bszFX_XcbU,458.0,460.0,annotator_1,3,podcast,,and then try and stick to them as regularly as possible perhaps even on the weekends if you're approaching you,False,multimodal_tvsum_style
+1bszFX_XcbU,460.0,462.0,annotator_1,3,podcast,,regularly as possible perhaps even on the weekends if you're approaching you know the end of the quarter or,False,multimodal_tvsum_style
+1bszFX_XcbU,462.0,464.0,annotator_1,3,podcast,,the weekends if you're approaching you know the end of the quarter or semester perhaps even on the weekend,False,multimodal_tvsum_style
+1bszFX_XcbU,464.0,466.0,annotator_1,3,podcast,,know the end of the quarter or semester perhaps even on the weekend even if you're not in the quarter of,False,multimodal_tvsum_style
+1bszFX_XcbU,466.0,468.0,annotator_1,3,podcast,,semester perhaps even on the weekend even if you're not in the quarter of semester keeping those regular times,False,multimodal_tvsum_style
+1bszFX_XcbU,468.0,470.0,annotator_1,3,podcast,,even if you're not in the quarter of semester keeping those regular times will entrain your nervous system to,False,multimodal_tvsum_style
+1bszFX_XcbU,470.0,472.0,annotator_1,3,podcast,,semester keeping those regular times will entrain your nervous system to study and learn at its best at those,False,multimodal_tvsum_style
+1bszFX_XcbU,472.0,474.0,annotator_1,3,podcast,,will entrain your nervous system to study and learn at its best at those particular times there's one other point,False,multimodal_tvsum_style
+1bszFX_XcbU,474.0,476.0,annotator_1,3,podcast,,study and learn at its best at those particular times there's one other point that I wanted to pass along from this uh,False,multimodal_tvsum_style
+1bszFX_XcbU,476.0,478.0,annotator_1,3,podcast,,particular times there's one other point that I wanted to pass along from this uh,False,multimodal_tvsum_style
+1bszFX_XcbU,478.0,480.0,annotator_1,3,podcast,,particular times there's one other point that I wanted to pass along from this uh really nice study on the study abits o,False,multimodal_tvsum_style
+1bszFX_XcbU,480.0,482.0,annotator_1,3,podcast,,really nice study on the study abits of Highly Effective medical students that I've been referring to and that is when,False,multimodal_tvsum_style
+1bszFX_XcbU,482.0,484.0,annotator_1,3,podcast,,Highly Effective medical students that I've been referring to and that is when,False,multimodal_tvsum_style
+1bszFX_XcbU,484.0,486.0,annotator_1,3,podcast,,Highly Effective medical students that I've been referring to and that is when one examined or these people were asked,False,multimodal_tvsum_style
+1bszFX_XcbU,486.0,488.0,annotator_1,3,podcast,,I've been referring to and that is when one examined or these people were asked about their motivation for studying the,False,multimodal_tvsum_style
+1bszFX_XcbU,488.0,490.0,annotator_1,3,podcast,,one examined or these people were asked about their motivation for studying the,False,multimodal_tvsum_style
+1bszFX_XcbU,490.0,492.0,annotator_1,3,podcast,,one examined or these people were asked about their motivation for studying the best performing students had an,False,multimodal_tvsum_style
+1bszFX_XcbU,492.0,494.0,annotator_1,3,podcast,,about their motivation for studying the best performing students had an interesting answer they had a very,False,multimodal_tvsum_style
+1bszFX_XcbU,494.0,496.0,annotator_1,3,podcast,,best performing students had an interesting answer they had a very long-term understanding of how or belief,False,multimodal_tvsum_style
+1bszFX_XcbU,496.0,498.0,annotator_1,3,podcast,,interesting answer they had a very long-term understanding of how or belief,False,multimodal_tvsum_style
+1bszFX_XcbU,498.0,500.0,annotator_1,3,podcast,,interesting answer they had a very long-term understanding of how or belief rather about how their success in,False,multimodal_tvsum_style
+1bszFX_XcbU,500.0,502.0,annotator_1,3,podcast,,long-term understanding of how or belief rather about how their success in,False,multimodal_tvsum_style
+1bszFX_XcbU,502.0,504.0,annotator_1,3,podcast,,long-term understanding of how or belief rather about how their success in medical school would impact their family,False,multimodal_tvsum_style
+1bszFX_XcbU,504.0,506.0,annotator_1,3,podcast,,rather about how their success in medical school would impact their family,False,multimodal_tvsum_style
+1bszFX_XcbU,506.0,508.0,annotator_1,3,podcast,,rather about how their success in medical school would impact their family how it would impact their life Arc how it wou,False,multimodal_tvsum_style
+1bszFX_XcbU,508.0,510.0,annotator_1,3,podcast,,how it would impact their life Arc how it would change them and they weren't particular about the ways in which it,False,multimodal_tvsum_style
+1bszFX_XcbU,510.0,512.0,annotator_1,3,podcast,,it would change them and they weren't particular about the ways in which it would change them or their family in,False,multimodal_tvsum_style
+1bszFX_XcbU,512.0,514.0,annotator_1,3,podcast,,particular about the ways in which it would change them or their family in fact it was a rather broad abstract,False,multimodal_tvsum_style
+1bszFX_XcbU,514.0,516.0,annotator_1,3,podcast,,would change them or their family in fact it was a rather broad abstract aspirational way of thinking about their,False,multimodal_tvsum_style
+1bszFX_XcbU,516.0,518.0,annotator_1,3,podcast,,fact it was a rather broad abstract aspirational way of thinking about their,False,multimodal_tvsum_style
+1bszFX_XcbU,518.0,520.0,annotator_1,3,podcast,,fact it was a rather broad abstract aspirational way of thinking about their study efforts so what I like so much,False,multimodal_tvsum_style
+1bszFX_XcbU,520.0,522.0,annotator_1,3,podcast,,aspirational way of thinking about their study efforts so what I like so much about this paper is that you know in,False,multimodal_tvsum_style
+1bszFX_XcbU,522.0,524.0,annotator_1,3,podcast,,study efforts so what I like so much about this paper is that you know in addition to having a fairly large sample,False,multimodal_tvsum_style
+1bszFX_XcbU,524.0,526.0,annotator_1,3,podcast,,about this paper is that you know in addition to having a fairly large sample size close to 700 students that were,False,multimodal_tvsum_style
+1bszFX_XcbU,526.0,528.0,annotator_1,3,podcast,,addition to having a fairly large sample size close to 700 students that were evaluated and yes it's purely uh you,False,multimodal_tvsum_style
+1bszFX_XcbU,528.0,530.0,annotator_1,3,podcast,,size close to 700 students that were evaluated and yes it's purely uh you,False,multimodal_tvsum_style
+1bszFX_XcbU,530.0,532.0,annotator_1,3,podcast,,size close to 700 students that were evaluated and yes it's purely uh you know self-report and this kind of thing,False,multimodal_tvsum_style
+1bszFX_XcbU,532.0,534.0,annotator_1,3,podcast,,evaluated and yes it's purely uh you know self-report and this kind of thing nonetheless it Bridges the two extremes,False,multimodal_tvsum_style
+1bszFX_XcbU,534.0,536.0,annotator_1,3,podcast,,know self-report and this kind of thing nonetheless it Bridges the two extremes of studying and learning you know it,False,multimodal_tvsum_style
+1bszFX_XcbU,536.0,538.0,annotator_1,3,podcast,,nonetheless it Bridges the two extremes of studying and learning you know it gets right down into the nitty-gritty of,False,multimodal_tvsum_style
+1bszFX_XcbU,538.0,540.0,annotator_1,3,podcast,,of studying and learning you know it gets right down into the nitty-gritty of how long they study when they study the,False,multimodal_tvsum_style
+1bszFX_XcbU,540.0,542.0,annotator_1,3,podcast,,gets right down into the nitty-gritty of how long they study when they study the things they do to limit distraction tha,False,multimodal_tvsum_style
+1bszFX_XcbU,542.0,544.0,annotator_1,3,podcast,,how long they study when they study the things they do to limit distraction that we just discussed but it also gets to,False,multimodal_tvsum_style
+1bszFX_XcbU,544.0,546.0,annotator_1,3,podcast,,things they do to limit distraction that we just discussed but it also gets to,False,multimodal_tvsum_style
+1bszFX_XcbU,546.0,548.0,annotator_1,3,podcast,,things they do to limit distraction that we just discussed but it also gets to their underlying psychological motivation,False,multimodal_tvsum_style
+1bszFX_XcbU,548.0,550.0,annotator_1,3,podcast,,their underlying psychological motivations and the thing that they use in order to pull them forward through,False,multimodal_tvsum_style
+1bszFX_XcbU,550.0,552.0,annotator_1,3,podcast,,motivations and the thing that they use in order to pull them forward through their study efforts perhaps especially,False,multimodal_tvsum_style
+1bszFX_XcbU,552.0,554.0,annotator_1,3,podcast,,in order to pull them forward through their study efforts perhaps especially when their desire is waning or their uh,False,multimodal_tvsum_style
+1bszFX_XcbU,554.0,556.0,annotator_1,3,podcast,,their study efforts perhaps especially when their desire is waning or their uh,False,multimodal_tvsum_style
+1bszFX_XcbU,556.0,558.0,annotator_1,3,podcast,,their study efforts perhaps especially when their desire is waning or their uh level of fatigue is increasing I don't,False,multimodal_tvsum_style
+1bszFX_XcbU,558.0,560.0,annotator_1,3,podcast,,when their desire is waning or their uh level of fatigue is increasing I don't know that I'm speculating here but this,False,multimodal_tvsum_style
+1bszFX_XcbU,560.0,562.0,annotator_1,2,podcast,,level of fatigue is increasing I don't know that I'm speculating here but this is this aspirational component of going,False,multimodal_tvsum_style
+1bszFX_XcbU,562.0,564.0,annotator_1,2,podcast,,know that I'm speculating here but this is this aspirational component of going,False,multimodal_tvsum_style
+1bszFX_XcbU,564.0,566.0,annotator_1,2,podcast,,know that I'm speculating here but this is this aspirational component of going to medical school which it turns out in ,False,multimodal_tvsum_style
+1bszFX_XcbU,566.0,568.0,annotator_1,2,podcast,,to medical school which it turns out in the country in which the study was done um only very very select few of the very,False,multimodal_tvsum_style
+1bszFX_XcbU,568.0,570.0,annotator_1,2,podcast,,the country in which the study was done um only very very select few of the very,False,multimodal_tvsum_style
+1bszFX_XcbU,570.0,572.0,annotator_1,2,podcast,,the country in which the study was done um only very very select few of the very best students are able to achieve that,False,multimodal_tvsum_style
+1bszFX_XcbU,572.0,574.0,annotator_1,2,podcast,,um only very very select few of the very best students are able to achieve that they have to learn the information in a,False,multimodal_tvsum_style
+1bszFX_XcbU,574.0,576.0,annotator_1,2,podcast,,best students are able to achieve that they have to learn the information in a different language altogether which is,False,multimodal_tvsum_style
+1bszFX_XcbU,576.0,578.0,annotator_1,2,podcast,,they have to learn the information in a different language altogether which is incredible I always Marvel at that you,False,multimodal_tvsum_style
+1bszFX_XcbU,578.0,580.0,annotator_1,2,podcast,,different language altogether which is incredible I always Marvel at that you know I have friends that did their PHD,False,multimodal_tvsum_style
+1bszFX_XcbU,580.0,582.0,annotator_1,2,podcast,,incredible I always Marvel at that you know I have friends that did their PHD thesis in Italy they're Italian by birth,False,multimodal_tvsum_style
+1bszFX_XcbU,582.0,584.0,annotator_1,2,podcast,,know I have friends that did their PHD thesis in Italy they're Italian by birth they now happen to run a laboratory in,False,multimodal_tvsum_style
+1bszFX_XcbU,584.0,586.0,annotator_1,2,podcast,,thesis in Italy they're Italian by birth they now happen to run a laboratory in,False,multimodal_tvsum_style
+1bszFX_XcbU,586.0,588.0,annotator_1,2,podcast,,thesis in Italy they're Italian by birth they now happen to run a laboratory in Italy and they had to do their PHD,False,multimodal_tvsum_style
+1bszFX_XcbU,588.0,590.0,annotator_1,2,podcast,,they now happen to run a laboratory in Italy and they had to do their PHD training and write papers and give their,False,multimodal_tvsum_style
+1bszFX_XcbU,590.0,592.0,annotator_1,2,podcast,,Italy and they had to do their PHD training and write papers and give their thesis dissertation and defense in,False,multimodal_tvsum_style
+1bszFX_XcbU,592.0,594.0,annotator_1,2,podcast,,training and write papers and give their thesis dissertation and defense in English even though English was their,False,multimodal_tvsum_style
+1bszFX_XcbU,594.0,596.0,annotator_1,2,podcast,,thesis dissertation and defense in English even though English was their second language so talk about a,False,multimodal_tvsum_style
+1bszFX_XcbU,596.0,598.0,annotator_1,2,podcast,,English even though English was their second language so talk about a challenge and um that's just one example,False,multimodal_tvsum_style
+1bszFX_XcbU,598.0,600.0,annotator_1,2,podcast,,second language so talk about a challenge and um that's just one example that I can think of there are many,False,multimodal_tvsum_style
+1bszFX_XcbU,600.0,602.0,annotator_1,2,podcast,,challenge and um that's just one example that I can think of there are many examples of,False,multimodal_tvsum_style
+1bszFX_XcbU,602.0,604.0,annotator_1,2,podcast,,that I can think of there are many examples of that these students that I'm referring,False,multimodal_tvsum_style
+1bszFX_XcbU,604.0,606.0,annotator_1,2,podcast,,examples of that these students that I'm referring to in this study are not necessarily,False,multimodal_tvsum_style
+1bszFX_XcbU,606.0,608.0,annotator_1,2,podcast,,that these students that I'm referring to in this study are not necessarily,False,multimodal_tvsum_style
+1bszFX_XcbU,608.0,610.0,annotator_1,2,podcast,,that these students that I'm referring to in this study are not necessarily constantly thinking about how their,False,multimodal_tvsum_style
+1bszFX_XcbU,610.0,612.0,annotator_1,2,podcast,,to in this study are not necessarily constantly thinking about how their efforts will transform themselves and,False,multimodal_tvsum_style
+1bszFX_XcbU,612.0,614.0,annotator_1,2,podcast,,constantly thinking about how their efforts will transform themselves and their families but they certainly were,False,multimodal_tvsum_style
+1bszFX_XcbU,614.0,616.0,annotator_1,2,podcast,,efforts will transform themselves and their families but they certainly were able to report what it was specifically,False,multimodal_tvsum_style
+1bszFX_XcbU,616.0,618.0,annotator_1,2,podcast,,their families but they certainly were able to report what it was specifically that they are seeking what they're,False,multimodal_tvsum_style
+1bszFX_XcbU,618.0,620.0,annotator_1,2,podcast,,able to report what it was specifically that they are seeking what they're aspiring to besides just trying to do as,False,multimodal_tvsum_style
+1bszFX_XcbU,620.0,622.0,annotator_1,2,podcast,,that they are seeking what they're aspiring to besides just trying to do as well as they can getting into and,False,multimodal_tvsum_style
+1bszFX_XcbU,622.0,624.0,annotator_1,2,podcast,,aspiring to besides just trying to do as well as they can getting into and through medical school so the high level,False,multimodal_tvsum_style
+1bszFX_XcbU,624.0,626.0,annotator_1,2,podcast,,well as they can getting into and through medical school so the high level,False,multimodal_tvsum_style
+1bszFX_XcbU,626.0,628.0,annotator_1,2,podcast,,well as they can getting into and through medical school so the high level aspirational stuff within you whatever,False,multimodal_tvsum_style
+1bszFX_XcbU,628.0,630.0,annotator_1,2,podcast,,through medical school so the high level aspirational stuff within you whatever that is for you it's going to be highly,False,multimodal_tvsum_style
+1bszFX_XcbU,630.0,632.0,annotator_1,2,podcast,,aspirational stuff within you whatever that is for you it's going to be highly individual is certainly important and it,False,multimodal_tvsum_style
+1bszFX_XcbU,632.0,634.0,annotator_1,2,podcast,,that is for you it's going to be highly individual is certainly important and it,False,multimodal_tvsum_style
+1bszFX_XcbU,634.0,636.0,annotator_1,2,podcast,,that is for you it's going to be highly individual is certainly important and it offers a bookend to the nuts and bolts,False,multimodal_tvsum_style
+1bszFX_XcbU,636.0,638.0,annotator_1,2,podcast,,individual is certainly important and it offers a bookend to the nuts and bolts he kind of stuff that you're going to do,False,multimodal_tvsum_style
+1bszFX_XcbU,638.0,640.0,annotator_1,2,podcast,,offers a bookend to the nuts and bolts he kind of stuff that you're going to do I would hope in order to best study and,False,multimodal_tvsum_style
+1bszFX_XcbU,640.0,642.0,annotator_1,3,podcast,,he kind of stuff that you're going to do I would hope in order to best study and learn the specific material so the,False,multimodal_tvsum_style
+1bszFX_XcbU,642.0,644.0,annotator_1,3,podcast,,I would hope in order to best study and learn the specific material so the specific actions that you're going to,False,multimodal_tvsum_style
+1bszFX_XcbU,644.0,646.0,annotator_1,3,podcast,,learn the specific material so the specific actions that you're going to take each day to learn specific bits of,False,multimodal_tvsum_style
+1bszFX_XcbU,646.0,648.0,annotator_1,3,podcast,,specific actions that you're going to take each day to learn specific bits of information that will pull you toward,False,multimodal_tvsum_style
+1bszFX_XcbU,648.0,650.0,annotator_1,3,podcast,,take each day to learn specific bits of information that will pull you toward those important aspirations and now,False,multimodal_tvsum_style
+1bszFX_XcbU,650.0,652.0,annotator_1,3,podcast,,information that will pull you toward those important aspirations and now again if you love the material you're,False,multimodal_tvsum_style
+1bszFX_XcbU,652.0,654.0,annotator_1,3,podcast,,those important aspirations and now again if you love the material you're learning this aspirational component is,False,multimodal_tvsum_style
+1bszFX_XcbU,654.0,656.0,annotator_1,3,podcast,,again if you love the material you're learning this aspirational component is probably not as important right I can,False,multimodal_tvsum_style
+1bszFX_XcbU,656.0,658.0,annotator_1,3,podcast,,learning this aspirational component is probably not as important right I can recall during University and uate school,False,multimodal_tvsum_style
+1bszFX_XcbU,658.0,660.0,annotator_1,3,podcast,,probably not as important right I can recall during University and uate school and so on thinking oh my goodness this,False,multimodal_tvsum_style
+1bszFX_XcbU,660.0,662.0,annotator_1,3,podcast,,recall during University and uate school and so on thinking oh my goodness this,False,multimodal_tvsum_style
+1bszFX_XcbU,662.0,664.0,annotator_1,3,podcast,,recall during University and uate school and so on thinking oh my goodness this is like the coolest thing I've ever hear,False,multimodal_tvsum_style
+1bszFX_XcbU,664.0,666.0,annotator_1,3,podcast,,is like the coolest thing I've ever heard I probably say that about a million different topics like oh my,False,multimodal_tvsum_style
+1bszFX_XcbU,666.0,668.0,annotator_1,3,podcast,,heard I probably say that about a million different topics like oh my goodness circadian rhythms seasonal rhythms melato,False,multimodal_tvsum_style
+1bszFX_XcbU,668.0,670.0,annotator_1,3,podcast,,goodness circadian rhythms seasonal rhythms melatonin neural circuits dopamine I was just a wash with,False,multimodal_tvsum_style
+1bszFX_XcbU,670.0,672.0,annotator_1,3,podcast,,rhythms melatonin neural circuits dopamine I was just a wash with excitement about what I was learning but,False,multimodal_tvsum_style
+1bszFX_XcbU,672.0,674.0,annotator_1,3,podcast,,dopamine I was just a wash with excitement about what I was learning but of course sometimes I would take a,False,multimodal_tvsum_style
+1bszFX_XcbU,674.0,676.0,annotator_1,3,podcast,,excitement about what I was learning but of course sometimes I would take a course where the material was I don't,False,multimodal_tvsum_style
+1bszFX_XcbU,676.0,678.0,annotator_1,3,podcast,,of course sometimes I would take a course where the material was I don't know if it was more challenging or not but I ha,False,multimodal_tvsum_style
+1bszFX_XcbU,678.0,680.0,annotator_1,3,podcast,,know if it was more challenging or not but I had a harder time getting engaged by the material either by virtue of how,False,multimodal_tvsum_style
+1bszFX_XcbU,680.0,682.0,annotator_1,3,podcast,,but I had a harder time getting engaged by the material either by virtue of how it was being taught to me or the,False,multimodal_tvsum_style
+1bszFX_XcbU,682.0,684.0,annotator_1,3,podcast,,by the material either by virtue of how it was being taught to me or the material itself so the ability to attach,False,multimodal_tvsum_style
+1bszFX_XcbU,684.0,686.0,annotator_1,3,podcast,,it was being taught to me or the material itself so the ability to attach to some aspirational goal to pull you,False,multimodal_tvsum_style
+1bszFX_XcbU,686.0,688.0,annotator_1,3,podcast,,material itself so the ability to attach to some aspirational goal to pull you through can be very valuable you're not,False,multimodal_tvsum_style
+1bszFX_XcbU,688.0,690.0,annotator_1,3,podcast,,to some aspirational goal to pull you through can be very valuable you're not,False,multimodal_tvsum_style
+1bszFX_XcbU,690.0,692.0,annotator_1,3,podcast,,to some aspirational goal to pull you through can be very valuable you're not going to love every topic you have to,False,multimodal_tvsum_style
+1bszFX_XcbU,692.0,694.0,annotator_1,3,podcast,,through can be very valuable you're not going to love every topic you have to learn however I will say that at least,False,multimodal_tvsum_style
+1bszFX_XcbU,694.0,696.0,annotator_1,3,podcast,,going to love every topic you have to learn however I will say that at least,False,multimodal_tvsum_style
+1bszFX_XcbU,696.0,698.0,annotator_1,3,podcast,,going to love every topic you have to learn however I will say that at least in my experience some of the courses,False,multimodal_tvsum_style
+1bszFX_XcbU,698.0,700.0,annotator_1,3,podcast,,learn however I will say that at least in my experience some of the courses that I look back on most fondly are the,False,multimodal_tvsum_style
+1bszFX_XcbU,700.0,702.0,annotator_1,4,podcast,,in my experience some of the courses that I look back on most fondly are the courses that I struggled with the most,False,multimodal_tvsum_style
+1bszFX_XcbU,702.0,704.0,annotator_1,4,podcast,,that I look back on most fondly are the courses that I struggled with the most and in fact that's the basis of the next,False,multimodal_tvsum_style
+1bszFX_XcbU,704.0,706.0,annotator_1,4,podcast,,courses that I struggled with the most and in fact that's the basis of the next,False,multimodal_tvsum_style
+1bszFX_XcbU,706.0,708.0,annotator_1,4,podcast,,courses that I struggled with the most and in fact that's the basis of the next and easily one of the most important,False,multimodal_tvsum_style
+1bszFX_XcbU,708.0,710.0,annotator_1,4,podcast,,and in fact that's the basis of the next and easily one of the most important studying tools so a key theme in all of,False,multimodal_tvsum_style
+1bszFX_XcbU,710.0,712.0,annotator_1,4,podcast,,and easily one of the most important studying tools so a key theme in all of,False,multimodal_tvsum_style
+1bszFX_XcbU,712.0,714.0,annotator_1,4,podcast,,and easily one of the most important studying tools so a key theme in all of the excellent literature that is the,False,multimodal_tvsum_style
+1bszFX_XcbU,714.0,716.0,annotator_1,4,podcast,,studying tools so a key theme in all of the excellent literature that is the peer-reviewed research on how best to,False,multimodal_tvsum_style
+1bszFX_XcbU,716.0,718.0,annotator_1,4,podcast,,the excellent literature that is the peer-reviewed research on how best to study is that studying that feels,False,multimodal_tvsum_style
+1bszFX_XcbU,718.0,720.0,annotator_1,4,podcast,,peer-reviewed research on how best to study is that studying that feels challenged in is the most effective I,False,multimodal_tvsum_style
+1bszFX_XcbU,720.0,722.0,annotator_1,5,podcast,,study is that studying that feels challenged in is the most effective I know nobody wants to hear this everyone,False,multimodal_tvsum_style
+1bszFX_XcbU,722.0,724.0,annotator_1,5,podcast,,challenged in is the most effective I know nobody wants to hear this everyone wants to hear about flow everybody wants,False,multimodal_tvsum_style
+1bszFX_XcbU,724.0,726.0,annotator_1,5,podcast,,know nobody wants to hear this everyone wants to hear about flow everybody wants,False,multimodal_tvsum_style
+1bszFX_XcbU,726.0,728.0,annotator_1,5,podcast,,know nobody wants to hear this everyone wants to hear about flow everybody wants to hear about information just sinking,False,multimodal_tvsum_style
+1bszFX_XcbU,728.0,730.0,annotator_1,5,podcast,,wants to hear about flow everybody wants to hear about information just sinking into their brain by osmosis I think it,False,multimodal_tvsum_style
+1bszFX_XcbU,730.0,732.0,annotator_1,5,podcast,,to hear about information just sinking into their brain by osmosis I think it was a Garfield cartoon where he talked,False,multimodal_tvsum_style
+1bszFX_XcbU,732.0,734.0,annotator_1,5,podcast,,into their brain by osmosis I think it was a Garfield cartoon where he talked about learning by osmosis there's this,False,multimodal_tvsum_style
+1bszFX_XcbU,734.0,736.0,annotator_1,5,podcast,,was a Garfield cartoon where he talked about learning by osmosis there's this very cute real world video of a kid in a,False,multimodal_tvsum_style
+1bszFX_XcbU,736.0,738.0,annotator_1,5,podcast,,about learning by osmosis there's this very cute real world video of a kid in a classroom uh I believe uh it's in China,False,multimodal_tvsum_style
+1bszFX_XcbU,738.0,740.0,annotator_1,5,podcast,,very cute real world video of a kid in a classroom uh I believe uh it's in China where he's taking the book and he puts,False,multimodal_tvsum_style
+1bszFX_XcbU,740.0,742.0,annotator_1,4,podcast,,classroom uh I believe uh it's in China where he's taking the book and he puts it on his head maybe I can find this,False,multimodal_tvsum_style
+1bszFX_XcbU,742.0,744.0,annotator_1,4,podcast,,where he's taking the book and he puts it on his head maybe I can find this clip and he's just kind of like trying to wa,False,multimodal_tvsum_style
+1bszFX_XcbU,744.0,746.0,annotator_1,4,podcast,,clip and he's just kind of like trying to wash it into his brain it's super cute clip but guess what that doesn't,False,multimodal_tvsum_style
+1bszFX_XcbU,746.0,748.0,annotator_1,4,podcast,,to wash it into his brain it's super cute clip but guess what that doesn't work I mean it works to put the book on,False,multimodal_tvsum_style
+1bszFX_XcbU,748.0,750.0,annotator_1,4,podcast,,cute clip but guess what that doesn't work I mean it works to put the book on your head it doesn't work to it's not,False,multimodal_tvsum_style
+1bszFX_XcbU,750.0,752.0,annotator_1,4,podcast,,work I mean it works to put the book on your head it doesn't work to it's not going to get the information into your,False,multimodal_tvsum_style
+1bszFX_XcbU,752.0,754.0,annotator_1,4,podcast,,your head it doesn't work to it's not going to get the information into your brain uh perhaps someday there will be,False,multimodal_tvsum_style
+1bszFX_XcbU,754.0,756.0,annotator_1,4,podcast,,going to get the information into your brain uh perhaps someday there will be ways to rapidly download information,False,multimodal_tvsum_style
+1bszFX_XcbU,756.0,758.0,annotator_1,4,podcast,,brain uh perhaps someday there will be ways to rapidly download information into neural circuits right now we know,False,multimodal_tvsum_style
+1bszFX_XcbU,758.0,760.0,annotator_1,4,podcast,,ways to rapidly download information into neural circuits right now we know,False,multimodal_tvsum_style
+1bszFX_XcbU,760.0,762.0,annotator_1,5,podcast,,ways to rapidly download information into neural circuits right now we know we've known for hundreds if not,False,multimodal_tvsum_style
+1bszFX_XcbU,762.0,764.0,annotator_1,5,podcast,,into neural circuits right now we know we've known for hundreds if not thousands of years that effort is the,False,multimodal_tvsum_style
+1bszFX_XcbU,764.0,766.0,annotator_1,5,podcast,,we've known for hundreds if not thousands of years that effort is the,False,multimodal_tvsum_style
+1bszFX_XcbU,766.0,768.0,annotator_1,5,podcast,,we've known for hundreds if not thousands of years that effort is the Cornerstone of learning so I know there,False,multimodal_tvsum_style
+1bszFX_XcbU,768.0,770.0,annotator_1,5,podcast,,thousands of years that effort is the Cornerstone of learning so I know there probably some groans about that I know,False,multimodal_tvsum_style
+1bszFX_XcbU,770.0,772.0,annotator_1,5,podcast,,Cornerstone of learning so I know there probably some groans about that I know some of you perhaps were hoping that,False,multimodal_tvsum_style
+1bszFX_XcbU,772.0,774.0,annotator_1,5,podcast,,probably some groans about that I know some of you perhaps were hoping that today I was going to tell you how to,False,multimodal_tvsum_style
+1bszFX_XcbU,774.0,776.0,annotator_1,5,podcast,,today I was going to tell you how to study so that studying wasn't painful I think I can accomplish that by,False,multimodal_tvsum_style
+1bszFX_XcbU,776.0,778.0,annotator_1,5,podcast,,study so that studying wasn't painful I think I can accomplish that by,False,multimodal_tvsum_style
+1bszFX_XcbU,778.0,780.0,annotator_1,5,podcast,,study so that studying wasn't painful I think I can accomplish that by the end of today episode but in order to do that ,False,multimodal_tvsum_style
+1bszFX_XcbU,780.0,782.0,annotator_1,2,podcast,,the end of today episode but in order to do that let's,False,multimodal_tvsum_style
+1bszFX_XcbU,782.0,784.0,annotator_1,2,podcast,,the end of today episode but in order to do that let's take another quiz can you name or List,False,multimodal_tvsum_style
+1bszFX_XcbU,784.0,786.0,annotator_1,2,podcast,,episode but in order to do that let's take another quiz can you name or List off in your mind three tools that the,False,multimodal_tvsum_style
+1bszFX_XcbU,786.0,788.0,annotator_1,2,podcast,,take another quiz can you name or List off in your mind three tools that the,False,multimodal_tvsum_style
+1bszFX_XcbU,788.0,790.0,annotator_1,2,podcast,,take another quiz can you name or List off in your mind three tools that the most effective students have been shown,False,multimodal_tvsum_style
+1bszFX_XcbU,790.0,792.0,annotator_1,2,podcast,,off in your mind three tools that the most effective students have been shown to use I can think,False,multimodal_tvsum_style
+1bszFX_XcbU,792.0,794.0,annotator_1,2,podcast,,to use I can think of limiting distraction by virtue of,False,multimodal_tvsum_style
+1bszFX_XcbU,794.0,796.0,annotator_1,2,podcast,,use I can think of limiting distraction by virtue of,False,multimodal_tvsum_style
+1bszFX_XcbU,796.0,798.0,annotator_1,2,podcast,,use I can think of limiting distraction by virtue of putting away phones and telling others,False,multimodal_tvsum_style
+1bszFX_XcbU,798.0,800.0,annotator_1,2,podcast,,of limiting distraction by virtue of putting away phones and telling others you won't be in contact with them two,False,multimodal_tvsum_style
+1bszFX_XcbU,800.0,802.0,annotator_1,3,podcast,,putting away phones and telling others you won't be in contact with them two and I'm getting these out of order I,False,multimodal_tvsum_style
+1bszFX_XcbU,802.0,804.0,annotator_1,3,podcast,,you won't be in contact with them two and I'm getting these out of order I realize is to isolate to study alone and,False,multimodal_tvsum_style
+1bszFX_XcbU,804.0,806.0,annotator_1,4,podcast,,and I'm getting these out of order I realize is to isolate to study alone and,False,multimodal_tvsum_style
+1bszFX_XcbU,806.0,808.0,annotator_1,4,podcast,,and I'm getting these out of order I realize is to isolate to study alone and the third that I can recall is,False,multimodal_tvsum_style
+1bszFX_XcbU,808.0,810.0,annotator_1,4,podcast,,realize is to isolate to study alone and the third that I can recall is to teach others in the same course okay,False,multimodal_tvsum_style
+1bszFX_XcbU,810.0,812.0,annotator_1,4,podcast,,the third that I can recall is to teach others in the same course okay,False,multimodal_tvsum_style
+1bszFX_XcbU,812.0,814.0,annotator_1,4,podcast,,the third that I can recall is to teach others in the same course okay you can probably think of a few others,False,multimodal_tvsum_style
+1bszFX_XcbU,814.0,816.0,annotator_1,4,podcast,,to teach others in the same course okay you can probably think of a few others,False,multimodal_tvsum_style
+1bszFX_XcbU,816.0,818.0,annotator_1,4,podcast,,you can probably think of a few others now why are we taking these silly little,False,multimodal_tvsum_style
+1bszFX_XcbU,818.0,820.0,annotator_1,4,podcast,,you can probably think of a few others now why are we taking these silly little quizzes Well turns out they're not so,False,multimodal_tvsum_style
+1bszFX_XcbU,820.0,822.0,annotator_1,4,podcast,,now why are we taking these silly little quizzes Well turns out they're not so silly when one considers that hopefully,False,multimodal_tvsum_style
+1bszFX_XcbU,822.0,824.0,annotator_1,4,podcast,,quizzes Well turns out they're not so silly when one considers that hopefully,False,multimodal_tvsum_style
+1bszFX_XcbU,824.0,826.0,annotator_1,4,podcast,,quizzes Well turns out they're not so silly when one considers that hopefully you'll remember the information from,False,multimodal_tvsum_style
+1bszFX_XcbU,826.0,828.0,annotator_1,4,podcast,,silly when one considers that hopefully you'll remember the information from today so that you don't have to listen,False,multimodal_tvsum_style
+1bszFX_XcbU,828.0,830.0,annotator_1,4,podcast,,you'll remember the information from today so that you don't have to listen to it over and over again but that if,False,multimodal_tvsum_style
+1bszFX_XcbU,830.0,832.0,annotator_1,4,podcast,,today so that you don't have to listen to it over and over again but that if ever there was a strongly research,False,multimodal_tvsum_style
+1bszFX_XcbU,832.0,834.0,annotator_1,4,podcast,,to it over and over again but that if ever there was a strongly research supported tool in the literature in the,False,multimodal_tvsum_style
+1bszFX_XcbU,834.0,836.0,annotator_1,4,podcast,,ever there was a strongly research supported tool in the literature in the,False,multimodal_tvsum_style
+1bszFX_XcbU,836.0,838.0,annotator_1,4,podcast,,ever there was a strongly research supported tool in the literature in the peer-reviewed literature about how,False,multimodal_tvsum_style
+1bszFX_XcbU,838.0,840.0,annotator_1,5,podcast,,supported tool in the literature in the peer-reviewed literature about how students can learn information better,False,multimodal_tvsum_style
+1bszFX_XcbU,840.0,842.0,annotator_1,5,podcast,,peer-reviewed literature about how students can learn information better it's testing and I know I know I know we,False,multimodal_tvsum_style
+1bszFX_XcbU,842.0,844.0,annotator_1,5,podcast,,students can learn information better it's testing and I know I know I know we,False,multimodal_tvsum_style
+1bszFX_XcbU,844.0,846.0,annotator_1,5,podcast,,students can learn information better it's testing and I know I know I know we think of tests as a way to evaluate our,False,multimodal_tvsum_style
+1bszFX_XcbU,846.0,848.0,annotator_1,5,podcast,,it's testing and I know I know I know we think of tests as a way to evaluate our knowledge but it turns out that testing,False,multimodal_tvsum_style
+1bszFX_XcbU,848.0,850.0,annotator_1,5,podcast,,think of tests as a way to evaluate our knowledge but it turns out that testing is one of the best ways to build our,False,multimodal_tvsum_style
+1bszFX_XcbU,850.0,852.0,annotator_1,5,podcast,,knowledge but it turns out that testing is one of the best ways to build our knowledge to retain our knowledge and,False,multimodal_tvsum_style
+1bszFX_XcbU,852.0,854.0,annotator_1,5,podcast,,is one of the best ways to build our knowledge to retain our knowledge and,False,multimodal_tvsum_style
+1bszFX_XcbU,854.0,856.0,annotator_1,5,podcast,,is one of the best ways to build our knowledge to retain our knowledge and again to offset forgetting,False,multimodal_tvsum_style
+1bszFX_XcbU,856.0,858.0,annotator_1,5,podcast,,knowledge to retain our knowledge and again to offset forgetting,False,multimodal_tvsum_style
+1bszFX_XcbU,858.0,860.0,annotator_1,5,podcast,,knowledge to retain our knowledge and again to offset forgetting [Music],False,multimodal_tvsum_style
+1bszFX_XcbU,860.0,862.0,annotator_1,1,podcast,,again to offset forgetting [Music],False,multimodal_tvsum_style
+1bszFX_XcbU,862.0,864.0,annotator_1,1,podcast,,again to offset forgetting [Music],False,multimodal_tvsum_style

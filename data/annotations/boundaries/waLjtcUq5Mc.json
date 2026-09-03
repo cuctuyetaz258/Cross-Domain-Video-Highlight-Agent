@@ -1,11 +1,13 @@
 {
   "video_id": "waLjtcUq5Mc",
-  "annotator_id": "annotator_1",
+  "annotator_id": "youtube_most_replayed_consensus",
+  "domain": "podcast",
+  "title": "Tucker Carlson reflects back on Putin interview | Lex Fridman Podcast Clips",
   "highlights": [
     {
       "highlight_id": "hl_01",
-      "start_time": 39.38,
-      "end_time": 111.38,
+      "start_time": 441.86,
+      "end_time": 531.77,
       "importance": 5,
       "complete_thought": true,
       "natural_start": true,
@@ -13,8 +15,8 @@
     },
     {
       "highlight_id": "hl_02",
-      "start_time": 438.47,
-      "end_time": 498.83,
+      "start_time": 630.68,
+      "end_time": 719.33,
       "importance": 5,
       "complete_thought": true,
       "natural_start": true,
@@ -22,17 +24,8 @@
     },
     {
       "highlight_id": "hl_03",
-      "start_time": 646.85,
-      "end_time": 735.23,
-      "importance": 5,
-      "complete_thought": true,
-      "natural_start": true,
-      "natural_end": true
-    },
-    {
-      "highlight_id": "hl_04",
-      "start_time": 860.0,
-      "end_time": 894.11,
+      "start_time": 720.86,
+      "end_time": 786.68,
       "importance": 5,
       "complete_thought": true,
       "natural_start": true,

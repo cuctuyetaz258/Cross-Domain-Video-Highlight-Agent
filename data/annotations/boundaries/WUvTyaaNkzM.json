@@ -1,11 +1,13 @@
 {
   "video_id": "WUvTyaaNkzM",
-  "annotator_id": "annotator_1",
+  "annotator_id": "youtube_most_replayed_consensus",
+  "domain": "lecture",
+  "title": "The essence of calculus",
   "highlights": [
     {
       "highlight_id": "hl_01",
-      "start_time": 166.42,
-      "end_time": 235.93,
+      "start_time": 156.22,
+      "end_time": 222.44,
       "importance": 5,
       "complete_thought": true,
       "natural_start": true,
@@ -13,8 +15,8 @@
     },
     {
       "highlight_id": "hl_02",
-      "start_time": 346.24,
-      "end_time": 395.13,
+      "start_time": 363.6,
+      "end_time": 418.92,
       "importance": 5,
       "complete_thought": true,
       "natural_start": true,
@@ -23,7 +25,7 @@
     {
       "highlight_id": "hl_03",
       "start_time": 708.58,
-      "end_time": 765.78,
+      "end_time": 796.12,
       "importance": 5,
       "complete_thought": true,
       "natural_start": true,
@@ -31,7 +33,16 @@
     },
     {
       "highlight_id": "hl_04",
-      "start_time": 897.84,
+      "start_time": 796.12,
+      "end_time": 882.17,
+      "importance": 5,
+      "complete_thought": true,
+      "natural_start": true,
+      "natural_end": true
+    },
+    {
+      "highlight_id": "hl_05",
+      "start_time": 900.44,
       "end_time": 942.36,
       "importance": 5,
       "complete_thought": true,

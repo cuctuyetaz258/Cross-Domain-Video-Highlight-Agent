@@ -1,11 +1,13 @@
 {
   "video_id": "g2-_pnmhO4A",
-  "annotator_id": "annotator_1",
+  "annotator_id": "youtube_most_replayed_consensus",
+  "domain": "lecture",
+  "title": "Learn 97% of Harvard&#39;s CS50 in 25 minutes",
   "highlights": [
     {
       "highlight_id": "hl_01",
-      "start_time": 444.75,
-      "end_time": 525.2,
+      "start_time": 306.08,
+      "end_time": 366.88,
       "importance": 5,
       "complete_thought": true,
       "natural_start": true,
@@ -13,8 +15,8 @@
     },
     {
       "highlight_id": "hl_02",
-      "start_time": 1044.88,
-      "end_time": 1128.08,
+      "start_time": 580.4,
+      "end_time": 671.36,
       "importance": 5,
       "complete_thought": true,
       "natural_start": true,
@@ -22,8 +24,8 @@
     },
     {
       "highlight_id": "hl_03",
-      "start_time": 1169.2,
-      "end_time": 1252.08,
+      "start_time": 673.52,
+      "end_time": 764.88,
       "importance": 5,
       "complete_thought": true,
       "natural_start": true,
@@ -31,8 +33,8 @@
     },
     {
       "highlight_id": "hl_04",
-      "start_time": 1393.84,
-      "end_time": 1478.72,
+      "start_time": 780.96,
+      "end_time": 869.92,
       "importance": 5,
       "complete_thought": true,
       "natural_start": true,

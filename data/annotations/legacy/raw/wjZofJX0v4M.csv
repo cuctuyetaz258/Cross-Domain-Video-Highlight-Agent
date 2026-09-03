@@ -1,0 +1,817 @@
+﻿video_id,start_sec,end_sec,annotator_id,importance,domain,reason_tag,transcript_hint,needs_review,label_protocol
+wjZofJX0v4M,0.0,2.0,annotator_1,3,lecture,,The initials GPT stand for Generative Pretrained Transformer.,false,multimodal_tvsum_style
+wjZofJX0v4M,2.0,4.0,annotator_1,3,lecture,,The initials GPT stand for Generative Pretrained Transformer.,false,multimodal_tvsum_style
+wjZofJX0v4M,4.0,6.0,annotator_1,3,lecture,,"The initials GPT stand for Generative Pretrained Transformer. So that first word is straightforward enough, these are bo",false,multimodal_tvsum_style
+wjZofJX0v4M,6.0,8.0,annotator_1,3,lecture,,"So that first word is straightforward enough, these are bots that generate new text.",false,multimodal_tvsum_style
+wjZofJX0v4M,8.0,10.0,annotator_1,3,lecture,,"So that first word is straightforward enough, these are bots that generate new text. Pretrained refers to how the model ",false,multimodal_tvsum_style
+wjZofJX0v4M,10.0,12.0,annotator_1,3,lecture,,Pretrained refers to how the model went through a process of learning,false,multimodal_tvsum_style
+wjZofJX0v4M,12.0,14.0,annotator_1,3,lecture,,"Pretrained refers to how the model went through a process of learning from a massive amount of data, and the prefix insi",false,multimodal_tvsum_style
+wjZofJX0v4M,14.0,16.0,annotator_1,3,lecture,,"from a massive amount of data, and the prefix insinuates that there's",false,multimodal_tvsum_style
+wjZofJX0v4M,16.0,18.0,annotator_1,3,lecture,,"from a massive amount of data, and the prefix insinuates that there's more room to fine-tune it on specific tasks with a",false,multimodal_tvsum_style
+wjZofJX0v4M,18.0,20.0,annotator_1,3,lecture,,more room to fine-tune it on specific tasks with additional training.,false,multimodal_tvsum_style
+wjZofJX0v4M,20.0,22.0,annotator_1,3,lecture,,"more room to fine-tune it on specific tasks with additional training. But the last word, that's the real key piece.",false,multimodal_tvsum_style
+wjZofJX0v4M,22.0,24.0,annotator_1,3,lecture,,"But the last word, that's the real key piece. A transformer is a specific kind of neural network, a machine learning mod",false,multimodal_tvsum_style
+wjZofJX0v4M,24.0,26.0,annotator_1,3,lecture,,"A transformer is a specific kind of neural network, a machine learning model,",false,multimodal_tvsum_style
+wjZofJX0v4M,26.0,28.0,annotator_1,3,lecture,,"A transformer is a specific kind of neural network, a machine learning model, and it's the core invention underlying the",false,multimodal_tvsum_style
+wjZofJX0v4M,28.0,30.0,annotator_1,3,lecture,,and it's the core invention underlying the current boom in AI.,false,multimodal_tvsum_style
+wjZofJX0v4M,30.0,32.0,annotator_1,3,lecture,,and it's the core invention underlying the current boom in AI. What I want to do with this video and the following chapt,false,multimodal_tvsum_style
+wjZofJX0v4M,32.0,34.0,annotator_1,3,lecture,,What I want to do with this video and the following chapters is go through a,false,multimodal_tvsum_style
+wjZofJX0v4M,34.0,36.0,annotator_1,3,lecture,,What I want to do with this video and the following chapters is go through a visually-driven explanation for what actual,false,multimodal_tvsum_style
+wjZofJX0v4M,36.0,38.0,annotator_1,3,lecture,,visually-driven explanation for what actually happens inside a transformer.,false,multimodal_tvsum_style
+wjZofJX0v4M,38.0,40.0,annotator_1,3,lecture,,visually-driven explanation for what actually happens inside a transformer. We're going to follow the data that flows th,false,multimodal_tvsum_style
+wjZofJX0v4M,40.0,42.0,annotator_1,3,lecture,,We're going to follow the data that flows through it and go step by step.,false,multimodal_tvsum_style
+wjZofJX0v4M,42.0,44.0,annotator_1,3,lecture,,We're going to follow the data that flows through it and go step by step. There are many different kinds of models that ,false,multimodal_tvsum_style
+wjZofJX0v4M,44.0,46.0,annotator_1,3,lecture,,There are many different kinds of models that you can build using transformers.,false,multimodal_tvsum_style
+wjZofJX0v4M,46.0,48.0,annotator_1,3,lecture,,There are many different kinds of models that you can build using transformers. Some models take in audio and produce a ,false,multimodal_tvsum_style
+wjZofJX0v4M,48.0,50.0,annotator_1,3,lecture,,Some models take in audio and produce a transcript.,false,multimodal_tvsum_style
+wjZofJX0v4M,50.0,52.0,annotator_1,3,lecture,,"Some models take in audio and produce a transcript. This sentence comes from a model going the other way around,",false,multimodal_tvsum_style
+wjZofJX0v4M,52.0,54.0,annotator_1,3,lecture,,"This sentence comes from a model going the other way around,",false,multimodal_tvsum_style
+wjZofJX0v4M,54.0,56.0,annotator_1,3,lecture,,"This sentence comes from a model going the other way around, producing synthetic speech just from text.",false,multimodal_tvsum_style
+wjZofJX0v4M,56.0,58.0,annotator_1,3,lecture,,producing synthetic speech just from text. All those tools that took the world by storm in 2022 like DALL-E and Midjourn,false,multimodal_tvsum_style
+wjZofJX0v4M,58.0,60.0,annotator_1,3,lecture,,All those tools that took the world by storm in 2022 like DALL-E and Midjourney,false,multimodal_tvsum_style
+wjZofJX0v4M,60.0,62.0,annotator_1,3,lecture,,All those tools that took the world by storm in 2022 like DALL-E and Midjourney that take in a text description and prod,false,multimodal_tvsum_style
+wjZofJX0v4M,62.0,64.0,annotator_1,3,lecture,,that take in a text description and produce an image are based on transformers.,false,multimodal_tvsum_style
+wjZofJX0v4M,64.0,66.0,annotator_1,3,lecture,,that take in a text description and produce an image are based on transformers.,false,multimodal_tvsum_style
+wjZofJX0v4M,66.0,68.0,annotator_1,3,lecture,,"Even if I can't quite get it to understand what a pi creature is supposed to be,",false,multimodal_tvsum_style
+wjZofJX0v4M,68.0,70.0,annotator_1,3,lecture,,"Even if I can't quite get it to understand what a pi creature is supposed to be, I'm still blown away that this kind of ",false,multimodal_tvsum_style
+wjZofJX0v4M,70.0,72.0,annotator_1,3,lecture,,I'm still blown away that this kind of thing is even remotely possible.,false,multimodal_tvsum_style
+wjZofJX0v4M,72.0,74.0,annotator_1,3,lecture,,I'm still blown away that this kind of thing is even remotely possible. And the original transformer introduced in 2017 ,false,multimodal_tvsum_style
+wjZofJX0v4M,74.0,76.0,annotator_1,3,lecture,,And the original transformer introduced in 2017 by Google was invented for,false,multimodal_tvsum_style
+wjZofJX0v4M,76.0,78.0,annotator_1,3,lecture,,And the original transformer introduced in 2017 by Google was invented for,false,multimodal_tvsum_style
+wjZofJX0v4M,78.0,80.0,annotator_1,3,lecture,,the specific use case of translating text from one language into another.,false,multimodal_tvsum_style
+wjZofJX0v4M,80.0,82.0,annotator_1,3,lecture,,the specific use case of translating text from one language into another.,false,multimodal_tvsum_style
+wjZofJX0v4M,82.0,84.0,annotator_1,3,lecture,,"the specific use case of translating text from one language into another. But the variant that you and I will focus on, ",false,multimodal_tvsum_style
+wjZofJX0v4M,84.0,86.0,annotator_1,3,lecture,,"But the variant that you and I will focus on, which is the type that",false,multimodal_tvsum_style
+wjZofJX0v4M,86.0,88.0,annotator_1,3,lecture,,"But the variant that you and I will focus on, which is the type that underlies tools like ChatGPT, will be a model that'",false,multimodal_tvsum_style
+wjZofJX0v4M,88.0,90.0,annotator_1,3,lecture,,"underlies tools like ChatGPT, will be a model that's trained to take in a piece of text,",false,multimodal_tvsum_style
+wjZofJX0v4M,90.0,92.0,annotator_1,3,lecture,,"underlies tools like ChatGPT, will be a model that's trained to take in a piece of text, maybe even with some surroundin",false,multimodal_tvsum_style
+wjZofJX0v4M,92.0,94.0,annotator_1,3,lecture,,"maybe even with some surrounding images or sound accompanying it,",false,multimodal_tvsum_style
+wjZofJX0v4M,94.0,96.0,annotator_1,3,lecture,,"maybe even with some surrounding images or sound accompanying it, and produce a prediction for what comes next in the pa",false,multimodal_tvsum_style
+wjZofJX0v4M,96.0,98.0,annotator_1,3,lecture,,and produce a prediction for what comes next in the passage.,false,multimodal_tvsum_style
+wjZofJX0v4M,98.0,100.0,annotator_1,3,lecture,,and produce a prediction for what comes next in the passage. That prediction takes the form of a probability distributio,false,multimodal_tvsum_style
+wjZofJX0v4M,100.0,102.0,annotator_1,3,lecture,,That prediction takes the form of a probability distribution over many different chunks of text that might follow.,false,multimodal_tvsum_style
+wjZofJX0v4M,102.0,104.0,annotator_1,3,lecture,,over many different chunks of text that might follow.,false,multimodal_tvsum_style
+wjZofJX0v4M,104.0,106.0,annotator_1,4,lecture,,"At first glance, you might think that predicting the next word",false,multimodal_tvsum_style
+wjZofJX0v4M,106.0,108.0,annotator_1,4,lecture,,"At first glance, you might think that predicting the next word feels like a very different goal from generating new text",false,multimodal_tvsum_style
+wjZofJX0v4M,108.0,110.0,annotator_1,4,lecture,,feels like a very different goal from generating new text.,false,multimodal_tvsum_style
+wjZofJX0v4M,110.0,112.0,annotator_1,4,lecture,,"But once you have a prediction model like this,",false,multimodal_tvsum_style
+wjZofJX0v4M,112.0,114.0,annotator_1,5,lecture,,"But once you have a prediction model like this, a simple thing you could try to make it generate, a longer piece of text",false,multimodal_tvsum_style
+wjZofJX0v4M,114.0,116.0,annotator_1,5,lecture,,"a simple thing you could try to make it generate, a longer piece of text,",false,multimodal_tvsum_style
+wjZofJX0v4M,116.0,118.0,annotator_1,5,lecture,,"a simple thing you could try to make it generate, a longer piece of text, is to give it an initial snippet to work with,",false,multimodal_tvsum_style
+wjZofJX0v4M,118.0,120.0,annotator_1,5,lecture,,"is to give it an initial snippet to work with, have it take a random sample from the distribution it just generated,",false,multimodal_tvsum_style
+wjZofJX0v4M,120.0,122.0,annotator_1,5,lecture,,"have it take a random sample from the distribution it just generated,",false,multimodal_tvsum_style
+wjZofJX0v4M,122.0,124.0,annotator_1,5,lecture,,"have it take a random sample from the distribution it just generated, append that sample to the text, and then run the w",false,multimodal_tvsum_style
+wjZofJX0v4M,124.0,126.0,annotator_1,5,lecture,,"append that sample to the text, and then run the whole process again to make a new prediction based on all the new text,",false,multimodal_tvsum_style
+wjZofJX0v4M,126.0,128.0,annotator_1,5,lecture,,"a new prediction based on all the new text, including what it just added.",false,multimodal_tvsum_style
+wjZofJX0v4M,128.0,130.0,annotator_1,5,lecture,,"a new prediction based on all the new text, including what it just added.",false,multimodal_tvsum_style
+wjZofJX0v4M,130.0,132.0,annotator_1,5,lecture,,"I don't know about you, but it really doesn't feel like this should actually work.",false,multimodal_tvsum_style
+wjZofJX0v4M,132.0,134.0,annotator_1,5,lecture,,"I don't know about you, but it really doesn't feel like this should actually work. In this animation, for example, I'm r",false,multimodal_tvsum_style
+wjZofJX0v4M,134.0,136.0,annotator_1,5,lecture,,"In this animation, for example, I'm running GPT-2 on my laptop and having it repeatedly",false,multimodal_tvsum_style
+wjZofJX0v4M,136.0,138.0,annotator_1,5,lecture,,"In this animation, for example, I'm running GPT-2 on my laptop and having it repeatedly predict and sample the next chun",false,multimodal_tvsum_style
+wjZofJX0v4M,138.0,140.0,annotator_1,5,lecture,,predict and sample the next chunk of text to generate a story based on the seed text.,false,multimodal_tvsum_style
+wjZofJX0v4M,140.0,142.0,annotator_1,5,lecture,,predict and sample the next chunk of text to generate a story based on the seed text.,false,multimodal_tvsum_style
+wjZofJX0v4M,142.0,144.0,annotator_1,5,lecture,,predict and sample the next chunk of text to generate a story based on the seed text. The story just doesn't actually re,false,multimodal_tvsum_style
+wjZofJX0v4M,144.0,146.0,annotator_1,5,lecture,,The story just doesn't actually really make that much sense.,false,multimodal_tvsum_style
+wjZofJX0v4M,146.0,148.0,annotator_1,5,lecture,,"The story just doesn't actually really make that much sense. But if I swap it out for API calls to GPT-3 instead, which ",false,multimodal_tvsum_style
+wjZofJX0v4M,148.0,150.0,annotator_1,5,lecture,,"But if I swap it out for API calls to GPT-3 instead, which is the same basic model,",false,multimodal_tvsum_style
+wjZofJX0v4M,150.0,152.0,annotator_1,5,lecture,,"But if I swap it out for API calls to GPT-3 instead, which is the same basic model, just much bigger, suddenly almost ma",false,multimodal_tvsum_style
+wjZofJX0v4M,152.0,154.0,annotator_1,5,lecture,,"just much bigger, suddenly almost magically we do get a sensible story,",false,multimodal_tvsum_style
+wjZofJX0v4M,154.0,156.0,annotator_1,5,lecture,,"just much bigger, suddenly almost magically we do get a sensible story, one that even seems to infer that a pi creature ",false,multimodal_tvsum_style
+wjZofJX0v4M,156.0,158.0,annotator_1,4,lecture,,one that even seems to infer that a pi creature would live in a land of math and,false,multimodal_tvsum_style
+wjZofJX0v4M,158.0,160.0,annotator_1,4,lecture,,one that even seems to infer that a pi creature would live in a land of math and,false,multimodal_tvsum_style
+wjZofJX0v4M,160.0,162.0,annotator_1,4,lecture,,one that even seems to infer that a pi creature would live in a land of math and computation. This process here of repea,false,multimodal_tvsum_style
+wjZofJX0v4M,162.0,164.0,annotator_1,4,lecture,,This process here of repeated prediction and sampling is essentially,false,multimodal_tvsum_style
+wjZofJX0v4M,164.0,166.0,annotator_1,4,lecture,,"This process here of repeated prediction and sampling is essentially what's happening when you interact with ChatGPT,",false,multimodal_tvsum_style
+wjZofJX0v4M,166.0,168.0,annotator_1,4,lecture,,"what's happening when you interact with ChatGPT, or any of these other large language models, and you see them producing",false,multimodal_tvsum_style
+wjZofJX0v4M,168.0,170.0,annotator_1,4,lecture,,"or any of these other large language models, and you see them producing",false,multimodal_tvsum_style
+wjZofJX0v4M,170.0,172.0,annotator_1,4,lecture,,"or any of these other large language models, and you see them producing one word at a time.",false,multimodal_tvsum_style
+wjZofJX0v4M,172.0,174.0,annotator_1,4,lecture,,"In fact, one feature that I would very much enjoy is the ability to",false,multimodal_tvsum_style
+wjZofJX0v4M,174.0,176.0,annotator_1,4,lecture,,"In fact, one feature that I would very much enjoy is the ability to see the underlying distribution for each new word th",false,multimodal_tvsum_style
+wjZofJX0v4M,176.0,178.0,annotator_1,4,lecture,,see the underlying distribution for each new word that it chooses.,false,multimodal_tvsum_style
+wjZofJX0v4M,178.0,180.0,annotator_1,4,lecture,,see the underlying distribution for each new word that it chooses.,false,multimodal_tvsum_style
+wjZofJX0v4M,180.0,182.0,annotator_1,3,lecture,,,false,multimodal_tvsum_style
+wjZofJX0v4M,182.0,184.0,annotator_1,3,lecture,,Let's kick things off with a very high level preview,false,multimodal_tvsum_style
+wjZofJX0v4M,184.0,186.0,annotator_1,3,lecture,,Let's kick things off with a very high level preview,false,multimodal_tvsum_style
+wjZofJX0v4M,186.0,188.0,annotator_1,3,lecture,,Let's kick things off with a very high level preview of how data flows through a transformer.,false,multimodal_tvsum_style
+wjZofJX0v4M,188.0,190.0,annotator_1,3,lecture,,of how data flows through a transformer. We will spend much more time motivating and interpreting and expanding,false,multimodal_tvsum_style
+wjZofJX0v4M,190.0,192.0,annotator_1,3,lecture,,"We will spend much more time motivating and interpreting and expanding on the details of each step, but in broad strokes",false,multimodal_tvsum_style
+wjZofJX0v4M,192.0,194.0,annotator_1,3,lecture,,"on the details of each step, but in broad strokes,",false,multimodal_tvsum_style
+wjZofJX0v4M,194.0,196.0,annotator_1,3,lecture,,"on the details of each step, but in broad strokes, when one of these chatbots generates a given word, here's what's goin",false,multimodal_tvsum_style
+wjZofJX0v4M,196.0,198.0,annotator_1,3,lecture,,"when one of these chatbots generates a given word, here's what's going on under the hood.",false,multimodal_tvsum_style
+wjZofJX0v4M,198.0,200.0,annotator_1,3,lecture,,"when one of these chatbots generates a given word, here's what's going on under the hood. First, the input is broken up ",false,multimodal_tvsum_style
+wjZofJX0v4M,200.0,202.0,annotator_1,3,lecture,,"First, the input is broken up into a bunch of little pieces.",false,multimodal_tvsum_style
+wjZofJX0v4M,202.0,204.0,annotator_1,3,lecture,,"First, the input is broken up into a bunch of little pieces. These pieces are called tokens, and in the case of text the",false,multimodal_tvsum_style
+wjZofJX0v4M,204.0,206.0,annotator_1,3,lecture,,"These pieces are called tokens, and in the case of text these tend to be",false,multimodal_tvsum_style
+wjZofJX0v4M,206.0,208.0,annotator_1,3,lecture,,"These pieces are called tokens, and in the case of text these tend to be words or little pieces of words or other common",false,multimodal_tvsum_style
+wjZofJX0v4M,208.0,210.0,annotator_1,3,lecture,,words or little pieces of words or other common character combinations.,false,multimodal_tvsum_style
+wjZofJX0v4M,210.0,212.0,annotator_1,3,lecture,,"If images or sound are involved, then tokens could be little",false,multimodal_tvsum_style
+wjZofJX0v4M,212.0,214.0,annotator_1,3,lecture,,"If images or sound are involved, then tokens could be little",false,multimodal_tvsum_style
+wjZofJX0v4M,214.0,216.0,annotator_1,3,lecture,,"If images or sound are involved, then tokens could be little patches of that image or little chunks of that sound.",false,multimodal_tvsum_style
+wjZofJX0v4M,216.0,218.0,annotator_1,3,lecture,,"patches of that image or little chunks of that sound. Each one of these tokens is then associated with a vector, meaning",false,multimodal_tvsum_style
+wjZofJX0v4M,218.0,220.0,annotator_1,3,lecture,,"Each one of these tokens is then associated with a vector, meaning some list of numbers,",false,multimodal_tvsum_style
+wjZofJX0v4M,220.0,222.0,annotator_1,3,lecture,,"Each one of these tokens is then associated with a vector, meaning some list of numbers,",false,multimodal_tvsum_style
+wjZofJX0v4M,222.0,224.0,annotator_1,3,lecture,,"Each one of these tokens is then associated with a vector, meaning some list of numbers, which is meant to somehow encod",false,multimodal_tvsum_style
+wjZofJX0v4M,224.0,226.0,annotator_1,3,lecture,,which is meant to somehow encode the meaning of that piece. If you think of these vectors as giving coordinates in some ,false,multimodal_tvsum_style
+wjZofJX0v4M,226.0,228.0,annotator_1,3,lecture,,"If you think of these vectors as giving coordinates in some very high dimensional space,",false,multimodal_tvsum_style
+wjZofJX0v4M,228.0,230.0,annotator_1,3,lecture,,"If you think of these vectors as giving coordinates in some very high dimensional space,",false,multimodal_tvsum_style
+wjZofJX0v4M,230.0,232.0,annotator_1,3,lecture,,"If you think of these vectors as giving coordinates in some very high dimensional space, words with similar meanings ten",false,multimodal_tvsum_style
+wjZofJX0v4M,232.0,234.0,annotator_1,3,lecture,,words with similar meanings tend to land on vectors that are close to each other in that space.,false,multimodal_tvsum_style
+wjZofJX0v4M,234.0,236.0,annotator_1,3,lecture,,close to each other in that space. This sequence of vectors then passes through an operation that's,false,multimodal_tvsum_style
+wjZofJX0v4M,236.0,238.0,annotator_1,3,lecture,,This sequence of vectors then passes through an operation that's,false,multimodal_tvsum_style
+wjZofJX0v4M,238.0,240.0,annotator_1,3,lecture,,"This sequence of vectors then passes through an operation that's known as an attention block, and this allows the vector",false,multimodal_tvsum_style
+wjZofJX0v4M,240.0,242.0,annotator_1,3,lecture,,"known as an attention block, and this allows the vectors to talk to each other and pass information back and forth to up",false,multimodal_tvsum_style
+wjZofJX0v4M,242.0,244.0,annotator_1,3,lecture,,each other and pass information back and forth to update their values.,false,multimodal_tvsum_style
+wjZofJX0v4M,244.0,246.0,annotator_1,3,lecture,,"each other and pass information back and forth to update their values. For example, the meaning of the word model in the",false,multimodal_tvsum_style
+wjZofJX0v4M,246.0,248.0,annotator_1,3,lecture,,"For example, the meaning of the word model in the phrase ""a machine learning",false,multimodal_tvsum_style
+wjZofJX0v4M,248.0,250.0,annotator_1,3,lecture,,"For example, the meaning of the word model in the phrase ""a machine learning model"" is different from its meaning in the",false,multimodal_tvsum_style
+wjZofJX0v4M,250.0,252.0,annotator_1,3,lecture,,"model"" is different from its meaning in the phrase ""a fashion model"".",false,multimodal_tvsum_style
+wjZofJX0v4M,252.0,254.0,annotator_1,3,lecture,,The attention block is what's responsible for figuring out which,false,multimodal_tvsum_style
+wjZofJX0v4M,254.0,256.0,annotator_1,3,lecture,,The attention block is what's responsible for figuring out which words in context are relevant to updating the meanings ,false,multimodal_tvsum_style
+wjZofJX0v4M,256.0,258.0,annotator_1,3,lecture,,"words in context are relevant to updating the meanings of which other words,",false,multimodal_tvsum_style
+wjZofJX0v4M,258.0,260.0,annotator_1,3,lecture,,"words in context are relevant to updating the meanings of which other words, and how exactly those meanings should be up",false,multimodal_tvsum_style
+wjZofJX0v4M,260.0,262.0,annotator_1,3,lecture,,and how exactly those meanings should be updated.,false,multimodal_tvsum_style
+wjZofJX0v4M,262.0,264.0,annotator_1,3,lecture,,"And again, whenever I use the word meaning, this is",false,multimodal_tvsum_style
+wjZofJX0v4M,264.0,266.0,annotator_1,3,lecture,,"And again, whenever I use the word meaning, this is somehow entirely encoded in the entries of those vectors.",false,multimodal_tvsum_style
+wjZofJX0v4M,266.0,268.0,annotator_1,3,lecture,,somehow entirely encoded in the entries of those vectors.,false,multimodal_tvsum_style
+wjZofJX0v4M,268.0,270.0,annotator_1,3,lecture,,"somehow entirely encoded in the entries of those vectors. After that, these vectors pass through a different kind of ope",false,multimodal_tvsum_style
+wjZofJX0v4M,270.0,272.0,annotator_1,3,lecture,,"After that, these vectors pass through a different kind of operation,",false,multimodal_tvsum_style
+wjZofJX0v4M,272.0,274.0,annotator_1,3,lecture,,"After that, these vectors pass through a different kind of operation, and depending on the source that you're reading th",false,multimodal_tvsum_style
+wjZofJX0v4M,274.0,276.0,annotator_1,3,lecture,,and depending on the source that you're reading this will be referred to as a multi-layer perceptron or maybe a feed-for,false,multimodal_tvsum_style
+wjZofJX0v4M,276.0,278.0,annotator_1,3,lecture,,to as a multi-layer perceptron or maybe a feed-forward layer.,false,multimodal_tvsum_style
+wjZofJX0v4M,278.0,280.0,annotator_1,3,lecture,,"to as a multi-layer perceptron or maybe a feed-forward layer. And here the vectors don't talk to each other,",false,multimodal_tvsum_style
+wjZofJX0v4M,280.0,282.0,annotator_1,3,lecture,,"And here the vectors don't talk to each other, they all go through the same operation in parallel.",false,multimodal_tvsum_style
+wjZofJX0v4M,282.0,284.0,annotator_1,3,lecture,,"they all go through the same operation in parallel. And while this block is a little bit harder to interpret,",false,multimodal_tvsum_style
+wjZofJX0v4M,284.0,286.0,annotator_1,3,lecture,,"And while this block is a little bit harder to interpret, later on we'll talk about how the step is a little bit like as",false,multimodal_tvsum_style
+wjZofJX0v4M,286.0,288.0,annotator_1,3,lecture,,later on we'll talk about how the step is a little bit like asking a long list,false,multimodal_tvsum_style
+wjZofJX0v4M,288.0,290.0,annotator_1,3,lecture,,"later on we'll talk about how the step is a little bit like asking a long list of questions about each vector, and then ",false,multimodal_tvsum_style
+wjZofJX0v4M,290.0,292.0,annotator_1,3,lecture,,"of questions about each vector, and then updating them based on the answers",false,multimodal_tvsum_style
+wjZofJX0v4M,292.0,294.0,annotator_1,3,lecture,,"of questions about each vector, and then updating them based on the answers to those questions.",false,multimodal_tvsum_style
+wjZofJX0v4M,294.0,296.0,annotator_1,3,lecture,,All of the operations in both of these blocks look like a,false,multimodal_tvsum_style
+wjZofJX0v4M,296.0,298.0,annotator_1,3,lecture,,All of the operations in both of these blocks look like a,false,multimodal_tvsum_style
+wjZofJX0v4M,298.0,300.0,annotator_1,3,lecture,,"All of the operations in both of these blocks look like a giant pile of matrix multiplications, and our primary job is",false,multimodal_tvsum_style
+wjZofJX0v4M,300.0,302.0,annotator_1,3,lecture,,"giant pile of matrix multiplications, and our primary job is going to be to understand how to read the underlying matric",false,multimodal_tvsum_style
+wjZofJX0v4M,302.0,304.0,annotator_1,3,lecture,,going to be to understand how to read the underlying matrices.,false,multimodal_tvsum_style
+wjZofJX0v4M,304.0,306.0,annotator_1,3,lecture,,going to be to understand how to read the underlying matrices.,false,multimodal_tvsum_style
+wjZofJX0v4M,306.0,308.0,annotator_1,3,lecture,,"I'm glossing over some details about some normalization steps that happen in between,",false,multimodal_tvsum_style
+wjZofJX0v4M,308.0,310.0,annotator_1,3,lecture,,"I'm glossing over some details about some normalization steps that happen in between,",false,multimodal_tvsum_style
+wjZofJX0v4M,310.0,312.0,annotator_1,3,lecture,,"I'm glossing over some details about some normalization steps that happen in between, but this is after all a high-level",false,multimodal_tvsum_style
+wjZofJX0v4M,312.0,314.0,annotator_1,3,lecture,,"but this is after all a high-level preview. After that, the process essentially repeats, you go back and forth",false,multimodal_tvsum_style
+wjZofJX0v4M,314.0,316.0,annotator_1,3,lecture,,"After that, the process essentially repeats, you go back and forth",false,multimodal_tvsum_style
+wjZofJX0v4M,316.0,318.0,annotator_1,3,lecture,,"After that, the process essentially repeats, you go back and forth between attention blocks and multi-layer perceptron b",false,multimodal_tvsum_style
+wjZofJX0v4M,318.0,320.0,annotator_1,3,lecture,,"between attention blocks and multi-layer perceptron blocks,",false,multimodal_tvsum_style
+wjZofJX0v4M,320.0,322.0,annotator_1,3,lecture,,"between attention blocks and multi-layer perceptron blocks, until at the very end the hope is that all of the essential ",false,multimodal_tvsum_style
+wjZofJX0v4M,322.0,324.0,annotator_1,3,lecture,,until at the very end the hope is that all of the essential meaning,false,multimodal_tvsum_style
+wjZofJX0v4M,324.0,326.0,annotator_1,3,lecture,,until at the very end the hope is that all of the essential meaning of the passage has somehow been baked into the very ,false,multimodal_tvsum_style
+wjZofJX0v4M,326.0,328.0,annotator_1,3,lecture,,of the passage has somehow been baked into the very last vector in the sequence.,false,multimodal_tvsum_style
+wjZofJX0v4M,328.0,330.0,annotator_1,3,lecture,,of the passage has somehow been baked into the very last vector in the sequence. We then perform a certain operation on ,false,multimodal_tvsum_style
+wjZofJX0v4M,330.0,332.0,annotator_1,3,lecture,,We then perform a certain operation on that last vector that produces a probability,false,multimodal_tvsum_style
+wjZofJX0v4M,332.0,334.0,annotator_1,3,lecture,,We then perform a certain operation on that last vector that produces a probability distribution over all possible token,false,multimodal_tvsum_style
+wjZofJX0v4M,334.0,336.0,annotator_1,3,lecture,,"distribution over all possible tokens, all possible little chunks of text that might",false,multimodal_tvsum_style
+wjZofJX0v4M,336.0,338.0,annotator_1,3,lecture,,"distribution over all possible tokens, all possible little chunks of text that might come next.",false,multimodal_tvsum_style
+wjZofJX0v4M,338.0,340.0,annotator_1,3,lecture,,"come next. And like I said, once you have a tool that predicts what comes next",false,multimodal_tvsum_style
+wjZofJX0v4M,340.0,342.0,annotator_1,3,lecture,,"And like I said, once you have a tool that predicts what comes next",false,multimodal_tvsum_style
+wjZofJX0v4M,342.0,344.0,annotator_1,3,lecture,,"And like I said, once you have a tool that predicts what comes next given a snippet of text, you can feed it a little bi",false,multimodal_tvsum_style
+wjZofJX0v4M,344.0,346.0,annotator_1,3,lecture,,"given a snippet of text, you can feed it a little bit of seed text and have it repeatedly play this game of predicting w",false,multimodal_tvsum_style
+wjZofJX0v4M,346.0,348.0,annotator_1,3,lecture,,"have it repeatedly play this game of predicting what comes next,",false,multimodal_tvsum_style
+wjZofJX0v4M,348.0,350.0,annotator_1,3,lecture,,"have it repeatedly play this game of predicting what comes next, sampling from the distribution, appending it, and then ",false,multimodal_tvsum_style
+wjZofJX0v4M,350.0,352.0,annotator_1,3,lecture,,"sampling from the distribution, appending it, and then repeating over and over.",false,multimodal_tvsum_style
+wjZofJX0v4M,352.0,354.0,annotator_1,3,lecture,,"sampling from the distribution, appending it, and then repeating over and over. Some of you in the know may remember how",false,multimodal_tvsum_style
+wjZofJX0v4M,354.0,356.0,annotator_1,3,lecture,,"Some of you in the know may remember how long before ChatGPT came into the scene,",false,multimodal_tvsum_style
+wjZofJX0v4M,356.0,358.0,annotator_1,3,lecture,,"Some of you in the know may remember how long before ChatGPT came into the scene, this is what early demos of GPT-3 look",false,multimodal_tvsum_style
+wjZofJX0v4M,358.0,360.0,annotator_1,3,lecture,,"this is what early demos of GPT-3 looked like,",false,multimodal_tvsum_style
+wjZofJX0v4M,360.0,362.0,annotator_1,3,lecture,,"this is what early demos of GPT-3 looked like, you would have it autocomplete stories and essays based on an initial sni",false,multimodal_tvsum_style
+wjZofJX0v4M,362.0,364.0,annotator_1,3,lecture,,you would have it autocomplete stories and essays based on an initial snippet.,false,multimodal_tvsum_style
+wjZofJX0v4M,364.0,366.0,annotator_1,3,lecture,,"you would have it autocomplete stories and essays based on an initial snippet. To make a tool like this into a chatbot, ",false,multimodal_tvsum_style
+wjZofJX0v4M,366.0,368.0,annotator_1,3,lecture,,"To make a tool like this into a chatbot, the easiest starting point is to have a",false,multimodal_tvsum_style
+wjZofJX0v4M,368.0,370.0,annotator_1,3,lecture,,"To make a tool like this into a chatbot, the easiest starting point is to have a little bit of text that establishes the",false,multimodal_tvsum_style
+wjZofJX0v4M,370.0,372.0,annotator_1,3,lecture,,little bit of text that establishes the setting of a user interacting with a,false,multimodal_tvsum_style
+wjZofJX0v4M,372.0,374.0,annotator_1,3,lecture,,"little bit of text that establishes the setting of a user interacting with a helpful AI assistant, what you would call t",false,multimodal_tvsum_style
+wjZofJX0v4M,374.0,376.0,annotator_1,3,lecture,,"helpful AI assistant, what you would call the system prompt,",false,multimodal_tvsum_style
+wjZofJX0v4M,376.0,378.0,annotator_1,3,lecture,,"helpful AI assistant, what you would call the system prompt, and then you would use the user's initial question or promp",false,multimodal_tvsum_style
+wjZofJX0v4M,378.0,380.0,annotator_1,3,lecture,,and then you would use the user's initial question or prompt as the first bit of,false,multimodal_tvsum_style
+wjZofJX0v4M,380.0,382.0,annotator_1,3,lecture,,"and then you would use the user's initial question or prompt as the first bit of dialogue, and then you have it start pr",false,multimodal_tvsum_style
+wjZofJX0v4M,382.0,384.0,annotator_1,3,lecture,,"dialogue, and then you have it start predicting what such a helpful AI assistant",false,multimodal_tvsum_style
+wjZofJX0v4M,384.0,386.0,annotator_1,3,lecture,,"dialogue, and then you have it start predicting what such a helpful AI assistant would say in response.",false,multimodal_tvsum_style
+wjZofJX0v4M,386.0,388.0,annotator_1,3,lecture,,would say in response. There is more to say about an added step of training that's required,false,multimodal_tvsum_style
+wjZofJX0v4M,388.0,390.0,annotator_1,3,lecture,,There is more to say about an added step of training that's required,false,multimodal_tvsum_style
+wjZofJX0v4M,390.0,392.0,annotator_1,2,lecture,,"There is more to say about an added step of training that's required to make this work well, but at a high level this is",false,multimodal_tvsum_style
+wjZofJX0v4M,392.0,394.0,annotator_1,2,lecture,,"to make this work well, but at a high level this is the idea.",false,multimodal_tvsum_style
+wjZofJX0v4M,394.0,396.0,annotator_1,2,lecture,,"In this chapter, you and I are going to expand on the details of what happens at the very",false,multimodal_tvsum_style
+wjZofJX0v4M,396.0,398.0,annotator_1,2,lecture,,"In this chapter, you and I are going to expand on the details of what happens at the very",false,multimodal_tvsum_style
+wjZofJX0v4M,398.0,400.0,annotator_1,2,lecture,,"In this chapter, you and I are going to expand on the details of what happens at the very beginning of the network, at t",false,multimodal_tvsum_style
+wjZofJX0v4M,400.0,402.0,annotator_1,2,lecture,,"beginning of the network, at the very end of the network,",false,multimodal_tvsum_style
+wjZofJX0v4M,402.0,404.0,annotator_1,2,lecture,,"beginning of the network, at the very end of the network, and I also want to spend a lot of time reviewing some importan",false,multimodal_tvsum_style
+wjZofJX0v4M,404.0,406.0,annotator_1,2,lecture,,and I also want to spend a lot of time reviewing some important bits of background,false,multimodal_tvsum_style
+wjZofJX0v4M,406.0,408.0,annotator_1,2,lecture,,"and I also want to spend a lot of time reviewing some important bits of background knowledge, things that would have bee",false,multimodal_tvsum_style
+wjZofJX0v4M,408.0,410.0,annotator_1,2,lecture,,"knowledge, things that would have been second nature to any machine learning engineer by",false,multimodal_tvsum_style
+wjZofJX0v4M,410.0,412.0,annotator_1,2,lecture,,"knowledge, things that would have been second nature to any machine learning engineer by the time transformers came arou",false,multimodal_tvsum_style
+wjZofJX0v4M,412.0,414.0,annotator_1,2,lecture,,"the time transformers came around. If you're comfortable with that background knowledge and a little impatient,",false,multimodal_tvsum_style
+wjZofJX0v4M,414.0,416.0,annotator_1,2,lecture,,"If you're comfortable with that background knowledge and a little impatient,",false,multimodal_tvsum_style
+wjZofJX0v4M,416.0,418.0,annotator_1,2,lecture,,"If you're comfortable with that background knowledge and a little impatient, you could probably feel free to skip to the",false,multimodal_tvsum_style
+wjZofJX0v4M,418.0,420.0,annotator_1,2,lecture,,"you could probably feel free to skip to the next chapter, which is going to focus on the attention blocks,",false,multimodal_tvsum_style
+wjZofJX0v4M,420.0,422.0,annotator_1,2,lecture,,"which is going to focus on the attention blocks, generally considered the heart of the transformer.",false,multimodal_tvsum_style
+wjZofJX0v4M,422.0,424.0,annotator_1,2,lecture,,"generally considered the heart of the transformer. After that, I want to talk more about these multi-layer perceptron bl",false,multimodal_tvsum_style
+wjZofJX0v4M,424.0,426.0,annotator_1,2,lecture,,"After that, I want to talk more about these multi-layer perceptron blocks,",false,multimodal_tvsum_style
+wjZofJX0v4M,426.0,428.0,annotator_1,2,lecture,,"After that, I want to talk more about these multi-layer perceptron blocks, how training works, and a number of other det",false,multimodal_tvsum_style
+wjZofJX0v4M,428.0,430.0,annotator_1,2,lecture,,"how training works, and a number of other details that will have been skipped up to",false,multimodal_tvsum_style
+wjZofJX0v4M,430.0,432.0,annotator_1,2,lecture,,"how training works, and a number of other details that will have been skipped up to that point.",false,multimodal_tvsum_style
+wjZofJX0v4M,432.0,434.0,annotator_1,2,lecture,,"For broader context, these videos are additions to a mini-series about deep learning,",false,multimodal_tvsum_style
+wjZofJX0v4M,434.0,436.0,annotator_1,2,lecture,,"For broader context, these videos are additions to a mini-series about deep learning,",false,multimodal_tvsum_style
+wjZofJX0v4M,436.0,438.0,annotator_1,2,lecture,,"For broader context, these videos are additions to a mini-series about deep learning, and it's okay if you haven't watch",false,multimodal_tvsum_style
+wjZofJX0v4M,438.0,440.0,annotator_1,2,lecture,,"and it's okay if you haven't watched the previous ones, I think you can do it out of order, but before diving into trans",false,multimodal_tvsum_style
+wjZofJX0v4M,440.0,442.0,annotator_1,2,lecture,,"I think you can do it out of order, but before diving into transformers specifically,",false,multimodal_tvsum_style
+wjZofJX0v4M,442.0,444.0,annotator_1,2,lecture,,"I think you can do it out of order, but before diving into transformers specifically, I do think it's worth making sure ",false,multimodal_tvsum_style
+wjZofJX0v4M,444.0,446.0,annotator_1,2,lecture,,I do think it's worth making sure that we're on the same page about the basic premise,false,multimodal_tvsum_style
+wjZofJX0v4M,446.0,448.0,annotator_1,2,lecture,,I do think it's worth making sure that we're on the same page about the basic premise and structure of deep learning.,false,multimodal_tvsum_style
+wjZofJX0v4M,448.0,450.0,annotator_1,2,lecture,,"and structure of deep learning. At the risk of stating the obvious, this is one approach to machine learning,",false,multimodal_tvsum_style
+wjZofJX0v4M,450.0,452.0,annotator_1,2,lecture,,"At the risk of stating the obvious, this is one approach to machine learning,",false,multimodal_tvsum_style
+wjZofJX0v4M,452.0,454.0,annotator_1,2,lecture,,"At the risk of stating the obvious, this is one approach to machine learning, which describes any model where you're usi",false,multimodal_tvsum_style
+wjZofJX0v4M,454.0,456.0,annotator_1,2,lecture,,which describes any model where you're using data to somehow determine how a model,false,multimodal_tvsum_style
+wjZofJX0v4M,456.0,458.0,annotator_1,2,lecture,,which describes any model where you're using data to somehow determine how a model behaves.,false,multimodal_tvsum_style
+wjZofJX0v4M,458.0,460.0,annotator_1,2,lecture,,"behaves. What I mean by that is, let's say you want a function that takes in",false,multimodal_tvsum_style
+wjZofJX0v4M,460.0,462.0,annotator_1,3,lecture,,"What I mean by that is, let's say you want a function that takes in",false,multimodal_tvsum_style
+wjZofJX0v4M,462.0,464.0,annotator_1,3,lecture,,"What I mean by that is, let's say you want a function that takes in an image and it produces a label describing it,",false,multimodal_tvsum_style
+wjZofJX0v4M,464.0,466.0,annotator_1,3,lecture,,"an image and it produces a label describing it, or our example of predicting the next word given a passage of text,",false,multimodal_tvsum_style
+wjZofJX0v4M,466.0,468.0,annotator_1,3,lecture,,"or our example of predicting the next word given a passage of text,",false,multimodal_tvsum_style
+wjZofJX0v4M,468.0,470.0,annotator_1,3,lecture,,"or our example of predicting the next word given a passage of text, or any other task that seems to require some element",false,multimodal_tvsum_style
+wjZofJX0v4M,470.0,472.0,annotator_1,3,lecture,,or any other task that seems to require some element of intuition and pattern recognition.,false,multimodal_tvsum_style
+wjZofJX0v4M,472.0,474.0,annotator_1,3,lecture,,"and pattern recognition. We almost take this for granted these days, but the idea with machine learning is that",false,multimodal_tvsum_style
+wjZofJX0v4M,474.0,476.0,annotator_1,3,lecture,,"We almost take this for granted these days, but the idea with machine learning is that",false,multimodal_tvsum_style
+wjZofJX0v4M,476.0,478.0,annotator_1,3,lecture,,"We almost take this for granted these days, but the idea with machine learning is that rather than trying to explicitly ",false,multimodal_tvsum_style
+wjZofJX0v4M,478.0,480.0,annotator_1,3,lecture,,"rather than trying to explicitly define a procedure for how to do that task in code,",false,multimodal_tvsum_style
+wjZofJX0v4M,480.0,482.0,annotator_1,3,lecture,,"rather than trying to explicitly define a procedure for how to do that task in code,",false,multimodal_tvsum_style
+wjZofJX0v4M,482.0,484.0,annotator_1,3,lecture,,"rather than trying to explicitly define a procedure for how to do that task in code, which is what people would have don",false,multimodal_tvsum_style
+wjZofJX0v4M,484.0,486.0,annotator_1,3,lecture,,"which is what people would have done in the earliest days of AI, instead you set up a very flexible structure with tunab",false,multimodal_tvsum_style
+wjZofJX0v4M,486.0,488.0,annotator_1,3,lecture,,"instead you set up a very flexible structure with tunable parameters,",false,multimodal_tvsum_style
+wjZofJX0v4M,488.0,490.0,annotator_1,3,lecture,,"instead you set up a very flexible structure with tunable parameters, like a bunch of knobs and dials, and then, somehow",false,multimodal_tvsum_style
+wjZofJX0v4M,490.0,492.0,annotator_1,3,lecture,,"like a bunch of knobs and dials, and then, somehow, you use many examples of what the output should look like for a give",false,multimodal_tvsum_style
+wjZofJX0v4M,492.0,494.0,annotator_1,3,lecture,,you use many examples of what the output should look like for a given input to tweak,false,multimodal_tvsum_style
+wjZofJX0v4M,494.0,496.0,annotator_1,3,lecture,,you use many examples of what the output should look like for a given input to tweak,false,multimodal_tvsum_style
+wjZofJX0v4M,496.0,498.0,annotator_1,3,lecture,,you use many examples of what the output should look like for a given input to tweak and tune the values of those parame,false,multimodal_tvsum_style
+wjZofJX0v4M,498.0,500.0,annotator_1,3,lecture,,"and tune the values of those parameters to mimic this behavior. For example, maybe the simplest form of machine learning",false,multimodal_tvsum_style
+wjZofJX0v4M,500.0,502.0,annotator_1,3,lecture,,"For example, maybe the simplest form of machine learning is linear regression,",false,multimodal_tvsum_style
+wjZofJX0v4M,502.0,504.0,annotator_1,3,lecture,,"For example, maybe the simplest form of machine learning is linear regression,",false,multimodal_tvsum_style
+wjZofJX0v4M,504.0,506.0,annotator_1,3,lecture,,"For example, maybe the simplest form of machine learning is linear regression, where your inputs and outputs are each si",false,multimodal_tvsum_style
+wjZofJX0v4M,506.0,508.0,annotator_1,3,lecture,,"where your inputs and outputs are each single numbers, something like the square footage of a house and its price,",false,multimodal_tvsum_style
+wjZofJX0v4M,508.0,510.0,annotator_1,3,lecture,,"something like the square footage of a house and its price,",false,multimodal_tvsum_style
+wjZofJX0v4M,510.0,512.0,annotator_1,3,lecture,,"something like the square footage of a house and its price, and what you want is to find a line of best fit through this",false,multimodal_tvsum_style
+wjZofJX0v4M,512.0,514.0,annotator_1,3,lecture,,"and what you want is to find a line of best fit through this data, you know,",false,multimodal_tvsum_style
+wjZofJX0v4M,514.0,516.0,annotator_1,3,lecture,,"and what you want is to find a line of best fit through this data, you know, to predict future house prices.",false,multimodal_tvsum_style
+wjZofJX0v4M,516.0,518.0,annotator_1,3,lecture,,"to predict future house prices. That line is described by two continuous parameters,",false,multimodal_tvsum_style
+wjZofJX0v4M,518.0,520.0,annotator_1,3,lecture,,"That line is described by two continuous parameters,",false,multimodal_tvsum_style
+wjZofJX0v4M,520.0,522.0,annotator_1,3,lecture,,"That line is described by two continuous parameters, say the slope and the y-intercept, and the goal of linear",false,multimodal_tvsum_style
+wjZofJX0v4M,522.0,524.0,annotator_1,3,lecture,,"say the slope and the y-intercept, and the goal of linear regression is to determine those parameters to closely match t",false,multimodal_tvsum_style
+wjZofJX0v4M,524.0,526.0,annotator_1,3,lecture,,regression is to determine those parameters to closely match the data.,false,multimodal_tvsum_style
+wjZofJX0v4M,526.0,528.0,annotator_1,3,lecture,,regression is to determine those parameters to closely match the data.,false,multimodal_tvsum_style
+wjZofJX0v4M,528.0,530.0,annotator_1,3,lecture,,"regression is to determine those parameters to closely match the data. Needless to say, deep learning models get much mo",false,multimodal_tvsum_style
+wjZofJX0v4M,530.0,532.0,annotator_1,3,lecture,,"Needless to say, deep learning models get much more complicated.",false,multimodal_tvsum_style
+wjZofJX0v4M,532.0,534.0,annotator_1,3,lecture,,"Needless to say, deep learning models get much more complicated. GPT-3, for example, has not two, but 175 billion parame",false,multimodal_tvsum_style
+wjZofJX0v4M,534.0,536.0,annotator_1,3,lecture,,"GPT-3, for example, has not two, but 175 billion parameters.",false,multimodal_tvsum_style
+wjZofJX0v4M,536.0,538.0,annotator_1,3,lecture,,"GPT-3, for example, has not two, but 175 billion parameters.",false,multimodal_tvsum_style
+wjZofJX0v4M,538.0,540.0,annotator_1,3,lecture,,"But here's the thing, it's not a given that you can create some giant",false,multimodal_tvsum_style
+wjZofJX0v4M,540.0,542.0,annotator_1,3,lecture,,"But here's the thing, it's not a given that you can create some giant model with a huge number of parameters without it ",false,multimodal_tvsum_style
+wjZofJX0v4M,542.0,544.0,annotator_1,3,lecture,,model with a huge number of parameters without it either grossly,false,multimodal_tvsum_style
+wjZofJX0v4M,544.0,546.0,annotator_1,3,lecture,,model with a huge number of parameters without it either grossly overfitting the training data or being completely intra,false,multimodal_tvsum_style
+wjZofJX0v4M,546.0,548.0,annotator_1,3,lecture,,overfitting the training data or being completely intractable to train.,false,multimodal_tvsum_style
+wjZofJX0v4M,548.0,550.0,annotator_1,3,lecture,,overfitting the training data or being completely intractable to train.,false,multimodal_tvsum_style
+wjZofJX0v4M,550.0,552.0,annotator_1,3,lecture,,Deep learning describes a class of models that in the,false,multimodal_tvsum_style
+wjZofJX0v4M,552.0,554.0,annotator_1,3,lecture,,Deep learning describes a class of models that in the last couple decades have proven to scale remarkably well.,false,multimodal_tvsum_style
+wjZofJX0v4M,554.0,556.0,annotator_1,3,lecture,,last couple decades have proven to scale remarkably well.,false,multimodal_tvsum_style
+wjZofJX0v4M,556.0,558.0,annotator_1,3,lecture,,last couple decades have proven to scale remarkably well. What unifies them is that they all use the same training algor,false,multimodal_tvsum_style
+wjZofJX0v4M,558.0,560.0,annotator_1,3,lecture,,"What unifies them is that they all use the same training algorithm, it's called backpropagation, we talked about it in p",false,multimodal_tvsum_style
+wjZofJX0v4M,560.0,562.0,annotator_1,3,lecture,,"it's called backpropagation, we talked about it in previous chapters,",false,multimodal_tvsum_style
+wjZofJX0v4M,562.0,564.0,annotator_1,3,lecture,,"it's called backpropagation, we talked about it in previous chapters, and the context that I want you to have as we go i",false,multimodal_tvsum_style
+wjZofJX0v4M,564.0,566.0,annotator_1,3,lecture,,and the context that I want you to have as we go in is that in order for this,false,multimodal_tvsum_style
+wjZofJX0v4M,566.0,568.0,annotator_1,3,lecture,,"and the context that I want you to have as we go in is that in order for this training algorithm to work well at scale, ",false,multimodal_tvsum_style
+wjZofJX0v4M,568.0,570.0,annotator_1,3,lecture,,"training algorithm to work well at scale, these models have to follow a certain",false,multimodal_tvsum_style
+wjZofJX0v4M,570.0,572.0,annotator_1,3,lecture,,"training algorithm to work well at scale, these models have to follow a certain specific format. And if you know this fo",false,multimodal_tvsum_style
+wjZofJX0v4M,572.0,574.0,annotator_1,3,lecture,,"And if you know this format going in, it helps to explain many of the choices for how a",false,multimodal_tvsum_style
+wjZofJX0v4M,574.0,576.0,annotator_1,3,lecture,,"And if you know this format going in, it helps to explain many of the choices for how a",false,multimodal_tvsum_style
+wjZofJX0v4M,576.0,578.0,annotator_1,3,lecture,,"And if you know this format going in, it helps to explain many of the choices for how a transformer processes language, ",false,multimodal_tvsum_style
+wjZofJX0v4M,578.0,580.0,annotator_1,3,lecture,,"transformer processes language, which otherwise run the risk of feeling kinda arbitrary.",false,multimodal_tvsum_style
+wjZofJX0v4M,580.0,582.0,annotator_1,3,lecture,,"transformer processes language, which otherwise run the risk of feeling kinda arbitrary. First, whatever kind of model y",false,multimodal_tvsum_style
+wjZofJX0v4M,582.0,584.0,annotator_1,3,lecture,,"First, whatever kind of model you're making, the input has to be formatted as an array of real numbers.",false,multimodal_tvsum_style
+wjZofJX0v4M,584.0,586.0,annotator_1,3,lecture,,input has to be formatted as an array of real numbers.,false,multimodal_tvsum_style
+wjZofJX0v4M,586.0,588.0,annotator_1,3,lecture,,"input has to be formatted as an array of real numbers. This could simply mean a list of numbers, it could be a two-dimen",false,multimodal_tvsum_style
+wjZofJX0v4M,588.0,590.0,annotator_1,3,lecture,,"This could simply mean a list of numbers, it could be a two-dimensional array,",false,multimodal_tvsum_style
+wjZofJX0v4M,590.0,592.0,annotator_1,3,lecture,,"This could simply mean a list of numbers, it could be a two-dimensional array, or very often you deal with higher dimens",false,multimodal_tvsum_style
+wjZofJX0v4M,592.0,594.0,annotator_1,3,lecture,,"or very often you deal with higher dimensional arrays, where the general term used is tensor.",false,multimodal_tvsum_style
+wjZofJX0v4M,594.0,596.0,annotator_1,3,lecture,,where the general term used is tensor.,false,multimodal_tvsum_style
+wjZofJX0v4M,596.0,598.0,annotator_1,3,lecture,,You often think of that input data as being progressively transformed into many,false,multimodal_tvsum_style
+wjZofJX0v4M,598.0,600.0,annotator_1,3,lecture,,You often think of that input data as being progressively transformed into many,false,multimodal_tvsum_style
+wjZofJX0v4M,600.0,602.0,annotator_1,3,lecture,,"You often think of that input data as being progressively transformed into many distinct layers, where again, each layer",false,multimodal_tvsum_style
+wjZofJX0v4M,602.0,604.0,annotator_1,3,lecture,,"distinct layers, where again, each layer is always structured as some kind of",false,multimodal_tvsum_style
+wjZofJX0v4M,604.0,606.0,annotator_1,3,lecture,,"distinct layers, where again, each layer is always structured as some kind of array of real numbers, until you get to a ",false,multimodal_tvsum_style
+wjZofJX0v4M,606.0,608.0,annotator_1,3,lecture,,"array of real numbers, until you get to a final layer which you consider the output.",false,multimodal_tvsum_style
+wjZofJX0v4M,608.0,610.0,annotator_1,3,lecture,,"array of real numbers, until you get to a final layer which you consider the output. For example, the final layer in our",false,multimodal_tvsum_style
+wjZofJX0v4M,610.0,612.0,annotator_1,3,lecture,,"For example, the final layer in our text processing model is a list of numbers",false,multimodal_tvsum_style
+wjZofJX0v4M,612.0,614.0,annotator_1,3,lecture,,"For example, the final layer in our text processing model is a list of numbers representing the probability distribution",false,multimodal_tvsum_style
+wjZofJX0v4M,614.0,616.0,annotator_1,3,lecture,,representing the probability distribution for all possible next tokens.,false,multimodal_tvsum_style
+wjZofJX0v4M,616.0,618.0,annotator_1,3,lecture,,"representing the probability distribution for all possible next tokens. In deep learning, these model parameters are alm",false,multimodal_tvsum_style
+wjZofJX0v4M,618.0,620.0,annotator_1,3,lecture,,"In deep learning, these model parameters are almost always referred to as weights,",false,multimodal_tvsum_style
+wjZofJX0v4M,620.0,622.0,annotator_1,3,lecture,,"In deep learning, these model parameters are almost always referred to as weights,",false,multimodal_tvsum_style
+wjZofJX0v4M,622.0,624.0,annotator_1,3,lecture,,"In deep learning, these model parameters are almost always referred to as weights, and this is because a key feature of ",false,multimodal_tvsum_style
+wjZofJX0v4M,624.0,626.0,annotator_1,3,lecture,,and this is because a key feature of these models is that the only way these parameters interact with the data being pro,false,multimodal_tvsum_style
+wjZofJX0v4M,626.0,628.0,annotator_1,3,lecture,,parameters interact with the data being processed is through weighted sums.,false,multimodal_tvsum_style
+wjZofJX0v4M,628.0,630.0,annotator_1,3,lecture,,parameters interact with the data being processed is through weighted sums.,false,multimodal_tvsum_style
+wjZofJX0v4M,630.0,632.0,annotator_1,3,lecture,,"You also sprinkle some non-linear functions throughout,",false,multimodal_tvsum_style
+wjZofJX0v4M,632.0,634.0,annotator_1,3,lecture,,"You also sprinkle some non-linear functions throughout, but they won't depend on parameters.",false,multimodal_tvsum_style
+wjZofJX0v4M,634.0,636.0,annotator_1,3,lecture,,"but they won't depend on parameters. Typically, though, instead of seeing the weighted sums all naked",false,multimodal_tvsum_style
+wjZofJX0v4M,636.0,638.0,annotator_1,3,lecture,,"Typically, though, instead of seeing the weighted sums all naked",false,multimodal_tvsum_style
+wjZofJX0v4M,638.0,640.0,annotator_1,3,lecture,,"Typically, though, instead of seeing the weighted sums all naked and written out explicitly like this, you'll instead fi",false,multimodal_tvsum_style
+wjZofJX0v4M,640.0,642.0,annotator_1,3,lecture,,"and written out explicitly like this, you'll instead find them packaged together as various components in a matrix vecto",false,multimodal_tvsum_style
+wjZofJX0v4M,642.0,644.0,annotator_1,3,lecture,,packaged together as various components in a matrix vector product.,false,multimodal_tvsum_style
+wjZofJX0v4M,644.0,646.0,annotator_1,3,lecture,,packaged together as various components in a matrix vector product.,false,multimodal_tvsum_style
+wjZofJX0v4M,646.0,648.0,annotator_1,3,lecture,,"It amounts to saying the same thing, if you think back to how matrix vector",false,multimodal_tvsum_style
+wjZofJX0v4M,648.0,650.0,annotator_1,3,lecture,,"It amounts to saying the same thing, if you think back to how matrix vector",false,multimodal_tvsum_style
+wjZofJX0v4M,650.0,652.0,annotator_1,3,lecture,,"It amounts to saying the same thing, if you think back to how matrix vector multiplication works, each component in the ",false,multimodal_tvsum_style
+wjZofJX0v4M,652.0,654.0,annotator_1,3,lecture,,"multiplication works, each component in the output looks like a weighted sum.",false,multimodal_tvsum_style
+wjZofJX0v4M,654.0,656.0,annotator_1,3,lecture,,"multiplication works, each component in the output looks like a weighted sum. It's just often conceptually cleaner for y",false,multimodal_tvsum_style
+wjZofJX0v4M,656.0,658.0,annotator_1,3,lecture,,It's just often conceptually cleaner for you and me to think,false,multimodal_tvsum_style
+wjZofJX0v4M,658.0,660.0,annotator_1,3,lecture,,It's just often conceptually cleaner for you and me to think about matrices that are filled with tunable parameters that,false,multimodal_tvsum_style
+wjZofJX0v4M,660.0,662.0,annotator_1,3,lecture,,about matrices that are filled with tunable parameters that transform vectors that are drawn from the data being process,false,multimodal_tvsum_style
+wjZofJX0v4M,662.0,664.0,annotator_1,3,lecture,,transform vectors that are drawn from the data being processed.,false,multimodal_tvsum_style
+wjZofJX0v4M,664.0,666.0,annotator_1,3,lecture,,transform vectors that are drawn from the data being processed.,false,multimodal_tvsum_style
+wjZofJX0v4M,666.0,668.0,annotator_1,3,lecture,,"For example, those 175 billion weights in GPT-3 are",false,multimodal_tvsum_style
+wjZofJX0v4M,668.0,670.0,annotator_1,3,lecture,,"For example, those 175 billion weights in GPT-3 are",false,multimodal_tvsum_style
+wjZofJX0v4M,670.0,672.0,annotator_1,3,lecture,,"For example, those 175 billion weights in GPT-3 are organized into just under 28,000 distinct matrices.",false,multimodal_tvsum_style
+wjZofJX0v4M,672.0,674.0,annotator_1,3,lecture,,"organized into just under 28,000 distinct matrices.",false,multimodal_tvsum_style
+wjZofJX0v4M,674.0,676.0,annotator_1,3,lecture,,"organized into just under 28,000 distinct matrices. Those matrices in turn fall into eight different categories,",false,multimodal_tvsum_style
+wjZofJX0v4M,676.0,678.0,annotator_1,3,lecture,,"Those matrices in turn fall into eight different categories, and what you and I are going to do is step through each one",false,multimodal_tvsum_style
+wjZofJX0v4M,678.0,680.0,annotator_1,3,lecture,,and what you and I are going to do is step through each one of those categories to,false,multimodal_tvsum_style
+wjZofJX0v4M,680.0,682.0,annotator_1,3,lecture,,and what you and I are going to do is step through each one of those categories to understand what that type does.,false,multimodal_tvsum_style
+wjZofJX0v4M,682.0,684.0,annotator_1,3,lecture,,"understand what that type does. As we go through, I think it's kind of fun to reference the specific",false,multimodal_tvsum_style
+wjZofJX0v4M,684.0,686.0,annotator_1,3,lecture,,"As we go through, I think it's kind of fun to reference the specific",false,multimodal_tvsum_style
+wjZofJX0v4M,686.0,688.0,annotator_1,3,lecture,,"As we go through, I think it's kind of fun to reference the specific numbers from GPT-3 to count up exactly where those ",false,multimodal_tvsum_style
+wjZofJX0v4M,688.0,690.0,annotator_1,3,lecture,,numbers from GPT-3 to count up exactly where those 175 billion come from.,false,multimodal_tvsum_style
+wjZofJX0v4M,690.0,692.0,annotator_1,3,lecture,,numbers from GPT-3 to count up exactly where those 175 billion come from. Even if nowadays there are bigger and better m,false,multimodal_tvsum_style
+wjZofJX0v4M,692.0,694.0,annotator_1,3,lecture,,"Even if nowadays there are bigger and better models,",false,multimodal_tvsum_style
+wjZofJX0v4M,694.0,696.0,annotator_1,3,lecture,,"Even if nowadays there are bigger and better models, this one has a certain charm as the first large-language",false,multimodal_tvsum_style
+wjZofJX0v4M,696.0,698.0,annotator_1,3,lecture,,this one has a certain charm as the first large-language model to really capture the world's attention outside of ML com,false,multimodal_tvsum_style
+wjZofJX0v4M,698.0,700.0,annotator_1,3,lecture,,model to really capture the world's attention outside of ML communities.,false,multimodal_tvsum_style
+wjZofJX0v4M,700.0,702.0,annotator_1,3,lecture,,"model to really capture the world's attention outside of ML communities. Also, practically speaking, companies tend to k",false,multimodal_tvsum_style
+wjZofJX0v4M,702.0,704.0,annotator_1,3,lecture,,"Also, practically speaking, companies tend to keep much tighter",false,multimodal_tvsum_style
+wjZofJX0v4M,704.0,706.0,annotator_1,3,lecture,,"Also, practically speaking, companies tend to keep much tighter lips around the specific numbers for more modern network",false,multimodal_tvsum_style
+wjZofJX0v4M,706.0,708.0,annotator_1,3,lecture,,"lips around the specific numbers for more modern networks. I just want to set the scene going in, that as you peek under",false,multimodal_tvsum_style
+wjZofJX0v4M,708.0,710.0,annotator_1,3,lecture,,"I just want to set the scene going in, that as you peek under the",false,multimodal_tvsum_style
+wjZofJX0v4M,710.0,712.0,annotator_1,3,lecture,,"I just want to set the scene going in, that as you peek under the hood to see what happens inside a tool like ChatGPT,",false,multimodal_tvsum_style
+wjZofJX0v4M,712.0,714.0,annotator_1,3,lecture,,"hood to see what happens inside a tool like ChatGPT, almost all of the actual computation looks like matrix vector multi",false,multimodal_tvsum_style
+wjZofJX0v4M,714.0,716.0,annotator_1,3,lecture,,almost all of the actual computation looks like matrix vector multiplication.,false,multimodal_tvsum_style
+wjZofJX0v4M,716.0,718.0,annotator_1,3,lecture,,almost all of the actual computation looks like matrix vector multiplication. There's a little bit of a risk getting los,false,multimodal_tvsum_style
+wjZofJX0v4M,718.0,720.0,annotator_1,3,lecture,,"There's a little bit of a risk getting lost in the sea of billions of numbers,",false,multimodal_tvsum_style
+wjZofJX0v4M,720.0,722.0,annotator_1,3,lecture,,"There's a little bit of a risk getting lost in the sea of billions of numbers, but you should draw a very sharp distinct",false,multimodal_tvsum_style
+wjZofJX0v4M,722.0,724.0,annotator_1,3,lecture,,but you should draw a very sharp distinction in your mind between,false,multimodal_tvsum_style
+wjZofJX0v4M,724.0,726.0,annotator_1,3,lecture,,"but you should draw a very sharp distinction in your mind between the weights of the model, which I'll always color in b",false,multimodal_tvsum_style
+wjZofJX0v4M,726.0,728.0,annotator_1,3,lecture,,"the weights of the model, which I'll always color in blue or red,",false,multimodal_tvsum_style
+wjZofJX0v4M,728.0,730.0,annotator_1,3,lecture,,"the weights of the model, which I'll always color in blue or red, and the data being processed, which I'll always color ",false,multimodal_tvsum_style
+wjZofJX0v4M,730.0,732.0,annotator_1,3,lecture,,"and the data being processed, which I'll always color in gray.",false,multimodal_tvsum_style
+wjZofJX0v4M,732.0,734.0,annotator_1,3,lecture,,"The weights are the actual brains, they are the things learned during training,",false,multimodal_tvsum_style
+wjZofJX0v4M,734.0,736.0,annotator_1,3,lecture,,"The weights are the actual brains, they are the things learned during training,",false,multimodal_tvsum_style
+wjZofJX0v4M,736.0,738.0,annotator_1,3,lecture,,"The weights are the actual brains, they are the things learned during training, and they determine how it behaves.",false,multimodal_tvsum_style
+wjZofJX0v4M,738.0,740.0,annotator_1,3,lecture,,The data being processed simply encodes whatever specific input is,false,multimodal_tvsum_style
+wjZofJX0v4M,740.0,742.0,annotator_1,3,lecture,,The data being processed simply encodes whatever specific input is,false,multimodal_tvsum_style
+wjZofJX0v4M,742.0,744.0,annotator_1,3,lecture,,"The data being processed simply encodes whatever specific input is fed into the model for a given run, like an example s",false,multimodal_tvsum_style
+wjZofJX0v4M,744.0,746.0,annotator_1,3,lecture,,"fed into the model for a given run, like an example snippet of text.",false,multimodal_tvsum_style
+wjZofJX0v4M,746.0,748.0,annotator_1,3,lecture,,"fed into the model for a given run, like an example snippet of text. With all of that as foundation, let's dig into the ",false,multimodal_tvsum_style
+wjZofJX0v4M,748.0,750.0,annotator_1,3,lecture,,"With all of that as foundation, let's dig into the first step of this text processing",false,multimodal_tvsum_style
+wjZofJX0v4M,750.0,752.0,annotator_1,3,lecture,,"With all of that as foundation, let's dig into the first step of this text processing example, which is to break up the ",false,multimodal_tvsum_style
+wjZofJX0v4M,752.0,754.0,annotator_1,3,lecture,,"example, which is to break up the input into little chunks and turn those chunks into",false,multimodal_tvsum_style
+wjZofJX0v4M,754.0,756.0,annotator_1,3,lecture,,"example, which is to break up the input into little chunks and turn those chunks into vectors.",false,multimodal_tvsum_style
+wjZofJX0v4M,756.0,758.0,annotator_1,3,lecture,,"vectors. I mentioned how those chunks are called tokens,",false,multimodal_tvsum_style
+wjZofJX0v4M,758.0,760.0,annotator_1,3,lecture,,"I mentioned how those chunks are called tokens, which might be pieces of words or punctuation,",false,multimodal_tvsum_style
+wjZofJX0v4M,760.0,762.0,annotator_1,3,lecture,,"which might be pieces of words or punctuation, but every now and then in this chapter and especially in the next one,",false,multimodal_tvsum_style
+wjZofJX0v4M,762.0,764.0,annotator_1,3,lecture,,"but every now and then in this chapter and especially in the next one,",false,multimodal_tvsum_style
+wjZofJX0v4M,764.0,766.0,annotator_1,3,lecture,,"but every now and then in this chapter and especially in the next one, I'd like to just pretend that it's broken more cl",false,multimodal_tvsum_style
+wjZofJX0v4M,766.0,768.0,annotator_1,3,lecture,,I'd like to just pretend that it's broken more cleanly into words.,false,multimodal_tvsum_style
+wjZofJX0v4M,768.0,770.0,annotator_1,3,lecture,,"I'd like to just pretend that it's broken more cleanly into words. Because we humans think in words, this will just make",false,multimodal_tvsum_style
+wjZofJX0v4M,770.0,772.0,annotator_1,3,lecture,,"Because we humans think in words, this will just make it much easier to reference little examples and clarify each step.",false,multimodal_tvsum_style
+wjZofJX0v4M,772.0,774.0,annotator_1,3,lecture,,easier to reference little examples and clarify each step.,false,multimodal_tvsum_style
+wjZofJX0v4M,774.0,776.0,annotator_1,3,lecture,,"easier to reference little examples and clarify each step. The model has a predefined vocabulary, some list of all possi",false,multimodal_tvsum_style
+wjZofJX0v4M,776.0,778.0,annotator_1,3,lecture,,"The model has a predefined vocabulary, some list of all possible words,",false,multimodal_tvsum_style
+wjZofJX0v4M,778.0,780.0,annotator_1,3,lecture,,"The model has a predefined vocabulary, some list of all possible words, say 50,000 of them, and the first matrix that we",false,multimodal_tvsum_style
+wjZofJX0v4M,780.0,782.0,annotator_1,3,lecture,,"say 50,000 of them, and the first matrix that we'll encounter,",false,multimodal_tvsum_style
+wjZofJX0v4M,782.0,784.0,annotator_1,3,lecture,,"say 50,000 of them, and the first matrix that we'll encounter, known as the embedding matrix, has a single column for ea",false,multimodal_tvsum_style
+wjZofJX0v4M,784.0,786.0,annotator_1,3,lecture,,"known as the embedding matrix, has a single column for each one of these words.",false,multimodal_tvsum_style
+wjZofJX0v4M,786.0,788.0,annotator_1,3,lecture,,"known as the embedding matrix, has a single column for each one of these words.",false,multimodal_tvsum_style
+wjZofJX0v4M,788.0,790.0,annotator_1,3,lecture,,These columns are what determines what vector each word turns into in that first step.,false,multimodal_tvsum_style
+wjZofJX0v4M,790.0,792.0,annotator_1,3,lecture,,These columns are what determines what vector each word turns into in that first step.,false,multimodal_tvsum_style
+wjZofJX0v4M,792.0,794.0,annotator_1,3,lecture,,These columns are what determines what vector each word turns into in that first step.,false,multimodal_tvsum_style
+wjZofJX0v4M,794.0,796.0,annotator_1,3,lecture,,"We label it W_E, and like all the matrices we see,",false,multimodal_tvsum_style
+wjZofJX0v4M,796.0,798.0,annotator_1,3,lecture,,"We label it W_E, and like all the matrices we see,",false,multimodal_tvsum_style
+wjZofJX0v4M,798.0,800.0,annotator_1,3,lecture,,"We label it W_E, and like all the matrices we see, its values begin random, but they're going to be learned based on dat",false,multimodal_tvsum_style
+wjZofJX0v4M,800.0,802.0,annotator_1,3,lecture,,"its values begin random, but they're going to be learned based on data.",false,multimodal_tvsum_style
+wjZofJX0v4M,802.0,804.0,annotator_1,3,lecture,,"its values begin random, but they're going to be learned based on data. Turning words into vectors was common practice i",false,multimodal_tvsum_style
+wjZofJX0v4M,804.0,806.0,annotator_1,3,lecture,,Turning words into vectors was common practice in machine learning long before,false,multimodal_tvsum_style
+wjZofJX0v4M,806.0,808.0,annotator_1,3,lecture,,"Turning words into vectors was common practice in machine learning long before transformers, but it's a little weird if ",false,multimodal_tvsum_style
+wjZofJX0v4M,808.0,810.0,annotator_1,3,lecture,,"transformers, but it's a little weird if you've never seen it before,",false,multimodal_tvsum_style
+wjZofJX0v4M,810.0,812.0,annotator_1,3,lecture,,"transformers, but it's a little weird if you've never seen it before, and it sets the foundation for everything that fol",false,multimodal_tvsum_style
+wjZofJX0v4M,812.0,814.0,annotator_1,3,lecture,,"and it sets the foundation for everything that follows, so let's take a moment to get familiar with it.",false,multimodal_tvsum_style
+wjZofJX0v4M,814.0,816.0,annotator_1,3,lecture,,so let's take a moment to get familiar with it.,false,multimodal_tvsum_style
+wjZofJX0v4M,816.0,818.0,annotator_1,3,lecture,,"We often call this embedding a word, which invites you to think of these",false,multimodal_tvsum_style
+wjZofJX0v4M,818.0,820.0,annotator_1,3,lecture,,"We often call this embedding a word, which invites you to think of these vectors very geometrically as points in some hi",false,multimodal_tvsum_style
+wjZofJX0v4M,820.0,822.0,annotator_1,3,lecture,,vectors very geometrically as points in some high dimensional space.,false,multimodal_tvsum_style
+wjZofJX0v4M,822.0,824.0,annotator_1,3,lecture,,vectors very geometrically as points in some high dimensional space.,false,multimodal_tvsum_style
+wjZofJX0v4M,824.0,826.0,annotator_1,3,lecture,,Visualizing a list of three numbers as coordinates for points in 3D space would,false,multimodal_tvsum_style
+wjZofJX0v4M,826.0,828.0,annotator_1,3,lecture,,Visualizing a list of three numbers as coordinates for points in 3D space would,false,multimodal_tvsum_style
+wjZofJX0v4M,828.0,830.0,annotator_1,3,lecture,,"Visualizing a list of three numbers as coordinates for points in 3D space would be no problem, but word embeddings tend ",false,multimodal_tvsum_style
+wjZofJX0v4M,830.0,832.0,annotator_1,3,lecture,,"be no problem, but word embeddings tend to be much much higher dimensional.",false,multimodal_tvsum_style
+wjZofJX0v4M,832.0,834.0,annotator_1,3,lecture,,"In GPT-3 they have 12,288 dimensions, and as you'll see,",false,multimodal_tvsum_style
+wjZofJX0v4M,834.0,836.0,annotator_1,3,lecture,,"In GPT-3 they have 12,288 dimensions, and as you'll see, it matters to work in a space that has a lot of distinct direct",false,multimodal_tvsum_style
+wjZofJX0v4M,836.0,838.0,annotator_1,3,lecture,,it matters to work in a space that has a lot of distinct directions.,false,multimodal_tvsum_style
+wjZofJX0v4M,838.0,840.0,annotator_1,3,lecture,,it matters to work in a space that has a lot of distinct directions.,false,multimodal_tvsum_style
+wjZofJX0v4M,840.0,842.0,annotator_1,3,lecture,,it matters to work in a space that has a lot of distinct directions. In the same way that you could take a two-dimension,false,multimodal_tvsum_style
+wjZofJX0v4M,842.0,844.0,annotator_1,3,lecture,,In the same way that you could take a two-dimensional slice through a 3D space,false,multimodal_tvsum_style
+wjZofJX0v4M,844.0,846.0,annotator_1,3,lecture,,In the same way that you could take a two-dimensional slice through a 3D space and project all the points onto that slic,false,multimodal_tvsum_style
+wjZofJX0v4M,846.0,848.0,annotator_1,3,lecture,,"and project all the points onto that slice, for the sake of animating word",false,multimodal_tvsum_style
+wjZofJX0v4M,848.0,850.0,annotator_1,3,lecture,,"and project all the points onto that slice, for the sake of animating word embeddings that a simple model is giving me, ",false,multimodal_tvsum_style
+wjZofJX0v4M,850.0,852.0,annotator_1,3,lecture,,"embeddings that a simple model is giving me, I'm going to do an analogous",false,multimodal_tvsum_style
+wjZofJX0v4M,852.0,854.0,annotator_1,3,lecture,,"embeddings that a simple model is giving me, I'm going to do an analogous thing by choosing a three-dimensional slice th",false,multimodal_tvsum_style
+wjZofJX0v4M,854.0,856.0,annotator_1,3,lecture,,"thing by choosing a three-dimensional slice through this very high dimensional space,",false,multimodal_tvsum_style
+wjZofJX0v4M,856.0,858.0,annotator_1,3,lecture,,"thing by choosing a three-dimensional slice through this very high dimensional space, and projecting the word vectors do",false,multimodal_tvsum_style
+wjZofJX0v4M,858.0,860.0,annotator_1,3,lecture,,and projecting the word vectors down onto that and displaying the results.,false,multimodal_tvsum_style
+wjZofJX0v4M,860.0,862.0,annotator_1,4,lecture,,and projecting the word vectors down onto that and displaying the results. The big idea here is that as a model tweaks a,false,multimodal_tvsum_style
+wjZofJX0v4M,862.0,864.0,annotator_1,4,lecture,,The big idea here is that as a model tweaks and tunes its weights to determine,false,multimodal_tvsum_style
+wjZofJX0v4M,864.0,866.0,annotator_1,4,lecture,,The big idea here is that as a model tweaks and tunes its weights to determine how exactly words get embedded as vectors,false,multimodal_tvsum_style
+wjZofJX0v4M,866.0,868.0,annotator_1,4,lecture,,"how exactly words get embedded as vectors during training,",false,multimodal_tvsum_style
+wjZofJX0v4M,868.0,870.0,annotator_1,4,lecture,,"how exactly words get embedded as vectors during training, it tends to settle on a set of embeddings where directions in",false,multimodal_tvsum_style
+wjZofJX0v4M,870.0,872.0,annotator_1,4,lecture,,it tends to settle on a set of embeddings where directions in the space have a,false,multimodal_tvsum_style
+wjZofJX0v4M,872.0,874.0,annotator_1,4,lecture,,it tends to settle on a set of embeddings where directions in the space have a kind of semantic meaning.,false,multimodal_tvsum_style
+wjZofJX0v4M,874.0,876.0,annotator_1,4,lecture,,"kind of semantic meaning. For the simple word-to-vector model I'm running here,",false,multimodal_tvsum_style
+wjZofJX0v4M,876.0,878.0,annotator_1,4,lecture,,"For the simple word-to-vector model I'm running here, if I run a search for all the words whose embeddings are closest t",false,multimodal_tvsum_style
+wjZofJX0v4M,878.0,880.0,annotator_1,4,lecture,,"if I run a search for all the words whose embeddings are closest to that of tower,",false,multimodal_tvsum_style
+wjZofJX0v4M,880.0,882.0,annotator_1,4,lecture,,"if I run a search for all the words whose embeddings are closest to that of tower,",false,multimodal_tvsum_style
+wjZofJX0v4M,882.0,884.0,annotator_1,4,lecture,,"if I run a search for all the words whose embeddings are closest to that of tower, you'll notice how they all seem to gi",false,multimodal_tvsum_style
+wjZofJX0v4M,884.0,886.0,annotator_1,4,lecture,,you'll notice how they all seem to give very similar tower-ish vibes.,false,multimodal_tvsum_style
+wjZofJX0v4M,886.0,888.0,annotator_1,4,lecture,,"And if you want to pull up some Python and play along at home,",false,multimodal_tvsum_style
+wjZofJX0v4M,888.0,890.0,annotator_1,4,lecture,,"And if you want to pull up some Python and play along at home, this is the specific model that I'm using to make the ani",false,multimodal_tvsum_style
+wjZofJX0v4M,890.0,892.0,annotator_1,4,lecture,,"this is the specific model that I'm using to make the animations. It's not a transformer, but it's enough to illustrate ",false,multimodal_tvsum_style
+wjZofJX0v4M,892.0,894.0,annotator_1,4,lecture,,"It's not a transformer, but it's enough to illustrate the",false,multimodal_tvsum_style
+wjZofJX0v4M,894.0,896.0,annotator_1,4,lecture,,"It's not a transformer, but it's enough to illustrate the idea that directions in the space can carry semantic meaning.",false,multimodal_tvsum_style
+wjZofJX0v4M,896.0,898.0,annotator_1,4,lecture,,idea that directions in the space can carry semantic meaning.,false,multimodal_tvsum_style
+wjZofJX0v4M,898.0,900.0,annotator_1,5,lecture,,A very classic example of this is how if you take the difference between,false,multimodal_tvsum_style
+wjZofJX0v4M,900.0,902.0,annotator_1,5,lecture,,A very classic example of this is how if you take the difference between,false,multimodal_tvsum_style
+wjZofJX0v4M,902.0,904.0,annotator_1,5,lecture,,"A very classic example of this is how if you take the difference between the vectors for woman and man, something you wo",false,multimodal_tvsum_style
+wjZofJX0v4M,904.0,906.0,annotator_1,5,lecture,,"the vectors for woman and man, something you would visualize as a little vector in the space connecting the tip of one t",false,multimodal_tvsum_style
+wjZofJX0v4M,906.0,908.0,annotator_1,5,lecture,,"little vector in the space connecting the tip of one to the tip of the other,",false,multimodal_tvsum_style
+wjZofJX0v4M,908.0,910.0,annotator_1,5,lecture,,"little vector in the space connecting the tip of one to the tip of the other, it's very similar to the difference betwee",false,multimodal_tvsum_style
+wjZofJX0v4M,910.0,912.0,annotator_1,5,lecture,,it's very similar to the difference between king and queen.,false,multimodal_tvsum_style
+wjZofJX0v4M,912.0,914.0,annotator_1,5,lecture,,it's very similar to the difference between king and queen.,false,multimodal_tvsum_style
+wjZofJX0v4M,914.0,916.0,annotator_1,5,lecture,,"So let's say you didn't know the word for a female monarch,",false,multimodal_tvsum_style
+wjZofJX0v4M,916.0,918.0,annotator_1,5,lecture,,"So let's say you didn't know the word for a female monarch,",false,multimodal_tvsum_style
+wjZofJX0v4M,918.0,920.0,annotator_1,5,lecture,,"So let's say you didn't know the word for a female monarch, you could find it by taking king, adding this woman minus ma",false,multimodal_tvsum_style
+wjZofJX0v4M,920.0,922.0,annotator_1,5,lecture,,"you could find it by taking king, adding this woman minus man direction,",false,multimodal_tvsum_style
+wjZofJX0v4M,922.0,924.0,annotator_1,5,lecture,,"you could find it by taking king, adding this woman minus man direction, and searching for the embedding closest to that",false,multimodal_tvsum_style
+wjZofJX0v4M,924.0,926.0,annotator_1,5,lecture,,and searching for the embedding closest to that point.,false,multimodal_tvsum_style
+wjZofJX0v4M,926.0,928.0,annotator_1,3,lecture,,"At least, kind of.",false,multimodal_tvsum_style
+wjZofJX0v4M,928.0,930.0,annotator_1,3,lecture,,"At least, kind of. Despite this being a classic example for the model I'm playing with,",false,multimodal_tvsum_style
+wjZofJX0v4M,930.0,932.0,annotator_1,3,lecture,,"Despite this being a classic example for the model I'm playing with, the true embedding of queen is actually a little fa",false,multimodal_tvsum_style
+wjZofJX0v4M,932.0,934.0,annotator_1,3,lecture,,"the true embedding of queen is actually a little farther off than this would suggest,",false,multimodal_tvsum_style
+wjZofJX0v4M,934.0,936.0,annotator_1,3,lecture,,"the true embedding of queen is actually a little farther off than this would suggest, presumably because the way queen i",false,multimodal_tvsum_style
+wjZofJX0v4M,936.0,938.0,annotator_1,3,lecture,,presumably because the way queen is used in training data is not merely a feminine,false,multimodal_tvsum_style
+wjZofJX0v4M,938.0,940.0,annotator_1,3,lecture,,presumably because the way queen is used in training data is not merely a feminine version of king.,false,multimodal_tvsum_style
+wjZofJX0v4M,940.0,942.0,annotator_1,4,lecture,,"version of king. When I played around, family relations seemed to illustrate the idea much better.",false,multimodal_tvsum_style
+wjZofJX0v4M,942.0,944.0,annotator_1,4,lecture,,"When I played around, family relations seemed to illustrate the idea much better.",false,multimodal_tvsum_style
+wjZofJX0v4M,944.0,946.0,annotator_1,4,lecture,,"When I played around, family relations seemed to illustrate the idea much better.",false,multimodal_tvsum_style
+wjZofJX0v4M,946.0,948.0,annotator_1,5,lecture,,"The point is, it looks like during training the model found it advantageous to",false,multimodal_tvsum_style
+wjZofJX0v4M,948.0,950.0,annotator_1,5,lecture,,"The point is, it looks like during training the model found it advantageous to",false,multimodal_tvsum_style
+wjZofJX0v4M,950.0,952.0,annotator_1,5,lecture,,"The point is, it looks like during training the model found it advantageous to choose embeddings such that one direction",false,multimodal_tvsum_style
+wjZofJX0v4M,952.0,954.0,annotator_1,5,lecture,,choose embeddings such that one direction in this space encodes gender information.,false,multimodal_tvsum_style
+wjZofJX0v4M,954.0,956.0,annotator_1,5,lecture,,choose embeddings such that one direction in this space encodes gender information.,false,multimodal_tvsum_style
+wjZofJX0v4M,956.0,958.0,annotator_1,5,lecture,,"Another example is that if you take the embedding of Italy,",false,multimodal_tvsum_style
+wjZofJX0v4M,958.0,960.0,annotator_1,5,lecture,,"Another example is that if you take the embedding of Italy,",false,multimodal_tvsum_style
+wjZofJX0v4M,960.0,962.0,annotator_1,5,lecture,,"Another example is that if you take the embedding of Italy, and you subtract the embedding of Germany, and add that to t",false,multimodal_tvsum_style
+wjZofJX0v4M,962.0,964.0,annotator_1,5,lecture,,"and you subtract the embedding of Germany, and add that to the embedding of Hitler,",false,multimodal_tvsum_style
+wjZofJX0v4M,964.0,966.0,annotator_1,5,lecture,,"and you subtract the embedding of Germany, and add that to the embedding of Hitler, you get something very close to the ",false,multimodal_tvsum_style
+wjZofJX0v4M,966.0,968.0,annotator_1,5,lecture,,you get something very close to the embedding of Mussolini.,false,multimodal_tvsum_style
+wjZofJX0v4M,968.0,970.0,annotator_1,5,lecture,,you get something very close to the embedding of Mussolini. It's as if the model learned to associate some directions wi,false,multimodal_tvsum_style
+wjZofJX0v4M,970.0,972.0,annotator_1,4,lecture,,"It's as if the model learned to associate some directions with Italian-ness,",false,multimodal_tvsum_style
+wjZofJX0v4M,972.0,974.0,annotator_1,4,lecture,,"It's as if the model learned to associate some directions with Italian-ness, and others with WWII axis leaders.",false,multimodal_tvsum_style
+wjZofJX0v4M,974.0,976.0,annotator_1,4,lecture,,and others with WWII axis leaders.,false,multimodal_tvsum_style
+wjZofJX0v4M,976.0,978.0,annotator_1,5,lecture,,"Maybe my favorite example in this vein is how in some models,",false,multimodal_tvsum_style
+wjZofJX0v4M,978.0,980.0,annotator_1,5,lecture,,"Maybe my favorite example in this vein is how in some models, if you take the difference between Germany and Japan, and ",false,multimodal_tvsum_style
+wjZofJX0v4M,980.0,982.0,annotator_1,5,lecture,,"if you take the difference between Germany and Japan, and add it to sushi,",false,multimodal_tvsum_style
+wjZofJX0v4M,982.0,984.0,annotator_1,5,lecture,,"if you take the difference between Germany and Japan, and add it to sushi,",false,multimodal_tvsum_style
+wjZofJX0v4M,984.0,986.0,annotator_1,5,lecture,,"if you take the difference between Germany and Japan, and add it to sushi, you end up very close to bratwurst.",false,multimodal_tvsum_style
+wjZofJX0v4M,986.0,988.0,annotator_1,5,lecture,,"you end up very close to bratwurst. Also in playing this game of finding nearest neighbors,",false,multimodal_tvsum_style
+wjZofJX0v4M,988.0,990.0,annotator_1,4,lecture,,"Also in playing this game of finding nearest neighbors,",false,multimodal_tvsum_style
+wjZofJX0v4M,990.0,992.0,annotator_1,4,lecture,,"Also in playing this game of finding nearest neighbors, I was very pleased to see how close cat was to both beast and mo",false,multimodal_tvsum_style
+wjZofJX0v4M,992.0,994.0,annotator_1,4,lecture,,I was very pleased to see how close cat was to both beast and monster.,false,multimodal_tvsum_style
+wjZofJX0v4M,994.0,996.0,annotator_1,3,lecture,,"One bit of mathematical intuition that's helpful to have in mind,",false,multimodal_tvsum_style
+wjZofJX0v4M,996.0,998.0,annotator_1,3,lecture,,"One bit of mathematical intuition that's helpful to have in mind, especially for the next chapter, is how the dot produc",false,multimodal_tvsum_style
+wjZofJX0v4M,998.0,1000.0,annotator_1,3,lecture,,"especially for the next chapter, is how the dot product of two",false,multimodal_tvsum_style
+wjZofJX0v4M,1000.0,1002.0,annotator_1,3,lecture,,"especially for the next chapter, is how the dot product of two vectors can be thought of as a way to measure how well th",false,multimodal_tvsum_style
+wjZofJX0v4M,1002.0,1004.0,annotator_1,3,lecture,,vectors can be thought of as a way to measure how well they align.,false,multimodal_tvsum_style
+wjZofJX0v4M,1004.0,1006.0,annotator_1,3,lecture,,"Computationally, dot products involve multiplying all the",false,multimodal_tvsum_style
+wjZofJX0v4M,1006.0,1008.0,annotator_1,3,lecture,,"Computationally, dot products involve multiplying all the corresponding components and then adding the results, which is",false,multimodal_tvsum_style
+wjZofJX0v4M,1008.0,1010.0,annotator_1,3,lecture,,"corresponding components and then adding the results, which is good,",false,multimodal_tvsum_style
+wjZofJX0v4M,1010.0,1012.0,annotator_1,3,lecture,,"corresponding components and then adding the results, which is good, since so much of our computation has to look like w",false,multimodal_tvsum_style
+wjZofJX0v4M,1012.0,1014.0,annotator_1,3,lecture,,since so much of our computation has to look like weighted sums.,false,multimodal_tvsum_style
+wjZofJX0v4M,1014.0,1016.0,annotator_1,3,lecture,,"since so much of our computation has to look like weighted sums. Geometrically, the dot product is positive when vectors",false,multimodal_tvsum_style
+wjZofJX0v4M,1016.0,1018.0,annotator_1,3,lecture,,"Geometrically, the dot product is positive when vectors point in similar directions,",false,multimodal_tvsum_style
+wjZofJX0v4M,1018.0,1020.0,annotator_1,3,lecture,,"Geometrically, the dot product is positive when vectors point in similar directions,",false,multimodal_tvsum_style
+wjZofJX0v4M,1020.0,1022.0,annotator_1,3,lecture,,"it's zero if they're perpendicular, and it's negative whenever",false,multimodal_tvsum_style
+wjZofJX0v4M,1022.0,1024.0,annotator_1,3,lecture,,"it's zero if they're perpendicular, and it's negative whenever they point in opposite directions.",false,multimodal_tvsum_style
+wjZofJX0v4M,1024.0,1026.0,annotator_1,3,lecture,,they point in opposite directions.,false,multimodal_tvsum_style
+wjZofJX0v4M,1026.0,1028.0,annotator_1,3,lecture,,"For example, let's say you were playing with this model,",false,multimodal_tvsum_style
+wjZofJX0v4M,1028.0,1030.0,annotator_1,3,lecture,,"For example, let's say you were playing with this model, and you hypothesize that the embedding of cats minus cat might ",false,multimodal_tvsum_style
+wjZofJX0v4M,1030.0,1032.0,annotator_1,3,lecture,,and you hypothesize that the embedding of cats minus cat might represent a sort of,false,multimodal_tvsum_style
+wjZofJX0v4M,1032.0,1034.0,annotator_1,3,lecture,,and you hypothesize that the embedding of cats minus cat might represent a sort of,false,multimodal_tvsum_style
+wjZofJX0v4M,1034.0,1036.0,annotator_1,3,lecture,,and you hypothesize that the embedding of cats minus cat might represent a sort of plurality direction in this space.,false,multimodal_tvsum_style
+wjZofJX0v4M,1036.0,1038.0,annotator_1,3,lecture,,"plurality direction in this space. To test this, I'm going to take this vector and compute its dot",false,multimodal_tvsum_style
+wjZofJX0v4M,1038.0,1040.0,annotator_1,3,lecture,,"To test this, I'm going to take this vector and compute its dot",false,multimodal_tvsum_style
+wjZofJX0v4M,1040.0,1042.0,annotator_1,3,lecture,,"To test this, I'm going to take this vector and compute its dot product against the embeddings of certain singular nouns",false,multimodal_tvsum_style
+wjZofJX0v4M,1042.0,1044.0,annotator_1,3,lecture,,"product against the embeddings of certain singular nouns, and compare it to the dot products with the corresponding plur",false,multimodal_tvsum_style
+wjZofJX0v4M,1044.0,1046.0,annotator_1,3,lecture,,and compare it to the dot products with the corresponding plural nouns.,false,multimodal_tvsum_style
+wjZofJX0v4M,1046.0,1048.0,annotator_1,3,lecture,,"and compare it to the dot products with the corresponding plural nouns. If you play around with this, you'll notice that",false,multimodal_tvsum_style
+wjZofJX0v4M,1048.0,1050.0,annotator_1,3,lecture,,"If you play around with this, you'll notice that the plural ones",false,multimodal_tvsum_style
+wjZofJX0v4M,1050.0,1052.0,annotator_1,3,lecture,,"If you play around with this, you'll notice that the plural ones do indeed seem to consistently give higher values than ",false,multimodal_tvsum_style
+wjZofJX0v4M,1052.0,1054.0,annotator_1,3,lecture,,"do indeed seem to consistently give higher values than the singular ones, indicating that they align more with this dire",false,multimodal_tvsum_style
+wjZofJX0v4M,1054.0,1056.0,annotator_1,3,lecture,,indicating that they align more with this direction.,false,multimodal_tvsum_style
+wjZofJX0v4M,1056.0,1058.0,annotator_1,3,lecture,,indicating that they align more with this direction. It's also fun how if you take this dot product with the embeddings ,false,multimodal_tvsum_style
+wjZofJX0v4M,1058.0,1060.0,annotator_1,3,lecture,,"It's also fun how if you take this dot product with the embeddings of the words one,",false,multimodal_tvsum_style
+wjZofJX0v4M,1060.0,1062.0,annotator_1,3,lecture,,"It's also fun how if you take this dot product with the embeddings of the words one, two, three, and so on, they give in",false,multimodal_tvsum_style
+wjZofJX0v4M,1062.0,1064.0,annotator_1,3,lecture,,"two, three, and so on, they give increasing values,",false,multimodal_tvsum_style
+wjZofJX0v4M,1064.0,1066.0,annotator_1,3,lecture,,"two, three, and so on, they give increasing values, so it's as if we can quantitatively measure how plural the model fin",false,multimodal_tvsum_style
+wjZofJX0v4M,1066.0,1068.0,annotator_1,3,lecture,,so it's as if we can quantitatively measure how plural the model finds a given word.,false,multimodal_tvsum_style
+wjZofJX0v4M,1068.0,1070.0,annotator_1,3,lecture,,so it's as if we can quantitatively measure how plural the model finds a given word.,false,multimodal_tvsum_style
+wjZofJX0v4M,1070.0,1072.0,annotator_1,3,lecture,,"Again, the specifics for how words get embedded is learned using data.",false,multimodal_tvsum_style
+wjZofJX0v4M,1072.0,1074.0,annotator_1,3,lecture,,"Again, the specifics for how words get embedded is learned using data.",false,multimodal_tvsum_style
+wjZofJX0v4M,1074.0,1076.0,annotator_1,3,lecture,,"This embedding matrix, whose columns tell us what happens to each word,",false,multimodal_tvsum_style
+wjZofJX0v4M,1076.0,1078.0,annotator_1,3,lecture,,"This embedding matrix, whose columns tell us what happens to each word, is the first pile of weights in our model.",false,multimodal_tvsum_style
+wjZofJX0v4M,1078.0,1080.0,annotator_1,3,lecture,,is the first pile of weights in our model.,false,multimodal_tvsum_style
+wjZofJX0v4M,1080.0,1082.0,annotator_1,3,lecture,,"Using the GPT-3 numbers, the vocabulary size specifically is 50,257,",false,multimodal_tvsum_style
+wjZofJX0v4M,1082.0,1084.0,annotator_1,3,lecture,,"Using the GPT-3 numbers, the vocabulary size specifically is 50,257,",false,multimodal_tvsum_style
+wjZofJX0v4M,1084.0,1086.0,annotator_1,3,lecture,,"Using the GPT-3 numbers, the vocabulary size specifically is 50,257, and again, technically this consists not of words p",false,multimodal_tvsum_style
+wjZofJX0v4M,1086.0,1088.0,annotator_1,3,lecture,,"and again, technically this consists not of words per se, but of tokens.",false,multimodal_tvsum_style
+wjZofJX0v4M,1088.0,1090.0,annotator_1,3,lecture,,"and again, technically this consists not of words per se, but of tokens.",false,multimodal_tvsum_style
+wjZofJX0v4M,1090.0,1092.0,annotator_1,3,lecture,,"The embedding dimension is 12,288, and multiplying those",false,multimodal_tvsum_style
+wjZofJX0v4M,1092.0,1094.0,annotator_1,3,lecture,,"The embedding dimension is 12,288, and multiplying those",false,multimodal_tvsum_style
+wjZofJX0v4M,1094.0,1096.0,annotator_1,3,lecture,,"The embedding dimension is 12,288, and multiplying those tells us this consists of about 617 million weights.",false,multimodal_tvsum_style
+wjZofJX0v4M,1096.0,1098.0,annotator_1,3,lecture,,tells us this consists of about 617 million weights.,false,multimodal_tvsum_style
+wjZofJX0v4M,1098.0,1100.0,annotator_1,3,lecture,,"Let's go ahead and add this to a running tally,",false,multimodal_tvsum_style
+wjZofJX0v4M,1100.0,1102.0,annotator_1,3,lecture,,"Let's go ahead and add this to a running tally, remembering that by the end we should count up to 175 billion.",false,multimodal_tvsum_style
+wjZofJX0v4M,1102.0,1104.0,annotator_1,3,lecture,,remembering that by the end we should count up to 175 billion.,false,multimodal_tvsum_style
+wjZofJX0v4M,1104.0,1106.0,annotator_1,3,lecture,,"In the case of transformers, you really want to think of the vectors",false,multimodal_tvsum_style
+wjZofJX0v4M,1106.0,1108.0,annotator_1,3,lecture,,"In the case of transformers, you really want to think of the vectors",false,multimodal_tvsum_style
+wjZofJX0v4M,1108.0,1110.0,annotator_1,3,lecture,,"In the case of transformers, you really want to think of the vectors in this embedding space as not merely representing ",false,multimodal_tvsum_style
+wjZofJX0v4M,1110.0,1112.0,annotator_1,3,lecture,,in this embedding space as not merely representing individual words.,false,multimodal_tvsum_style
+wjZofJX0v4M,1112.0,1114.0,annotator_1,3,lecture,,"in this embedding space as not merely representing individual words. For one thing, they also encode information about t",false,multimodal_tvsum_style
+wjZofJX0v4M,1114.0,1116.0,annotator_1,3,lecture,,"For one thing, they also encode information about the position of that word,",false,multimodal_tvsum_style
+wjZofJX0v4M,1116.0,1118.0,annotator_1,3,lecture,,"For one thing, they also encode information about the position of that word, which we'll talk about later, but more impo",false,multimodal_tvsum_style
+wjZofJX0v4M,1118.0,1120.0,annotator_1,3,lecture,,"which we'll talk about later, but more importantly, you should think of them as having the capacity to soak in context.",false,multimodal_tvsum_style
+wjZofJX0v4M,1120.0,1122.0,annotator_1,3,lecture,,you should think of them as having the capacity to soak in context.,false,multimodal_tvsum_style
+wjZofJX0v4M,1122.0,1124.0,annotator_1,3,lecture,,you should think of them as having the capacity to soak in context. A vector that started its life as the embedding of t,false,multimodal_tvsum_style
+wjZofJX0v4M,1124.0,1126.0,annotator_1,3,lecture,,"A vector that started its life as the embedding of the word king, for example,",false,multimodal_tvsum_style
+wjZofJX0v4M,1126.0,1128.0,annotator_1,3,lecture,,"A vector that started its life as the embedding of the word king, for example, might progressively get tugged and pulled",false,multimodal_tvsum_style
+wjZofJX0v4M,1128.0,1130.0,annotator_1,3,lecture,,"might progressively get tugged and pulled by various blocks in this network,",false,multimodal_tvsum_style
+wjZofJX0v4M,1130.0,1132.0,annotator_1,3,lecture,,"might progressively get tugged and pulled by various blocks in this network, so that by the end it points in a much more",false,multimodal_tvsum_style
+wjZofJX0v4M,1132.0,1134.0,annotator_1,3,lecture,,so that by the end it points in a much more specific and nuanced direction that,false,multimodal_tvsum_style
+wjZofJX0v4M,1134.0,1136.0,annotator_1,3,lecture,,so that by the end it points in a much more specific and nuanced direction that somehow encodes that it was a king who l,false,multimodal_tvsum_style
+wjZofJX0v4M,1136.0,1138.0,annotator_1,3,lecture,,"somehow encodes that it was a king who lived in Scotland,",false,multimodal_tvsum_style
+wjZofJX0v4M,1138.0,1140.0,annotator_1,3,lecture,,"somehow encodes that it was a king who lived in Scotland, and who had achieved his post after murdering the previous kin",false,multimodal_tvsum_style
+wjZofJX0v4M,1140.0,1142.0,annotator_1,3,lecture,,"and who had achieved his post after murdering the previous king, and who's being described in Shakespearean language.",false,multimodal_tvsum_style
+wjZofJX0v4M,1142.0,1144.0,annotator_1,3,lecture,,and who's being described in Shakespearean language.,false,multimodal_tvsum_style
+wjZofJX0v4M,1144.0,1146.0,annotator_1,3,lecture,,and who's being described in Shakespearean language. Think about your own understanding of a given word.,false,multimodal_tvsum_style
+wjZofJX0v4M,1146.0,1148.0,annotator_1,3,lecture,,Think about your own understanding of a given word.,false,multimodal_tvsum_style
+wjZofJX0v4M,1148.0,1150.0,annotator_1,3,lecture,,"The meaning of that word is clearly informed by the surroundings,",false,multimodal_tvsum_style
+wjZofJX0v4M,1150.0,1152.0,annotator_1,3,lecture,,"The meaning of that word is clearly informed by the surroundings, and sometimes this includes context from a long distan",false,multimodal_tvsum_style
+wjZofJX0v4M,1152.0,1154.0,annotator_1,3,lecture,,"and sometimes this includes context from a long distance away,",false,multimodal_tvsum_style
+wjZofJX0v4M,1154.0,1156.0,annotator_1,3,lecture,,"and sometimes this includes context from a long distance away, so in putting together a model that has the ability to pr",false,multimodal_tvsum_style
+wjZofJX0v4M,1156.0,1158.0,annotator_1,3,lecture,,"so in putting together a model that has the ability to predict what word comes next,",false,multimodal_tvsum_style
+wjZofJX0v4M,1158.0,1160.0,annotator_1,3,lecture,,"so in putting together a model that has the ability to predict what word comes next, the goal is to somehow empower it t",false,multimodal_tvsum_style
+wjZofJX0v4M,1160.0,1162.0,annotator_1,3,lecture,,the goal is to somehow empower it to incorporate context efficiently.,false,multimodal_tvsum_style
+wjZofJX0v4M,1162.0,1164.0,annotator_1,3,lecture,,the goal is to somehow empower it to incorporate context efficiently.,false,multimodal_tvsum_style
+wjZofJX0v4M,1164.0,1166.0,annotator_1,3,lecture,,"To be clear, in that very first step, when you create the array of",false,multimodal_tvsum_style
+wjZofJX0v4M,1166.0,1168.0,annotator_1,3,lecture,,"To be clear, in that very first step, when you create the array of vectors based on the input text, each one of those is",false,multimodal_tvsum_style
+wjZofJX0v4M,1168.0,1170.0,annotator_1,3,lecture,,"vectors based on the input text, each one of those is simply plucked",false,multimodal_tvsum_style
+wjZofJX0v4M,1170.0,1172.0,annotator_1,3,lecture,,"vectors based on the input text, each one of those is simply plucked out of the embedding matrix, so initially each one ",false,multimodal_tvsum_style
+wjZofJX0v4M,1172.0,1174.0,annotator_1,3,lecture,,"out of the embedding matrix, so initially each one can only encode the meaning of a single word without any input from i",false,multimodal_tvsum_style
+wjZofJX0v4M,1174.0,1176.0,annotator_1,3,lecture,,the meaning of a single word without any input from its surroundings.,false,multimodal_tvsum_style
+wjZofJX0v4M,1176.0,1178.0,annotator_1,3,lecture,,the meaning of a single word without any input from its surroundings. But you should think of the primary goal of this n,false,multimodal_tvsum_style
+wjZofJX0v4M,1178.0,1180.0,annotator_1,3,lecture,,But you should think of the primary goal of this network that it flows through,false,multimodal_tvsum_style
+wjZofJX0v4M,1180.0,1182.0,annotator_1,3,lecture,,But you should think of the primary goal of this network that it flows through as being to enable each one of those vect,false,multimodal_tvsum_style
+wjZofJX0v4M,1182.0,1184.0,annotator_1,3,lecture,,as being to enable each one of those vectors to soak up a meaning that's much,false,multimodal_tvsum_style
+wjZofJX0v4M,1184.0,1186.0,annotator_1,3,lecture,,as being to enable each one of those vectors to soak up a meaning that's much more rich and specific than what mere indi,false,multimodal_tvsum_style
+wjZofJX0v4M,1186.0,1188.0,annotator_1,3,lecture,,more rich and specific than what mere individual words could represent.,false,multimodal_tvsum_style
+wjZofJX0v4M,1188.0,1190.0,annotator_1,3,lecture,,more rich and specific than what mere individual words could represent. The network can only process a fixed number of v,false,multimodal_tvsum_style
+wjZofJX0v4M,1190.0,1192.0,annotator_1,3,lecture,,"The network can only process a fixed number of vectors at a time,",false,multimodal_tvsum_style
+wjZofJX0v4M,1192.0,1194.0,annotator_1,3,lecture,,"The network can only process a fixed number of vectors at a time, known as its context size.",false,multimodal_tvsum_style
+wjZofJX0v4M,1194.0,1196.0,annotator_1,3,lecture,,"known as its context size. For GPT-3 it was trained with a context size of 2048,",false,multimodal_tvsum_style
+wjZofJX0v4M,1196.0,1198.0,annotator_1,3,lecture,,"For GPT-3 it was trained with a context size of 2048, so the data flowing through the network always looks like this arr",false,multimodal_tvsum_style
+wjZofJX0v4M,1198.0,1200.0,annotator_1,3,lecture,,"so the data flowing through the network always looks like this array of 2048 columns,",false,multimodal_tvsum_style
+wjZofJX0v4M,1200.0,1202.0,annotator_1,3,lecture,,"so the data flowing through the network always looks like this array of 2048 columns,",false,multimodal_tvsum_style
+wjZofJX0v4M,1202.0,1204.0,annotator_1,3,lecture,,"so the data flowing through the network always looks like this array of 2048 columns, each of which has 12,000 dimension",false,multimodal_tvsum_style
+wjZofJX0v4M,1204.0,1206.0,annotator_1,3,lecture,,"each of which has 12,000 dimensions. This context size limits how much text the transformer can",false,multimodal_tvsum_style
+wjZofJX0v4M,1206.0,1208.0,annotator_1,3,lecture,,This context size limits how much text the transformer can,false,multimodal_tvsum_style
+wjZofJX0v4M,1208.0,1210.0,annotator_1,3,lecture,,This context size limits how much text the transformer can incorporate when it's making a prediction of the next word.,false,multimodal_tvsum_style
+wjZofJX0v4M,1210.0,1212.0,annotator_1,3,lecture,,incorporate when it's making a prediction of the next word.,false,multimodal_tvsum_style
+wjZofJX0v4M,1212.0,1214.0,annotator_1,3,lecture,,"This is why long conversations with certain chatbots,",false,multimodal_tvsum_style
+wjZofJX0v4M,1214.0,1216.0,annotator_1,3,lecture,,"This is why long conversations with certain chatbots, like the early versions of ChatGPT, often gave the feeling of",false,multimodal_tvsum_style
+wjZofJX0v4M,1216.0,1218.0,annotator_1,3,lecture,,"like the early versions of ChatGPT, often gave the feeling of",false,multimodal_tvsum_style
+wjZofJX0v4M,1218.0,1220.0,annotator_1,3,lecture,,"like the early versions of ChatGPT, often gave the feeling of the bot kind of losing the thread of conversation as you c",false,multimodal_tvsum_style
+wjZofJX0v4M,1220.0,1222.0,annotator_1,3,lecture,,the bot kind of losing the thread of conversation as you continued too long.,false,multimodal_tvsum_style
+wjZofJX0v4M,1222.0,1224.0,annotator_1,3,lecture,,the bot kind of losing the thread of conversation as you continued too long. We'll go into the details of attention in d,false,multimodal_tvsum_style
+wjZofJX0v4M,1224.0,1226.0,annotator_1,3,lecture,,"We'll go into the details of attention in due time, but skipping ahead I want to talk for a minute about what happens at",false,multimodal_tvsum_style
+wjZofJX0v4M,1226.0,1228.0,annotator_1,3,lecture,,but skipping ahead I want to talk for a minute about what happens at the very end.,false,multimodal_tvsum_style
+wjZofJX0v4M,1228.0,1230.0,annotator_1,3,lecture,,"but skipping ahead I want to talk for a minute about what happens at the very end. Remember, the desired output is a pro",false,multimodal_tvsum_style
+wjZofJX0v4M,1230.0,1232.0,annotator_1,3,lecture,,"Remember, the desired output is a probability distribution over all tokens that might come next.",false,multimodal_tvsum_style
+wjZofJX0v4M,1232.0,1234.0,annotator_1,3,lecture,,distribution over all tokens that might come next.,false,multimodal_tvsum_style
+wjZofJX0v4M,1234.0,1236.0,annotator_1,3,lecture,,"distribution over all tokens that might come next. For example, if the very last word is Professor,",false,multimodal_tvsum_style
+wjZofJX0v4M,1236.0,1238.0,annotator_1,3,lecture,,"For example, if the very last word is Professor, and the context includes words like Harry Potter,",false,multimodal_tvsum_style
+wjZofJX0v4M,1238.0,1240.0,annotator_1,3,lecture,,"and the context includes words like Harry Potter,",false,multimodal_tvsum_style
+wjZofJX0v4M,1240.0,1242.0,annotator_1,3,lecture,,"and the context includes words like Harry Potter, and immediately preceding we see least favorite teacher,",false,multimodal_tvsum_style
+wjZofJX0v4M,1242.0,1244.0,annotator_1,3,lecture,,"and immediately preceding we see least favorite teacher, and also if you give me some leeway by letting me pretend that ",false,multimodal_tvsum_style
+wjZofJX0v4M,1244.0,1246.0,annotator_1,3,lecture,,and also if you give me some leeway by letting me pretend that tokens simply,false,multimodal_tvsum_style
+wjZofJX0v4M,1246.0,1248.0,annotator_1,3,lecture,,"and also if you give me some leeway by letting me pretend that tokens simply look like full words, then a well-trained n",false,multimodal_tvsum_style
+wjZofJX0v4M,1248.0,1250.0,annotator_1,3,lecture,,"look like full words, then a well-trained network that had built up knowledge",false,multimodal_tvsum_style
+wjZofJX0v4M,1250.0,1252.0,annotator_1,3,lecture,,"look like full words, then a well-trained network that had built up knowledge of Harry Potter would presumably assign a ",false,multimodal_tvsum_style
+wjZofJX0v4M,1252.0,1254.0,annotator_1,3,lecture,,of Harry Potter would presumably assign a high number to the word Snape.,false,multimodal_tvsum_style
+wjZofJX0v4M,1254.0,1256.0,annotator_1,3,lecture,,of Harry Potter would presumably assign a high number to the word Snape.,false,multimodal_tvsum_style
+wjZofJX0v4M,1256.0,1258.0,annotator_1,3,lecture,,This involves two different steps.,false,multimodal_tvsum_style
+wjZofJX0v4M,1258.0,1260.0,annotator_1,3,lecture,,The first one is to use another matrix that maps the very last vector in that,false,multimodal_tvsum_style
+wjZofJX0v4M,1260.0,1262.0,annotator_1,3,lecture,,The first one is to use another matrix that maps the very last vector in that,false,multimodal_tvsum_style
+wjZofJX0v4M,1262.0,1264.0,annotator_1,3,lecture,,"The first one is to use another matrix that maps the very last vector in that context to a list of 50,000 values, one fo",false,multimodal_tvsum_style
+wjZofJX0v4M,1264.0,1266.0,annotator_1,3,lecture,,"context to a list of 50,000 values, one for each token in the vocabulary.",false,multimodal_tvsum_style
+wjZofJX0v4M,1266.0,1268.0,annotator_1,3,lecture,,"context to a list of 50,000 values, one for each token in the vocabulary.",false,multimodal_tvsum_style
+wjZofJX0v4M,1268.0,1270.0,annotator_1,3,lecture,,"Then there's a function that normalizes this into a probability distribution,",false,multimodal_tvsum_style
+wjZofJX0v4M,1270.0,1272.0,annotator_1,3,lecture,,"Then there's a function that normalizes this into a probability distribution,",false,multimodal_tvsum_style
+wjZofJX0v4M,1272.0,1274.0,annotator_1,3,lecture,,"Then there's a function that normalizes this into a probability distribution, it's called softmax and we'll talk more ab",false,multimodal_tvsum_style
+wjZofJX0v4M,1274.0,1276.0,annotator_1,3,lecture,,"it's called softmax and we'll talk more about it in just a second, but before that it might seem a little bit weird to o",false,multimodal_tvsum_style
+wjZofJX0v4M,1276.0,1278.0,annotator_1,3,lecture,,but before that it might seem a little bit weird to only use this last embedding,false,multimodal_tvsum_style
+wjZofJX0v4M,1278.0,1280.0,annotator_1,3,lecture,,"but before that it might seem a little bit weird to only use this last embedding to make a prediction, when after all in",false,multimodal_tvsum_style
+wjZofJX0v4M,1280.0,1282.0,annotator_1,3,lecture,,"to make a prediction, when after all in that last step there are thousands of",false,multimodal_tvsum_style
+wjZofJX0v4M,1282.0,1284.0,annotator_1,3,lecture,,"to make a prediction, when after all in that last step there are thousands of other vectors in the layer just sitting th",false,multimodal_tvsum_style
+wjZofJX0v4M,1284.0,1286.0,annotator_1,3,lecture,,other vectors in the layer just sitting there with their own context-rich meanings.,false,multimodal_tvsum_style
+wjZofJX0v4M,1286.0,1288.0,annotator_1,3,lecture,,other vectors in the layer just sitting there with their own context-rich meanings.,false,multimodal_tvsum_style
+wjZofJX0v4M,1288.0,1290.0,annotator_1,3,lecture,,other vectors in the layer just sitting there with their own context-rich meanings. This has to do with the fact that in,false,multimodal_tvsum_style
+wjZofJX0v4M,1290.0,1292.0,annotator_1,3,lecture,,This has to do with the fact that in the training process it turns out to be,false,multimodal_tvsum_style
+wjZofJX0v4M,1292.0,1294.0,annotator_1,3,lecture,,This has to do with the fact that in the training process it turns out to be much more efficient if you use each one of ,false,multimodal_tvsum_style
+wjZofJX0v4M,1294.0,1296.0,annotator_1,3,lecture,,much more efficient if you use each one of those vectors in the final layer,false,multimodal_tvsum_style
+wjZofJX0v4M,1296.0,1298.0,annotator_1,3,lecture,,much more efficient if you use each one of those vectors in the final layer to simultaneously make a prediction for what,false,multimodal_tvsum_style
+wjZofJX0v4M,1298.0,1300.0,annotator_1,3,lecture,,to simultaneously make a prediction for what would come immediately after it.,false,multimodal_tvsum_style
+wjZofJX0v4M,1300.0,1302.0,annotator_1,3,lecture,,to simultaneously make a prediction for what would come immediately after it. There's a lot more to be said about traini,false,multimodal_tvsum_style
+wjZofJX0v4M,1302.0,1304.0,annotator_1,3,lecture,,"There's a lot more to be said about training later on, but I just want to call that out right now.",false,multimodal_tvsum_style
+wjZofJX0v4M,1304.0,1306.0,annotator_1,3,lecture,,but I just want to call that out right now. This matrix is called the Unembedding matrix and we give it the label WU.,false,multimodal_tvsum_style
+wjZofJX0v4M,1306.0,1308.0,annotator_1,3,lecture,,This matrix is called the Unembedding matrix and we give it the label WU.,false,multimodal_tvsum_style
+wjZofJX0v4M,1308.0,1310.0,annotator_1,3,lecture,,This matrix is called the Unembedding matrix and we give it the label WU.,false,multimodal_tvsum_style
+wjZofJX0v4M,1310.0,1312.0,annotator_1,3,lecture,,"Again, like all the weight matrices we see, its entries begin at random,",false,multimodal_tvsum_style
+wjZofJX0v4M,1312.0,1314.0,annotator_1,3,lecture,,"Again, like all the weight matrices we see, its entries begin at random, but they are learned during the training proces",false,multimodal_tvsum_style
+wjZofJX0v4M,1314.0,1316.0,annotator_1,3,lecture,,but they are learned during the training process.,false,multimodal_tvsum_style
+wjZofJX0v4M,1316.0,1318.0,annotator_1,3,lecture,,"Keeping score on our total parameter count, this Unembedding",false,multimodal_tvsum_style
+wjZofJX0v4M,1318.0,1320.0,annotator_1,3,lecture,,"Keeping score on our total parameter count, this Unembedding matrix has one row for each word in the vocabulary,",false,multimodal_tvsum_style
+wjZofJX0v4M,1320.0,1322.0,annotator_1,3,lecture,,"matrix has one row for each word in the vocabulary,",false,multimodal_tvsum_style
+wjZofJX0v4M,1322.0,1324.0,annotator_1,3,lecture,,"matrix has one row for each word in the vocabulary, and each row has the same number of elements as the embedding dimens",false,multimodal_tvsum_style
+wjZofJX0v4M,1324.0,1326.0,annotator_1,3,lecture,,and each row has the same number of elements as the embedding dimension.,false,multimodal_tvsum_style
+wjZofJX0v4M,1326.0,1328.0,annotator_1,3,lecture,,"It's very similar to the embedding matrix, just with the order swapped,",false,multimodal_tvsum_style
+wjZofJX0v4M,1328.0,1330.0,annotator_1,3,lecture,,"It's very similar to the embedding matrix, just with the order swapped,",false,multimodal_tvsum_style
+wjZofJX0v4M,1330.0,1332.0,annotator_1,3,lecture,,"It's very similar to the embedding matrix, just with the order swapped, so it adds another 617 million parameters to the",false,multimodal_tvsum_style
+wjZofJX0v4M,1332.0,1334.0,annotator_1,3,lecture,,"so it adds another 617 million parameters to the network, meaning our count so far is a little over a billion,",false,multimodal_tvsum_style
+wjZofJX0v4M,1334.0,1336.0,annotator_1,3,lecture,,"meaning our count so far is a little over a billion,",false,multimodal_tvsum_style
+wjZofJX0v4M,1336.0,1338.0,annotator_1,3,lecture,,"meaning our count so far is a little over a billion, a small but not wholly insignificant fraction of the 175 billion",false,multimodal_tvsum_style
+wjZofJX0v4M,1338.0,1340.0,annotator_1,3,lecture,,a small but not wholly insignificant fraction of the 175 billion,false,multimodal_tvsum_style
+wjZofJX0v4M,1340.0,1342.0,annotator_1,3,lecture,,a small but not wholly insignificant fraction of the 175 billion we'll end up with in total.,false,multimodal_tvsum_style
+wjZofJX0v4M,1342.0,1344.0,annotator_1,4,lecture,,"As the very last mini-lesson for this chapter,",false,multimodal_tvsum_style
+wjZofJX0v4M,1344.0,1346.0,annotator_1,4,lecture,,"As the very last mini-lesson for this chapter, I want to talk more about this softmax function,",false,multimodal_tvsum_style
+wjZofJX0v4M,1346.0,1348.0,annotator_1,4,lecture,,"I want to talk more about this softmax function, since it makes another appearance for us once we dive into the attentio",false,multimodal_tvsum_style
+wjZofJX0v4M,1348.0,1350.0,annotator_1,4,lecture,,since it makes another appearance for us once we dive into the attention blocks.,false,multimodal_tvsum_style
+wjZofJX0v4M,1350.0,1352.0,annotator_1,4,lecture,,since it makes another appearance for us once we dive into the attention blocks. The idea is that if you want a sequence,false,multimodal_tvsum_style
+wjZofJX0v4M,1352.0,1354.0,annotator_1,4,lecture,,"The idea is that if you want a sequence of numbers to act as a probability distribution,",false,multimodal_tvsum_style
+wjZofJX0v4M,1354.0,1356.0,annotator_1,4,lecture,,"The idea is that if you want a sequence of numbers to act as a probability distribution,",false,multimodal_tvsum_style
+wjZofJX0v4M,1356.0,1358.0,annotator_1,4,lecture,,"The idea is that if you want a sequence of numbers to act as a probability distribution, say a distribution over all pos",false,multimodal_tvsum_style
+wjZofJX0v4M,1358.0,1360.0,annotator_1,4,lecture,,"say a distribution over all possible next words, then each value has to be between 0 and 1, and you also need all of the",false,multimodal_tvsum_style
+wjZofJX0v4M,1360.0,1362.0,annotator_1,4,lecture,,"then each value has to be between 0 and 1, and you also need all of them to add up to 1.",false,multimodal_tvsum_style
+wjZofJX0v4M,1362.0,1364.0,annotator_1,4,lecture,,"then each value has to be between 0 and 1, and you also need all of them to add up to 1.",false,multimodal_tvsum_style
+wjZofJX0v4M,1364.0,1366.0,annotator_1,4,lecture,,"then each value has to be between 0 and 1, and you also need all of them to add up to 1. However, if you're playing the ",false,multimodal_tvsum_style
+wjZofJX0v4M,1366.0,1368.0,annotator_1,5,lecture,,"However, if you're playing the deep learning game where everything you do looks like",false,multimodal_tvsum_style
+wjZofJX0v4M,1368.0,1370.0,annotator_1,5,lecture,,"However, if you're playing the deep learning game where everything you do looks like matrix-vector multiplication, the o",false,multimodal_tvsum_style
+wjZofJX0v4M,1370.0,1372.0,annotator_1,5,lecture,,"matrix-vector multiplication, the outputs you get by default don't abide by this at all.",false,multimodal_tvsum_style
+wjZofJX0v4M,1372.0,1374.0,annotator_1,5,lecture,,"matrix-vector multiplication, the outputs you get by default don't abide by this at all.",false,multimodal_tvsum_style
+wjZofJX0v4M,1374.0,1376.0,annotator_1,5,lecture,,"matrix-vector multiplication, the outputs you get by default don't abide by this at all. The values are often negative, ",false,multimodal_tvsum_style
+wjZofJX0v4M,1376.0,1378.0,annotator_1,5,lecture,,"The values are often negative, or much bigger than 1, and they almost certainly don't add up to 1.",false,multimodal_tvsum_style
+wjZofJX0v4M,1378.0,1380.0,annotator_1,5,lecture,,and they almost certainly don't add up to 1.,false,multimodal_tvsum_style
+wjZofJX0v4M,1380.0,1382.0,annotator_1,5,lecture,,Softmax is the standard way to turn an arbitrary list of numbers,false,multimodal_tvsum_style
+wjZofJX0v4M,1382.0,1384.0,annotator_1,5,lecture,,Softmax is the standard way to turn an arbitrary list of numbers,false,multimodal_tvsum_style
+wjZofJX0v4M,1384.0,1386.0,annotator_1,5,lecture,,Softmax is the standard way to turn an arbitrary list of numbers into a valid distribution in such a way that the larges,false,multimodal_tvsum_style
+wjZofJX0v4M,1386.0,1388.0,annotator_1,5,lecture,,"into a valid distribution in such a way that the largest values end up closest to 1,",false,multimodal_tvsum_style
+wjZofJX0v4M,1388.0,1390.0,annotator_1,5,lecture,,"into a valid distribution in such a way that the largest values end up closest to 1, and the smaller values end up very ",false,multimodal_tvsum_style
+wjZofJX0v4M,1390.0,1392.0,annotator_1,5,lecture,,and the smaller values end up very close to 0. That's all you really need to know.,false,multimodal_tvsum_style
+wjZofJX0v4M,1392.0,1394.0,annotator_1,5,lecture,,"That's all you really need to know. But if you're curious, the way it works is to first raise e to the power",false,multimodal_tvsum_style
+wjZofJX0v4M,1394.0,1396.0,annotator_1,5,lecture,,"But if you're curious, the way it works is to first raise e to the power",false,multimodal_tvsum_style
+wjZofJX0v4M,1396.0,1398.0,annotator_1,5,lecture,,"But if you're curious, the way it works is to first raise e to the power of each of the numbers, which means you now hav",false,multimodal_tvsum_style
+wjZofJX0v4M,1398.0,1400.0,annotator_1,5,lecture,,"of each of the numbers, which means you now have a list of positive values,",false,multimodal_tvsum_style
+wjZofJX0v4M,1400.0,1402.0,annotator_1,5,lecture,,"of each of the numbers, which means you now have a list of positive values, and then you can take the sum of all those p",false,multimodal_tvsum_style
+wjZofJX0v4M,1402.0,1404.0,annotator_1,5,lecture,,and then you can take the sum of all those positive values and divide each,false,multimodal_tvsum_style
+wjZofJX0v4M,1404.0,1406.0,annotator_1,5,lecture,,"and then you can take the sum of all those positive values and divide each term by that sum, which normalizes it into a ",false,multimodal_tvsum_style
+wjZofJX0v4M,1406.0,1408.0,annotator_1,5,lecture,,"term by that sum, which normalizes it into a list that adds up to 1.",false,multimodal_tvsum_style
+wjZofJX0v4M,1408.0,1410.0,annotator_1,5,lecture,,"term by that sum, which normalizes it into a list that adds up to 1.",false,multimodal_tvsum_style
+wjZofJX0v4M,1410.0,1412.0,annotator_1,3,lecture,,You'll notice that if one of the numbers in the input is meaningfully bigger than the,false,multimodal_tvsum_style
+wjZofJX0v4M,1412.0,1414.0,annotator_1,3,lecture,,You'll notice that if one of the numbers in the input is meaningfully bigger than the,false,multimodal_tvsum_style
+wjZofJX0v4M,1414.0,1416.0,annotator_1,3,lecture,,"You'll notice that if one of the numbers in the input is meaningfully bigger than the rest, then in the output the corre",false,multimodal_tvsum_style
+wjZofJX0v4M,1416.0,1418.0,annotator_1,3,lecture,,"rest, then in the output the corresponding term dominates the distribution, so if you were sampling from it you'd almost",false,multimodal_tvsum_style
+wjZofJX0v4M,1418.0,1420.0,annotator_1,3,lecture,,so if you were sampling from it you'd almost certainly just be picking the maximizing,false,multimodal_tvsum_style
+wjZofJX0v4M,1420.0,1422.0,annotator_1,3,lecture,,so if you were sampling from it you'd almost certainly just be picking the maximizing,false,multimodal_tvsum_style
+wjZofJX0v4M,1422.0,1424.0,annotator_1,3,lecture,,so if you were sampling from it you'd almost certainly just be picking the maximizing input. But it's softer than just p,false,multimodal_tvsum_style
+wjZofJX0v4M,1424.0,1426.0,annotator_1,3,lecture,,But it's softer than just picking the max in the sense that when other values,false,multimodal_tvsum_style
+wjZofJX0v4M,1426.0,1428.0,annotator_1,3,lecture,,"But it's softer than just picking the max in the sense that when other values are similarly large, they also get meaning",false,multimodal_tvsum_style
+wjZofJX0v4M,1428.0,1430.0,annotator_1,3,lecture,,"are similarly large, they also get meaningful weight in the distribution,",false,multimodal_tvsum_style
+wjZofJX0v4M,1430.0,1432.0,annotator_1,3,lecture,,"are similarly large, they also get meaningful weight in the distribution, and everything changes continuously as you con",false,multimodal_tvsum_style
+wjZofJX0v4M,1432.0,1434.0,annotator_1,3,lecture,,and everything changes continuously as you continuously vary the inputs.,false,multimodal_tvsum_style
+wjZofJX0v4M,1434.0,1436.0,annotator_1,3,lecture,,"and everything changes continuously as you continuously vary the inputs. In some situations, like when ChatGPT is using ",false,multimodal_tvsum_style
+wjZofJX0v4M,1436.0,1438.0,annotator_1,3,lecture,,"In some situations, like when ChatGPT is using this distribution to create a next word,",false,multimodal_tvsum_style
+wjZofJX0v4M,1438.0,1440.0,annotator_1,3,lecture,,"In some situations, like when ChatGPT is using this distribution to create a next word, there's room for a little bit of",false,multimodal_tvsum_style
+wjZofJX0v4M,1440.0,1442.0,annotator_1,3,lecture,,there's room for a little bit of extra fun by adding a little extra spice into this,false,multimodal_tvsum_style
+wjZofJX0v4M,1442.0,1444.0,annotator_1,4,lecture,,there's room for a little bit of extra fun by adding a little extra spice into this,false,multimodal_tvsum_style
+wjZofJX0v4M,1444.0,1446.0,annotator_1,4,lecture,,"there's room for a little bit of extra fun by adding a little extra spice into this function, with a constant T thrown i",false,multimodal_tvsum_style
+wjZofJX0v4M,1446.0,1448.0,annotator_1,4,lecture,,"function, with a constant T thrown into the denominator of those exponents.",false,multimodal_tvsum_style
+wjZofJX0v4M,1448.0,1450.0,annotator_1,4,lecture,,"function, with a constant T thrown into the denominator of those exponents. We call it the temperature, since it vaguely",false,multimodal_tvsum_style
+wjZofJX0v4M,1450.0,1452.0,annotator_1,4,lecture,,"We call it the temperature, since it vaguely resembles the role of temperature in",false,multimodal_tvsum_style
+wjZofJX0v4M,1452.0,1454.0,annotator_1,4,lecture,,"We call it the temperature, since it vaguely resembles the role of temperature in",false,multimodal_tvsum_style
+wjZofJX0v4M,1454.0,1456.0,annotator_1,4,lecture,,"certain thermodynamics equations, and the effect is that when T is larger,",false,multimodal_tvsum_style
+wjZofJX0v4M,1456.0,1458.0,annotator_1,4,lecture,,"certain thermodynamics equations, and the effect is that when T is larger,",false,multimodal_tvsum_style
+wjZofJX0v4M,1458.0,1460.0,annotator_1,4,lecture,,"certain thermodynamics equations, and the effect is that when T is larger, you give more weight to the lower values, mea",false,multimodal_tvsum_style
+wjZofJX0v4M,1460.0,1462.0,annotator_1,4,lecture,,"you give more weight to the lower values, meaning the distribution is a little bit",false,multimodal_tvsum_style
+wjZofJX0v4M,1462.0,1464.0,annotator_1,4,lecture,,"you give more weight to the lower values, meaning the distribution is a little bit more uniform, and if T is smaller, th",false,multimodal_tvsum_style
+wjZofJX0v4M,1464.0,1466.0,annotator_1,4,lecture,,"more uniform, and if T is smaller, then the bigger values will dominate more",false,multimodal_tvsum_style
+wjZofJX0v4M,1466.0,1468.0,annotator_1,4,lecture,,"more uniform, and if T is smaller, then the bigger values will dominate more aggressively, where in the extreme, setting",false,multimodal_tvsum_style
+wjZofJX0v4M,1468.0,1470.0,annotator_1,4,lecture,,"aggressively, where in the extreme, setting T equal to zero means all of the weight",false,multimodal_tvsum_style
+wjZofJX0v4M,1470.0,1472.0,annotator_1,4,lecture,,"aggressively, where in the extreme, setting T equal to zero means all of the weight goes to maximum value.",false,multimodal_tvsum_style
+wjZofJX0v4M,1472.0,1474.0,annotator_1,4,lecture,,"goes to maximum value. For example, I'll have GPT-3 generate a story with the seed text,",false,multimodal_tvsum_style
+wjZofJX0v4M,1474.0,1476.0,annotator_1,5,lecture,,"For example, I'll have GPT-3 generate a story with the seed text,",false,multimodal_tvsum_style
+wjZofJX0v4M,1476.0,1478.0,annotator_1,5,lecture,,"For example, I'll have GPT-3 generate a story with the seed text, ""once upon a time there was A"", but I'll use different",false,multimodal_tvsum_style
+wjZofJX0v4M,1478.0,1480.0,annotator_1,5,lecture,,"""once upon a time there was A"", but I'll use different temperatures in each case.",false,multimodal_tvsum_style
+wjZofJX0v4M,1480.0,1482.0,annotator_1,5,lecture,,"""once upon a time there was A"", but I'll use different temperatures in each case.",false,multimodal_tvsum_style
+wjZofJX0v4M,1482.0,1484.0,annotator_1,5,lecture,,"""once upon a time there was A"", but I'll use different temperatures in each case. Temperature zero means that it always ",false,multimodal_tvsum_style
+wjZofJX0v4M,1484.0,1486.0,annotator_1,5,lecture,,"Temperature zero means that it always goes with the most predictable word,",false,multimodal_tvsum_style
+wjZofJX0v4M,1486.0,1488.0,annotator_1,5,lecture,,"Temperature zero means that it always goes with the most predictable word,",false,multimodal_tvsum_style
+wjZofJX0v4M,1488.0,1490.0,annotator_1,5,lecture,,"Temperature zero means that it always goes with the most predictable word, and what you get ends up being a trite deriva",false,multimodal_tvsum_style
+wjZofJX0v4M,1490.0,1492.0,annotator_1,5,lecture,,and what you get ends up being a trite derivative of Goldilocks.,false,multimodal_tvsum_style
+wjZofJX0v4M,1492.0,1494.0,annotator_1,5,lecture,,and what you get ends up being a trite derivative of Goldilocks. A higher temperature gives it a chance to choose less l,false,multimodal_tvsum_style
+wjZofJX0v4M,1494.0,1496.0,annotator_1,5,lecture,,"A higher temperature gives it a chance to choose less likely words,",false,multimodal_tvsum_style
+wjZofJX0v4M,1496.0,1498.0,annotator_1,5,lecture,,"A higher temperature gives it a chance to choose less likely words, but it comes with a risk.",false,multimodal_tvsum_style
+wjZofJX0v4M,1498.0,1500.0,annotator_1,5,lecture,,"In this case, the story starts out more originally,",false,multimodal_tvsum_style
+wjZofJX0v4M,1500.0,1502.0,annotator_1,5,lecture,,"In this case, the story starts out more originally, about a young web artist from South Korea, but it quickly degenerate",false,multimodal_tvsum_style
+wjZofJX0v4M,1502.0,1504.0,annotator_1,5,lecture,,"about a young web artist from South Korea, but it quickly degenerates into nonsense.",false,multimodal_tvsum_style
+wjZofJX0v4M,1504.0,1506.0,annotator_1,5,lecture,,"about a young web artist from South Korea, but it quickly degenerates into nonsense.",false,multimodal_tvsum_style
+wjZofJX0v4M,1506.0,1508.0,annotator_1,5,lecture,,"about a young web artist from South Korea, but it quickly degenerates into nonsense. Technically speaking, the API doesn",false,multimodal_tvsum_style
+wjZofJX0v4M,1508.0,1510.0,annotator_1,3,lecture,,"Technically speaking, the API doesn't actually let you pick a temperature bigger than 2.",false,multimodal_tvsum_style
+wjZofJX0v4M,1510.0,1512.0,annotator_1,3,lecture,,"Technically speaking, the API doesn't actually let you pick a temperature bigger than 2. There's no mathematical reason ",false,multimodal_tvsum_style
+wjZofJX0v4M,1512.0,1514.0,annotator_1,3,lecture,,"There's no mathematical reason for this, it's just an arbitrary constraint imposed",false,multimodal_tvsum_style
+wjZofJX0v4M,1514.0,1516.0,annotator_1,3,lecture,,"There's no mathematical reason for this, it's just an arbitrary constraint imposed to keep their tool from being seen ge",false,multimodal_tvsum_style
+wjZofJX0v4M,1516.0,1518.0,annotator_1,3,lecture,,to keep their tool from being seen generating things that are too nonsensical.,false,multimodal_tvsum_style
+wjZofJX0v4M,1518.0,1520.0,annotator_1,3,lecture,,"to keep their tool from being seen generating things that are too nonsensical. So if you're curious, the way this animat",false,multimodal_tvsum_style
+wjZofJX0v4M,1520.0,1522.0,annotator_1,3,lecture,,"So if you're curious, the way this animation is actually working is I'm taking the",false,multimodal_tvsum_style
+wjZofJX0v4M,1522.0,1524.0,annotator_1,3,lecture,,"So if you're curious, the way this animation is actually working is I'm taking the",false,multimodal_tvsum_style
+wjZofJX0v4M,1524.0,1526.0,annotator_1,3,lecture,,"So if you're curious, the way this animation is actually working is I'm taking the 20 most probable next tokens that GPT",false,multimodal_tvsum_style
+wjZofJX0v4M,1526.0,1528.0,annotator_1,3,lecture,,"20 most probable next tokens that GPT-3 generates, which seems to be the maximum they'll give me,",false,multimodal_tvsum_style
+wjZofJX0v4M,1528.0,1530.0,annotator_1,3,lecture,,"which seems to be the maximum they'll give me, and then I tweak the probabilities based on an exponent of 1/5.",false,multimodal_tvsum_style
+wjZofJX0v4M,1530.0,1532.0,annotator_1,3,lecture,,and then I tweak the probabilities based on an exponent of 1/5.,false,multimodal_tvsum_style
+wjZofJX0v4M,1532.0,1534.0,annotator_1,3,lecture,,"and then I tweak the probabilities based on an exponent of 1/5. As another bit of jargon, in the same way that you might",false,multimodal_tvsum_style
+wjZofJX0v4M,1534.0,1536.0,annotator_1,3,lecture,,"As another bit of jargon, in the same way that you might call the components of",false,multimodal_tvsum_style
+wjZofJX0v4M,1536.0,1538.0,annotator_1,3,lecture,,"As another bit of jargon, in the same way that you might call the components of the output of this function probabilitie",false,multimodal_tvsum_style
+wjZofJX0v4M,1538.0,1540.0,annotator_1,3,lecture,,"the output of this function probabilities, people often refer to the inputs as logits,",false,multimodal_tvsum_style
+wjZofJX0v4M,1540.0,1542.0,annotator_1,3,lecture,,"the output of this function probabilities, people often refer to the inputs as logits,",false,multimodal_tvsum_style
+wjZofJX0v4M,1542.0,1544.0,annotator_1,3,lecture,,"the output of this function probabilities, people often refer to the inputs as logits, or some people say logits, some p",false,multimodal_tvsum_style
+wjZofJX0v4M,1544.0,1546.0,annotator_1,3,lecture,,"or some people say logits, some people say logits, I'm gonna say logits.",false,multimodal_tvsum_style
+wjZofJX0v4M,1546.0,1548.0,annotator_1,3,lecture,,"or some people say logits, some people say logits, I'm gonna say logits. So for instance, when you feed in some text, yo",false,multimodal_tvsum_style
+wjZofJX0v4M,1548.0,1550.0,annotator_1,3,lecture,,"So for instance, when you feed in some text, you have all these word embeddings",false,multimodal_tvsum_style
+wjZofJX0v4M,1550.0,1552.0,annotator_1,3,lecture,,"So for instance, when you feed in some text, you have all these word embeddings flow through the network, and you do thi",false,multimodal_tvsum_style
+wjZofJX0v4M,1552.0,1554.0,annotator_1,3,lecture,,"flow through the network, and you do this final multiplication with the unembedding matrix, machine learning people woul",false,multimodal_tvsum_style
+wjZofJX0v4M,1554.0,1556.0,annotator_1,3,lecture,,"unembedding matrix, machine learning people would refer to the components in that raw,",false,multimodal_tvsum_style
+wjZofJX0v4M,1556.0,1558.0,annotator_1,3,lecture,,"unembedding matrix, machine learning people would refer to the components in that raw,",false,multimodal_tvsum_style
+wjZofJX0v4M,1558.0,1560.0,annotator_1,3,lecture,,"unembedding matrix, machine learning people would refer to the components in that raw, unnormalized output as the logits",false,multimodal_tvsum_style
+wjZofJX0v4M,1560.0,1562.0,annotator_1,3,lecture,,unnormalized output as the logits for the next word prediction.,false,multimodal_tvsum_style
+wjZofJX0v4M,1562.0,1564.0,annotator_1,3,lecture,,A lot of the goal with this chapter was to lay the foundations for,false,multimodal_tvsum_style
+wjZofJX0v4M,1564.0,1566.0,annotator_1,3,lecture,,A lot of the goal with this chapter was to lay the foundations for,false,multimodal_tvsum_style
+wjZofJX0v4M,1566.0,1568.0,annotator_1,3,lecture,,"A lot of the goal with this chapter was to lay the foundations for understanding the attention mechanism, Karate Kid wax",false,multimodal_tvsum_style
+wjZofJX0v4M,1568.0,1570.0,annotator_1,3,lecture,,"understanding the attention mechanism, Karate Kid wax-on-wax-off style.",false,multimodal_tvsum_style
+wjZofJX0v4M,1570.0,1572.0,annotator_1,3,lecture,,"understanding the attention mechanism, Karate Kid wax-on-wax-off style. You see, if you have a strong intuition for word",false,multimodal_tvsum_style
+wjZofJX0v4M,1572.0,1574.0,annotator_1,3,lecture,,"You see, if you have a strong intuition for word embeddings, for softmax,",false,multimodal_tvsum_style
+wjZofJX0v4M,1574.0,1576.0,annotator_1,3,lecture,,"You see, if you have a strong intuition for word embeddings, for softmax, for how dot products measure similarity, and a",false,multimodal_tvsum_style
+wjZofJX0v4M,1576.0,1578.0,annotator_1,3,lecture,,"for how dot products measure similarity, and also the underlying premise that",false,multimodal_tvsum_style
+wjZofJX0v4M,1578.0,1580.0,annotator_1,3,lecture,,"for how dot products measure similarity, and also the underlying premise that most of the calculations have to look like",false,multimodal_tvsum_style
+wjZofJX0v4M,1580.0,1582.0,annotator_1,3,lecture,,most of the calculations have to look like matrix multiplication with matrices,false,multimodal_tvsum_style
+wjZofJX0v4M,1582.0,1584.0,annotator_1,3,lecture,,"most of the calculations have to look like matrix multiplication with matrices full of tunable parameters, then understa",false,multimodal_tvsum_style
+wjZofJX0v4M,1584.0,1586.0,annotator_1,3,lecture,,"full of tunable parameters, then understanding the attention mechanism,",false,multimodal_tvsum_style
+wjZofJX0v4M,1586.0,1588.0,annotator_1,3,lecture,,"full of tunable parameters, then understanding the attention mechanism, this cornerstone piece in the whole modern boom ",false,multimodal_tvsum_style
+wjZofJX0v4M,1588.0,1590.0,annotator_1,3,lecture,,"this cornerstone piece in the whole modern boom in AI, should be relatively smooth.",false,multimodal_tvsum_style
+wjZofJX0v4M,1590.0,1592.0,annotator_1,3,lecture,,"this cornerstone piece in the whole modern boom in AI, should be relatively smooth.",false,multimodal_tvsum_style
+wjZofJX0v4M,1592.0,1594.0,annotator_1,3,lecture,,"this cornerstone piece in the whole modern boom in AI, should be relatively smooth. For that, come join me in the next c",false,multimodal_tvsum_style
+wjZofJX0v4M,1594.0,1596.0,annotator_1,3,lecture,,"For that, come join me in the next chapter.",false,multimodal_tvsum_style
+wjZofJX0v4M,1596.0,1598.0,annotator_1,3,lecture,,"As I'm publishing this, a draft of that next chapter",false,multimodal_tvsum_style
+wjZofJX0v4M,1598.0,1600.0,annotator_1,3,lecture,,"As I'm publishing this, a draft of that next chapter is available for review by Patreon supporters.",false,multimodal_tvsum_style
+wjZofJX0v4M,1600.0,1602.0,annotator_1,3,lecture,,"is available for review by Patreon supporters. A final version should be up in public in a week or two,",false,multimodal_tvsum_style
+wjZofJX0v4M,1602.0,1604.0,annotator_1,3,lecture,,"A final version should be up in public in a week or two,",false,multimodal_tvsum_style
+wjZofJX0v4M,1604.0,1606.0,annotator_1,3,lecture,,"A final version should be up in public in a week or two, it usually depends on how much I end up changing based on that ",false,multimodal_tvsum_style
+wjZofJX0v4M,1606.0,1608.0,annotator_1,3,lecture,,"it usually depends on how much I end up changing based on that review. In the meantime, if you want to dive into attenti",false,multimodal_tvsum_style
+wjZofJX0v4M,1608.0,1610.0,annotator_1,3,lecture,,"In the meantime, if you want to dive into attention, and if you want to help the channel out a little bit, it's there wa",false,multimodal_tvsum_style
+wjZofJX0v4M,1610.0,1612.0,annotator_1,3,lecture,,"and if you want to help the channel out a little bit, it's there waiting.",false,multimodal_tvsum_style
+wjZofJX0v4M,1612.0,1614.0,annotator_1,3,lecture,,"and if you want to help the channel out a little bit, it's there waiting.",false,multimodal_tvsum_style
+wjZofJX0v4M,1614.0,1616.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+wjZofJX0v4M,1616.0,1618.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+wjZofJX0v4M,1618.0,1620.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+wjZofJX0v4M,1620.0,1622.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+wjZofJX0v4M,1622.0,1624.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+wjZofJX0v4M,1624.0,1626.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+wjZofJX0v4M,1626.0,1628.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+wjZofJX0v4M,1628.0,1630.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
+wjZofJX0v4M,1630.0,1632.0,annotator_1,1,lecture,,,false,multimodal_tvsum_style
