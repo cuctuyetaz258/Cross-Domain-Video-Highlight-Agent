@@ -10,7 +10,7 @@
   "enable_internet": true,
   "dataset_sources": [
     "nguyentrann0703/video-highlight-v2-inputs",
-    "python16/summe-videos-and-tvsum-videos"
+    "nguyentrann0703/video-highlight-v2-benchmark-media"
   ],
   "competition_sources": [],
   "kernel_sources": [],

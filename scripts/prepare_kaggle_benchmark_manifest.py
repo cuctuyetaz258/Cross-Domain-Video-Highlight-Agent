@@ -27,6 +27,7 @@ from highlight_agent.media import (  # noqa: E402
     save_transcript,
 )
 from highlight_agent.media.transcript import transcribe_with_whisper  # noqa: E402
+from highlight_agent.paths import portable_relative_path  # noqa: E402
 from highlight_agent.schemas import TranscriptDocument  # noqa: E402
 
 VIDEO_SUFFIXES = {".mp4", ".m4v", ".mkv", ".mov", ".webm"}
@@ -61,7 +62,13 @@ def index_media(media_root: Path) -> dict[str, Path]:
     return indexed
 
 
-def adapt_records(records: list[dict[str, Any]], media_root: Path, derived_root: Path) -> list[dict[str, Any]]:
+def adapt_records(
+    records: list[dict[str, Any]],
+    media_root: Path,
+    derived_root: Path,
+    *,
+    project_root: Path | None = None,
+) -> list[dict[str, Any]]:
     """Return records whose paths point to mounted media and writable artifacts."""
 
     media_by_id = index_media(media_root)
@@ -77,7 +84,12 @@ def adapt_records(records: list[dict[str, Any]], media_root: Path, derived_root:
         adapted.append(
             {
                 **record,
-                "video_path": str(media),
+                # Feature manifests must remain portable.  Kaggle's read-only
+                # input mount is outside the project root, so its media is
+                # copied into the working project before this adapter runs.
+                "video_path": (
+                    portable_relative_path(media, project_root) if project_root is not None else str(media)
+                ),
                 "audio_path": str(destination / "audio.wav"),
                 "transcript_path": str(destination / "transcript.json"),
             }
@@ -182,12 +194,21 @@ def main() -> None:
     parser.add_argument("--media-root", required=True, help="Read-only root of the public Kaggle video Dataset.")
     parser.add_argument("--derived-root", required=True, help="Writable directory for audio and transcripts.")
     parser.add_argument("--output-manifest", required=True)
+    parser.add_argument(
+        "--project-root",
+        help="Serialize resolved media paths relative to this project root.",
+    )
     parser.add_argument("--whisper-model", default="small.en")
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--prepare-media", action="store_true", help="Extract audio and transcribe after validating paths.")
     args = parser.parse_args()
 
-    records = adapt_records(load_records(Path(args.source_manifest)), Path(args.media_root), Path(args.derived_root))
+    records = adapt_records(
+        load_records(Path(args.source_manifest)),
+        Path(args.media_root),
+        Path(args.derived_root),
+        project_root=Path(args.project_root) if args.project_root else None,
+    )
     output = Path(args.output_manifest)
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text("".join(json.dumps(record, sort_keys=True) + "\n" for record in records), encoding="utf-8")

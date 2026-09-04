@@ -7,6 +7,7 @@ to /kaggle/working and archived on a successful run.
 
 from __future__ import annotations
 
+import os
 import shutil
 import subprocess
 import sys
@@ -37,6 +38,21 @@ def install_materialization_dependencies() -> None:
     )
 
 
+def load_optional_hf_token() -> None:
+    """Expose an opt-in Kaggle Secret to Hugging Face dependent extractors."""
+
+    try:
+        from kaggle_secrets import UserSecretsClient
+
+        token = UserSecretsClient().get_secret("HF_TOKEN")
+    except Exception:
+        print("HF_TOKEN secret is unavailable; continuing with anonymous Hugging Face downloads.")
+        return
+    if token:
+        os.environ["HF_TOKEN"] = token
+        print("HF_TOKEN secret loaded for authenticated Hugging Face downloads.")
+
+
 def find_one(filename: str) -> Path:
     matches = list(INPUT_ROOT.rglob(filename))
     if len(matches) != 1:
@@ -63,14 +79,35 @@ def copy_project_input() -> None:
             shutil.copy2(item, WORKING / item.name)
 
 
+def find_benchmark_media_input() -> Path:
+    """Locate the mounted Dataset root containing the two benchmark trees."""
+
+    candidates = {
+        path.parent
+        for path in INPUT_ROOT.rglob("tvsum")
+        if path.is_dir() and (path.parent / "summe" / "videos").is_dir() and (path / "videos").is_dir()
+    }
+    if len(candidates) != 1:
+        raise RuntimeError(f"expected one benchmark media Dataset root, found {sorted(map(str, candidates))}")
+    return candidates.pop()
+
+
+def copy_benchmark_media_into_project() -> Path:
+    """Make media real project files so manifest paths pass portability checks."""
+
+    destination = WORKING / "data/raw/kaggle_benchmark/media"
+    shutil.copytree(find_benchmark_media_input(), destination)
+    return destination
+
+
 def prepare_media(include_transcription: bool) -> None:
     args = [
         "python",
         "scripts/prepare_kaggle_benchmark_manifest.py",
         "--source-manifest",
         "data/manifests/tvsum_summe.jsonl",
-        "--media-root",
-        str(INPUT_ROOT),
+        "--media-root", "data/raw/kaggle_benchmark/media",
+        "--project-root", ".",
         "--derived-root",
         "data/raw/kaggle_benchmark/processed",
         "--output-manifest",
@@ -110,7 +147,9 @@ if RUN_MODE == "validate":
     prepare_media(include_transcription=False)
     print("Benchmark media mapping passed. Set RUN_MODE='materialize' for derived artifacts.")
 elif RUN_MODE == "materialize":
+    load_optional_hf_token()
     install_materialization_dependencies()
+    copy_benchmark_media_into_project()
     prepare_media(include_transcription=True)
     run(
         "python", "scripts/build_feature_cache.py",
