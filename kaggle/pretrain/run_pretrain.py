@@ -15,6 +15,7 @@ from pathlib import Path
 
 INPUT_ROOT = Path("/kaggle/input")
 WORKING = Path("/kaggle/working/v2_pretrain_project")
+EXTRACTED_INPUT_ROOT = Path("/kaggle/working/v2_pretrain_input_archives")
 RUN_MODE = "materialize"  # validate | materialize | train
 
 
@@ -53,8 +54,22 @@ def load_optional_hf_token() -> None:
         print("HF_TOKEN secret loaded for authenticated Hugging Face downloads.")
 
 
+def expand_input_archives() -> Path:
+    """Expand Kaggle Dataset directory uploads when they arrive as archives."""
+
+    if EXTRACTED_INPUT_ROOT.exists():
+        return EXTRACTED_INPUT_ROOT
+    EXTRACTED_INPUT_ROOT.mkdir(parents=True)
+    for archive in INPUT_ROOT.rglob("*"):
+        if archive.is_file() and archive.suffix.lower() in {".zip", ".tar"}:
+            shutil.unpack_archive(archive, EXTRACTED_INPUT_ROOT)
+    return EXTRACTED_INPUT_ROOT
+
+
 def find_one(filename: str) -> Path:
     matches = list(INPUT_ROOT.rglob(filename))
+    if not matches:
+        matches = list(expand_input_archives().rglob(filename))
     if len(matches) != 1:
         raise RuntimeError(f"expected exactly one mounted {filename!r}, found {matches}")
     return matches[0]
