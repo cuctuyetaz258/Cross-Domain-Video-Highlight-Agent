@@ -1,0 +1,93 @@
+{
+  "protocol": "v2_10video_video_disjoint_5fold",
+  "feature_schema_version": "1.1",
+  "source_manifests": {
+    "custom_fold0.jsonl": "a0445fd468b0357e2d2f7648b88fc710c5627b77ae0da139ac5cc18924dabe10",
+    "custom_fold1.jsonl": "3683737a7eb97a0d5400855690580d7288df36391c1ca0b2236ff31856085633",
+    "custom_fold2.jsonl": "66b83f51af5da31c0ff8cfac66b44d67b0cf9b93ca314e0f0a30adaccdf6dece",
+    "custom_fold3.jsonl": "52541503c7d0cb6e96b6ede93d3a8ff87d94da560704c490f24aff06ec69658b",
+    "custom_fold4.jsonl": "d1f66032b60f5133e7421fcc300107615dd38986b23f002334b7bd1aa417c718"
+  },
+  "videos": [
+    {
+      "video_id": "-cRswJf8OnI",
+      "domain": "podcast",
+      "duration": 1315.6,
+      "annotation_path": "data/annotations/raw/-cRswJf8OnI.csv",
+      "cache_matrix_sha256": "b4561366d4b912489f1b23f4da18b3ceed3a2f82c85bfdc1a21d427fd167ea9c",
+      "cache_metadata_sha256": "46d0a80d5154bbf655c3313edcaab6a7fbaa0b56db0529c0e0bb4975a97c678a"
+    },
+    {
+      "video_id": "1bszFX_XcbU",
+      "domain": "podcast",
+      "duration": 864.0298333333333,
+      "annotation_path": "data/annotations/raw/1bszFX_XcbU.csv",
+      "cache_matrix_sha256": "4ecc64bf125ba2b49b00650dc9fa535b6adb003ca8207d0b9779fa9aff7d15a4",
+      "cache_metadata_sha256": "e9d6431aa40b79dac944dd1b193cc5f65210f630dff8f7a81e8055f2f5a169c0"
+    },
+    {
+      "video_id": "DNQDqq4mWSY",
+      "domain": "podcast",
+      "duration": 690.3,
+      "annotation_path": "data/annotations/raw/DNQDqq4mWSY.csv",
+      "cache_matrix_sha256": "034b6d7ec52dfb1789fdd2ba0ccbc55bb75e1231b7aac300ff8e417bb21115a0",
+      "cache_metadata_sha256": "5bd4db8d6c04458470d35d682cf5460f79874f0f3d9947ef5da2992df09c5d63"
+    },
+    {
+      "video_id": "IHZwWFHWa-w",
+      "domain": "lecture",
+      "duration": 1232.9984333333334,
+      "annotation_path": "data/annotations/raw/IHZwWFHWa-w.csv",
+      "cache_matrix_sha256": "8f3e118f03fa729794c616c3908fe95c000db18d3bf4f5980e3960550aaf1fe1",
+      "cache_metadata_sha256": "9752f64ebea47cebe1200d0b3d098e82f7d413ecd349ceaa676543bc8857ad47"
+    },
+    {
+      "video_id": "WUvTyaaNkzM",
+      "domain": "lecture",
+      "duration": 1024.3900333333333,
+      "annotation_path": "data/annotations/raw/WUvTyaaNkzM.csv",
+      "cache_matrix_sha256": "498f7191a4925fc32dc1c451c969f8928738637c7c64155ff39940114ca73ef7",
+      "cache_metadata_sha256": "8d33f23ac18d470ebe64a0dc2468923a739eb909c6c3ce9cf035a8d1ae169777"
+    },
+    {
+      "video_id": "aircAruvnKk",
+      "domain": "lecture",
+      "duration": 1120.0,
+      "annotation_path": "data/annotations/raw/aircAruvnKk.csv",
+      "cache_matrix_sha256": "e3e953dafbc26acf189af59bc022a51a2d665a71c4a44062c617131dfc6520fa",
+      "cache_metadata_sha256": "23afa7df59983fbae9eb7724ade1caf927318ab13022507af55ac0ce8ad620f3"
+    },
+    {
+      "video_id": "g2-_pnmhO4A",
+      "domain": "lecture",
+      "duration": 1526.2666666666667,
+      "annotation_path": "data/annotations/raw/g2-_pnmhO4A.csv",
+      "cache_matrix_sha256": "4bc1d0e9c20e55cd8cd36377958425010ff115cadca4b36a9285e6718d356860",
+      "cache_metadata_sha256": "dedd4f8a8daeb90d77dd4183b07e5e770226c61bb006c95928ff59b05d8cc186"
+    },
+    {
+      "video_id": "u36A-YTxiOw",
+      "domain": "podcast",
+      "duration": 1267.375,
+      "annotation_path": "data/annotations/raw/u36A-YTxiOw.csv",
+      "cache_matrix_sha256": "14500f5580ca38e39f94f6b73c64b683bdd1dd402f413bbc788128731ac4a812",
+      "cache_metadata_sha256": "28f98a7996d26efba3f8c4d81b4ceae7fe40b70c61f8d63119a2f8963ee35adb"
+    },
+    {
+      "video_id": "waLjtcUq5Mc",
+      "domain": "podcast",
+      "duration": 997.1333333333333,
+      "annotation_path": "data/annotations/raw/waLjtcUq5Mc.csv",
+      "cache_matrix_sha256": "53f614ca0564b7f812bdebd3ba7a60626fd6df6328b3ad8ff4f2b214db80db1b",
+      "cache_metadata_sha256": "3534d85bd01b9b08e8a3dd238eb51f4c3c3d6eeebd401d266d6be90ad49b429a"
+    },
+    {
+      "video_id": "wjZofJX0v4M",
+      "domain": "lecture",
+      "duration": 1633.7,
+      "annotation_path": "data/annotations/raw/wjZofJX0v4M.csv",
+      "cache_matrix_sha256": "e408e1e1950b1c7d710b9ea49b783e177bb42f5ff37fc47472faf9ebddb7fb2e",
+      "cache_metadata_sha256": "7c71712c4f75307a4048e20a9eb5b1fcd83674870cdd7686dfb6136f8518f2f2"
+    }
+  ]
+}

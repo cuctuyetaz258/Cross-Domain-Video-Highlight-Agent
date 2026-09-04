@@ -1,0 +1,18 @@
+{
+  "id": "nguyentrann0703/video-highlight-v2-tcn-pretrain",
+  "title": "Video Highlight V2 TCN Pretrain",
+  "code_file": "run_pretrain.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "enable_internet": true,
+  "dataset_sources": [
+    "nguyentrann0703/video-highlight-v2-inputs",
+    "python16/summe-videos-and-tvsum-videos"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

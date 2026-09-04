@@ -1,0 +1,15 @@
+{
+  "id": "nguyentrann0703/video-highlight-v2-tcn-ltr",
+  "title": "Video Highlight V2 TCN-LTR",
+  "code_file": "run_v2.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "enable_internet": false,
+  "dataset_sources": ["nguyentrann0703/video-highlight-v2-inputs"],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}
