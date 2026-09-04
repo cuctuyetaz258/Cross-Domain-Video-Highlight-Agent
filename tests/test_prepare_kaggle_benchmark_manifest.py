@@ -5,6 +5,7 @@ from pathlib import Path
 
 import pytest
 
+from highlight_agent.schemas import TranscriptDocument
 from scripts.prepare_kaggle_benchmark_manifest import adapt_records, normalize_media_id, write_silent_audio
 
 
@@ -46,3 +47,10 @@ def test_write_silent_audio_preserves_requested_duration(tmp_path: Path) -> None
         assert handle.getnchannels() == 1
         assert handle.getframerate() == 16_000
         assert handle.getnframes() == 20_000
+
+
+def test_empty_no_audio_transcript_uses_schema_compatible_source() -> None:
+    transcript = TranscriptDocument(
+        video_id="silent-clip", language="und", source="whisper", duration=5.0, segments=[]
+    )
+    assert transcript.segments == []

@@ -110,7 +110,14 @@ def materialize_records(records: list[dict[str, Any]], *, whisper_model: str, fo
         audio_path = Path(record["audio_path"])
         transcript_path = Path(record["transcript_path"])
         try:
-            duration = probe_duration(record["video_path"])
+            try:
+                duration = probe_duration(record["video_path"])
+            except MediaProcessingError:
+                # A few public TVSum files have probe-hostile containers, while
+                # their source manifest still carries a validated duration.
+                duration = float(record.get("duration") or 0.0)
+                if duration <= 0:
+                    raise
             audio_available = True
             if force or not audio_path.is_file():
                 try:
@@ -123,7 +130,9 @@ def materialize_records(records: list[dict[str, Any]], *, whisper_model: str, fo
             if force or not transcript_path.is_file():
                 if not audio_available:
                     transcript = TranscriptDocument(
-                        video_id=video_id, language="und", source="no_audio", duration=duration, segments=[]
+                        # The current schema allows only Whisper/caption.  The
+                        # availability flag below preserves the no-audio fact.
+                        video_id=video_id, language="und", source="whisper", duration=duration, segments=[]
                     )
                     transcript_available = False
                     save_transcript(transcript, transcript_path)
