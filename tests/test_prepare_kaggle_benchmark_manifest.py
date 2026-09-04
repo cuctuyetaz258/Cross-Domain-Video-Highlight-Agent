@@ -1,10 +1,11 @@
 from __future__ import annotations
 
+import wave
 from pathlib import Path
 
 import pytest
 
-from scripts.prepare_kaggle_benchmark_manifest import adapt_records, normalize_media_id
+from scripts.prepare_kaggle_benchmark_manifest import adapt_records, normalize_media_id, write_silent_audio
 
 
 def _record(video_id: str, source: str = "summe") -> dict:
@@ -35,3 +36,13 @@ def test_adapt_records_rejects_missing_media(tmp_path: Path) -> None:
     (media / "another-video.mp4").touch()
     with pytest.raises(FileNotFoundError, match="missing 1 benchmark videos"):
         adapt_records([_record("not-present")], media, tmp_path / "derived")
+
+
+def test_write_silent_audio_preserves_requested_duration(tmp_path: Path) -> None:
+    path = tmp_path / "silent.wav"
+    write_silent_audio(path, duration=1.25, sample_rate=16_000)
+
+    with wave.open(str(path), "rb") as handle:
+        assert handle.getnchannels() == 1
+        assert handle.getframerate() == 16_000
+        assert handle.getnframes() == 20_000

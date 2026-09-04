@@ -12,6 +12,7 @@ import argparse
 import json
 import re
 import sys
+import wave
 from pathlib import Path
 from typing import Any
 
@@ -86,6 +87,20 @@ def adapt_records(records: list[dict[str, Any]], media_root: Path, derived_root:
     return adapted
 
 
+def write_silent_audio(path: Path, *, duration: float, sample_rate: int = 16_000) -> None:
+    """Create a valid mono WAV when a benchmark clip has no audio stream."""
+
+    if duration <= 0:
+        raise ValueError("silent audio duration must be positive")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    sample_count = max(1, int(round(duration * sample_rate)))
+    with wave.open(str(path), "wb") as handle:
+        handle.setnchannels(1)
+        handle.setsampwidth(2)
+        handle.setframerate(sample_rate)
+        handle.writeframes(b"\x00\x00" * sample_count)
+
+
 def materialize_records(records: list[dict[str, Any]], *, whisper_model: str, force: bool) -> list[dict[str, Any]]:
     """Create audio and a transcript for every resolved record, fail as a batch."""
 
@@ -96,9 +111,27 @@ def materialize_records(records: list[dict[str, Any]], *, whisper_model: str, fo
         transcript_path = Path(record["transcript_path"])
         try:
             duration = probe_duration(record["video_path"])
+            audio_available = True
             if force or not audio_path.is_file():
-                extract_audio_16k_mono(record["video_path"], audio_path)
+                try:
+                    extract_audio_16k_mono(record["video_path"], audio_path)
+                except MediaProcessingError as exc:
+                    if "does not contain any stream" not in str(exc):
+                        raise
+                    write_silent_audio(audio_path, duration=duration)
+                    audio_available = False
             if force or not transcript_path.is_file():
+                if not audio_available:
+                    transcript = TranscriptDocument(
+                        video_id=video_id, language="und", source="no_audio", duration=duration, segments=[]
+                    )
+                    transcript_available = False
+                    save_transcript(transcript, transcript_path)
+                    record["audio_available"] = False
+                    record["transcript_available"] = False
+                    results.append({"video_id": video_id, "status": "ready", "audio_available": False, "transcript_available": False})
+                    print(f"[{index}/{len(records)}] {json.dumps(results[-1], sort_keys=True)}", flush=True)
+                    continue
                 try:
                     transcript = transcribe_with_whisper(
                         audio_path, video_id=video_id, duration=duration, model_size=whisper_model
@@ -115,7 +148,16 @@ def materialize_records(records: list[dict[str, Any]], *, whisper_model: str, fo
                 save_transcript(transcript, transcript_path)
             else:
                 transcript_available = True
-            results.append({"video_id": video_id, "status": "ready", "transcript_available": transcript_available})
+            record["audio_available"] = audio_available
+            record["transcript_available"] = transcript_available
+            results.append(
+                {
+                    "video_id": video_id,
+                    "status": "ready",
+                    "audio_available": audio_available,
+                    "transcript_available": transcript_available,
+                }
+            )
         except Exception as exc:
             results.append({"video_id": video_id, "status": "failed", "error": str(exc)})
         print(f"[{index}/{len(records)}] {json.dumps(results[-1], sort_keys=True)}", flush=True)
@@ -143,6 +185,8 @@ def main() -> None:
     print(f"adapted {len(records)} records to {output}", flush=True)
     if args.prepare_media:
         materialize_records(records, whisper_model=args.whisper_model, force=args.force)
+        # Persist the observed audio/transcript availability for reproducibility.
+        output.write_text("".join(json.dumps(record, sort_keys=True) + "\n" for record in records), encoding="utf-8")
 
 
 if __name__ == "__main__":

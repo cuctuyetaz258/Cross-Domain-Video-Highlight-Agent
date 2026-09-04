@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import shutil
 import subprocess
+import sys
 from pathlib import Path
 
 INPUT_ROOT = Path("/kaggle/input")
@@ -18,6 +19,22 @@ RUN_MODE = "materialize"  # validate | materialize | train
 
 def run(*args: str) -> None:
     subprocess.run(args, cwd=WORKING, check=True)
+
+
+def install_materialization_dependencies() -> None:
+    """Kaggle's base image omits the speech and visual extractors we require."""
+
+    run(
+        sys.executable,
+        "-m",
+        "pip",
+        "install",
+        "--quiet",
+        "faster-whisper>=1,<2",
+        "scenedetect>=0.6.4",
+        # A recent 0.10 build supplies wheels for Kaggle's Python 3.12 image.
+        "mediapipe>=0.10.14,<0.11",
+    )
 
 
 def find_one(filename: str) -> Path:
@@ -93,6 +110,7 @@ if RUN_MODE == "validate":
     prepare_media(include_transcription=False)
     print("Benchmark media mapping passed. Set RUN_MODE='materialize' for derived artifacts.")
 elif RUN_MODE == "materialize":
+    install_materialization_dependencies()
     prepare_media(include_transcription=True)
     run(
         "python", "scripts/build_feature_cache.py",

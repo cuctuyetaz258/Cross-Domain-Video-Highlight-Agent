@@ -19,5 +19,8 @@ Run three published versions, not one long job:
    `video-highlight-v2-pretrain` before attaching it to `kaggle/v2` folds.
 
 Internet is enabled only because `faster-whisper` may need to download the
-`small.en` model on the first materialization run. Do not expose credentials or
-write to the public source Dataset.
+`small.en` model and the Kaggle base image omits `faster-whisper`,
+`scenedetect`, and MediaPipe. Clips with no audio stream receive a duration-
+matched silent WAV and an empty transcript; their audio/text channels are zero,
+rather than failing the batch. Do not expose credentials or write to the public
+source Dataset.
