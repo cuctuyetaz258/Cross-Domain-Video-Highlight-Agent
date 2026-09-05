@@ -106,6 +106,33 @@ def test_localization_can_initialize_from_a_compatible_checkpoint(tmp_path) -> N
     assert len(initialization["checkpoint_sha256"]) == 64
 
 
+def test_localization_can_resume_from_last_checkpoint(tmp_path) -> None:
+    config = ActionFormerConfig(
+        d_model=8,
+        num_heads=2,
+        attention_window=16,
+        pyramid_levels=2,
+        head_depth=1,
+        dropout=0.0,
+        regression_ranges_seconds=((0.0, 45.0), (30.0, float("inf"))),
+    )
+    common = {
+        "train_examples": [_example("train")],
+        "val_examples": [_example("val")],
+        "config": config,
+        "output_path": tmp_path / "best.pt",
+        "last_output_path": tmp_path / "last.pt",
+        "log_path": tmp_path / "log.json",
+        "history_csv_path": tmp_path / "history.csv",
+        "curves_path": tmp_path / "curves.svg",
+        "patience": 4,
+        "device": "cpu",
+    }
+    train_actionformer_localization(**common, max_epochs=1)
+    _, report = train_actionformer_localization(**common, max_epochs=2, resume_checkpoint=tmp_path / "last.pt")
+    assert [row["epoch"] for row in report["epochs"]] == [1, 2]
+
+
 def test_proposal_ltr_training_persists_combined_checkpoint_and_log(tmp_path) -> None:
     config = ActionFormerConfig(
         d_model=8,
@@ -177,18 +204,18 @@ def test_proposal_ltr_rejects_unverified_external_proposal_cache(tmp_path) -> No
 
     with pytest.raises(ValueError, match="unverified"):
         train_proposal_ltr(
-        actionformer=ActionFormerHighlightModel(config),
-        checkpoint_metadata=metadata,
-        train_examples=[_example("train")],
-        val_examples=[_example("val")],
-        output_path=tmp_path / "combined.pt",
-        last_output_path=tmp_path / "combined_last.pt",
-        log_path=tmp_path / "ltr_log.json",
-        history_csv_path=tmp_path / "ltr_history.csv",
-        curves_path=tmp_path / "ltr_curves.svg",
-        max_epochs=1,
-        patience=1,
-        device="cpu",
-        predicted_proposals_by_video=cached,
-        proposal_cache_metadata={"fingerprint": "cache"},
-    )
+            actionformer=ActionFormerHighlightModel(config),
+            checkpoint_metadata=metadata,
+            train_examples=[_example("train")],
+            val_examples=[_example("val")],
+            output_path=tmp_path / "combined.pt",
+            last_output_path=tmp_path / "combined_last.pt",
+            log_path=tmp_path / "ltr_log.json",
+            history_csv_path=tmp_path / "ltr_history.csv",
+            curves_path=tmp_path / "ltr_curves.svg",
+            max_epochs=1,
+            patience=1,
+            device="cpu",
+            predicted_proposals_by_video=cached,
+            proposal_cache_metadata={"fingerprint": "cache"},
+        )

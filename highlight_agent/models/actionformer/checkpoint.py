@@ -32,6 +32,7 @@ def save_actionformer_checkpoint(
     *,
     metadata: dict[str, Any],
     proposal_ltr_state_dict: dict[str, torch.Tensor] | None = None,
+    training_state: dict[str, Any] | None = None,
 ) -> Path:
     destination = Path(path)
     destination.parent.mkdir(parents=True, exist_ok=True)
@@ -43,6 +44,9 @@ def save_actionformer_checkpoint(
             "config": model.config.to_dict(),
             "state_dict": model.state_dict(),
             "proposal_ltr_state_dict": proposal_ltr_state_dict,
+            # Optional state is intentionally separate from model metadata: inference
+            # consumers can continue to load this checkpoint without knowing its run.
+            "training_state": training_state,
             "metadata": metadata,
         },
         temporary,
@@ -62,9 +66,7 @@ def load_actionformer_checkpoint(
     if checkpoint.get("model_family") != ACTIONFORMER_MODEL_FAMILY:
         raise ValueError("checkpoint model_family is not actionformer_ltr")
     if checkpoint.get("checkpoint_version") not in SUPPORTED_ACTIONFORMER_CHECKPOINT_VERSIONS:
-        raise ValueError(
-            f"unsupported ActionFormer checkpoint version: {checkpoint.get('checkpoint_version')!r}"
-        )
+        raise ValueError(f"unsupported ActionFormer checkpoint version: {checkpoint.get('checkpoint_version')!r}")
     config_payload = checkpoint.get("config")
     if not isinstance(config_payload, dict):
         raise ValueError("ActionFormer checkpoint is missing config")

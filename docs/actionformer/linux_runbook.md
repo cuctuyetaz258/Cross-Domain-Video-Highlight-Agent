@@ -1,4 +1,4 @@
-# Linux RTX 4090 Runbook
+# Linux GPU Runbook
 
 ## Goal
 
@@ -6,7 +6,7 @@ Run the same Python CLI for CPU smoke tests and GPU training. Do not put model o
 
 ## Instance Baseline
 
-- Ubuntu 22.04 or newer, one RTX 4090 (24 GB VRAM), persistent project/input/output volume, and network access to private Kaggle artifacts.
+- Ubuntu 22.04 or newer, one 24 GB GPU (the current VM is RTX PRO 4000 Blackwell), persistent project/input/output volume, and network access to private Kaggle artifacts.
 - Clone `feature/actionformer-nested-pretrain` into a dedicated working directory. Never train directly on `main`.
 - Create a pinned Python environment compatible with the repository's PyTorch/CUDA requirements. Record `python --version`, PyTorch version, CUDA runtime, NVIDIA driver, GPU name, and `nvidia-smi` output in `environment.json`.
 - Install the Kaggle CLI only to download private input bundles. No Kaggle secret, Hugging Face token, Whisper, MediaPipe, or FFmpeg is needed while training cached seven-channel features.
@@ -34,6 +34,9 @@ The smoke passes only when it exits successfully and all required artifacts exis
 
 - Switch only the device/configuration from CPU to CUDA; preserve the same code path, manifest lock, and run schema.
 - Log peak allocated/reserved VRAM, video ID, temporal length, proposal count, wall-clock time, and CUDA errors by stage.
-- On interruption, leave inputs intact, mark the run `interrupted`, archive logs/checkpoints in a `finally` path, then resume from `last.pt`.
+- Every completed epoch atomically replaces `last.pt`; it contains model weights, optimizer, scheduler, epoch, best metric, early-stop counter, and PyTorch RNG state. `best.pt` is inference/transfer-only.
+- Benchmark pretraining resumes exactly with `--resume runs/actionformer/<run-id>/last.pt`. Localization and proposal LTR expose the equivalent `--resume <last.pt>` option.
+- Run the command inside `tmux`; losing SSH does not stop training. A process/VM interruption leaves inputs intact and writes `interrupted` or `failed` in `run_report.json`.
+- At the end of each smoke, benchmark-pretraining, and outer-fold stage, rsync the complete `runs/actionformer/<run-id>/` directory back to the Mac before starting the next stage.
 - Do not solve OOM by silently dropping candidates. Profile first; any shortlist, crop, or checkpointing policy must be explicit in `config.json` and applied consistently to train/validation/test.
 - After each completed stage, copy the run directory to local durable storage. Optionally publish it as a new private Kaggle dataset version for backup; never overwrite the input dataset.

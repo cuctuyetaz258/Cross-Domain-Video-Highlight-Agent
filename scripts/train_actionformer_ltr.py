@@ -23,6 +23,11 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         default=None,
         help="Compatible localization checkpoint used to initialize localization or required by the LTR stage.",
     )
+    parser.add_argument(
+        "--freeze-backbone",
+        action="store_true",
+        help="Freeze a loaded benchmark backbone and train a fresh localization head only.",
+    )
     parser.add_argument("--project-root", default=".")
     parser.add_argument("--output", default="data/models/actionformer_localization.pt")
     parser.add_argument("--last-output", default="data/models/actionformer_localization_last.pt")
@@ -56,6 +61,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--gain-scale", type=float, default=4.0)
     parser.add_argument("--max-pairs-per-video", type=int, default=256)
     parser.add_argument("--proposal-cache", default=None)
+    parser.add_argument("--resume", default=None, help="Resume localization from a compatible last.pt checkpoint.")
     return parser.parse_args(argv)
 
 
@@ -103,6 +109,8 @@ def main(argv: list[str] | None = None) -> int:
             device=args.device,
             run_name=args.run_name,
             init_checkpoint_path=args.init_checkpoint,
+            freeze_backbone=args.freeze_backbone,
+            resume_checkpoint=args.resume,
         )
     else:
         if not args.init_checkpoint:
@@ -148,6 +156,7 @@ def main(argv: list[str] | None = None) -> int:
             nested_cache_path=args.proposal_cache,
             source_checkpoint_path=args.init_checkpoint,
             outer_test_video_ids=[item.video_id for item in test_examples],
+            resume_checkpoint=args.resume,
         )
     print(json.dumps(report, indent=2, sort_keys=True))
     return 0
