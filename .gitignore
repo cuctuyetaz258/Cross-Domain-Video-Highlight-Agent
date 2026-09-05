@@ -67,6 +67,8 @@ docs/*
 !docs/slide_content_15min.md
 !docs/improvement/
 !docs/improvement/**
+!docs/actionformer/
+!docs/actionformer/**
 
 # Local Kaggle upload and verification bundles
 kaggle_checkpoint_upload/

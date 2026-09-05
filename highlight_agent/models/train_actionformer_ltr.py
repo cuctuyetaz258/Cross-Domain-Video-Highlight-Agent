@@ -227,6 +227,7 @@ def train_actionformer_localization(
     run_name: str = "actionformer_localization",
     fixed_epochs: bool = False,
     ancestor_lineage: list[dict[str, Any]] | None = None,
+    init_checkpoint_path: str | Path | None = None,
 ) -> tuple[ActionFormerHighlightModel, dict[str, Any]]:
     if not train_examples or (not val_examples and not fixed_epochs):
         raise ValueError("training requires data and validation unless fixed_epochs is enabled")
@@ -245,7 +246,21 @@ def train_actionformer_localization(
         torch.cuda.manual_seed_all(seed)
     cuda_ready = torch.cuda.is_available() and torch.cuda.device_count() > 0
     target_device = torch.device(device or ("cuda" if cuda_ready else "cpu"))
-    model = ActionFormerHighlightModel(config).to(target_device)
+    initialization: dict[str, Any] | None = None
+    if init_checkpoint_path is None:
+        model = ActionFormerHighlightModel(config).to(target_device)
+    else:
+        checkpoint = Path(init_checkpoint_path)
+        model, checkpoint_metadata, _ = load_actionformer_checkpoint(checkpoint, device=target_device)
+        if model.config != config:
+            raise ValueError(
+                "initialization checkpoint configuration does not match the requested ActionFormer configuration"
+            )
+        initialization = {
+            "checkpoint_path": str(checkpoint.resolve()),
+            "checkpoint_sha256": hashlib.sha256(checkpoint.read_bytes()).hexdigest(),
+            "source_data_lineage": checkpoint_metadata.get("data_lineage"),
+        }
     optimizer = AdamW(model.parameters(), lr=learning_rate, weight_decay=weight_decay)
     scheduler = CosineAnnealingLR(optimizer, T_max=max_epochs)
     train_fingerprint = _fingerprint(train_examples)
@@ -279,6 +294,7 @@ def train_actionformer_localization(
         },
         "content_fingerprints": {item.video_id: example_digest(item) for item in train_examples + val_examples},
         "epoch_policy": "fixed_inner_selected_budget" if fixed_epochs else "validation_early_stopping",
+        "initialization": initialization,
     }
 
     for epoch in range(1, max_epochs + 1):
@@ -352,6 +368,7 @@ def train_actionformer_localization(
             "updated_at_unix": time.time(),
             "config": config.to_dict(),
             "data_lineage": base_metadata["data_lineage"],
+            "initialization": initialization,
             "epoch_policy": base_metadata["epoch_policy"],
             "device": target_device.type,
             "optimizer": {

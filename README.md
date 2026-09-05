@@ -98,6 +98,27 @@ Generated media, feature caches, and run metadata are written below `output/` an
 
 The current shared OOF proposal cache does not isolate all upstream training from each outer test fold, and LTR validation nDCG includes ground-truth candidates. Recorded CV results are exploratory until nested OOF and predicted-only validation are implemented. The legacy scorer remains the runtime default.
 
+Pretrain the ActionFormer temporal backbone on cached TVSum + SumMe frame-importance labels before custom localization. This uses the locked 55/10/10 benchmark split and does not require the 18 custom caches:
+
+```bash
+python -m scripts.pretrain_actionformer_backbone \
+  --manifest data/manifests/tvsum_summe.jsonl \
+  --cache-dir data/features_cache \
+  --output data/models/actionformer_benchmark_pretrained.pt \
+  --report data/reports/actionformer_benchmark_pretraining.json \
+  --device cuda
+```
+
+After all 18 custom caches are available, pass that checkpoint to localization training. Its architecture and seven-channel feature contract are verified before fine-tuning:
+
+```bash
+python -m scripts.train_actionformer_ltr \
+  --manifest data/manifests/actionformer_fold0.jsonl \
+  --stage localization \
+  --init-checkpoint data/models/actionformer_benchmark_pretrained.pt \
+  --output data/models/actionformer_fold0_localization.pt
+```
+
 Audit the 18-video annotation set and rebuild the five video-disjoint manifests:
 
 ```bash

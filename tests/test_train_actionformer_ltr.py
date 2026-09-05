@@ -61,6 +61,51 @@ def test_training_persists_incremental_report_artifacts(tmp_path) -> None:
     assert (tmp_path / "curves.svg").is_file()
 
 
+def test_localization_can_initialize_from_a_compatible_checkpoint(tmp_path) -> None:
+    config = ActionFormerConfig(
+        d_model=8,
+        num_heads=2,
+        attention_window=16,
+        pyramid_levels=2,
+        head_depth=1,
+        dropout=0.0,
+        regression_ranges_seconds=((0.0, 45.0), (30.0, float("inf"))),
+    )
+    source = tmp_path / "pretrained.pt"
+    train_actionformer_localization(
+        train_examples=[_example("source_train")],
+        val_examples=[_example("source_val")],
+        output_path=source,
+        last_output_path=tmp_path / "pretrained_last.pt",
+        log_path=tmp_path / "pretrained_log.json",
+        history_csv_path=tmp_path / "pretrained_history.csv",
+        curves_path=tmp_path / "pretrained_curves.svg",
+        config=config,
+        max_epochs=1,
+        patience=1,
+        device="cpu",
+    )
+
+    _, report = train_actionformer_localization(
+        train_examples=[_example("target_train")],
+        val_examples=[_example("target_val")],
+        output_path=tmp_path / "finetuned.pt",
+        last_output_path=tmp_path / "finetuned_last.pt",
+        log_path=tmp_path / "finetuned_log.json",
+        history_csv_path=tmp_path / "finetuned_history.csv",
+        curves_path=tmp_path / "finetuned_curves.svg",
+        config=config,
+        init_checkpoint_path=source,
+        max_epochs=1,
+        patience=1,
+        device="cpu",
+    )
+
+    initialization = report["initialization"]
+    assert initialization["checkpoint_path"] == str(source.resolve())
+    assert len(initialization["checkpoint_sha256"]) == 64
+
+
 def test_proposal_ltr_training_persists_combined_checkpoint_and_log(tmp_path) -> None:
     config = ActionFormerConfig(
         d_model=8,
@@ -147,4 +192,3 @@ def test_proposal_ltr_rejects_unverified_external_proposal_cache(tmp_path) -> No
         predicted_proposals_by_video=cached,
         proposal_cache_metadata={"fingerprint": "cache"},
     )
-

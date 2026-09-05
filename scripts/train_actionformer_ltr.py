@@ -18,7 +18,11 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--manifest", default="data/manifests/actionformer_fold0.jsonl")
     parser.add_argument("--stage", choices=["localization", "ltr"], default="localization")
-    parser.add_argument("--init-checkpoint", default=None)
+    parser.add_argument(
+        "--init-checkpoint",
+        default=None,
+        help="Compatible localization checkpoint used to initialize localization or required by the LTR stage.",
+    )
     parser.add_argument("--project-root", default=".")
     parser.add_argument("--output", default="data/models/actionformer_localization.pt")
     parser.add_argument("--last-output", default="data/models/actionformer_localization_last.pt")
@@ -72,10 +76,14 @@ def main(argv: list[str] | None = None) -> int:
     if args.max_val_videos is not None:
         val_examples = val_examples[: args.max_val_videos]
     if args.stage == "localization":
-        config = ActionFormerConfig(
-            d_model=args.d_model,
-            attention_window=args.attention_window,
-        )
+        if args.init_checkpoint:
+            initialized_model, _, _ = load_actionformer_checkpoint(args.init_checkpoint, device="cpu")
+            config = initialized_model.config
+        else:
+            config = ActionFormerConfig(
+                d_model=args.d_model,
+                attention_window=args.attention_window,
+            )
         _, report = train_actionformer_localization(
             train_examples=train_examples,
             val_examples=val_examples,
@@ -94,6 +102,7 @@ def main(argv: list[str] | None = None) -> int:
             seed=args.seed,
             device=args.device,
             run_name=args.run_name,
+            init_checkpoint_path=args.init_checkpoint,
         )
     else:
         if not args.init_checkpoint:
