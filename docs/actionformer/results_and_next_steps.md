@@ -16,6 +16,26 @@ IMSAB is therefore not a release candidate. `legacy-ltr` remains the runtime
 default. This is a valid negative result: its confidence baseline and IMSAB
 use the same outer localization generator and predicted test candidates.
 
+## Fixed-Proposal Rerank Ablations
+
+All three ablations reuse the exact outer localization checkpoint and
+`nested_proposals.json` for every fold. They change only the proposal scorer;
+they do not retrain or retune localization. Values are five-fold mean mAP@0.3
+and Recall@3 at IoU 0.3.
+
+| Scorer | Loss / signal | mAP@0.3 | Recall@3 |
+| --- | --- | ---: | ---: |
+| Confidence | ActionFormer confidence | 0.1423 | 0.2156 |
+| MLP | Margin, unweighted | 0.0500 | 0.1192 |
+| MLP | Utility-weighted RankNet | 0.0892 | 0.1908 |
+| IMSAB | Utility-weighted RankNet, ordinal disabled | 0.0722 | 0.1542 |
+| IMSAB | Utility-weighted RankNet, ordinal enabled | 0.0710 | 0.1167 |
+
+None improves both headline metrics over confidence. RankNet is better than
+the margin MLP, and removing the ordinal signal helps IMSAB recall, but neither
+is sufficient for promotion. Do not spend GPU budget on additional seeds for
+these configurations.
+
 ## Relation To The Historical LTR Report
 
 `docs/in_domain_ltr_5fold_report.md` cannot be used as a numeric baseline for
@@ -39,8 +59,9 @@ candidate caches and held-out evaluation:
 2. MLP plus utility-weighted RankNet.
 3. IMSAB plus utility-weighted RankNet with ordinal rank signal disabled.
 
-The new `scripts/run_actionformer_rerank_ablation.py` records resumable
-`best.pt` and `last.pt` per fold, plus a fold-level evaluation and CV summary.
+The new `scripts/run_actionformer_rerank_ablation.py` records `best.pt` and
+`last.pt` per fold, plus a fold-level evaluation and CV summary. A VM outage
+therefore preserves every completed fold and the last state of the active fold.
 Only run multi-seed replication if a configuration clears the predeclared
 release gate in `experiment_protocol.md`.
 
