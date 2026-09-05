@@ -4,18 +4,10 @@ from __future__ import annotations
 
 from typing import Any
 
+from highlight_agent.ltr_contract import LTR_CHANNEL_ORDER, LTR_FEATURE_SCHEMA_VERSION
+
 LTR_CHECKPOINT_VERSION = "1.0"
-LTR_FEATURE_SCHEMA_VERSION = "1.1"
 LTR_SAMPLE_RATE = 10
-LTR_CHANNEL_ORDER = (
-    "rms",
-    "pitch",
-    "silence",
-    "text_score",
-    "scene_change",
-    "gesture",
-    "turn_rate",
-)
 LTR_NORMALIZATION = "minmax_per_video"
 LTR_WINDOW_SIZE = 50
 LTR_HOP_SIZE = 10
@@ -61,15 +53,12 @@ def validate_feature_contract(metadata: dict[str, Any]) -> dict[str, Any]:
 
     expected = feature_contract()
     mismatches = [
-        f"{key}={schema.get(key)!r} (expected {value!r})"
-        for key, value in expected.items()
-        if schema.get(key) != value
+        f"{key}={schema.get(key)!r} (expected {value!r})" for key, value in expected.items() if schema.get(key) != value
     ]
     if metadata.get("schema_version") != LTR_FEATURE_SCHEMA_VERSION:
         mismatches.insert(
             0,
-            "schema_version="
-            f"{metadata.get('schema_version')!r} (expected {LTR_FEATURE_SCHEMA_VERSION!r})",
+            f"schema_version={metadata.get('schema_version')!r} (expected {LTR_FEATURE_SCHEMA_VERSION!r})",
         )
     if mismatches:
         raise LTRPipelineError("LTR_CHECKPOINT_SCHEMA_MISMATCH", "; ".join(mismatches))

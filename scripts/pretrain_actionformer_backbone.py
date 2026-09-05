@@ -17,7 +17,7 @@ import torch.nn.functional as functional
 from torch.optim import AdamW
 from torch.optim.lr_scheduler import CosineAnnealingLR
 
-from highlight_agent.features.ltr_contract import LTR_CHANNEL_ORDER, LTR_FEATURE_SCHEMA_VERSION
+from highlight_agent.ltr_contract import LTR_CHANNEL_ORDER, LTR_FEATURE_SCHEMA_VERSION
 from highlight_agent.models.actionformer import (
     ActionFormerConfig,
     ActionFormerHighlightModel,
