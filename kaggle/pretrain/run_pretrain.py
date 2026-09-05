@@ -34,9 +34,22 @@ def install_materialization_dependencies() -> None:
         "--quiet",
         "faster-whisper>=1,<2",
         "scenedetect>=0.6.4",
-        # A recent 0.10 build supplies wheels for Kaggle's Python 3.12 image.
-        "mediapipe>=0.10.14,<0.11",
+        # Newer MediaPipe builds removed the legacy ``solutions`` API used by
+        # the reproducible seven-feature extractor.
+        "mediapipe==0.10.14",
     )
+
+
+def verify_materialization_dependencies() -> None:
+    """Fail before 75-video extraction if the required legacy API is absent."""
+
+    import mediapipe as mp
+
+    if not hasattr(mp, "solutions"):
+        raise RuntimeError(
+            "incompatible MediaPipe: the V2 gesture extractor requires "
+            "mediapipe.solutions; expected mediapipe==0.10.14"
+        )
 
 
 def load_optional_hf_token() -> None:
@@ -164,6 +177,7 @@ if RUN_MODE == "validate":
 elif RUN_MODE == "materialize":
     load_optional_hf_token()
     install_materialization_dependencies()
+    verify_materialization_dependencies()
     copy_benchmark_media_into_project()
     prepare_media(include_transcription=True)
     run(
