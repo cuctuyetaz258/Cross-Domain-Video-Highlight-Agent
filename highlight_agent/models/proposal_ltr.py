@@ -6,8 +6,8 @@ from typing import Any
 import torch
 import torch.nn as nn
 
-from highlight_agent.features.proposal_pooling import ProposalContextPooler
 from highlight_agent.models.actionformer import TemporalProposal
+from highlight_agent.proposal_pooling import ProposalContextPooler
 
 
 class ProposalLTRScorer(nn.Module):
@@ -230,9 +230,12 @@ class ContextAwareProposalLTRScorer(nn.Module):
         max_count = max((len(proposals[index]) for index in active_indices), default=0)
         if not active_indices:
             empty = representations.new_empty((0, 0, self.input_dim))
-            return empty, torch.empty((0, 0), dtype=torch.bool, device=representations.device), torch.empty(
-                (0, 0), dtype=torch.long, device=representations.device
-            ), active_indices
+            return (
+                empty,
+                torch.empty((0, 0), dtype=torch.bool, device=representations.device),
+                torch.empty((0, 0), dtype=torch.long, device=representations.device),
+                active_indices,
+            )
         rows = {item: position for position, item in enumerate(provenance)}
         packed_rows: list[torch.Tensor] = []
         masks: list[torch.Tensor] = []
@@ -265,9 +268,7 @@ class ContextAwareProposalLTRScorer(nn.Module):
                 )
             )
             ranks = self._ordinal_ranks(proposals[batch_index], self.config.max_rank)
-            ordinal_rows.append(
-                torch.tensor(ranks + [0] * padding, dtype=torch.long, device=representations.device)
-            )
+            ordinal_rows.append(torch.tensor(ranks + [0] * padding, dtype=torch.long, device=representations.device))
         return torch.stack(packed_rows), torch.stack(masks), torch.stack(ordinal_rows), active_indices
 
     def forward(
@@ -305,8 +306,10 @@ class ContextAwareProposalLTRScorer(nn.Module):
 
 
 def build_proposal_ltr(channels: int, config: ProposalLTRConfig | dict[str, Any] | None = None) -> nn.Module:
-    resolved = ProposalLTRConfig() if config is None else (
-        ProposalLTRConfig.from_dict(config) if isinstance(config, dict) else config
+    resolved = (
+        ProposalLTRConfig()
+        if config is None
+        else (ProposalLTRConfig.from_dict(config) if isinstance(config, dict) else config)
     )
     if resolved.architecture == "mlp":
         return ProposalLTRScorer(
@@ -341,7 +344,5 @@ def pairwise_proposal_loss(
         differences = video_utilities[:, None] - video_utilities[None, :]
         positive, negative = torch.where(differences >= utility_delta)
         if positive.numel():
-            losses.append(
-                torch.relu(margin - video_scores[positive] + video_scores[negative]).mean()
-            )
+            losses.append(torch.relu(margin - video_scores[positive] + video_scores[negative]).mean())
     return torch.stack(losses).mean() if losses else scores.sum() * 0
