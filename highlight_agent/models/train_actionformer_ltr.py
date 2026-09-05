@@ -318,7 +318,7 @@ def train_actionformer_localization(
         model.load_state_dict(payload["state_dict"])
         optimizer.load_state_dict(state["optimizer_state_dict"])
         scheduler.load_state_dict(state["scheduler_state_dict"])
-        torch.set_rng_state(state["torch_rng_state"])
+        torch.set_rng_state(state["torch_rng_state"].cpu())
         start_epoch = int(state["epoch"]) + 1
         best_loss, best_recall, stale_epochs = (
             float(state["best_loss"]),
@@ -765,7 +765,7 @@ def train_proposal_ltr(
         scorer.load_state_dict(scorer_state)
         optimizer.load_state_dict(state["optimizer_state_dict"])
         scheduler.load_state_dict(state["scheduler_state_dict"])
-        torch.set_rng_state(state["torch_rng_state"])
+        torch.set_rng_state(state["torch_rng_state"].cpu())
         start_epoch = int(state["epoch"]) + 1
         best_ndcg, stale_epochs = float(state["best_ndcg"]), int(state["stale_epochs"])
         if log.is_file():

@@ -189,9 +189,9 @@ def _resume(
     head.load_state_dict(state["importance_head_state_dict"])
     optimizer.load_state_dict(state["optimizer_state_dict"])
     scheduler.load_state_dict(state["scheduler_state_dict"])
-    torch.set_rng_state(state["torch_rng_state"])
+    torch.set_rng_state(state["torch_rng_state"].cpu())
     if torch.cuda.is_available() and state.get("cuda_rng_state_all") is not None:
-        torch.cuda.set_rng_state_all(state["cuda_rng_state_all"])
+        torch.cuda.set_rng_state_all([value.cpu() for value in state["cuda_rng_state_all"]])
     return int(state["epoch"]) + 1, float(state["best_val_loss"]), int(state["stale_epochs"])
 
 
