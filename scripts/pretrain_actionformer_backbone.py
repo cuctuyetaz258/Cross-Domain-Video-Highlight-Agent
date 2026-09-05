@@ -246,8 +246,10 @@ def main() -> int:
         if not args.resume
         else _resume(Path(args.resume), model, head, optimizer, scheduler, device)
     )
-    history: list[dict[str, Any]] = []
     best_path, last_path, report_path = run_dir / "best.pt", run_dir / "last.pt", run_dir / "run_report.json"
+    history: list[dict[str, Any]] = []
+    if args.resume and report_path.is_file():
+        history = list(json.loads(report_path.read_text(encoding="utf-8")).get("epochs", []))
     metadata = {
         "feature_schema_version": LTR_FEATURE_SCHEMA_VERSION,
         "channel_order": list(LTR_CHANNEL_ORDER),
