@@ -80,6 +80,7 @@ def test_decoder_enforces_duration_and_video_bounds() -> None:
 
     assert len(proposals) == 1
     assert proposals[0].start == 0.0
+    assert proposals[0].end <= 100.0
     assert 30 <= proposals[0].duration <= 90
 
 

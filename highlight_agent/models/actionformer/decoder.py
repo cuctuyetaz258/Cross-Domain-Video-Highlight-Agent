@@ -69,9 +69,7 @@ def decode_proposals(
 ) -> list[TemporalProposal]:
     proposals: list[TemporalProposal] = []
     video_duration = float(video_durations[batch_index])
-    for level, (logits, offsets, mask) in enumerate(
-        zip(outputs["logits"], outputs["offsets"], outputs["masks"])
-    ):
+    for level, (logits, offsets, mask) in enumerate(zip(outputs["logits"], outputs["offsets"], outputs["masks"])):
         stride = config.level_stride_seconds(level)
         scores = torch.sigmoid(logits[batch_index, :, 0])
         locations = level_locations(scores.numel(), stride, scores.device)
@@ -86,12 +84,16 @@ def decode_proposals(
         starts = (locations[indices] - decoded_offsets[:, 0]).clamp(min=0, max=video_duration)
         ends = (locations[indices] + decoded_offsets[:, 1]).clamp(min=0, max=video_duration)
         for index, start, end in zip(indices.tolist(), starts.tolist(), ends.tolist()):
+            # Tensor float32 clamp may convert back to a Python float a few ULPs
+            # above the metadata duration. Clamp once more for serialized caches.
+            start = min(max(float(start), 0.0), video_duration)
+            end = min(max(float(end), 0.0), video_duration)
             duration = end - start
             if config.min_duration_seconds <= duration <= config.max_duration_seconds:
                 proposals.append(
                     TemporalProposal(
-                        start=float(start),
-                        end=float(end),
+                        start=start,
+                        end=end,
                         confidence=float(scores[index].item()),
                         level=level,
                         center_index=int(index),
