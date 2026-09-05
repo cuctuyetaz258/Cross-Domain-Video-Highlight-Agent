@@ -109,3 +109,26 @@ def test_snapshot_rejects_modified_transcript(tmp_path: Path, monkeypatch) -> No
 
     with pytest.raises(ValueError, match="transcript changed"):
         snapshot.load_analysis_snapshot(path)
+
+
+def test_snapshot_restores_actionformer_checkpoint(tmp_path: Path, monkeypatch) -> None:
+    state = _state(tmp_path)
+    state.update(
+        {
+            "scorer_type": "actionformer-ltr",
+            "actionformer_model_path": "actionformer.pt",
+            "ltr_model_path": None,
+        }
+    )
+    path, _ = snapshot.save_analysis_snapshot(state)
+    monkeypatch.setattr(
+        snapshot,
+        "actionformer_checkpoint_info",
+        lambda path: {"fingerprint": "checkpoint-a", "has_proposal_ltr": True},
+    )
+
+    restored = snapshot.load_analysis_snapshot(path)
+
+    assert restored["scorer_type"] == "actionformer-ltr"
+    assert restored["actionformer_model_path"] == "actionformer.pt"
+    assert restored["ltr_model_path"] is None

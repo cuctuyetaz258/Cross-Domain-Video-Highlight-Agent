@@ -2,16 +2,18 @@
 
 import os
 from collections.abc import Callable, Iterable
+from inspect import signature
 from itertools import pairwise
 from pathlib import Path
 from typing import Any
 
 import numpy as np
+from huggingface_hub import get_token
 
 from highlight_agent.media.audio import probe_duration
 from highlight_agent.schemas import FeatureWindow, InteractionFeatures, SpeakerTurn
 
-DEFAULT_DIARIZATION_MODEL = "pyannote/speaker-diarization-community-1"
+DEFAULT_DIARIZATION_MODEL = "pyannote/speaker-diarization-3.1"
 DEFAULT_MIN_TURN_DURATION = 0.30
 DEFAULT_MAX_SAME_SPEAKER_GAP = 0.50
 
@@ -162,6 +164,16 @@ def _load_waveform_for_pyannote(audio_path: str | Path, torch_module: Any) -> di
     }
 
 
+def _create_diarization_pipeline(
+    pipeline_factory: Callable[..., Any], model_id: str, token: str
+) -> Any:
+    """Support both the Pyannote 3.x and 4.x authentication keyword."""
+
+    parameters = signature(pipeline_factory).parameters
+    auth_keyword = "use_auth_token" if "use_auth_token" in parameters else "token"
+    return pipeline_factory(model_id, **{auth_keyword: token})
+
+
 def extract_interaction_features(
     audio_path: str | Path,
     *,
@@ -183,9 +195,12 @@ def extract_interaction_features(
     Code chạy thật sử dụng các giá trị mặc định
     """
 
-    token = hf_token or os.getenv("HF_TOKEN")
+    token = hf_token or os.getenv("HF_TOKEN") or get_token()
     if not token:
-        raise ValueError("HF_TOKEN is required for Pyannote speaker diarization")
+        raise ValueError(
+            "A Hugging Face token is required for Pyannote speaker diarization; "
+            "set HF_TOKEN or run `hf auth login`"
+        )
     if num_speakers is not None and num_speakers < 1:
         raise ValueError("num_speakers must be positive")
     if min_speakers is not None and min_speakers < 1:
@@ -203,11 +218,19 @@ def extract_interaction_features(
         torch_module = torch
     if pipeline_factory is None:
         from pyannote.audio import Pipeline
+        from pyannote.audio.core.task import Problem, Resolution, Specifications
+        from torch.torch_version import TorchVersion
 
+        # Pyannote 3.x checkpoints contain these metadata classes. Torch 2.6+
+        # defaults to weights_only=True, so explicitly allowlist only the
+        # trusted types required by the official Pyannote checkpoint.
+        torch_module.serialization.add_safe_globals(
+            [TorchVersion, Specifications, Problem, Resolution]
+        )
         pipeline_factory = Pipeline.from_pretrained
 
     device_name = select_device(torch_module)
-    pipeline = pipeline_factory(model_id, token=token)
+    pipeline = _create_diarization_pipeline(pipeline_factory, model_id, token)
     pipeline.to(torch_module.device(device_name))
     speaker_options = {
         name: value

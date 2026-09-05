@@ -75,6 +75,15 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         help="Required compatible LTR checkpoint (.pt).",
     )
     parser.add_argument(
+        "--scorer-type",
+        choices=["legacy-ltr", "actionformer-ltr"],
+        default="legacy-ltr",
+    )
+    parser.add_argument(
+        "--actionformer-model-path",
+        default="data/models/actionformer_ltr.pt",
+    )
+    parser.add_argument(
         "--llm-provider",
         choices=["auto", "groq", "openai", "custom", "disabled"],
         default="auto",
@@ -153,6 +162,8 @@ def main() -> None:
         "transcript_source": args.transcript_source,
         "burn_subtitles": not args.no_subtitles,
         "ltr_model_path": args.ltr_model_path,
+        "scorer_type": args.scorer_type,
+        "actionformer_model_path": args.actionformer_model_path,
         "llm_provider": args.llm_provider,
         "llm_model": args.llm_model,
         "llm_base_url": args.llm_base_url,

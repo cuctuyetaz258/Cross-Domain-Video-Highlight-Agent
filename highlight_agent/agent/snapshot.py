@@ -7,7 +7,10 @@ import json
 from pathlib import Path
 from typing import Any
 
+import torch
+
 from highlight_agent.backend import load_transcript
+from highlight_agent.models.actionformer import actionformer_checkpoint_info
 from highlight_agent.models.ltr_scorer import AdditiveAttentionScorer
 from highlight_agent.schemas import HighlightCandidate, MediaWorkspace
 
@@ -61,6 +64,8 @@ def save_analysis_snapshot(state: AgentState) -> tuple[Path, str]:
         "candidates": [item.model_dump(mode="json") for item in candidates],
         "ltr_checkpoint_info": checkpoint_info,
         "ltr_model_path": state.get("ltr_model_path"),
+        "scorer_type": state.get("scorer_type", "legacy-ltr"),
+        "actionformer_model_path": state.get("actionformer_model_path"),
         "highlight_count": state.get("highlight_count", 3),
         "burn_subtitles": state.get("burn_subtitles", False),
     }
@@ -80,6 +85,7 @@ def load_analysis_snapshot(
     snapshot_path: str | Path,
     *,
     ltr_model_path: str | Path | None = None,
+    actionformer_model_path: str | Path | None = None,
 ) -> AgentState:
     """Restore analysis state and reject stale transcript/checkpoint combinations."""
 
@@ -108,8 +114,20 @@ def load_analysis_snapshot(
     if transcript_hash != payload.get("transcript_sha256"):
         raise ValueError("transcript changed after the LTR analysis snapshot was created")
 
-    checkpoint_path = str(ltr_model_path or payload.get("ltr_model_path") or "")
-    checkpoint_info = AdditiveAttentionScorer.preflight(checkpoint_path)
+    scorer_type = payload.get("scorer_type", "legacy-ltr")
+    if scorer_type == "actionformer-ltr":
+        checkpoint_path = str(
+            actionformer_model_path or payload.get("actionformer_model_path") or ""
+        )
+        checkpoint_info = actionformer_checkpoint_info(checkpoint_path)
+        checkpoint_info["device"] = (
+            "cuda" if torch.cuda.is_available() and torch.cuda.device_count() > 0 else "cpu"
+        )
+    elif scorer_type == "legacy-ltr":
+        checkpoint_path = str(ltr_model_path or payload.get("ltr_model_path") or "")
+        checkpoint_info = AdditiveAttentionScorer.preflight(checkpoint_path)
+    else:
+        raise ValueError(f"unsupported scorer_type in snapshot: {scorer_type!r}")
     expected_fingerprint = payload.get("ltr_checkpoint_info", {}).get("fingerprint")
     if checkpoint_info.get("fingerprint") != expected_fingerprint:
         raise ValueError(
@@ -130,7 +148,11 @@ def load_analysis_snapshot(
             HighlightCandidate.model_validate(item) for item in payload.get("candidates", [])
         ],
         "ltr_checkpoint_info": checkpoint_info,
-        "ltr_model_path": checkpoint_path,
+        "ltr_model_path": checkpoint_path if scorer_type == "legacy-ltr" else None,
+        "scorer_type": scorer_type,
+        "actionformer_model_path": (
+            checkpoint_path if scorer_type == "actionformer-ltr" else None
+        ),
         "highlight_count": payload.get("highlight_count", 3),
         "burn_subtitles": payload.get("burn_subtitles", False),
         "analysis_snapshot_path": str(path),

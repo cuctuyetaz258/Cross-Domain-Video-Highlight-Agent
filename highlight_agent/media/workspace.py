@@ -10,7 +10,15 @@ from highlight_agent.schemas import MediaWorkspace
 
 from .errors import InvalidVideoInputError
 
-YOUTUBE_HOSTS = {"youtube.com", "www.youtube.com", "m.youtube.com", "youtu.be"}
+YOUTUBE_HOSTS = {
+    "youtube.com",
+    "www.youtube.com",
+    "m.youtube.com",
+    "music.youtube.com",
+    "youtube-nocookie.com",
+    "www.youtube-nocookie.com",
+    "youtu.be",
+}
 YOUTUBE_ID_PATTERN = re.compile(r"^[A-Za-z0-9_-]{11}$")
 SUPPORTED_VIDEO_EXTENSIONS = {".mp4", ".mov", ".mkv", ".webm", ".m4v"}
 
@@ -30,7 +38,7 @@ def extract_youtube_id(url: str) -> str:
     parsed = urlparse(url)
     if parsed.hostname == "youtu.be":
         candidate = parsed.path.strip("/").split("/")[0]
-    elif parsed.path == "/watch":
+    elif parsed.path.rstrip("/") == "/watch":
         candidate = parse_qs(parsed.query).get("v", [""])[0]
     else:
         parts = [part for part in parsed.path.split("/") if part]
@@ -39,6 +47,12 @@ def extract_youtube_id(url: str) -> str:
     if not YOUTUBE_ID_PATTERN.fullmatch(candidate):
         raise InvalidVideoInputError("YouTube URL does not contain a valid 11-character video ID")
     return candidate
+
+
+def canonicalize_youtube_url(url: str) -> str:
+    """Return one playlist-free watch URL suitable for passing to yt-dlp."""
+
+    return f"https://www.youtube.com/watch?v={extract_youtube_id(url)}"
 
 
 def local_video_id(path: Path) -> str:

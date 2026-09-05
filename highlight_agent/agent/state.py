@@ -84,6 +84,8 @@ class AgentState(TypedDict, total=False):
 
     # ── Required LTR scorer ──
     ltr_model_path: NotRequired[str | None]
+    scorer_type: NotRequired[Literal["legacy-ltr", "actionformer-ltr"]]
+    actionformer_model_path: NotRequired[str | None]
 
     # ── Progress callback ──
     emit: NotRequired[EmitFn]

@@ -200,8 +200,14 @@ def write_training_curves_svg(
         "Total loss": _numeric_series(history, "train_total_loss"),
         "Margin loss": _numeric_series(history, "train_margin_loss"),
         "Smooth loss": _numeric_series(history, "train_smooth_loss"),
+        "Focal loss": _numeric_series(history, "train_focal_loss"),
+        "Regression loss": _numeric_series(history, "train_regression_loss"),
     }
-    ap_series = {"Selection AP": _numeric_series(history, "selection_ap")}
+    ap_series = {
+        "Selection AP": _numeric_series(history, "selection_ap"),
+        "Selection score": _numeric_series(history, "selection_score"),
+        "Val Recall@3": _numeric_series(history, "val_recall_at_3_iou_0_3"),
+    }
     ap_series.update(_group_series(history, "ap_by_domain", "Domain"))
     ap_series.update(_group_series(history, "ap_by_source", "Source"))
     lr_series = {"Learning rate": _numeric_series(history, "learning_rate")}

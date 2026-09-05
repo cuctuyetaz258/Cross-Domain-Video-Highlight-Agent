@@ -1,6 +1,7 @@
 """Chuẩn hóa YouTube và file local về cùng MediaWorkspace"""
 
 import os
+import shutil
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Literal
@@ -19,7 +20,7 @@ from highlight_agent.schemas import Chapter, MediaWorkspace, TranscriptDocument
 from .audio import extract_audio_16k_mono, probe_duration
 from .errors import MediaProcessingError
 from .transcript import parse_youtube_json3, save_transcript, transcribe_with_whisper
-from .workspace import create_workspace
+from .workspace import canonicalize_youtube_url, create_workspace
 
 
 @dataclass(frozen=True)
@@ -44,18 +45,34 @@ def _preferred_english_track(info: dict[str, Any]) -> tuple[str, str] | None:
 
 def _youtube_options(workspace_dir: Path, cookies_browser: str | None) -> dict[str, Any]:
     options: dict[str, Any] = {
-        "format": (
-            "bestvideo[height<=720][ext=mp4]+bestaudio[ext=m4a]/"
-            "best[height<=720][ext=mp4]/bestvideo[height<=720]+bestaudio/best[height<=720]"
-        ),
+        # Do not require MP4/M4A inputs. YouTube may expose only WebM, HLS, or
+        # combined formats for a given player client; ffmpeg can still merge or
+        # remux the selected streams to the requested MP4 output.
+        "format": "bv*[height<=720]+ba/b[height<=720]/b",
+        # Prefer broadly decodable codecs for OpenCV and rendered MP4 output,
+        # while retaining the generic selector as a last-resort fallback.
+        "format_sort": ["res:720", "vcodec:h264", "acodec:aac"],
         "outtmpl": str(workspace_dir / "source_video.%(ext)s"),
         "merge_output_format": "mp4",
         "noplaylist": True,
+        "retries": 3,
+        "fragment_retries": 3,
         "quiet": True,
         "no_warnings": False,
     }
+    for runtime, executable_name in (("deno", "deno"), ("node", "node"), ("quickjs", "qjs")):
+        executable = shutil.which(executable_name)
+        if executable:
+            options["js_runtimes"] = {runtime: {"path": executable}}
+            break
     if cookies_browser:
         options["cookiesfrombrowser"] = (cookies_browser,)
+        # Logged-in extraction currently defaults to a YouTube client that can
+        # return "The page needs to be reloaded". Keep the normal clients and
+        # add web_embedded as the documented compatibility fallback.
+        options["extractor_args"] = {
+            "youtube": {"player_client": ["default", "web_embedded"]}
+        }
     return options
 
 
@@ -102,11 +119,13 @@ def download_youtube_media(
     if yt_dlp is None:
         raise MediaProcessingError("yt-dlp is not installed")
     workspace_path = Path(workspace_dir)
+    workspace_path.mkdir(parents=True, exist_ok=True)
+    canonical_url = canonicalize_youtube_url(url)
     options = _youtube_options(workspace_path, cookies_browser)
 
     try:
         with yt_dlp.YoutubeDL({**options, "skip_download": True}) as ydl:
-            initial_info = ydl.extract_info(url, download=False)
+            initial_info = ydl.extract_info(canonical_url, download=False)
 
         track = _preferred_english_track(initial_info) if download_captions else None
         download_options = dict(options)
@@ -122,9 +141,20 @@ def download_youtube_media(
             )
 
         with yt_dlp.YoutubeDL(download_options) as ydl:
-            info = ydl.extract_info(url, download=True)
+            info = ydl.extract_info(canonical_url, download=True)
     except yt_dlp.utils.DownloadError as exc:
-        raise MediaProcessingError(f"YouTube download failed: {exc}") from exc
+        message = str(exc)
+        if "not installed" in message.lower():
+            hint = "Install project dependencies so the yt-dlp package is available."
+        elif "sign in" in message.lower() or "not a bot" in message.lower():
+            hint = "Update yt-dlp, then configure YTDLP_COOKIES_BROWSER with a closed, logged-in browser."
+        elif "page needs to be reloaded" in message.lower():
+            hint = "Update yt-dlp; the project already enables the web_embedded client fallback when cookies are used."
+        elif "requested format" in message.lower() or "no video formats" in message.lower():
+            hint = "Update yt-dlp and verify that ffmpeg is installed; YouTube did not expose a compatible media format."
+        else:
+            hint = "Update yt-dlp and retry; use browser cookies only when YouTube requires authentication."
+        raise MediaProcessingError(f"YouTube download failed: {message}. {hint}") from exc
 
     duration = float(info.get("duration") or initial_info.get("duration") or 0)
     video_path = _find_downloaded_video(workspace_path)

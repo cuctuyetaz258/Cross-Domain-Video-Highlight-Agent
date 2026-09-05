@@ -1,9 +1,72 @@
 import json
 from pathlib import Path
+from types import SimpleNamespace
 
 from highlight_agent.media import ingest
 from highlight_agent.media.ingest import YoutubeMedia
 from highlight_agent.schemas import TranscriptDocument, TranscriptSegment
+
+
+def test_youtube_options_allow_non_mp4_sources_and_configure_cookie_client(tmp_path: Path) -> None:
+    options = ingest._youtube_options(tmp_path, "chrome")
+
+    assert "[ext=mp4]" not in options["format"]
+    assert options["format_sort"] == ["res:720", "vcodec:h264", "acodec:aac"]
+    assert options["cookiesfrombrowser"] == ("chrome",)
+    assert options["extractor_args"]["youtube"]["player_client"] == ["default", "web_embedded"]
+
+
+def test_youtube_options_enable_an_available_javascript_runtime(tmp_path: Path, monkeypatch) -> None:
+    monkeypatch.setattr(
+        ingest.shutil,
+        "which",
+        lambda name: "C:/tools/node.exe" if name == "node" else None,
+    )
+
+    options = ingest._youtube_options(tmp_path, None)
+
+    assert options["js_runtimes"] == {"node": {"path": "C:/tools/node.exe"}}
+
+
+def test_download_canonicalizes_shared_youtube_url(tmp_path: Path, monkeypatch) -> None:
+    extracted_urls: list[str] = []
+
+    class FakeYoutubeDL:
+        def __init__(self, options):
+            self.options = options
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, exc_type, exc, traceback):
+            return False
+
+        def extract_info(self, url, *, download):
+            extracted_urls.append(url)
+            if download:
+                (tmp_path / "source_video.mp4").write_bytes(b"fixture")
+            return {"duration": 60, "chapters": []}
+
+    monkeypatch.setattr(
+        ingest,
+        "yt_dlp",
+        SimpleNamespace(
+            YoutubeDL=FakeYoutubeDL,
+            utils=SimpleNamespace(DownloadError=RuntimeError),
+        ),
+    )
+
+    media = ingest.download_youtube_media(
+        "https://youtu.be/jbL9kl4KPZI?si=tracking&list=playlist",
+        tmp_path,
+        download_captions=False,
+    )
+
+    assert extracted_urls == [
+        "https://www.youtube.com/watch?v=jbL9kl4KPZI",
+        "https://www.youtube.com/watch?v=jbL9kl4KPZI",
+    ]
+    assert media.video_path == tmp_path / "source_video.mp4"
 
 
 def test_youtube_caption_is_used_before_whisper(tmp_path: Path, monkeypatch) -> None:

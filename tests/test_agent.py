@@ -43,6 +43,18 @@ def test_plan_rejects_unknown_domain() -> None:
         nodes.plan({"video_path": "video.mp4", "domain": "unknown"})
 
 
+def test_plan_declares_actionformer_ltr_when_selected() -> None:
+    result = nodes.plan(
+        {
+            "video_path": "video.mp4",
+            "domain": "lecture",
+            "scorer_type": "actionformer-ltr",
+        }
+    )
+
+    assert result["analysis_plan"]["scorer"] == "actionformer_ltr"
+
+
 def test_full_graph_runs_preflight_before_media_and_keeps_ltr_mode(
     tmp_path: Path,
     monkeypatch,

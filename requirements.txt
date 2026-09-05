@@ -27,7 +27,9 @@ streamlit-agraph
 
 # Trích xuất đặc trưng & Evaluation
 librosa
-pyannote.audio
+# 4.x requires Torch >=2.8 and protobuf >=5, conflicting with the pinned
+# Torch/MediaPipe stack used by this project.
+pyannote.audio>=3.3,<4
 scikit-learn
 sentence-transformers==3.4.1
 transformers==4.48.3
