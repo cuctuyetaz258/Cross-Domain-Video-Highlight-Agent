@@ -30,6 +30,7 @@ data/raw/
 data/features_cache/
 data/models/
 data/reports/
+data/proposals/
 data/downloads/
 data/checkpoints/
 *.h5

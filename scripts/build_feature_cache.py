@@ -15,6 +15,7 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 import numpy as np  # noqa: E402
+from dotenv import load_dotenv  # noqa: E402
 
 from highlight_agent.backend import load_transcript  # noqa: E402
 from highlight_agent.features.ltr_pipeline import build_ltr_features  # noqa: E402
@@ -184,6 +185,7 @@ def build_manifest_caches(
     project_root: str | Path,
     output_dir: str | Path,
     split: str | None = None,
+    domain: str | None = None,
     limit: int | None = None,
     force: bool = False,
     include_scenes: bool = True,
@@ -192,6 +194,8 @@ def build_manifest_caches(
     refresh_gesture_observation: bool = False,
 ) -> dict[str, Any]:
     records = load_training_manifest(manifest_path, split=split)
+    if domain is not None:
+        records = [record for record in records if record.get("domain") == domain]
     if limit is not None:
         records = records[:limit]
     started = time.perf_counter()
@@ -313,6 +317,7 @@ def _parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--project-root", default=".")
     parser.add_argument("--output-dir", default="data/features_cache")
     parser.add_argument("--split", choices=["train", "val", "test"], default=None)
+    parser.add_argument("--domain", choices=["lecture", "podcast", "standup"], default=None)
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--device", choices=["cpu", "cuda"], default="cpu")
@@ -328,12 +333,14 @@ def _parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 
 
 def main(argv: list[str] | None = None) -> int:
+    load_dotenv()
     args = _parse_args(argv)
     report = build_manifest_caches(
         args.manifest,
         project_root=args.project_root,
         output_dir=args.output_dir,
         split=args.split,
+        domain=args.domain,
         limit=args.limit,
         force=args.force,
         include_scenes=not args.no_scenes,

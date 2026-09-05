@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import logging
 import os
+from dataclasses import replace
 
 import numpy as np
 import torch
@@ -38,7 +39,14 @@ from highlight_agent.llm import (
     apply_validated_boundaries,
     rerank_candidates,
 )
+from highlight_agent.models.actionformer import (
+    actionformer_checkpoint_info,
+    decode_proposals,
+    load_actionformer_checkpoint,
+    soft_nms,
+)
 from highlight_agent.models.ltr_scorer import AdditiveAttentionScorer
+from highlight_agent.models.proposal_ltr import ProposalLTRConfig, build_proposal_ltr
 from highlight_agent.schemas import (
     HighlightCandidate,
     LLMHighlightAssessment,
@@ -67,15 +75,37 @@ def _emit(state: AgentState, node: str, step: str, message: str, **meta) -> None
 def preflight(state: AgentState) -> dict:
     """Validate the required checkpoint before any media download or transcription."""
 
-    _emit(state, "preflight", "start", "Validating required LTR checkpoint...")
-    info = AdditiveAttentionScorer.preflight(state.get("ltr_model_path"))
+    scorer_type = state.get("scorer_type", "legacy-ltr")
+    _emit(state, "preflight", "start", f"Validating required {scorer_type} checkpoint...")
+    if scorer_type == "actionformer-ltr":
+        path = state.get("actionformer_model_path")
+        if not path:
+            raise LTRPipelineError(
+                "ACTIONFORMER_CHECKPOINT_REQUIRED",
+                "provide --actionformer-model-path when scorer-type is actionformer-ltr",
+            )
+        try:
+            info = actionformer_checkpoint_info(path)
+        except Exception as exc:
+            raise LTRPipelineError("ACTIONFORMER_CHECKPOINT_LOAD_FAILED", str(exc)) from exc
+        if not info["has_proposal_ltr"]:
+            raise LTRPipelineError(
+                "ACTIONFORMER_LTR_HEAD_MISSING",
+                "checkpoint contains localization weights but no proposal LTR head",
+            )
+        info["device"] = (
+            "cuda" if torch.cuda.is_available() and torch.cuda.device_count() > 0 else "cpu"
+        )
+    elif scorer_type == "legacy-ltr":
+        info = AdditiveAttentionScorer.preflight(state.get("ltr_model_path"))
+    else:
+        raise ValueError(f"unsupported scorer_type: {scorer_type}")
     _emit(
         state,
         "preflight",
         "done",
         (
-            f"LTR checkpoint valid | device={info['device']} | "
-            f"schema={info['feature_contract']['schema_version']} | "
+            f"{scorer_type} checkpoint valid | device={info['device']} | "
             f"sha256={info['fingerprint'][:12]}"
         ),
         device=info["device"],
@@ -117,8 +147,9 @@ def plan(state: AgentState) -> dict:
     domain = state["domain"]
     if domain not in {"lecture", "podcast", "standup"}:
         raise ValueError(f"unsupported domain: {domain}")
+    scorer_type = state.get("scorer_type", "legacy-ltr")
     analysis_plan = {
-        "scorer": "ltr_required",
+        "scorer": "actionformer_ltr" if scorer_type == "actionformer-ltr" else "ltr_required",
         "scene_extractor": "scenedetect",
         "gesture_extractor": "mediapipe",
         "interaction_extractor": "pyannote" if domain == "podcast" else "zero_channel",
@@ -132,7 +163,7 @@ def plan(state: AgentState) -> dict:
 # ──────────────────────────────────────────────
 
 def analyze(state: AgentState) -> dict:
-    """Run the single required path: unified features -> LTR -> deterministic NMS."""
+    """Run unified features through the selected deterministic scorer."""
 
     _emit(state, "analyze", "start", "Building unified seven-channel LTR features...")
     workspace = state.get("workspace")
@@ -148,7 +179,14 @@ def analyze(state: AgentState) -> dict:
             "video must be at least 30 seconds to render a highlight",
         )
 
-    checkpoint_info = AdditiveAttentionScorer.preflight(state.get("ltr_model_path"))
+    scorer_type = state.get("scorer_type", "legacy-ltr")
+    if scorer_type == "actionformer-ltr":
+        checkpoint_info = actionformer_checkpoint_info(state.get("actionformer_model_path") or "")
+        checkpoint_info["device"] = (
+            "cuda" if torch.cuda.is_available() and torch.cuda.device_count() > 0 else "cpu"
+        )
+    else:
+        checkpoint_info = AdditiveAttentionScorer.preflight(state.get("ltr_model_path"))
     prior_info = state.get("ltr_checkpoint_info")
     if prior_info and prior_info.get("fingerprint") != checkpoint_info["fingerprint"]:
         raise LTRPipelineError(
@@ -203,29 +241,95 @@ def analyze(state: AgentState) -> dict:
         feature_dir / "features.json",
     )
 
+    device = torch.device(checkpoint_info["device"])
     try:
-        device = torch.device(checkpoint_info["device"])
-        windows = extract_windows(
-            bundle.matrix,
-            window_size=LTR_WINDOW_SIZE,
-            hop_size=LTR_HOP_SIZE,
-            device=device,
-        )
-        model, checkpoint_metadata = AdditiveAttentionScorer.load_checkpoint(
-            checkpoint_info["path"],
-            device=device,
-            expected_in_features=7,
-        )
-        with torch.no_grad():
-            window_scores = model(windows).squeeze(-1).cpu().numpy()
-        timeline_score = blend_scores(
-            window_scores,
-            T=bundle.matrix.shape[1],
-            window_size=LTR_WINDOW_SIZE,
-            hop_size=LTR_HOP_SIZE,
-        )
-        if not np.isfinite(timeline_score).all():
-            raise LTRPipelineError("LTR_SCORE_NON_FINITE", "model produced NaN or Inf scores")
+        if scorer_type == "actionformer-ltr":
+            model, checkpoint_metadata, proposal_state = load_actionformer_checkpoint(
+                checkpoint_info["path"],
+                device=device,
+            )
+            if proposal_state is None:
+                raise LTRPipelineError(
+                    "ACTIONFORMER_LTR_HEAD_MISSING",
+                    "checkpoint does not contain proposal LTR weights",
+                )
+            feature_tensor = torch.as_tensor(
+                bundle.matrix,
+                dtype=torch.float32,
+                device=device,
+            ).unsqueeze(0)
+            with torch.no_grad():
+                outputs = model(feature_tensor)
+                proposals = decode_proposals(
+                    outputs,
+                    model.config,
+                    video_durations=[transcript.duration],
+                )
+                scorer_payload = checkpoint_metadata.get("proposal_ltr_config")
+                scorer_config = (
+                    ProposalLTRConfig.from_dict(scorer_payload)
+                    if isinstance(scorer_payload, dict)
+                    else ProposalLTRConfig(architecture="mlp", d_model=128, dropout=0.1)
+                )
+                proposal_ltr = build_proposal_ltr(model.config.d_model, scorer_config).to(device)
+                proposal_ltr.load_state_dict(proposal_state)
+                proposal_ltr.eval()
+                raw_scores, provenance = proposal_ltr(
+                    outputs["features"][0],
+                    [proposals],
+                    stride_seconds=model.config.base_stride_seconds,
+                )
+            rank_probabilities = torch.sigmoid(raw_scores).tolist()
+            for score, (_, proposal_index) in zip(rank_probabilities, provenance):
+                proposals[proposal_index] = replace(proposals[proposal_index], rank_score=float(score))
+            ranked_proposals = soft_nms(proposals, top_k=12)
+            if ranked_proposals:
+                raw = np.asarray([item.score for item in ranked_proposals], dtype=np.float32)
+                score_min, score_max = float(raw.min()), float(raw.max())
+                normalized = (raw - score_min) / (score_max - score_min) if score_max > score_min else np.ones_like(raw)
+            else:
+                normalized = np.asarray([], dtype=np.float32)
+            candidates = [
+                HighlightCandidate(
+                    candidate_id=f"actionformer_{index + 1:02d}",
+                    start_time=round(proposal.start, 3),
+                    end_time=round(proposal.end, 3),
+                    score=float(normalized[index]),
+                    reason=(
+                        f"ActionFormer proposal level={proposal.level}, "
+                        f"confidence={proposal.confidence:.4f}, ltr={proposal.score:.4f}"
+                    ),
+                    signals={
+                        "actionformer_confidence": proposal.confidence,
+                        "ltr_score_raw": proposal.score,
+                        "proposal_duration": proposal.duration,
+                        "pyramid_level": float(proposal.level),
+                    },
+                )
+                for index, proposal in enumerate(ranked_proposals)
+            ]
+        else:
+            windows = extract_windows(
+                bundle.matrix,
+                window_size=LTR_WINDOW_SIZE,
+                hop_size=LTR_HOP_SIZE,
+                device=device,
+            )
+            model, checkpoint_metadata = AdditiveAttentionScorer.load_checkpoint(
+                checkpoint_info["path"],
+                device=device,
+                expected_in_features=7,
+            )
+            with torch.no_grad():
+                window_scores = model(windows).squeeze(-1).cpu().numpy()
+            timeline_score = blend_scores(
+                window_scores,
+                T=bundle.matrix.shape[1],
+                window_size=LTR_WINDOW_SIZE,
+                hop_size=LTR_HOP_SIZE,
+            )
+            if not np.isfinite(timeline_score).all():
+                raise LTRPipelineError("LTR_SCORE_NON_FINITE", "model produced NaN or Inf scores")
     except LTRPipelineError:
         raise
     except Exception as exc:
@@ -237,18 +341,21 @@ def analyze(state: AgentState) -> dict:
     if requested_pool is None:
         requested_pool = state.get("llm_top_m", 10) if llm_enabled else highlight_count
     pool_size = max(highlight_count, min(12, requested_pool))
-    candidates = extract_topk_nms(
-        timeline_score,
-        k=pool_size,
-        reference_duration=float(checkpoint_metadata["L_ref"]),
-    )
+    if scorer_type == "legacy-ltr":
+        candidates = extract_topk_nms(
+            timeline_score,
+            k=pool_size,
+            reference_duration=float(checkpoint_metadata["L_ref"]),
+        )
+    else:
+        candidates = candidates[:pool_size]
     if len(candidates) < highlight_count:
         raise LTRPipelineError(
             "LTR_NOT_ENOUGH_CANDIDATES",
             f"deterministic NMS produced {len(candidates)} candidates; need {highlight_count}",
         )
 
-    mode = "ltr_required"
+    mode = "actionformer_ltr" if scorer_type == "actionformer-ltr" else "ltr_required"
     features = {
         "mode": mode,
         "candidate_count": len(candidates),

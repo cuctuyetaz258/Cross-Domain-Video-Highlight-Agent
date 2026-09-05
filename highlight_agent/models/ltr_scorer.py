@@ -117,7 +117,12 @@ class AdditiveAttentionScorer(nn.Module):
                 f"checkpoint does not exist: {checkpoint_path}",
             )
         target_device = torch.device(
-            device or ("cuda" if torch.cuda.is_available() else "cpu")
+            device
+            or (
+                "cuda"
+                if torch.cuda.is_available() and torch.cuda.device_count() > 0
+                else "cpu"
+            )
         )
         try:
             checkpoint = torch.load(

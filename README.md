@@ -1,6 +1,6 @@
 # Cross-Domain Video Highlight Agent
 
-An end-to-end system that ranks, refines, and renders short highlights from long-form lecture and podcast videos. It combines seven interpretable audio, text, visual, and interaction signals with a lightweight Learning-to-Rank (LTR) scorer.
+An end-to-end system that ranks, refines, and renders short highlights from long-form lecture and podcast videos. It combines seven interpretable audio, text, visual, and interaction signals with a lightweight Learning-to-Rank (LTR) scorer. An experimental ActionFormer-LTR path adds variable 30–90 second temporal proposals while the legacy LTR path remains the default.
 
 The project is an editor-assistance workflow: it proposes ranked candidates and rendered clips, while people retain the final editorial decision.
 
@@ -94,6 +94,69 @@ Use `--domain podcast` for conversational videos. If the speaker count is known,
 
 Generated media, feature caches, and run metadata are written below `output/` and intentionally excluded from Git.
 
+### Experimental ActionFormer-LTR
+
+The current shared OOF proposal cache does not isolate all upstream training from each outer test fold, and LTR validation nDCG includes ground-truth candidates. Recorded CV results are exploratory until nested OOF and predicted-only validation are implemented. The legacy scorer remains the runtime default.
+
+Audit the 18-video annotation set and rebuild the five video-disjoint manifests:
+
+```bash
+python -m scripts.prepare_actionformer_data
+```
+
+Prepare missing YouTube media with a resumable per-video report, then build caches by domain:
+
+```bash
+python -m scripts.prepare_actionformer_media
+python -m scripts.build_feature_cache \
+  --manifest data/manifests/actionformer_fold0.jsonl \
+  --domain lecture \
+  --report data/reports/actionformer_lecture_cache_build.json
+```
+
+Podcast caches require `pyannote.audio>=3.3,<4`, a Hugging Face token (via `HF_TOKEN`
+or `hf auth login`), and accepted access to both
+`pyannote/speaker-diarization-3.1` and `pyannote/segmentation-3.0`. The legacy 3.1
+pipeline is intentional: Community-1 requires Pyannote 4 and a newer Torch stack
+that conflicts with the project's pinned MediaPipe runtime.
+
+Train localization, then the proposal-level LTR head. JSON is updated after every epoch; CSV history and SVG curves are written beside it.
+
+```bash
+python -m scripts.train_actionformer_ltr \
+  --manifest data/manifests/actionformer_fold0.jsonl \
+  --stage localization \
+  --output data/models/actionformer_fold0_localization.pt \
+  --last-output data/models/actionformer_fold0_localization_last.pt \
+  --log data/reports/actionformer_fold0/localization_log.json \
+  --history-csv data/reports/actionformer_fold0/localization_history.csv \
+  --curves data/reports/actionformer_fold0/localization_curves.svg
+
+python -m scripts.train_actionformer_ltr \
+  --manifest data/manifests/actionformer_fold0.jsonl \
+  --stage ltr \
+  --init-checkpoint data/models/actionformer_fold0_localization.pt \
+  --output data/models/actionformer_fold0_ltr.pt \
+  --log data/reports/actionformer_fold0/proposal_ltr_log.json
+```
+
+Evaluate the combined checkpoint and opt into it at runtime:
+
+```bash
+python -m evaluation.evaluate_actionformer_ltr \
+  --checkpoint data/models/actionformer_fold0_ltr.pt \
+  --manifest data/manifests/actionformer_fold0.jsonl \
+  --split test \
+  --output data/reports/actionformer_fold0/evaluation_test_log.json
+
+python -m scripts.run_agent "https://www.youtube.com/watch?v=VIDEO_ID" \
+  --domain lecture \
+  --scorer-type actionformer-ltr \
+  --actionformer-model-path data/models/actionformer_fold0_ltr.pt
+```
+
+Models and raw training reports under `data/models/` and `data/reports/` are local artifacts excluded from Git. Do not promote an experimental checkpoint until the five-fold acceptance criteria are met.
+
 ## Model And Evaluation
 
 The operational scorer is a compact `7 -> 32 -> 1` MLP. Each five-second window is mean-pooled from the 10 Hz feature timeline before scoring; the current model does not use temporal attention inside a window.
@@ -121,6 +184,8 @@ This is an in-domain pilot, not evidence of generalization. The sample is small,
 - [In-domain LTR 5-fold report](docs/in_domain_ltr_5fold_report.md): evaluation protocol, results, artifact hashes, and limitations.
 - [Training handover guide](TRAINING_HANDOVER_GUIDE.md): feature-cache reuse, cross-validation, release training, and artifact handling.
 - [Training plan](TRAINING_PLAN.md): data policy, LTR/LLM roadmap, evaluation, and ablation plan.
+- [ActionFormer-LTR integration plan](ACTIONFORMER_LTR_INTEGRATION_PLAN.md): architecture, rollout, tests, and acceptance criteria.
+- [ActionFormer-LTR implementation report](ACTIONFORMER_IMPLEMENTATION_REPORT.md): implemented scope, smoke/full-fold-partial logs, and current blockers.
 - [Sample videos](docs/sample_videos.md): lecture, podcast, and stand-up source inventory.
 - [Docker advanced setup](docs/docker.md): backend-oriented container workflow.
 
@@ -129,8 +194,10 @@ This is an in-domain pilot, not evidence of generalization. The sample is small,
 | Symptom | Recommended action |
 | --- | --- |
 | `LTR_CHECKPOINT_SCHEMA_MISMATCH` | Reinstall the shared model with `python -m scripts.download_ltr_checkpoint --force`. |
-| Podcast diarization cannot start | Set `HF_TOKEN` in `.env` and accept the Pyannote model terms. |
-| YouTube returns HTTP 403 | Update `yt-dlp`; if required, set `YTDLP_COOKIES_BROWSER=chrome` and use a logged-in local Chrome profile. |
+| Podcast diarization cannot start | Set `HF_TOKEN` in `.env` or run `hf auth login`, then accept both Pyannote 3.1 model terms. |
+| `yt-dlp is not installed` | Activate `.venv`, then run `python -m pip install -U "yt-dlp[default]"`. |
+| YouTube returns HTTP 403 or asks to sign in | Update `yt-dlp`; if required, set `YTDLP_COOKIES_BROWSER=chrome`, close Chrome so its cookie database is unlocked, and retry. |
+| YouTube warns that no JavaScript runtime is available | Install Deno 2.3+ and ensure `deno` is on `PATH`; current YouTube extraction may expose fewer formats without it. |
 | Streamlit keeps rerunning | Stop duplicate Streamlit processes and launch one instance with `--server.fileWatcherType none`. |
 
 ## Quality Checks

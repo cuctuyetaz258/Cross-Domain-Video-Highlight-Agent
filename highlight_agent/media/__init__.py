@@ -16,7 +16,7 @@ from .render import (
     write_highlight_srt,
 )
 from .transcript import parse_youtube_json3, save_transcript, transcribe_with_whisper
-from .workspace import create_workspace, extract_youtube_id, is_youtube_url
+from .workspace import canonicalize_youtube_url, create_workspace, extract_youtube_id, is_youtube_url
 
 __all__ = [
     "DEFAULT_ASPECT_RATIO",
@@ -25,6 +25,7 @@ __all__ = [
     "InvalidVideoInputError",
     "MediaProcessingError",
     "VideoFormatSpec",
+    "canonicalize_youtube_url",
     "create_workspace",
     "download_youtube_media",
     "extract_audio_16k_mono",
