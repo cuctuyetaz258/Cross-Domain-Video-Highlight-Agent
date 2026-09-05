@@ -4,7 +4,11 @@ from __future__ import annotations
 
 from typing import Any
 
-from highlight_agent.ltr_contract import LTR_CHANNEL_ORDER, LTR_FEATURE_SCHEMA_VERSION
+from highlight_agent.ltr_contract import (
+    LTR_CHANNEL_ORDER,
+    LTR_FEATURE_SCHEMA_VERSION,
+    LTRPipelineError,
+)
 
 LTR_CHECKPOINT_VERSION = "1.0"
 LTR_SAMPLE_RATE = 10
@@ -13,15 +17,6 @@ LTR_WINDOW_SIZE = 50
 LTR_HOP_SIZE = 10
 LTR_OUTPUT_CLIP_SECONDS = 30.0
 LTR_EXTRACTOR_VERSION = "1.1"
-
-
-class LTRPipelineError(RuntimeError):
-    """A structured, user-actionable failure in the required LTR path."""
-
-    def __init__(self, code: str, message: str):
-        self.code = code
-        self.message = message
-        super().__init__(f"{code}: {message}")
 
 
 def feature_contract() -> dict[str, Any]:

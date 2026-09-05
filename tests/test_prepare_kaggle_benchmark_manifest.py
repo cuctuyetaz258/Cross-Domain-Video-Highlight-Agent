@@ -29,7 +29,7 @@ def test_adapt_records_resolves_media_and_keeps_labels(tmp_path: Path) -> None:
 
     assert adapted[0]["frame_scores"] == [1.0, 2.0]
     assert adapted[0]["video_path"].endswith("Base_jumping.mp4")
-    assert adapted[0]["audio_path"].endswith("derived/summe/Base jumping/audio.wav")
+    assert Path(adapted[0]["audio_path"]) == tmp_path / "derived" / "summe" / "Base jumping" / "audio.wav"
 
 
 def test_adapt_records_rejects_missing_media(tmp_path: Path) -> None:
