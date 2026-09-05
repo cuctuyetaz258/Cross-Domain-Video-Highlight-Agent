@@ -7,6 +7,7 @@ to /kaggle/working and archived on a successful run.
 
 from __future__ import annotations
 
+import json
 import os
 import shutil
 import subprocess
@@ -16,7 +17,7 @@ from pathlib import Path
 INPUT_ROOT = Path("/kaggle/input")
 WORKING = Path("/kaggle/working/v2_pretrain_project")
 EXTRACTED_INPUT_ROOT = Path("/kaggle/working/v2_pretrain_input_archives")
-RUN_MODE = "materialize"  # validate | materialize | train
+RUN_MODE = "smoke"  # smoke | validate | materialize | train
 
 
 def run(*args: str) -> None:
@@ -128,12 +129,12 @@ def copy_benchmark_media_into_project() -> Path:
     return destination
 
 
-def prepare_media(include_transcription: bool) -> None:
+def prepare_media(include_transcription: bool, *, source_manifest: str = "data/manifests/tvsum_summe.jsonl") -> None:
     args = [
         "python",
         "scripts/prepare_kaggle_benchmark_manifest.py",
         "--source-manifest",
-        "data/manifests/tvsum_summe.jsonl",
+        source_manifest,
         "--media-root", "data/raw/kaggle_benchmark/media",
         "--project-root", ".",
         "--derived-root",
@@ -144,6 +145,18 @@ def prepare_media(include_transcription: bool) -> None:
     if include_transcription:
         args.append("--prepare-media")
     run(*args)
+
+
+def write_smoke_manifest() -> str:
+    """Select one real benchmark record for an end-to-end dependency smoke test."""
+
+    source = WORKING / "data/manifests/tvsum_summe.jsonl"
+    records = [json.loads(line) for line in source.read_text(encoding="utf-8").splitlines() if line.strip()]
+    # A non-silent clip exercises audio, Whisper, visual, and label paths.
+    record = next(record for record in records if record["video_id"] == "Car_railcrossing")
+    destination = WORKING / "data/manifests/tvsum_summe_smoke.jsonl"
+    destination.write_text(json.dumps(record, sort_keys=True) + "\n", encoding="utf-8")
+    return "data/manifests/tvsum_summe_smoke.jsonl"
 
 
 def archive_cache_artifacts() -> None:
@@ -171,7 +184,25 @@ if WORKING.exists():
 WORKING.mkdir(parents=True)
 copy_project_input()
 
-if RUN_MODE == "validate":
+if RUN_MODE == "smoke":
+    load_optional_hf_token()
+    install_materialization_dependencies()
+    verify_materialization_dependencies()
+    copy_benchmark_media_into_project()
+    smoke_manifest = write_smoke_manifest()
+    prepare_media(include_transcription=True, source_manifest=smoke_manifest)
+    run(
+        "python", "scripts/build_feature_cache.py",
+        "--manifest", "data/manifests/tvsum_summe_kaggle.jsonl",
+        "--project-root", ".", "--output-dir", "data/features_cache", "--device", "cuda",
+        "--report", "data/reports/tcn_ltr_tvsum_summe_smoke_report.json",
+    )
+    run(
+        "python", "scripts/validate_ltr_cache_manifest.py",
+        "--manifest", "data/manifests/tvsum_summe_kaggle.jsonl", "--cache-dir", "data/features_cache", "--split", "train",
+    )
+    print("Full one-video smoke test passed. Set RUN_MODE='materialize' for all 75 videos.")
+elif RUN_MODE == "validate":
     prepare_media(include_transcription=False)
     print("Benchmark media mapping passed. Set RUN_MODE='materialize' for derived artifacts.")
 elif RUN_MODE == "materialize":

@@ -8,13 +8,15 @@ without changing it. Its authoritative labels and splits remain in the private
 push. Verify the assigned accelerator in the Kaggle run details; the backend
 can still reject the request when that quota is unavailable.
 
-Run three published versions, not one long job:
+Run four published versions, not one long job:
 
-1. `RUN_MODE = "validate"`: confirm all 75 manifest IDs map to public media.
-2. `RUN_MODE = "materialize"`: extract audio, make Whisper transcripts, build
+1. `RUN_MODE = "smoke"`: run one non-silent video through media preparation,
+   all seven feature channels, and schema validation. This must pass first.
+2. `RUN_MODE = "validate"`: confirm all 75 manifest IDs map to public media.
+3. `RUN_MODE = "materialize"`: extract audio, make Whisper transcripts, build
    schema-1.1 caches, and download the successful output archive. Publish that
    archive as private dataset `video-highlight-v2-pretrain-cache`.
-3. Attach the cache Dataset, set `RUN_MODE = "train"`, and save the output
+4. Attach the cache Dataset, set `RUN_MODE = "train"`, and save the output
    archive. Publish the resulting checkpoint as private dataset
    `video-highlight-v2-pretrain` before attaching it to `kaggle/v2` folds.
 
