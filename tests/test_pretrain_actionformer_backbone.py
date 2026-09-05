@@ -75,3 +75,20 @@ def test_resume_restores_optimizer_and_head_state(tmp_path) -> None:
     )
     assert (start, best, stale) == (3, 0.3, 1)
     assert all(torch.equal(a, b) for a, b in zip(head.parameters(), restored_head.parameters()))
+
+
+def test_level_zero_importance_head_receives_a_tensor() -> None:
+    runner = _module()
+    config = ActionFormerConfig(
+        d_model=8,
+        num_heads=2,
+        attention_window=8,
+        pyramid_levels=2,
+        regression_ranges_seconds=((0.0, 45.0), (30.0, float("inf"))),
+    )
+    model = ActionFormerHighlightModel(config)
+    head = torch.nn.Conv1d(config.d_model, 1, 1)
+    features = torch.rand(1, 7, 20)
+    prediction = head(model.backbone(features)[0][0])
+    loss, _ = runner._loss(prediction, torch.rand(1, 1, 4))
+    loss.backward()

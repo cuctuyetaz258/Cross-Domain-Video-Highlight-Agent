@@ -137,7 +137,7 @@ def _evaluate(
     with torch.no_grad():
         for row in rows:
             features, labels = _example(row, cache_dir, ranges, config, device)
-            prediction = head(model.backbone(features)[0])
+            prediction = head(model.backbone(features)[0][0])
             loss, metrics = _loss(prediction, labels)
             values.append({"loss": float(loss.cpu()), **metrics, "ndcg_at_10": _ndcg(prediction, labels)})
     return {key: float(np.mean([row[key] for row in values])) for key in values[0]}
@@ -271,7 +271,7 @@ def main() -> int:
             for row in random.Random(args.seed + epoch).sample(train, len(train)):
                 features, labels = _example(row, cache_dir, ranges, config, device)
                 optimizer.zero_grad()
-                prediction = head(model.backbone(features)[0])
+                prediction = head(model.backbone(features)[0][0])
                 loss, metrics = _loss(prediction, labels)
                 loss.backward()
                 torch.nn.utils.clip_grad_norm_(list(model.backbone.parameters()) + list(head.parameters()), 1.0)
