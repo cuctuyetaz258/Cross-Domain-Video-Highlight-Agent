@@ -33,6 +33,7 @@ data/reports/
 data/proposals/
 data/downloads/
 data/checkpoints/
+runs/
 *.h5
 *.tar
 *.zip
