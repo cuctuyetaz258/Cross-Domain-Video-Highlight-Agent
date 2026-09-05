@@ -33,7 +33,7 @@ def test_load_oof_proposal_cache_round_trip(tmp_path) -> None:
         encoding="utf-8",
     )
 
-    proposals, metadata = load_oof_proposal_cache(path)
+    proposals, metadata = load_oof_proposal_cache(path, allow_legacy_diagnostics=True)
 
     assert proposals == {"video": [TemporalProposal(1.0, 31.0, 0.75, 1, 4)]}
     assert metadata["fold_count"] == 1
@@ -54,7 +54,7 @@ def test_load_oof_proposal_cache_rejects_incomplete_file(tmp_path) -> None:
     )
 
     try:
-        load_oof_proposal_cache(path)
+        load_oof_proposal_cache(path, allow_legacy_diagnostics=True)
     except ValueError as error:
         assert "incomplete" in str(error)
     else:

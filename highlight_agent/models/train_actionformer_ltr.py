@@ -22,6 +22,11 @@ from highlight_agent.models.proposal_ltr import (
     pairwise_proposal_loss,
 )
 from highlight_agent.models.proposal_ltr_losses import ranknet_proposal_loss
+from highlight_agent.models.proposal_protocol import (
+    NESTED_OOF_VERSION,
+    assert_lineage_allowed,
+    example_digest,
+)
 from highlight_agent.models.training_artifacts import (
     write_training_curves_svg,
     write_training_history_csv,
@@ -220,9 +225,17 @@ def train_actionformer_localization(
     seed: int = 42,
     device: str | None = None,
     run_name: str = "actionformer_localization",
+    fixed_epochs: bool = False,
+    ancestor_lineage: list[dict[str, Any]] | None = None,
 ) -> tuple[ActionFormerHighlightModel, dict[str, Any]]:
-    if not train_examples or not val_examples:
-        raise ValueError("training and validation each require at least one ready video")
+    if not train_examples or (not val_examples and not fixed_epochs):
+        raise ValueError("training requires data and validation unless fixed_epochs is enabled")
+    train_ids = {item.video_id for item in train_examples}
+    val_ids = {item.video_id for item in val_examples}
+    if len(train_ids) != len(train_examples) or len(val_ids) != len(val_examples) or train_ids & val_ids:
+        raise ValueError("localization splits must contain unique, disjoint videos")
+    if fixed_epochs and val_examples:
+        raise ValueError("fixed-epoch refit must not use validation data")
     if max_epochs <= 0 or patience <= 0:
         raise ValueError("max_epochs and patience must be positive")
     random.seed(seed)
@@ -259,6 +272,13 @@ def train_actionformer_localization(
         "run_name": run_name,
         "device": target_device.type,
         "seed": seed,
+        "data_lineage": {
+            "train_video_ids": sorted(train_ids),
+            "selection_video_ids": sorted(val_ids),
+            "ancestors": ancestor_lineage or [],
+        },
+        "content_fingerprints": {item.video_id: example_digest(item) for item in train_examples + val_examples},
+        "epoch_policy": "fixed_inner_selected_budget" if fixed_epochs else "validation_early_stopping",
     }
 
     for epoch in range(1, max_epochs + 1):
@@ -289,7 +309,7 @@ def train_actionformer_localization(
             device=target_device,
             lambda_reg=lambda_reg,
             lambda_smooth=lambda_smooth,
-        )
+        ) if val_examples else {"total_loss": None, "recall_at_3_iou_0_3": None, "mean_proposal_count": None}
         scheduler.step()
         epoch_log = {
             "epoch": epoch,
@@ -302,7 +322,7 @@ def train_actionformer_localization(
             "val_recall_at_3_iou_0_3": validation["recall_at_3_iou_0_3"],
             "val_mean_proposal_count": validation["mean_proposal_count"],
             "selection_score": validation["recall_at_3_iou_0_3"],
-            "selection_metric": "validation_recall_at_3_iou_0_3_then_loss",
+            "selection_metric": "fixed_epoch_budget" if fixed_epochs else "validation_recall_at_3_iou_0_3_then_loss",
             "learning_rate": scheduler.get_last_lr()[0],
         }
         history.append(epoch_log)
@@ -314,7 +334,7 @@ def train_actionformer_localization(
             "validation_recall_at_3_iou_0_3": epoch_log["val_recall_at_3_iou_0_3"],
         }
         save_actionformer_checkpoint(last_output, model, metadata={**checkpoint_metadata, "checkpoint_role": "last"})
-        recall_improved = validation["recall_at_3_iou_0_3"] > best_recall
+        recall_improved = fixed_epochs or validation["recall_at_3_iou_0_3"] > best_recall
         recall_tied = validation["recall_at_3_iou_0_3"] == best_recall
         if recall_improved or (recall_tied and validation["total_loss"] < best_loss):
             best_loss = validation["total_loss"]
@@ -331,6 +351,9 @@ def train_actionformer_localization(
             "started_at_unix": started,
             "updated_at_unix": time.time(),
             "config": config.to_dict(),
+            "data_lineage": base_metadata["data_lineage"],
+            "epoch_policy": base_metadata["epoch_policy"],
+            "device": target_device.type,
             "optimizer": {
                 "name": "AdamW",
                 "learning_rate": learning_rate,
@@ -450,26 +473,34 @@ def _evaluate_proposal_ltr(
     ndcg_k: int,
     gain_scale: float,
     max_pairs_per_video: int | None,
-    predicted_proposals_by_video: dict[str, list[TemporalProposal]] | None = None,
-) -> dict[str, float]:
+) -> dict[str, Any]:
     actionformer.eval()
     scorer.eval()
     losses: list[float] = []
     ndcgs: list[float] = []
+    ndcgs5: list[float] = []
+    per_video: list[dict[str, Any]] = []
     with torch.no_grad():
         for example in examples:
             features, _ = _to_device(example, device)
             outputs = actionformer(features)
             base_features = outputs["features"][0]
-            predicted = _training_predictions(
-                example,
+            proposals = decode_proposals(
                 outputs,
-                actionformer,
-                predicted_proposals_by_video,
+                actionformer.config,
+                video_durations=[example.duration],
             )
-            proposals = proposal_training_set(example, predicted)
+            if not proposals:
+                losses.append(0.0)
+                ndcgs.append(0.0)
+                ndcgs5.append(0.0)
+                per_video.append({"video_id": example.video_id, "proposal_count": 0, "zero_idcg": True,
+                                  "valid_pair_count": 0, "ndcg_at_3": 0.0, "ndcg_at_5": 0.0})
+                continue
             scores, _ = scorer(base_features, [proposals], stride_seconds=actionformer.config.base_stride_seconds)
             utilities = scores.new_tensor([proposal_utility(example, proposal) for proposal in proposals])
+            if not torch.isfinite(scores).all() or not torch.isfinite(utilities).all():
+                raise ValueError(f"non-finite validation scores/utilities: {example.video_id}")
             video_indices = torch.zeros_like(scores, dtype=torch.long)
             loss = _proposal_pairwise_loss(
                 scores,
@@ -484,16 +515,30 @@ def _evaluate_proposal_ltr(
                 max_pairs_per_video=max_pairs_per_video,
             )
             losses.append(float(loss.cpu()))
-            k = min(3, scores.numel())
-            predicted = torch.topk(scores, k).indices
-            ideal = torch.topk(utilities, k).indices
-            discounts = 1 / torch.log2(torch.arange(k, device=device, dtype=torch.float32) + 2)
-            dcg = torch.sum((2 ** utilities[predicted] - 1) * discounts)
-            idcg = torch.sum((2 ** utilities[ideal] - 1) * discounts).clamp_min(1e-8)
-            ndcgs.append(float((dcg / idcg).cpu()))
+            video_metrics = {"video_id": example.video_id, "proposal_count": len(proposals),
+                             "zero_idcg": bool((utilities <= 0).all())}
+            differences = utilities[:, None] - utilities[None, :]
+            video_metrics["valid_pair_count"] = int(((differences > 0) & (differences >= utility_delta)).sum())
+            predicted_order = torch.argsort(scores, descending=True, stable=True)
+            ideal_order = torch.argsort(utilities, descending=True, stable=True)
+            for cutoff, collection in ((3, ndcgs), (5, ndcgs5)):
+                k = min(cutoff, scores.numel())
+                discounts = 1 / torch.log2(torch.arange(k, device=device, dtype=torch.float32) + 2)
+                dcg = torch.sum((2 ** utilities[predicted_order[:k]] - 1) * discounts)
+                idcg = torch.sum((2 ** utilities[ideal_order[:k]] - 1) * discounts).clamp_min(1e-8)
+                value = float((dcg / idcg).cpu())
+                collection.append(value)
+                video_metrics[f"ndcg_at_{cutoff}"] = value
+            per_video.append(video_metrics)
     return {
         "pairwise_loss": float(np.mean(losses)) if losses else float("nan"),
         "ndcg_at_3": float(np.mean(ndcgs)) if ndcgs else 0.0,
+        "ndcg_at_5": float(np.mean(ndcgs5)) if ndcgs5 else 0.0,
+        "candidate_source": "predicted_only",
+        "empty_candidate_videos": sum(row["proposal_count"] == 0 for row in per_video),
+        "zero_idcg_videos": sum(row["zero_idcg"] for row in per_video),
+        "aggregation_policy": "macro_all_videos; empty/zero_idcg=0; gain=2**utility-1",
+        "per_video": per_video,
     }
 
 
@@ -577,11 +622,37 @@ def train_proposal_ltr(
     run_name: str = "proposal_ltr",
     predicted_proposals_by_video: dict[str, list[TemporalProposal]] | None = None,
     proposal_cache_metadata: dict[str, Any] | None = None,
+    nested_cache_path: str | Path | None = None,
+    source_checkpoint_path: str | Path | None = None,
+    outer_test_video_ids: list[str] | None = None,
 ) -> tuple[nn.Module, dict[str, Any]]:
     if not train_examples or not val_examples:
         raise ValueError("training and validation each require at least one ready video")
     if max_epochs <= 0 or patience <= 0:
         raise ValueError("max_epochs and patience must be positive")
+    if predicted_proposals_by_video is not None or proposal_cache_metadata is not None:
+        raise ValueError("unverified proposal dictionaries are unsafe; provide nested_cache_path")
+    train_ids = {x.video_id for x in train_examples}
+    val_ids = {x.video_id for x in val_examples}
+    if len(train_ids) != len(train_examples) or len(val_ids) != len(val_examples) or train_ids & val_ids:
+        raise ValueError("LTR train/validation must contain unique disjoint videos")
+    if nested_cache_path is not None:
+        from .oof_proposals import load_nested_proposal_cache
+
+        if not source_checkpoint_path or not outer_test_video_ids:
+            raise ValueError("nested training requires source checkpoint and outer test IDs")
+        checkpoint_source = Path(source_checkpoint_path)
+        reference, reference_metadata, _ = load_actionformer_checkpoint(checkpoint_source, device="cpu")
+        if reference.config != actionformer.config or reference_metadata != checkpoint_metadata:
+            raise ValueError("LTR generator metadata/config differs from source checkpoint")
+        if any(not torch.equal(value.cpu(), reference.state_dict()[key]) for key, value in actionformer.state_dict().items()):
+            raise ValueError("LTR generator weights differ from source checkpoint")
+        predicted_proposals_by_video, proposal_cache_metadata = load_nested_proposal_cache(
+            nested_cache_path, train_examples=train_examples, val_video_ids=sorted(val_ids),
+            test_video_ids=outer_test_video_ids,
+            outer_checkpoint_sha256=hashlib.sha256(checkpoint_source.read_bytes()).hexdigest(),
+        )
+        assert_lineage_allowed(checkpoint_metadata.get("data_lineage"), train_ids)
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
@@ -658,7 +729,6 @@ def train_proposal_ltr(
             ndcg_k=ndcg_k,
             gain_scale=gain_scale,
             max_pairs_per_video=max_pairs_per_video,
-            predicted_proposals_by_video=predicted_proposals_by_video,
         )
         scheduler.step()
         epoch_log = {
@@ -667,8 +737,11 @@ def train_proposal_ltr(
             "train_total_loss": float(np.mean(epoch_losses)),
             "val_pairwise_loss": validation["pairwise_loss"],
             "val_ndcg_at_3": validation["ndcg_at_3"],
+            "val_ndcg_at_5": validation["ndcg_at_5"],
+            "val_empty_candidate_videos": validation["empty_candidate_videos"],
+            "val_zero_idcg_videos": validation["zero_idcg_videos"],
             "selection_score": validation["ndcg_at_3"],
-            "selection_metric": "validation_ndcg_at_3",
+            "selection_metric": "validation_predicted_only_ndcg_at_3",
             "learning_rate": scheduler.get_last_lr()[0],
         }
         history.append(epoch_log)
@@ -677,6 +750,15 @@ def train_proposal_ltr(
             "run_name": run_name,
             "device": target_device.type,
             "training_stage": "proposal_ltr",
+            "proposal_protocol": NESTED_OOF_VERSION if nested_cache_path else "online_exploratory",
+            "proposal_cache": proposal_cache_metadata,
+            "data_lineage": {
+                "train_video_ids": sorted(train_ids),
+                "selection_video_ids": sorted(val_ids),
+                "ancestors": ([checkpoint_metadata["data_lineage"]]
+                              + (proposal_cache_metadata or {}).get("generator_lineages", []))
+                             if "data_lineage" in checkpoint_metadata else [],
+            },
             "proposal_ltr_config": {
                 **resolved_scorer_config.to_dict(),
                 "channels": actionformer.config.d_model,
@@ -738,11 +820,15 @@ def train_proposal_ltr(
                 "max_epochs": max_epochs,
                 "device": target_device.type,
                 "seed": seed,
+                "utility_version": "proposal_utility_v2",
+                "utility_weights": {"coverage_mean": 0.45, "top_20_percent": 0.25, "max_tiou": 0.30},
+                "validation_candidate_source": "predicted_only",
             },
+            "validation": validation,
             "data": {
                 "train_video_ids": [item.video_id for item in train_examples],
                 "val_video_ids": [item.video_id for item in val_examples],
-                "proposal_source": "oof_cache" if predicted_proposals_by_video is not None else "online",
+                "proposal_source": "nested_oof_v2" if predicted_proposals_by_video is not None else "online_exploratory",
                 "proposal_cache": proposal_cache_metadata,
             },
             "best_epoch": best_epoch,

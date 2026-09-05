@@ -1,6 +1,7 @@
 import json
 
 import numpy as np
+import pytest
 
 from highlight_agent.models.actionformer import (
     ActionFormerConfig,
@@ -107,7 +108,7 @@ def test_proposal_utility_v2_rewards_boundary_alignment() -> None:
     assert proposal_utility(example, aligned) > proposal_utility(example, oversized)
 
 
-def test_proposal_ltr_uses_external_proposal_cache(tmp_path) -> None:
+def test_proposal_ltr_rejects_unverified_external_proposal_cache(tmp_path) -> None:
     config = ActionFormerConfig(
         d_model=8,
         num_heads=2,
@@ -129,7 +130,8 @@ def test_proposal_ltr_uses_external_proposal_cache(tmp_path) -> None:
         "val": [TemporalProposal(10.0, 40.0, 0.8, 0, 2)],
     }
 
-    _, report = train_proposal_ltr(
+    with pytest.raises(ValueError, match="unverified"):
+        train_proposal_ltr(
         actionformer=ActionFormerHighlightModel(config),
         checkpoint_metadata=metadata,
         train_examples=[_example("train")],
@@ -146,5 +148,3 @@ def test_proposal_ltr_uses_external_proposal_cache(tmp_path) -> None:
         proposal_cache_metadata={"fingerprint": "cache"},
     )
 
-    assert report["data"]["proposal_source"] == "oof_cache"
-    assert report["data"]["proposal_cache"]["fingerprint"] == "cache"

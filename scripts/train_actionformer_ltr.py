@@ -6,7 +6,6 @@ import argparse
 import json
 
 from highlight_agent.models.actionformer import ActionFormerConfig, load_actionformer_checkpoint
-from highlight_agent.models.oof_proposals import load_oof_proposal_cache
 from highlight_agent.models.proposal_ltr import ProposalLTRConfig
 from highlight_agent.models.train_actionformer_ltr import (
     load_actionformer_manifest,
@@ -103,10 +102,7 @@ def main(argv: list[str] | None = None) -> int:
             args.init_checkpoint,
             device=args.device or "cpu",
         )
-        proposal_cache = None
-        proposal_cache_metadata = None
-        if args.proposal_cache:
-            proposal_cache, proposal_cache_metadata = load_oof_proposal_cache(args.proposal_cache)
+        test_examples = load_actionformer_manifest(args.manifest, split="test", project_root=args.project_root)
         _, report = train_proposal_ltr(
             actionformer=actionformer,
             checkpoint_metadata=metadata,
@@ -140,8 +136,9 @@ def main(argv: list[str] | None = None) -> int:
             seed=args.seed,
             device=args.device,
             run_name=args.run_name,
-            predicted_proposals_by_video=proposal_cache,
-            proposal_cache_metadata=proposal_cache_metadata,
+            nested_cache_path=args.proposal_cache,
+            source_checkpoint_path=args.init_checkpoint,
+            outer_test_video_ids=[item.video_id for item in test_examples],
         )
     print(json.dumps(report, indent=2, sort_keys=True))
     return 0

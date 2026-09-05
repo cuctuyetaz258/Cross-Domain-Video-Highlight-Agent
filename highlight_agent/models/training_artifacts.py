@@ -202,6 +202,8 @@ def write_training_curves_svg(
         "Smooth loss": _numeric_series(history, "train_smooth_loss"),
         "Focal loss": _numeric_series(history, "train_focal_loss"),
         "Regression loss": _numeric_series(history, "train_regression_loss"),
+        "Validation loss": _numeric_series(history, "val_total_loss"),
+        "Validation pairwise": _numeric_series(history, "val_pairwise_loss"),
     }
     ap_series = {
         "Selection AP": _numeric_series(history, "selection_ap"),
@@ -223,7 +225,7 @@ def write_training_curves_svg(
             best_epoch=best_epoch,
         ),
         _panel_svg(
-            title="Validation/selection Average Precision",
+            title="Validation / selection metrics",
             series=ap_series,
             x=20,
             y=390,

@@ -68,7 +68,7 @@ def ranknet_proposal_loss(
         video_scores = scores[selected]
         video_utilities = utilities[selected]
         differences = video_utilities[:, None] - video_utilities[None, :]
-        positive, negative = torch.where(differences >= utility_delta)
+        positive, negative = torch.where((differences > 0) & (differences >= utility_delta))
         non_identity = positive != negative
         positive, negative = positive[non_identity], negative[non_identity]
         if positive.numel() == 0:
