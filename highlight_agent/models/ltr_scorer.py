@@ -7,7 +7,7 @@ from typing import Any
 import torch
 import torch.nn as nn
 
-from highlight_agent.features.ltr_contract import (
+from highlight_agent.ltr_contract import (
     LTR_CHECKPOINT_VERSION,
     LTRPipelineError,
     validate_feature_contract,
@@ -117,12 +117,7 @@ class AdditiveAttentionScorer(nn.Module):
                 f"checkpoint does not exist: {checkpoint_path}",
             )
         target_device = torch.device(
-            device
-            or (
-                "cuda"
-                if torch.cuda.is_available() and torch.cuda.device_count() > 0
-                else "cpu"
-            )
+            device or ("cuda" if torch.cuda.is_available() and torch.cuda.device_count() > 0 else "cpu")
         )
         try:
             checkpoint = torch.load(
